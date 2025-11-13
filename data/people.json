@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Dr. Shaun James",
+    "role": "Principal Investigator",
+    "bio": "Leads the Cortical Analysis Lab, focusing on the interplay of neural, glial, and vascular mechanisms in behavior.",
+    "image": "assets/shaun-james.jpg",
+    "link": "https://sacredheart.elsevierpure.com/en/persons/shaun-james"
+  },
+  {
+    "name": "Jane Doe",
+    "role": "Graduate Researcher",
+    "bio": "Investigating multimodal EEG and hemodynamic integration.",
+    "image": "assets/default-profile.png"
+  },
+  {
+    "name": "Alex Rivera",
+    "role": "Undergraduate Research Assistant",
+    "bio": "Developing automated behavior-tracking algorithms using MATLAB.",
+    "image": "assets/default-profile.png"
+  }
+]
