@@ -6,17 +6,24 @@
   <title>Publications | Cortical Analysis Lab</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --red: #B30838;
+      --offwhite: #faf7f5;
+      --text: #222;
+      --lightbox: #ffffff;
+    }
+
     body {
       margin: 0;
-      padding: 0;
+      background: var(--offwhite);
+      color: var(--text);
       font-family: "Inter", sans-serif;
-      background-color: #000;
-      color: #fff;
       line-height: 1.6;
     }
 
     header {
-      background: #800000;
+      background: var(--red);
+      color: var(--lightbox);
       padding: 1rem 2rem;
       text-align: center;
       font-size: 1.8rem;
@@ -31,53 +38,55 @@
     }
 
     h2 {
-      color: #ff5555;
+      color: var(--red);
       margin-bottom: 0.5rem;
     }
 
     .publication {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 1rem 1.5rem;
-      border-radius: 8px;
+      background: var(--lightbox);
+      padding: 1.2rem 1.5rem;
+      border-radius: 10px;
       margin-bottom: 1.5rem;
-      border-left: 3px solid #b22222;
-      transition: all 0.2s ease;
+      border-left: 4px solid var(--red);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
     }
 
     .publication:hover {
-      background: rgba(255, 255, 255, 0.1);
-      transform: translateX(5px);
+      transform: translateY(-4px);
     }
 
     .journal {
       font-weight: 500;
-      color: #ccc;
+      color: #555;
     }
 
     .doi {
-      color: #ffaaaa;
+      color: var(--red);
       font-size: 0.9rem;
+      text-decoration: none;
     }
 
     .significance {
       margin-top: 0.7rem;
       font-size: 0.95rem;
-      color: #ddd;
-      border-left: 2px solid #ff5555;
+      color: #444;
+      border-left: 2px solid var(--red);
       padding-left: 10px;
     }
 
     footer {
       text-align: center;
-      color: #aaa;
+      color: #666;
       padding: 1.5rem 0;
       font-size: 0.9rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid #ddd;
       margin-top: 2rem;
+      background: var(--offwhite);
     }
 
     .error {
-      color: #ff8080;
+      color: var(--red);
       text-align: center;
       margin-top: 2rem;
     }
@@ -101,14 +110,13 @@
       const footer = document.getElementById("last-updated");
 
       try {
-        // ✅ Correct relative path for your project site
+        // ✅ Correct relative path
         const response = await fetch("data/publications.json");
         if (!response.ok) throw new Error("Network response not OK");
 
         const publications = await response.json();
         container.innerHTML = "";
 
-        // --- Display each publication ---
         publications.forEach(pub => {
           const doiLink = pub.doi
             ? `<a class="doi" href="https://doi.org/${pub.doi}" target="_blank">DOI: ${pub.doi}</a>`
@@ -133,13 +141,8 @@
           container.innerHTML = "<p>No publications found.</p>";
         }
 
-        // --- Display Last Updated timestamp ---
         const updatedDate = new Date().toLocaleString("en-US", {
-          year: "numeric",
-          month: "short",
-          day: "numeric",
-          hour: "2-digit",
-          minute: "2-digit"
+          year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit"
         });
         footer.textContent = `Last updated from ORCID: ${updatedDate}`;
 
