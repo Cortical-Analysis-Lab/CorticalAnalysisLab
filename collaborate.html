@@ -1,37 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Collaborate | Cortical Analysis Lab</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-
   <style>
     :root {
       --red: #B30838;
-      --black: #000;
-      --white: #fff;
-    }
-
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
+      --offwhite: #faf7f5;
+      --text: #222;
+      --shadow: rgba(0,0,0,0.05);
     }
 
     body {
       margin: 0;
-      background: var(--black);
-      color: var(--white);
+      background: var(--offwhite);
+      color: var(--text);
       font-family: "Inter", sans-serif;
+      line-height: 1.6;
     }
 
-    /* ---------- NAVBAR ---------- */
+    /* ---------- NAVIGATION ---------- */
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(0,0,0,0.7);
-      backdrop-filter: blur(5px);
+      background: var(--offwhite);
+      box-shadow: 0 2px 6px var(--shadow);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -40,12 +36,11 @@
     }
 
     nav .logo {
+      font-weight: 700;
       font-size: 1.2rem;
       color: var(--red);
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
       text-decoration: none;
+      letter-spacing: 1px;
     }
 
     nav ul {
@@ -57,20 +52,32 @@
     }
 
     nav ul li a {
-      color: var(--white);
+      color: var(--text);
       text-decoration: none;
       font-weight: 500;
-      transition: color 0.3s;
+      position: relative;
     }
 
-    nav ul li a:hover { color: var(--red); }
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--red);
+      transition: width 0.3s ease;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
 
     /* ---------- HEADER ---------- */
     header {
-      padding: 8rem 2rem 3rem;
       text-align: center;
-      max-width: 900px;
-      margin: auto;
+      padding: 9rem 2rem 5rem;
+      background: var(--offwhite);
     }
 
     header h1 {
@@ -80,56 +87,76 @@
     }
 
     header p {
-      color: #ccc;
-      font-size: 1.1rem;
       max-width: 700px;
       margin: auto;
-      line-height: 1.6;
+      font-size: 1.1rem;
+      color: #444;
     }
 
-    /* ---------- FORM EMBED ---------- */
-    .form-container {
-      max-width: 900px;
+    /* ---------- SECTION ---------- */
+    section {
+      max-width: 950px;
       margin: 3rem auto;
-      background: #111;
-      border: 1px solid #222;
+      padding: 0 2rem;
+    }
+
+    h2 {
+      color: var(--red);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--red);
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    .card {
+      background: var(--offwhite);
       border-radius: 10px;
-      padding: 2rem;
-      text-align: center;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 4px 10px var(--shadow);
+      margin-bottom: 2rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
     }
 
     iframe {
-      border: none;
       width: 100%;
-      height: 850px;
+      height: 700px;
+      border: none;
       border-radius: 10px;
-      background: #111;
+      box-shadow: 0 4px 10px var(--shadow);
+      background: var(--offwhite);
     }
 
     /* ---------- FOOTER ---------- */
     footer {
-      text-align: center;
+      background: var(--offwhite);
       padding: 2rem;
-      background: #111;
-      color: #888;
+      text-align: center;
+      color: #666;
       font-size: 0.9rem;
-      margin-top: 4rem;
+      border-top: 1px solid #ddd;
+      box-shadow: 0 -2px 6px var(--shadow);
     }
 
     footer a {
       color: var(--red);
       text-decoration: none;
+      font-weight: 500;
     }
 
-    footer a:hover { text-decoration: underline; }
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
 <body>
-
-  <!-- NAVBAR -->
   <nav>
-    <a href="index.html" class="logo">Cortical Analysis Lab</a>
+    <a href="./" class="logo">Cortical Analysis Lab</a>
     <ul>
       <li><a href="research.html">Research</a></li>
       <li><a href="people.html">People</a></li>
@@ -139,35 +166,42 @@
     </ul>
   </nav>
 
-  <!-- HEADER -->
   <header>
-    <h1>Collaborate with Us</h1>
-    <p>We welcome partnerships that advance neuroscience through technology, imaging, and behavioral research. Use the form below to propose a potential collaboration or project idea. Submissions are reviewed on a rolling basis.</p>
+    <h1>Collaborate With Us</h1>
+    <p>We welcome collaborations across neuroscience, psychology, bioengineering, and computational science. 
+    Whether you’re interested in shared datasets, methodological partnerships, or educational initiatives — we’d love to hear from you.</p>
   </header>
 
-  <!-- MICROSOFT FORM EMBED -->
-  <section class="form-container">
-    <iframe
-      src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=xFmCf5HE9Uel5amfUya5dtOnRTL3wXpCuzkbmFVDdSxUMTRUVzM1Rkw5MEpKOFJNUEFSQUVUNjBQUy4u"
-      frameborder="0"
-      marginwidth="0"
-      marginheight="0"
-      allowfullscreen
-      webkitallowfullscreen
-      mozallowfullscreen
-      msallowfullscreen>
-    </iframe>
+  <section>
+    <h2>Submit a Collaboration Proposal</h2>
+    <div class="card">
+      <p>Complete the form below to propose a research collaboration, data-sharing project, or student internship opportunity with the Cortical Analysis Lab.</p>
+      <p><strong>Note:</strong> You’ll receive a follow-up email if your proposal aligns with our research focus areas.</p>
+
+      <!-- 👇 Replace this URL with your actual Microsoft Form embed link -->
+      <iframe src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=xFmCf5HE9Uel5amfUya5dtOnRTL3wXpCuzkbmFVDdSxUMTRUVzM1Rkw5MEpKOFJNUEFSQUVUNjBQUy4u" title="Collaboration Proposal Form"></iframe>
+    </div>
   </section>
 
-  <!-- FOOTER -->
+  <section>
+    <h2>Current Collaboration Areas</h2>
+    <div class="card">
+      <ul>
+        <li>Neurovascular coupling and brain–behavior dynamics</li>
+        <li>EEG and optical imaging integration</li>
+        <li>Behavioral neuroscience and machine vision tracking</li>
+        <li>Signal processing and computational modeling of brain states</li>
+        <li>Educational outreach and neurotechnology development</li>
+      </ul>
+    </div>
+  </section>
+
   <footer>
-    © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University<br>
-    <a href="mailto:shaun.james@sacredheart.edu">shaun.james@sacredheart.edu</a>
+    © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
   </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
