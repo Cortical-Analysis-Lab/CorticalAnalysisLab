@@ -63,9 +63,7 @@
       transition: color 0.3s;
     }
 
-    nav ul li a:hover {
-      color: var(--red);
-    }
+    nav ul li a:hover { color: var(--red); }
 
     /* ---------- HEADER ---------- */
     header {
@@ -81,13 +79,10 @@
       margin-bottom: 0.5rem;
     }
 
-    header p {
-      color: #ccc;
-      font-size: 1.1rem;
-    }
+    header p { color: #ccc; font-size: 1.1rem; }
 
     /* ---------- PUBLICATION LIST ---------- */
-    section {
+    #pub-list {
       max-width: 900px;
       margin: 3rem auto;
       padding: 0 2rem;
@@ -108,10 +103,9 @@
       color: var(--white);
       font-weight: 600;
       font-size: 1.1rem;
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.3rem;
     }
 
-    .pub-authors { color: #ccc; font-size: 0.95rem; margin-bottom: 0.3rem; }
     .pub-journal { color: #888; font-size: 0.9rem; margin-bottom: 0.3rem; }
 
     .pub a {
@@ -119,6 +113,7 @@
       text-decoration: none;
       font-size: 0.9rem;
     }
+
     .pub a:hover { text-decoration: underline; }
 
     .significance {
@@ -134,19 +129,6 @@
 
     .significance strong { color: var(--red); }
 
-    .highlight-box {
-      border-left: 3px solid var(--red);
-      background: #111;
-      padding: 1rem 1.5rem;
-      margin: 2rem 0;
-      border-radius: 6px;
-    }
-
-    .highlight-box h3 {
-      color: var(--red);
-      margin-top: 0;
-    }
-
     /* ---------- FOOTER ---------- */
     footer {
       text-align: center;
@@ -161,6 +143,7 @@
       color: var(--red);
       text-decoration: none;
     }
+
     footer a:hover { text-decoration: underline; }
   </style>
 </head>
@@ -182,53 +165,12 @@
   <!-- HEADER -->
   <header>
     <h1>Publications</h1>
-    <p>Selected peer-reviewed works from the Cortical Analysis Lab and collaborators.</p>
+    <p>Automatically updated from <a href="https://orcid.org/0000-0001-9059-8250" target="_blank" style="color:#B30838;text-decoration:none;">ORCID</a></p>
   </header>
 
-  <!-- PUBLICATIONS -->
-  <section>
-
-    <div class="pub">
-      <div class="pub-title">Spatiotemporal features of neurovascular (un)coupling with stimulus-induced activity and hypercapnia challenge in cerebral cortex and olfactory bulb</div>
-      <div class="pub-authors">James, S., Sanggaard, S., et al.</div>
-      <div class="pub-journal"><em>Journal of Cerebral Blood Flow & Metabolism</em>, 2023</div>
-      <a href="https://doi.org/10.1177/0271678X231061234" target="_blank">DOI: 10.1177/0271678X231061234</a>
-      <div class="significance">
-        <strong>Significance:</strong> This study characterizes the timing and regional differences in how blood flow and neural activity align—or fail to align—during physiological challenges. 
-        It establishes quantitative markers of neurovascular “uncoupling,” which are crucial for interpreting optical and fMRI signals in disease contexts.
-      </div>
-    </div>
-
-    <div class="pub">
-      <div class="pub-title">Multimodal analysis of cortical state transitions in response to environmental novelty</div>
-      <div class="pub-authors">Doe, J., Smith, A., James, S.</div>
-      <div class="pub-journal"><em>Frontiers in Systems Neuroscience</em>, 2024</div>
-      <a href="#" target="_blank">DOI: (in press)</a>
-      <div class="significance">
-        <strong>Significance:</strong> Combining EEG and optical imaging, this work shows that novel sensory environments drive coordinated changes in cortical excitability and hemodynamics.
-        The results bridge systems-level neural adaptation and behavior, highlighting how the brain reconfigures itself to encode new experiences.
-      </div>
-    </div>
-
-    <div class="pub">
-      <div class="pub-title">Developmental modulation of neurovascular coupling following early-life ethanol exposure</div>
-      <div class="pub-authors">James, S., et al.</div>
-      <div class="pub-journal"><em>Neurobiology of Disease</em>, 2022</div>
-      <a href="#" target="_blank">DOI: 10.xxxx/nbd.2022.103567</a>
-      <div class="significance">
-        <strong>Significance:</strong> Using a model of fetal alcohol exposure, this study demonstrates long-term alterations in vascular responsiveness and neural metabolism.
-        The findings underscore how developmental insults can persistently disrupt the delicate neurovascular balance critical for cognitive function.
-      </div>
-    </div>
-
-    <div class="highlight-box">
-      <h3>Ongoing and Future Publications</h3>
-      <p>
-        Upcoming work includes studies integrating wide-field optical imaging with EEG and behavioral tracking,
-        with emphasis on computational modeling of brain–behavior coupling and development of low-cost neuromonitoring hardware.
-      </p>
-    </div>
-
+  <!-- PUBLICATIONS CONTAINER -->
+  <section id="pub-list">
+    <p style="color:#888;text-align:center;">Loading publications from ORCID...</p>
   </section>
 
   <!-- FOOTER -->
@@ -239,6 +181,47 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    async function loadPublications() {
+      try {
+        const response = await fetch("/_data/publications.json");
+        if (!response.ok) throw new Error("Unable to load publications.json");
+        const pubs = await response.json();
+
+        const container = document.getElementById("pub-list");
+        container.innerHTML = "";
+
+        pubs.forEach(pub => {
+          const el = document.createElement("div");
+          el.className = "pub";
+
+          const title = pub.title || "Untitled";
+          const journal = pub.journal || "";
+          const year = pub.year || "";
+          const doi = pub.doi ? `<a href="https://doi.org/${pub.doi}" target="_blank">DOI: ${pub.doi}</a>` : "";
+          const significance = `<div class="significance"><strong>Significance:</strong> This work contributes to the lab’s ongoing efforts to understand neurovascular and neurometabolic coupling using multimodal imaging and electrophysiological approaches.</div>`;
+
+          el.innerHTML = `
+            <div class="pub-title">${title}</div>
+            <div class="pub-journal"><em>${journal}</em> ${year ? ", " + year : ""}</div>
+            ${doi}
+            ${significance}
+          `;
+          container.appendChild(el);
+        });
+
+        if (pubs.length === 0) {
+          container.innerHTML = "<p style='color:#777;text-align:center;'>No publications found in ORCID yet.</p>";
+        }
+
+      } catch (err) {
+        document.getElementById("pub-list").innerHTML =
+          `<p style='color:#f55;text-align:center;'>⚠️ Error loading publications: ${err.message}</p>`;
+        console.error(err);
+      }
+    }
+
+    loadPublications();
   </script>
 
 </body>
