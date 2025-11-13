@@ -32,9 +32,24 @@
     }
 
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto;
-      padding: 0 1rem;
+      padding: 0 1rem 3rem;
+    }
+
+    h1, h2 {
+      color: var(--red);
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid var(--red);
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    p.subtext {
+      color: #555;
+      font-style: italic;
+      margin-bottom: 1.5rem;
     }
 
     .publication {
@@ -52,10 +67,10 @@
       box-shadow: 0 6px 14px rgba(0,0,0,0.08);
     }
 
-    h2 {
+    h3 {
       color: var(--red);
       margin-bottom: 0.6rem;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 700;
     }
 
@@ -101,8 +116,21 @@
 <body>
   <header>🧠 Cortical Analysis Lab — Publications</header>
 
-  <main id="pub-container">
-    <p>Loading publications from ORCID...</p>
+  <main>
+    <!-- LAB PUBLICATIONS -->
+    <h1>Lab Publications</h1>
+    <p class="subtext">In progress — manuscripts and preprints under development.</p>
+
+    <div class="publication">
+      <h3>Upcoming Manuscripts (In Preparation)</h3>
+      <p class="journal">Details coming soon — new optical imaging and EEG datasets are currently being analyzed and prepared for submission.</p>
+    </div>
+
+    <!-- DR. JAMES PUBLICATIONS -->
+    <h1>Dr. James’ Publications</h1>
+    <div id="pub-container">
+      <p>Loading publications from ORCID...</p>
+    </div>
   </main>
 
   <footer>
@@ -132,7 +160,7 @@
 
           const html = `
             <div class="publication">
-              <h2>${pub.title}</h2>
+              <h3>${pub.title}</h3>
               <div class="journal">${pub.journal || ""} (${pub.year || ""})</div>
               ${doiLink}
               ${significanceText}
