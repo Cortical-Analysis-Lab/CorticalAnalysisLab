@@ -1,1 +1,22 @@
-[{"name":"Dr. Shaun James","role":"Principal Investigator","bio":"Leads the Cortical Analysis Lab, focusing on the interplay of neural, glial, and vascular mechanisms in behavior.","image":"assets/shaun-james.jpg","link":"https://sacredheart.elsevierpure.com/en/persons/shaun-james"},{"name":"Jane Doe","role":"Graduate Researcher","bio":"Investigating multimodal EEG and hemodynamic integration.","image":"assets/default-profile.png"},{"name":"Alex Rivera","role":"Undergraduate Research Assistant","bio":"Developing automated behavior-tracking algorithms using MATLAB.","image":"assets/default-profile.png"},{"name":"test name","role":"test role","bio":"test major","image":"https://mailsacredheart-my.sharepoint.com/personal/neuroresearch_sacredheart_edu/Documents/Apps/Microsoft%20Forms/Untitled%20form/Question/neurons_NeuroResearch@sacred%2011.jpeg"},{"name":"test name","role":"test role","bio":"test major","image":"https://mailsacredheart-my.sharepoint.com/personal/neuroresearch_sacredheart_edu/Documents/Apps/Microsoft%20Forms/Untitled%20form/Question/neurons_NeuroResearch@sacred%2012.jpeg"}]
+{
+  "pi": {
+    "name": "Dr. Shaun James",
+    "role": "Principal Investigator",
+    "bio": "Leads the Cortical Analysis Lab, focusing on the interplay of neural, glial, and vascular mechanisms in behavior.",
+    "image": "assets/shaun-james.jpg"
+  },
+  "members": [
+    {
+      "name": "Jane Doe",
+      "major": "Neuroscience",
+      "role": "Graduate Researcher",
+      "academic_year": "2025–2026"
+    },
+    {
+      "name": "Alex Rivera",
+      "major": "Psychology",
+      "role": "Undergraduate Research Assistant",
+      "academic_year": "2024–2025"
+    }
+  ]
+}
