@@ -7,84 +7,45 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <style>
-    .contact-container {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 16px;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+    .contact-info {
+      max-width: 900px;
+      margin: 2rem auto 4rem;
+      padding: 0 2rem;
       text-align: center;
     }
 
-    .contact-container h2 {
+    .contact-info h2 {
       color: var(--red);
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
-    .contact-container p {
-      color: #333;
-      font-size: 1.05rem;
-      line-height: 1.6;
+    .contact-info p {
+      color: var(--gray);
+      font-size: 1rem;
+      margin: 0.5rem 0;
     }
 
-    .contact-container a {
+    .contact-info a {
       color: var(--red);
       text-decoration: none;
-      font-weight: 500;
     }
 
-    .contact-container a:hover {
+    .contact-info a:hover {
       text-decoration: underline;
-    }
-
-    .contact-actions {
-      margin-top: 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .contact-actions a,
-    .toggle-form-btn {
-      background: var(--red);
-      color: #fff;
-      text-decoration: none;
-      padding: 0.8rem 1.6rem;
-      border-radius: 8px;
-      font-weight: 600;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .contact-actions a:hover,
-    .toggle-form-btn:hover {
-      background: #a61c1c;
-      transform: translateY(-2px);
     }
 
     iframe {
       width: 100%;
-      height: 600px;
+      height: 400px;
       border: none;
-      margin-top: 2rem;
       border-radius: 12px;
-      display: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      margin-top: 2rem;
     }
 
-    .iframe-visible {
-      display: block;
-    }
-
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
       iframe {
-        display: block;
-      }
-      .toggle-form-btn {
-        display: none;
+        height: 320px;
       }
     }
   </style>
@@ -95,12 +56,13 @@
   <!-- 🧭 Navigation -->
   <nav>
     <a href="index.html" class="logo">Cortical Analysis Lab</a>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
     <ul>
       <li><a href="research.html">Research</a></li>
       <li><a href="people.html">People</a></li>
       <li><a href="publications.html">Publications</a></li>
       <li><a href="collaborate.html">Collaborate</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
   </nav>
 
@@ -108,34 +70,26 @@
   <header>
     <h1>Contact Us</h1>
     <p>
-      Have a question about our research, technology, or student opportunities?
-      Reach out directly or submit the contact form below — we’d love to connect.
+      Whether you’re a student, researcher, or collaborator, we’d love to connect.
+      You can find our lab in the Humanities Center at Sacred Heart University.
     </p>
   </header>
 
-  <section>
-    <div class="contact-container">
-      <h2>Cortical Analysis Lab</h2>
-      <p><strong>Sacred Heart University</strong></p>
-      <p>
-        Email: <a href="mailto:NeuroResearch@sacredheart.edu">NeuroResearch@sacredheart.edu</a><br>
-        Office: Humanities Center of Academic Building, Sacred Heart University<br>
-        Address: 5151 Park Avenue, Fairfield, CT 06825
-      </p>
+  <!-- 🗺️ Contact Details + Map -->
+  <section class="contact-info">
+    <h2>Cortical Analysis Lab</h2>
+    <p><strong>Sacred Heart University</strong></p>
+    <p>Humanities Center, Academic Building</p>
+    <p>5151 Park Avenue, Fairfield, CT 06825</p>
+    <p>Email: <a href="mailto:NeuroResearch@sacredheart.edu">NeuroResearch@sacredheart.edu</a></p>
 
-      <div class="contact-actions">
-        <a href="mailto:NeuroResearch@sacredheart.edu">Email the Lab</a>
-        <a href="https://forms.office.com/r/your-contact-form-id" target="_blank">Open Form in New Tab</a>
-        <button class="toggle-form-btn" onclick="toggleForm()">Show Contact Form</button>
-      </div>
-
-      <!-- 🧾 Embedded Microsoft Contact Form -->
-      <iframe 
-        id="contactForm"
-        src="https://forms.office.com/Pages/ResponsePage.aspx?id=YOUR_CONTACT_FORM_ID&embed=true"
-        title="Cortical Analysis Lab Contact Form">
-      </iframe>
-    </div>
+    <!-- 🗺️ Embedded Campus Map -->
+    <iframe
+      src="https://www.google.com/maps?q=Sacred+Heart+University,+Fairfield,+CT&output=embed"
+      title="Sacred Heart University Map"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
   </section>
 
   <!-- 📬 Footer -->
@@ -143,15 +97,15 @@
     © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
   </footer>
 
+  <!-- 📜 JS for mobile nav -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    function toggleForm() {
-      const iframe = document.getElementById("contactForm");
-      iframe.classList.toggle("iframe-visible");
-      const btn = document.querySelector(".toggle-form-btn");
-      btn.textContent = iframe.classList.contains("iframe-visible") ? "Hide Contact Form" : "Show Contact Form";
-    }
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('nav ul');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
   </script>
 
 </body>
