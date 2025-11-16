@@ -1,171 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Collaborate | Cortical Analysis Lab</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
   <style>
-    :root {
-      --red: #B30838;
-      --offwhite: #faf7f5;
-      --text: #222;
-      --shadow: rgba(0,0,0,0.05);
-    }
-
-    body {
-      margin: 0;
-      background: var(--offwhite);
-      color: var(--text);
-      font-family: "Inter", sans-serif;
-      line-height: 1.6;
-    }
-
-    /* ---------- NAVIGATION ---------- */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: var(--offwhite);
-      box-shadow: 0 2px 6px var(--shadow);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      z-index: 100;
-    }
-
-    nav .logo {
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: var(--red);
-      text-decoration: none;
-      letter-spacing: 1px;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li a {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 500;
-      position: relative;
-    }
-
-    nav ul li a::after {
-      content: "";
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0%;
-      height: 2px;
-      background: var(--red);
-      transition: width 0.3s ease;
-    }
-
-    nav ul li a:hover::after {
-      width: 100%;
-    }
-
-    /* ---------- HEADER ---------- */
-    header {
-      text-align: center;
-      padding: 9rem 2rem 5rem;
-      background: var(--offwhite);
-    }
-
-    header h1 {
-      color: var(--red);
-      font-size: clamp(2rem, 5vw, 3rem);
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 1.1rem;
-      color: #444;
-    }
-
-    /* ---------- SECTION ---------- */
-    section {
-      max-width: 950px;
+    .collab-container {
+      max-width: 800px;
       margin: 3rem auto;
-      padding: 0 2rem;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 16px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+      text-align: center;
     }
 
-    h2 {
+    .collab-container h2 {
       color: var(--red);
       margin-bottom: 1rem;
-      border-bottom: 2px solid var(--red);
-      display: inline-block;
-      padding-bottom: 4px;
     }
 
-    .card {
-      background: var(--offwhite);
-      border-radius: 10px;
-      padding: 1.5rem 2rem;
-      box-shadow: 0 4px 10px var(--shadow);
-      margin-bottom: 2rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    .collab-container p {
+      color: #333;
+      line-height: 1.6;
+      font-size: 1.05rem;
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    .collab-actions {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .collab-actions a {
+      background: var(--red);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.8rem 1.6rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .collab-actions a:hover {
+      background: #a61c1c;
+      transform: translateY(-2px);
     }
 
     iframe {
       width: 100%;
       height: 700px;
       border: none;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px var(--shadow);
-      background: var(--offwhite);
-    }
-
-    ul {
-      color: #444;
-      padding-left: 1.2rem;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-
-    /* ---------- FOOTER ---------- */
-    footer {
-      background: var(--offwhite);
-      padding: 2rem;
-      text-align: center;
-      color: #555;
-      font-size: 0.9rem;
-      border-top: 1px solid #ddd;
-      box-shadow: 0 -2px 6px var(--shadow);
-    }
-
-    footer a {
-      color: var(--red);
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
+      margin-top: 2rem;
+      border-radius: 12px;
     }
   </style>
 </head>
 
 <body>
+
+  <!-- 🧭 Navigation -->
   <nav>
-    <a href="./" class="logo">Cortical Analysis Lab</a>
+    <a href="index.html" class="logo">Cortical Analysis Lab</a>
     <ul>
       <li><a href="research.html">Research</a></li>
       <li><a href="people.html">People</a></li>
@@ -175,36 +76,38 @@
     </ul>
   </nav>
 
+  <!-- 🤝 Collaboration Section -->
   <header>
     <h1>Collaborate With Us</h1>
-    <p>We welcome collaborations across neuroscience, psychology, bioengineering, and computational science. 
-    Whether you’re interested in shared datasets, methodological partnerships, or educational initiatives — we’d love to hear from you.</p>
+    <p>
+      The Cortical Analysis Lab welcomes collaborations in neuroscience, neuroengineering, and education. 
+      We work with academic partners, students, and industry groups to develop tools and studies 
+      that bridge fundamental and translational neuroscience.
+    </p>
   </header>
 
   <section>
-    <h2>Submit a Collaboration Proposal</h2>
-    <div class="card">
-      <p>Complete the form below to propose a research collaboration, data-sharing project, or student internship opportunity with the Cortical Analysis Lab.</p>
-      <p><strong>Note:</strong> You’ll receive a follow-up email if your proposal aligns with our research focus areas.</p>
+    <div class="collab-container">
+      <h2>Opportunities</h2>
+      <p>
+        Whether you’re a student seeking hands-on research experience, a faculty member interested in 
+        cross-disciplinary work, or a community partner with a neuroscience-related initiative — 
+        we’d love to hear from you.
+      </p>
+      <div class="collab-actions">
+        <a href="mailto:NeuroResearch@sacredheart.edu">Email the Lab</a>
+        <a href="https://forms.office.com/r/your-form-id" target="_blank">Submit Collaboration Form</a>
+      </div>
 
-      <!-- 👇 Replace this URL with your actual Microsoft Form embed link -->
-      <iframe src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=xFmCf5HE9Uel5amfUya5dtOnRTL3wXpCuzkbmFVDdSxUMTRUVzM1Rkw5MEpKOFJNUEFSQUVUNjBQUy4u" title="Collaboration Proposal Form"></iframe>
+      <!-- 🧾 Embedded Microsoft Form (optional) -->
+      <iframe 
+        src="https://forms.office.com/Pages/ResponsePage.aspx?id=YOUR_FORM_ID&embed=true"
+        title="Cortical Analysis Lab Collaboration Form">
+      </iframe>
     </div>
   </section>
 
-  <section>
-    <h2>Current Collaboration Areas</h2>
-    <div class="card">
-      <ul>
-        <li>Neurovascular coupling and brain–behavior dynamics</li>
-        <li>EEG and optical imaging integration</li>
-        <li>Behavioral neuroscience and machine vision tracking</li>
-        <li>Signal processing and computational modeling of brain states</li>
-        <li>Educational outreach and neurotechnology development</li>
-      </ul>
-    </div>
-  </section>
-
+  <!-- 📬 Footer -->
   <footer>
     © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
   </footer>
@@ -212,5 +115,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
