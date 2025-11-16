@@ -43,9 +43,9 @@ body::before {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  opacity: 0.15; /* ✅ watermark intensity (0.15–0.25 ideal) */
-  filter: brightness(0.9) contrast(0.9) blur(1px);
-  mix-blend-mode: multiply; /* blends smoothly into off-white */
+  opacity: 0.12; /* 💧 lighter watermark */
+  filter: brightness(0.9) contrast(0.9);
+  mix-blend-mode: multiply;
   pointer-events: none;
   z-index: -1;
 }
@@ -190,20 +190,24 @@ section {
 }
 
 /* =====================================================
-   🧩 CARDS
+   🧩 GLASS CARD STYLES — applied across pages
    ===================================================== */
-.card {
-  background: rgba(255, 255, 255, 0.6);
+.card,
+.person-card,
+details {
+  background: rgba(255, 255, 255, 0.55); /* unified transparency */
   border-radius: 12px;
   padding: 1.5rem 2rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  margin-bottom: 2rem;
+  backdrop-filter: blur(6px);
   transition: transform 0.2s ease, background 0.3s ease;
 }
 
-.card:hover {
+.card:hover,
+.person-card:hover,
+details:hover {
   transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 /* =====================================================
