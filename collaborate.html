@@ -7,74 +7,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <style>
-    .collab-container {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 16px;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
-      text-align: center;
-    }
-
-    .collab-container h2 {
-      color: var(--red);
-      margin-bottom: 1rem;
-    }
-
-    .collab-container p {
-      color: #333;
-      line-height: 1.6;
-      font-size: 1.05rem;
-    }
-
-    .collab-actions {
-      margin-top: 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .collab-actions a,
-    .toggle-form-btn {
-      background: var(--red);
-      color: #fff;
-      text-decoration: none;
-      padding: 0.8rem 1.6rem;
-      border-radius: 8px;
-      font-weight: 600;
-      border: none;
-      cursor: pointer;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-
-    .collab-actions a:hover,
-    .toggle-form-btn:hover {
-      background: #a61c1c;
-      transform: translateY(-2px);
-    }
-
     iframe {
       width: 100%;
-      height: 700px;
+      height: 900px;
       border: none;
-      margin-top: 2rem;
       border-radius: 12px;
-      display: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(6px);
     }
 
-    .iframe-visible {
-      display: block;
+    .form-container {
+      max-width: 900px;
+      margin: 2rem auto 4rem;
+      padding: 0 2rem;
     }
 
-    @media (min-width: 768px) {
+    .note {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--gray);
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
       iframe {
-        display: block;
-      }
-      .toggle-form-btn {
-        display: none;
+        height: 1100px;
       }
     }
   </style>
@@ -85,47 +43,33 @@
   <!-- 🧭 Navigation -->
   <nav>
     <a href="index.html" class="logo">Cortical Analysis Lab</a>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
     <ul>
       <li><a href="research.html">Research</a></li>
       <li><a href="people.html">People</a></li>
       <li><a href="publications.html">Publications</a></li>
-      <li><a href="collaborate.html">Collaborate</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="collaborate.html" class="active">Collaborate</a></li>
     </ul>
   </nav>
 
-  <!-- 🤝 Collaboration Section -->
+  <!-- 🧠 Header -->
   <header>
-    <h1>Collaborate With Us</h1>
+    <h1>Collaborate with Us</h1>
     <p>
-      The Cortical Analysis Lab welcomes collaborations in neuroscience, neuroengineering, and education. 
-      We work with academic partners, students, and industry groups to develop tools and studies 
-      that bridge fundamental and translational neuroscience.
+      The Cortical Analysis Lab welcomes collaborative research proposals from students, 
+      scientists, and organizations interested in neuroscience, imaging, and translational work. 
+      Please complete the form below to share your ideas or request a project discussion.
     </p>
   </header>
 
-  <section>
-    <div class="collab-container">
-      <h2>Opportunities</h2>
-      <p>
-        Whether you’re a student seeking hands-on research experience, a faculty member interested in 
-        cross-disciplinary work, or a community partner with a neuroscience-related initiative — 
-        we’d love to hear from you.
-      </p>
-
-      <div class="collab-actions">
-        <a href="mailto:NeuroResearch@sacredheart.edu">Email the Lab</a>
-        <a href="https://forms.office.com/r/Cortical Analysis Lab Collaboration Proposal" target="_blank">Open Form in New Tab</a>
-        <button class="toggle-form-btn" onclick="toggleForm()">Show Form</button>
-      </div>
-
-      <!-- 🧾 Embedded Microsoft Form -->
-      <iframe 
-        id="collabForm"
-        src="https://forms.office.com/Pages/ResponsePage.aspx?id=Cortical Analysis Lab Collaboration Proposal&embed=true"
-        title="Cortical Analysis Lab Collaboration Form">
-      </iframe>
-    </div>
+  <!-- 💬 Embedded Form -->
+  <section class="form-container">
+    <iframe 
+      src="https://forms.office.com/Pages/ResponsePage.aspx?id=xFmCf5HE9Uel5amfUya5dtOnRTL3wXpCuzkbmFVDdSxUMTRUVzM1Rkw5MEpKOFJNUEFSQUVUNjBQUy4u"
+      title="Collaboration Proposal Form"
+      allowfullscreen>
+    </iframe>
+    <p class="note">Your submission will be securely stored via Microsoft Forms.</p>
   </section>
 
   <!-- 📬 Footer -->
@@ -133,15 +77,15 @@
     © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
   </footer>
 
+  <!-- 📜 JS for mobile nav -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    function toggleForm() {
-      const iframe = document.getElementById("collabForm");
-      iframe.classList.toggle("iframe-visible");
-      const btn = document.querySelector(".toggle-form-btn");
-      btn.textContent = iframe.classList.contains("iframe-visible") ? "Hide Form" : "Show Form";
-    }
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('nav ul');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
   </script>
 
 </body>
