@@ -28,7 +28,7 @@
       overflow-x: hidden;
     }
 
-    /* 🌟 Enhanced logo watermark – fully visible, stronger, scaled to fit */
+    /* 🌟 Full-sized textured watermark background */
     body::before {
       content: "";
       position: fixed;
@@ -39,7 +39,7 @@
       background-image: url("assets/Lab Website Background.png");
       background-repeat: no-repeat;
       background-position: center;
-      background-size: contain; /* shows the entire image */
+      background-size: cover; /* fills entire background */
       opacity: 0.3; /* stronger watermark */
       mix-blend-mode: multiply;
       filter: brightness(1.05) contrast(1.1);
