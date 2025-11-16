@@ -1,172 +1,259 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>People | Cortical Analysis Lab</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
   <style>
-    /* --- Extra tweaks specific to People page --- */
-    .people-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+    :root {
+      --red: #B30838;
+      --offwhite: #faf7f5;
+      --text: #222;
+      --shadow: rgba(0,0,0,0.05);
     }
 
-    .person-card {
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 12px;
-      text-align: center;
-      padding: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      backdrop-filter: blur(4px);
+    body {
+      margin: 0;
+      background: var(--offwhite);
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+      line-height: 1.6;
     }
 
-    .person-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    /* ---------- NAVIGATION ---------- */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--offwhite);
+      box-shadow: 0 2px 6px var(--shadow);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 100;
     }
 
-    .person-card img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 2px solid var(--red);
-      margin-bottom: 1rem;
-    }
-
-    .person-card h3 {
+    nav .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
       color: var(--red);
-      margin: 0.5rem 0 0.3rem;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--red);
+      transition: width 0.3s ease;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      text-align: center;
+      padding: 9rem 2rem 5rem;
+      background: var(--offwhite);
+    }
+
+    header h1 {
+      color: var(--red);
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      max-width: 700px;
+      margin: auto;
       font-size: 1.1rem;
-    }
-
-    .person-card p.role {
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 0.3rem;
-    }
-
-    .person-card p.bio {
       color: #444;
+    }
+
+    /* ---------- SECTION ---------- */
+    section {
+      max-width: 950px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    h2 {
+      color: var(--red);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--red);
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    .card {
+      background: var(--offwhite);
+      border-radius: 10px;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 4px 10px var(--shadow);
+      margin-bottom: 2rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+
+    .person {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .person img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--red);
+    }
+
+    .person-info {
+      flex: 1;
+    }
+
+    .person-info h3 {
+      margin: 0;
+      color: var(--red);
+      font-size: 1.2rem;
+    }
+
+    .person-info p {
+      margin: 0.3rem 0;
+      color: #444;
+    }
+
+    .role {
+      font-style: italic;
+      color: #666;
       font-size: 0.95rem;
     }
 
-    .debug-line {
+    .error {
+      color: var(--red);
       text-align: center;
-      color: var(--gray);
-      font-size: 0.9rem;
-      margin-top: 1rem;
+      margin-top: 2rem;
     }
 
-    .error {
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: var(--offwhite);
+      padding: 2rem;
       text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+      border-top: 1px solid #ddd;
+      box-shadow: 0 -2px 6px var(--shadow);
+    }
+
+    footer a {
       color: var(--red);
-      margin-top: 2rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 
 <body>
-
-  <!-- 🧭 Navigation -->
   <nav>
-    <a href="index.html" class="logo">Cortical Analysis Lab</a>
-    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <a href="./" class="logo">Cortical Analysis Lab</a>
     <ul>
       <li><a href="research.html">Research</a></li>
-      <li><a href="people.html" class="active">People</a></li>
+      <li><a href="people.html">People</a></li>
       <li><a href="publications.html">Publications</a></li>
       <li><a href="collaborate.html">Collaborate</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- 🧑‍🔬 Header -->
   <header>
-    <h1>Our Team</h1>
-    <p>
-      The Cortical Analysis Lab brings together students, researchers, and collaborators 
-      dedicated to understanding the neural, glial, and vascular basis of behavior. 
-      Meet the people advancing our mission.
-    </p>
+    <h1>People</h1>
+    <p>Our lab unites neuroscience, engineering, and computational expertise to explore how the brain integrates neural and vascular activity.</p>
   </header>
 
-  <!-- 👥 Dynamic People Grid -->
   <section>
-    <div id="people-container" class="people-grid">
-      <p>Loading lab members...</p>
+    <h2>Lab Members</h2>
+    <div id="people-container">
+      <p>Loading people...</p>
     </div>
-    <div id="debug-line" class="debug-line"></div>
   </section>
 
-  <!-- 📬 Footer -->
   <footer>
     © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
   </footer>
 
-  <!-- 📜 JS: Load JSON + Mobile Nav -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // ✅ Mobile menu toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('nav ul');
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-
-    // ✅ JSON Loader with Cache-Buster
     async function loadPeople() {
       const container = document.getElementById("people-container");
-      const debugLine = document.getElementById("debug-line");
-
       try {
-        // Append cache-buster parameter to prevent stale cache
-        const cacheBuster = "?v=" + new Date().getTime();
-        const jsonPath = window.location.hostname.includes("github.io")
-          ? "data/people.json" + cacheBuster
-          : "./data/people.json" + cacheBuster;
-
-        const response = await fetch(jsonPath);
-        if (!response.ok) throw new Error(`Fetch failed (${response.status})`);
-
+        const response = await fetch("data/people.json");
+        if (!response.ok) throw new Error("Network response not OK");
         const people = await response.json();
+
         container.innerHTML = "";
 
         people.forEach(person => {
-          const card = document.createElement("div");
-          card.className = "person-card";
-          card.innerHTML = `
-            <img src="${person.image || 'assets/default-profile.png'}" alt="${person.name}">
-            <h3>${person.name}</h3>
-            <p class="role">${person.role || ''}</p>
-            <p class="bio">${person.bio || ''}</p>
+          const imgSrc = person.image || "assets/default-profile.png";
+          const link = person.link ? `<p><a href="${person.link}" target="_blank">View profile →</a></p>` : "";
+
+          const html = `
+            <div class="card">
+              <div class="person">
+                <img src="${imgSrc}" alt="${person.name}">
+                <div class="person-info">
+                  <h3>${person.name}</h3>
+                  <p class="role">${person.role || ""}</p>
+                  <p>${person.bio || ""}</p>
+                  ${link}
+                </div>
+              </div>
+            </div>
           `;
-          container.appendChild(card);
+          container.insertAdjacentHTML("beforeend", html);
         });
 
-        if (people.length > 0) {
-          debugLine.textContent = `✅ Loaded ${people.length} lab members from data/people.json`;
-          setTimeout(() => debugLine.style.display = "none", 4000);
-        } else {
-          container.innerHTML = "<p>No team members found.</p>";
-          debugLine.textContent = "⚠️ JSON loaded but contained 0 members.";
-        }
-
-      } catch (err) {
-        console.error("Error loading people:", err);
-        container.innerHTML = `<p class="error">⚠️ Unable to load lab members. Please check <code>data/people.json</code>.</p>`;
-        debugLine.textContent = "❌ Failed to fetch data/people.json";
+      } catch (error) {
+        console.error("Error loading people:", error);
+        container.innerHTML = `<p class="error">⚠️ Error loading people: Unable to load <code>data/people.json</code></p>`;
       }
     }
 
     loadPeople();
   </script>
-
 </body>
 </html>
