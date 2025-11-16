@@ -1,28 +1,32 @@
-{
-  "pi": {
+[
+  {
     "name": "Dr. Shaun James",
     "role": "Principal Investigator",
     "bio": "Leads the Cortical Analysis Lab, focusing on the interplay of neural, glial, and vascular mechanisms in behavior.",
     "image": "assets/shaun-james.jpg"
   },
-  "members": [
-    {
-      "name": "Alex Rivera",
-      "major": "Neuroscience",
-      "role": "Undergraduate Research Assistant",
-      "academic_year": "2025–2026"
-    },
-    {
-      "name": "Sofia Chen",
-      "major": "Psychology",
-      "role": "Graduate Researcher",
-      "academic_year": "2024–2025"
-    },
-    {
-      "name": "Ethan Patel",
-      "major": "Biomedical Engineering",
-      "role": "Undergraduate Research Assistant",
-      "academic_year": "2023–2024"
-    }
-  ]
-}
+  {
+    "name": "Alex Rivera",
+    "major": "Neuroscience",
+    "role": "Undergraduate Research Assistant",
+    "year": 2025
+  },
+  {
+    "name": "Maria Lopez",
+    "major": "Psychology",
+    "role": "Undergraduate Research Assistant",
+    "year": 2025
+  },
+  {
+    "name": "Sam Patel",
+    "major": "Biology",
+    "role": "Graduate Researcher",
+    "year": 2024
+  },
+  {
+    "name": "Tina Nguyen",
+    "major": "Neuroscience",
+    "role": "Research Intern",
+    "year": 2023
+  }
+]
