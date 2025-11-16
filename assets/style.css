@@ -31,7 +31,7 @@ body {
   overflow-x: hidden;
 }
 
-/* 🧠 Watermarked background (behind everything) */
+/* 🧠 Background image — visible but non-intrusive */
 body::before {
   content: "";
   position: fixed;
@@ -41,12 +41,23 @@ body::before {
   height: 100%;
   background-image: url("../assets/Lab%20Website%20Background.png");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
-  opacity: 0.3; /* 💧 lighter watermark */
-  filter: brightness(0.9) contrast(0.9);
-  mix-blend-mode: multiply;
+  opacity: 0.22; /* ⭐️ clean visibility without interference */
   pointer-events: none;
+  z-index: -2;
+}
+
+/* ✨ Soft readability layer over the background */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.35); /* ⭐️ subtle matte veil */
+  backdrop-filter: blur(2px); /* ⭐️ ensures readable text everywhere */
   z-index: -1;
 }
 
@@ -190,24 +201,25 @@ section {
 }
 
 /* =====================================================
-   🧩 GLASS CARD STYLES — applied across pages
+   🧩 CLEAN TRANSPARENT CARD STYLES
    ===================================================== */
 .card,
 .person-card,
 details {
-  background: rgba(255, 255, 255, 0.55); /* unified transparency */
+  background: rgba(255, 255, 255, 0); /* fully transparent */
   border-radius: 12px;
   padding: 1.5rem 2rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  backdrop-filter: blur(6px);
-  transition: transform 0.2s ease, background 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.25); /* ⭐ crisp outline */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);       /* ⭐ subtle lift */
+  backdrop-filter: none;                       /* no glass blur */
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .card:hover,
 .person-card:hover,
 details:hover {
-  transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.7);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 /* =====================================================
@@ -225,8 +237,8 @@ h2 {
    📬 FOOTER
    ===================================================== */
 footer {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(2px);
   padding: 2rem;
   text-align: center;
   color: var(--gray);
