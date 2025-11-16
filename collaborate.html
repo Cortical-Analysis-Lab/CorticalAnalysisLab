@@ -37,17 +37,21 @@
       flex-wrap: wrap;
     }
 
-    .collab-actions a {
+    .collab-actions a,
+    .toggle-form-btn {
       background: var(--red);
       color: #fff;
       text-decoration: none;
       padding: 0.8rem 1.6rem;
       border-radius: 8px;
       font-weight: 600;
+      border: none;
+      cursor: pointer;
       transition: background 0.2s ease, transform 0.2s ease;
     }
 
-    .collab-actions a:hover {
+    .collab-actions a:hover,
+    .toggle-form-btn:hover {
       background: #a61c1c;
       transform: translateY(-2px);
     }
@@ -58,6 +62,20 @@
       border: none;
       margin-top: 2rem;
       border-radius: 12px;
+      display: none;
+    }
+
+    .iframe-visible {
+      display: block;
+    }
+
+    @media (min-width: 768px) {
+      iframe {
+        display: block;
+      }
+      .toggle-form-btn {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -94,13 +112,16 @@
         cross-disciplinary work, or a community partner with a neuroscience-related initiative — 
         we’d love to hear from you.
       </p>
+
       <div class="collab-actions">
         <a href="mailto:NeuroResearch@sacredheart.edu">Email the Lab</a>
-        <a href="https://forms.office.com/r/Cortical Analysis Lab Collaboration Proposal" target="_blank">Submit Collaboration Form</a>
+        <a href="https://forms.office.com/r/Cortical Analysis Lab Collaboration Proposal" target="_blank">Open Form in New Tab</a>
+        <button class="toggle-form-btn" onclick="toggleForm()">Show Form</button>
       </div>
 
-      <!-- 🧾 Embedded Microsoft Form (optional) -->
+      <!-- 🧾 Embedded Microsoft Form -->
       <iframe 
+        id="collabForm"
         src="https://forms.office.com/Pages/ResponsePage.aspx?id=Cortical Analysis Lab Collaboration Proposal&embed=true"
         title="Cortical Analysis Lab Collaboration Form">
       </iframe>
@@ -114,6 +135,13 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    function toggleForm() {
+      const iframe = document.getElementById("collabForm");
+      iframe.classList.toggle("iframe-visible");
+      const btn = document.querySelector(".toggle-form-btn");
+      btn.textContent = iframe.classList.contains("iframe-visible") ? "Hide Form" : "Show Form";
+    }
   </script>
 
 </body>
