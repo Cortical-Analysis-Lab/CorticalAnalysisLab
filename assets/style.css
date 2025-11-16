@@ -43,7 +43,7 @@ body::before {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  opacity: 0.2; /* ✅ watermark intensity (0.15–0.25 ideal) */
+  opacity: 0.3; /* ✅ watermark intensity (0.15–0.25 ideal) */
   filter: brightness(0.9) contrast(0.9) blur(1px);
   mix-blend-mode: multiply; /* blends smoothly into off-white */
   pointer-events: none;
