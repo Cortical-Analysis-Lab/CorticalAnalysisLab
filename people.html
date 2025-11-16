@@ -14,9 +14,9 @@
       padding: 0 1.5rem;
     }
 
-    /* PI card at the top */
+    /* PI card */
     .person-card {
-      background: rgba(255, 255, 255, 0.75);
+      background: rgba(255, 255, 255, 0.65);
       border-radius: 12px;
       text-align: center;
       padding: 2rem;
@@ -55,10 +55,11 @@
     /* Year dropdowns */
     details {
       background: rgba(255, 255, 255, 0.6);
-      border-radius: 10px;
-      margin-bottom: 1.5rem;
+      border-radius: 12px;
+      margin-bottom: 2rem;
       padding: 1rem 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      backdrop-filter: blur(4px);
     }
 
     summary {
@@ -79,18 +80,29 @@
       list-style: none;
       margin: 0.5rem 0 0 0;
       padding: 0;
-      columns: 3; /* three columns */
+      columns: 3;
       column-gap: 2rem;
     }
 
     ul.people-list li {
-      margin: 0.4rem 0;
+      margin-bottom: 1rem;
       color: #333;
       break-inside: avoid-column;
+      font-size: 1rem;
+      line-height: 1.4;
     }
 
     ul.people-list strong {
       color: var(--red);
+      display: block;
+      font-weight: 600;
+    }
+
+    ul.people-list span.major,
+    ul.people-list span.role {
+      display: block;
+      color: #333;
+      font-weight: 400;
     }
 
     .error {
@@ -150,17 +162,15 @@
 
       try {
         const jsonURL = "https://cortical-analysis-lab.github.io/CorticalAnalysisLab/data/people.json?v=" + Date.now();
-        console.log("🔍 Fetching JSON from:", jsonURL);
-
         const response = await fetch(jsonURL);
         if (!response.ok) throw new Error("Failed to load JSON (" + response.status + ")");
         const people = await response.json();
 
-        // ✅ Separate PI and others
+        // Separate PI and others
         const pi = people.find(p => p.name.toLowerCase().includes("shaun"));
         const others = people.filter(p => !p.name.toLowerCase().includes("shaun"));
 
-        // ✅ Group by academic year (starting 2023–2024)
+        // Group by academic year
         const grouped = {};
         others.forEach(p => {
           const year = p.year ? parseInt(p.year) : 2023;
@@ -174,7 +184,7 @@
 
         container.innerHTML = "";
 
-        // 🧠 PI at top
+        // PI card
         if (pi) {
           const card = document.createElement("div");
           card.className = "person-card";
@@ -187,17 +197,14 @@
           container.appendChild(card);
         }
 
-        // 🔴 Divider
         const divider = document.createElement("hr");
         divider.className = "red-divider";
         container.appendChild(divider);
 
-        // 📅 Academic Year Sections (no images)
+        // Year sections
         sortedYears.forEach((year, index) => {
           const section = document.createElement("details");
           const nextYear = year + 1;
-
-          // ✅ Open the most recent year
           if (index === 0) section.setAttribute("open", "true");
 
           section.innerHTML = `
@@ -205,17 +212,22 @@
             <ul class="people-list">
               ${grouped[year]
                 .map(p => `
-                  <li><strong>${p.name}</strong><br>${p.major || ''}${p.role ? ` — ${p.role}` : ''}</li>
+                  <li>
+                    <strong>${p.name}</strong>
+                    <span class="major">${p.major || ''}</span>
+                    <span class="role">${p.role || ''}</span>
+                  </li>
                 `)
                 .join("")}
             </ul>
           `;
           container.appendChild(section);
-        });
 
-        if (people.length === 0) {
-          container.innerHTML = "<p>No team members found.</p>";
-        }
+          // add red divider between sections
+          const hr = document.createElement("hr");
+          hr.className = "red-divider";
+          container.appendChild(hr);
+        });
 
       } catch (err) {
         console.error("❌ Error loading people:", err);
@@ -227,12 +239,10 @@
 
     loadPeople();
 
-    // Mobile menu toggle
+    // Mobile nav toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('nav ul');
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
+    menuToggle.addEventListener('click', () => navLinks.classList.toggle('show'));
   </script>
 
 </body>
