@@ -102,56 +102,79 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 
-    async function loadPeople() {
-      const container = document.getElementById("people-container");
+async function loadPeople() {
+  const container = document.getElementById("people-container");
 
-      try {
-        // ✅ Automatically detect absolute path (works on GitHub Pages)
-        const base = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/');
-        const jsonURL = base + "/data/people.json?v=" + Date.now(); // cache-buster
-        console.log("🔍 Fetching JSON from:", jsonURL);
+  try {
+    const jsonURL = "https://cortical-analysis-lab.github.io/CorticalAnalysisLab/data/people.json?v=" + Date.now();
+    console.log("🔍 Fetching JSON from:", jsonURL);
 
-        const response = await fetch(jsonURL);
-        if (!response.ok) throw new Error("Failed to load JSON (" + response.status + ")");
+    const response = await fetch(jsonURL);
+    if (!response.ok) throw new Error("Failed to load JSON (" + response.status + ")");
+    const people = await response.json();
 
-        const people = await response.json();
-        container.innerHTML = "";
+    // ✅ Sort by year (descending)
+    people.sort((a, b) => (b.year || 0) - (a.year || 0));
 
-        people.forEach(person => {
-          const card = document.createElement("div");
-          card.className = "person-card";
-          card.innerHTML = `
-            <img src="${person.image || 'assets/default-profile.png'}" alt="${person.name}">
-            <h3>${person.name}</h3>
-            <p class="role">${person.role || ''}</p>
-            <p class="bio">${person.bio || ''}</p>
-          `;
-          container.appendChild(card);
-        });
+    // ✅ Ensure Dr. Shaun James always appears first
+    const sorted = [];
+    const pi = people.find(p => p.name.toLowerCase().includes("shaun") && p.role?.toLowerCase().includes("investigator"));
+    if (pi) {
+      sorted.push(pi);
+      people.splice(people.indexOf(pi), 1);
+    }
+    sorted.push(...people);
 
-        if (people.length === 0) {
-          container.innerHTML = "<p>No team members found.</p>";
-        }
+    container.innerHTML = "";
+    let lastYear = null;
 
-      } catch (err) {
-        console.error("❌ Error loading people:", err);
-        container.innerHTML = `
-          <p class="error">⚠️ Unable to load lab members. Please check <code>data/people.json</code>.</p>
-        `;
+    // ✅ Build cards and red dividers
+    sorted.forEach((person, idx) => {
+      if (idx !== 0 && person.year !== lastYear) {
+        const divider = document.createElement("hr");
+        divider.style.border = "2px solid var(--red)";
+        divider.style.margin = "2.5rem 0";
+        container.appendChild(divider);
       }
+
+      const card = document.createElement("div");
+      card.className = "person-card";
+      card.innerHTML = `
+        <img src="${person.image || 'assets/default-profile.png'}" alt="${person.name}">
+        <h3>${person.name}</h3>
+        <p class="role">${person.role || ''}</p>
+        <p class="bio">${person.bio || ''}</p>
+        ${person.link ? `<p><a href="${person.link}" target="_blank">Profile ↗</a></p>` : ''}
+      `;
+      container.appendChild(card);
+
+      lastYear = person.year;
+    });
+
+    if (sorted.length === 0) {
+      container.innerHTML = "<p>No team members found.</p>";
     }
 
-    loadPeople();
+  } catch (err) {
+    console.error("❌ Error loading people:", err);
+    container.innerHTML = `
+      <p class="error">⚠️ Unable to load lab members. Please check <code>data/people.json</code>.</p>
+    `;
+  }
+}
 
-    // Mobile menu
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('nav ul');
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-  </script>
+loadPeople();
+
+// Mobile navigation toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('nav ul');
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+</script>
+
 
 </body>
 </html>
