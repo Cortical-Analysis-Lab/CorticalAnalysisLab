@@ -43,7 +43,7 @@ body::before {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  opacity: 0.12; /* 💧 lighter watermark */
+  opacity: 0.3; /* 💧 lighter watermark */
   filter: brightness(0.9) contrast(0.9);
   mix-blend-mode: multiply;
   pointer-events: none;
