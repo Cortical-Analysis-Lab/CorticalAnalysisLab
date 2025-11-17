@@ -6,27 +6,75 @@
     "image": "assets/Headshot.png"
   },
   {
-    "name": "Alex Rivera",
+    "name": "Natalie Aiello",
     "major": "Neuroscience",
     "role": "Undergraduate Research Assistant",
     "year": 2025
   },
   {
-    "name": "Maria Lopez",
-    "major": "Psychology",
+    "name": "Prasham Diyora",
+    "major": "Neuroscience",
     "role": "Undergraduate Research Assistant",
     "year": 2025
   },
   {
-    "name": "Sam Patel",
+    "name": "Sydney Fischbach",
+    "major": "Neuroscience",
+    "role": "Graduate Researcher",
+    "year": 2024
+  },
+  {
+    "name": "Sylwia Lipinski",
+    "major": "Psychology",
+    "role": "Research Intern",
+    "year": 2023
+    {
+    "name": "Kaydean Saunders",
     "major": "Biology",
     "role": "Graduate Researcher",
     "year": 2024
   },
   {
-    "name": "Tina Nguyen",
-    "major": "Neuroscience",
-    "role": "Research Intern",
-    "year": 2023
+    "name": "Jaiden Fletcher",
+    "major": "Neuroscience & Psychology",
+    "role": "Graduate Researcher",
+    "year": 2024
+  },
+  {
+    "name": "Elleahna Anderson",
+    "major": "Psychology",
+    "role": "Graduate Researcher",
+    "year": 2024
+  },
+  {
+    "name": "Kira Meany",
+    "major": "Psychology",
+    "role": "Graduate Researcher",
+    "year": 2024
+  },
+  {
+    "name": "Jhalissa Vincent",
+    "major": "Biology",
+    "role": "Graduate Researcher",
+    "year": 2024
+  },
+  {
+    "name": "Olivia Smith",
+    "major": "Neurosciene",
+    "role": "Graduate Researcher",
+    "year": 2024
+  },
+  {
+    "name": "Carissa Scannell",
+    "major": "Neuroscience & Psychology",
+    "role": "Graduate Researcher",
+    "year": 2024
+  },
+   {
+    "name": "Mae Esposito",
+    "major": "Psychology",
+    "role": "Graduate Researcher",
+    "year": 2024
   }
+  
 ]
