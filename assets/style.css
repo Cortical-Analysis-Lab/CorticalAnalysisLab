@@ -206,15 +206,28 @@ section {
 .card,
 .person-card,
 details {
-  background: rgba(255, 255, 255, 0); /* fully transparent */
+  background: rgba(255, 255, 255, 0);
   border-radius: 12px;
   padding: 1.5rem 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.25); /* crisp outline */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);       /* subtle lift */
-  backdrop-filter: none;                       /* no glass blur */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  backdrop-filter: none;
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
+/* ✔ Profile image styling */
+.person-card img {
+  width: 200px;                  
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid var(--red);
+  object-fit: cover;             
+  object-position: center 25%;   
+  image-rendering: -webkit-optimize-contrast;
+  margin-bottom: 1rem;
+}
+
+/* Hover effects */
 .card:hover,
 .person-card:hover,
 details:hover {
