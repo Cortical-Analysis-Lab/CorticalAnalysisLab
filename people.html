@@ -6,123 +6,6 @@
   <title>People | Cortical Analysis Lab</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-
-  <style>
-    /* --- Page-specific styling --- */
-    .people-container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
-
-    /* PI card */
-    .person-card {
-      background: rgba(255, 255, 255, 0.65);
-      border-radius: 12px;
-      text-align: center;
-      padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      margin-bottom: 2rem;
-      backdrop-filter: blur(4px);
-    }
-
-    /* Profile image */
-    .person-card img {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      border: 4px solid var(--red);
-      object-fit: cover;
-      object-position: 60% 30%; /* Shift slightly right and up */
-      margin-bottom: 1rem;
-      image-rendering: auto;
-    }
-
-    /* Desktop-only high-quality image fix */
-    @media (min-width: 769px) {
-      .person-card img {
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: crisp-edges;
-        transform: translateZ(0);
-        backface-visibility: hidden;
-      }
-    }
-
-    .person-card h3 {
-      color: var(--red);
-      font-size: 1.4rem;
-      margin: 0.5rem 0;
-    }
-
-    .person-card p {
-      color: #333;
-      font-size: 1rem;
-      margin: 0.3rem 0;
-    }
-
-    hr.red-divider {
-      border: none;
-      border-top: 3px solid var(--red);
-      margin: 3rem 0 2rem;
-    }
-
-    /* Year dropdowns */
-    details {
-      background: rgba(255, 255, 255, 0.6);
-      border-radius: 12px;
-      margin-bottom: 2rem;
-      padding: 1rem 1.5rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      backdrop-filter: blur(4px);
-    }
-
-    summary {
-      font-weight: 700;
-      color: var(--red);
-      font-size: 1.1rem;
-      cursor: pointer;
-      outline: none;
-      margin-bottom: 1rem;
-    }
-
-    summary:hover {
-      color: #8a062c;
-    }
-
-    /* Year lists */
-    ul.people-list {
-      list-style: none;
-      margin: 0.5rem 0 0 0;
-      padding: 0;
-      columns: 3;
-      column-gap: 2rem;
-    }
-
-    ul.people-list li {
-      margin-bottom: 1rem;
-      color: #333;
-      break-inside: avoid-column;
-      font-size: 1rem;
-      line-height: 1.4;
-    }
-
-    ul.people-list strong {
-      color: var(--red);
-      display: block;
-      font-weight: 600;
-    }
-
-    ul.people-list span.major,
-    ul.people-list span.role {
-      display: block;
-      color: #333;
-      font-weight: 400;
-    }
-
-    @media (max-width: 768px) {
-      ul.people-list { columns: 1; }
-    }
-  </style>
 </head>
 
 <body>
@@ -132,7 +15,7 @@
     <a href="index.html" class="logo">Cortical Analysis Lab</a>
     <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
     <ul>
-      <li><a href="index.html">Home</a></li> <!-- NEW HOME BUTTON -->
+      <li><a href="index.html">Home</a></li>
       <li><a href="research.html">Research</a></li>
       <li><a href="people.html" class="active">People</a></li>
       <li><a href="publications.html">Publications</a></li>
@@ -191,7 +74,7 @@
 
         container.innerHTML = "";
 
-        /* --- PI card --- */
+        // PI card
         if (pi) {
           const card = document.createElement("div");
           card.className = "person-card";
@@ -204,32 +87,39 @@
           container.appendChild(card);
         }
 
-        container.appendChild(Object.assign(document.createElement("hr"), { className: "red-divider" }));
+        const divider = document.createElement("hr");
+        divider.className = "red-divider";
+        container.appendChild(divider);
 
-        /* --- Year sections --- */
+        // Year sections
         sortedYears.forEach((year, index) => {
           const section = document.createElement("details");
           const nextYear = year + 1;
-          if (index === 0) section.open = true;
+          if (index === 0) section.setAttribute("open", "true");
 
           section.innerHTML = `
             <summary>${year} – ${nextYear}</summary>
             <ul class="people-list">
-              ${grouped[year].map(p => `
-                <li>
-                  <strong>${p.name}</strong>
-                  <span class="major">${p.major || ''}</span>
-                  <span class="role">${p.role || ''}</span>
-                </li>
-              `).join("")}
+              ${grouped[year]
+                .map(p => `
+                  <li>
+                    <strong>${p.name}</strong>
+                    <span class="major">${p.major || ''}</span>
+                    <span class="role">${p.role || ''}</span>
+                  </li>
+                `)
+                .join("")}
             </ul>
           `;
-
           container.appendChild(section);
-          container.appendChild(Object.assign(document.createElement("hr"), { className: "red-divider" }));
+
+          const hr = document.createElement("hr");
+          hr.className = "red-divider";
+          container.appendChild(hr);
         });
 
       } catch (err) {
+        console.error("❌ Error loading people:", err);
         container.innerHTML = `
           <p class="error">⚠️ Unable to load lab members. Please check <code>data/people.json</code>.</p>
         `;
@@ -238,11 +128,10 @@
 
     loadPeople();
 
-    /* Mobile nav toggle */
-    document.querySelector('.menu-toggle')
-      .addEventListener('click', () =>
-        document.querySelector('nav ul').classList.toggle('show')
-      );
+    // Mobile nav toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('nav ul');
+    menuToggle.addEventListener('click', () => navLinks.classList.toggle('show'));
   </script>
 
 </body>
