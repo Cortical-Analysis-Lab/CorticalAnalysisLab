@@ -43,7 +43,7 @@ body::before {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  opacity: 0.3; /* ⭐️ increased visibility */
+  opacity: 0.5; /* ⭐️ increased visibility */
   pointer-events: none;
   z-index: -2;
 }
