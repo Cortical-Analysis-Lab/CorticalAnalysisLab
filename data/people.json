@@ -5,9 +5,16 @@
     "bio": "Leads the Cortical Analysis Lab, focusing on the interplay of neural, glial, and vascular mechanisms in behavior.",
     "image": "assets/Headshot.png"
   },
+  
   {
     "name": "Natalie Aiello",
     "major": "Neuroscience",
+    "role": "Undergraduate Research Assistant",
+    "year": 2025
+  },
+  {
+    "name": "Elleahna Anderson",
+    "major": "Psychology",
     "role": "Undergraduate Research Assistant",
     "year": 2025
   },
@@ -18,64 +25,57 @@
     "year": 2025
   },
   {
-    "name": "Sydney Fischbach",
-    "major": "Neuroscience",
-    "role": "Graduate Researcher",
+    "name": "Mae Esposito",
+    "major": "Psychology",
+    "role": "Undergraduate Research Assistant",
     "year": 2025
   },
   {
-    "name": "Sylwia Lipinski",
-    "major": "Psychology",
-    "role": "Research Intern",
-    "year": 2025
-    },
-    {
-    "name": "Kaydean Saunders",
-    "major": "Biology",
-    "role": "Graduate Researcher",
+    "name": "Sydney Fischbach",
+    "major": "Neuroscience",
+    "role": "Undergraduate Research Assistant",
     "year": 2025
   },
   {
     "name": "Jaiden Fletcher",
     "major": "Neuroscience & Psychology",
-    "role": "Graduate Researcher",
+    "role": "Undergraduate Research Assistant",
     "year": 2025
   },
   {
-    "name": "Elleahna Anderson",
+    "name": "Sylwia Lipinski",
     "major": "Psychology",
-    "role": "Graduate Researcher",
+    "role": "Undergraduate Research Assistant",
     "year": 2025
   },
   {
     "name": "Kira Meany",
     "major": "Psychology",
-    "role": "Graduate Researcher",
-    "year": 2025
-  },
-  {
-    "name": "Jhalissa Vincent",
-    "major": "Biology",
-    "role": "Graduate Researcher",
-    "year": 2025
-  },
-  {
-    "name": "Olivia Smith",
-    "major": "Neurosciene",
-    "role": "Graduate Researcher",
+    "role": "Undergraduate Research Assistant",
     "year": 2025
   },
   {
     "name": "Carissa Scannell",
     "major": "Neuroscience & Psychology",
-    "role": "Graduate Researcher",
+    "role": "Undergraduate Research Assistant",
     "year": 2025
   },
-   {
-    "name": "Mae Esposito",
-    "major": "Psychology",
-    "role": "Graduate Researcher",
+  {
+    "name": "Kaydean Saunders",
+    "major": "Biology",
+    "role": "Undergraduate Research Assistant",
+    "year": 2025
+  },
+  {
+    "name": "Olivia Smith",
+    "major": "Neurosciene",
+    "role": "Undergraduate Research Assistant",
+    "year": 2025
+  },
+  {
+    "name": "Jhalissa Vincent",
+    "major": "Biology",
+    "role": "Undergraduate Research Assistant",
     "year": 2025
   }
-  
 ]
