@@ -6,6 +6,7 @@
   <title>Contact | Cortical Analysis Lab</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
+
   <style>
     .contact-info {
       max-width: 900px;
@@ -57,7 +58,9 @@
   <nav>
     <a href="index.html" class="logo">Cortical Analysis Lab</a>
     <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+
     <ul>
+      <li><a href="index.html">Home</a></li>
       <li><a href="research.html">Research</a></li>
       <li><a href="people.html">People</a></li>
       <li><a href="publications.html">Publications</a></li>
@@ -97,14 +100,24 @@
     © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
   </footer>
 
-  <!-- 📜 JS for mobile nav -->
+  <!-- 📜 Mobile Nav + Scroll Shadow -->
   <script>
+    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
 
+    // Mobile nav toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('nav ul');
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
+    menuToggle.addEventListener('click', () => navLinks.classList.toggle('show'));
+
+    // Scroll shadow effect
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 20) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
     });
   </script>
 
