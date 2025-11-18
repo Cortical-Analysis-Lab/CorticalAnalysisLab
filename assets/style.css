@@ -283,7 +283,7 @@ a.button:hover {
    ===================================================== */
 @media (max-width: 768px) {
   body::before {
-    opacity: 0.65;   /* stronger background image on mobile */
+    opacity: 0.9;   /* stronger background image on mobile */
   }
 
   body::after {
