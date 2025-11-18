@@ -24,19 +24,18 @@
 
     /* High-quality profile image (allowed & non-conflicting) */
     .person-card img {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      border: 4px solid var(--red);
-      object-fit: cover;
-
-      /* Your custom positioning */
-      object-position: 60% 30%;
+      width: 260px;        /* maintains full resolution */
+      height: auto;        /* no forced cropping */
+      border-radius: 12px; /* soft rectangle for clean aesthetic */
+      border: none;        /* improves clarity */
+      object-fit: contain; /* no cropping at all */
       margin-bottom: 1rem;
-
-      /* Quality settings (only applies to this image) */
-      image-rendering: auto;
+    
+      /* Higher rendering quality */
+      image-rendering: -webkit-optimize-contrast;
+      transform: translateZ(0);
     }
+
 
     /* Desktop-only sharpening */
     @media (min-width: 769px) {
