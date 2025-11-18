@@ -26,16 +26,24 @@
     }
 
     .person-card img {
-      width: 200px;                /* much sharper */
-      height: 200px;
+      width: 260px;                       /* larger = much sharper */
+      height: 260px;
       border-radius: 50%;
       border: 3px solid var(--red);
+    
+      /* Best image crispness across browsers */
       object-fit: cover;
-      object-position: 65% 25%;    /* shift right + slightly upward */
+      object-position: 60% 35%;           /* more balanced + centered */
+      image-rendering: high-quality;
       image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    
+      /* Reduce circular-edge blur illusion */
+      box-shadow: 0 0 0 2px var(--red), 0 0 12px rgba(0,0,0,0.12);
+    
       margin-bottom: 1rem;
+}
 
-    }
 
     .person-card h3 {
       color: var(--red);
