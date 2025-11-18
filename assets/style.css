@@ -25,13 +25,13 @@ body {
   font-family: "Inter", sans-serif;
   color: var(--text);
   line-height: 1.6;
-  padding-top: 80px; /* space for fixed nav */
+  padding-top: 80px;
   background-color: var(--offwhite);
   position: relative;
   overflow-x: hidden;
 }
 
-/* 🧠 Background image — visible but non-intrusive */
+/* Background image */
 body::before {
   content: "";
   position: fixed;
@@ -41,14 +41,14 @@ body::before {
   height: 100%;
   background-image: url("../assets/Lab%20Website%20Background.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
-  opacity: 0.5; /* ⭐️ increased visibility */
+  opacity: 0.5;  /* Desktop visibility */
   pointer-events: none;
   z-index: -2;
 }
 
-/* ✨ Soft readability layer over the background */
+/* Soft readability veil */
 body::after {
   content: "";
   position: fixed;
@@ -56,8 +56,8 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.20); /* ⭐️ lighter matte veil (more image visible) */
-  backdrop-filter: blur(2px); /* ensures readable text everywhere */
+  background: rgba(255, 255, 255, 0.20); 
+  backdrop-filter: blur(2px);
   z-index: -1;
 }
 
@@ -82,7 +82,7 @@ nav {
 
 nav.scrolled {
   background: rgba(250, 247, 245, 0.97);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 nav .logo {
@@ -93,7 +93,7 @@ nav .logo {
   letter-spacing: 1px;
 }
 
-/* --- Nav Links --- */
+/* Nav links */
 nav ul {
   list-style: none;
   display: flex;
@@ -201,7 +201,7 @@ section {
 }
 
 /* =====================================================
-   🧩 CLEAN TRANSPARENT CARD STYLES
+   🧩 CLEAN TRANSPARENT CARDS
    ===================================================== */
 .card,
 .person-card,
@@ -215,35 +215,24 @@ details {
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-/* ✔ Profile image styling */
+/* Profile image */
 .person-card img {
-  width: 200px;                  
+  width: 200px;
   height: 200px;
   border-radius: 50%;
   border: 3px solid var(--red);
-  object-fit: cover;             
-  object-position: center 25%;   
+  object-fit: cover;
+  object-position: 65% 30%; /* adjust crop */
   image-rendering: -webkit-optimize-contrast;
   margin-bottom: 1rem;
 }
 
-/* Hover effects */
+/* Hover */
 .card:hover,
 .person-card:hover,
 details:hover {
   transform: translateY(-3px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-/* =====================================================
-   🏷️ HEADINGS
-   ===================================================== */
-h2 {
-  color: var(--red);
-  margin-bottom: 1rem;
-  border-bottom: 2px solid var(--red);
-  display: inline-block;
-  padding-bottom: 4px;
 }
 
 /* =====================================================
@@ -289,13 +278,16 @@ a.button:hover {
   transform: translateY(-2px);
 }
 
+/* =====================================================
+   📱 MOBILE BACKGROUND BOOST
+   ===================================================== */
 @media (max-width: 768px) {
   body::before {
-    opacity: 0.36;  /* boost image strength ONLY on mobile */
+    opacity: 0.65;   /* stronger background image on mobile */
   }
-  
+
   body::after {
-    background: rgba(255, 255, 255, 0.12); /* reduce veil slightly */
+    background: rgba(255, 255, 255, 0.10); /* lighter veil */
   }
 }
 
