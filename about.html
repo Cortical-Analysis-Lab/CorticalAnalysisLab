@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Dr. Shaun James | Cortical Analysis Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <style>
+    .about-container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .about-card {
+      background: rgba(255, 255, 255, 0.35);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      backdrop-filter: blur(4px);
+      margin-bottom: 3rem;
+    }
+
+    .about-card h2 {
+      color: var(--red);
+      margin-bottom: 1rem;
+    }
+
+    .about-card p {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .pub-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .pub-item {
+      background: rgba(255, 255, 255, 0.3);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      backdrop-filter: blur(4px);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .pub-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    }
+
+    .pub-item h3 {
+      color: var(--red);
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🧭 Navigation -->
+  <nav>
+    <a href="index.html" class="logo">Cortical Analysis Lab</a>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="publications.html">Lab Publications</a></li>
+      <li><a href="collaborate.html">Collaborate</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- 🧑‍🔬 Header -->
+  <header>
+    <h1>About Dr. Shaun James</h1>
+    <p>
+      Principal Investigator of the Cortical Analysis Lab — neuroscience, imaging, behavior, and translational discovery.
+    </p>
+  </header>
+
+  <!-- 🧠 About Section -->
+  <section class="about-container">
+    <div class="about-card">
+      <h2>Biography</h2>
+
+      <p>
+        Dr. Shaun James is a neuroscientist at Sacred Heart University whose work integrates multimodal brain imaging,
+        electrophysiology, behavioral analysis, and computational modeling to investigate the fundamental and translational 
+        mechanisms underlying cortical function.
+      </p>
+
+      <p>
+        His research centers on the coordination of neural, glial, and vascular signals during behavior and under altered
+        physiological states. Using synchronized wide-field optical imaging, EEG, and machine-learning–enhanced behavioral tracking,
+        Dr. James develops frameworks to understand how brain states emerge from dynamic biological networks.
+      </p>
+
+      <p>
+        He also leads interdisciplinary initiatives involving neuroengineering, experimental neuroscience, and 
+        student-driven research innovation. Dr. James mentors undergraduate and graduate researchers in imaging, 
+        artificial intelligence, experimental design, and quantitative neuroscience.
+      </p>
+
+      <p>
+        His broader interests include translational models of neurodevelopmental conditions, neurovascular plasticity,
+        cortical dysfunction, neural signal decoding, and the design of multimodal tools for next-generation neuroscience research.
+      </p>
+    </div>
+
+    <!-- 🔬 ORCID Publications Section -->
+    <h2>Publications (ORCID)</h2>
+    <div id="pub-container" class="pub-list">
+      <p>Loading ORCID publications...</p>
+    </div>
+
+  </section>
+
+  <!-- 📬 Footer -->
+  <footer>
+    © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile nav
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('nav ul');
+    menuToggle.addEventListener('click', () => navLinks.classList.toggle('show'));
+
+    // ===== ORCID Publications Loader =====
+    const ORCID = "0000-0003-4579-8793";
+
+    async function loadORCID() {
+      const container = document.getElementById("pub-container");
+
+      try {
+        const endpoint = `https://pub.orcid.org/v3.0/${ORCID}/works`;
+        const response = await fetch(endpoint, {
+          headers: { "Accept": "application/json" }
+        });
+
+        if (!response.ok) throw new Error("ORCID fetch failed");
+
+        const data = await response.json();
+        const works = data.group || [];
+
+        container.innerHTML = "";
+
+        works.forEach(group => {
+          const summary = group["work-summary"][0];
+          const title = summary.title?.title?.value || "Untitled";
+          const year = summary["publication-date"]?.year?.value || "—";
+          const journal = summary["journal-title"]?.value || "—";
+
+          const item = document.createElement("div");
+          item.className = "pub-item";
+          item.innerHTML = `
+            <h3>${title}</h3>
+            <p><em>${journal}</em> (${year})</p>
+          `;
+          container.appendChild(item);
+        });
+
+        if (works.length === 0) {
+          container.innerHTML = "<p>No ORCID publications found.</p>";
+        }
+      } catch (err) {
+        container.innerHTML = "<p class='error'>Unable to load ORCID publications.</p>";
+      }
+    }
+
+    loadORCID();
+  </script>
+
+</body>
+</html>
