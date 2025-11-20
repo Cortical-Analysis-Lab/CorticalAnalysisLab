@@ -153,7 +153,7 @@
         }
       });
 
-      if (!response.ok) throw new Error("ORCID API error");
+      if (!response.ok) throw new Error("ORCID API error: " + response.status);
 
       const data = await response.json();
       const works = data.group || [];
@@ -172,6 +172,7 @@
           <h3>${title}</h3>
           <p><em>${journal}</em> (${year})</p>
         `;
+
         container.appendChild(item);
       });
 
