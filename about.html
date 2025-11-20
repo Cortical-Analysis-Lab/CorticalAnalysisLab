@@ -134,53 +134,62 @@
   <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 
   <!-- ORCID Loader -->
-  <script>
-    const ORCID = "0000-0003-4579-8793";
+ <script>
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-    async function loadORCID() {
-      const container = document.getElementById("pub-container");
+  async function loadPublications() {
+    const container = document.getElementById("pub-container");
 
-      try {
-        const endpoint = `https://pub.orcid.org/v3.0/${ORCID}/works`;
+    try {
+      const ORCID = "0000-0001-9059-8250";
+      const endpoint = `https://pub.orcid.org/v3.0/${ORCID}/works`;
 
-        const response = await fetch(endpoint, {
-          headers: { "Accept": "application/json" }
-        });
+      const response = await fetch(endpoint, {
+        headers: { "Accept": "application/json" }
+      });
 
-        if (!response.ok) throw new Error("ORCID fetch failed");
-
-        const data = await response.json();
-        const works = data.group || [];
-
-        container.innerHTML = "";
-
-        works.forEach(group => {
-          const summary = group["work-summary"][0];
-          const title = summary.title?.title?.value || "Untitled";
-          const journal = summary["journal-title"]?.value || "—";
-          const year = summary["publication-date"]?.year?.value || "—";
-
-          const item = document.createElement("div");
-          item.className = "pub-item";
-          item.innerHTML = `
-            <h3>${title}</h3>
-            <p><em>${journal}</em> (${year})</p>
-          `;
-
-          container.appendChild(item);
-        });
-
-        if (works.length === 0) {
-          container.innerHTML = "<p>No ORCID publications found.</p>";
-        }
-
-      } catch (err) {
-        container.innerHTML = "<p class='error'>Unable to load ORCID publications.</p>";
+      if (!response.ok) {
+        throw new Error("ORCID fetch failed");
       }
-    }
 
-    loadORCID();
-  </script>
+      const data = await response.json();
+      const works = data.group || [];
+
+      container.innerHTML = "";
+
+      works.forEach(group => {
+        const summary = group["work-summary"][0];
+        const title = summary.title?.title?.value || "Untitled";
+        const year = summary["publication-date"]?.year?.value || "—";
+        const journal = summary["journal-title"]?.value || "";
+        const putcode = summary["put-code"];
+
+        const pubURL = `https://pub.orcid.org/v3.0/${ORCID}/work/${putcode}`;
+
+        container.insertAdjacentHTML("beforeend", `
+          <div class="publication">
+            <h3>${title}</h3>
+            <p class="journal">${journal} (${year})</p>
+            <a href="${pubURL}" target="_blank">View on ORCID →</a>
+          </div>
+        `);
+      });
+
+      if (works.length === 0) {
+        container.innerHTML = "<p>No ORCID publications found.</p>";
+      }
+
+    } catch (err) {
+      console.error(err);
+      container.innerHTML = `
+        <p class="error">⚠️ Unable to load ORCID publications.</p>
+      `;
+    }
+  }
+
+  loadPublications();
+</script>
+
 
 </body>
 </html>
