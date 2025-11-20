@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Dr. Shaun James | Cortical Analysis Lab</title>
+  <title>About Dr. James | Cortical Analysis Lab</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
 
@@ -35,41 +35,35 @@
       margin-bottom: 1rem;
     }
 
-    .pub-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      margin-top: 2rem;
+    .pub-list { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 1.5rem; 
+      margin-top: 2rem; 
     }
 
     .pub-item {
-      background: rgba(255, 255, 255, 0.3);
+      background: rgba(255,255,255,0.3);
       padding: 1.5rem;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       backdrop-filter: blur(4px);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .pub-item:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
     }
 
     .pub-item h3 {
       color: var(--red);
-      font-size: 1.05rem;
       margin-bottom: 0.4rem;
+      font-size: 1.05rem;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- 🧭 Navigation -->
+  <!-- Navigation -->
   <nav>
     <a href="index.html" class="logo">Cortical Analysis Lab</a>
-    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <button class="menu-toggle">☰</button>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="research.html">Research</a></li>
@@ -81,44 +75,44 @@
     </ul>
   </nav>
 
-  <!-- 🧑‍🔬 Header -->
+  <!-- Header -->
   <header>
-    <h1>About Dr. Shaun James</h1>
-    <p>
-      Principal Investigator of the Cortical Analysis Lab — neuroscience, imaging, behavior, and translational discovery.
-    </p>
+    <h1>Dr. Shaun James</h1>
+    <p>Principal Investigator, Cortical Analysis Lab • Assistant Professor of Neuroscience</p>
   </header>
 
-  <!-- 🧠 About Section -->
+  <!-- ABOUT SECTION -->
   <section class="about-container">
+
+    <!-- BIOGRAPHY -->
     <div class="about-card">
       <h2>Biography</h2>
-
       <p>
-        Dr. Shaun James is a neuroscientist at Sacred Heart University whose work integrates multimodal brain imaging,
-        electrophysiology, behavioral analysis, and computational modeling to investigate the fundamental and translational 
-        mechanisms underlying cortical function.
-      </p>
-
-      <p>
-        His research centers on the coordination of neural, glial, and vascular signals during behavior and under altered
-        physiological states. Using synchronized wide-field optical imaging, EEG, and machine-learning–enhanced behavioral tracking,
-        Dr. James develops frameworks to understand how brain states emerge from dynamic biological networks.
-      </p>
-
-      <p>
-        He also leads interdisciplinary initiatives involving neuroengineering, experimental neuroscience, and 
-        student-driven research innovation. Dr. James mentors undergraduate and graduate researchers in imaging, 
-        artificial intelligence, experimental design, and quantitative neuroscience.
-      </p>
-
-      <p>
-        His broader interests include translational models of neurodevelopmental conditions, neurovascular plasticity,
-        cortical dysfunction, neural signal decoding, and the design of multimodal tools for next-generation neuroscience research.
+        Dr. Shaun James is an Assistant Professor of Neuroscience at Sacred Heart University and 
+        Principal Investigator of the Cortical Analysis Lab. His research integrates multimodal 
+        neuroscience methods—including wide-field optical imaging, electrophysiology (EEG), and 
+        behavioral analysis—to investigate cortical network function and dysfunction.
       </p>
     </div>
 
-    <!-- 🔬 ORCID Publications Section -->
+    <!-- EDUCATION -->
+    <div class="about-card">
+      <h2>Education</h2>
+      <p><strong>Ph.D.</strong>,University of Connecticut</p>
+      <p><strong>M.S.</strong>, Sacred Heart University</p>
+      <p><strong>B.S.</strong>, Drake University</p>
+    </div>
+
+    <!-- COURSES -->
+    <div class="about-card">
+      <h2>Courses Taught</h2>
+      <p>• Neuroscience & Soceity</p>
+      <p>• Behavioral Neuroscience</p>
+      <p>• Essentials of Neuroscience</p>
+      <p>• Introduction to Psychology</p>
+    </div>
+
+    <!-- ORCID PUBLICATIONS -->
     <h2>Publications (ORCID)</h2>
     <div id="pub-container" class="pub-list">
       <p>Loading ORCID publications...</p>
@@ -126,63 +120,17 @@
 
   </section>
 
-  <!-- 📬 Footer -->
+  <!-- Footer -->
   <footer>
     © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
   </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 
+  <!-- ORCID Loader -->
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Mobile nav
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('nav ul');
-    menuToggle.addEventListener('click', () => navLinks.classList.toggle('show'));
-
-    // ===== ORCID Publications Loader =====
     const ORCID = "0000-0003-4579-8793";
 
     async function loadORCID() {
       const container = document.getElementById("pub-container");
-
       try {
-        const endpoint = `https://pub.orcid.org/v3.0/${ORCID}/works`;
-        const response = await fetch(endpoint, {
-          headers: { "Accept": "application/json" }
-        });
-
-        if (!response.ok) throw new Error("ORCID fetch failed");
-
-        const data = await response.json();
-        const works = data.group || [];
-
-        container.innerHTML = "";
-
-        works.forEach(group => {
-          const summary = group["work-summary"][0];
-          const title = summary.title?.title?.value || "Untitled";
-          const year = summary["publication-date"]?.year?.value || "—";
-          const journal = summary["journal-title"]?.value || "—";
-
-          const item = document.createElement("div");
-          item.className = "pub-item";
-          item.innerHTML = `
-            <h3>${title}</h3>
-            <p><em>${journal}</em> (${year})</p>
-          `;
-          container.appendChild(item);
-        });
-
-        if (works.length === 0) {
-          container.innerHTML = "<p>No ORCID publications found.</p>";
-        }
-      } catch (err) {
-        container.innerHTML = "<p class='error'>Unable to load ORCID publications.</p>";
-      }
-    }
-
-    loadORCID();
-  </script>
-
-</body>
-</html>
+        const endpoint = `https://pub.orc
