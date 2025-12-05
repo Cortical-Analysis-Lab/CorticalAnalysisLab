@@ -21,56 +21,52 @@
 /* =====================================================
    🌟 BODY + BACKGROUND WATERMARK
    ===================================================== */
+
 body {
   font-family: "Inter", sans-serif;
   color: var(--text);
   line-height: 1.6;
-  padding-top: 80px; /* space for fixed nav */
+  padding-top: 80px;
   background-color: var(--offwhite);
   position: relative;
   overflow-x: hidden;
 }
 
-/* Background image */
+/* Sharper, consistent background across devices */
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background-image: url("../assets/Lab%20Website%20Background.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  opacity: 0.50; /* desktop visibility */
+  opacity: 0.45; /* Adjusted for more clarity */
   pointer-events: none;
   z-index: -2;
 }
 
-/* Soft readability veil */
+/* Light veil for readability — desktop only */
 body::after {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.20);
-  backdrop-filter: blur(2px);
+  inset: 0;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(1.5px);
   z-index: -1;
 }
 
 /* =====================================================
    🧭 NAVIGATION BAR
    ===================================================== */
+
 nav {
   position: fixed;
   top: 0;
   width: 100%;
   background: rgba(250, 247, 245, 0.9);
   backdrop-filter: blur(6px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,20 +76,25 @@ nav {
   animation: fadeInNav 0.5s ease forwards;
 }
 
+/* Prevent color weirdness on mobile */
+nav * {
+  color: var(--text) !important;
+}
+
 nav.scrolled {
   background: rgba(250, 247, 245, 0.97);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 nav .logo {
   font-weight: 700;
   font-size: 1.2rem;
-  color: var(--red);
+  color: var(--red) !important;
   text-decoration: none;
   letter-spacing: 1px;
 }
 
-/* Nav links */
+/* Links */
 nav ul {
   list-style: none;
   display: flex;
@@ -101,33 +102,33 @@ nav ul {
 }
 
 nav ul li a {
-  color: var(--text);
+  color: var(--text) !important;
   text-decoration: none;
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease;
 }
 
+nav ul li a:hover {
+  color: var(--red) !important;
+}
+
 nav ul li a::after {
   content: "";
   position: absolute;
-  bottom: -4px;
   left: 0;
-  width: 0%;
+  bottom: -4px;
+  width: 0;
   height: 2px;
   background: var(--red);
   transition: width 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: var(--red);
 }
 
 nav ul li a:hover::after {
   width: 100%;
 }
 
-/* Mobile nav */
+/* Mobile nav button */
 .menu-toggle {
   display: none;
   background: none;
@@ -137,40 +138,59 @@ nav ul li a:hover::after {
   cursor: pointer;
 }
 
+/* =====================================================
+   📱 MOBILE NAVIGATION FIXES
+   ===================================================== */
+
 @media (max-width: 768px) {
+
   nav {
     padding: 0.8rem 1.2rem;
+    background: rgba(250, 247, 245, 0.97);
   }
 
   nav ul {
     display: none;
     flex-direction: column;
     align-items: center;
-    background: rgba(250, 247, 245, 0.98);
+    width: 100%;
+    background: rgba(250, 247, 245, 0.97);
     position: absolute;
     top: 60px;
     right: 0;
-    width: 100%;
     padding: 1rem 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  }
-
-  nav ul.show {
-    display: flex;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 
   nav ul li {
     margin: 0.8rem 0;
   }
 
+  nav ul.show {
+    display: flex;
+  }
+
   .menu-toggle {
     display: block;
+    color: var(--red) !important;
+  }
+
+  /* Background adjustments for mobile clarity */
+  body::before {
+    opacity: 0.65;
+  }
+
+  /* REMOVE veil on mobile to stop color tinting */
+  body::after {
+    background: none !important;
+    backdrop-filter: none !important;
   }
 }
 
 /* =====================================================
-   🧠 HEADER SECTION
+   🧠 HEADER
    ===================================================== */
+
 header {
   text-align: center;
   padding: 10rem 2rem 6rem;
@@ -179,7 +199,6 @@ header {
 header h1 {
   color: var(--red);
   font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 0.5rem;
 }
 
 header p {
@@ -192,6 +211,7 @@ header p {
 /* =====================================================
    📄 CONTENT SECTIONS
    ===================================================== */
+
 section {
   max-width: 900px;
   margin: 4rem auto;
@@ -199,53 +219,37 @@ section {
 }
 
 /* =====================================================
-   🧩 CLEAN TRANSPARENT CARDS
+   🧩 CARDS
    ===================================================== */
+
 .card,
 .person-card,
 details {
   background: rgba(255, 255, 255, 0);
   border-radius: 12px;
   padding: 1.5rem 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255,255,255,0.22);
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-/* Add spacing between paragraphs inside cards */
-.card p {
-  margin-bottom: 1.1rem;  /* visible spacing */
-  line-height: 1.6;       /* improved readability */
-}
-
-
 /* =====================================================
-   👤 HIGH-QUALITY PROFILE IMAGE
+   👤 PROFILE IMAGE
    ===================================================== */
+
 .person-card img {
   width: 440px;
   height: 440px;
-
-  /* Use mask instead of border-radius */
-  --r: 50%;
-  -webkit-mask-image: radial-gradient(circle var(--r), black 99%, transparent 100%);
-  mask-image: radial-gradient(circle var(--r), black 99%, transparent 100%);
-
+  border-radius: 50%;
+  border: 4px solid var(--red);
   object-fit: cover;
   object-position: 60% 25%;
-
-  border: 4px solid var(--red);
-  border-radius: 50%; /* keep this for layout only */
-
-  image-rendering: auto;
-  backface-visibility: hidden;
   transform: translateZ(0);
 }
 
-/* Desktop-only sharpening */
+/* Desktop sharpening */
 @media (min-width: 769px) {
   .person-card img {
-    image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
   }
 }
@@ -259,51 +263,29 @@ details:hover {
 }
 
 /* =====================================================
-   🏷️ HEADINGS
+   FOOTER
    ===================================================== */
-h2 {
-  color: var(--red);
-  margin-bottom: 1rem;
-  border-bottom: 2px solid var(--red);
-  display: inline-block;
-  padding-bottom: 4px;
-}
 
-/* =====================================================
-   📬 FOOTER
-   ===================================================== */
 footer {
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255,255,255,0.55);
   backdrop-filter: blur(2px);
   padding: 2rem;
   text-align: center;
   color: var(--gray);
   font-size: 0.9rem;
-  border-top: 1px solid rgba(0,0,0,0.05);
-}
-
-footer a {
-  color: var(--red);
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
 }
 
 /* =====================================================
-   🔘 BUTTONS
+   BUTTONS
    ===================================================== */
+
 button,
 a.button {
   background: var(--red);
-  color: #fff;
-  border: none;
+  color: white;
   border-radius: 8px;
   padding: 0.8rem 1.6rem;
   font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
 }
 
 button:hover,
@@ -313,23 +295,10 @@ a.button:hover {
 }
 
 /* =====================================================
-   📱 MOBILE: RAW BACKGROUND (no veil)
+   ANIMATIONS
    ===================================================== */
-@media (max-width: 768px) {
-  body::before {
-    opacity: 0.75;
-  }
 
-  body::after {
-    background: none !important;
-    backdrop-filter: none !important;
-  }
-}
-
-/* =====================================================
-   ✨ ANIMATIONS
-   ===================================================== */
 @keyframes fadeInNav {
   from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
 }
