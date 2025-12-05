@@ -1,293 +1,275 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>People | Cortical Analysis Lab</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cortical-analysis-lab.github.io/CorticalAnalysisLab/assets/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>People | Cortical Analysis Lab</title>
 
-  <style>
-    /* --- Page-specific layout only (NO global overrides) --- */
-    .people-container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cortical-analysis-lab.github.io/CorticalAnalysisLab/assets/style.css">
 
-    /* PI card container only (not overriding global card styles) */
-    .person-card {
-      text-align: center;
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
+  <style>
+    /* --- Page-specific layout only (NO global overrides) --- */
+    .people-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
 
-    /* High-quality profile image (allowed & non-conflicting) */
-    .person-card img {
-      width: 260px;        /* maintains full resolution */
-      height: auto;        /* no forced cropping */
-      border-radius: 12px; /* soft rectangle for clean aesthetic */
-      border: none;        /* improves clarity */
-      object-fit: contain; /* no cropping at all */
-      margin-bottom: 1rem;
-    
-      /* Higher rendering quality */
-      image-rendering: -webkit-optimize-contrast;
-      transform: translateZ(0);
-    }
+    /* PI card container only (not overriding global card styles) */
+    .person-card {
+      text-align: center;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
 
+    /* High-quality PI profile image */
+    .person-card img {
+      width: 260px;
+      height: auto;
+      border-radius: 12px;
+      border: none;
+      object-fit: contain;
+      margin-bottom: 1rem;
+      image-rendering: -webkit-optimize-contrast;
+      transform: translateZ(0);
+    }
 
-    /* Desktop-only sharpening */
-    @media (min-width: 769px) {
-      .person-card img {
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: crisp-edges;
-        transform: translateZ(0);
-        backface-visibility: hidden;
-      }
-    }
+    @media (min-width: 769px) {
+      .person-card img {
+        image-rendering: crisp-edges;
+        backface-visibility: hidden;
+      }
+    }
 
-    .person-card h3 {
-      color: var(--red);
-      font-size: 1.4rem;
-      margin: 0.5rem 0;
-    }
+    .person-card h3 {
+      color: var(--red);
+      font-size: 1.4rem;
+      margin: 0.5rem 0;
+    }
 
-    .person-card p {
-      color: #333;
-      font-size: 1rem;
-      margin: 0.3rem 0;
-    }
+    .person-card p {
+      color: #333;
+      font-size: 1rem;
+      margin: 0.3rem 0;
+    }
 
-    hr.red-divider {
-      border: none;
-      border-top: 3px solid var(--red);
-      margin: 3rem 0 2rem;
-    }
+    hr.red-divider {
+      border: none;
+      border-top: 3px solid var(--red);
+      margin: 3rem 0 2rem;
+    }
 
-    /* Year dropdowns */
-    details {
-      padding: 1rem 1.5rem;
-      margin-bottom: 2rem;
-      border-radius: 12px;
-    }
+    /* Year dropdown sections */
+    details {
+      padding: 1rem 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+    }
 
-    summary {
-      font-weight: 700;
-      color: var(--red);
-      font-size: 1.1rem;
-      cursor: pointer;
-      margin-bottom: 1rem;
-    }
+    summary {
+      font-weight: 700;
+      color: var(--red);
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
 
-    summary:hover { color: #8a062c; }
+    summary:hover { color: #8a062c; }
 
-    /* Year lists */
-    ul.people-list {
-      list-style: none;
-      margin: 0.5rem 0 0 0;
-      padding: 0;
-      columns: 3;
-      column-gap: 2rem;
-    }
+    /* Student lists inside each year */
+    ul.people-list {
+      list-style: none;
+      margin: 0.5rem 0 0 0;
+      padding: 0;
+      columns: 3;
+      column-gap: 2rem;
+    }
 
-    ul.people-list li {
-      margin-bottom: 1rem;
-      color: #333;
-      font-size: 1rem;
-      line-height: 1.4;
-      break-inside: avoid-column;
-    }
+    ul.people-list li {
+      margin-bottom: 1rem;
+      color: #333;
+      font-size: 1rem;
+      line-height: 1.4;
+      break-inside: avoid-column;
+    }
 
-    ul.people-list strong {
-      color: var(--red);
-      font-weight: 600;
-      display: block;
-    }
+    ul.people-list strong {
+      color: var(--red);
+      font-weight: 600;
+      display: block;
+    }
 
-    ul.people-list span.major,
-    ul.people-list span.role {
-      display: block;
-      font-weight: 400;
-    }
+    ul.people-list span.major,
+    ul.people-list span.role {
+      display: block;
+      font-weight: 400;
+    }
 
-    @media (max-width: 768px) {
-      ul.people-list { columns: 1; }
-    }
-  </style>
+    @media (max-width: 768px) {
+      ul.people-list { columns: 1; }
+    }
+  </style>
 </head>
 
 <body>
 
-    <div id="nav-placeholder"></div>
-  <script>
-    fetch("partials/nav.html")
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById("nav-placeholder").innerHTML = html;
+  <!-- Shared Navigation -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("partials/nav.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("nav-placeholder").innerHTML = html;
 
-        // Re-enable JS interactions AFTER injection
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navLinks = document.querySelector("nav ul");
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector("nav ul");
 
-        menuToggle.addEventListener("click", () => {
-          navLinks.classList.toggle("show");
-        });
+        menuToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("show");
+        });
 
-        // Scroll shadow effect
-        window.addEventListener("scroll", () => {
-          const nav = document.querySelector("nav");
-          if (window.scrollY > 20) {
-            nav.classList.add("scrolled");
-          } else {
-            nav.classList.remove("scrolled");
-          }
-        });
-      })
-      .catch(err => console.error("Navigation load error:", err));
-  </script>
+        window.addEventListener("scroll", () => {
+          const nav = document.querySelector("nav");
+          nav.classList.toggle("scrolled", window.scrollY > 20);
+        });
+      });
+  </script>
 
+  <!-- 🧑‍🔬 Header -->
+  <header>
+    <h1>Our Team</h1>
+    <p>
+      The Cortical Analysis Lab brings together students, researchers, and collaborators
+      dedicated to understanding the neural, glial, and vascular basis of behavior.
+      Meet the people advancing our mission.
+    </p>
+  </header>
 
-    <header>
-    <h1>Our Team</h1>
-    <p>
-      The Cortical Analysis Lab brings together students, researchers, and collaborators 
-      dedicated to understanding the neural, glial, and vascular basis of behavior. 
-      Meet the people advancing our mission.
-    </p>
-  </header>
+  <!-- 👥 Dynamic People Container -->
+  <section class="people-container" id="people-container">
+    <p>Loading lab members...</p>
+  </section>
 
-    <section class="people-container" id="people-container">
-    <p>Loading lab members...</p>
-  </section>
+  <!-- 📬 Footer -->
+  <footer>
+    © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
+  </footer>
 
-    <footer>
-    © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
-  </footer>
+  <!-- PEOPLE LOADER SCRIPT -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    async function loadPeople() {
+      const container = document.getElementById("people-container");
 
-    async function loadPeople() {
-      const container = document.getElementById("people-container");
+      try {
+        const jsonURL =
+          "https://corticalanalysis.org/data/people.json?v=" + Date.now();
 
-      try {
-        const jsonURL =
-          "https://corticalanalysis.org/data/people.json?v=" +
-          Date.now();
+        const response = await fetch(jsonURL);
+        if (!response.ok) throw new Error("Failed to load JSON");
 
-        const response = await fetch(jsonURL);
-        if (!response.ok) throw new Error("Failed to load JSON");
+        const people = await response.json();
 
-        const people = await response.json();
+        /* --- 1. Identify Principal Investigator --- */
+        const pi = people.find(
+          p => p.role && p.role.toLowerCase().includes("principal investigator")
+        );
 
-        // 1. Find the PI
-        const pi = people.find(p => p.role && p.role.toLowerCase().includes("principal investigator"));
-        
-        // 2. Filter out the PI and any entries missing a 'year' property
-        const students = people.filter(p => !p.role || !p.role.toLowerCase().includes("principal investigator") && p.year);
+        /* --- 2. Students = everyone else with a 'year' field --- */
+        const students = people.filter(
+          p => !(p.role && p.role.toLowerCase().includes("principal investigator")) &&
+               p.year
+        );
 
-        // 3. Group students by year, handling single years and arrays of years
-        const grouped = students.reduce((acc, p) => {
-          
-          // Normalize 'year' to always be an array to handle single-year and multi-year data
-          const years = Array.isArray(p.year) ? p.year : [p.year];
-          
-          years.forEach(y => {
-            const year = parseInt(y);
-            if (!acc[year]) acc[year] = [];
-            
-            // Check if the student is already in the list for this year (prevents duplicates from data analysis)
-            if (!acc[year].some(existingP => existingP.name === p.name)) {
-              acc[year].push(p);
-            }
-          });
-          
-          return acc;
-        }, {});
+        /* --- 3. Group students by year(s) --- */
+        const grouped = students.reduce((acc, p) => {
+          const years = Array.isArray(p.year) ? p.year : [p.year];
 
-        // 4. Sort years in descending order (newest first)
-        const sortedYears = Object.keys(grouped)
-          .map(y => parseInt(y))
-          .sort((a, b) => b - a);
+          years.forEach(y => {
+            const year = parseInt(y);
+            if (!acc[year]) acc[year] = [];
 
-        container.innerHTML = "";
+            if (!acc[year].some(existing => existing.name === p.name)) {
+              acc[year].push(p);
+            }
+          });
 
-        /* --- PI card --- */
-        if (pi) {
-          const card = document.createElement("div");
-          card.className = "person-card";
+          return acc;
+        }, {});
 
-          card.innerHTML = `
-            <img src="${pi.image || 'assets/default-profile.png'}" alt="${pi.name}">
-            <h3>${pi.name}</h3>
-            <p><strong>${pi.role || ''}</strong></p>
-            <p>${pi.bio || ''}</p>
-          `;
-          container.appendChild(card);
-        }
+        const sortedYears = Object.keys(grouped)
+          .map(y => parseInt(y))
+          .sort((a, b) => b - a);
 
-        container.appendChild(Object.assign(document.createElement("hr"), {
-          className: "red-divider"
-        }));
+        container.innerHTML = "";
 
-        /* --- Year sections --- */
-        sortedYears.forEach((year, index) => {
-          // 5. Alphabetical Sort: Sorts the list A-Z by name
-          const currentYearStudents = grouped[year].sort((a, b) => a.name.localeCompare(b.name));
+        /* --- 4. PI Card --- */
+        if (pi) {
+          const card = document.createElement("div");
+          card.className = "person-card";
 
-          const section = document.createElement("details");
-          
-          // ⭐️ CHANGE IMPLEMENTED HERE: Use only the current year for the label
-          const schoolYearLabel = `${year}`;
-          
-          // Keep the newest year expanded by default
-          if (index === 0) section.open = true;
+          card.innerHTML = `
+            <img src="${pi.image || 'assets/default-profile.png'}" alt="${pi.name}">
+            <h3>${pi.name}</h3>
+            <p><strong>${pi.role || ''}</strong></p>
+            <p>${pi.bio || ''}</p>
+          `;
+          container.appendChild(card);
+        }
 
-          section.innerHTML = `
-            <summary>${schoolYearLabel}</summary>
-            <ul class="people-list">
-              ${currentYearStudents
-                .map(
-                  p => `
-                <li>
-                  <strong>${p.name}</strong>
-                  <span class="major">${p.major || ''}</span>
-                  <span class="role">${p.role || ''}</span>
-                </li>`
-                )
-                .join("")}
-            </ul>
-          `;
+        container.appendChild(Object.assign(document.createElement("hr"), {
+          className: "red-divider"
+        }));
 
-          container.appendChild(section);
+        /* --- 5. Year Sections (dropdowns) --- */
+        sortedYears.forEach((year, index) => {
+          const currentYearStudents = grouped[year].sort((a, b) =>
+            a.name.localeCompare(b.name)
+          );
 
-          container.appendChild(Object.assign(document.createElement("hr"), {
-            className: "red-divider"
-          }));
-        });
-        
-        // Remove the last divider
-        if (container.lastChild && container.lastChild.classList.contains('red-divider')) {
-          container.removeChild(container.lastChild);
-        }
+          const section = document.createElement("details");
+          if (index === 0) section.open = true;
 
-      } catch (err) {
-        container.innerHTML = `
-          <p class="error">⚠️ Unable to load lab members. Please check <code>data/people.json</code> and ensure it is valid JSON.</p>
-        `;
-        console.error("Loading Error:", err);
-      }
-    }
+          section.innerHTML = `
+            <summary>${year}</summary>
+            <ul class="people-list">
+              ${currentYearStudents
+                .map(
+                  p => `
+                <li>
+                  <strong>${p.name}</strong>
+                  <span class="major">${p.major || ''}</span>
+                  <span class="role">${p.role || ''}</span>
+                </li>`
+                )
+                .join("")}
+            </ul>
+          `;
 
-    loadPeople();
+          container.appendChild(section);
 
-    /* Mobile nav toggle */
-    document.querySelector('.menu-toggle')
-      .addEventListener('click', () =>
-        document.querySelector('nav ul').classList.toggle('show')
-      );
-  </script>
+          container.appendChild(Object.assign(document.createElement("hr"), {
+            className: "red-divider"
+          }));
+        });
+
+        /* Remove final divider */
+        if (container.lastChild && container.lastChild.classList.contains("red-divider")) {
+          container.removeChild(container.lastChild);
+        }
+
+      } catch (err) {
+        container.innerHTML = `
+          <p class="error">⚠️ Unable to load lab members. Please check <code>data/people.json</code>.</p>
+        `;
+        console.error("Loading Error:", err);
+      }
+    }
+
+    loadPeople();
+  </script>
 
 </body>
 </html>
