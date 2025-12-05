@@ -170,6 +170,178 @@
   </footer>
 
   <script>
+   <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>People | Cortical Analysis Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+
+  <style>
+    /* --- Page-specific layout only (NO global overrides) --- */
+    .people-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    /* PI card container only (not overriding global card styles) */
+    .person-card {
+      text-align: center;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    /* High-quality profile image (allowed & non-conflicting) */
+    .person-card img {
+      width: 260px;        /* maintains full resolution */
+      height: auto;        /* no forced cropping */
+      border-radius: 12px; /* soft rectangle for clean aesthetic */
+      border: none;        /* improves clarity */
+      object-fit: contain; /* no cropping at all */
+      margin-bottom: 1rem;
+    
+      /* Higher rendering quality */
+      image-rendering: -webkit-optimize-contrast;
+      transform: translateZ(0);
+    }
+
+
+    /* Desktop-only sharpening */
+    @media (min-width: 769px) {
+      .person-card img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+    }
+
+    .person-card h3 {
+      color: var(--red);
+      font-size: 1.4rem;
+      margin: 0.5rem 0;
+    }
+
+    .person-card p {
+      color: #333;
+      font-size: 1rem;
+      margin: 0.3rem 0;
+    }
+
+    hr.red-divider {
+      border: none;
+      border-top: 3px solid var(--red);
+      margin: 3rem 0 2rem;
+    }
+
+    /* Year dropdowns */
+    details {
+      padding: 1rem 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+    }
+
+    summary {
+      font-weight: 700;
+      color: var(--red);
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
+
+    summary:hover { color: #8a062c; }
+
+    /* Year lists */
+    ul.people-list {
+      list-style: none;
+      margin: 0.5rem 0 0 0;
+      padding: 0;
+      columns: 3;
+      column-gap: 2rem;
+    }
+
+    ul.people-list li {
+      margin-bottom: 1rem;
+      color: #333;
+      font-size: 1rem;
+      line-height: 1.4;
+      break-inside: avoid-column;
+    }
+
+    ul.people-list strong {
+      color: var(--red);
+      font-weight: 600;
+      display: block;
+    }
+
+    ul.people-list span.major,
+    ul.people-list span.role {
+      display: block;
+      font-weight: 400;
+    }
+
+    @media (max-width: 768px) {
+      ul.people-list { columns: 1; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Shared Navigation -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("partials/nav.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("nav-placeholder").innerHTML = html;
+
+        // Re-enable JS interactions AFTER injection
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector("nav ul");
+
+        menuToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("show");
+        });
+
+        // Scroll shadow effect
+        window.addEventListener("scroll", () => {
+          const nav = document.querySelector("nav");
+          if (window.scrollY > 20) {
+            nav.classList.add("scrolled");
+          } else {
+            nav.classList.remove("scrolled");
+          }
+        });
+      })
+      .catch(err => console.error("Navigation load error:", err));
+  </script>
+
+
+  <!-- 🧑‍🔬 Header -->
+  <header>
+    <h1>Our Team</h1>
+    <p>
+      The Cortical Analysis Lab brings together students, researchers, and collaborators 
+      dedicated to understanding the neural, glial, and vascular basis of behavior. 
+      Meet the people advancing our mission.
+    </p>
+  </header>
+
+  <!-- 👥 Dynamic People Container -->
+  <section class="people-container" id="people-container">
+    <p>Loading lab members...</p>
+  </section>
+
+  <!-- 📬 Footer -->
+  <footer>
+    © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
+  </footer>
+
+  <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
     async function loadPeople() {
@@ -262,6 +434,10 @@
       .addEventListener('click', () =>
         document.querySelector('nav ul').classList.toggle('show')
       );
+  </script>
+
+</body>
+</html>
   </script>
 
 </body>
