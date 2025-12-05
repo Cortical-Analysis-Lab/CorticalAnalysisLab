@@ -2,7 +2,7 @@
   {
     "name": "Dr. Shaun James",
     "role": "Principal Investigator",
-    "bio": "Leads the Cortical Analysis Lab, focusing on the interplay of neural, glial, and vascular mechanisms in behavior.",
+    "bio": "Leads the Cortical Analysis Lab fostering a supportive enivronment for both research and mentorship.",
     "image": "assets/Headshot.png"
   },
   
@@ -10,19 +10,19 @@
     "name": "Natalie Aiello",
     "major": "Neuroscience",
     "role": "Undergraduate Research Assistant",
-    "year": 2025
+    "year": [2025 2026]
   },
   {
     "name": "Elleahna Anderson",
     "major": "Psychology",
     "role": "Undergraduate Research Assistant",
-    "year": 2025
+    "year": [2025 2026]
   },
   {
     "name": "Prasham Diyora",
-    "major": "Neuroscience",
+    "major": "Psychology & Biology",
     "role": "Undergraduate Research Assistant",
-    "year": 2025
+    "year": [2025 2026]
   },
   {
     "name": "Mae Esposito",
@@ -34,263 +34,143 @@
     "name": "Sydney Fischbach",
     "major": "Neuroscience",
     "role": "Undergraduate Research Assistant",
-    "year": 2025
+    "year": [2024 2025 2026]
   },
   {
     "name": "Jaiden Fletcher",
     "major": "Neuroscience & Psychology",
     "role": "Undergraduate Research Assistant",
-    "year": 2025
+    "year": [2025]
   },
   {
     "name": "Sylwia Lipinski",
     "major": "Psychology",
     "role": "Undergraduate Research Assistant",
-    "year": 2025
+    "year": [2024 2025 2026]
   },
   {
     "name": "Kira Meany",
     "major": "Psychology",
     "role": "Undergraduate Research Assistant",
-    "year": 2025
+    "year": [2025 2026]
   },
   {
     "name": "Carissa Scannell",
-    "major": "Neuroscience & Psychology",
+    "major": "Psychology",
     "role": "Undergraduate Research Assistant",
-    "year": 2025
+    "year": [2024 2025]
   },
   {
     "name": "Kaydean Saunders",
     "major": "Biology",
     "role": "Undergraduate Research Assistant",
-    "year": 2025
+    "year": [2025 2026]
   },
   {
     "name": "Olivia Smith",
     "major": "Neurosciene",
     "role": "Undergraduate Research Assistant",
-    "year": 2025
+    "year": [2025 2026]
   },
   {
     "name": "Jhalissa Vincent",
-    "major": "Biology",
+    "major": "Neuroscience",
     "role": "Undergraduate Research Assistant",
-    "year": 2025
+    "year": [2025 2026]
   },
    {
     "name": "Lucian Albanese",
-    "major": "Biology",
+    "major": "Psychology & Film",
     "role": "Undergraduate Research Assistant",
-    "year": 2024
+    "year": [2024]
   },
    {
     "name": "Charlie Leahy",
-    "major": "Biology",
+    "major": "Sociology",
     "role": "Undergraduate Research Assistant",
-    "year": 2024
+    "year": [2024]
   },
    {
     "name": "Kristy Palimieri",
-    "major": "Biology",
+    "major": "Neuroscience",
     "role": "Undergraduate Research Assistant",
-    "year": 2024
+    "year": [2024 2025]
   },
    {
     "name": "Alessia Scali",
-    "major": "Biology",
+    "major": "Neuroscience",
     "role": "Undergraduate Research Assistant",
-    "year": 2024
+    "year": [2024 2025]
   },
    {
     "name": "Chris Fusina",
-    "major": "Biology",
+    "major": "Psychology",
     "role": "Undergraduate Research Assistant",
-    "year": 2024
+    "year": [2024 2025]
   },
-   {
-    "name": "Sydney Fischbach",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2024
-  },
-   {
-    "name": "Chris Fusina",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2024
-  },
-   {
+     {
     "name": "Grace Pendelton",
-    "major": "Biology",
+    "major": "Psychology",
     "role": "Undergraduate Research Assistant",
-    "year": 2024
-  },
-   {
-    "name": "Alessia Scali",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2024
-  },
-   {
-    "name": "Carissa Scannell",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2024
-  },
-   {
-    "name": "Kristy Palmieri",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2024
-  },
-   {
-    "name": "Sylwia Lipinksi",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2024
-  },
-   {
-    "name": "Kira Meany",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2025
+    "year": [2024 2025]
   },
    {
     "name": "Julianna Mondella",
-    "major": "Biology",
+    "major": "Psychology",
     "role": "Undergraduate Research Assistant",
-    "year": 2025
+    "year": [2025]
   },
    {
     "name": "Taylor Moore",
-    "major": "Biology",
+    "major": "Psychology & Criminal Justice",
     "role": "Undergraduate Research Assistant",
-    "year": 2025
-  },
-   {
-    "name": "Olivia Smith",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2025
-  },
-   {
-    "name": "Sydney Fischbach",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2025
-  },
-   {
-    "name": "Chris Fusina",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2025
-  },
-   {
-    "name": "Grace Pendelton",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2025
-  },
-   {
-    "name": "Alessia Scali",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2025
-  },
-   {
-    "name": "Carissa Scannell",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2025
-  },
-   {
-    "name": "Krisy Palmieri",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2025
-  },
-   {
-    "name": "Sywlia Lipinski",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2025
+    "year": [2025]
   },
    {
     "name": "Michele Chu",
-    "major": "Biology",
+    "major": "Psychology",
     "role": "Undergraduate Research Assistant",
-    "year": 2025
+    "year": [2025]
   },
    {
     "name": "Isabelle Ricks",
-    "major": "Biology",
+    "major": "Psychology & Biology",
     "role": "Undergraduate Research Assistant",
-    "year": 2025
+    "year": [2025 2026]
   },
    {
     "name": "Julianna Berhalter",
-    "major": "Biology",
+    "major": "Psychology",
     "role": "Undergraduate Research Assistant",
-    "year": 2025
+    "year": [2025]
   },
    {
     "name": "Cailin Drake",
-    "major": "Biology",
+    "major": "Neuroscience",
     "role": "Undergraduate Research Assistant",
-    "year": 2025
+    "year": [2025 2026]
   },
    {
     "name": "Nicolynn Lapenna",
-    "major": "Biology",
+    "major": "Psychology & Biology",
     "role": "Undergraduate Research Assistant",
     "year": 2026
   },
    {
     "name": "Ronald Cole",
-    "major": "Biology",
+    "major": "Psychology & Economics",
     "role": "Undergraduate Research Assistant",
     "year": 2026
   },
    {
     "name": "John Clifford",
-    "major": "Biology",
+    "major": "Psychology",
     "role": "Undergraduate Research Assistant",
     "year": 2026
   },
    {
     "name": "Brandon Moore",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2026
-  },
-   {
-    "name": "Natalie Aiello",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2026
-  },
-   {
-    "name": "Prasham Diyora",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2026
-  },
-   {
-    "name": "Sylwia Lipinksi",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2026
-  },
-   {
-    "name": "Sydney Fischbach",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2026
-  },
-   {
-    "name": "Olivia Smith",
-    "major": "Biology",
+    "major": "Psychology and Economics",
     "role": "Undergraduate Research Assistant",
     "year": 2026
   },
@@ -298,19 +178,6 @@
     "name": "Jhalissa Vincent",
     "major": "Biology",
     "role": "Undergraduate Research Assistant",
-    "year": 2026
-  },
-   {
-    "name": "Kira Meany",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2026
-  },
-   {
-    "name": "Eleahna Anderson",
-    "major": "Biology",
-    "role": "Undergraduate Research Assistant",
-    "year": 2026
-  }
-  
+    "year": [2025 2026]
+  }  
 ]
