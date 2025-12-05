@@ -5,20 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>People | Cortical Analysis Lab</title>
 
-  <!-- Correct CSS file for your live domain -->
+  <!-- Correct site-wide CSS -->
   <link rel="stylesheet" href="/assets/style.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
   <style>
-    /* Page container (restored to original layout width) */
+    /* PAGE LAYOUT WRAPPER */
     .people-container {
       max-width: 1400px;
       margin: 2rem auto;
       padding: 0 2rem;
     }
 
-    /* PI card */
+    /* PI CARD */
     .person-card {
       text-align: center;
       padding: 2rem 0;
@@ -51,7 +51,7 @@
       margin: 2rem 0;
     }
 
-    /* Year dropdowns */
+    /* YEAR DROPDOWNS */
     details {
       margin-bottom: 2rem;
     }
@@ -64,18 +64,20 @@
       margin-bottom: 1rem;
     }
 
-    /* 3-column student layout */
+    /* STUDENT LIST — 3-column ROW-WISE layout */
     ul.people-list {
       list-style: none;
       margin: 0;
       padding: 0;
-      columns: 3;
-      column-gap: 3rem;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 3rem;
+      grid-row-gap: 1.3rem;
     }
 
     ul.people-list li {
-      margin-bottom: 1.5rem;
-      break-inside: avoid-column;
+      margin-bottom: 0.3rem;
       font-size: 1rem;
       line-height: 1.4;
     }
@@ -95,7 +97,7 @@
 
     @media (max-width: 900px) {
       ul.people-list {
-        columns: 1;
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -145,6 +147,11 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
+    /* Helper to extract last name */
+    function getLastName(fullName) {
+      return fullName.trim().split(" ").slice(-1)[0].toLowerCase();
+    }
+
     async function loadPeople() {
       const container = document.getElementById("people-container");
 
@@ -161,25 +168,27 @@
           p => p.role && p.role.toLowerCase().includes("principal investigator")
         );
 
-        /* --- All non-PI entries with year data --- */
+        /* --- Students: non-PI entries with a year field --- */
         const students = people.filter(
           p => !(p.role && p.role.toLowerCase().includes("principal investigator")) &&
                p.year
         );
 
-        /* --- Group students by each year --- */
+        /* --- Group by Year --- */
         const grouped = {};
         students.forEach(s => {
           const years = Array.isArray(s.year) ? s.year : [s.year];
 
           years.forEach(y => {
             if (!grouped[y]) grouped[y] = [];
-            if (!grouped[y].some(x => x.name === s.name)) {
+
+            if (!grouped[y].find(x => x.name === s.name)) {
               grouped[y].push(s);
             }
           });
         });
 
+        /* Sort years descending */
         const sortedYears = Object.keys(grouped).sort((a, b) => b - a);
 
         container.innerHTML = "";
@@ -204,22 +213,29 @@
           const section = document.createElement("details");
           section.open = true;
 
+          /* Sort alphabetically by LAST NAME */
+          const sortedStudents = grouped[year].sort((a, b) =>
+            getLastName(a.name).localeCompare(getLastName(b.name))
+          );
+
           section.innerHTML = `
             <summary>${year}</summary>
             <ul class="people-list">
-              ${grouped[year]
-                .sort((a, b) => a.name.localeCompare(b.name))
-                .map(s => `
-                  <li>
-                    <strong>${s.name}</strong>
-                    <span class="major">${s.major || ""}</span>
-                    <span class="role">${s.role || ""}</span>
-                  </li>
-                `).join("")}
+              ${sortedStudents
+                .map(
+                  s => `
+                <li>
+                  <strong>${s.name}</strong>
+                  <span class="major">${s.major || ""}</span>
+                  <span class="role">${s.role || ""}</span>
+                </li>`
+                )
+                .join("")}
             </ul>
           `;
 
           container.appendChild(section);
+
           container.appendChild(Object.assign(document.createElement("hr"), { className: "red-divider" }));
         });
 
