@@ -1,444 +1,293 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>People | Cortical Analysis Lab</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>People | Cortical Analysis Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
 
-  <style>
-    /* --- Page-specific layout only (NO global overrides) --- */
-    .people-container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
+  <style>
+    /* --- Page-specific layout only (NO global overrides) --- */
+    .people-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
 
-    /* PI card container only (not overriding global card styles) */
-    .person-card {
-      text-align: center;
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
+    /* PI card container only (not overriding global card styles) */
+    .person-card {
+      text-align: center;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
 
-    /* High-quality profile image (allowed & non-conflicting) */
-    .person-card img {
-      width: 260px;        /* maintains full resolution */
-      height: auto;        /* no forced cropping */
-      border-radius: 12px; /* soft rectangle for clean aesthetic */
-      border: none;        /* improves clarity */
-      object-fit: contain; /* no cropping at all */
-      margin-bottom: 1rem;
-    
-      /* Higher rendering quality */
-      image-rendering: -webkit-optimize-contrast;
-      transform: translateZ(0);
-    }
+    /* High-quality profile image (allowed & non-conflicting) */
+    .person-card img {
+      width: 260px;        /* maintains full resolution */
+      height: auto;        /* no forced cropping */
+      border-radius: 12px; /* soft rectangle for clean aesthetic */
+      border: none;        /* improves clarity */
+      object-fit: contain; /* no cropping at all */
+      margin-bottom: 1rem;
+    
+      /* Higher rendering quality */
+      image-rendering: -webkit-optimize-contrast;
+      transform: translateZ(0);
+    }
 
 
-    /* Desktop-only sharpening */
-    @media (min-width: 769px) {
-      .person-card img {
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: crisp-edges;
-        transform: translateZ(0);
-        backface-visibility: hidden;
-      }
-    }
+    /* Desktop-only sharpening */
+    @media (min-width: 769px) {
+      .person-card img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+    }
 
-    .person-card h3 {
-      color: var(--red);
-      font-size: 1.4rem;
-      margin: 0.5rem 0;
-    }
+    .person-card h3 {
+      color: var(--red);
+      font-size: 1.4rem;
+      margin: 0.5rem 0;
+    }
 
-    .person-card p {
-      color: #333;
-      font-size: 1rem;
-      margin: 0.3rem 0;
-    }
+    .person-card p {
+      color: #333;
+      font-size: 1rem;
+      margin: 0.3rem 0;
+    }
 
-    hr.red-divider {
-      border: none;
-      border-top: 3px solid var(--red);
-      margin: 3rem 0 2rem;
-    }
+    hr.red-divider {
+      border: none;
+      border-top: 3px solid var(--red);
+      margin: 3rem 0 2rem;
+    }
 
-    /* Year dropdowns */
-    details {
-      padding: 1rem 1.5rem;
-      margin-bottom: 2rem;
-      border-radius: 12px;
-    }
+    /* Year dropdowns */
+    details {
+      padding: 1rem 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+    }
 
-    summary {
-      font-weight: 700;
-      color: var(--red);
-      font-size: 1.1rem;
-      cursor: pointer;
-      margin-bottom: 1rem;
-    }
+    summary {
+      font-weight: 700;
+      color: var(--red);
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
 
-    summary:hover { color: #8a062c; }
+    summary:hover { color: #8a062c; }
 
-    /* Year lists */
-    ul.people-list {
-      list-style: none;
-      margin: 0.5rem 0 0 0;
-      padding: 0;
-      columns: 3;
-      column-gap: 2rem;
-    }
+    /* Year lists */
+    ul.people-list {
+      list-style: none;
+      margin: 0.5rem 0 0 0;
+      padding: 0;
+      columns: 3;
+      column-gap: 2rem;
+    }
 
-    ul.people-list li {
-      margin-bottom: 1rem;
-      color: #333;
-      font-size: 1rem;
-      line-height: 1.4;
-      break-inside: avoid-column;
-    }
+    ul.people-list li {
+      margin-bottom: 1rem;
+      color: #333;
+      font-size: 1rem;
+      line-height: 1.4;
+      break-inside: avoid-column;
+    }
 
-    ul.people-list strong {
-      color: var(--red);
-      font-weight: 600;
-      display: block;
-    }
+    ul.people-list strong {
+      color: var(--red);
+      font-weight: 600;
+      display: block;
+    }
 
-    ul.people-list span.major,
-    ul.people-list span.role {
-      display: block;
-      font-weight: 400;
-    }
+    ul.people-list span.major,
+    ul.people-list span.role {
+      display: block;
+      font-weight: 400;
+    }
 
-    @media (max-width: 768px) {
-      ul.people-list { columns: 1; }
-    }
-  </style>
+    @media (max-width: 768px) {
+      ul.people-list { columns: 1; }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- Shared Navigation -->
-  <div id="nav-placeholder"></div>
-  <script>
-    fetch("partials/nav.html")
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById("nav-placeholder").innerHTML = html;
+    <div id="nav-placeholder"></div>
+  <script>
+    fetch("partials/nav.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("nav-placeholder").innerHTML = html;
 
-        // Re-enable JS interactions AFTER injection
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navLinks = document.querySelector("nav ul");
+        // Re-enable JS interactions AFTER injection
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector("nav ul");
 
-        menuToggle.addEventListener("click", () => {
-          navLinks.classList.toggle("show");
-        });
+        menuToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("show");
+        });
 
-        // Scroll shadow effect
-        window.addEventListener("scroll", () => {
-          const nav = document.querySelector("nav");
-          if (window.scrollY > 20) {
-            nav.classList.add("scrolled");
-          } else {
-            nav.classList.remove("scrolled");
-          }
-        });
-      })
-      .catch(err => console.error("Navigation load error:", err));
-  </script>
-
-
-  <!-- 🧑‍🔬 Header -->
-  <header>
-    <h1>Our Team</h1>
-    <p>
-      The Cortical Analysis Lab brings together students, researchers, and collaborators 
-      dedicated to understanding the neural, glial, and vascular basis of behavior. 
-      Meet the people advancing our mission.
-    </p>
-  </header>
-
-  <!-- 👥 Dynamic People Container -->
-  <section class="people-container" id="people-container">
-    <p>Loading lab members...</p>
-  </section>
-
-  <!-- 📬 Footer -->
-  <footer>
-    © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
-  </footer>
-
-  <script>
-   <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>People | Cortical Analysis Lab</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
-
-  <style>
-    /* --- Page-specific layout only (NO global overrides) --- */
-    .people-container {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-    }
-
-    /* PI card container only (not overriding global card styles) */
-    .person-card {
-      text-align: center;
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    /* High-quality profile image (allowed & non-conflicting) */
-    .person-card img {
-      width: 260px;        /* maintains full resolution */
-      height: auto;        /* no forced cropping */
-      border-radius: 12px; /* soft rectangle for clean aesthetic */
-      border: none;        /* improves clarity */
-      object-fit: contain; /* no cropping at all */
-      margin-bottom: 1rem;
-    
-      /* Higher rendering quality */
-      image-rendering: -webkit-optimize-contrast;
-      transform: translateZ(0);
-    }
+        // Scroll shadow effect
+        window.addEventListener("scroll", () => {
+          const nav = document.querySelector("nav");
+          if (window.scrollY > 20) {
+            nav.classList.add("scrolled");
+          } else {
+            nav.classList.remove("scrolled");
+          }
+        });
+      })
+      .catch(err => console.error("Navigation load error:", err));
+  </script>
 
 
-    /* Desktop-only sharpening */
-    @media (min-width: 769px) {
-      .person-card img {
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: crisp-edges;
-        transform: translateZ(0);
-        backface-visibility: hidden;
-      }
-    }
+    <header>
+    <h1>Our Team</h1>
+    <p>
+      The Cortical Analysis Lab brings together students, researchers, and collaborators 
+      dedicated to understanding the neural, glial, and vascular basis of behavior. 
+      Meet the people advancing our mission.
+    </p>
+  </header>
 
-    .person-card h3 {
-      color: var(--red);
-      font-size: 1.4rem;
-      margin: 0.5rem 0;
-    }
+    <section class="people-container" id="people-container">
+    <p>Loading lab members...</p>
+  </section>
 
-    .person-card p {
-      color: #333;
-      font-size: 1rem;
-      margin: 0.3rem 0;
-    }
+    <footer>
+    © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
+  </footer>
 
-    hr.red-divider {
-      border: none;
-      border-top: 3px solid var(--red);
-      margin: 3rem 0 2rem;
-    }
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    /* Year dropdowns */
-    details {
-      padding: 1rem 1.5rem;
-      margin-bottom: 2rem;
-      border-radius: 12px;
-    }
+    async function loadPeople() {
+      const container = document.getElementById("people-container");
 
-    summary {
-      font-weight: 700;
-      color: var(--red);
-      font-size: 1.1rem;
-      cursor: pointer;
-      margin-bottom: 1rem;
-    }
+      try {
+        const jsonURL =
+          "https://cortical-analysis-lab.github.io/CorticalAnalysisLab/data/people.json?v=" +
+          Date.now();
 
-    summary:hover { color: #8a062c; }
+        const response = await fetch(jsonURL);
+        if (!response.ok) throw new Error("Failed to load JSON");
 
-    /* Year lists */
-    ul.people-list {
-      list-style: none;
-      margin: 0.5rem 0 0 0;
-      padding: 0;
-      columns: 3;
-      column-gap: 2rem;
-    }
+        const people = await response.json();
 
-    ul.people-list li {
-      margin-bottom: 1rem;
-      color: #333;
-      font-size: 1rem;
-      line-height: 1.4;
-      break-inside: avoid-column;
-    }
+        // 1. Find the PI
+        const pi = people.find(p => p.role && p.role.toLowerCase().includes("principal investigator"));
+        
+        // 2. Filter out the PI and any entries missing a 'year' property
+        const students = people.filter(p => !p.role || !p.role.toLowerCase().includes("principal investigator") && p.year);
 
-    ul.people-list strong {
-      color: var(--red);
-      font-weight: 600;
-      display: block;
-    }
+        // 3. Group students by year, handling single years and arrays of years
+        const grouped = students.reduce((acc, p) => {
+          
+          // Normalize 'year' to always be an array to handle single-year and multi-year data
+          const years = Array.isArray(p.year) ? p.year : [p.year];
+          
+          years.forEach(y => {
+            const year = parseInt(y);
+            if (!acc[year]) acc[year] = [];
+            
+            // Check if the student is already in the list for this year (prevents duplicates from data analysis)
+            if (!acc[year].some(existingP => existingP.name === p.name)) {
+              acc[year].push(p);
+            }
+          });
+          
+          return acc;
+        }, {});
 
-    ul.people-list span.major,
-    ul.people-list span.role {
-      display: block;
-      font-weight: 400;
-    }
+        // 4. Sort years in descending order (newest first)
+        const sortedYears = Object.keys(grouped)
+          .map(y => parseInt(y))
+          .sort((a, b) => b - a);
 
-    @media (max-width: 768px) {
-      ul.people-list { columns: 1; }
-    }
-  </style>
-</head>
+        container.innerHTML = "";
 
-<body>
+        /* --- PI card --- */
+        if (pi) {
+          const card = document.createElement("div");
+          card.className = "person-card";
 
-  <!-- Shared Navigation -->
-  <div id="nav-placeholder"></div>
-  <script>
-    fetch("partials/nav.html")
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById("nav-placeholder").innerHTML = html;
+          card.innerHTML = `
+            <img src="${pi.image || 'assets/default-profile.png'}" alt="${pi.name}">
+            <h3>${pi.name}</h3>
+            <p><strong>${pi.role || ''}</strong></p>
+            <p>${pi.bio || ''}</p>
+          `;
+          container.appendChild(card);
+        }
 
-        // Re-enable JS interactions AFTER injection
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navLinks = document.querySelector("nav ul");
+        container.appendChild(Object.assign(document.createElement("hr"), {
+          className: "red-divider"
+        }));
 
-        menuToggle.addEventListener("click", () => {
-          navLinks.classList.toggle("show");
-        });
+        /* --- Year sections --- */
+        sortedYears.forEach((year, index) => {
+          // 5. Alphabetical Sort: Sorts the list A-Z by name
+          const currentYearStudents = grouped[year].sort((a, b) => a.name.localeCompare(b.name));
 
-        // Scroll shadow effect
-        window.addEventListener("scroll", () => {
-          const nav = document.querySelector("nav");
-          if (window.scrollY > 20) {
-            nav.classList.add("scrolled");
-          } else {
-            nav.classList.remove("scrolled");
-          }
-        });
-      })
-      .catch(err => console.error("Navigation load error:", err));
-  </script>
+          const section = document.createElement("details");
+          
+          // ⭐️ CHANGE IMPLEMENTED HERE: Use only the current year for the label
+          const schoolYearLabel = `${year}`;
+          
+          // Keep the newest year expanded by default
+          if (index === 0) section.open = true;
 
+          section.innerHTML = `
+            <summary>${schoolYearLabel}</summary>
+            <ul class="people-list">
+              ${currentYearStudents
+                .map(
+                  p => `
+                <li>
+                  <strong>${p.name}</strong>
+                  <span class="major">${p.major || ''}</span>
+                  <span class="role">${p.role || ''}</span>
+                </li>`
+                )
+                .join("")}
+            </ul>
+          `;
 
-  <!-- 🧑‍🔬 Header -->
-  <header>
-    <h1>Our Team</h1>
-    <p>
-      The Cortical Analysis Lab brings together students, researchers, and collaborators 
-      dedicated to understanding the neural, glial, and vascular basis of behavior. 
-      Meet the people advancing our mission.
-    </p>
-  </header>
+          container.appendChild(section);
 
-  <!-- 👥 Dynamic People Container -->
-  <section class="people-container" id="people-container">
-    <p>Loading lab members...</p>
-  </section>
+          container.appendChild(Object.assign(document.createElement("hr"), {
+            className: "red-divider"
+          }));
+        });
+        
+        // Remove the last divider
+        if (container.lastChild && container.lastChild.classList.contains('red-divider')) {
+          container.removeChild(container.lastChild);
+        }
 
-  <!-- 📬 Footer -->
-  <footer>
-    © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
-  </footer>
+      } catch (err) {
+        container.innerHTML = `
+          <p class="error">⚠️ Unable to load lab members. Please check <code>data/people.json</code> and ensure it is valid JSON.</p>
+        `;
+        console.error("Loading Error:", err);
+      }
+    }
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    loadPeople();
 
-    async function loadPeople() {
-      const container = document.getElementById("people-container");
-
-      try {
-        const jsonURL =
-          "https://cortical-analysis-lab.github.io/CorticalAnalysisLab/data/people.json?v=" +
-          Date.now();
-
-        const response = await fetch(jsonURL);
-        if (!response.ok) throw new Error("Failed to load JSON");
-
-        const people = await response.json();
-
-        const pi = people.find(p => p.name.toLowerCase().includes("shaun"));
-        const others = people.filter(p => !p.name.toLowerCase().includes("shaun"));
-
-        const grouped = {};
-        others.forEach(p => {
-          const year = p.year ? parseInt(p.year) : 2023;
-          if (!grouped[year]) grouped[year] = [];
-          grouped[year].push(p);
-        });
-
-        const sortedYears = Object.keys(grouped)
-          .map(y => parseInt(y))
-          .sort((a, b) => b - a);
-
-        container.innerHTML = "";
-
-        /* --- PI card --- */
-        if (pi) {
-          const card = document.createElement("div");
-          card.className = "person-card";
-
-          card.innerHTML = `
-            <img src="${pi.image || 'assets/default-profile.png'}" alt="${pi.name}">
-            <h3>${pi.name}</h3>
-            <p><strong>${pi.role || ''}</strong></p>
-            <p>${pi.bio || ''}</p>
-          `;
-          container.appendChild(card);
-        }
-
-        container.appendChild(Object.assign(document.createElement("hr"), {
-          className: "red-divider"
-        }));
-
-        /* --- Year sections --- */
-        sortedYears.forEach((year, index) => {
-          const section = document.createElement("details");
-          const nextYear = year + 1;
-          if (index === 0) section.open = true;
-
-          section.innerHTML = `
-            <summary>${year} – ${nextYear}</summary>
-            <ul class="people-list">
-              ${grouped[year]
-                .map(
-                  p => `
-                <li>
-                  <strong>${p.name}</strong>
-                  <span class="major">${p.major || ''}</span>
-                  <span class="role">${p.role || ''}</span>
-                </li>`
-                )
-                .join("")}
-            </ul>
-          `;
-
-          container.appendChild(section);
-
-          container.appendChild(Object.assign(document.createElement("hr"), {
-            className: "red-divider"
-          }));
-        });
-
-      } catch (err) {
-        container.innerHTML = `
-          <p class="error">⚠️ Unable to load lab members. Please check <code>data/people.json</code>.</p>
-        `;
-      }
-    }
-
-    loadPeople();
-
-    /* Mobile nav toggle */
-    document.querySelector('.menu-toggle')
-      .addEventListener('click', () =>
-        document.querySelector('nav ul').classList.toggle('show')
-      );
-  </script>
-
-</body>
-</html>
-  </script>
+    /* Mobile nav toggle */
+    document.querySelector('.menu-toggle')
+      .addEventListener('click', () =>
+        document.querySelector('nav ul').classList.toggle('show')
+      );
+  </script>
 
 </body>
 </html>
