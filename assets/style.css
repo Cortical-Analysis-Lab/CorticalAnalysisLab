@@ -32,7 +32,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Sharper, consistent background across devices */
+/* Background image — desktop version (clean + balanced) */
 body::before {
   content: "";
   position: fixed;
@@ -41,17 +41,17 @@ body::before {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  opacity: 0.45; /* Adjusted for more clarity */
+  opacity: 0.45;    /* Balanced clarity */
   pointer-events: none;
   z-index: -2;
 }
 
-/* Light veil for readability — desktop only */
+/* Soft veil — DESKTOP ONLY */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.12); /* subtle, not color-shifting */
   backdrop-filter: blur(1.5px);
   z-index: -1;
 }
@@ -76,11 +76,6 @@ nav {
   animation: fadeInNav 0.5s ease forwards;
 }
 
-/* Prevent color weirdness on mobile */
-nav * {
-  color: var(--text) !important;
-}
-
 nav.scrolled {
   background: rgba(250, 247, 245, 0.97);
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -91,7 +86,6 @@ nav .logo {
   font-size: 1.2rem;
   color: var(--red) !important;
   text-decoration: none;
-  letter-spacing: 1px;
 }
 
 /* Links */
@@ -139,17 +133,17 @@ nav ul li a:hover::after {
 }
 
 /* =====================================================
-   📱 MOBILE NAVIGATION FIXES
+   📱 MOBILE FIX — REMOVE TINT & RESTORE TRUE COLORS
    ===================================================== */
 
 @media (max-width: 768px) {
 
-  /* --- EXISTING NAVIGATION STYLES --- */
+  /* Adjust nav to prevent color shifting */
   nav {
-    padding: 0.8rem 1.2rem;
     background: rgba(250, 247, 245, 0.97);
   }
 
+  /* Mobile menu */
   nav ul {
     display: none;
     flex-direction: column;
@@ -163,10 +157,6 @@ nav ul li a:hover::after {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 
-  nav ul li {
-    margin: 0.8rem 0;
-  }
-
   nav ul.show {
     display: flex;
   }
@@ -175,46 +165,17 @@ nav ul li a:hover::after {
     display: block;
     color: var(--red) !important;
   }
-  
-  /* ======================================================
-  ✅ FIX 1: NAVIGATION COLORS (REMOVES GREEN/YELLOW)
-  ======================================================
-  Forces link text to be dark (--text) and red (--red) on hover. 
-  */
-  nav ul li a, 
-  nav ul li a:hover,
-  nav ul li a:visited { 
-    color: var(--text) !important;
-  }
-  
-  nav ul li a:hover {
-    color: var(--red) !important;
+
+  /* --- CRITICAL FIXES FOR MOBILE COLOR DISTORTION --- */
+
+  /* Reduce background image dominance on mobile */
+  body::before {
+    opacity: 0.32 !important; /* prevents color washout */
   }
 
-  /* ======================================================
-  ✅ FIX 2: TEXT COLORS (REMOVES PINK)
-  ======================================================
-  Enforces the dark Sacred Heart red on headings and dropdown titles.
-  */
-  header h1, 
-  summary {
-    color: var(--red) !important;
-  }
-
-
-  /* ======================================================
-  ✅ FIX 3: BACKGROUND FILTER (REMOVES BLACK VEIL)
-  ======================================================
-  Uses 'content: none' to forcibly remove the white veil pseudo-element.
-  */
-  body::before { /* Adjusts background image opacity */
-    opacity: 0.65;
-  }
-  
-  body::after { 
-    content: none; /* HARD REMOVAL OF THE FILTER */
-    background: none !important;
-    backdrop-filter: none !important;
+  /* REMOVE white veil entirely — this stops pink/green tint */
+  body::after {
+    display: none !important;
   }
 }
 
@@ -278,14 +239,12 @@ details {
   transform: translateZ(0);
 }
 
-/* Desktop sharpening */
 @media (min-width: 769px) {
   .person-card img {
     image-rendering: crisp-edges;
   }
 }
 
-/* Hover */
 .card:hover,
 .person-card:hover,
 details:hover {
