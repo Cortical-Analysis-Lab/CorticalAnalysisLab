@@ -144,6 +144,7 @@ nav ul li a:hover::after {
 
 @media (max-width: 768px) {
 
+  /* --- EXISTING NAVIGATION STYLES --- */
   nav {
     padding: 0.8rem 1.2rem;
     background: rgba(250, 247, 245, 0.97);
@@ -174,14 +175,44 @@ nav ul li a:hover::after {
     display: block;
     color: var(--red) !important;
   }
-
-  /* Background adjustments for mobile clarity */
-  body::before {
-    opacity: 0.65;
+  
+  /* ======================================================
+  ✅ FIX 1: NAVIGATION COLORS (REMOVES GREEN/YELLOW)
+  ======================================================
+  Forces link text to be dark (--text) and red (--red) on hover. 
+  */
+  nav ul li a, 
+  nav ul li a:hover,
+  nav ul li a:visited { 
+    color: var(--text) !important;
+  }
+  
+  nav ul li a:hover {
+    color: var(--red) !important;
   }
 
-  /* REMOVE veil on mobile to stop color tinting */
-  body::after {
+  /* ======================================================
+  ✅ FIX 2: TEXT COLORS (REMOVES PINK)
+  ======================================================
+  Enforces the dark Sacred Heart red on headings and dropdown titles.
+  */
+  header h1, 
+  summary {
+    color: var(--red) !important;
+  }
+
+
+  /* ======================================================
+  ✅ FIX 3: BACKGROUND FILTER (REMOVES BLACK VEIL)
+  ======================================================
+  Uses 'content: none' to forcibly remove the white veil pseudo-element.
+  */
+  body::before { /* Adjusts background image opacity */
+    opacity: 0.65;
+  }
+  
+  body::after { 
+    content: none; /* HARD REMOVAL OF THE FILTER */
     background: none !important;
     backdrop-filter: none !important;
   }
