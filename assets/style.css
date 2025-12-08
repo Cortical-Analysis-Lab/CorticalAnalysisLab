@@ -200,12 +200,14 @@ section {
 .card,
 .person-card,
 details {
-  background: rgba(255,255,255,0.0); /* true transparency */
+  background: rgba(255, 255, 255, 0.55); /* <-- increased from 0.0 */
+  backdrop-filter: blur(6px);            /* <-- adds subtle blur */
+  -webkit-backdrop-filter: blur(6px);    /* Safari support */
   border-radius: 12px;
   padding: 1.5rem 2rem;
-  border: 1px solid rgba(255,255,255,0.22);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-  transition: 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .card:hover,
