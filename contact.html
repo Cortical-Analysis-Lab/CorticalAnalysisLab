@@ -4,7 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | Cortical Analysis Lab</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Dynamic CSS Loader -->
   <link rel="stylesheet" id="main-css" href="">
   <script>
     window.addEventListener("DOMContentLoaded", () => {
@@ -12,7 +16,6 @@
         "/assets/style.css?v=" + new Date().getTime();
     });
   </script>
-
 
   <style>
     .contact-info {
@@ -61,7 +64,7 @@
 
 <body>
 
- <!-- Shared Navigation -->
+  <!-- Shared Navigation -->
   <div id="nav-placeholder"></div>
   <script>
     fetch("partials/nav.html")
@@ -69,22 +72,19 @@
       .then(html => {
         document.getElementById("nav-placeholder").innerHTML = html;
 
-        // Re-enable JS interactions AFTER injection
         const menuToggle = document.querySelector(".menu-toggle");
         const navLinks = document.querySelector("nav ul");
 
-        menuToggle.addEventListener("click", () => {
-          navLinks.classList.toggle("show");
-        });
+        if (menuToggle) {
+          menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+          });
+        }
 
-        // Scroll shadow effect
         window.addEventListener("scroll", () => {
           const nav = document.querySelector("nav");
-          if (window.scrollY > 20) {
-            nav.classList.add("scrolled");
-          } else {
-            nav.classList.remove("scrolled");
-          }
+          if (window.scrollY > 20) nav.classList.add("scrolled");
+          else nav.classList.remove("scrolled");
         });
       })
       .catch(err => console.error("Navigation load error:", err));
@@ -100,6 +100,7 @@
     </p>
   </header>
 
+
   <!-- 🗺️ Contact Details + Map -->
   <section class="contact-info">
     <h2>Cortical Analysis Lab</h2>
@@ -108,7 +109,6 @@
     <p>5151 Park Avenue, Fairfield, CT 06825</p>
     <p>Email: <a href="mailto:NeuroResearch@sacredheart.edu">NeuroResearch@sacredheart.edu</a></p>
 
-    <!-- 🗺️ Embedded Campus Map -->
     <iframe
       src="https://www.google.com/maps?q=Sacred+Heart+University,+Fairfield,+CT&output=embed"
       title="Sacred Heart University Map"
@@ -117,30 +117,15 @@
     </iframe>
   </section>
 
+
   <!-- 📬 Footer -->
   <footer>
     © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
   </footer>
 
-  <!-- 📜 Mobile Nav + Scroll Shadow -->
   <script>
     // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Mobile nav toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('nav ul');
-    menuToggle.addEventListener('click', () => navLinks.classList.toggle('show'));
-
-    // Scroll shadow effect
-    window.addEventListener('scroll', () => {
-      const nav = document.querySelector('nav');
-      if (window.scrollY > 20) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    });
   </script>
 
 </body>
