@@ -1,102 +1,92 @@
 /* ======================================================
-   🧠 Cortical Analysis Lab — Global Website Stylesheet
-   Supports Automatic Light/Dark Mode
+   🧠 Cortical Analysis Lab — Light Mode Only Stylesheet
    ====================================================== */
 
-/* --- Light Mode Palette --- */
+/* ======================================================
+   💡 COLOR VARIABLES — LIGHT MODE
+   ====================================================== */
+
 :root {
   --red: #B30838;
-  --bg: #f6f2e8;                 /* warm parchment tone */
+
+  --bg: #f6f2e8;
   --text: #222;
   --text-muted: #555;
+
   --card-bg: rgba(246, 242, 232, 0.70);
   --card-border: rgba(246, 242, 232, 0.45);
+
+  --nav-bg: rgba(246, 242, 232, 0.92);
   --header-bg: rgba(246, 242, 232, 0.70);
   --footer-bg: rgba(246, 242, 232, 0.55);
-  --nav-bg: rgba(246, 242, 232, 0.92);
+
   --veil-opacity: 0.10;
 }
 
-/* --- Dark Mode Overrides --- */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #121212;
-    --text: #e5e5e5;
-    --text-muted: #bbbbbb;
-    --card-bg: rgba(32, 32, 32, 0.75);
-    --card-border: rgba(255, 255, 255, 0.08);
-    --header-bg: rgba(32, 32, 32, 0.75);
-    --footer-bg: rgba(32, 32, 32, 0.65);
-    --nav-bg: rgba(20, 20, 20, 0.90);
-    --veil-opacity: 0.0; /* No bright veil in dark mode */
-  }
-}
+/* ======================================================
+   🌙 DARK MODE (DISABLED FOR NOW)
+   ====================================================== */
 
-/* --- Base Styles --- */
-* {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  margin: 0;
-  padding: 0;
+/*
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #f0ede7;
+  --text-muted: #cfcac3;
+
+  --card-bg: rgba(32, 32, 32, 0.75);
+  --card-border: rgba(255, 255, 255, 0.08);
+
+  --nav-bg: rgba(20, 20, 20, 0.90);
+  --header-bg: rgba(32, 32, 32, 0.75);
+  --footer-bg: rgba(32, 32, 32, 0.65);
+
+  --veil-opacity: 0;
 }
+*/
+
+/* ======================================================
+   🔳 BASE STYLES
+   ====================================================== */
 
 body {
   font-family: "Inter", sans-serif;
   background-color: var(--bg);
   color: var(--text);
-  padding-top: 80px;
-  overflow-x: hidden;
-  position: relative;
   line-height: 1.65;
+  padding-top: 80px;
+  position: relative;
+  overflow-x: hidden;
 }
 
 /* ======================================================
-   🌟 BACKGROUND IMAGES
+   🖼 LIGHT MODE BACKGROUND ONLY
    ====================================================== */
+
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-
-  /* Light mode background — textured parchment logo */
   background-image: url("../assets/Lab%20Website%20Background.png");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-
-  opacity: 0.50;
+  opacity: 0.45;
   z-index: -2;
 }
 
-/* 🔄 Auto-switch to dark-mode background */
-@media (prefers-color-scheme: dark) {
-  body::before {
-    background-image: url("../assets/Textured_Lab_Logo_Dark.png");
-    opacity: 0.55; /* enhances texture without overpowering text */
-  }
-}
-
-/* Veil for readability (light mode only) */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(255,255,255,var(--veil-opacity));
+  background: rgba(255, 255, 255, var(--veil-opacity));
   backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(1.5px);
   z-index: -1;
 }
 
-@media (prefers-color-scheme: dark) {
-  body::after {
-    background: none !important;
-    backdrop-filter: none !important;
-  }
-}
-
 /* ======================================================
-   🧭 NAVIGATION BAR
+   🧭 NAVIGATION
    ====================================================== */
+
 nav {
   position: fixed;
   top: 0;
@@ -104,12 +94,12 @@ nav {
   background: var(--nav-bg);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding: 1rem 2rem;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  z-index: 1000;
 }
 
 nav * {
@@ -130,14 +120,16 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  position: relative;
   font-weight: 500;
+  position: relative;
+  color: var(--text) !important;
 }
 
 nav ul li a:hover {
   color: var(--red) !important;
 }
 
+/* Underline hover animation */
 nav ul li a::after {
   content: "";
   position: absolute;
@@ -153,26 +145,29 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* Mobile nav */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
   color: var(--red) !important;
   background: none;
   border: none;
+  cursor: pointer;
 }
 
+/* Mobile navigation */
 @media (max-width: 768px) {
+
   nav ul {
     display: none;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
     background: var(--nav-bg);
+    width: 100%;
     padding: 1rem 0;
     position: absolute;
     top: 60px;
     right: 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 
   nav ul.show {
@@ -189,41 +184,29 @@ nav ul li a:hover::after {
 }
 
 /* ======================================================
-   🧠 HEADER
+   HEADER
    ====================================================== */
 
 header {
   text-align: center;
   padding: 10rem 2rem 6rem;
-  max-width: 900px;
-  margin: auto;
+  color: var(--text);
 }
 
-header h1 {
-  color: var(--red);
-  font-size: clamp(2rem, 5vw, 3rem);
-}
-
-header p {
-  margin-top: 1rem;
-  font-size: 1.1rem;
-  color: var(--text-muted);
-}
-
-/* Frosted text box under headers */
 .header-box {
   background: var(--header-bg);
   padding: 1.5rem 2rem;
+  max-width: 700px;
+  margin: 1.5rem auto;
   border-radius: 12px;
-  margin: 1.5rem auto 0;
   border: 1px solid var(--card-border);
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  backdrop-filter: blur(6px);
 }
 
 /* ======================================================
-   📄 SECTIONS
+   CONTENT SECTIONS
    ====================================================== */
+
 section {
   max-width: 900px;
   margin: 4rem auto;
@@ -231,33 +214,32 @@ section {
 }
 
 /* ======================================================
-   🧩 CARDS
+   CARDS / TEXT BOXES
    ====================================================== */
 
 .card,
 .person-card,
-details,
 .pub-item,
 .abs-item {
   background: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: 12px;
   padding: 1.5rem 2rem;
+  border-radius: 12px;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: 0.2s ease;
+  color: var(--text); /* FIX for people.html names */
 }
 
 .card:hover,
 .person-card:hover,
-.pub-item:hover,
-.abs-item:hover {
+.pub-item:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.10);
 }
 
-/* Profile images */
+/* Profile Images */
 .person-card img {
   width: 440px;
   height: 440px;
@@ -272,29 +254,8 @@ details,
 
 footer {
   background: var(--footer-bg);
-  backdrop-filter: blur(3px);
   padding: 2rem;
   text-align: center;
   color: var(--text-muted);
   font-size: 0.9rem;
-}
-
-/* ======================================================
-   BUTTONS
-   ====================================================== */
-
-button,
-a.button {
-  background: var(--red);
-  color: white;
-  border-radius: 8px;
-  padding: 0.8rem 1.6rem;
-  font-weight: 600;
-  border: none;
-}
-
-button:hover,
-a.button:hover {
-  background: #9c0f32;
-  transform: translateY(-2px);
 }
