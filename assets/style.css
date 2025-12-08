@@ -1,13 +1,35 @@
 /* ======================================================
    🧠 Cortical Analysis Lab — Global Website Stylesheet
+   Supports Automatic Light/Dark Mode
    ====================================================== */
 
-/* --- Color Palette --- */
+/* --- Light Mode Palette --- */
 :root {
-  --red: #B30838;          /* Sacred Heart red */
-  --offwhite: #faf7f5;     /* Soft warm background */
+  --red: #B30838;
+  --bg: #f6f2e8;                 /* warm parchment tone */
   --text: #222;
-  --gray: #555;
+  --text-muted: #555;
+  --card-bg: rgba(246, 242, 232, 0.70);
+  --card-border: rgba(246, 242, 232, 0.45);
+  --header-bg: rgba(246, 242, 232, 0.70);
+  --footer-bg: rgba(246, 242, 232, 0.55);
+  --nav-bg: rgba(246, 242, 232, 0.92);
+  --veil-opacity: 0.10;
+}
+
+/* --- Dark Mode Overrides --- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --text: #e5e5e5;
+    --text-muted: #bbbbbb;
+    --card-bg: rgba(32, 32, 32, 0.75);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --header-bg: rgba(32, 32, 32, 0.75);
+    --footer-bg: rgba(32, 32, 32, 0.65);
+    --nav-bg: rgba(20, 20, 20, 0.90);
+    --veil-opacity: 0.0; /* No bright veil in dark mode */
+  }
 }
 
 /* --- Base Styles --- */
@@ -20,67 +42,74 @@
 
 body {
   font-family: "Inter", sans-serif;
+  background-color: var(--bg);
   color: var(--text);
-  line-height: 1.6;
   padding-top: 80px;
-  background-color: var(--offwhite);
   overflow-x: hidden;
   position: relative;
+  line-height: 1.65;
 }
 
-/* =====================================================
-   🌟 BACKGROUND IMAGE — Desktop & Mobile Safe
-   ===================================================== */
+/* ======================================================
+   🌟 BACKGROUND IMAGES
+   ====================================================== */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
+
+  /* Light mode background — textured parchment logo */
   background-image: url("../assets/Lab%20Website%20Background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.45;
+
+  opacity: 0.50;
   z-index: -2;
-  pointer-events: none;
 }
 
-/* Subtle clarity veil (optional blur here!) */
+/* 🔄 Auto-switch to dark-mode background */
+@media (prefers-color-scheme: dark) {
+  body::before {
+    background-image: url("../assets/Textured_Lab_Logo_Dark.png");
+    opacity: 0.55; /* enhances texture without overpowering text */
+  }
+}
+
+/* Veil for readability (light mode only) */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(255,255,255,0.10);
-  backdrop-filter: blur(1.5px);           /* <-- This blurs background */
+  background: rgba(255,255,255,var(--veil-opacity));
+  backdrop-filter: blur(1.5px);
   -webkit-backdrop-filter: blur(1.5px);
   z-index: -1;
 }
 
-/* Remove veil completely on mobile for sharper display */
-@media (max-width: 768px) {
+@media (prefers-color-scheme: dark) {
   body::after {
     background: none !important;
     backdrop-filter: none !important;
   }
-  body::before {
-    opacity: 0.65;
-  }
 }
 
-/* =====================================================
-   🧭 NAVIGATION (Samsung Color-Fix)
-   ===================================================== */
+/* ======================================================
+   🧭 NAVIGATION BAR
+   ====================================================== */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(250, 247, 245, 0.9);
+  background: var(--nav-bg);
   backdrop-filter: blur(6px);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  padding: 1rem 2rem;
-  z-index: 1000;
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
 }
 
 nav * {
@@ -93,10 +122,6 @@ nav .logo {
   color: var(--red) !important;
 }
 
-nav.scrolled {
-  background: rgba(250, 247, 245, 0.97);
-}
-
 nav ul {
   list-style: none;
   display: flex;
@@ -105,9 +130,8 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  font-weight: 500;
-  color: var(--text) !important;
   position: relative;
+  font-weight: 500;
 }
 
 nav ul li a:hover {
@@ -129,28 +153,34 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
+/* Mobile nav */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
   color: var(--red) !important;
+  background: none;
+  border: none;
 }
 
-/* Mobile nav */
 @media (max-width: 768px) {
   nav ul {
     display: none;
     flex-direction: column;
-    align-items: center;
     width: 100%;
+    background: var(--nav-bg);
     padding: 1rem 0;
-    background: rgba(250, 247, 245, 0.97);
     position: absolute;
     top: 60px;
     right: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
 
   nav ul.show {
     display: flex;
+  }
+
+  nav ul li {
+    margin: 0.8rem 0;
   }
 
   .menu-toggle {
@@ -158,12 +188,15 @@ nav ul li a:hover::after {
   }
 }
 
-/* =====================================================
+/* ======================================================
    🧠 HEADER
-   ===================================================== */
+   ====================================================== */
+
 header {
   text-align: center;
   padding: 10rem 2rem 6rem;
+  max-width: 900px;
+  margin: auto;
 }
 
 header h1 {
@@ -171,50 +204,60 @@ header h1 {
   font-size: clamp(2rem, 5vw, 3rem);
 }
 
-/* Frosted description box */
 header p {
-  background: rgba(250, 247, 245, 0.75);
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  border: 1px solid rgba(250,247,245,0.4);
-  max-width: 700px;
-  margin: 1.5rem auto 0;
-  backdrop-filter: blur(4px);
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-muted);
 }
 
-/* =====================================================
-   📄 PAGE SECTIONS
-   ===================================================== */
+/* Frosted text box under headers */
+.header-box {
+  background: var(--header-bg);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  margin: 1.5rem auto 0;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  backdrop-filter: blur(6px);
+}
+
+/* ======================================================
+   📄 SECTIONS
+   ====================================================== */
 section {
   max-width: 900px;
   margin: 4rem auto;
   padding: 0 2rem;
 }
 
-/* =====================================================
-   🧩 CONTENT CARDS — Softer, Warmer, Less Transparent
-   ===================================================== */
+/* ======================================================
+   🧩 CARDS
+   ====================================================== */
+
 .card,
 .person-card,
 details,
-.significance-blurb {
-  background: rgba(250, 247, 245, 0.78);  /* off-white box */
+.pub-item,
+.abs-item {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
   border-radius: 12px;
   padding: 1.5rem 2rem;
-  border: 1px solid rgba(250,247,245,0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover,
 .person-card:hover,
-details:hover {
+.pub-item:hover,
+.abs-item:hover {
   transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
-/* Person images */
+/* Profile images */
 .person-card img {
   width: 440px;
   height: 440px;
@@ -223,41 +266,35 @@ details:hover {
   border: 4px solid var(--red);
 }
 
-/* =====================================================
+/* ======================================================
    FOOTER
-   ===================================================== */
+   ====================================================== */
+
 footer {
-  background: rgba(255,255,255,0.55);
+  background: var(--footer-bg);
+  backdrop-filter: blur(3px);
   padding: 2rem;
   text-align: center;
-  color: var(--gray);
+  color: var(--text-muted);
   font-size: 0.9rem;
-  backdrop-filter: blur(2px);
 }
 
-/* =====================================================
+/* ======================================================
    BUTTONS
-   ===================================================== */
+   ====================================================== */
+
 button,
 a.button {
   background: var(--red);
   color: white;
-  padding: 0.8rem 1.6rem;
   border-radius: 8px;
-  border: none;
+  padding: 0.8rem 1.6rem;
   font-weight: 600;
+  border: none;
 }
 
 button:hover,
 a.button:hover {
-  background: #a61c1c;
+  background: #9c0f32;
   transform: translateY(-2px);
-}
-
-/* =====================================================
-   ANIMATIONS
-   ===================================================== */
-@keyframes fadeInNav {
-  from { opacity: 0; transform: translateY(-10px); }
-  to   { opacity: 1; transform: translateY(0); }
 }
