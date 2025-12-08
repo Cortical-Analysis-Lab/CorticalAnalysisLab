@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lab Publications | Cortical Analysis Lab</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Dynamic CSS Cache-Busting -->
   <link rel="stylesheet" id="main-css" href="">
   <script>
     window.addEventListener("DOMContentLoaded", () => {
@@ -12,7 +14,6 @@
         "/assets/style.css?v=" + new Date().getTime();
     });
   </script>
-
 
   <style>
     .pub-list, .abs-list {
@@ -23,17 +24,15 @@
     }
 
     .pub-item, .abs-item {
-      background: rgba(255, 255, 255, 0.3);
+      background: rgba(250, 247, 245, 0.85);
       padding: 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      backdrop-filter: blur(4px);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
     }
 
     .pub-item:hover, .abs-item:hover {
       transform: translateY(-3px);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
     }
 
     .pub-item h3, .abs-item h3 {
@@ -46,11 +45,65 @@
       margin-top: 1rem;
       padding: 1rem 1.2rem;
       border-left: 3px solid var(--red);
-      background: rgba(255, 255, 255, 0.25);
+      background: rgba(250,247,245,0.85);
       border-radius: 8px;
       font-size: 0.95rem;
       color: #333;
       line-height: 1.45;
+    }
+
+    /* Poster Modal */
+    #posterModal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    #posterModalContent {
+      width: 90%;
+      height: 90%;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    #posterModal iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    #closePoster {
+      position: absolute;
+      top: 12px;
+      right: 18px;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #333;
+      z-index: 10;
+    }
+
+    .poster-thumb {
+      width: 100%;
+      max-width: 500px;
+      height: 260px;
+      background: rgba(255,255,255,0.55);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--red);
+      cursor: pointer;
+      margin-top: 1rem;
     }
   </style>
 </head>
@@ -65,7 +118,6 @@
       .then(html => {
         document.getElementById("nav-placeholder").innerHTML = html;
 
-        // Re-enable JS interactions AFTER injection
         const menuToggle = document.querySelector(".menu-toggle");
         const navLinks = document.querySelector("nav ul");
 
@@ -73,128 +125,122 @@
           navLinks.classList.toggle("show");
         });
 
-        // Scroll shadow effect
         window.addEventListener("scroll", () => {
           const nav = document.querySelector("nav");
-          if (window.scrollY > 20) {
-            nav.classList.add("scrolled");
-          } else {
-            nav.classList.remove("scrolled");
-          }
+          if (window.scrollY > 20) nav.classList.add("scrolled");
+          else nav.classList.remove("scrolled");
         });
-      })
-      .catch(err => console.error("Navigation load error:", err));
+      });
   </script>
 
-
-  <!-- 📚 Header -->
+  <!-- Header -->
   <header>
     <h1>Lab Publications</h1>
     <p>
-      A curated collection of manuscripts, works in progress, and student-led research emerging from 
-      the Cortical Analysis Lab.
+      Manuscripts, conference abstracts, and student-led research emerging from the Cortical Analysis Lab.
     </p>
   </header>
 
-
-  <!-- 📘 Lab Publications Section -->
+  <!-- Publications Section -->
   <section>
     <h2>Publications</h2>
 
-    <!-- Placeholder until you add content -->
     <div class="card">
       <p><em>Section under construction — stay tuned for upcoming manuscripts and analyses.</em></p>
     </div>
 
-    <!-- Significance blurb -->
     <div class="significance-blurb">
-      <strong>Significance:</strong>  
-     TBD
-      <br><em></em>
+      <strong>Significance:</strong>
+      TBD
     </div>
 
-    <!-- Publications list (optional future expansion) -->
     <div class="pub-list" id="lab-pub-list"></div>
   </section>
 
-
-  <!-- 📊 Abstracts & Posters Section -->
+  <!-- Posters + Abstracts -->
   <section>
     <h2>Abstracts / Posters</h2>
 
     <div class="card">
-      <p><em>Student and lab conference submissions will appear here. This section is also under construction.</em></p>
+      <p><em>Conference submissions will appear here as they are added.</em></p>
     </div>
 
-    <!-- Significance blurb -->
     <div class="significance-blurb">
-      <strong>Significance:</strong>  
-     TBD
-      <br><em></em>
+      <strong>Significance:</strong>
+      TBD
     </div>
 
-    <!-- Poster list -->
     <div class="abs-list" id="poster-list"></div>
   </section>
 
+  <!-- Poster Modal Viewer -->
+  <div id="posterModal">
+    <div id="posterModalContent">
+      <span id="closePoster">&times;</span>
+      <iframe id="posterFrame"></iframe>
+    </div>
+  </div>
 
-  <!-- 📬 Footer -->
+  <!-- Footer -->
   <footer>
     © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
   </footer>
 
-<script>
-  const ORCID = "0000-0001-9059-8250";
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-  async function loadORCID() {
-    const container = document.getElementById("pub-container");
+    /* -----------------------------
+       🧠 Poster Data
+    ----------------------------- */
+    const posters = [
+      {
+        title: "SFN 2025 — Multimodal EEG–Optical Integration",
+        thumb: null,
+        pdf: "/assets/SFN_2025_Poster.pdf"
+      }
+    ];
 
-    try {
-      const endpoint = `https://pub.orcid.org/v2.1/${ORCID}/works`;
-
-      const response = await fetch(endpoint, {
-        mode: "cors",
-        headers: {
-          "Accept": "application/json",
-          "Content-Type": "application/json"
-        }
-      });
-
-      if (!response.ok) throw new Error("ORCID API error: " + response.status);
-
-      const data = await response.json();
-      const works = data.group || [];
-
+    /* Load posters */
+    function loadPosters() {
+      const container = document.getElementById("poster-list");
       container.innerHTML = "";
 
-      works.forEach(group => {
-        const summary = group["work-summary"][0];
-        const title = summary.title?.title?.value || "Untitled";
-        const journal = summary["journal-title"]?.value || "—";
-        const year = summary["publication-date"]?.year?.value || "—";
+      posters.forEach(p => {
+        const thumb = p.thumb
+          ? `<img src="${p.thumb}" class="poster-thumb" onclick="openPosterModal('${p.pdf}')">`
+          : `<div class="poster-thumb" onclick="openPosterModal('${p.pdf}')">View Poster PDF</div>`;
 
-        const item = document.createElement("div");
-        item.className = "pub-item";
-        item.innerHTML = `
-          <h3>${title}</h3>
-          <p><em>${journal}</em> (${year})</p>
+        container.innerHTML += `
+          <div class="abs-item">
+            <h3>${p.title}</h3>
+            ${thumb}
+            <p style="text-align:center; margin-top:1rem;">
+              <a class="button" href="${p.pdf}" target="_blank">Open PDF</a>
+            </p>
+          </div>
         `;
-
-        container.appendChild(item);
       });
-
-      if (works.length === 0) {
-        container.innerHTML = "<p>No ORCID publications found.</p>";
-      }
-
-    } catch (err) {
-      console.error(err);
-      container.innerHTML = "<p class='error'>Unable to load ORCID publications.</p>";
     }
-  }
 
-  loadORCID();
-  loadPosters();
+    /* Modal controls */
+    function openPosterModal(pdf) {
+      document.getElementById("posterFrame").src = pdf;
+      document.getElementById("posterModal").style.display = "flex";
+    }
+
+    document.getElementById("closePoster").addEventListener("click", () => {
+      document.getElementById("posterModal").style.display = "none";
+      document.getElementById("posterFrame").src = "";
+    });
+
+    window.addEventListener("click", e => {
+      if (e.target.id === "posterModal") {
+        document.getElementById("posterModal").style.display = "none";
+        document.getElementById("posterFrame").src = "";
+      }
+    });
+
+    loadPosters();
   </script>
 
 </body>
