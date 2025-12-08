@@ -5,7 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Research | Cortical Analysis Lab</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" id="main-css" href="">
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("main-css").href =
+        "/assets/style.css?v=" + new Date().getTime();
+    });
+  </script>
+
 </head>
 
 <body>
