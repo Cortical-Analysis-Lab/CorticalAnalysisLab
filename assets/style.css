@@ -1,14 +1,13 @@
 /* ======================================================
    🧠 Cortical Analysis Lab — Global Website Stylesheet
-   Option B — Universal Cross-Browser, Samsung-Safe Version
    ====================================================== */
 
 /* --- Color Palette --- */
 :root {
   --red: #B30838;          /* Sacred Heart red */
-  --offwhite: #faf7f5;     /* Soft off-white background */
-  --text: #222;            /* Main text */
-  --gray: #555;            /* Secondary text */
+  --offwhite: #faf7f5;     /* Soft warm background */
+  --text: #222;
+  --gray: #555;
 }
 
 /* --- Base Styles --- */
@@ -19,70 +18,83 @@
   padding: 0;
 }
 
-/* =====================================================
-   🌟 BODY + BACKGROUND WATERMARK (Samsung-Safe)
-   ===================================================== */
-
 body {
   font-family: "Inter", sans-serif;
   color: var(--text);
   line-height: 1.6;
   padding-top: 80px;
   background-color: var(--offwhite);
-  position: relative;
   overflow-x: hidden;
+  position: relative;
 }
 
-/* High-quality background image without tint distortion */
+/* =====================================================
+   🌟 BACKGROUND IMAGE — Desktop & Mobile Safe
+   ===================================================== */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   background-image: url("../assets/Lab%20Website%20Background.png");
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
-
-  /* Samsung Internet-safe clarity */
-  background-color: rgba(255, 255, 255, 0.08); /* mild softening */
-  mix-blend-mode: normal;  /* prevents pink/yellow shifts */
-
-  pointer-events: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.45;      /* clearer but not overpowering */
   z-index: -2;
+  pointer-events: none;
 }
 
-/* Remove the old translucent veil entirely (main culprit) */
 body::after {
-  display: none !important;
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  z-index: -1;
+}
+
+/* Remove background veil completely on mobile */
+@media (max-width: 768px) {
+  body::after {
+    background: none !important;
+    backdrop-filter: none !important;
+  }
+  body::before {
+    opacity: 0.65;
+  }
 }
 
 /* =====================================================
-   🧭 NAVIGATION BAR
+   🧭 NAVIGATION (Fixes Samsung Color Issue)
    ===================================================== */
 
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(250, 247, 245, 0.92); /* clean, tint-free */
-  backdrop-filter: blur(4px);
+  background: rgba(250, 247, 245, 0.9);
+  backdrop-filter: blur(6px);
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding: 1rem 2rem;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  z-index: 1000;
+}
+
+nav * {
+  color: var(--text) !important;   /* Prevent Samsung color inversion */
 }
 
 nav.scrolled {
   background: rgba(250, 247, 245, 0.97);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 nav .logo {
   font-weight: 700;
   font-size: 1.2rem;
-  color: var(--red);
+  color: var(--red) !important;
   text-decoration: none;
 }
 
@@ -94,23 +106,23 @@ nav ul {
 }
 
 nav ul li a {
-  color: var(--text);
   text-decoration: none;
   font-weight: 500;
   position: relative;
+  color: var(--text) !important;
 }
 
 nav ul li a:hover {
-  color: var(--red);
+  color: var(--red) !important;
 }
 
 nav ul li a::after {
   content: "";
   position: absolute;
-  bottom: -4px;
   left: 0;
-  height: 2px;
+  bottom: -4px;
   width: 0;
+  height: 2px;
   background: var(--red);
   transition: width 0.3s ease;
 }
@@ -119,33 +131,29 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
+/* Mobile nav button */
 .menu-toggle {
   display: none;
+  font-size: 1.8rem;
+  color: var(--red) !important;
   background: none;
   border: none;
-  color: var(--red);
-  font-size: 1.8rem;
+  cursor: pointer;
 }
 
-/* =====================================================
-   📱 MOBILE RESPONSIVE NAV
-   ===================================================== */
-
+/* Mobile navigation behavior */
 @media (max-width: 768px) {
-
-  nav {
-    padding: 0.8rem 1.2rem;
-  }
 
   nav ul {
     display: none;
     flex-direction: column;
+    align-items: center;
+    background: rgba(250, 247, 245, 0.97);
     width: 100%;
-    background: rgba(250, 247, 245, 0.98);
+    padding: 1rem 0;
     position: absolute;
     top: 60px;
     right: 0;
-    padding: 1rem 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 
@@ -163,7 +171,7 @@ nav ul li a:hover::after {
 }
 
 /* =====================================================
-   🧠 HEADER SECTION
+   🧠 HEADER
    ===================================================== */
 
 header {
@@ -176,11 +184,17 @@ header h1 {
   font-size: clamp(2rem, 5vw, 3rem);
 }
 
-header p {
+/* Frosted header text box */
+.header-box {
+  background: rgba(250, 247, 245, 0.65);
+  padding: 1.5rem 2rem;
   max-width: 700px;
-  margin: auto;
-  font-size: 1.1rem;
-  color: var(--gray);
+  margin: 1.5rem auto 0;
+  border-radius: 12px;
+  border: 1px solid rgba(250,247,245,0.35);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
 /* =====================================================
@@ -194,47 +208,38 @@ section {
 }
 
 /* =====================================================
-   🧩 CARDS
+   🧩 CARDS — Off-White Frosted Style
    ===================================================== */
 
 .card,
 .person-card,
 details {
-   background: rgba(250, 247, 245, 0.65);
-   backdrop-filter: blur(6px);            /* <-- adds subtle blur */
-  -webkit-backdrop-filter: blur(6px);    /* Safari support */
+  background: rgba(250, 247, 245, 0.65); /* warm off-white */
   border-radius: 12px;
   padding: 1.5rem 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(250,247,245,0.35);
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .card:hover,
 .person-card:hover,
 details:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
 }
 
-/* =====================================================
-   👤 PROFILE IMAGE
-   ===================================================== */
-
+/* Person profile images */
 .person-card img {
   width: 440px;
   height: 440px;
-  border-radius: 50%;
-  border: 4px solid var(--red);
   object-fit: cover;
   object-position: 60% 25%;
-  transform: translateZ(0);
-}
-
-@media (min-width: 769px) {
-  .person-card img {
-    image-rendering: crisp-edges;
-  }
+  border-radius: 50%;
+  border: 4px solid var(--red);
+  backface-visibility: hidden;
 }
 
 /* =====================================================
@@ -243,11 +248,12 @@ details:hover {
 
 footer {
   background: rgba(255,255,255,0.55);
-  backdrop-filter: blur(2px);
   padding: 2rem;
   text-align: center;
   color: var(--gray);
   font-size: 0.9rem;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
 /* =====================================================
@@ -258,9 +264,10 @@ button,
 a.button {
   background: var(--red);
   color: white;
-  padding: 0.8rem 1.6rem;
   border-radius: 8px;
+  padding: 0.8rem 1.6rem;
   font-weight: 600;
+  border: none;
 }
 
 button:hover,
