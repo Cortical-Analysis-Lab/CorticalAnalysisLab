@@ -4,7 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Research | Cortical Analysis Lab</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Dynamic CSS Loader -->
   <link rel="stylesheet" id="main-css" href="">
   <script>
     window.addEventListener("DOMContentLoaded", () => {
@@ -12,7 +16,6 @@
         "/assets/style.css?v=" + new Date().getTime();
     });
   </script>
-
 </head>
 
 <body>
@@ -25,13 +28,15 @@
       .then(html => {
         document.getElementById("nav-placeholder").innerHTML = html;
 
-        // Re-enable JS interactions AFTER injection
+        // Enable navigation UI after injection
         const menuToggle = document.querySelector(".menu-toggle");
         const navLinks = document.querySelector("nav ul");
 
-        menuToggle.addEventListener("click", () => {
-          navLinks.classList.toggle("show");
-        });
+        if (menuToggle) {
+          menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+          });
+        }
 
         // Scroll shadow effect
         window.addEventListener("scroll", () => {
@@ -51,90 +56,108 @@
   <header>
     <h1>Research Projects</h1>
     <p>
-      Tailored to a speicific scientific query and run by undergraduate research assistants, the following projects investigate the dynamic interplay between neural, glial, and vascular systems that shape cortical function. 
-     
+      Tailored to a specific scientific query and run by undergraduate research assistants, 
+      these projects investigate the dynamic interplay between neural, glial, and vascular 
+      systems that shape cortical function.
     </p>
   </header>
 
+
   <!-- 🧠 Section: Neural–Vascular Coupling -->
-<section>
-  <h2>Simultaneous EEG, Optical Imaging, & Behavioral Assessments</h2>
-  <div class="card">
-
-    <p>
-      Using transgenic animals we are able to simultaneously capture and cross-correlate 
-      neural activity, vascular fluctuations, and behavioral output.
-    </p>
-
-    <p>
-      Through wide-field optical imaging (Ca/CBV) and EEG, our experiments measure how 
-      blood distribution and neural activation synchronize across cortical regions. 
-      This work enhances our understanding of brain energy dynamics and informs 
-      translational models of neurological and psychiatric disorders.
-    </p>
-
-    <p>
-      We have created a unified framework for analyzing large-scale cortical dynamics. 
-      Our pipelines include automated motion tracking, state segmentation, 
-      and cross-modal time-series correlation.
-    </p>
-
-    <p>
-      This tool is being developed as open-source resource for the neuroscience community.
-    </p>
-
-    <!-- 📸 Mounted Setup Image
-    <div style="text-align:center; margin-top: 1.5rem;">
-      <img src="assets/mounted.png" 
-           alt="Mounted EEG-Optical Imaging Setup"
-           style="max-width: 90%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-      <p style="font-size: 0.9rem; color:#555; margin-top: 0.5rem;">
-        Mounted simultaneous EEG + optical imaging preparation.
-      </p>
-    </div>
-
-  </div> -->
-</section>
-
-
-  <!-- 🧬 Section: Behavior & Brain States -->
   <section>
-    <h2>In Utero FASD treatment</h2>
+    <h2>Simultaneous EEG, Optical Imaging, & Behavioral Assessments</h2>
+    <div class="card">
+
+      <p>
+        Using transgenic animals we are able to simultaneously capture and cross-correlate 
+        neural activity, vascular fluctuations, and behavioral output.
+      </p>
+
+      <p>
+        Through wide-field optical imaging (Ca/CBV) and EEG, our experiments measure how 
+        blood distribution and neural activation synchronize across cortical regions. 
+        This work enhances our understanding of brain energy dynamics and informs 
+        translational models of neurological and psychiatric disorders.
+      </p>
+
+      <p>
+        We have created a unified framework for analyzing large-scale cortical dynamics. 
+        Our pipelines include automated motion tracking, state segmentation, 
+        and cross-modal time-series correlation.
+      </p>
+
+      <p>
+        This tool is being developed as an open-source resource for the neuroscience community.
+      </p>
+
+      <!-- 📸 Optional Mounted Setup Image -->
+      <!--
+      <div style="text-align:center; margin-top: 1.5rem;">
+        <img src="assets/mounted.png"
+             alt="Mounted EEG-Optical Imaging Setup"
+             style="max-width: 90%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        <p style="font-size: 0.9rem; color:#555; margin-top: 0.5rem;">
+          Mounted simultaneous EEG + optical imaging preparation.
+        </p>
+      </div>
+      -->
+
+    </div>
+  </section>
+
+
+  <!-- 🧬 Section: In Utero Treatment -->
+  <section>
+    <h2>In Utero FASD Treatment</h2>
     <div class="card">
       <p>
-        This project aims to determine if reservatrol, administered in utero, can mitigate the onset and development of FASDs. Using transgenic mice and our tripartite system we seek to provide a comprehensive analysis
-        and potential therapeutic route for the treatment of prenatal alcohol exposure.
-        
+        This project aims to determine whether resveratrol, administered in utero, 
+        can mitigate the onset and development of fetal alcohol spectrum disorders (FASDs). 
+        Using transgenic mice and our tripartite system, we seek to provide a comprehensive 
+        analysis and identify potential therapeutic routes for prenatal alcohol exposure.
       </p>
     </div>
   </section>
 
-  <!-- ⚡ Section: Multimodal Integration -->
+
+  <!-- ⚡ Section: Blocking Alcohol’s Cognitive Impairment -->
   <section>
-    <h2>Blocking Alcohols Cognitive & Behavioral Impairment</h2>
+    <h2>Blocking Alcohol’s Cognitive & Behavioral Impairment</h2>
     <div class="card">
       <p>
-        This project aims to uncover and block a potential supplementary pathway for alcohols entry into the brain. Using transgenic rats and our tripartite system we seek to provide a comprehensive analysis
-        highlighting a potential therapeutic target to block alcohol induced cogntive and behavioral impairment.
- 
+        This project aims to uncover and block a potential supplementary pathway for 
+        alcohol’s entry into the brain. Using transgenic rats and our tripartite system, 
+        we seek to identify a therapeutic target capable of reducing or preventing 
+        alcohol-induced cognitive and behavioral impairment.
       </p>
     </div>
   </section>
 
-  <!-- 💡 Section: Translational Applications -->
+
+  <!-- 💡 Section: Educational BCI Tool -->
   <section>
-    <h2>Side Quest: An educational tool to teach students about BCI's</h2>
+    <h2>Side Quest: An Educational Tool to Teach Students About BCIs</h2>
     <div class="card">
       <p>
-        Brain computer interfaces are sweeping the field of neuroscience. This projects aims to bring that technology into the classroom to allow students to gain a hands-on experience planning and conducting, non-invasive, experiments
-        that will allow them to use EMG or EEG to control actions on a computer, or other electronic devices. Through this experience, students will gain insight into how technology paired with brain/neural activity can improve 
-        the quality of life for indvidiuals with neurlogical impariment.
+        Brain–computer interfaces are rapidly advancing the field of neuroscience. 
+        This project brings that technology into the classroom through non-invasive 
+        EEG and EMG experiments, enabling students to develop hands-on skills in 
+        designing and running BCI protocols.
       </p>
+
       <p>
-        This tool is being developed as open-source resource for the neuroscience community.
+        The goal is to provide a high-engagement, low-barrier educational tool that 
+        empowers students to learn how neural signals can be used to control 
+        software or hardware devices—mirroring real-world assistive technologies.
+      </p>
+
+      <p>
+        This tool is being developed as an open-source resource for the neuroscience 
+        and STEM-education communities.
       </p>
     </div>
   </section>
+
 
   <!-- 📬 Footer -->
   <footer>
@@ -142,25 +165,8 @@
   </footer>
 
   <script>
-    // Dynamic year
+    // Update year automatically
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Mobile navigation toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('nav ul');
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-
-    // Scroll shadow effect
-    window.addEventListener('scroll', () => {
-      const nav = document.querySelector('nav');
-      if (window.scrollY > 20) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    });
   </script>
 
 </body>
