@@ -66,21 +66,34 @@
 
 <body>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html" class="logo">Cortical Analysis Lab</a>
-    <button class="menu-toggle">☰</button>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="people.html">People</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="publications.html">Lab Publications</a></li>
-      <li><a href="collaborate.html">Collaborate</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
+  <!-- Shared Navigation -->
+    <div id="nav-placeholder"></div>
+    <script>
+      fetch("partials/nav.html")
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById("nav-placeholder").innerHTML = html;
+  
+          // Re-enable JS interactions AFTER injection
+          const menuToggle = document.querySelector(".menu-toggle");
+          const navLinks = document.querySelector("nav ul");
+  
+          menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+          });
+  
+          // Scroll shadow effect
+          window.addEventListener("scroll", () => {
+            const nav = document.querySelector("nav");
+            if (window.scrollY > 20) {
+              nav.classList.add("scrolled");
+            } else {
+              nav.classList.remove("scrolled");
+            }
+          });
+        })
+        .catch(err => console.error("Navigation load error:", err));
+    </script>
   <!-- Header -->
   <header>
     <h1>Dr. Shaun James</h1>
