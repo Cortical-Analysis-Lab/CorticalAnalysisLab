@@ -65,8 +65,8 @@ body::after {
   z-index: -1;
 }
 
-/* ======================================================
-   🧭 NAVIGATION
+//* ======================================================
+   🧭 NAVIGATION (Desktop + Mobile Fixed)
    ====================================================== */
 
 nav {
@@ -79,11 +79,13 @@ nav {
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   padding: 1rem 2rem;
   z-index: 1000;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* prevent Samsung weird recoloring */
 nav * {
   color: var(--text) !important;
 }
@@ -95,21 +97,67 @@ nav .logo {
   text-decoration: none;
 }
 
+/* DESKTOP NAVIGATION */
 nav ul {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  margin: 0;
 }
 
 nav ul li a {
   text-decoration: none;
   font-weight: 500;
-  position: relative;
   color: var(--text) !important;
+  position: relative;
 }
 
 nav ul li a:hover {
   color: var(--red) !important;
+}
+
+/* Hamburger hidden on desktop */
+.menu-toggle {
+  display: none !important;
+}
+
+
+/* ======================================================
+   MOBILE NAVIGATION
+   ====================================================== */
+@media (max-width: 768px) {
+
+  /* Show hamburger */
+  .menu-toggle {
+    display: block !important;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--red) !important;
+    cursor: pointer;
+  }
+
+  /* Hide desktop menu */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: var(--nav-bg);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0.8rem 0;
+  }
 }
 
 
