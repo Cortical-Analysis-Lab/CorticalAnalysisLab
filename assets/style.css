@@ -39,22 +39,23 @@ body::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.45;      /* clearer but not overpowering */
+  opacity: 0.45;
   z-index: -2;
   pointer-events: none;
 }
 
+/* Subtle clarity veil (optional blur here!) */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(255,255,255,0.12);
-  backdrop-filter: blur(1.5px);
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(1.5px);           /* <-- This blurs background */
   -webkit-backdrop-filter: blur(1.5px);
   z-index: -1;
 }
 
-/* Remove background veil completely on mobile */
+/* Remove veil completely on mobile for sharper display */
 @media (max-width: 768px) {
   body::after {
     background: none !important;
@@ -66,9 +67,8 @@ body::after {
 }
 
 /* =====================================================
-   🧭 NAVIGATION (Fixes Samsung Color Issue)
+   🧭 NAVIGATION (Samsung Color-Fix)
    ===================================================== */
-
 nav {
   position: fixed;
   top: 0;
@@ -84,21 +84,19 @@ nav {
 }
 
 nav * {
-  color: var(--text) !important;   /* Prevent Samsung color inversion */
-}
-
-nav.scrolled {
-  background: rgba(250, 247, 245, 0.97);
+  color: var(--text) !important;
 }
 
 nav .logo {
   font-weight: 700;
   font-size: 1.2rem;
   color: var(--red) !important;
-  text-decoration: none;
 }
 
-/* Nav links */
+nav.scrolled {
+  background: rgba(250, 247, 245, 0.97);
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -108,8 +106,8 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   font-weight: 500;
-  position: relative;
   color: var(--text) !important;
+  position: relative;
 }
 
 nav ul li a:hover {
@@ -131,38 +129,28 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* Mobile nav button */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
   color: var(--red) !important;
-  background: none;
-  border: none;
-  cursor: pointer;
 }
 
-/* Mobile navigation behavior */
+/* Mobile nav */
 @media (max-width: 768px) {
-
   nav ul {
     display: none;
     flex-direction: column;
     align-items: center;
-    background: rgba(250, 247, 245, 0.97);
     width: 100%;
     padding: 1rem 0;
+    background: rgba(250, 247, 245, 0.97);
     position: absolute;
     top: 60px;
     right: 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
 
   nav ul.show {
     display: flex;
-  }
-
-  nav ul li {
-    margin: 0.8rem 0;
   }
 
   .menu-toggle {
@@ -173,7 +161,6 @@ nav ul li a:hover::after {
 /* =====================================================
    🧠 HEADER
    ===================================================== */
-
 header {
   text-align: center;
   padding: 10rem 2rem 6rem;
@@ -184,23 +171,20 @@ header h1 {
   font-size: clamp(2rem, 5vw, 3rem);
 }
 
-/* Frosted header text box */
-.header-box {
-  background: rgba(250, 247, 245, 0.65);
-  padding: 1.5rem 2rem;
+/* Frosted description box */
+header p {
+  background: rgba(250, 247, 245, 0.75);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(250,247,245,0.4);
   max-width: 700px;
   margin: 1.5rem auto 0;
-  border-radius: 12px;
-  border: 1px solid rgba(250,247,245,0.35);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
 }
 
 /* =====================================================
-   📄 CONTENT SECTIONS
+   📄 PAGE SECTIONS
    ===================================================== */
-
 section {
   max-width: 900px;
   margin: 4rem auto;
@@ -208,19 +192,19 @@ section {
 }
 
 /* =====================================================
-   🧩 CARDS — Off-White Frosted Style
+   🧩 CONTENT CARDS — Softer, Warmer, Less Transparent
    ===================================================== */
-
 .card,
 .person-card,
-details {
-  background: rgba(250, 247, 245, 0.65); /* warm off-white */
+details,
+.significance-blurb {
+  background: rgba(250, 247, 245, 0.78);  /* off-white box */
   border-radius: 12px;
   padding: 1.5rem 2rem;
-  border: 1px solid rgba(250,247,245,0.35);
+  border: 1px solid rgba(250,247,245,0.6);
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
@@ -228,24 +212,20 @@ details {
 .person-card:hover,
 details:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.10);
 }
 
-/* Person profile images */
+/* Person images */
 .person-card img {
   width: 440px;
   height: 440px;
   object-fit: cover;
-  object-position: 60% 25%;
   border-radius: 50%;
   border: 4px solid var(--red);
-  backface-visibility: hidden;
 }
 
 /* =====================================================
    FOOTER
    ===================================================== */
-
 footer {
   background: rgba(255,255,255,0.55);
   padding: 2rem;
@@ -253,21 +233,19 @@ footer {
   color: var(--gray);
   font-size: 0.9rem;
   backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
 }
 
 /* =====================================================
    BUTTONS
    ===================================================== */
-
 button,
 a.button {
   background: var(--red);
   color: white;
-  border-radius: 8px;
   padding: 0.8rem 1.6rem;
-  font-weight: 600;
+  border-radius: 8px;
   border: none;
+  font-weight: 600;
 }
 
 button:hover,
@@ -279,7 +257,6 @@ a.button:hover {
 /* =====================================================
    ANIMATIONS
    ===================================================== */
-
 @keyframes fadeInNav {
   from { opacity: 0; transform: translateY(-10px); }
   to   { opacity: 1; transform: translateY(0); }
