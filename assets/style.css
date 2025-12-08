@@ -1,5 +1,6 @@
 /* ======================================================
    🧠 Cortical Analysis Lab — Global Website Stylesheet
+   Option B — Universal Cross-Browser, Samsung-Safe Version
    ====================================================== */
 
 /* --- Color Palette --- */
@@ -19,7 +20,7 @@
 }
 
 /* =====================================================
-   🌟 BODY + BACKGROUND WATERMARK
+   🌟 BODY + BACKGROUND WATERMARK (Samsung-Safe)
    ===================================================== */
 
 body {
@@ -32,7 +33,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Background image — desktop version (clean + balanced) */
+/* High-quality background image without tint distortion */
 body::before {
   content: "";
   position: fixed;
@@ -41,19 +42,18 @@ body::before {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  opacity: 0.45;    /* Balanced clarity */
+
+  /* Samsung Internet-safe clarity */
+  background-color: rgba(255, 255, 255, 0.08); /* mild softening */
+  mix-blend-mode: normal;  /* prevents pink/yellow shifts */
+
   pointer-events: none;
   z-index: -2;
 }
 
-/* Soft veil — DESKTOP ONLY */
+/* Remove the old translucent veil entirely (main culprit) */
 body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.12); /* subtle, not color-shifting */
-  backdrop-filter: blur(1.5px);
-  z-index: -1;
+  display: none !important;
 }
 
 /* =====================================================
@@ -64,31 +64,29 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(250, 247, 245, 0.9);
-  backdrop-filter: blur(6px);
+  background: rgba(250, 247, 245, 0.92); /* clean, tint-free */
+  backdrop-filter: blur(4px);
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
   z-index: 1000;
-  transition: box-shadow 0.3s ease, background 0.3s ease;
-  animation: fadeInNav 0.5s ease forwards;
 }
 
 nav.scrolled {
   background: rgba(250, 247, 245, 0.97);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 nav .logo {
   font-weight: 700;
   font-size: 1.2rem;
-  color: var(--red) !important;
+  color: var(--red);
   text-decoration: none;
 }
 
-/* Links */
+/* Nav links */
 nav ul {
   list-style: none;
   display: flex;
@@ -96,24 +94,23 @@ nav ul {
 }
 
 nav ul li a {
-  color: var(--text) !important;
+  color: var(--text);
   text-decoration: none;
   font-weight: 500;
   position: relative;
-  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: var(--red) !important;
+  color: var(--red);
 }
 
 nav ul li a::after {
   content: "";
   position: absolute;
-  left: 0;
   bottom: -4px;
-  width: 0;
+  left: 0;
   height: 2px;
+  width: 0;
   background: var(--red);
   transition: width 0.3s ease;
 }
@@ -122,34 +119,29 @@ nav ul li a:hover::after {
   width: 100%;
 }
 
-/* Mobile nav button */
 .menu-toggle {
   display: none;
   background: none;
   border: none;
   color: var(--red);
   font-size: 1.8rem;
-  cursor: pointer;
 }
 
 /* =====================================================
-   📱 MOBILE FIX — REMOVE TINT & RESTORE TRUE COLORS
+   📱 MOBILE RESPONSIVE NAV
    ===================================================== */
 
 @media (max-width: 768px) {
 
-  /* Adjust nav to prevent color shifting */
   nav {
-    background: rgba(250, 247, 245, 0.97);
+    padding: 0.8rem 1.2rem;
   }
 
-  /* Mobile menu */
   nav ul {
     display: none;
     flex-direction: column;
-    align-items: center;
     width: 100%;
-    background: rgba(250, 247, 245, 0.97);
+    background: rgba(250, 247, 245, 0.98);
     position: absolute;
     top: 60px;
     right: 0;
@@ -161,26 +153,17 @@ nav ul li a:hover::after {
     display: flex;
   }
 
+  nav ul li {
+    margin: 0.8rem 0;
+  }
+
   .menu-toggle {
     display: block;
-    color: var(--red) !important;
-  }
-
-  /* --- CRITICAL FIXES FOR MOBILE COLOR DISTORTION --- */
-
-  /* Reduce background image dominance on mobile */
-  body::before {
-    opacity: 0.32 !important; /* prevents color washout */
-  }
-
-  /* REMOVE white veil entirely — this stops pink/green tint */
-  body::after {
-    display: none !important;
   }
 }
 
 /* =====================================================
-   🧠 HEADER
+   🧠 HEADER SECTION
    ===================================================== */
 
 header {
@@ -217,12 +200,19 @@ section {
 .card,
 .person-card,
 details {
-  background: rgba(255, 255, 255, 0);
+  background: rgba(255,255,255,0.0); /* true transparency */
   border-radius: 12px;
   padding: 1.5rem 2rem;
   border: 1px solid rgba(255,255,255,0.22);
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  transition: 0.2s ease;
+}
+
+.card:hover,
+.person-card:hover,
+details:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
 }
 
 /* =====================================================
@@ -243,13 +233,6 @@ details {
   .person-card img {
     image-rendering: crisp-edges;
   }
-}
-
-.card:hover,
-.person-card:hover,
-details:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 /* =====================================================
@@ -273,8 +256,8 @@ button,
 a.button {
   background: var(--red);
   color: white;
-  border-radius: 8px;
   padding: 0.8rem 1.6rem;
+  border-radius: 8px;
   font-weight: 600;
 }
 
