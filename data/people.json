@@ -11,6 +11,8 @@
     "major": "Neuroscience",
     "role": "Undergraduate Research Assistant",
     "year": [2025, 2026]
+    "labLeaderYears": [2026]
+
   },
   {
     "name": "Elleahna Anderson",
@@ -35,6 +37,7 @@
     "major": "Neuroscience",
     "role": "Undergraduate Research Assistant",
     "year": [2024, 2025, 2026]
+    "labLeaderYears": [2025, 2026]
   },
   {
     "name": "Jaiden Fletcher",
@@ -47,6 +50,7 @@
     "major": "Psychology",
     "role": "Undergraduate Research Assistant",
     "year": [2024, 2025, 2026]
+    "labLeaderYears": [2025, 2026]
   },
   {
     "name": "Paige Mckenna",
@@ -64,6 +68,8 @@
     "major": "Psychology",
     "role": "Undergraduate Research Assistant",
     "year": [2024, 2025]
+    "labLeaderYears": [2025]
+
   },
   {
     "name": "Kaydean Saunders",
@@ -76,6 +82,7 @@
     "major": "Neuroscience", 
     "role": "Undergraduate Research Assistant",
     "year": [2025, 2026]
+    "labLeaderYears": [2026]
   },
   {
     "name": "Jhalissa Vincent",
@@ -100,6 +107,7 @@
     "major": "Neuroscience",
     "role": "Undergraduate Research Assistant",
     "year": [2024, 2025]
+    "labLeaderYears": [2025]
   },
   {
     "name": "Alessia Scali",
