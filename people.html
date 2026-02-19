@@ -228,15 +228,24 @@
             <summary>${year}</summary>
             <ul class="people-list">
               ${sortedStudents
-                .map(
-                  s => `
-                <li>
-                  <strong>${s.name}</strong>
-                  <span class="major">${s.major || ""}</span>
-                  <span class="role">${s.role || ""}</span>
-                </li>`
-                )
-                .join("")}
+                .map(s => {
+                    const isLabLeaderThisYear = s.labLeaderYears && 
+                      s.labLeaderYears.includes(Number(year));
+                  
+                    const labLeaderBadge = isLabLeaderThisYear
+                      ? `<span class="lab-leader-badge">Lab Leader</span>`
+                      : "";
+                  
+                    return `
+                      <li>
+                        <strong>${s.name}</strong> ${labLeaderBadge}
+                        <span class="major">${s.major || ""}</span>
+                        <span class="role">${s.role || ""}</span>
+                      </li>
+                    `;
+                  })
+                  .join("")
+                  }
             </ul>
           `;
 
