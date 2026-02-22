@@ -191,6 +191,13 @@ header h1 {
   color: var(--red);
   font-size: clamp(2rem, 5vw, 3rem);
 }
+
+/* HERO GRAPHIC */
+.hero-graphic {
+  margin-top: 3rem;
+  text-align: center;
+}
+
 .hero-graphic img {
   width: 100%;
   max-width: 950px;
