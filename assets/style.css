@@ -191,6 +191,23 @@ header h1 {
   color: var(--red);
   font-size: clamp(2rem, 5vw, 3rem);
 }
+.hero-graphic img {
+  width: 100%;
+  max-width: 950px;
+  height: auto;
+
+  border-radius: 18px;
+
+  background: rgba(250,247,245,0.55);
+  padding: 1rem;
+
+  border: 1px solid rgba(250,247,245,0.35);
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
 
 /* Frosted header box for description text */
 .header-box,
