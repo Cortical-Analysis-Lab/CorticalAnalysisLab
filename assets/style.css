@@ -182,9 +182,13 @@ nav ul li a:hover::after {
    🧠 HEADER
    ====================================================== */
 
+/* ======================================================
+   🧠 HEADER
+   ====================================================== */
+
 header {
   text-align: center;
-  padding: 10rem 2rem 6rem;
+  padding: 9rem 2rem 6rem;
 }
 
 header h1 {
@@ -192,42 +196,33 @@ header h1 {
   font-size: clamp(2rem, 5vw, 3rem);
 }
 
+/* Frosted header container (text + image together) */
+.header-box {
+  background: rgba(250,247,245,0.65);
+  padding: 2rem;
+  max-width: 900px;
+  margin: 2rem auto 0;
+  border-radius: 16px;
+  border: 1px solid rgba(250,247,245,0.35);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Paragraph inside header box */
+.header-box p {
+  margin-bottom: 2rem;
+}
+
 /* HERO GRAPHIC */
 .hero-graphic {
-  margin-top: 3rem;
   text-align: center;
 }
 
 .hero-graphic img {
-  width: 100%;
-  max-width: 475px;
+  width: 70%;
+  max-width: 600px;
   height: auto;
-
-  border-radius: 18px;
-
-  background: rgba(250,247,245,0.55);
-  padding: 1rem;
-
-  border: 1px solid rgba(250,247,245,0.35);
-
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-
-/* Frosted header box for description text */
-.header-box,
-header p {
-  background: rgba(250,247,245,0.65);
-  padding: 1.5rem 2rem;
-  max-width: 700px;
-  margin: 1.5rem auto 0;
-  border-radius: 12px;
-  border: 1px solid rgba(250,247,245,0.35);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
 }
 
 /* ======================================================
