@@ -5,118 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cortical Analysis Lab | Sacred Heart University</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" id="main-css" href="">
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("main-css").href =
-        "/assets/style.css?v=" + new Date().getTime();
-    });
-  </script>
-
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/site.js"></script>
 </head>
 
 <body>
 
+  <nav>
+    <a href="index.html" class="logo">Cortical Analysis Lab</a>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="publications.html">Lab Publications</a></li>
+      <li><a href="https://github.com/Cortical-Analysis-Lab/Neural_Signal_Simulation" target="_blank" rel="noopener noreferrer">GitHub Repositories</a></li>
+      <li><a href="collaborate.html">Collaborate</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-  <!-- Shared Navigation -->
-  <div id="nav-placeholder"></div>
-  <script>
-    fetch("partials/nav.html")
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById("nav-placeholder").innerHTML = html;
+  <header>
+    <h1>Cortical Analysis Lab</h1>
 
-        // Re-enable JS interactions AFTER injection
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navLinks = document.querySelector("nav ul");
-
-        menuToggle.addEventListener("click", () => {
-          navLinks.classList.toggle("show");
-        });
-
-        // Scroll shadow effect
-        window.addEventListener("scroll", () => {
-          const nav = document.querySelector("nav");
-          if (window.scrollY > 20) {
-            nav.classList.add("scrolled");
-          } else {
-            nav.classList.remove("scrolled");
-          }
-        });
-      })
-      .catch(err => console.error("Navigation load error:", err));
-  </script>
-
-
-  <!-- 🧠 Hero Section -->
- <header>
-  <h1>Cortical Analysis Lab</h1>
-
-  <div class="header-box">
-    <p>
-      Exploring the interplay between cortical dynamics, neurovascular coupling, and behavior 
-      through multimodal imaging, EEG, and computational analysis.
-    </p>
-
-    <!-- 🖼 Graphic Abstract -->
-    <div class="hero-graphic">
-      <img src="assets/GraphicalAbstract.png" alt="Cortical Analysis Lab Graphical Abstract">
-    </div>
-  </div>
-</header>
-
-  <!-- 🔬 Research Focus 
-  <section>
-    <h2>Our Focus</h2>
-    <div class="card">
+    <div class="header-box">
       <p>
-         The Cortical Analysis Lab uses a tripartite approach to to characterize the dysfunction of neurological disorders and evaluate therapeutic efficacy.
-        </p>      
-      <p>
-        Our approach synchronizes optical imaging, EEG, and behavioral assessment to investigate the global and regional changes in the cortical function of clinically relevant 
-        rodent models of mice and rats. 
-        </p>
-    </div>
-  </section>
-  -->
+        Exploring the interplay between cortical dynamics, neurovascular coupling, and behavior
+        through multimodal imaging, EEG, and computational analysis.
+      </p>
 
-  <!-- 📈 Highlights -->
+      <div class="hero-graphic">
+        <img
+          src="assets/GraphicalAbstract.png"
+          alt="Cortical Analysis Lab Graphical Abstract"
+          decoding="async"
+          fetchpriority="high">
+      </div>
+    </div>
+  </header>
+
   <section>
     <h2>Recent Highlights</h2>
     <div class="card">
       <p>
-        We are currently testing the first ever simultaneous multimodal EEG–optical imaging integration that enables real-time analysis of whole-cortex neurovascular activty 
+        We are currently testing the first ever simultaneous multimodal EEG-optical imaging integration that enables real-time analysis of whole-cortex neurovascular activty
         during behavior.
       </p>
     </div>
   </section>
 
-  <!-- 📬 Footer -->
   <footer>
     © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
   </footer>
-
-  <script>
-    // Dynamic year
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Mobile menu toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('nav ul');
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-
-    // Scroll shadow effect on nav bar
-    window.addEventListener('scroll', () => {
-      const nav = document.querySelector('nav');
-      if (window.scrollY > 20) {
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    });
-  </script>
 
 </body>
 </html>

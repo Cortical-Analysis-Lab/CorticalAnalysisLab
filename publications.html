@@ -5,15 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lab Publications | Cortical Analysis Lab</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <!-- Dynamic CSS Cache-Busting -->
-  <link rel="stylesheet" id="main-css" href="">
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("main-css").href =
-        "/assets/style.css?v=" + new Date().getTime();
-    });
-  </script>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/site.js"></script>
 
   <style>
     .pub-list, .abs-list {
@@ -52,7 +45,6 @@
       line-height: 1.45;
     }
 
-    /* Poster Modal */
     #posterModal {
       display: none;
       position: fixed;
@@ -110,30 +102,21 @@
 
 <body>
 
-  <!-- Shared Navigation -->
-  <div id="nav-placeholder"></div>
-  <script>
-    fetch("partials/nav.html")
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById("nav-placeholder").innerHTML = html;
+  <nav>
+    <a href="index.html" class="logo">Cortical Analysis Lab</a>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="publications.html">Lab Publications</a></li>
+      <li><a href="https://github.com/Cortical-Analysis-Lab/Neural_Signal_Simulation" target="_blank" rel="noopener noreferrer">GitHub Repositories</a></li>
+      <li><a href="collaborate.html">Collaborate</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navLinks = document.querySelector("nav ul");
-
-        menuToggle.addEventListener("click", () => {
-          navLinks.classList.toggle("show");
-        });
-
-        window.addEventListener("scroll", () => {
-          const nav = document.querySelector("nav");
-          if (window.scrollY > 20) nav.classList.add("scrolled");
-          else nav.classList.remove("scrolled");
-        });
-      });
-  </script>
-
-  <!-- Header -->
   <header>
     <h1>Lab Publications</h1>
     <p>
@@ -141,12 +124,11 @@
     </p>
   </header>
 
-  <!-- Publications Section -->
   <section>
     <h2>Publications</h2>
 
     <div class="card">
-      <p><em>Section under construction — stay tuned for upcoming manuscripts and analyses.</em></p>
+      <p><em>Section under construction - stay tuned for upcoming manuscripts and analyses.</em></p>
     </div>
 
     <div class="significance-blurb">
@@ -157,14 +139,11 @@
     <div class="pub-list" id="lab-pub-list"></div>
   </section>
 
-  <!-- Posters + Abstracts -->
   <section>
     <h2>Abstracts / Posters</h2>
-
-     <div class="abs-list" id="poster-list"></div>
+    <div class="abs-list" id="poster-list"></div>
   </section>
 
-  <!-- Poster Modal Viewer -->
   <div id="posterModal">
     <div id="posterModalContent">
       <span id="closePoster">&times;</span>
@@ -172,49 +151,89 @@
     </div>
   </div>
 
-  <!-- Footer -->
   <footer>
     © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const isSmallScreen = () => window.matchMedia("(max-width: 768px)").matches;
 
-    /* -----------------------------
-       🧠 Poster Data
-    ----------------------------- */
+    async function loadPublications() {
+      const container = document.getElementById("lab-pub-list");
+
+      try {
+        const response = await fetch("data/publications.json");
+        if (!response.ok) {
+          throw new Error("Publication fetch failed");
+        }
+
+        const publications = await response.json();
+        container.innerHTML = "";
+
+        publications.forEach((publication) => {
+          const item = document.createElement("div");
+          item.className = "pub-item";
+
+          const title = publication.title || "Untitled";
+          const journal = publication.journal || "—";
+          const year = publication.year || "—";
+
+          item.innerHTML = `<h3>${title}</h3><p><em>${journal}</em> (${year})</p>`;
+
+          if (publication.doi) {
+            const link = document.createElement("p");
+            const anchor = document.createElement("a");
+            anchor.href = `https://doi.org/${publication.doi}`;
+            anchor.target = "_blank";
+            anchor.rel = "noopener noreferrer";
+            anchor.textContent = "View Article →";
+            link.appendChild(anchor);
+            item.appendChild(link);
+          }
+
+          container.appendChild(item);
+        });
+      } catch (err) {
+        container.innerHTML = "<p>Unable to load publications.</p>";
+        console.error(err);
+      }
+    }
+
     const posters = [
       {
-        title: "SFN 2025 — Multimodal EEG–Optical Integration",
+        title: "SFN 2025 - Multimodal EEG-Optical Integration",
         thumb: null,
         pdf: "/assets/SFN_2025_Poster.pdf"
       }
     ];
 
-    /* Load posters */
     function loadPosters() {
       const container = document.getElementById("poster-list");
       container.innerHTML = "";
 
-      posters.forEach(p => {
-        const thumb = p.thumb
-          ? `<img src="${p.thumb}" class="poster-thumb" onclick="openPosterModal('${p.pdf}')">`
-          : `<div class="poster-thumb" onclick="openPosterModal('${p.pdf}')">View Poster PDF</div>`;
+      posters.forEach((poster) => {
+        const thumb = poster.thumb
+          ? `<img src="${poster.thumb}" class="poster-thumb" onclick="openPosterModal('${poster.pdf}')" loading="lazy" decoding="async">`
+          : `<div class="poster-thumb" onclick="openPosterModal('${poster.pdf}')">View Poster PDF</div>`;
 
         container.innerHTML += `
           <div class="abs-item">
-            <h3>${p.title}</h3>
+            <h3>${poster.title}</h3>
             ${thumb}
             <p style="text-align:center; margin-top:1rem;">
-              <a class="button" href="${p.pdf}" target="_blank">Open PDF</a>
+              <a class="button" href="${poster.pdf}" target="_blank" rel="noopener noreferrer">Open PDF</a>
             </p>
           </div>
         `;
       });
     }
 
-    /* Modal controls */
     function openPosterModal(pdf) {
+      if (isSmallScreen()) {
+        window.open(pdf, "_blank", "noopener,noreferrer");
+        return;
+      }
+
       document.getElementById("posterFrame").src = pdf;
       document.getElementById("posterModal").style.display = "flex";
     }
@@ -224,13 +243,14 @@
       document.getElementById("posterFrame").src = "";
     });
 
-    window.addEventListener("click", e => {
-      if (e.target.id === "posterModal") {
+    window.addEventListener("click", (event) => {
+      if (event.target.id === "posterModal") {
         document.getElementById("posterModal").style.display = "none";
         document.getElementById("posterFrame").src = "";
       }
     });
 
+    loadPublications();
     loadPosters();
   </script>
 

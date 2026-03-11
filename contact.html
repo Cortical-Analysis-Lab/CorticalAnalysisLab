@@ -4,18 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | Cortical Analysis Lab</title>
-
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <!-- Dynamic CSS Loader -->
-  <link rel="stylesheet" id="main-css" href="">
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("main-css").href =
-        "/assets/style.css?v=" + new Date().getTime();
-    });
-  </script>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/site.js"></script>
 
   <style>
     .contact-info {
@@ -64,34 +55,21 @@
 
 <body>
 
-  <!-- Shared Navigation -->
-  <div id="nav-placeholder"></div>
-  <script>
-    fetch("partials/nav.html")
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById("nav-placeholder").innerHTML = html;
+  <nav>
+    <a href="index.html" class="logo">Cortical Analysis Lab</a>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="publications.html">Lab Publications</a></li>
+      <li><a href="https://github.com/Cortical-Analysis-Lab/Neural_Signal_Simulation" target="_blank" rel="noopener noreferrer">GitHub Repositories</a></li>
+      <li><a href="collaborate.html">Collaborate</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navLinks = document.querySelector("nav ul");
-
-        if (menuToggle) {
-          menuToggle.addEventListener("click", () => {
-            navLinks.classList.toggle("show");
-          });
-        }
-
-        window.addEventListener("scroll", () => {
-          const nav = document.querySelector("nav");
-          if (window.scrollY > 20) nav.classList.add("scrolled");
-          else nav.classList.remove("scrolled");
-        });
-      })
-      .catch(err => console.error("Navigation load error:", err));
-  </script>
-
-
-  <!-- 🧠 Header -->
   <header>
     <h1>Contact Us</h1>
     <p>
@@ -100,8 +78,6 @@
     </p>
   </header>
 
-
-  <!-- 🗺️ Contact Details + Map -->
   <section class="contact-info">
     <h2>Cortical Analysis Lab</h2>
     <p><strong>Sacred Heart University</strong></p>
@@ -117,16 +93,9 @@
     </iframe>
   </section>
 
-
-  <!-- 📬 Footer -->
   <footer>
     © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
   </footer>
-
-  <script>
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 
 </body>
 </html>

@@ -79,12 +79,12 @@ nav {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
   z-index: 1000;
+  gap: 1.5rem;
 }
 
 nav * {
@@ -103,9 +103,12 @@ nav .logo {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.25rem;
   margin: 0;
   padding: 0;
+  align-items: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 nav ul li a {
@@ -137,24 +140,33 @@ nav ul li a:hover::after {
 
 /* Hamburger (hidden on desktop) */
 .menu-toggle {
-  display: none !important;
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--red) !important;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
 }
 
-/* Mobile navigation */
-@media (max-width: 768px) {
+/* Tablet and mobile navigation */
+@media (max-width: 1024px) {
+
+  body {
+    padding-top: 72px;
+  }
 
   nav {
     height: auto;
     padding: 1rem 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
   }
 
   .menu-toggle {
-    display: block !important;
-    font-size: 1.8rem;
-    color: var(--red) !important;
-    background: none;
-    border: none;
-    cursor: pointer;
+    display: block;
+    margin-left: auto;
   }
 
   nav ul {
@@ -164,9 +176,12 @@ nav ul li a:hover::after {
     background: rgba(250,247,245,0.97);
     padding: 1rem 0;
     position: absolute;
-    top: 65px;
+    top: calc(100% - 2px);
     left: 0;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0,0,0,0.06);
+    white-space: normal;
+    gap: 0;
   }
 
   nav ul.show {
@@ -175,6 +190,7 @@ nav ul li a:hover::after {
 
   nav ul li {
     margin: 0.8rem 0;
+    text-align: center;
   }
 }
 
@@ -283,11 +299,12 @@ footer {
   -webkit-backdrop-filter: blur(2px);
 }
 
+
 /* ======================================================
    BUTTONS
    ====================================================== */
 
-button,
+button:not(.menu-toggle),
 a.button {
   background: var(--red);
   color: white;
@@ -298,7 +315,7 @@ a.button {
   cursor: pointer;
 }
 
-button:hover,
+button:not(.menu-toggle):hover,
 a.button:hover {
   background: #a61c1c;
   transform: translateY(-2px);

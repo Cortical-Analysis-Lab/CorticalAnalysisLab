@@ -5,13 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Dr. James | Cortical Analysis Lab</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" id="main-css" href="">
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("main-css").href =
-        "/assets/style.css?v=" + new Date().getTime();
-    });
-  </script>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/site.js"></script>
 
   <style>
     .about-container {
@@ -66,63 +61,44 @@
 
 <body>
 
-  <!-- Shared Navigation -->
-    <div id="nav-placeholder"></div>
-    <script>
-      fetch("partials/nav.html")
-        .then(res => res.text())
-        .then(html => {
-          document.getElementById("nav-placeholder").innerHTML = html;
-  
-          // Re-enable JS interactions AFTER injection
-          const menuToggle = document.querySelector(".menu-toggle");
-          const navLinks = document.querySelector("nav ul");
-  
-          menuToggle.addEventListener("click", () => {
-            navLinks.classList.toggle("show");
-          });
-  
-          // Scroll shadow effect
-          window.addEventListener("scroll", () => {
-            const nav = document.querySelector("nav");
-            if (window.scrollY > 20) {
-              nav.classList.add("scrolled");
-            } else {
-              nav.classList.remove("scrolled");
-            }
-          });
-        })
-        .catch(err => console.error("Navigation load error:", err));
-    </script>
-  <!-- Header -->
+  <nav>
+    <a href="index.html" class="logo">Cortical Analysis Lab</a>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="publications.html">Lab Publications</a></li>
+      <li><a href="https://github.com/Cortical-Analysis-Lab/Neural_Signal_Simulation" target="_blank" rel="noopener noreferrer">GitHub Repositories</a></li>
+      <li><a href="collaborate.html">Collaborate</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
   <header>
     <h1>Dr. Shaun James</h1>
     <p>Assistant Professor of Neuroscience • Principal Investigator</p>
   </header>
 
-  <!-- ABOUT SECTION -->
   <section class="about-container">
-
-    <!-- BIOGRAPHY -->
     <div class="about-card">
       <h2>Biography</h2>
       <p>
-        Dr. Shaun James is an Assistant Professor of Neuroscience at Sacred Heart University and 
-        Principal Investigator of the Cortical Analysis Lab. His work integrates multimodal imaging, 
-        behavioral neuroscience, neurophysiology, and computational analysis to investigate how cortical 
+        Dr. Shaun James is an Assistant Professor of Neuroscience at Sacred Heart University and
+        Principal Investigator of the Cortical Analysis Lab. His work integrates multimodal imaging,
+        behavioral neuroscience, neurophysiology, and computational analysis to investigate how cortical
         networks function across development, disease, and behavior.
       </p>
     </div>
 
-    <!-- EDUCATION -->
     <div class="about-card">
       <h2>Education</h2>
-      <p><strong>Ph.D.</strong> — University of Connecticut</p>
-      <p><strong>M.S.</strong> — Sacred Heart University</p>
-      <p><strong>B.S.</strong> — Drake University</p>
+      <p><strong>Ph.D.</strong> - University of Connecticut</p>
+      <p><strong>M.S.</strong> - Sacred Heart University</p>
+      <p><strong>B.S.</strong> - Drake University</p>
     </div>
 
-    <!-- COURSES -->
     <div class="about-card">
       <h2>Courses Taught at SHU</h2>
       <p>• Neuroscience & Society</p>
@@ -138,93 +114,64 @@
       <p>• Anatomy & Physiology II Lab</p>
     </div>
 
-    <!-- ORCID PUBLICATIONS -->
     <h2>Publications</h2>
     <div id="pub-container" class="pub-list">
-      <p>Loading ORCID publications...</p>
+      <p>Loading publications...</p>
     </div>
-
   </section>
 
-  <!-- Footer -->
   <footer>
     © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
   </footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 
-  <!-- ORCID Loader -->
-<script>
-const ORCID = "0000-0001-9059-8250";
+  <script>
+    async function loadPublications() {
+      const container = document.getElementById("pub-container");
 
-async function loadORCID() {
-  const container = document.getElementById("pub-container");
-
-  try {
-    const endpoint = `https://pub.orcid.org/v3.0/${ORCID}/works`;
-    const response = await fetch(endpoint, {
-      headers: { "Accept": "application/json" }
-    });
-
-    if (!response.ok) throw new Error("ORCID fetch failed");
-
-    const data = await response.json();
-    const works = data.group || [];
-
-    container.innerHTML = "";
-
-    works.forEach(group => {
-      const summary = group["work-summary"][0];
-
-      const title = summary.title?.title?.value || "Untitled";
-      const year = summary["publication-date"]?.year?.value || "—";
-      const journal = summary["journal-title"]?.value || "—";
-
-      // ---------- Extract PMID OR DOI ----------
-      let pmid = null;
-      let doi = null;
-
-      const ids = summary["external-ids"]?.["external-id"] || [];
-      ids.forEach(id => {
-        if (id["external-id-type"] === "pmid") {
-          pmid = id["external-id-value"];
+      try {
+        const response = await fetch("data/publications.json");
+        if (!response.ok) {
+          throw new Error("Publication fetch failed");
         }
-        if (id["external-id-type"] === "doi") {
-          doi = id["external-id-value"];
-        }
-      });
 
-      // ---------- Build Link ----------
-      let linkHtml = "";
-      if (pmid) {
-        linkHtml = `<p><a href="https://pubmed.ncbi.nlm.nih.gov/${pmid}/" target="_blank">View on PubMed →</a></p>`;
-      } else if (doi) {
-        linkHtml = `<p><a href="https://doi.org/${doi}" target="_blank">View Article →</a></p>`;
+        const publications = await response.json();
+        container.innerHTML = "";
+
+        publications.forEach((publication) => {
+          const item = document.createElement("div");
+          item.className = "pub-item";
+
+          const title = publication.title || "Untitled";
+          const journal = publication.journal || "—";
+          const year = publication.year || "—";
+
+          item.innerHTML = `<h3>${title}</h3><p><em>${journal}</em> (${year})</p>`;
+
+          if (publication.doi) {
+            const link = document.createElement("p");
+            const anchor = document.createElement("a");
+            anchor.href = `https://doi.org/${publication.doi}`;
+            anchor.target = "_blank";
+            anchor.rel = "noopener noreferrer";
+            anchor.textContent = "View Article →";
+            link.appendChild(anchor);
+            item.appendChild(link);
+          }
+
+          container.appendChild(item);
+        });
+
+        if (publications.length === 0) {
+          container.innerHTML = "<p>No publications found.</p>";
+        }
+      } catch (err) {
+        console.error(err);
+        container.innerHTML = "<p class='error'>Unable to load publications.</p>";
       }
-
-      const item = document.createElement("div");
-      item.className = "pub-item";
-      item.innerHTML = `
-        <h3>${title}</h3>
-        <p><em>${journal}</em> (${year})</p>
-        ${linkHtml}
-      `;
-      container.appendChild(item);
-    });
-
-    if (works.length === 0) {
-      container.innerHTML = "<p>No ORCID publications found.</p>";
     }
 
-  } catch (err) {
-    console.error(err);
-    container.innerHTML = "<p class='error'>Unable to load ORCID publications.</p>";
-  }
-}
-
-loadORCID();
-</script>
-
-
+    loadPublications();
+  </script>
 
 </body>
 </html>

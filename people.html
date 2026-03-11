@@ -4,27 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>People | Cortical Analysis Lab</title>
-
-  <link rel="stylesheet" id="main-css" href="">
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("main-css").href =
-        "/assets/style.css?v=" + new Date().getTime();
-    });
-  </script>
-
-
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/site.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
   <style>
-    /* PAGE LAYOUT WRAPPER */
     .people-container {
       max-width: 1400px;
       margin: 2rem auto;
       padding: 0 2rem;
     }
 
-    /* PI CARD */
     .person-card {
       text-align: center;
       padding: 2rem 0;
@@ -57,7 +47,6 @@
       margin: 2rem 0;
     }
 
-    /* YEAR DROPDOWNS */
     details {
       margin-bottom: 2rem;
     }
@@ -70,12 +59,10 @@
       margin-bottom: 1rem;
     }
 
-    /* STUDENT LIST — 3-column ROW-WISE layout */
     ul.people-list {
       list-style: none;
       margin: 0;
       padding: 0;
-
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 3rem;
@@ -101,23 +88,18 @@
       color: #444;
     }
 
-    /* LAB LEADER BADGE */
     .lab-leader-badge {
       display: inline-block;
       margin-left: 0.6rem;
       padding: 0.25rem 0.7rem;
-    
       font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 0.5px;
       text-transform: uppercase;
-    
       color: white;
       background-color: var(--red);
-    
       border-radius: 20px;
       box-shadow: 0 2px 6px rgba(179, 8, 56, 0.35);
-    
       vertical-align: middle;
     }
 
@@ -131,53 +113,42 @@
 
 <body>
 
-  <!-- NAVIGATION -->
-  <div id="nav-placeholder"></div>
-  <script>
-    fetch("partials/nav.html")
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById("nav-placeholder").innerHTML = html;
+  <nav>
+    <a href="index.html" class="logo">Cortical Analysis Lab</a>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="publications.html">Lab Publications</a></li>
+      <li><a href="https://github.com/Cortical-Analysis-Lab/Neural_Signal_Simulation" target="_blank" rel="noopener noreferrer">GitHub Repositories</a></li>
+      <li><a href="collaborate.html">Collaborate</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navLinks = document.querySelector("nav ul");
-        if (menuToggle) {
-          menuToggle.addEventListener("click", () =>
-            navLinks.classList.toggle("show")
-          );
-        }
-      });
-  </script>
+  <header>
+    <h1>Our Team</h1>
 
-  <!-- HEADER -->
- <header>
-  <h1>Our Team</h1>
+    <div class="header-box">
+      <p>
+        The Cortical Analysis Lab is committed to providing students with an immersive research experience
+        that integrates students directly into the scientific process. The lab cultivates curiosity, precision,
+        and independence - equipping students to lead in research, medicine, and translational neuroscience.
+      </p>
+    </div>
+  </header>
 
-  <div class="header-box">
-
-    <p>
-      The Cortical Analysis Lab is committed to providing students with an immersive research experience
-      that integrates students directly into the scientific process. The lab cultivates curiosity, precision, 
-      and independence — equipping students to lead in research, medicine, and translational neuroscience.
-    </p>
-
-  </div>
-</header>
-  <!-- PEOPLE CONTENT -->
   <section class="people-container" id="people-container">
     <p>Loading lab members...</p>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
   </footer>
 
-  <!-- PEOPLE SCRIPT -->
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    /* Helper to extract last name */
     function getLastName(fullName) {
       return fullName.trim().split(" ").slice(-1)[0].toLowerCase();
     }
@@ -186,49 +157,42 @@
       const container = document.getElementById("people-container");
 
       try {
-        const response = await fetch(
-          "https://corticalanalysis.org/data/people.json?v=" + Date.now()
-        );
-        if (!response.ok) throw new Error("Failed to load JSON");
+        const response = await fetch("data/people.json");
+        if (!response.ok) {
+          throw new Error("Failed to load JSON");
+        }
 
         const people = await response.json();
-
-        /* --- Identify PI --- */
         const pi = people.find(
-          p => p.role && p.role.toLowerCase().includes("principal investigator")
+          (person) => person.role && person.role.toLowerCase().includes("principal investigator")
         );
-
-        /* --- Students: non-PI entries with a year field --- */
         const students = people.filter(
-          p => !(p.role && p.role.toLowerCase().includes("principal investigator")) &&
-               p.year
+          (person) => !(person.role && person.role.toLowerCase().includes("principal investigator")) && person.year
         );
 
-        /* --- Group by Year --- */
         const grouped = {};
-        students.forEach(s => {
-          const years = Array.isArray(s.year) ? s.year : [s.year];
+        students.forEach((student) => {
+          const years = Array.isArray(student.year) ? student.year : [student.year];
 
-          years.forEach(y => {
-            if (!grouped[y]) grouped[y] = [];
+          years.forEach((year) => {
+            if (!grouped[year]) {
+              grouped[year] = [];
+            }
 
-            if (!grouped[y].find(x => x.name === s.name)) {
-              grouped[y].push(s);
+            if (!grouped[year].find((entry) => entry.name === student.name)) {
+              grouped[year].push(student);
             }
           });
         });
 
-        /* Sort years descending */
         const sortedYears = Object.keys(grouped).sort((a, b) => b - a);
-
         container.innerHTML = "";
 
-        /* --- PI CARD --- */
         if (pi) {
           const card = document.createElement("div");
           card.className = "person-card";
           card.innerHTML = `
-            <img src="${pi.image || '/assets/default-profile.png'}" alt="${pi.name}">
+            <img src="${pi.image || "assets/default-profile.png"}" alt="${pi.name}" decoding="async">
             <h3>${pi.name}</h3>
             <p><strong>${pi.role}</strong></p>
             <p>${pi.bio}</p>
@@ -238,12 +202,10 @@
 
         container.appendChild(Object.assign(document.createElement("hr"), { className: "red-divider" }));
 
-        /* --- YEAR SECTIONS --- */
-        sortedYears.forEach(year => {
+        sortedYears.forEach((year) => {
           const section = document.createElement("details");
           section.open = true;
 
-          /* Sort alphabetically by LAST NAME */
           const sortedStudents = grouped[year].sort((a, b) =>
             getLastName(a.name).localeCompare(getLastName(b.name))
           );
@@ -251,40 +213,34 @@
           section.innerHTML = `
             <summary>${year}</summary>
             <ul class="people-list">
-              ${sortedStudents
-                .map(s => {
-                    const isLabLeaderThisYear = s.labLeaderYears && 
-                      s.labLeaderYears.includes(Number(year));
-                  
-                    const labLeaderBadge = isLabLeaderThisYear
-                      ? `<span class="lab-leader-badge">Lab Leader</span>`
-                      : "";
-                  
-                    return `
-                      <li>
-                        <strong>${s.name}</strong> ${labLeaderBadge}
-                        <span class="major">${s.major || ""}</span>
-                        <span class="role">${s.role || ""}</span>
-                      </li>
-                    `;
-                  })
-                  .join("")
-                  }
+              ${sortedStudents.map((student) => {
+                const isLabLeaderThisYear = student.labLeaderYears &&
+                  student.labLeaderYears.includes(Number(year));
+
+                const labLeaderBadge = isLabLeaderThisYear
+                  ? `<span class="lab-leader-badge">Lab Leader</span>`
+                  : "";
+
+                return `
+                  <li>
+                    <strong>${student.name}</strong> ${labLeaderBadge}
+                    <span class="major">${student.major || ""}</span>
+                    <span class="role">${student.role || ""}</span>
+                  </li>
+                `;
+              }).join("")}
             </ul>
           `;
 
           container.appendChild(section);
-
           container.appendChild(Object.assign(document.createElement("hr"), { className: "red-divider" }));
         });
 
-        /* Remove last divider */
-        if (container.lastChild.classList.contains("red-divider")) {
+        if (container.lastChild && container.lastChild.classList.contains("red-divider")) {
           container.lastChild.remove();
         }
-
       } catch (err) {
-        container.innerHTML = `<p>⚠️ Unable to load team members.</p>`;
+        container.innerHTML = "<p>Unable to load team members.</p>";
         console.error(err);
       }
     }

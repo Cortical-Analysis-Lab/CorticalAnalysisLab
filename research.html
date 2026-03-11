@@ -4,144 +4,100 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Research | Cortical Analysis Lab</title>
-
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-
-  <!-- Dynamic CSS Loader -->
-  <link rel="stylesheet" id="main-css" href="">
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("main-css").href =
-        "/assets/style.css?v=" + new Date().getTime();
-    });
-  </script>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/site.js"></script>
 </head>
 
 <body>
 
-  <!-- Shared Navigation -->
-  <div id="nav-placeholder"></div>
-  <script>
-    fetch("partials/nav.html")
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById("nav-placeholder").innerHTML = html;
+  <nav>
+    <a href="index.html" class="logo">Cortical Analysis Lab</a>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="publications.html">Lab Publications</a></li>
+      <li><a href="https://github.com/Cortical-Analysis-Lab/Neural_Signal_Simulation" target="_blank" rel="noopener noreferrer">GitHub Repositories</a></li>
+      <li><a href="collaborate.html">Collaborate</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-        // Enable navigation UI after injection
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navLinks = document.querySelector("nav ul");
-
-        if (menuToggle) {
-          menuToggle.addEventListener("click", () => {
-            navLinks.classList.toggle("show");
-          });
-        }
-
-        // Scroll shadow effect
-        window.addEventListener("scroll", () => {
-          const nav = document.querySelector("nav");
-          if (window.scrollY > 20) {
-            nav.classList.add("scrolled");
-          } else {
-            nav.classList.remove("scrolled");
-          }
-        });
-      })
-      .catch(err => console.error("Navigation load error:", err));
-  </script>
-
-
-  <!-- 🔬 Research Overview -->
   <header>
     <h1>Research Projects</h1>
     <p>
-    All projects are tailored to specific scientific queries and are run by undergraduate research assistants. 
+      All projects are tailored to specific scientific queries and are run by undergraduate research assistants.
     </p>
   </header>
 
-
-  <!-- 🧠 Section: Neural–Vascular Coupling -->
   <section>
     <h2>Simultaneous EEG, Optical Imaging, & Behavioral Assessments</h2>
     <div class="card">
-
       <p>
-        Using transgenic animals we are able to simultaneously capture and cross-correlate 
-        neural activity, vascular fluctuations, and behavioral output. This work enhances 
+        Using transgenic animals we are able to simultaneously capture and cross-correlate
+        neural activity, vascular fluctuations, and behavioral output. This work enhances
         our understanding of brain energy dynamics and informs translational models of neurological and psychiatric disorders.
       </p>
       <p>
         This tool is being developed as an open-source resource for the neuroscience community.
       </p>
 
-      <!-- 📸 Optional Mounted Setup Image -->
-
       <div style="text-align:center; margin-top: 1.5rem;">
-        <img src="assets/Optical_EEG_model.png"
-             alt="Mounted EEG-Optical Imaging Setup"
-             style="max-width: 90%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+        <img
+          src="assets/Optical_EEG_model.png"
+          alt="Mounted EEG-Optical Imaging Setup"
+          loading="lazy"
+          decoding="async"
+          style="max-width: 90%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
         <p style="font-size: 0.9rem; color:#555; margin-top: 0.5rem;">
           Mounted simultaneous EEG + optical imaging preparation.
         </p>
       </div>
-
-
     </div>
   </section>
 
-
-  <!-- 🧬 Section: In Utero Treatment -->
   <section>
     <h2>In Utero FASD Treatment</h2>
     <div class="card">
       <p>
-        This project aims to determine whether in utero pharmaceutical intervetion can mitigate 
-        the onset and development of fetal alcohol spectrum disorders (FASDs). 
+        This project aims to determine whether in utero pharmaceutical intervetion can mitigate
+        the onset and development of fetal alcohol spectrum disorders (FASDs).
       </p>
     </div>
   </section>
 
-
-  <!-- ⚡ Section: Blocking Alcohol’s Cognitive Impairment -->
   <section>
     <h2>Blocking Alcohol’s Cognitive & Behavioral Impairment</h2>
     <div class="card">
       <p>
-        This project aims to interrogate the role of AQP4 in the behavioral impariments associated with acute alcohol exposure. 
+        This project aims to interrogate the role of AQP4 in the behavioral impariments associated with acute alcohol exposure.
       </p>
     </div>
   </section>
 
-
-  <!-- 💡 Section: Educational BCI Tool -->
   <section>
     <h2>Side Quest: An Educational Tool to Teach Students About BCIs</h2>
     <div class="card">
       <p>
-        Brain–computer interfaces are rapidly advancing the field of neuroscience. 
-        This project brings that technology into the classroom through non-invasive 
-        EEG and EMG experiments, enabling students to develop hands-on skills in 
+        Brain-computer interfaces are rapidly advancing the field of neuroscience.
+        This project brings that technology into the classroom through non-invasive
+        EEG and EMG experiments, enabling students to develop hands-on skills in
         designing and running BCI protocols.
       </p>
 
       <p>
-        This tool is being developed as an open-source resource for the neuroscience 
+        This tool is being developed as an open-source resource for the neuroscience
         and STEM-education communities.
       </p>
     </div>
   </section>
 
-
-  <!-- 📬 Footer -->
   <footer>
     © <span id="year"></span> Cortical Analysis Lab | Sacred Heart University
   </footer>
-
-  <script>
-    // Update year automatically
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 
 </body>
 </html>
