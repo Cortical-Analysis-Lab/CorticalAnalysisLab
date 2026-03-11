@@ -241,6 +241,13 @@ header h1 {
   height: auto;
 }
 
+@media (max-width: 768px) {
+  .hero-graphic img {
+    width: 100%;
+    max-width: none;
+  }
+}
+
 /* ======================================================
    📄 CONTENT SECTIONS
    ====================================================== */
