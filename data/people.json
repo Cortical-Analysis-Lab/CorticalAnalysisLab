@@ -5,7 +5,16 @@
     "bio": "Leads the Cortical Analysis Lab fostering a supportive enivronment for both research and mentorship.",
     "image": "assets/Headshot.png"
   },
-  
+    {
+    "name": "Elizabeth Lee",
+    "role": "High School Research Assistant",
+    "year": [2026]
+  },
+    {
+    "name": "Gisselle Bauer",
+    "role": "High School Research Assistant",
+    "year": [2026]
+  },
   {
     "name": "Natalie Aiello",
     "major": "Neuroscience",
