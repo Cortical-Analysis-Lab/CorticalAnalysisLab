@@ -3,24 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Cortical Analysis Lab at Sacred Heart University studies cortical dynamics, neurovascular coupling, and behavior using optical imaging, EEG, and computational analysis.">
   <title>Cortical Analysis Lab | Sacred Heart University</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-  <script defer src="assets/site.js"></script>
+  <script defer src="assets/site.js?v=4"></script>
 </head>
 
 <body>
 
   <nav>
     <a href="index.html" class="logo">Cortical Analysis Lab</a>
-    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-    <ul>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
+    <ul id="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="research.html">Research</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html">Dr. James</a></li>
       <li><a href="people.html">People</a></li>
       <li><a href="publications.html">Lab Publications</a></li>
-      <li><a href="https://github.com/Cortical-Analysis-Lab/NGVU_Simulation" target="_blank" rel="noopener noreferrer">GitHub Repositories</a></li>
+      <li><a href="https://github.com/Cortical-Analysis-Lab/NGVU_Simulation" target="_blank" rel="noopener noreferrer">NGVU Sim</a></li>
       <li><a href="collaborate.html">Collaborate</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -37,7 +38,7 @@
 
       <div class="hero-graphic">
         <img
-          src="assets/ROSEBUD_Graphical_Abstract.png"
+          src="assets/ROSEBUD_Graphical_Abstract.webp"
           alt="Cortical Analysis Lab Graphical Abstract"
           decoding="async"
           fetchpriority="high">
@@ -47,11 +48,35 @@
 
   <section>
     <h2>Recent Highlights</h2>
-    <div class="card">
-      <p>
-        We are currently testing the first ever simultaneous multimodal EEG-optical imaging integration that enables real-time analysis of whole-cortex neurovascular activty
-        during behavior.
-      </p>
+    <div class="highlights-carousel" aria-label="Recent lab highlights">
+      <div class="highlights-track">
+        <article class="card highlight-slide">
+          <h3>AQP4 Project</h3>
+          <p>
+            Our recently submitted study examined whether AQP4 inhibition protects against acute alcohol-induced behavioral impairment.
+          </p>
+        </article>
+
+        <article class="card highlight-slide">
+          <h3>NGVU Virtual Lab</h3>
+          <p>
+            An ongoing project developing an interactive virtual laboratory for exploring integrated neurophysiology.
+          </p>
+        </article>
+
+        <article class="card highlight-slide">
+          <h3>ROSEBUD Project</h3>
+          <p>
+            An ongoing project combining optical imaging, EEG, and behavior to study brain dynamics in freely moving animals.
+          </p>
+        </article>
+      </div>
+
+      <div class="carousel-controls">
+        <button class="carousel-button carousel-previous" type="button" aria-label="Show previous highlight">←</button>
+        <div class="carousel-dots" aria-label="Choose a highlight"></div>
+        <button class="carousel-button carousel-next" type="button" aria-label="Show next highlight">→</button>
+      </div>
     </div>
   </section>
 

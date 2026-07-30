@@ -6,7 +6,7 @@
   <title>Lab Publications | Cortical Analysis Lab</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-  <script defer src="assets/site.js"></script>
+  <script defer src="assets/site.js?v=4"></script>
 
   <style>
     .pub-list, .abs-list {
@@ -77,9 +77,19 @@
       top: 12px;
       right: 18px;
       font-size: 2rem;
+      line-height: 1;
       cursor: pointer;
       color: #333;
+      background: transparent;
+      border: none;
+      padding: 0.2rem;
       z-index: 10;
+    }
+
+    #closePoster:hover {
+      background: transparent;
+      color: var(--red);
+      transform: none;
     }
 
     .poster-thumb {
@@ -104,14 +114,14 @@
 
   <nav>
     <a href="index.html" class="logo">Cortical Analysis Lab</a>
-    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-    <ul>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
+    <ul id="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="research.html">Research</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html">Dr. James</a></li>
       <li><a href="people.html">People</a></li>
       <li><a href="publications.html">Lab Publications</a></li>
-      <li><a href="https://github.com/Cortical-Analysis-Lab/NGVU_Simulation" target="_blank" rel="noopener noreferrer">GitHub Repositories</a></li>
+      <li><a href="https://github.com/Cortical-Analysis-Lab/NGVU_Simulation" target="_blank" rel="noopener noreferrer">NGVU Sim</a></li>
       <li><a href="collaborate.html">Collaborate</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -131,12 +141,6 @@
       <p><em>Section under construction - stay tuned for upcoming manuscripts and analyses.</em></p>
     </div>
 
-    <div class="significance-blurb">
-      <strong>Significance:</strong>
-      TBD
-    </div>
-
-    <div class="pub-list" id="lab-pub-list"></div>
   </section>
 
   <section>
@@ -146,7 +150,7 @@
 
   <div id="posterModal">
     <div id="posterModalContent">
-      <span id="closePoster">&times;</span>
+      <button id="closePoster" type="button" aria-label="Close poster">&times;</button>
       <iframe id="posterFrame"></iframe>
     </div>
   </div>
@@ -158,52 +162,11 @@
   <script>
     const isSmallScreen = () => window.matchMedia("(max-width: 768px)").matches;
 
-    async function loadPublications() {
-      const container = document.getElementById("lab-pub-list");
-
-      try {
-        const response = await fetch("data/publications.json");
-        if (!response.ok) {
-          throw new Error("Publication fetch failed");
-        }
-
-        const publications = await response.json();
-        container.innerHTML = "";
-
-        publications.forEach((publication) => {
-          const item = document.createElement("div");
-          item.className = "pub-item";
-
-          const title = publication.title || "Untitled";
-          const journal = publication.journal || "—";
-          const year = publication.year || "—";
-
-          item.innerHTML = `<h3>${title}</h3><p><em>${journal}</em> (${year})</p>`;
-
-          if (publication.doi) {
-            const link = document.createElement("p");
-            const anchor = document.createElement("a");
-            anchor.href = `https://doi.org/${publication.doi}`;
-            anchor.target = "_blank";
-            anchor.rel = "noopener noreferrer";
-            anchor.textContent = "View Article →";
-            link.appendChild(anchor);
-            item.appendChild(link);
-          }
-
-          container.appendChild(item);
-        });
-      } catch (err) {
-        container.innerHTML = "<p>Unable to load publications.</p>";
-        console.error(err);
-      }
-    }
-
     const posters = [
       {
         title: "SFN 2025 - Multimodal EEG-Optical Integration",
         thumb: null,
-        pdf: "/assets/SFN_2025_Poster.pdf"
+        pdf: "assets/SFN_2025_Poster.pdf"
       }
     ];
 
@@ -238,19 +201,25 @@
       document.getElementById("posterModal").style.display = "flex";
     }
 
-    document.getElementById("closePoster").addEventListener("click", () => {
+    function closePosterModal() {
       document.getElementById("posterModal").style.display = "none";
       document.getElementById("posterFrame").src = "";
-    });
+    }
+
+    document.getElementById("closePoster").addEventListener("click", closePosterModal);
 
     window.addEventListener("click", (event) => {
       if (event.target.id === "posterModal") {
-        document.getElementById("posterModal").style.display = "none";
-        document.getElementById("posterFrame").src = "";
+        closePosterModal();
       }
     });
 
-    loadPublications();
+    window.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && document.getElementById("posterModal").style.display === "flex") {
+        closePosterModal();
+      }
+    });
+
     loadPosters();
   </script>
 

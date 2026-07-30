@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Dr. James | Cortical Analysis Lab</title>
+  <title>Dr. James | Cortical Analysis Lab</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-  <script defer src="assets/site.js"></script>
+  <script defer src="assets/site.js?v=4"></script>
 
   <style>
     .about-container {
@@ -36,6 +36,17 @@
       margin-bottom: 1rem;
     }
 
+    .about-card ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-card li {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: #333;
+    }
+
     .pub-list {
       display: flex;
       flex-direction: column;
@@ -63,14 +74,14 @@
 
   <nav>
     <a href="index.html" class="logo">Cortical Analysis Lab</a>
-    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-    <ul>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
+    <ul id="nav-menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="research.html">Research</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html">Dr. James</a></li>
       <li><a href="people.html">People</a></li>
       <li><a href="publications.html">Lab Publications</a></li>
-      <li><a href="https://github.com/Cortical-Analysis-Lab/NGVU_Simulation" target="_blank" rel="noopener noreferrer">GitHub Repositories</a></li>
+      <li><a href="https://github.com/Cortical-Analysis-Lab/NGVU_Simulation" target="_blank" rel="noopener noreferrer">NGVU Sim</a></li>
       <li><a href="collaborate.html">Collaborate</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -101,17 +112,23 @@
 
     <div class="about-card">
       <h2>Courses Taught at SHU</h2>
-      <p>• Neuroscience & Society</p>
-      <p>• Behavioral Neuroscience</p>
-      <p>• Essentials of Neuroscience</p>
-      <p>• Introduction to Psychology</p>
+      <ul>
+        <li>Neuroscience & Society</li>
+        <li>Behavioral Neuroscience</li>
+        <li>Essentials of Neuroscience</li>
+        <li>Introduction to Psychology</li>
+      </ul>
 
       <h2>Courses Taught at Yale</h2>
-      <p>• Neuroanatomy Lab</p>
+      <ul>
+        <li>Neuroanatomy Lab</li>
+      </ul>
 
       <h2>Courses Taught at UConn</h2>
-      <p>• Anatomy & Physiology I Lab</p>
-      <p>• Anatomy & Physiology II Lab</p>
+      <ul>
+        <li>Anatomy & Physiology I Lab</li>
+        <li>Anatomy & Physiology II Lab</li>
+      </ul>
     </div>
 
     <h2>Publications</h2>

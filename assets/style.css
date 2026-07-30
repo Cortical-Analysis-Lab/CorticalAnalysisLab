@@ -36,7 +36,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url("../assets/Lab%20Website%20Background.png");
+  background-image: url("../assets/Lab%20Website%20Background.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -123,6 +123,10 @@ nav ul li a:hover {
   color: var(--red) !important;
 }
 
+nav ul li a[aria-current="page"] {
+  color: var(--red) !important;
+}
+
 nav ul li a::after {
   content: "";
   position: absolute;
@@ -135,6 +139,10 @@ nav ul li a::after {
 }
 
 nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a[aria-current="page"]::after {
   width: 100%;
 }
 
@@ -256,6 +264,63 @@ section {
   max-width: 900px;
   margin: 4rem auto;
   padding: 0 2rem;
+}
+
+/* Recent highlights carousel */
+.highlights-carousel {
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.highlights-track {
+  display: flex;
+  transition: transform 0.45s ease;
+}
+
+.highlight-slide {
+  flex: 0 0 100%;
+  margin-bottom: 0;
+}
+
+.highlight-slide h3 {
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.carousel-button {
+  min-width: 2.75rem;
+  padding: 0.55rem 0.8rem !important;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.carousel-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  background: #bbb !important;
+}
+
+.carousel-dot[aria-current="true"] {
+  background: var(--red) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .highlights-track {
+    transition: none;
+  }
 }
 
 /* ======================================================
