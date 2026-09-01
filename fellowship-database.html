@@ -8,9 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/fellowship-database.css">
-  <link rel="stylesheet" href="assets/fellowship-results.css?v=10">
+  <link rel="stylesheet" href="assets/fellowship-results.css?v=12">
   <script defer src="assets/site.js?v=4"></script>
-  <script defer src="assets/fellowship-questionnaire.js?v=7"></script>
+  <script defer src="assets/fellowship-questionnaire.js?v=8"></script>
 </head>
 <body>
   <nav>
@@ -100,6 +100,11 @@
     <section id="eligibility-results" class="eligibility-results" aria-labelledby="results-heading" hidden>
       <div class="results-heading-row">
         <div><p class="step-label">Step 2 of 2</p><h2 id="results-heading">Available Opportunities</h2></div>
+        <div class="catalog-summary" aria-label="Catalog summary">
+          <div><strong id="summary-programs">—</strong><span>Programs</span></div>
+          <div><strong id="summary-institutions">—</strong><span>Institutions</span></div>
+          <div><strong id="summary-topics">—</strong><span>Topics</span></div>
+        </div>
         <button id="edit-answers" class="secondary-action" type="button">Go Back</button>
       </div>
       <p id="results-explanation" class="results-explanation"></p>
@@ -109,9 +114,6 @@
           <p class="filter-kicker">Preferences</p>
           <h3 id="preference-heading">Refine results</h3>
           <p class="filter-explanation">These choices do not affect whether you can apply.</p>
-          <label class="filter-field">Keyword
-            <input id="filter-keyword" type="search" placeholder="Program, institution, topic…">
-          </label>
           <label class="filter-field">Research area
             <select id="filter-category"><option value="">All research areas</option></select>
           </label>
@@ -129,6 +131,7 @@
         <div class="opportunity-browser">
           <div class="opportunity-toolbar">
             <div><h3>Matching opportunities</h3><p id="filtered-result-count"></p></div>
+            <label class="results-search"><span class="visually-hidden">Search opportunities</span><input id="filter-keyword" type="search" placeholder="Search programs, institutions, locations, or topics…"><span class="search-icon" aria-hidden="true">⌕</span></label>
             <label class="sort-control"><span class="visually-hidden">Sort opportunities</span><select id="sort-results"><option value="name">Program name</option><option value="deadline">Deadline</option><option value="stipend">Highest stipend</option><option value="location">Location</option></select></label>
           </div>
           <div id="opportunity-results" class="opportunity-results"></div>

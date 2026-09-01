@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!response.ok) throw new Error(`Catalog request failed (${response.status})`);
     const payload = await response.json();
     opportunities = payload.opportunities || [];
+    document.getElementById("summary-programs").textContent = opportunities.length;
+    document.getElementById("summary-institutions").textContent = new Set(opportunities.map(opportunity => opportunity.institution?.institution_id).filter(Boolean)).size;
+    document.getElementById("summary-topics").textContent = new Set(opportunities.flatMap(opportunity => (opportunity.tags || []).map(tag => tag.tag_id))).size;
     const categories = new Map(opportunities.flatMap(opportunity => opportunity.categories || []).map(category => [category.category_slug, category.category_name]));
     [...categories].sort((a, b) => a[1].localeCompare(b[1])).forEach(([value, label]) => document.getElementById("filter-category").add(new Option(label, value)));
     const states = [...new Set(opportunities.map(opportunity => opportunity.institution?.state_code).filter(Boolean))].sort();
