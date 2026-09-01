@@ -8,9 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/fellowship-database.css">
-  <link rel="stylesheet" href="assets/fellowship-results.css?v=4">
+  <link rel="stylesheet" href="assets/fellowship-results.css?v=5">
   <script defer src="assets/site.js?v=4"></script>
-  <script defer src="assets/fellowship-questionnaire.js?v=5"></script>
+  <script defer src="assets/fellowship-questionnaire.js?v=6"></script>
 </head>
 <body>
   <nav>
@@ -58,8 +58,8 @@
               <label><input type="radio" name="classYear" value="senior"> Senior, not graduating before summer</label>
               <label><input type="radio" name="classYear" value="graduating_senior"> Graduating before the program begins</label>
             </div></div>
-            <label class="question-field">Current cumulative GPA
-              <input name="gpa" type="number" min="0" max="4.5" step="0.01" inputmode="decimal" placeholder="For example, 3.25" required>
+            <label class="question-field">Current cumulative GPA <span class="optional-label">Optional</span>
+              <input name="gpa" type="text" inputmode="decimal" autocomplete="off" placeholder="For example, 3.25">
             </label>
             <div class="question-field radio-question" role="group" aria-label="Current enrollment"><p>Are you currently enrolled?</p><div class="radio-options compact-options">
               <label><input type="radio" name="enrolled" value="yes" required> Yes</label><label><input type="radio" name="enrolled" value="no"> No</label>

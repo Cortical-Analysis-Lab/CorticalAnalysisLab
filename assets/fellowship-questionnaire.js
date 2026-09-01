@@ -74,7 +74,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (rule.external_applicants_status === "no") conflicts.push("External applicants are not accepted.");
     else if (["unknown", "limited"].includes(rule.external_applicants_status)) unknowns.push("External-applicant rules need review.");
 
-    if (rule.min_gpa !== null && Number(answerValue(answers, "gpa")) < Number(rule.min_gpa)) conflicts.push(`Minimum GPA is ${rule.min_gpa.toFixed(2)}.`);
+    const suppliedGpa = answerValue(answers, "gpa").trim();
+    if (suppliedGpa && !Number.isFinite(Number(suppliedGpa))) unknowns.push("GPA could not be evaluated.");
+    if (suppliedGpa && Number.isFinite(Number(suppliedGpa)) && rule.min_gpa !== null && Number(suppliedGpa) < Number(rule.min_gpa)) conflicts.push(`Minimum GPA is ${rule.min_gpa.toFixed(2)}.`);
+    if (!suppliedGpa) unknowns.push("GPA eligibility was not evaluated.");
     if (rule.min_gpa === null) unknowns.push("Minimum GPA is N/A.");
 
     if (yearField && rule[yearField] === 0) conflicts.push("Your class standing is not eligible.");
