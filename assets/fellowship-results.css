@@ -1,0 +1,79 @@
+.explorer-layout {
+  display: grid;
+  grid-template-columns: 245px minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.preference-filters {
+  background: #f2eeee;
+  border: 1px solid rgba(34, 34, 34, 0.08);
+  border-radius: 14px;
+  padding: 1.25rem;
+  position: sticky;
+  top: 90px;
+}
+
+.preference-filters h3 { font-size: 1.25rem; margin: 0.15rem 0; }
+.filter-kicker { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); }
+.filter-explanation { font-size: 0.75rem; color: var(--gray); margin-bottom: 1.25rem; }
+.filter-field { display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.76rem; font-weight: 700; margin-bottom: 1rem; }
+.filter-field input, .filter-field select, .sort-control select { width: 100%; min-height: 42px; border: 1px solid #c9c1c3; border-radius: 8px; background: #fff; padding: 0.55rem; color: var(--text); font: inherit; font-size: 0.82rem; }
+.filter-group { display: grid; gap: 0.55rem; margin: 1.2rem 0; font-size: 0.78rem; }
+.filter-group > span { font-weight: 700; }
+.filter-check { display: flex; gap: 0.5rem; align-items: center; font-weight: 400; }
+.filter-check input { accent-color: var(--red); }
+.clear-filters { border: 0; background: none; color: var(--red); font: inherit; font-size: 0.76rem; text-decoration: underline; cursor: pointer; padding: 0; }
+.opportunity-toolbar { display: flex; justify-content: space-between; align-items: end; gap: 1rem; margin-bottom: 1rem; }
+.opportunity-toolbar h3 { font-size: 1.35rem; }
+.opportunity-toolbar p { font-size: 0.8rem; color: var(--gray); }
+.sort-control select { min-width: 150px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+.opportunity-results {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.eligibility-card {
+  background: #fff;
+  border: 1px solid rgba(34, 34, 34, 0.1);
+  border-radius: 14px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  box-shadow: 0 5px 20px rgba(47, 31, 36, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.eligibility-card:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(47, 31, 36, 0.1); }
+.card-status-row { display: flex; justify-content: space-between; gap: 0.5rem; align-items: start; }
+.eligibility-card h3 { font-size: 1.08rem; line-height: 1.3; margin: 1rem 0 0.3rem; }
+.eligibility-card .institution-line { font-size: 0.82rem; color: var(--gray); margin: 0; }
+.eligibility-status { align-self: auto; font-size: 0.7rem; font-weight: 700; border-radius: 999px; padding: 0.3rem 0.55rem; white-space: nowrap; }
+.cycle-status { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; color: var(--gray); }
+.program-details { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin: 1rem 0; padding: 1rem 0; border-block: 1px solid #eee8e9; font-size: 0.78rem; }
+.program-details dt { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray); font-weight: 700; }
+.program-details dd { margin: 0; }
+.program-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1rem; }
+.meta-chip { font-size: 0.68rem; background: #f1eeee; padding: 0.28rem 0.48rem; border-radius: 5px; }
+.reason-list { grid-column: auto; margin: 0 0 1rem 1rem; font-size: 0.75rem; color: var(--gray); }
+.card-actions { display: flex; justify-content: space-between; align-items: center; gap: 0.8rem; margin-top: auto; }
+.program-link { color: var(--red); font-size: 0.78rem; font-weight: 700; text-decoration: none; }
+.program-link:hover { text-decoration: underline; }
+.verification-date { font-size: 0.65rem; color: var(--gray); }
+.empty-results { grid-column: 1 / -1; background: #fff; border-radius: 14px; padding: 3rem 1.5rem; text-align: center; color: var(--gray); }
+
+@media (max-width: 900px) {
+  .explorer-layout { grid-template-columns: 1fr; }
+  .preference-filters { position: static; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 1rem; }
+  .preference-filters h3, .filter-kicker, .filter-explanation, .filter-group, .clear-filters { grid-column: 1 / -1; }
+}
+
+@media (max-width: 720px) {
+  .opportunity-results, .preference-filters { grid-template-columns: 1fr; }
+  .opportunity-toolbar { align-items: start; flex-direction: column; }
+  .sort-control, .sort-control select { width: 100%; }
+}

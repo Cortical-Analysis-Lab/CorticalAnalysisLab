@@ -8,8 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/fellowship-database.css">
+  <link rel="stylesheet" href="assets/fellowship-results.css">
   <script defer src="assets/site.js?v=4"></script>
-  <script defer src="assets/fellowship-questionnaire.js"></script>
+  <script defer src="assets/fellowship-questionnaire.js?v=2"></script>
 </head>
 <body>
   <nav>
@@ -103,7 +104,7 @@
     <section id="eligibility-results" class="eligibility-results" aria-labelledby="results-heading" hidden>
       <div class="results-heading-row">
         <div><p class="step-label">Step 2 of 2</p><h2 id="results-heading">Your eligibility results</h2></div>
-        <button id="edit-answers" class="secondary-action" type="button">Edit answers</button>
+        <button id="edit-answers" class="secondary-action" type="button">Go Back</button>
       </div>
       <p id="results-explanation" class="results-explanation"></p>
       <div class="result-summary" aria-live="polite">
@@ -112,7 +113,42 @@
         <div class="summary-card ineligible"><strong id="ineligible-count">0</strong><span>Likely ineligible</span></div>
       </div>
       <div class="result-legend"><span><i class="status-dot eligible"></i> No known rule conflicts</span><span><i class="status-dot review"></i> Official requirements are incomplete</span><span><i class="status-dot ineligible"></i> At least one known hard rule conflicts</span></div>
-      <div id="opportunity-results" class="opportunity-results"></div>
+      <div class="explorer-layout">
+        <aside class="preference-filters" aria-labelledby="preference-heading">
+          <p class="filter-kicker">Preferences</p>
+          <h3 id="preference-heading">Refine results</h3>
+          <p class="filter-explanation">These choices do not affect whether you can apply.</p>
+          <label class="filter-field">Keyword
+            <input id="filter-keyword" type="search" placeholder="Program, institution, topic…">
+          </label>
+          <label class="filter-field">Research area
+            <select id="filter-category"><option value="">All research areas</option></select>
+          </label>
+          <label class="filter-field">State
+            <select id="filter-state"><option value="">All states</option></select>
+          </label>
+          <label class="filter-field">Eligibility result
+            <select id="filter-eligibility"><option value="eligible,review">Eligible + needs review</option><option value="eligible">Appears eligible only</option><option value="review">Needs review only</option><option value="ineligible">Likely ineligible</option><option value="eligible,review,ineligible">All results</option></select>
+          </label>
+          <label class="filter-field">Minimum total stipend
+            <select id="filter-stipend"><option value="">Any amount / N/A</option><option value="3000">$3,000+</option><option value="5000">$5,000+</option><option value="7000">$7,000+</option></select>
+          </label>
+          <div class="filter-group" aria-labelledby="support-filter-label">
+            <span id="support-filter-label">Program support</span>
+            <label class="filter-check"><input id="filter-housing" type="checkbox"> Housing included</label>
+            <label class="filter-check"><input id="filter-travel" type="checkbox"> Travel support</label>
+            <label class="filter-check"><input id="filter-open" type="checkbox"> Open or upcoming</label>
+          </div>
+          <button id="clear-filters" class="clear-filters" type="button">Clear preference filters</button>
+        </aside>
+        <div class="opportunity-browser">
+          <div class="opportunity-toolbar">
+            <div><h3>Matching opportunities</h3><p id="filtered-result-count"></p></div>
+            <label class="sort-control"><span class="visually-hidden">Sort opportunities</span><select id="sort-results"><option value="name">Program name</option><option value="deadline">Deadline</option><option value="stipend">Highest stipend</option><option value="location">Location</option></select></label>
+          </div>
+          <div id="opportunity-results" class="opportunity-results"></div>
+        </div>
+      </div>
     </section>
   </main>
 

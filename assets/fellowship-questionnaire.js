@@ -5,12 +5,17 @@ document.addEventListener("DOMContentLoaded", async () => {
   const resultsPanel = document.getElementById("eligibility-results");
   const resultContainer = document.getElementById("opportunity-results");
   let opportunities = [];
+  let evaluatedResults = [];
 
   try {
     const response = await fetch("data/summer-research/catalog.json");
     if (!response.ok) throw new Error(`Catalog request failed (${response.status})`);
     const payload = await response.json();
     opportunities = payload.opportunities || [];
+    const categories = new Map(opportunities.flatMap(opportunity => opportunity.categories || []).map(category => [category.category_slug, category.category_name]));
+    [...categories].sort((a, b) => a[1].localeCompare(b[1])).forEach(([value, label]) => document.getElementById("filter-category").add(new Option(label, value)));
+    const states = [...new Set(opportunities.map(opportunity => opportunity.institution?.state_code).filter(Boolean))].sort();
+    states.forEach(state => document.getElementById("filter-state").add(new Option(state, state)));
     status.hidden = true;
     panel.hidden = false;
   } catch (error) {
@@ -31,6 +36,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const answerValue = (data, name) => data.get(name);
   const display = value => value === null || value === undefined || value === "" || value === "unknown" ? "N/A" : value;
   const dateDisplay = value => value ? new Date(`${value}T00:00:00`).toLocaleDateString("en-US", {month: "short", day: "numeric", year: "numeric"}) : "N/A";
+  const moneyDisplay = value => value === null || value === undefined ? "N/A" : new Intl.NumberFormat("en-US", {style: "currency", currency: "USD", maximumFractionDigits: 0}).format(value);
   const escapeHtml = value => String(value ?? "").replace(/[&<>"']/g, character => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"})[character]);
 
   function evaluate(opportunity, answers) {
@@ -77,26 +83,67 @@ document.addEventListener("DOMContentLoaded", async () => {
     const cycle = opportunity.cycles?.[0] || {};
     const institution = opportunity.institution || {};
     const stateLabels = {eligible: "Appears eligible", review: "Needs review", ineligible: "Likely ineligible"};
+    const location = [institution.city, institution.state_code].filter(Boolean).join(", ") || "N/A";
+    const tags = (opportunity.tags || []).slice(0, 4);
     return `<article class="eligibility-card">
-      <div><h3>${escapeHtml(opportunity.program_name)}</h3><p>${escapeHtml(institution.institution_name)} · ${escapeHtml([institution.city, institution.state_code].filter(Boolean).join(", ") || "N/A")}</p>
-      <div class="program-meta"><span class="meta-chip">Deadline: ${escapeHtml(dateDisplay(cycle.application_deadline))}</span><span class="meta-chip">Minimum GPA: ${escapeHtml(display(cycle.eligibility?.min_gpa))}</span><span class="meta-chip">Cycle: ${escapeHtml(display(cycle.cycle_year))}</span></div></div>
-      <span class="eligibility-status ${evaluation.state}">${stateLabels[evaluation.state]}</span>
+      <div class="card-status-row"><span class="eligibility-status ${evaluation.state}">${stateLabels[evaluation.state]}</span><span class="cycle-status">${escapeHtml(display(cycle.status_code))}</span></div>
+      <h3>${escapeHtml(opportunity.program_name)}</h3><p class="institution-line">${escapeHtml(institution.institution_name)} · ${escapeHtml(location)}</p>
+      <dl class="program-details"><div><dt>Deadline</dt><dd>${escapeHtml(dateDisplay(cycle.application_deadline))}</dd></div><div><dt>Stipend</dt><dd>${escapeHtml(moneyDisplay(cycle.stipend_total_usd))}</dd></div><div><dt>Duration</dt><dd>${cycle.duration_weeks === null || cycle.duration_weeks === undefined ? "N/A" : `${escapeHtml(cycle.duration_weeks)} weeks`}</dd></div><div><dt>Housing</dt><dd>${escapeHtml(display(cycle.housing_status))}</dd></div></dl>
+      <div class="program-tags">${tags.map(tag => `<span class="meta-chip">${escapeHtml(tag.tag_name)}</span>`).join("")}</div>
       <ul class="reason-list">${evaluation.reasons.slice(0, 3).map(reason => `<li>${escapeHtml(reason)}</li>`).join("")}</ul>
+      <div class="card-actions"><a class="program-link" href="${escapeHtml(opportunity.program_url)}" target="_blank" rel="noopener">View program →</a><span class="verification-date">Verified ${escapeHtml(display(cycle.last_verified))}</span></div>
     </article>`;
+  }
+
+  const filterIds = ["filter-keyword", "filter-category", "filter-state", "filter-eligibility", "filter-stipend", "filter-housing", "filter-travel", "filter-open", "sort-results"];
+
+  function renderResults() {
+    const keyword = document.getElementById("filter-keyword").value.trim().toLowerCase();
+    const category = document.getElementById("filter-category").value;
+    const state = document.getElementById("filter-state").value;
+    const allowedEligibility = new Set(document.getElementById("filter-eligibility").value.split(","));
+    const minimumStipend = Number(document.getElementById("filter-stipend").value || 0);
+    const housing = document.getElementById("filter-housing").checked;
+    const travel = document.getElementById("filter-travel").checked;
+    const open = document.getElementById("filter-open").checked;
+    const sort = document.getElementById("sort-results").value;
+
+    const filtered = evaluatedResults.filter(({opportunity, evaluation}) => {
+      const cycle = opportunity.cycles?.[0] || {};
+      const haystack = [opportunity.program_name, opportunity.institution?.institution_name, opportunity.institution?.city, opportunity.institution?.state_code, ...(opportunity.tags || []).map(tag => tag.tag_name)].join(" ").toLowerCase();
+      return allowedEligibility.has(evaluation.state)
+        && (!keyword || haystack.includes(keyword))
+        && (!category || (opportunity.categories || []).some(item => item.category_slug === category))
+        && (!state || opportunity.institution?.state_code === state)
+        && (!minimumStipend || Number(cycle.stipend_total_usd || 0) >= minimumStipend)
+        && (!housing || cycle.housing_status === "yes")
+        && (!travel || ["yes", "allowance"].includes(cycle.travel_status))
+        && (!open || ["open", "upcoming"].includes(cycle.status_code));
+    });
+
+    filtered.sort((a, b) => {
+      const aCycle = a.opportunity.cycles?.[0] || {};
+      const bCycle = b.opportunity.cycles?.[0] || {};
+      if (sort === "deadline") return (aCycle.application_deadline || "9999").localeCompare(bCycle.application_deadline || "9999");
+      if (sort === "stipend") return Number(bCycle.stipend_total_usd || -1) - Number(aCycle.stipend_total_usd || -1);
+      if (sort === "location") return (a.opportunity.institution?.state_code || "ZZ").localeCompare(b.opportunity.institution?.state_code || "ZZ");
+      return a.opportunity.program_name.localeCompare(b.opportunity.program_name);
+    });
+
+    document.getElementById("filtered-result-count").textContent = `Showing ${filtered.length} of ${evaluatedResults.length} programs`;
+    resultContainer.innerHTML = filtered.length ? filtered.map(card).join("") : `<div class="empty-results">No opportunities match these preference filters. Try clearing one or more filters.</div>`;
   }
 
   form.addEventListener("submit", event => {
     event.preventDefault();
     if (!form.reportValidity()) return;
     const answers = new FormData(form);
-    const evaluated = opportunities.map(opportunity => ({opportunity, evaluation: evaluate(opportunity, answers)}));
-    const order = {eligible: 0, review: 1, ineligible: 2};
-    evaluated.sort((a, b) => order[a.evaluation.state] - order[b.evaluation.state] || a.opportunity.program_name.localeCompare(b.opportunity.program_name));
+    evaluatedResults = opportunities.map(opportunity => ({opportunity, evaluation: evaluate(opportunity, answers)}));
     ["eligible", "review", "ineligible"].forEach(stateName => {
-      document.getElementById(`${stateName}-count`).textContent = evaluated.filter(item => item.evaluation.state === stateName).length;
+      document.getElementById(`${stateName}-count`).textContent = evaluatedResults.filter(item => item.evaluation.state === stateName).length;
     });
     document.getElementById("results-explanation").textContent = "Programs with incomplete official requirements remain in “Need review.” N/A means the catalog does not yet contain a verified value.";
-    resultContainer.innerHTML = evaluated.slice(0, 15).map(card).join("") + (evaluated.length > 15 ? `<p class="results-note">Showing the first 15 results. The synchronized map and complete preference-filtered list are the next product phase.</p>` : "");
+    renderResults();
     panel.hidden = true;
     resultsPanel.hidden = false;
     resultsPanel.scrollIntoView({behavior: "smooth", block: "start"});
@@ -111,5 +158,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("clear-questionnaire").addEventListener("click", () => {
     resultsPanel.hidden = true;
     resultContainer.innerHTML = "";
+  });
+
+  filterIds.forEach(id => document.getElementById(id).addEventListener(id === "filter-keyword" ? "input" : "change", renderResults));
+  document.getElementById("clear-filters").addEventListener("click", () => {
+    ["filter-keyword", "filter-category", "filter-state", "filter-stipend"].forEach(id => { document.getElementById(id).value = ""; });
+    document.getElementById("filter-eligibility").value = "eligible,review";
+    ["filter-housing", "filter-travel", "filter-open"].forEach(id => { document.getElementById(id).checked = false; });
+    document.getElementById("sort-results").value = "name";
+    renderResults();
   });
 });
