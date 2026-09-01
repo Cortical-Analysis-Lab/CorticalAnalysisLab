@@ -10,6 +10,7 @@ SQLite is the canonical store. Files under `data/summer-research/` are generated
 - **Eligibility rule**: cycle-specific hard eligibility. Nullable Boolean fields mean “not established,” not “no.” The original rule text is always retained.
 - **Category**: broad, controlled subject grouping used for filters.
 - **Tag**: narrower research topic, method, mode, audience, or program characteristic.
+- **Research mode**: controlled, many-to-many methodology values such as wet lab, computational, field, or clinical. Modes are assigned only when the seed or a reviewed source states them explicitly.
 - **Source verification**: which source supported which fields, when it was checked, and whether conflicts existed.
 
 ## Unknown-value policy
@@ -28,6 +29,10 @@ Missing or ambiguous information is stored as `NULL` in typed fields and preserv
 | `status_text` | Full official/imported wording; authoritative when the code is insufficient. |
 | `*_status` benefit fields | Controlled value such as `yes`, `no`, `partial`, `allowance`, `assistance`, `local`, `varies`, or `unknown`. |
 | `parse_status` | Whether eligibility text has received explicit structured review. Seed rows remain `needs_review` unless a rule can be copied without interpretation. |
+| `raw_eligibility_text` | Lossless combined seed wording used while structured eligibility fields await review. |
+| `prior_research_status` | Controlled hard-rule state: `required`, `preferred`, `not_required`, or `unknown`. |
+| `program_cycles.application_url` | Cycle-specific application destination; historical cycles retain their own URL. |
+| `research_modes.mode_code` | Controlled preference/filter vocabulary; absent assignments mean unknown, not “no.” |
 | `fields_supported` | JSON array of field names supported by that source. |
 | `evidence_hash` | Reserved for a future content snapshot hash from the verification pipeline. |
 

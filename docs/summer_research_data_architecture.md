@@ -14,7 +14,7 @@ The current pages and existing `data/people.json` and `data/publications.json` r
 
 ## Normalization choices
 
-Institutions and stable opportunities are independent of annual cycles. Dates, deadlines, status, compensation, benefits, hard eligibility, and verification are cycle-specific. Broad categories and narrower tags use many-to-many links. Sources are deduplicated by URL, while verification events retain check date, supported fields, conflict status, and future evidence hashes.
+Institutions and stable opportunities are independent of annual cycles. Dates, deadlines, application URLs, status, compensation, benefits, hard eligibility, and verification are cycle-specific. Broad categories, narrower tags, and controlled research modes use many-to-many links. Sources are deduplicated by URL, while verification events retain check date, supported fields, conflict status, and future evidence hashes.
 
 The starter's original row is retained as JSON with its import-run hash. This makes later corrections auditable and prevents normalization from destroying source wording.
 
@@ -22,7 +22,7 @@ The starter's original row is retained as JSON with its import-run hash. This ma
 
 GitHub Pages reads static JSON only; it does not open SQLite in the browser. `catalog.json` is the convenient denormalized payload. Normalized JSON files are also exported for smaller or specialized loads.
 
-Eligibility fields are nullable. A future evaluator must return three outcomes: `eligible`, `ineligible`, or `unknown/review needed`. Unknown must never be treated as false. Preference filters operate separately from hard eligibility.
+Eligibility fields are nullable. A future evaluator must return three outcomes: `eligible`, `ineligible`, or `unknown/review needed`. Unknown must never be treated as false. Preference filters—including research mode—operate separately from hard eligibility.
 
 ## Update workflow
 
@@ -48,6 +48,8 @@ The validator treats missing deadlines, stipends, durations, and unparsed eligib
 Use a staged pipeline: discovery → extraction → verification → classification → deduplication → reviewed update. Agents should emit candidate rows and source evidence into staging. They should not write public JSON or silently overwrite canonical records. Promotion into SQLite remains deterministic, validated, and attributable to an import run.
 
 Potential next schema additions include immutable source snapshots, proposed-change tables, reviewer decisions, and job/run metadata. The current source hashes, raw imports, verification events, and stable public IDs provide the attachment points for those additions.
+
+See `docs/database_update_process.md` for the reviewed update and deduplication contract, and `docs/data_sources.md` for source priority and collection behavior.
 
 ## Explicitly out of scope
 

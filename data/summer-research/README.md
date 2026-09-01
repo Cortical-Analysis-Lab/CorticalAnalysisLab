@@ -8,6 +8,7 @@ These JSON and CSV files are generated from `database/research_opportunities.sql
 - `program_cycles.json`: annual dates, benefits, and status.
 - `eligibility_rules.json`: hard-eligibility fields with nullable unknowns.
 - `research_categories.json` and `research_tags.json`: controlled filter vocabularies.
+- `research_modes.json`: controlled methodology vocabulary for preference filtering.
 - `sources.json`: source and verification metadata.
 - `review/*.csv` and `review/*.xlsx`: human review/import/export artifacts.
 
