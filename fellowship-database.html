@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Check your eligibility for public summer undergraduate research opportunities.">
+  <title>Fellowship Database | Cortical Analysis Lab</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/fellowship-database.css">
+  <script defer src="assets/site.js?v=4"></script>
+  <script defer src="assets/fellowship-questionnaire.js"></script>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="logo">Cortical Analysis Lab</a>
+    <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
+    <ul id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="about.html">Dr. James</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="publications.html">Lab Publications</a></li>
+      <li><a href="fellowship-database.html">Fellowship Database</a></li>
+      <li><a href="https://github.com/Cortical-Analysis-Lab/NGVU_Simulation" target="_blank" rel="noopener noreferrer">NGVU Sim</a></li>
+      <li><a href="collaborate.html">Collaborate</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="fellowship-shell">
+    <header class="questionnaire-hero">
+      <p class="fellowship-eyebrow">Summer Undergraduate Research Opportunity Explorer</p>
+      <h1>Find programs you can apply to.</h1>
+      <p>Answer only the questions used for eligibility. Research interests, location, funding, and other preferences come later.</p>
+    </header>
+
+    <div id="catalog-status" class="catalog-status" role="status">Loading the public opportunity catalog…</div>
+
+    <section id="questionnaire-panel" class="questionnaire-panel" aria-labelledby="questionnaire-heading" hidden>
+      <div class="questionnaire-heading-row">
+        <div>
+          <p class="step-label">Step 1 of 2</p>
+          <h2 id="questionnaire-heading">Eligibility questionnaire</h2>
+        </div>
+        <p class="privacy-note">Answers stay in this browser tab and are not submitted or saved.</p>
+      </div>
+
+      <form id="eligibility-form">
+        <fieldset>
+          <legend>Academic standing</legend>
+          <div class="question-grid">
+            <label class="question-field">Current undergraduate year
+              <select name="classYear" required>
+                <option value="">Choose one</option>
+                <option value="first_year">First year</option>
+                <option value="sophomore">Sophomore</option>
+                <option value="junior">Junior</option>
+                <option value="senior">Senior, not graduating before summer</option>
+                <option value="graduating_senior">Graduating before the program begins</option>
+              </select>
+            </label>
+            <label class="question-field">Current cumulative GPA
+              <input name="gpa" type="number" min="0" max="4.5" step="0.01" inputmode="decimal" placeholder="For example, 3.25" required>
+            </label>
+            <label class="question-field">Are you currently enrolled?
+              <select name="enrolled" required><option value="">Choose one</option><option value="yes">Yes</option><option value="no">No</option></select>
+            </label>
+            <label class="question-field">Will you be enrolled in a degree program after the summer?
+              <select name="enrolledAfter" required><option value="">Choose one</option><option value="yes">Yes</option><option value="no">No</option><option value="unsure">Unsure</option></select>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Enrollment and residency</legend>
+          <div class="question-grid">
+            <label class="question-field">Citizenship or residency status
+              <select name="citizenship" required>
+                <option value="">Choose one</option>
+                <option value="us_citizen">U.S. citizen</option>
+                <option value="permanent_resident">U.S. permanent resident</option>
+                <option value="international">International / other status</option>
+                <option value="prefer_not">Prefer not to answer</option>
+              </select>
+            </label>
+            <label class="question-field">Current institution type
+              <select name="institutionType" required><option value="">Choose one</option><option value="two_year">Two-year college</option><option value="four_year">Four-year college or university</option><option value="other">Other / unsure</option></select>
+            </label>
+            <label class="question-field">Are you currently degree-seeking?
+              <select name="degreeSeeking" required><option value="">Choose one</option><option value="yes">Yes</option><option value="no">No</option></select>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="questionnaire-actions">
+          <button class="primary-action" type="submit">Check my eligibility</button>
+          <button class="secondary-action" id="clear-questionnaire" type="reset">Clear answers</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="eligibility-results" class="eligibility-results" aria-labelledby="results-heading" hidden>
+      <div class="results-heading-row">
+        <div><p class="step-label">Step 2 of 2</p><h2 id="results-heading">Your eligibility results</h2></div>
+        <button id="edit-answers" class="secondary-action" type="button">Edit answers</button>
+      </div>
+      <p id="results-explanation" class="results-explanation"></p>
+      <div class="result-summary" aria-live="polite">
+        <div class="summary-card eligible"><strong id="eligible-count">0</strong><span>Appear eligible</span></div>
+        <div class="summary-card review"><strong id="review-count">0</strong><span>Need review</span></div>
+        <div class="summary-card ineligible"><strong id="ineligible-count">0</strong><span>Likely ineligible</span></div>
+      </div>
+      <div class="result-legend"><span><i class="status-dot eligible"></i> No known rule conflicts</span><span><i class="status-dot review"></i> Official requirements are incomplete</span><span><i class="status-dot ineligible"></i> At least one known hard rule conflicts</span></div>
+      <div id="opportunity-results" class="opportunity-results"></div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Cortical Analysis Lab | Sacred Heart University</footer>
+</body>
+</html>
