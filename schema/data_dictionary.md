@@ -1,0 +1,36 @@
+# Summer Research Opportunity data dictionary
+
+SQLite is the canonical store. Files under `data/summer-research/` are generated views and must not be edited as the source of truth.
+
+## Entity boundaries
+
+- **Institution**: one physical host/location used for map aggregation. A national network or multi-site federal program may use a clearly labeled umbrella institution until site-level placements are modeled.
+- **Opportunity**: the stable identity of a named program, independent of year.
+- **Program cycle**: annual dates, status, compensation, benefits, and verification metadata.
+- **Eligibility rule**: cycle-specific hard eligibility. Nullable Boolean fields mean “not established,” not “no.” The original rule text is always retained.
+- **Category**: broad, controlled subject grouping used for filters.
+- **Tag**: narrower research topic, method, mode, audience, or program characteristic.
+- **Source verification**: which source supported which fields, when it was checked, and whether conflicts existed.
+
+## Unknown-value policy
+
+Missing or ambiguous information is stored as `NULL` in typed fields and preserved verbatim in the matching `*_text`, `*_details`, notes, or raw-import record. Status fields use `unknown` only when a non-null categorical value is operationally necessary. Importers never convert an unknown value to `no` or infer a benefit.
+
+## Stable identifiers
+
+`opportunities.public_id` preserves the starter `Program_ID`. Database integer IDs are internal foreign keys. Future importers should retain a public ID across annual cycles; a new year creates a `program_cycles` row, not a duplicate opportunity.
+
+## Important field semantics
+
+| Field | Meaning |
+|---|---|
+| `status_code` | Small website-facing status vocabulary derived only from explicit status text. |
+| `status_text` | Full official/imported wording; authoritative when the code is insufficient. |
+| `*_status` benefit fields | Controlled value such as `yes`, `no`, `partial`, `allowance`, `assistance`, `local`, `varies`, or `unknown`. |
+| `parse_status` | Whether eligibility text has received explicit structured review. Seed rows remain `needs_review` unless a rule can be copied without interpretation. |
+| `fields_supported` | JSON array of field names supported by that source. |
+| `evidence_hash` | Reserved for a future content snapshot hash from the verification pipeline. |
+
+## Future agent pipeline compatibility
+
+Discovery agents should write candidate imports or staging files, not modify public JSON directly. Verification agents can add source records, hashes, supported-field lists, and conflict notes. A deterministic import/update step should promote reviewed changes into SQLite, followed by validation and export.

@@ -1,0 +1,625 @@
+[
+  {
+    "tag_id": 23,
+    "tag_slug": "data-science",
+    "tag_name": "Data science",
+    "tag_group": "discipline",
+    "description": null
+  },
+  {
+    "tag_id": 10,
+    "tag_slug": "engineering",
+    "tag_name": "Engineering",
+    "tag_group": "discipline",
+    "description": null
+  },
+  {
+    "tag_id": 4,
+    "tag_slug": "humanities",
+    "tag_name": "Humanities",
+    "tag_group": "discipline",
+    "description": null
+  },
+  {
+    "tag_id": 15,
+    "tag_slug": "neuroscience",
+    "tag_name": "Neuroscience",
+    "tag_group": "discipline",
+    "description": null
+  },
+  {
+    "tag_id": 2,
+    "tag_slug": "stem",
+    "tag_name": "STEM",
+    "tag_group": "discipline",
+    "description": null
+  },
+  {
+    "tag_id": 3,
+    "tag_slug": "social-sciences",
+    "tag_name": "Social sciences",
+    "tag_group": "discipline",
+    "description": null
+  },
+  {
+    "tag_id": 1,
+    "tag_slug": "phd-oriented-research",
+    "tag_name": "PhD-oriented research",
+    "tag_group": "program_characteristic",
+    "description": null
+  },
+  {
+    "tag_id": 67,
+    "tag_slug": "ai",
+    "tag_name": "AI",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 21,
+    "tag_slug": "aerospace",
+    "tag_name": "Aerospace",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 80,
+    "tag_slug": "applied-mathematics",
+    "tag_name": "Applied mathematics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 73,
+    "tag_slug": "biological-sciences",
+    "tag_name": "Biological sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 14,
+    "tag_slug": "biomedical-sciences",
+    "tag_name": "Biomedical sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 71,
+    "tag_slug": "biosciences",
+    "tag_name": "Biosciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 46,
+    "tag_slug": "cancer-biology",
+    "tag_name": "Cancer biology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 22,
+    "tag_slug": "computer-science",
+    "tag_name": "Computer science",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 75,
+    "tag_slug": "ecology",
+    "tag_name": "Ecology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 58,
+    "tag_slug": "high-energy-physics",
+    "tag_name": "High-energy physics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 35,
+    "tag_slug": "life-sciences",
+    "tag_name": "Life sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 62,
+    "tag_slug": "nanotechnology",
+    "tag_name": "Nanotechnology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 87,
+    "tag_slug": "quantitative-biosciences",
+    "tag_name": "Quantitative biosciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 85,
+    "tag_slug": "algorithms",
+    "tag_name": "algorithms",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 60,
+    "tag_slug": "astrophysics",
+    "tag_name": "astrophysics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 37,
+    "tag_slug": "behavioral-sciences",
+    "tag_name": "behavioral sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 55,
+    "tag_slug": "biochemistry",
+    "tag_name": "biochemistry",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 68,
+    "tag_slug": "bioengineering",
+    "tag_name": "bioengineering",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 78,
+    "tag_slug": "biogeochemistry",
+    "tag_name": "biogeochemistry",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 86,
+    "tag_slug": "bioinformatics",
+    "tag_name": "bioinformatics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 12,
+    "tag_slug": "biology",
+    "tag_name": "biology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 74,
+    "tag_slug": "biomedical-and-related-stem",
+    "tag_name": "biomedical and related STEM",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 53,
+    "tag_slug": "biomedical-data",
+    "tag_name": "biomedical data",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 72,
+    "tag_slug": "biomedical-science",
+    "tag_name": "biomedical science",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 42,
+    "tag_slug": "biophysics",
+    "tag_name": "biophysics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 51,
+    "tag_slug": "biostatistics",
+    "tag_name": "biostatistics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 64,
+    "tag_slug": "biotechnology",
+    "tag_name": "biotechnology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 26,
+    "tag_slug": "business",
+    "tag_name": "business",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 17,
+    "tag_slug": "cancer",
+    "tag_name": "cancer",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 39,
+    "tag_slug": "cell-biology",
+    "tag_name": "cell biology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 7,
+    "tag_slug": "chemistry",
+    "tag_name": "chemistry",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 25,
+    "tag_slug": "communications",
+    "tag_name": "communications",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 88,
+    "tag_slug": "computation",
+    "tag_name": "computation",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 19,
+    "tag_slug": "computational-biology",
+    "tag_name": "computational biology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 9,
+    "tag_slug": "computing",
+    "tag_name": "computing",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 59,
+    "tag_slug": "condensed-matter",
+    "tag_name": "condensed matter",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 79,
+    "tag_slug": "conservation",
+    "tag_name": "conservation",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 28,
+    "tag_slug": "cybersecurity",
+    "tag_name": "cybersecurity",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 89,
+    "tag_slug": "data",
+    "tag_name": "data",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 63,
+    "tag_slug": "devices",
+    "tag_name": "devices",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 83,
+    "tag_slug": "discrete-mathematics",
+    "tag_name": "discrete mathematics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 33,
+    "tag_slug": "earth-sciences",
+    "tag_name": "earth sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 66,
+    "tag_slug": "electronics",
+    "tag_name": "electronics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 11,
+    "tag_slug": "energy",
+    "tag_name": "energy",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 13,
+    "tag_slug": "environmental-science",
+    "tag_name": "environmental science",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 56,
+    "tag_slug": "environmental-sciences",
+    "tag_name": "environmental sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 76,
+    "tag_slug": "forest-science",
+    "tag_name": "forest science",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 57,
+    "tag_slug": "gene-expression",
+    "tag_name": "gene expression",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 16,
+    "tag_slug": "genetics",
+    "tag_name": "genetics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 44,
+    "tag_slug": "genomics",
+    "tag_name": "genomics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 77,
+    "tag_slug": "global-change",
+    "tag_name": "global change",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 84,
+    "tag_slug": "graph-theory",
+    "tag_name": "graph theory",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 18,
+    "tag_slug": "immunology",
+    "tag_name": "immunology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 82,
+    "tag_slug": "industry-research",
+    "tag_name": "industry research",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 47,
+    "tag_slug": "infectious-disease",
+    "tag_name": "infectious disease",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 52,
+    "tag_slug": "informatics",
+    "tag_name": "informatics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 38,
+    "tag_slug": "interdisciplinary",
+    "tag_name": "interdisciplinary",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 49,
+    "tag_slug": "laboratory-and-computational-research",
+    "tag_name": "laboratory and computational research",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 8,
+    "tag_slug": "materials",
+    "tag_name": "materials",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 30,
+    "tag_slug": "mathematics",
+    "tag_name": "mathematics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 29,
+    "tag_slug": "measurement-science",
+    "tag_name": "measurement science",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 41,
+    "tag_slug": "molecular-biology",
+    "tag_name": "molecular biology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 69,
+    "tag_slug": "molecular-cellular-sciences",
+    "tag_name": "molecular/cellular sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 31,
+    "tag_slug": "ocean-science",
+    "tag_name": "ocean science",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 81,
+    "tag_slug": "optimization",
+    "tag_name": "optimization",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 27,
+    "tag_slug": "other-majors",
+    "tag_name": "other majors",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 36,
+    "tag_slug": "physical-sciences",
+    "tag_name": "physical sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 6,
+    "tag_slug": "physics",
+    "tag_name": "physics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 61,
+    "tag_slug": "physics-education",
+    "tag_name": "physics education",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 24,
+    "tag_slug": "planetary-science",
+    "tag_name": "planetary science",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 45,
+    "tag_slug": "plant-biology",
+    "tag_name": "plant biology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 20,
+    "tag_slug": "public-health",
+    "tag_name": "public health",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 43,
+    "tag_slug": "quantitative-biology",
+    "tag_name": "quantitative biology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 54,
+    "tag_slug": "quantitative-research",
+    "tag_name": "quantitative research",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 32,
+    "tag_slug": "related-stem",
+    "tag_name": "related STEM",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 70,
+    "tag_slug": "related-biomedical-fields",
+    "tag_name": "related biomedical fields",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 40,
+    "tag_slug": "related-fields",
+    "tag_name": "related fields",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 34,
+    "tag_slug": "related-natural-life-sciences",
+    "tag_name": "related natural/life sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 65,
+    "tag_slug": "robotics",
+    "tag_name": "robotics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 50,
+    "tag_slug": "statistics",
+    "tag_name": "statistics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 48,
+    "tag_slug": "translational-science",
+    "tag_name": "translational science",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 5,
+    "tag_slug": "varies-by-host",
+    "tag_name": "Varies by host",
+    "tag_group": "scope",
+    "description": null
+  }
+]

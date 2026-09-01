@@ -1,0 +1,4548 @@
+{
+  "schema_version": "1.0.0",
+  "opportunities": [
+    {
+      "opportunity_id": 31,
+      "public_id": "AMGEN-HARV",
+      "program_name": "Harvard Amgen Scholars Program",
+      "network_source": "Amgen Scholars",
+      "program_type": "Amgen Scholars / biomedical STEM research",
+      "location_scope": "Harvard University",
+      "delivery_format": "In person",
+      "program_url": "https://uraf.harvard.edu/amgen-scholars",
+      "application_url": "https://uraf.harvard.edu/amgen-scholars",
+      "notes": "Stipend is provided, but the current page did not state a numeric amount.",
+      "active": 1,
+      "institution": {
+        "institution_id": 29,
+        "institution_slug": "harvard-university-cambridge-ma-us",
+        "institution_name": "Harvard University",
+        "institution_type": null,
+        "city": "Cambridge",
+        "state_code": "MA",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 1,
+          "category_slug": "biomedical-health",
+          "category_name": "Biomedical & Health",
+          "description": "Human health, medicine, public health, and biomedical research",
+          "sort_order": 1,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 7,
+          "tag_slug": "chemistry",
+          "tag_name": "chemistry",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 64,
+          "tag_slug": "biotechnology",
+          "tag_name": "biotechnology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 73,
+          "tag_slug": "biological-sciences",
+          "tag_name": "Biological sciences",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 74,
+          "tag_slug": "biomedical-and-related-stem",
+          "tag_name": "biomedical and related STEM",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 31,
+          "opportunity_id": 31,
+          "cycle_year": 2026,
+          "duration_weeks": 10.0,
+          "program_start": "2026-06-03",
+          "program_end": "2026-08-08",
+          "application_open": null,
+          "application_deadline": "2026-02-01",
+          "deadline_text": "2026 deadline: Feb 1, 2026",
+          "status_code": "closed",
+          "status_text": "2026 closed; 2027 Amgen applications expected from Nov 1, 2026",
+          "stipend_total_usd": null,
+          "stipend_weekly_usd": null,
+          "housing_status": "yes",
+          "housing_details": "Housing provided",
+          "meals_status": "yes",
+          "meals_details": "Dining support provided",
+          "travel_status": "yes",
+          "travel_details": "Travel allowance included",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 31,
+            "cycle_id": 31,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Four-year college; sophomore/junior/non-graduating senior",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": 3.2,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 30,
+      "public_id": "AMGEN-STAN",
+      "program_name": "Stanford SSRP-Amgen Scholars Program",
+      "network_source": "Amgen Scholars",
+      "program_type": "Amgen Scholars / biomedical research",
+      "location_scope": "Stanford University",
+      "delivery_format": "In person",
+      "program_url": "https://biosciences.stanford.edu/pathways/ssrp-amgen-scholars-program/",
+      "application_url": "https://biosciences.stanford.edu/pathways/ssrp-amgen-scholars-program/the-ssrp-amgen-scholars-program-application/",
+      "notes": "Program is fully funded; specific flex-card details can change by cycle.",
+      "active": 1,
+      "institution": {
+        "institution_id": 28,
+        "institution_slug": "stanford-university-stanford-ca-us",
+        "institution_name": "Stanford University",
+        "institution_type": null,
+        "city": "Stanford",
+        "state_code": "CA",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 1,
+          "category_slug": "biomedical-health",
+          "category_name": "Biomedical & Health",
+          "description": "Human health, medicine, public health, and biomedical research",
+          "sort_order": 1,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 15,
+          "tag_slug": "neuroscience",
+          "tag_name": "Neuroscience",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 16,
+          "tag_slug": "genetics",
+          "tag_name": "genetics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 19,
+          "tag_slug": "computational-biology",
+          "tag_name": "computational biology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 39,
+          "tag_slug": "cell-biology",
+          "tag_name": "cell biology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 40,
+          "tag_slug": "related-fields",
+          "tag_name": "related fields",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 71,
+          "tag_slug": "biosciences",
+          "tag_name": "Biosciences",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 72,
+          "tag_slug": "biomedical-science",
+          "tag_name": "biomedical science",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 30,
+          "opportunity_id": 30,
+          "cycle_year": 2026,
+          "duration_weeks": 8.0,
+          "program_start": "2026-06-20",
+          "program_end": "2026-08-15",
+          "application_open": null,
+          "application_deadline": "2026-02-01",
+          "deadline_text": "2026 deadline: Feb 1, 2026",
+          "status_code": "closed",
+          "status_text": "2026 closed; monitor 2027 application",
+          "stipend_total_usd": 4800.0,
+          "stipend_weekly_usd": 600.0,
+          "housing_status": "yes",
+          "housing_details": "Housing provided",
+          "meals_status": "yes",
+          "meals_details": "Meals/flex-card support provided",
+          "travel_status": "yes",
+          "travel_details": "Travel to/from Stanford covered",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 30,
+            "cycle_id": 30,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "See current SSRP-Amgen eligibility",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduate; current program requirements apply",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": null,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 29,
+      "public_id": "AMGEN-UCB",
+      "program_name": "Amgen Scholars Program at UC Berkeley",
+      "network_source": "Amgen Scholars",
+      "program_type": "Amgen Scholars / biomedical STEM research",
+      "location_scope": "UC Berkeley",
+      "delivery_format": "In person",
+      "program_url": "https://amgenscholars.berkeley.edu/",
+      "application_url": "https://amgenscholars.berkeley.edu/applicants/",
+      "notes": "Host-level details are more actionable than the umbrella Amgen directory alone.",
+      "active": 1,
+      "institution": {
+        "institution_id": 27,
+        "institution_slug": "university-of-california-berkeley-berkeley-ca-us",
+        "institution_name": "University of California, Berkeley",
+        "institution_type": null,
+        "city": "Berkeley",
+        "state_code": "CA",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 1,
+          "category_slug": "biomedical-health",
+          "category_name": "Biomedical & Health",
+          "description": "Human health, medicine, public health, and biomedical research",
+          "sort_order": 1,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 7,
+          "tag_slug": "chemistry",
+          "tag_name": "chemistry",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 12,
+          "tag_slug": "biology",
+          "tag_name": "biology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 19,
+          "tag_slug": "computational-biology",
+          "tag_name": "computational biology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 68,
+          "tag_slug": "bioengineering",
+          "tag_name": "bioengineering",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 69,
+          "tag_slug": "molecular-cellular-sciences",
+          "tag_name": "molecular/cellular sciences",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 70,
+          "tag_slug": "related-biomedical-fields",
+          "tag_name": "related biomedical fields",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 29,
+          "opportunity_id": 29,
+          "cycle_year": 2026,
+          "duration_weeks": 10.0,
+          "program_start": "2026-06-08",
+          "program_end": "2026-08-14",
+          "application_open": null,
+          "application_deadline": "2026-02-01",
+          "deadline_text": "2026 deadline: Feb 1, 2026",
+          "status_code": "closed",
+          "status_text": "2026 closed; 2027 Amgen applications expected from Nov 1, 2026",
+          "stipend_total_usd": 5000.0,
+          "stipend_weekly_usd": 500.0,
+          "housing_status": "yes",
+          "housing_details": "Housing provided",
+          "meals_status": "allowance",
+          "meals_details": "Meal allowance provided",
+          "travel_status": "yes",
+          "travel_details": "Round-trip airfare provided if needed",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 29,
+            "cycle_id": 29,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Four-year college; sophomore/junior/non-graduating senior",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": 3.2,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 28,
+      "public_id": "BU-NANO-REU",
+      "program_name": "Integrated Nanomanufacturing REU",
+      "network_source": "NSF REU / university program",
+      "program_type": "NSF REU",
+      "location_scope": "Boston University",
+      "delivery_format": "In person",
+      "program_url": "https://www.bu.edu/photonics-programs/reu/programs/",
+      "application_url": "https://www.bu.edu/photonics-programs/reu/apply/",
+      "notes": "One of several BU Photonics Center REUs; other tracks include Translational Biophotonics and Cardiac Tissue Engineering.",
+      "active": 1,
+      "institution": {
+        "institution_id": 26,
+        "institution_slug": "boston-university-photonics-center-boston-ma-us",
+        "institution_name": "Boston University Photonics Center",
+        "institution_type": null,
+        "city": "Boston",
+        "state_code": "MA",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 8,
+          "category_slug": "engineering",
+          "category_name": "Engineering",
+          "description": "Engineering research and design across disciplines",
+          "sort_order": 8,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 8,
+          "tag_slug": "materials",
+          "tag_name": "materials",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 9,
+          "tag_slug": "computing",
+          "tag_name": "computing",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 11,
+          "tag_slug": "energy",
+          "tag_name": "energy",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 62,
+          "tag_slug": "nanotechnology",
+          "tag_name": "Nanotechnology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 63,
+          "tag_slug": "devices",
+          "tag_name": "devices",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 64,
+          "tag_slug": "biotechnology",
+          "tag_name": "biotechnology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 65,
+          "tag_slug": "robotics",
+          "tag_name": "robotics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 66,
+          "tag_slug": "electronics",
+          "tag_name": "electronics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 67,
+          "tag_slug": "ai",
+          "tag_name": "AI",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 28,
+          "opportunity_id": 28,
+          "cycle_year": 2026,
+          "duration_weeks": 10.0,
+          "program_start": "2026-05-31",
+          "program_end": "2026-08-08",
+          "application_open": "2025-12-15",
+          "application_deadline": "2026-03-15",
+          "deadline_text": "2026 applications: Dec 15–Mar 15",
+          "status_code": "closed",
+          "status_text": "2026 positions filled; monitor 2027",
+          "stipend_total_usd": 7000.0,
+          "stipend_weekly_usd": 700.0,
+          "housing_status": "yes",
+          "housing_details": "Apartment-style housing included",
+          "meals_status": "unknown",
+          "meals_details": "Not centrally listed as meal plan",
+          "travel_status": "yes",
+          "travel_details": "Domestic travel support included",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 28,
+            "cycle_id": 28,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "STEM majors at 2- and 4-year colleges; non-BU students",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": null,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 27,
+      "public_id": "BU-PRO",
+      "program_name": "BU Physics Research Opportunities (BU-PRO)",
+      "network_source": "NSF REU / university program",
+      "program_type": "Physics REU",
+      "location_scope": "Boston University",
+      "delivery_format": "In person",
+      "program_url": "https://sites.bu.edu/physics-resources/physics-reu/",
+      "application_url": "https://sites.bu.edu/physics-resources/physics-reu/",
+      "notes": "Explicit verification flag retained because current cycle information is incomplete.",
+      "active": 1,
+      "institution": {
+        "institution_id": 25,
+        "institution_slug": "boston-university-department-of-physics-boston-ma-us",
+        "institution_name": "Boston University Department of Physics",
+        "institution_type": null,
+        "city": "Boston",
+        "state_code": "MA",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 6,
+          "category_slug": "physics-astronomy",
+          "category_name": "Physics & Astronomy",
+          "description": "Physics, astronomy, and space sciences",
+          "sort_order": 6,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 8,
+          "tag_slug": "materials",
+          "tag_name": "materials",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 42,
+          "tag_slug": "biophysics",
+          "tag_name": "biophysics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 58,
+          "tag_slug": "high-energy-physics",
+          "tag_name": "High-energy physics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 59,
+          "tag_slug": "condensed-matter",
+          "tag_name": "condensed matter",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 60,
+          "tag_slug": "astrophysics",
+          "tag_name": "astrophysics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 61,
+          "tag_slug": "physics-education",
+          "tag_name": "physics education",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 27,
+          "opportunity_id": 27,
+          "cycle_year": 2026,
+          "duration_weeks": 10.0,
+          "program_start": null,
+          "program_end": null,
+          "application_open": null,
+          "application_deadline": null,
+          "deadline_text": "Current page requires cycle re-verification",
+          "status_code": "unknown",
+          "status_text": "Current page has incomplete/pending cycle information; verify before applying",
+          "stipend_total_usd": 7000.0,
+          "stipend_weekly_usd": 700.0,
+          "housing_status": "yes",
+          "housing_details": "Housing included",
+          "meals_status": "no",
+          "meals_details": "Not listed as provided",
+          "travel_status": "yes",
+          "travel_details": "Up to $820 travel; additional conference/return support may be available",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "Medium",
+          "eligibility": {
+            "eligibility_rule_id": 27,
+            "cycle_id": 27,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "NSF REU eligibility typically U.S. citizen/PR; verify current cycle",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduate; non-BU students",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": null,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 26,
+      "public_id": "BU-SURF",
+      "program_name": "Boston University SURF / REU",
+      "network_source": "NSF REU / university program",
+      "program_type": "NSF REU / SURF",
+      "location_scope": "Boston University",
+      "delivery_format": "In person",
+      "program_url": "https://www.bu.edu/surf/",
+      "application_url": "https://etap.nsf.gov/",
+      "notes": "$1,000 in laboratory supplies also provided.",
+      "active": 1,
+      "institution": {
+        "institution_id": 24,
+        "institution_slug": "boston-university-boston-ma-us",
+        "institution_name": "Boston University",
+        "institution_type": null,
+        "city": "Boston",
+        "state_code": "MA",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 2,
+          "category_slug": "life-sciences",
+          "category_name": "Life Sciences",
+          "description": "Biology, molecular and cellular sciences, ecology, and related life sciences",
+          "sort_order": 2,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 12,
+          "tag_slug": "biology",
+          "tag_name": "biology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 16,
+          "tag_slug": "genetics",
+          "tag_name": "genetics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 41,
+          "tag_slug": "molecular-biology",
+          "tag_name": "molecular biology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 55,
+          "tag_slug": "biochemistry",
+          "tag_name": "biochemistry",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 56,
+          "tag_slug": "environmental-sciences",
+          "tag_name": "environmental sciences",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 57,
+          "tag_slug": "gene-expression",
+          "tag_name": "gene expression",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 26,
+          "opportunity_id": 26,
+          "cycle_year": 2026,
+          "duration_weeks": 10.0,
+          "program_start": null,
+          "program_end": null,
+          "application_open": null,
+          "application_deadline": "2026-04-01",
+          "deadline_text": "2026 main page listed Apr 1; verify each cycle because site text has varied",
+          "status_code": "closed",
+          "status_text": "2026 closed; program reports NSF support through 2028",
+          "stipend_total_usd": 7000.0,
+          "stipend_weekly_usd": 700.0,
+          "housing_status": "yes",
+          "housing_details": "Apartment-style housing included",
+          "meals_status": "allowance",
+          "meals_details": "$80/week food supplement",
+          "travel_status": "yes",
+          "travel_details": "Up to $600 travel support",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 26,
+            "cycle_id": 26,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Non-BU rising sophomores/juniors/seniors; some tracks emphasize rising juniors/seniors",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": 3.0,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 22,
+      "public_id": "CSHL-URP",
+      "program_name": "Undergraduate Research Program (URP)",
+      "network_source": "Independent research institute",
+      "program_type": "Undergraduate research program",
+      "location_scope": "Cold Spring Harbor Laboratory",
+      "delivery_format": "In person",
+      "program_url": "https://www.cshl.edu/education/undergraduate-research-program/",
+      "application_url": "https://www.cshl.edu/education/undergraduate-research-program/",
+      "notes": "Approx. 20 students; international-friendly program.",
+      "active": 1,
+      "institution": {
+        "institution_id": 22,
+        "institution_slug": "cold-spring-harbor-laboratory-cold-spring-harbor-ny-us",
+        "institution_name": "Cold Spring Harbor Laboratory",
+        "institution_type": null,
+        "city": "Cold Spring Harbor",
+        "state_code": "NY",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 2,
+          "category_slug": "life-sciences",
+          "category_name": "Life Sciences",
+          "description": "Biology, molecular and cellular sciences, ecology, and related life sciences",
+          "sort_order": 2,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 15,
+          "tag_slug": "neuroscience",
+          "tag_name": "Neuroscience",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 16,
+          "tag_slug": "genetics",
+          "tag_name": "genetics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 17,
+          "tag_slug": "cancer",
+          "tag_name": "cancer",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 41,
+          "tag_slug": "molecular-biology",
+          "tag_name": "molecular biology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 43,
+          "tag_slug": "quantitative-biology",
+          "tag_name": "quantitative biology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 44,
+          "tag_slug": "genomics",
+          "tag_name": "genomics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 45,
+          "tag_slug": "plant-biology",
+          "tag_name": "plant biology",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 22,
+          "opportunity_id": 22,
+          "cycle_year": 2027,
+          "duration_weeks": 9.0,
+          "program_start": "2027-06-07",
+          "program_end": "2027-08-07",
+          "application_open": null,
+          "application_deadline": "2027-01-15",
+          "deadline_text": "Site materials reference Jan 15; verify exact 2027 cycle deadline when application opens",
+          "status_code": "unknown",
+          "status_text": "2027 program dates posted; application deadline should be re-verified",
+          "stipend_total_usd": 7000.0,
+          "stipend_weekly_usd": null,
+          "housing_status": "yes",
+          "housing_details": "Room covered",
+          "meals_status": "yes",
+          "meals_details": "Board covered; meals provided",
+          "travel_status": "unknown",
+          "travel_details": "Not clearly specified on main page",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "Medium-High",
+          "eligibility": {
+            "eligibility_rule_id": 22,
+            "cycle_id": 22,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "Students worldwide eligible",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduates; current eligibility rules apply",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": null,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 18,
+      "public_id": "DAAD-RISE",
+      "program_name": "RISE Germany",
+      "network_source": "DAAD RISE Germany",
+      "program_type": "International summer research internship",
+      "location_scope": "Host institutions across Germany",
+      "delivery_format": "In person",
+      "program_url": "https://www.daad.de/rise/en/rise-germany/",
+      "application_url": "https://www.daad.de/rise/en/rise-germany/find-an-internship/what-applicants-need-to-know/",
+      "notes": "Monthly DAAD stipend; English is normally the working language.",
+      "active": 1,
+      "institution": {
+        "institution_id": 18,
+        "institution_slug": "daad-german-host-universities-and-institutes-multiple-international-de",
+        "institution_name": "DAAD / German host universities and institutes",
+        "institution_type": null,
+        "city": "Multiple",
+        "state_code": "International",
+        "country_code": "DE",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 12,
+          "category_slug": "interdisciplinary-stem",
+          "category_name": "Interdisciplinary STEM",
+          "description": "Programs intentionally spanning multiple STEM disciplines",
+          "sort_order": 12,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 6,
+          "tag_slug": "physics",
+          "tag_name": "physics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 7,
+          "tag_slug": "chemistry",
+          "tag_name": "chemistry",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 10,
+          "tag_slug": "engineering",
+          "tag_name": "Engineering",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 12,
+          "tag_slug": "biology",
+          "tag_name": "biology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 22,
+          "tag_slug": "computer-science",
+          "tag_name": "Computer science",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 33,
+          "tag_slug": "earth-sciences",
+          "tag_name": "earth sciences",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 34,
+          "tag_slug": "related-natural-life-sciences",
+          "tag_name": "related natural/life sciences",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 18,
+          "opportunity_id": 18,
+          "cycle_year": 2027,
+          "duration_weeks": null,
+          "program_start": null,
+          "program_end": null,
+          "application_open": "2026-10-15",
+          "application_deadline": "2026-11-30",
+          "deadline_text": "2027 application: Oct 15–Nov 30, 2026",
+          "status_code": "upcoming",
+          "status_text": "2027 upcoming; application dates posted",
+          "stipend_total_usd": null,
+          "stipend_weekly_usd": null,
+          "housing_status": "assistance",
+          "housing_details": "DAAD/hosts assist with housing; arrangement varies",
+          "meals_status": "no",
+          "meals_details": "Covered from monthly stipend rather than provided meal plan",
+          "travel_status": "varies",
+          "travel_details": "Travel-related support varies by applicant/country and current DAAD rules",
+          "academic_credit_status": "varies",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 18,
+            "cycle_id": 18,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "Enrollment-based eligibility; applicants from eligible North American/British/Irish universities",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduates in qualifying degree programs; generally ≥2 years completed by internship",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": null,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 34,
+      "public_id": "DIMACS-REU",
+      "program_name": "DIMACS REU",
+      "network_source": "NSF REU / DIMACS",
+      "program_type": "NSF REU",
+      "location_scope": "Rutgers / DIMACS",
+      "delivery_format": "In person",
+      "program_url": "https://reu.dimacs.rutgers.edu/",
+      "application_url": "https://reu.dimacs.rutgers.edu/",
+      "notes": "2026 flyer specified $700/week for 9 weeks plus housing, meal allowance, and travel.",
+      "active": 1,
+      "institution": {
+        "institution_id": 32,
+        "institution_slug": "rutgers-university-dimacs-piscataway-new-brunswick-nj-us",
+        "institution_name": "Rutgers University / DIMACS",
+        "institution_type": null,
+        "city": "Piscataway / New Brunswick",
+        "state_code": "NJ",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 4,
+          "category_slug": "computer-data-ai",
+          "category_name": "Computer Science / Data / AI",
+          "description": "Computing, data science, machine learning, and artificial intelligence",
+          "sort_order": 4,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 22,
+          "tag_slug": "computer-science",
+          "tag_name": "Computer science",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 23,
+          "tag_slug": "data-science",
+          "tag_name": "Data science",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 67,
+          "tag_slug": "ai",
+          "tag_name": "AI",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 83,
+          "tag_slug": "discrete-mathematics",
+          "tag_name": "discrete mathematics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 84,
+          "tag_slug": "graph-theory",
+          "tag_name": "graph theory",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 85,
+          "tag_slug": "algorithms",
+          "tag_name": "algorithms",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 86,
+          "tag_slug": "bioinformatics",
+          "tag_name": "bioinformatics",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 34,
+          "opportunity_id": 34,
+          "cycle_year": 2026,
+          "duration_weeks": 9.0,
+          "program_start": "2026-05-26",
+          "program_end": "2026-07-24",
+          "application_open": null,
+          "application_deadline": "2026-01-31",
+          "deadline_text": "2026 deadline: Jan 31, 2026",
+          "status_code": "closed",
+          "status_text": "2026 closed; monitor for 2027",
+          "stipend_total_usd": 6300.0,
+          "stipend_weekly_usd": 700.0,
+          "housing_status": "yes",
+          "housing_details": "Housing included",
+          "meals_status": "allowance",
+          "meals_details": "Meal allowance included",
+          "travel_status": "yes",
+          "travel_details": "Travel support included",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 34,
+            "cycle_id": 34,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduates; current REU eligibility rules apply",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": null,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 13,
+      "public_id": "DOE-SULI",
+      "program_name": "Science Undergraduate Laboratory Internships (SULI)",
+      "network_source": "DOE Office of Science",
+      "program_type": "Federal laboratory internship",
+      "location_scope": "17 DOE labs/facilities",
+      "delivery_format": "In person",
+      "program_url": "https://science.osti.gov/wdts/suli",
+      "application_url": "https://science.osti.gov/wdts/suli/how-to-apply",
+      "notes": "Summer appointment is 10 weeks.",
+      "active": 1,
+      "institution": {
+        "institution_id": 13,
+        "institution_slug": "u-s-department-of-energy-national-laboratories-multiple-multiple-us",
+        "institution_name": "U.S. Department of Energy national laboratories",
+        "institution_type": null,
+        "city": "Multiple",
+        "state_code": "Multiple",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 12,
+          "category_slug": "interdisciplinary-stem",
+          "category_name": "Interdisciplinary STEM",
+          "description": "Programs intentionally spanning multiple STEM disciplines",
+          "sort_order": 12,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 6,
+          "tag_slug": "physics",
+          "tag_name": "physics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 7,
+          "tag_slug": "chemistry",
+          "tag_name": "chemistry",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 8,
+          "tag_slug": "materials",
+          "tag_name": "materials",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 9,
+          "tag_slug": "computing",
+          "tag_name": "computing",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 10,
+          "tag_slug": "engineering",
+          "tag_name": "Engineering",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 11,
+          "tag_slug": "energy",
+          "tag_name": "energy",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 12,
+          "tag_slug": "biology",
+          "tag_name": "biology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 13,
+          "tag_slug": "environmental-science",
+          "tag_name": "environmental science",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 13,
+          "opportunity_id": 13,
+          "cycle_year": 2026,
+          "duration_weeks": 10.0,
+          "program_start": null,
+          "program_end": null,
+          "application_open": "2025-10-23",
+          "application_deadline": "2026-01-07",
+          "deadline_text": "Summer 2026 deadline: Jan 7, 2026",
+          "status_code": "closed",
+          "status_text": "Summer 2026 closed; monitor DOE for Summer 2027 cycle",
+          "stipend_total_usd": 6500.0,
+          "stipend_weekly_usd": 650.0,
+          "housing_status": "varies",
+          "housing_details": "Some labs offer direct housing; otherwise housing allowance may be available",
+          "meals_status": "unknown",
+          "meals_details": "Not centrally specified",
+          "travel_status": "yes",
+          "travel_details": "Reimbursement available for qualifying travel; limits depend on mode",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 13,
+            "cycle_id": 13,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or lawful permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduates and qualifying recent graduates; see DOE eligibility rules",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": 3.0,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 24,
+      "public_id": "FH-PUR",
+      "program_name": "Pathways Undergraduate Researchers",
+      "network_source": "Independent research institute",
+      "program_type": "Early-undergraduate research program",
+      "location_scope": "Fred Hutch campus",
+      "delivery_format": "In person",
+      "program_url": "https://www.fredhutch.org/en/education-training/undergraduate-students/pathways-undergraduate-researchers.html",
+      "application_url": "https://www.fredhutch.org/en/education-training/undergraduate-students/pathways-undergraduate-researchers.html",
+      "notes": "Designed for an earlier undergraduate stage than many REUs.",
+      "active": 1,
+      "institution": {
+        "institution_id": 23,
+        "institution_slug": "fred-hutch-cancer-center-seattle-wa-us",
+        "institution_name": "Fred Hutch Cancer Center",
+        "institution_type": null,
+        "city": "Seattle",
+        "state_code": "WA",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 1,
+          "category_slug": "biomedical-health",
+          "category_name": "Biomedical & Health",
+          "description": "Human health, medicine, public health, and biomedical research",
+          "sort_order": 1,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 14,
+          "tag_slug": "biomedical-sciences",
+          "tag_name": "Biomedical sciences",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 17,
+          "tag_slug": "cancer",
+          "tag_name": "cancer",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 20,
+          "tag_slug": "public-health",
+          "tag_name": "public health",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 49,
+          "tag_slug": "laboratory-and-computational-research",
+          "tag_name": "laboratory and computational research",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 24,
+          "opportunity_id": 24,
+          "cycle_year": 2026,
+          "duration_weeks": 9.0,
+          "program_start": "2026-06-15",
+          "program_end": "2026-08-14",
+          "application_open": null,
+          "application_deadline": null,
+          "deadline_text": "2027 information expected November 2026",
+          "status_code": "closed",
+          "status_text": "2026 closed; 2027 info expected Nov 2026",
+          "stipend_total_usd": null,
+          "stipend_weekly_usd": null,
+          "housing_status": "no",
+          "housing_details": "Not listed as included",
+          "meals_status": "varies",
+          "meals_details": "Some program activities/meals may be covered; verify current cycle",
+          "travel_status": "varies",
+          "travel_details": "Travel and research funds may be available",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "Medium-High",
+          "eligibility": {
+            "eligibility_rule_id": 24,
+            "cycle_id": 24,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "See current program eligibility",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Early undergraduates; designed for students not yet entering third year and with limited research experience",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": null,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 25,
+      "public_id": "FH-STAT",
+      "program_name": "SeattleStatGROWS",
+      "network_source": "Independent research institute",
+      "program_type": "Summer quantitative research program",
+      "location_scope": "Fred Hutch / Seattle",
+      "delivery_format": "In person",
+      "program_url": "https://www.fredhutch.org/en/education-training/undergraduate-students/seattlestatgrows.html",
+      "application_url": "https://www.fredhutch.org/en/education-training/undergraduate-students/seattlestatgrows.html",
+      "notes": "Quantitative biomedical option that a biology-only search could miss.",
+      "active": 1,
+      "institution": {
+        "institution_id": 23,
+        "institution_slug": "fred-hutch-cancer-center-seattle-wa-us",
+        "institution_name": "Fred Hutch Cancer Center",
+        "institution_type": null,
+        "city": "Seattle",
+        "state_code": "WA",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 5,
+          "category_slug": "mathematics-statistics",
+          "category_name": "Mathematics & Statistics",
+          "description": "Pure and applied mathematics, statistics, and quantitative modeling",
+          "sort_order": 5,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 23,
+          "tag_slug": "data-science",
+          "tag_name": "Data science",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 50,
+          "tag_slug": "statistics",
+          "tag_name": "statistics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 51,
+          "tag_slug": "biostatistics",
+          "tag_name": "biostatistics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 52,
+          "tag_slug": "informatics",
+          "tag_name": "informatics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 53,
+          "tag_slug": "biomedical-data",
+          "tag_name": "biomedical data",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 54,
+          "tag_slug": "quantitative-research",
+          "tag_name": "quantitative research",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 25,
+          "opportunity_id": 25,
+          "cycle_year": 2026,
+          "duration_weeks": 8.0,
+          "program_start": "2026-06-24",
+          "program_end": "2026-08-19",
+          "application_open": null,
+          "application_deadline": "2026-02-22",
+          "deadline_text": "2026 deadline: Feb 22, 2026",
+          "status_code": "closed",
+          "status_text": "2026 closed; monitor for 2027",
+          "stipend_total_usd": 5700.0,
+          "stipend_weekly_usd": null,
+          "housing_status": "no",
+          "housing_details": "Not listed as included",
+          "meals_status": "partial",
+          "meals_details": "Some group meals provided",
+          "travel_status": "local",
+          "travel_details": "Free ORCA public-transit pass; additional research-expense funding available",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 25,
+            "cycle_id": 25,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "International students not eligible for 2026 program",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduates at 2- or 4-year colleges; see cycle rules",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": null,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 23,
+      "public_id": "FH-SURP",
+      "program_name": "Summer Undergraduate Research Program (SURP)",
+      "network_source": "Independent research institute",
+      "program_type": "SURP / biomedical research",
+      "location_scope": "Fred Hutch campus",
+      "delivery_format": "In person",
+      "program_url": "https://www.fredhutch.org/en/education-training/undergraduate-students/summer-undergraduate-research-program.html",
+      "application_url": "https://www.fredhutch.org/en/education-training/undergraduate-students/summer-undergraduate-research-program.html",
+      "notes": "Housing/meals/local transportation explicitly not included, useful for net-benefit comparison.",
+      "active": 1,
+      "institution": {
+        "institution_id": 23,
+        "institution_slug": "fred-hutch-cancer-center-seattle-wa-us",
+        "institution_name": "Fred Hutch Cancer Center",
+        "institution_type": null,
+        "city": "Seattle",
+        "state_code": "WA",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 1,
+          "category_slug": "biomedical-health",
+          "category_name": "Biomedical & Health",
+          "description": "Human health, medicine, public health, and biomedical research",
+          "sort_order": 1,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 18,
+          "tag_slug": "immunology",
+          "tag_name": "immunology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 19,
+          "tag_slug": "computational-biology",
+          "tag_name": "computational biology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 20,
+          "tag_slug": "public-health",
+          "tag_name": "public health",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 46,
+          "tag_slug": "cancer-biology",
+          "tag_name": "Cancer biology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 47,
+          "tag_slug": "infectious-disease",
+          "tag_name": "infectious disease",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 48,
+          "tag_slug": "translational-science",
+          "tag_name": "translational science",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 23,
+          "opportunity_id": 23,
+          "cycle_year": 2026,
+          "duration_weeks": 9.0,
+          "program_start": "2026-06-22",
+          "program_end": "2026-08-21",
+          "application_open": null,
+          "application_deadline": null,
+          "deadline_text": "2026 closed; 2027 deadline not yet posted",
+          "status_code": "closed",
+          "status_text": "2026 closed; monitor for 2027",
+          "stipend_total_usd": 7304.0,
+          "stipend_weekly_usd": null,
+          "housing_status": "no",
+          "housing_details": "Housing not included; optional housing listed at approximately $3,300 for 2026",
+          "meals_status": "no",
+          "meals_details": "Meals not included",
+          "travel_status": "yes",
+          "travel_details": "Round-trip travel to Seattle reimbursed up to $450",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 23,
+            "cycle_id": 23,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Students entering final undergraduate year after the summer",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": null,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 35,
+      "public_id": "GT-QBIOS",
+      "program_name": "Quantitative Biosciences Undergraduate Summer Research Experience (QBioS REU)",
+      "network_source": "NSF REU / Georgia Tech",
+      "program_type": "NSF REU",
+      "location_scope": "Georgia Tech",
+      "delivery_format": "In person",
+      "program_url": "https://cos.gatech.edu/qbiosreu",
+      "application_url": "https://cos.gatech.edu/qbiosreu",
+      "notes": "Cross-disciplinary biology/physics/math/computation program.",
+      "active": 1,
+      "institution": {
+        "institution_id": 33,
+        "institution_slug": "georgia-institute-of-technology-atlanta-ga-us",
+        "institution_name": "Georgia Institute of Technology",
+        "institution_type": null,
+        "city": "Atlanta",
+        "state_code": "GA",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 12,
+          "category_slug": "interdisciplinary-stem",
+          "category_name": "Interdisciplinary STEM",
+          "description": "Programs intentionally spanning multiple STEM disciplines",
+          "sort_order": 12,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 6,
+          "tag_slug": "physics",
+          "tag_name": "physics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 12,
+          "tag_slug": "biology",
+          "tag_name": "biology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 30,
+          "tag_slug": "mathematics",
+          "tag_name": "mathematics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 42,
+          "tag_slug": "biophysics",
+          "tag_name": "biophysics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 87,
+          "tag_slug": "quantitative-biosciences",
+          "tag_name": "Quantitative biosciences",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 88,
+          "tag_slug": "computation",
+          "tag_name": "computation",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 89,
+          "tag_slug": "data",
+          "tag_name": "data",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 35,
+          "opportunity_id": 35,
+          "cycle_year": 2026,
+          "duration_weeks": 10.0,
+          "program_start": null,
+          "program_end": null,
+          "application_open": null,
+          "application_deadline": null,
+          "deadline_text": "Current page does not fully specify next-cycle deadline; Georgia Tech REUs often close around mid-Feb",
+          "status_code": "active",
+          "status_text": "Program active; next-cycle dates/deadline require update",
+          "stipend_total_usd": 5000.0,
+          "stipend_weekly_usd": 500.0,
+          "housing_status": "yes",
+          "housing_details": "Apartment housing provided",
+          "meals_status": "no",
+          "meals_details": "Not listed as a provided meal plan",
+          "travel_status": "yes",
+          "travel_details": "Travel allowance provided",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "Medium-High",
+          "eligibility": {
+            "eligibility_rule_id": 35,
+            "cycle_id": 35,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduates enrolled at U.S. institutions; see current cycle",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": null,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 32,
+      "public_id": "HF-ECO",
+      "program_name": "Harvard Forest Summer Research Program in Ecology",
+      "network_source": "University field-station program",
+      "program_type": "Summer research program",
+      "location_scope": "Harvard Forest",
+      "delivery_format": "In person",
+      "program_url": "https://harvardforest.fas.harvard.edu/education-opportunities/undergraduate-students/summer-research-program/summer-research-program-information-for-students/",
+      "application_url": "https://harvardforest.fas.harvard.edu/education-opportunities/undergraduate-students/summer-research-program/summer-research-program-information-for-students/",
+      "notes": "Field/environmental program with room, board, and travel included.",
+      "active": 1,
+      "institution": {
+        "institution_id": 30,
+        "institution_slug": "harvard-forest-harvard-university-petersham-ma-us",
+        "institution_name": "Harvard Forest / Harvard University",
+        "institution_type": null,
+        "city": "Petersham",
+        "state_code": "MA",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 9,
+          "category_slug": "earth-environment-ocean",
+          "category_name": "Earth / Environment / Ocean",
+          "description": "Earth systems, environmental science, climate, and ocean research",
+          "sort_order": 9,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 13,
+          "tag_slug": "environmental-science",
+          "tag_name": "environmental science",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 23,
+          "tag_slug": "data-science",
+          "tag_name": "Data science",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 75,
+          "tag_slug": "ecology",
+          "tag_name": "Ecology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 76,
+          "tag_slug": "forest-science",
+          "tag_name": "forest science",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 77,
+          "tag_slug": "global-change",
+          "tag_name": "global change",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 78,
+          "tag_slug": "biogeochemistry",
+          "tag_name": "biogeochemistry",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 79,
+          "tag_slug": "conservation",
+          "tag_name": "conservation",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 32,
+          "opportunity_id": 32,
+          "cycle_year": 2026,
+          "duration_weeks": 11.0,
+          "program_start": "2026-05-26",
+          "program_end": "2026-08-07",
+          "application_open": "2025-12-09",
+          "application_deadline": "2026-02-06",
+          "deadline_text": "2026 application: Dec 9, 2025–Feb 6, 2026; 2027 expected Dec 2026",
+          "status_code": "closed",
+          "status_text": "2026 closed; 2027 application expected Dec 2026",
+          "stipend_total_usd": 7700.0,
+          "stipend_weekly_usd": 700.0,
+          "housing_status": "yes",
+          "housing_details": "Full room included",
+          "meals_status": "yes",
+          "meals_details": "Full board included",
+          "travel_status": "yes",
+          "travel_details": "Travel to/from Harvard Forest included",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 32,
+            "cycle_id": 32,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "Primarily U.S. citizens/permanent residents; exceptions may require outside funding",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduates; see project-specific eligibility",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": null,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 19,
+      "public_id": "LEAD-SREIP",
+      "program_name": "Summer Research Early Identification Program (SR-EIP)",
+      "network_source": "The Leadership Alliance",
+      "program_type": "Multi-institution summer research program",
+      "location_scope": "~20 host institutions",
+      "delivery_format": "In person",
+      "program_url": "https://theleadershipalliance.org/summer-research-early-identification-program",
+      "application_url": "https://app.theleadershipalliance.org/",
+      "notes": "Fully paid 8–10 week program; stipend and exact benefits vary by host institution.",
+      "active": 1,
+      "institution": {
+        "institution_id": 19,
+        "institution_slug": "the-leadership-alliance-member-institutions-multiple-multiple-us",
+        "institution_name": "The Leadership Alliance member institutions",
+        "institution_type": null,
+        "city": "Multiple",
+        "state_code": "Multiple",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 13,
+          "category_slug": "multidisciplinary",
+          "category_name": "Multidisciplinary",
+          "description": "Programs spanning STEM, social sciences, humanities, or other broad areas",
+          "sort_order": 13,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 3,
+          "tag_slug": "social-sciences",
+          "tag_name": "Social sciences",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 4,
+          "tag_slug": "humanities",
+          "tag_name": "Humanities",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 35,
+          "tag_slug": "life-sciences",
+          "tag_name": "Life sciences",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 36,
+          "tag_slug": "physical-sciences",
+          "tag_name": "physical sciences",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 37,
+          "tag_slug": "behavioral-sciences",
+          "tag_name": "behavioral sciences",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 38,
+          "tag_slug": "interdisciplinary",
+          "tag_name": "interdisciplinary",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 19,
+          "opportunity_id": 19,
+          "cycle_year": 2026,
+          "duration_weeks": 8.0,
+          "program_start": null,
+          "program_end": null,
+          "application_open": null,
+          "application_deadline": "2026-02-03",
+          "deadline_text": "2026 deadline: Feb 3, 2026",
+          "status_code": "closed",
+          "status_text": "2026 closed; monitor for 2027",
+          "stipend_total_usd": null,
+          "stipend_weekly_usd": null,
+          "housing_status": "yes",
+          "housing_details": "Housing expenses covered through host program",
+          "meals_status": "varies",
+          "meals_details": "Host-specific support varies",
+          "travel_status": "yes",
+          "travel_details": "Travel support included",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 19,
+            "cycle_id": 19,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "See current Leadership Alliance eligibility",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduates; host and program rules apply",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": null,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 15,
+      "public_id": "NASA-OSTEM",
+      "program_name": "NASA OSTEM Internship Program",
+      "network_source": "NASA OSTEM",
+      "program_type": "Federal STEM internship",
+      "location_scope": "NASA centers and facilities",
+      "delivery_format": "In person / varies by project",
+      "program_url": "https://www.nasa.gov/learning-resources/internship-programs/",
+      "application_url": "https://www.stemgateway.nasa.gov/",
+      "notes": "Paid project-based internships; summer session is generally 10 weeks. Stipend varies by opportunity.",
+      "active": 1,
+      "institution": {
+        "institution_id": 15,
+        "institution_slug": "nasa-multiple-multiple-us",
+        "institution_name": "NASA",
+        "institution_type": null,
+        "city": "Multiple",
+        "state_code": "Multiple",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 12,
+          "category_slug": "interdisciplinary-stem",
+          "category_name": "Interdisciplinary STEM",
+          "description": "Programs intentionally spanning multiple STEM disciplines",
+          "sort_order": 12,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 6,
+          "tag_slug": "physics",
+          "tag_name": "physics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 10,
+          "tag_slug": "engineering",
+          "tag_name": "Engineering",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 21,
+          "tag_slug": "aerospace",
+          "tag_name": "Aerospace",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 22,
+          "tag_slug": "computer-science",
+          "tag_name": "Computer science",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 23,
+          "tag_slug": "data-science",
+          "tag_name": "Data science",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 24,
+          "tag_slug": "planetary-science",
+          "tag_name": "planetary science",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 25,
+          "tag_slug": "communications",
+          "tag_name": "communications",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 26,
+          "tag_slug": "business",
+          "tag_name": "business",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 27,
+          "tag_slug": "other-majors",
+          "tag_name": "other majors",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 15,
+          "opportunity_id": 15,
+          "cycle_year": 2027,
+          "duration_weeks": 10.0,
+          "program_start": null,
+          "program_end": null,
+          "application_open": null,
+          "application_deadline": "2027-02-26",
+          "deadline_text": "Summer 2027 deadline: Feb 26, 2027",
+          "status_code": "upcoming",
+          "status_text": "2027 upcoming; deadline posted",
+          "stipend_total_usd": null,
+          "stipend_weekly_usd": null,
+          "housing_status": "no",
+          "housing_details": "Housing generally arranged by intern; project/center guidance varies",
+          "meals_status": "no",
+          "meals_details": "Not centrally included",
+          "travel_status": "varies",
+          "travel_details": "Project/center dependent",
+          "academic_credit_status": "varies",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 15,
+            "cycle_id": 15,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "College students; project-specific requirements",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": 3.0,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 14,
+      "public_id": "NIH-SIP",
+      "program_name": "NIH Summer Internship Program (SIP)",
+      "network_source": "NIH Office of Intramural Training & Education",
+      "program_type": "Federal biomedical research internship",
+      "location_scope": "NIH campuses and institutes",
+      "delivery_format": "In person",
+      "program_url": "https://www.training.nih.gov/research-training/pb/sip/",
+      "application_url": "https://www.training.nih.gov/research-training/pb/sip/",
+      "notes": "Stipends are based on educational level; specific amounts should be verified for the application cycle.",
+      "active": 1,
+      "institution": {
+        "institution_id": 14,
+        "institution_slug": "national-institutes-of-health-multiple-multiple-us",
+        "institution_name": "National Institutes of Health",
+        "institution_type": null,
+        "city": "Multiple",
+        "state_code": "Multiple",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 1,
+          "category_slug": "biomedical-health",
+          "category_name": "Biomedical & Health",
+          "description": "Human health, medicine, public health, and biomedical research",
+          "sort_order": 1,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 14,
+          "tag_slug": "biomedical-sciences",
+          "tag_name": "Biomedical sciences",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 15,
+          "tag_slug": "neuroscience",
+          "tag_name": "Neuroscience",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 16,
+          "tag_slug": "genetics",
+          "tag_name": "genetics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 17,
+          "tag_slug": "cancer",
+          "tag_name": "cancer",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 18,
+          "tag_slug": "immunology",
+          "tag_name": "immunology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 19,
+          "tag_slug": "computational-biology",
+          "tag_name": "computational biology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 20,
+          "tag_slug": "public-health",
+          "tag_name": "public health",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 14,
+          "opportunity_id": 14,
+          "cycle_year": 2027,
+          "duration_weeks": null,
+          "program_start": null,
+          "program_end": null,
+          "application_open": null,
+          "application_deadline": null,
+          "deadline_text": "2027 application: opens mid-Nov 2026; closes mid-Feb 2027",
+          "status_code": "upcoming",
+          "status_text": "2027 upcoming; application window announced",
+          "stipend_total_usd": null,
+          "stipend_weekly_usd": null,
+          "housing_status": "no",
+          "housing_details": "NIH does not provide dormitory housing",
+          "meals_status": "no",
+          "meals_details": "Not included centrally",
+          "travel_status": "varies",
+          "travel_details": "Varies by placement/appointment; verify specific institute",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 14,
+            "cycle_id": 14,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "College, graduate, and professional students; undergraduates eligible",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": null,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 16,
+      "public_id": "NIST-SURF",
+      "program_name": "NIST Summer Undergraduate Research Fellowship (SURF)",
+      "network_source": "NIST",
+      "program_type": "Federal laboratory research fellowship",
+      "location_scope": "NIST campuses",
+      "delivery_format": "In person",
+      "program_url": "https://www.nist.gov/surf",
+      "application_url": "https://www.nist.gov/surf",
+      "notes": "2026 also offered 9-week and offset 11-week schedules; stipend shown is expected 11-week amount.",
+      "active": 1,
+      "institution": {
+        "institution_id": 16,
+        "institution_slug": "national-institute-of-standards-and-technology-gaithersburg-boulder-md-co-us",
+        "institution_name": "National Institute of Standards and Technology",
+        "institution_type": null,
+        "city": "Gaithersburg / Boulder",
+        "state_code": "MD / CO",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 12,
+          "category_slug": "interdisciplinary-stem",
+          "category_name": "Interdisciplinary STEM",
+          "description": "Programs intentionally spanning multiple STEM disciplines",
+          "sort_order": 12,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 6,
+          "tag_slug": "physics",
+          "tag_name": "physics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 7,
+          "tag_slug": "chemistry",
+          "tag_name": "chemistry",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 8,
+          "tag_slug": "materials",
+          "tag_name": "materials",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 10,
+          "tag_slug": "engineering",
+          "tag_name": "Engineering",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 22,
+          "tag_slug": "computer-science",
+          "tag_name": "Computer science",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 28,
+          "tag_slug": "cybersecurity",
+          "tag_name": "cybersecurity",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 29,
+          "tag_slug": "measurement-science",
+          "tag_name": "measurement science",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 16,
+          "opportunity_id": 16,
+          "cycle_year": 2026,
+          "duration_weeks": 11.0,
+          "program_start": "2026-05-27",
+          "program_end": "2026-08-07",
+          "application_open": null,
+          "application_deadline": null,
+          "deadline_text": "2027 details expected in fall 2026",
+          "status_code": "closed",
+          "status_text": "2026 closed; 2027 details expected fall 2026",
+          "stipend_total_usd": 7810.0,
+          "stipend_weekly_usd": 710.0,
+          "housing_status": "allowance",
+          "housing_details": "Students arrange housing; limited housing assistance up to $4,500 may be available",
+          "meals_status": "no",
+          "meals_details": "Not included",
+          "travel_status": "yes",
+          "travel_details": "Travel allowance up to $500 may be available",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 16,
+            "cycle_id": 16,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "See NIST cycle eligibility",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduate; cycle-specific",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": null,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 17,
+      "public_id": "NREIP",
+      "program_name": "Naval Research Enterprise Internship Program (NREIP)",
+      "network_source": "Office of Naval Research",
+      "program_type": "Federal laboratory research internship",
+      "location_scope": "Navy laboratories nationwide",
+      "delivery_format": "In person",
+      "program_url": "https://www.onr.navy.mil/education-outreach/undergraduate-graduate/nreip-naval-internship",
+      "application_url": "https://www.onr.navy.mil/education-outreach/undergraduate-graduate/nreip-naval-internship",
+      "notes": "$7,500 shown for a new undergraduate participant; returning undergraduate stipend is higher.",
+      "active": 1,
+      "institution": {
+        "institution_id": 17,
+        "institution_slug": "u-s-navy-laboratories-multiple-multiple-us",
+        "institution_name": "U.S. Navy laboratories",
+        "institution_type": null,
+        "city": "Multiple",
+        "state_code": "Multiple",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 8,
+          "category_slug": "engineering",
+          "category_name": "Engineering",
+          "description": "Engineering research and design across disciplines",
+          "sort_order": 8,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 6,
+          "tag_slug": "physics",
+          "tag_name": "physics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 7,
+          "tag_slug": "chemistry",
+          "tag_name": "chemistry",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 8,
+          "tag_slug": "materials",
+          "tag_name": "materials",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 10,
+          "tag_slug": "engineering",
+          "tag_name": "Engineering",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 22,
+          "tag_slug": "computer-science",
+          "tag_name": "Computer science",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 30,
+          "tag_slug": "mathematics",
+          "tag_name": "mathematics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 31,
+          "tag_slug": "ocean-science",
+          "tag_name": "ocean science",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 32,
+          "tag_slug": "related-stem",
+          "tag_name": "related STEM",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 17,
+          "opportunity_id": 17,
+          "cycle_year": 2027,
+          "duration_weeks": 10.0,
+          "program_start": null,
+          "program_end": null,
+          "application_open": null,
+          "application_deadline": null,
+          "deadline_text": "2027 portal expected to open Sept 2026",
+          "status_code": "upcoming",
+          "status_text": "2027 upcoming; portal expected Sept 2026",
+          "stipend_total_usd": 7500.0,
+          "stipend_weekly_usd": 750.0,
+          "housing_status": "no",
+          "housing_details": "Not centrally included",
+          "meals_status": "no",
+          "meals_details": "Not centrally included",
+          "travel_status": "varies",
+          "travel_details": "Lab/opportunity dependent",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 17,
+            "cycle_id": 17,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen; permanent residents considered at some labs",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Sophomore, junior, senior, and graduate students in relevant majors",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": null,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 21,
+      "public_id": "ROCK-SURF",
+      "program_name": "Summer Undergraduate Research Fellowship (SURF)",
+      "network_source": "University program",
+      "program_type": "SURF / biomedical research",
+      "location_scope": "Rockefeller University",
+      "delivery_format": "In person",
+      "program_url": "https://www.rockefeller.edu/education-and-training/surf/application-information/",
+      "application_url": "https://surfapplication.rockefeller.edu/",
+      "notes": "International eligibility makes this useful to flag separately from NSF-funded citizen/PR-only programs.",
+      "active": 1,
+      "institution": {
+        "institution_id": 21,
+        "institution_slug": "the-rockefeller-university-new-york-ny-us",
+        "institution_name": "The Rockefeller University",
+        "institution_type": null,
+        "city": "New York",
+        "state_code": "NY",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 1,
+          "category_slug": "biomedical-health",
+          "category_name": "Biomedical & Health",
+          "description": "Human health, medicine, public health, and biomedical research",
+          "sort_order": 1,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 14,
+          "tag_slug": "biomedical-sciences",
+          "tag_name": "Biomedical sciences",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 15,
+          "tag_slug": "neuroscience",
+          "tag_name": "Neuroscience",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 16,
+          "tag_slug": "genetics",
+          "tag_name": "genetics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 39,
+          "tag_slug": "cell-biology",
+          "tag_name": "cell biology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 41,
+          "tag_slug": "molecular-biology",
+          "tag_name": "molecular biology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 42,
+          "tag_slug": "biophysics",
+          "tag_name": "biophysics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 43,
+          "tag_slug": "quantitative-biology",
+          "tag_name": "quantitative biology",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 21,
+          "opportunity_id": 21,
+          "cycle_year": 2026,
+          "duration_weeks": 10.0,
+          "program_start": "2026-06-01",
+          "program_end": "2026-08-07",
+          "application_open": null,
+          "application_deadline": "2026-02-01",
+          "deadline_text": "2026 deadline: Feb 1, 2026",
+          "status_code": "closed",
+          "status_text": "2026 closed; monitor for 2027",
+          "stipend_total_usd": 6500.0,
+          "stipend_weekly_usd": 650.0,
+          "housing_status": "yes",
+          "housing_details": "Free housing for students unable to commute",
+          "meals_status": "no",
+          "meals_details": "Not listed as a provided meal plan",
+          "travel_status": "unknown",
+          "travel_details": "Not clearly specified on current program page",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 21,
+            "cycle_id": 21,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "International students eligible; see current application rules",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "College sophomores and juniors",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": null,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 1,
+      "public_id": "SROP-IA",
+      "program_name": "Big Ten SROP – University of Iowa",
+      "network_source": "Big Ten Academic Alliance SROP",
+      "program_type": "SROP / multidisciplinary summer research",
+      "location_scope": "On-site host campus",
+      "delivery_format": "In person",
+      "program_url": "https://btaa.org/resources-for/students/srop/campus-profiles",
+      "application_url": "https://apps.btaa.org/srop/apply",
+      "notes": "Shared SROP application permits selection of multiple participating universities; intended for students interested in PhD study.",
+      "active": 1,
+      "institution": {
+        "institution_id": 1,
+        "institution_slug": "university-of-iowa-iowa-city-ia-us",
+        "institution_name": "University of Iowa",
+        "institution_type": null,
+        "city": "Iowa City",
+        "state_code": "IA",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 13,
+          "category_slug": "multidisciplinary",
+          "category_name": "Multidisciplinary",
+          "description": "Programs spanning STEM, social sciences, humanities, or other broad areas",
+          "sort_order": 13,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 1,
+          "tag_slug": "phd-oriented-research",
+          "tag_name": "PhD-oriented research",
+          "tag_group": "program_characteristic",
+          "description": null
+        },
+        {
+          "tag_id": 2,
+          "tag_slug": "stem",
+          "tag_name": "STEM",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 3,
+          "tag_slug": "social-sciences",
+          "tag_name": "Social sciences",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 4,
+          "tag_slug": "humanities",
+          "tag_name": "Humanities",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 5,
+          "tag_slug": "varies-by-host",
+          "tag_name": "Varies by host",
+          "tag_group": "scope",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 1,
+          "opportunity_id": 1,
+          "cycle_year": 2026,
+          "duration_weeks": 8.3,
+          "program_start": "2026-06-04",
+          "program_end": "2026-07-31",
+          "application_open": "2025-11-01",
+          "application_deadline": "2026-02-10",
+          "deadline_text": "2026 shared application: Nov 1–Feb 10",
+          "status_code": "closed",
+          "status_text": "2026 closed; 2027 cycle expected Nov–Feb",
+          "stipend_total_usd": 4000.0,
+          "stipend_weekly_usd": null,
+          "housing_status": "yes",
+          "housing_details": "Campus housing",
+          "meals_status": "yes",
+          "meals_details": "Meal support included",
+          "travel_status": "yes",
+          "travel_details": "Travel support included",
+          "academic_credit_status": "partial",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 1,
+            "cycle_id": 1,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduate; ≥2 semesters completed; ≥1 semester remaining after summer",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": 3.0,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 2,
+      "public_id": "SROP-MD",
+      "program_name": "Big Ten SROP – University of Maryland",
+      "network_source": "Big Ten Academic Alliance SROP",
+      "program_type": "SROP / multidisciplinary summer research",
+      "location_scope": "On-site host campus",
+      "delivery_format": "In person",
+      "program_url": "https://btaa.org/resources-for/students/srop/campus-profiles",
+      "application_url": "https://apps.btaa.org/srop/apply",
+      "notes": "Shared SROP application permits selection of multiple participating universities; intended for students interested in PhD study.",
+      "active": 1,
+      "institution": {
+        "institution_id": 2,
+        "institution_slug": "university-of-maryland-college-park-md-us",
+        "institution_name": "University of Maryland",
+        "institution_type": null,
+        "city": "College Park",
+        "state_code": "MD",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 13,
+          "category_slug": "multidisciplinary",
+          "category_name": "Multidisciplinary",
+          "description": "Programs spanning STEM, social sciences, humanities, or other broad areas",
+          "sort_order": 13,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 1,
+          "tag_slug": "phd-oriented-research",
+          "tag_name": "PhD-oriented research",
+          "tag_group": "program_characteristic",
+          "description": null
+        },
+        {
+          "tag_id": 2,
+          "tag_slug": "stem",
+          "tag_name": "STEM",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 3,
+          "tag_slug": "social-sciences",
+          "tag_name": "Social sciences",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 4,
+          "tag_slug": "humanities",
+          "tag_name": "Humanities",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 5,
+          "tag_slug": "varies-by-host",
+          "tag_name": "Varies by host",
+          "tag_group": "scope",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 2,
+          "opportunity_id": 2,
+          "cycle_year": 2026,
+          "duration_weeks": 8.0,
+          "program_start": "2026-05-30",
+          "program_end": "2026-07-25",
+          "application_open": "2025-11-01",
+          "application_deadline": "2026-02-10",
+          "deadline_text": "2026 shared application: Nov 1–Feb 10",
+          "status_code": "closed",
+          "status_text": "2026 closed; 2027 cycle expected Nov–Feb",
+          "stipend_total_usd": 4000.0,
+          "stipend_weekly_usd": null,
+          "housing_status": "yes",
+          "housing_details": "Campus housing",
+          "meals_status": "yes",
+          "meals_details": "Meal support included",
+          "travel_status": "yes",
+          "travel_details": "Travel support included",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 2,
+            "cycle_id": 2,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduate; ≥2 semesters completed; ≥1 semester remaining after summer",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": 3.0,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 3,
+      "public_id": "SROP-MI",
+      "program_name": "Big Ten SROP – University of Michigan",
+      "network_source": "Big Ten Academic Alliance SROP",
+      "program_type": "SROP / multidisciplinary summer research",
+      "location_scope": "On-site host campus",
+      "delivery_format": "In person",
+      "program_url": "https://btaa.org/resources-for/students/srop/campus-profiles",
+      "application_url": "https://apps.btaa.org/srop/apply",
+      "notes": "Shared SROP application permits selection of multiple participating universities; intended for students interested in PhD study.",
+      "active": 1,
+      "institution": {
+        "institution_id": 3,
+        "institution_slug": "university-of-michigan-ann-arbor-mi-us",
+        "institution_name": "University of Michigan",
+        "institution_type": null,
+        "city": "Ann Arbor",
+        "state_code": "MI",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 13,
+          "category_slug": "multidisciplinary",
+          "category_name": "Multidisciplinary",
+          "description": "Programs spanning STEM, social sciences, humanities, or other broad areas",
+          "sort_order": 13,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 1,
+          "tag_slug": "phd-oriented-research",
+          "tag_name": "PhD-oriented research",
+          "tag_group": "program_characteristic",
+          "description": null
+        },
+        {
+          "tag_id": 2,
+          "tag_slug": "stem",
+          "tag_name": "STEM",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 3,
+          "tag_slug": "social-sciences",
+          "tag_name": "Social sciences",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 4,
+          "tag_slug": "humanities",
+          "tag_name": "Humanities",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 5,
+          "tag_slug": "varies-by-host",
+          "tag_name": "Varies by host",
+          "tag_group": "scope",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 3,
+          "opportunity_id": 3,
+          "cycle_year": 2026,
+          "duration_weeks": 10.0,
+          "program_start": "2026-05-23",
+          "program_end": "2026-07-30",
+          "application_open": "2025-11-01",
+          "application_deadline": "2026-02-10",
+          "deadline_text": "2026 shared application: Nov 1–Feb 10",
+          "status_code": "closed",
+          "status_text": "2026 closed; 2027 cycle expected Nov–Feb",
+          "stipend_total_usd": 5000.0,
+          "stipend_weekly_usd": null,
+          "housing_status": "yes",
+          "housing_details": "Campus housing",
+          "meals_status": "yes",
+          "meals_details": "Meal support included",
+          "travel_status": "yes",
+          "travel_details": "Travel support included",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 3,
+            "cycle_id": 3,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduate; ≥2 semesters completed; ≥1 semester remaining after summer",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": 3.0,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 5,
+      "public_id": "SROP-MN",
+      "program_name": "Big Ten SROP – University of Minnesota",
+      "network_source": "Big Ten Academic Alliance SROP",
+      "program_type": "SROP / multidisciplinary summer research",
+      "location_scope": "On-site host campus",
+      "delivery_format": "In person",
+      "program_url": "https://btaa.org/resources-for/students/srop/campus-profiles",
+      "application_url": "https://apps.btaa.org/srop/apply",
+      "notes": "Shared SROP application permits selection of multiple participating universities; intended for students interested in PhD study.",
+      "active": 1,
+      "institution": {
+        "institution_id": 5,
+        "institution_slug": "university-of-minnesota-minneapolis-mn-us",
+        "institution_name": "University of Minnesota",
+        "institution_type": null,
+        "city": "Minneapolis",
+        "state_code": "MN",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 13,
+          "category_slug": "multidisciplinary",
+          "category_name": "Multidisciplinary",
+          "description": "Programs spanning STEM, social sciences, humanities, or other broad areas",
+          "sort_order": 13,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 1,
+          "tag_slug": "phd-oriented-research",
+          "tag_name": "PhD-oriented research",
+          "tag_group": "program_characteristic",
+          "description": null
+        },
+        {
+          "tag_id": 2,
+          "tag_slug": "stem",
+          "tag_name": "STEM",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 3,
+          "tag_slug": "social-sciences",
+          "tag_name": "Social sciences",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 4,
+          "tag_slug": "humanities",
+          "tag_name": "Humanities",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 5,
+          "tag_slug": "varies-by-host",
+          "tag_name": "Varies by host",
+          "tag_group": "scope",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 5,
+          "opportunity_id": 5,
+          "cycle_year": 2026,
+          "duration_weeks": null,
+          "program_start": null,
+          "program_end": null,
+          "application_open": "2025-11-01",
+          "application_deadline": "2026-02-10",
+          "deadline_text": "2026 shared application: Nov 1–Feb 10",
+          "status_code": "closed",
+          "status_text": "2026 closed; 2027 cycle expected Nov–Feb",
+          "stipend_total_usd": null,
+          "stipend_weekly_usd": null,
+          "housing_status": "varies",
+          "housing_details": "TBD in 2026 benefit table",
+          "meals_status": "varies",
+          "meals_details": "TBD in 2026 benefit table",
+          "travel_status": "varies",
+          "travel_details": "TBD in 2026 benefit table",
+          "academic_credit_status": "varies",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 5,
+            "cycle_id": 5,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduate; ≥2 semesters completed; ≥1 semester remaining after summer",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": 3.0,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 4,
+      "public_id": "SROP-MSU",
+      "program_name": "Big Ten SROP – Michigan State University",
+      "network_source": "Big Ten Academic Alliance SROP",
+      "program_type": "SROP / multidisciplinary summer research",
+      "location_scope": "On-site host campus",
+      "delivery_format": "In person",
+      "program_url": "https://btaa.org/resources-for/students/srop/campus-profiles",
+      "application_url": "https://apps.btaa.org/srop/apply",
+      "notes": "Shared SROP application permits selection of multiple participating universities; intended for students interested in PhD study.",
+      "active": 1,
+      "institution": {
+        "institution_id": 4,
+        "institution_slug": "michigan-state-university-east-lansing-mi-us",
+        "institution_name": "Michigan State University",
+        "institution_type": null,
+        "city": "East Lansing",
+        "state_code": "MI",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 13,
+          "category_slug": "multidisciplinary",
+          "category_name": "Multidisciplinary",
+          "description": "Programs spanning STEM, social sciences, humanities, or other broad areas",
+          "sort_order": 13,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 1,
+          "tag_slug": "phd-oriented-research",
+          "tag_name": "PhD-oriented research",
+          "tag_group": "program_characteristic",
+          "description": null
+        },
+        {
+          "tag_id": 2,
+          "tag_slug": "stem",
+          "tag_name": "STEM",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 3,
+          "tag_slug": "social-sciences",
+          "tag_name": "Social sciences",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 4,
+          "tag_slug": "humanities",
+          "tag_name": "Humanities",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 5,
+          "tag_slug": "varies-by-host",
+          "tag_name": "Varies by host",
+          "tag_group": "scope",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 4,
+          "opportunity_id": 4,
+          "cycle_year": 2026,
+          "duration_weeks": 10.0,
+          "program_start": "2026-05-15",
+          "program_end": "2026-07-25",
+          "application_open": "2025-11-01",
+          "application_deadline": "2026-02-10",
+          "deadline_text": "2026 shared application: Nov 1–Feb 10",
+          "status_code": "closed",
+          "status_text": "2026 closed; 2027 cycle expected Nov–Feb",
+          "stipend_total_usd": 5000.0,
+          "stipend_weekly_usd": null,
+          "housing_status": "yes",
+          "housing_details": "Campus housing",
+          "meals_status": "yes",
+          "meals_details": "Meal support included",
+          "travel_status": "yes",
+          "travel_details": "Travel support included",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 4,
+            "cycle_id": 4,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduate; ≥2 semesters completed; ≥1 semester remaining after summer",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": 3.0,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 6,
+      "public_id": "SROP-NE",
+      "program_name": "Big Ten SROP – University of Nebraska–Lincoln",
+      "network_source": "Big Ten Academic Alliance SROP",
+      "program_type": "SROP / multidisciplinary summer research",
+      "location_scope": "On-site host campus",
+      "delivery_format": "In person",
+      "program_url": "https://btaa.org/resources-for/students/srop/campus-profiles",
+      "application_url": "https://apps.btaa.org/srop/apply",
+      "notes": "Shared SROP application permits selection of multiple participating universities; intended for students interested in PhD study.",
+      "active": 1,
+      "institution": {
+        "institution_id": 6,
+        "institution_slug": "university-of-nebraskalincoln-lincoln-ne-us",
+        "institution_name": "University of Nebraska–Lincoln",
+        "institution_type": null,
+        "city": "Lincoln",
+        "state_code": "NE",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 13,
+          "category_slug": "multidisciplinary",
+          "category_name": "Multidisciplinary",
+          "description": "Programs spanning STEM, social sciences, humanities, or other broad areas",
+          "sort_order": 13,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 1,
+          "tag_slug": "phd-oriented-research",
+          "tag_name": "PhD-oriented research",
+          "tag_group": "program_characteristic",
+          "description": null
+        },
+        {
+          "tag_id": 2,
+          "tag_slug": "stem",
+          "tag_name": "STEM",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 3,
+          "tag_slug": "social-sciences",
+          "tag_name": "Social sciences",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 4,
+          "tag_slug": "humanities",
+          "tag_name": "Humanities",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 5,
+          "tag_slug": "varies-by-host",
+          "tag_name": "Varies by host",
+          "tag_group": "scope",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 6,
+          "opportunity_id": 6,
+          "cycle_year": 2026,
+          "duration_weeks": 9.3,
+          "program_start": "2026-06-03",
+          "program_end": "2026-08-06",
+          "application_open": "2025-11-01",
+          "application_deadline": "2026-02-10",
+          "deadline_text": "2026 shared application: Nov 1–Feb 10",
+          "status_code": "closed",
+          "status_text": "2026 closed; 2027 cycle expected Nov–Feb",
+          "stipend_total_usd": 6000.0,
+          "stipend_weekly_usd": null,
+          "housing_status": "yes",
+          "housing_details": "Campus housing",
+          "meals_status": "yes",
+          "meals_details": "Meal support included",
+          "travel_status": "yes",
+          "travel_details": "Travel support included",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 6,
+            "cycle_id": 6,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduate; ≥2 semesters completed; ≥1 semester remaining after summer",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": 3.0,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 7,
+      "public_id": "SROP-NU",
+      "program_name": "Big Ten SROP – Northwestern University",
+      "network_source": "Big Ten Academic Alliance SROP",
+      "program_type": "SROP / multidisciplinary summer research",
+      "location_scope": "On-site host campus",
+      "delivery_format": "In person",
+      "program_url": "https://btaa.org/resources-for/students/srop/campus-profiles",
+      "application_url": "https://apps.btaa.org/srop/apply",
+      "notes": "Shared SROP application permits selection of multiple participating universities; intended for students interested in PhD study.",
+      "active": 1,
+      "institution": {
+        "institution_id": 7,
+        "institution_slug": "northwestern-university-evanston-il-us",
+        "institution_name": "Northwestern University",
+        "institution_type": null,
+        "city": "Evanston",
+        "state_code": "IL",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 13,
+          "category_slug": "multidisciplinary",
+          "category_name": "Multidisciplinary",
+          "description": "Programs spanning STEM, social sciences, humanities, or other broad areas",
+          "sort_order": 13,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 1,
+          "tag_slug": "phd-oriented-research",
+          "tag_name": "PhD-oriented research",
+          "tag_group": "program_characteristic",
+          "description": null
+        },
+        {
+          "tag_id": 2,
+          "tag_slug": "stem",
+          "tag_name": "STEM",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 3,
+          "tag_slug": "social-sciences",
+          "tag_name": "Social sciences",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 4,
+          "tag_slug": "humanities",
+          "tag_name": "Humanities",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 5,
+          "tag_slug": "varies-by-host",
+          "tag_name": "Varies by host",
+          "tag_group": "scope",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 7,
+          "opportunity_id": 7,
+          "cycle_year": 2026,
+          "duration_weeks": 8.0,
+          "program_start": "2026-06-15",
+          "program_end": "2026-08-07",
+          "application_open": "2025-11-01",
+          "application_deadline": "2026-02-10",
+          "deadline_text": "2026 shared application: Nov 1–Feb 10",
+          "status_code": "closed",
+          "status_text": "2026 closed; 2027 cycle expected Nov–Feb",
+          "stipend_total_usd": 6500.0,
+          "stipend_weekly_usd": null,
+          "housing_status": "yes",
+          "housing_details": "Campus housing",
+          "meals_status": "partial",
+          "meals_details": "Partial meal support",
+          "travel_status": "yes",
+          "travel_details": "Travel support included",
+          "academic_credit_status": "partial",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 7,
+            "cycle_id": 7,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduate; ≥2 semesters completed; ≥1 semester remaining after summer",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": 3.0,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 8,
+      "public_id": "SROP-OSU",
+      "program_name": "Big Ten SROP – The Ohio State University",
+      "network_source": "Big Ten Academic Alliance SROP",
+      "program_type": "SROP / multidisciplinary summer research",
+      "location_scope": "On-site host campus",
+      "delivery_format": "In person",
+      "program_url": "https://btaa.org/resources-for/students/srop/campus-profiles",
+      "application_url": "https://apps.btaa.org/srop/apply",
+      "notes": "Shared SROP application permits selection of multiple participating universities; intended for students interested in PhD study.",
+      "active": 1,
+      "institution": {
+        "institution_id": 8,
+        "institution_slug": "the-ohio-state-university-columbus-oh-us",
+        "institution_name": "The Ohio State University",
+        "institution_type": null,
+        "city": "Columbus",
+        "state_code": "OH",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 13,
+          "category_slug": "multidisciplinary",
+          "category_name": "Multidisciplinary",
+          "description": "Programs spanning STEM, social sciences, humanities, or other broad areas",
+          "sort_order": 13,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 1,
+          "tag_slug": "phd-oriented-research",
+          "tag_name": "PhD-oriented research",
+          "tag_group": "program_characteristic",
+          "description": null
+        },
+        {
+          "tag_id": 2,
+          "tag_slug": "stem",
+          "tag_name": "STEM",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 3,
+          "tag_slug": "social-sciences",
+          "tag_name": "Social sciences",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 4,
+          "tag_slug": "humanities",
+          "tag_name": "Humanities",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 5,
+          "tag_slug": "varies-by-host",
+          "tag_name": "Varies by host",
+          "tag_group": "scope",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 8,
+          "opportunity_id": 8,
+          "cycle_year": 2026,
+          "duration_weeks": 8.5,
+          "program_start": "2026-05-26",
+          "program_end": "2026-07-24",
+          "application_open": "2025-11-01",
+          "application_deadline": "2026-02-10",
+          "deadline_text": "2026 shared application: Nov 1–Feb 10",
+          "status_code": "closed",
+          "status_text": "2026 closed; 2027 cycle expected Nov–Feb",
+          "stipend_total_usd": 6000.0,
+          "stipend_weekly_usd": null,
+          "housing_status": "yes",
+          "housing_details": "Campus housing",
+          "meals_status": "yes",
+          "meals_details": "Meal support included",
+          "travel_status": "yes",
+          "travel_details": "Travel support included",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 8,
+            "cycle_id": 8,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduate; ≥2 semesters completed; ≥1 semester remaining after summer",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": 3.0,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 9,
+      "public_id": "SROP-PSU",
+      "program_name": "Big Ten SROP – Penn State",
+      "network_source": "Big Ten Academic Alliance SROP",
+      "program_type": "SROP / multidisciplinary summer research",
+      "location_scope": "On-site host campus",
+      "delivery_format": "In person",
+      "program_url": "https://btaa.org/resources-for/students/srop/campus-profiles",
+      "application_url": "https://apps.btaa.org/srop/apply",
+      "notes": "Shared SROP application permits selection of multiple participating universities; intended for students interested in PhD study.",
+      "active": 1,
+      "institution": {
+        "institution_id": 9,
+        "institution_slug": "penn-state-university-park-pa-us",
+        "institution_name": "Penn State",
+        "institution_type": null,
+        "city": "University Park",
+        "state_code": "PA",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 13,
+          "category_slug": "multidisciplinary",
+          "category_name": "Multidisciplinary",
+          "description": "Programs spanning STEM, social sciences, humanities, or other broad areas",
+          "sort_order": 13,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 1,
+          "tag_slug": "phd-oriented-research",
+          "tag_name": "PhD-oriented research",
+          "tag_group": "program_characteristic",
+          "description": null
+        },
+        {
+          "tag_id": 2,
+          "tag_slug": "stem",
+          "tag_name": "STEM",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 3,
+          "tag_slug": "social-sciences",
+          "tag_name": "Social sciences",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 4,
+          "tag_slug": "humanities",
+          "tag_name": "Humanities",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 5,
+          "tag_slug": "varies-by-host",
+          "tag_name": "Varies by host",
+          "tag_group": "scope",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 9,
+          "opportunity_id": 9,
+          "cycle_year": 2026,
+          "duration_weeks": 8.0,
+          "program_start": "2026-05-28",
+          "program_end": "2026-07-24",
+          "application_open": "2025-11-01",
+          "application_deadline": "2026-02-10",
+          "deadline_text": "2026 shared application: Nov 1–Feb 10",
+          "status_code": "closed",
+          "status_text": "2026 closed; 2027 cycle expected Nov–Feb",
+          "stipend_total_usd": 4000.0,
+          "stipend_weekly_usd": null,
+          "housing_status": "yes",
+          "housing_details": "Campus housing",
+          "meals_status": "yes",
+          "meals_details": "Meal support included",
+          "travel_status": "yes",
+          "travel_details": "Travel support included",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 9,
+            "cycle_id": 9,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduate; ≥2 semesters completed; ≥1 semester remaining after summer",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": 3.0,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 10,
+      "public_id": "SROP-PU",
+      "program_name": "Big Ten SROP – Purdue University",
+      "network_source": "Big Ten Academic Alliance SROP",
+      "program_type": "SROP / multidisciplinary summer research",
+      "location_scope": "On-site host campus",
+      "delivery_format": "In person",
+      "program_url": "https://btaa.org/resources-for/students/srop/campus-profiles",
+      "application_url": "https://apps.btaa.org/srop/apply",
+      "notes": "Shared SROP application permits selection of multiple participating universities; intended for students interested in PhD study.",
+      "active": 1,
+      "institution": {
+        "institution_id": 10,
+        "institution_slug": "purdue-university-west-lafayette-in-us",
+        "institution_name": "Purdue University",
+        "institution_type": null,
+        "city": "West Lafayette",
+        "state_code": "IN",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 13,
+          "category_slug": "multidisciplinary",
+          "category_name": "Multidisciplinary",
+          "description": "Programs spanning STEM, social sciences, humanities, or other broad areas",
+          "sort_order": 13,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 1,
+          "tag_slug": "phd-oriented-research",
+          "tag_name": "PhD-oriented research",
+          "tag_group": "program_characteristic",
+          "description": null
+        },
+        {
+          "tag_id": 2,
+          "tag_slug": "stem",
+          "tag_name": "STEM",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 3,
+          "tag_slug": "social-sciences",
+          "tag_name": "Social sciences",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 4,
+          "tag_slug": "humanities",
+          "tag_name": "Humanities",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 5,
+          "tag_slug": "varies-by-host",
+          "tag_name": "Varies by host",
+          "tag_group": "scope",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 10,
+          "opportunity_id": 10,
+          "cycle_year": 2026,
+          "duration_weeks": 8.0,
+          "program_start": "2026-06-07",
+          "program_end": "2026-07-31",
+          "application_open": "2025-11-01",
+          "application_deadline": "2026-02-10",
+          "deadline_text": "2026 shared application: Nov 1–Feb 10",
+          "status_code": "closed",
+          "status_text": "2026 closed; 2027 cycle expected Nov–Feb",
+          "stipend_total_usd": 4500.0,
+          "stipend_weekly_usd": null,
+          "housing_status": "yes",
+          "housing_details": "Campus housing",
+          "meals_status": "yes",
+          "meals_details": "Meal support included",
+          "travel_status": "yes",
+          "travel_details": "Travel support included",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 10,
+            "cycle_id": 10,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduate; ≥2 semesters completed; ≥1 semester remaining after summer",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": 3.0,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 11,
+      "public_id": "SROP-RU",
+      "program_name": "Big Ten SROP – Rutgers University–New Brunswick",
+      "network_source": "Big Ten Academic Alliance SROP",
+      "program_type": "SROP / multidisciplinary summer research",
+      "location_scope": "On-site host campus",
+      "delivery_format": "In person",
+      "program_url": "https://btaa.org/resources-for/students/srop/campus-profiles",
+      "application_url": "https://apps.btaa.org/srop/apply",
+      "notes": "Shared SROP application permits selection of multiple participating universities; intended for students interested in PhD study.",
+      "active": 1,
+      "institution": {
+        "institution_id": 11,
+        "institution_slug": "rutgers-universitynew-brunswick-new-brunswick-nj-us",
+        "institution_name": "Rutgers University–New Brunswick",
+        "institution_type": null,
+        "city": "New Brunswick",
+        "state_code": "NJ",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 13,
+          "category_slug": "multidisciplinary",
+          "category_name": "Multidisciplinary",
+          "description": "Programs spanning STEM, social sciences, humanities, or other broad areas",
+          "sort_order": 13,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 1,
+          "tag_slug": "phd-oriented-research",
+          "tag_name": "PhD-oriented research",
+          "tag_group": "program_characteristic",
+          "description": null
+        },
+        {
+          "tag_id": 2,
+          "tag_slug": "stem",
+          "tag_name": "STEM",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 3,
+          "tag_slug": "social-sciences",
+          "tag_name": "Social sciences",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 4,
+          "tag_slug": "humanities",
+          "tag_name": "Humanities",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 5,
+          "tag_slug": "varies-by-host",
+          "tag_name": "Varies by host",
+          "tag_group": "scope",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 11,
+          "opportunity_id": 11,
+          "cycle_year": 2026,
+          "duration_weeks": 9.5,
+          "program_start": "2026-05-26",
+          "program_end": "2026-07-31",
+          "application_open": "2025-11-01",
+          "application_deadline": "2026-02-10",
+          "deadline_text": "2026 shared application: Nov 1–Feb 10",
+          "status_code": "closed",
+          "status_text": "2026 closed; 2027 cycle expected Nov–Feb",
+          "stipend_total_usd": 6000.0,
+          "stipend_weekly_usd": null,
+          "housing_status": "yes",
+          "housing_details": "Campus housing",
+          "meals_status": "no",
+          "meals_details": "Meals not included",
+          "travel_status": "yes",
+          "travel_details": "Travel support included",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 11,
+            "cycle_id": 11,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduate; ≥2 semesters completed; ≥1 semester remaining after summer",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": 3.0,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 12,
+      "public_id": "SROP-UW",
+      "program_name": "Big Ten SROP – University of Wisconsin–Madison",
+      "network_source": "Big Ten Academic Alliance SROP",
+      "program_type": "SROP / multidisciplinary summer research",
+      "location_scope": "On-site host campus",
+      "delivery_format": "In person",
+      "program_url": "https://btaa.org/resources-for/students/srop/campus-profiles",
+      "application_url": "https://apps.btaa.org/srop/apply",
+      "notes": "Shared SROP application permits selection of multiple participating universities; intended for students interested in PhD study.",
+      "active": 1,
+      "institution": {
+        "institution_id": 12,
+        "institution_slug": "university-of-wisconsinmadison-madison-wi-us",
+        "institution_name": "University of Wisconsin–Madison",
+        "institution_type": null,
+        "city": "Madison",
+        "state_code": "WI",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 13,
+          "category_slug": "multidisciplinary",
+          "category_name": "Multidisciplinary",
+          "description": "Programs spanning STEM, social sciences, humanities, or other broad areas",
+          "sort_order": 13,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 1,
+          "tag_slug": "phd-oriented-research",
+          "tag_name": "PhD-oriented research",
+          "tag_group": "program_characteristic",
+          "description": null
+        },
+        {
+          "tag_id": 2,
+          "tag_slug": "stem",
+          "tag_name": "STEM",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 3,
+          "tag_slug": "social-sciences",
+          "tag_name": "Social sciences",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 4,
+          "tag_slug": "humanities",
+          "tag_name": "Humanities",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 5,
+          "tag_slug": "varies-by-host",
+          "tag_name": "Varies by host",
+          "tag_group": "scope",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 12,
+          "opportunity_id": 12,
+          "cycle_year": 2026,
+          "duration_weeks": null,
+          "program_start": null,
+          "program_end": null,
+          "application_open": "2025-11-01",
+          "application_deadline": "2026-02-10",
+          "deadline_text": "2026 shared application: Nov 1–Feb 10",
+          "status_code": "closed",
+          "status_text": "2026 closed; 2027 cycle expected Nov–Feb",
+          "stipend_total_usd": null,
+          "stipend_weekly_usd": null,
+          "housing_status": "varies",
+          "housing_details": "Varies by program",
+          "meals_status": "varies",
+          "meals_details": "Varies by program",
+          "travel_status": "varies",
+          "travel_details": "Varies by program",
+          "academic_credit_status": "varies",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 12,
+            "cycle_id": 12,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduate; ≥2 semesters completed; ≥1 semester remaining after summer",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": 3.0,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 33,
+      "public_id": "UCLA-RIPS",
+      "program_name": "Research in Industrial Projects for Students (RIPS-LA)",
+      "network_source": "UCLA / IPAM",
+      "program_type": "Industrial mathematics research program",
+      "location_scope": "UCLA / IPAM",
+      "delivery_format": "In person",
+      "program_url": "https://www.ipam.ucla.edu/programs/student-research-programs/research-in-industrial-projects-for-students-rips-2026-los-angeles/",
+      "application_url": "https://www.ipam.ucla.edu/programs/student-research-programs/research-in-industrial-projects-for-students-rips-2026-los-angeles/",
+      "notes": "Team-based, sponsor-driven projects; useful category outside traditional wet-lab REUs.",
+      "active": 1,
+      "institution": {
+        "institution_id": 31,
+        "institution_slug": "ucla-institute-for-pure-applied-mathematics-ipam-los-angeles-ca-us",
+        "institution_name": "UCLA Institute for Pure & Applied Mathematics (IPAM)",
+        "institution_type": null,
+        "city": "Los Angeles",
+        "state_code": "CA",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 5,
+          "category_slug": "mathematics-statistics",
+          "category_name": "Mathematics & Statistics",
+          "description": "Pure and applied mathematics, statistics, and quantitative modeling",
+          "sort_order": 5,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 9,
+          "tag_slug": "computing",
+          "tag_name": "computing",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 23,
+          "tag_slug": "data-science",
+          "tag_name": "Data science",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 50,
+          "tag_slug": "statistics",
+          "tag_name": "statistics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 80,
+          "tag_slug": "applied-mathematics",
+          "tag_name": "Applied mathematics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 81,
+          "tag_slug": "optimization",
+          "tag_name": "optimization",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 82,
+          "tag_slug": "industry-research",
+          "tag_name": "industry research",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 33,
+          "opportunity_id": 33,
+          "cycle_year": 2026,
+          "duration_weeks": 8.5,
+          "program_start": "2026-06-22",
+          "program_end": "2026-08-21",
+          "application_open": null,
+          "application_deadline": "2026-02-10",
+          "deadline_text": "2026 deadline: Feb 10, 2026",
+          "status_code": "closed",
+          "status_text": "2026 closed; monitor for 2027",
+          "stipend_total_usd": null,
+          "stipend_weekly_usd": null,
+          "housing_status": "yes",
+          "housing_details": "Housing provided",
+          "meals_status": "yes",
+          "meals_details": "Meals provided/support included",
+          "travel_status": "yes",
+          "travel_details": "Travel allowance included",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 33,
+            "cycle_id": 33,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "Foreign students may be eligible if studying in the U.S.; verify current cycle",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Undergraduates; graduating seniors may be eligible",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": null,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    },
+    {
+      "opportunity_id": 20,
+      "public_id": "UPENN-SUIP",
+      "program_name": "Summer Undergraduate Internship Program (SUIP)",
+      "network_source": "University program",
+      "program_type": "SURP / biomedical summer research",
+      "location_scope": "Penn campus",
+      "delivery_format": "In person",
+      "program_url": "https://www.med.upenn.edu/research-trainee-affairs/suip/",
+      "application_url": "https://www.med.upenn.edu/research-trainee-affairs/suip/",
+      "notes": "Strong biomedical option with unusually complete 2027 details already posted.",
+      "active": 1,
+      "institution": {
+        "institution_id": 20,
+        "institution_slug": "university-of-pennsylvania-perelman-school-of-medicine-philadelphia-pa-us",
+        "institution_name": "University of Pennsylvania Perelman School of Medicine",
+        "institution_type": null,
+        "city": "Philadelphia",
+        "state_code": "PA",
+        "country_code": "US",
+        "latitude": null,
+        "longitude": null,
+        "website_url": null
+      },
+      "categories": [
+        {
+          "category_id": 1,
+          "category_slug": "biomedical-health",
+          "category_name": "Biomedical & Health",
+          "description": "Human health, medicine, public health, and biomedical research",
+          "sort_order": 1,
+          "is_primary": true
+        }
+      ],
+      "tags": [
+        {
+          "tag_id": 14,
+          "tag_slug": "biomedical-sciences",
+          "tag_name": "Biomedical sciences",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 15,
+          "tag_slug": "neuroscience",
+          "tag_name": "Neuroscience",
+          "tag_group": "discipline",
+          "description": null
+        },
+        {
+          "tag_id": 16,
+          "tag_slug": "genetics",
+          "tag_name": "genetics",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 17,
+          "tag_slug": "cancer",
+          "tag_name": "cancer",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 18,
+          "tag_slug": "immunology",
+          "tag_name": "immunology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 39,
+          "tag_slug": "cell-biology",
+          "tag_name": "cell biology",
+          "tag_group": "research_topic",
+          "description": null
+        },
+        {
+          "tag_id": 40,
+          "tag_slug": "related-fields",
+          "tag_name": "related fields",
+          "tag_group": "research_topic",
+          "description": null
+        }
+      ],
+      "cycles": [
+        {
+          "cycle_id": 20,
+          "opportunity_id": 20,
+          "cycle_year": 2027,
+          "duration_weeks": 10.0,
+          "program_start": "2027-06-07",
+          "program_end": "2027-08-13",
+          "application_open": "2026-10-01",
+          "application_deadline": "2027-02-01",
+          "deadline_text": "2027 application: Oct 1, 2026–Feb 1, 2027",
+          "status_code": "upcoming",
+          "status_text": "2027 upcoming; dates and deadline posted",
+          "stipend_total_usd": 5500.0,
+          "stipend_weekly_usd": 550.0,
+          "housing_status": "yes",
+          "housing_details": "On-campus housing included",
+          "meals_status": "yes",
+          "meals_details": "Meal plan included",
+          "travel_status": "yes",
+          "travel_details": "One round-trip transportation award included",
+          "academic_credit_status": "no",
+          "last_verified": "2026-08-31",
+          "data_confidence": "High",
+          "eligibility": {
+            "eligibility_rule_id": 20,
+            "cycle_id": 20,
+            "external_applicants_status": "yes",
+            "citizenship_rule_text": "U.S. citizen or permanent resident",
+            "citizenship_us_citizen": null,
+            "citizenship_permanent_resident": null,
+            "citizenship_international": null,
+            "eligible_years_text": "Four-year college students enrolled the following fall; preference for sophomores/juniors",
+            "first_year_eligible": null,
+            "sophomore_eligible": null,
+            "junior_eligible": null,
+            "senior_eligible": null,
+            "graduating_senior_eligible": null,
+            "min_gpa": null,
+            "enrolled_required": null,
+            "graduation_rule_text": null,
+            "institution_type_rule_text": null,
+            "two_year_institution_eligible": null,
+            "four_year_institution_eligible": null,
+            "degree_seeking_required": null,
+            "other_rule_text": null,
+            "parse_status": "needs_review"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "category_id": 1,
+    "category_slug": "biomedical-health",
+    "category_name": "Biomedical & Health",
+    "description": "Human health, medicine, public health, and biomedical research",
+    "sort_order": 1
+  },
+  {
+    "category_id": 2,
+    "category_slug": "life-sciences",
+    "category_name": "Life Sciences",
+    "description": "Biology, molecular and cellular sciences, ecology, and related life sciences",
+    "sort_order": 2
+  },
+  {
+    "category_id": 3,
+    "category_slug": "neuroscience-cognitive",
+    "category_name": "Neuroscience & Cognitive Science",
+    "description": "Neural systems, behavior, cognition, and brain health",
+    "sort_order": 3
+  },
+  {
+    "category_id": 4,
+    "category_slug": "computer-data-ai",
+    "category_name": "Computer Science / Data / AI",
+    "description": "Computing, data science, machine learning, and artificial intelligence",
+    "sort_order": 4
+  },
+  {
+    "category_id": 5,
+    "category_slug": "mathematics-statistics",
+    "category_name": "Mathematics & Statistics",
+    "description": "Pure and applied mathematics, statistics, and quantitative modeling",
+    "sort_order": 5
+  },
+  {
+    "category_id": 6,
+    "category_slug": "physics-astronomy",
+    "category_name": "Physics & Astronomy",
+    "description": "Physics, astronomy, and space sciences",
+    "sort_order": 6
+  },
+  {
+    "category_id": 7,
+    "category_slug": "chemistry-materials",
+    "category_name": "Chemistry & Materials",
+    "description": "Chemistry, chemical science, and materials research",
+    "sort_order": 7
+  },
+  {
+    "category_id": 8,
+    "category_slug": "engineering",
+    "category_name": "Engineering",
+    "description": "Engineering research and design across disciplines",
+    "sort_order": 8
+  },
+  {
+    "category_id": 9,
+    "category_slug": "earth-environment-ocean",
+    "category_name": "Earth / Environment / Ocean",
+    "description": "Earth systems, environmental science, climate, and ocean research",
+    "sort_order": 9
+  },
+  {
+    "category_id": 10,
+    "category_slug": "social-behavioral",
+    "category_name": "Social / Behavioral Sciences",
+    "description": "Psychology, sociology, education, economics, and related social sciences",
+    "sort_order": 10
+  },
+  {
+    "category_id": 11,
+    "category_slug": "humanities-arts",
+    "category_name": "Humanities & Arts",
+    "description": "Humanities, arts, languages, and humanistic scholarship",
+    "sort_order": 11
+  },
+  {
+    "category_id": 12,
+    "category_slug": "interdisciplinary-stem",
+    "category_name": "Interdisciplinary STEM",
+    "description": "Programs intentionally spanning multiple STEM disciplines",
+    "sort_order": 12
+  },
+  {
+    "category_id": 13,
+    "category_slug": "multidisciplinary",
+    "category_name": "Multidisciplinary",
+    "description": "Programs spanning STEM, social sciences, humanities, or other broad areas",
+    "sort_order": 13
+  }
+]
