@@ -1,5 +1,13 @@
 .fellowship-shell { max-width: 1440px; width: 100%; }
 .questionnaire-hero, .catalog-status, .questionnaire-panel { max-width: 1120px; margin-left: auto; margin-right: auto; }
+.radio-question > p { font-size: 0.92rem; font-weight: 500; margin: 0 0 0.5rem; }
+.radio-options { display: grid; gap: 0.5rem; }
+.radio-options label { display: flex; align-items: center; gap: 0.6rem; min-height: 42px; padding: 0.55rem 0.7rem; border: 1px solid #d2c9cb; border-radius: 9px; background: #fff; font-size: 0.82rem; font-weight: 400; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+.radio-options label:hover { border-color: #b98896; background: #fcf7f8; }
+.radio-options label:has(input:checked) { border-color: var(--red); background: #f8e9ed; }
+.radio-options input[type="radio"] { width: 18px; height: 18px; margin: 0; flex: 0 0 auto; accent-color: var(--red); cursor: pointer; }
+.radio-options label:has(input:focus-visible) { outline: 3px solid rgba(179, 8, 56, 0.15); outline-offset: 2px; }
+.compact-options { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .availability-summary { margin: 0 0 1.25rem; font-weight: 700; color: var(--text); }
 .explorer-layout {
   display: grid;
@@ -81,6 +89,7 @@
 }
 
 @media (max-width: 720px) {
+  .compact-options { grid-template-columns: 1fr; }
   .opportunity-results, .preference-filters { grid-template-columns: 1fr; }
   .opportunity-toolbar { align-items: start; flex-direction: column; }
   .sort-control, .sort-control select { width: 100%; }
