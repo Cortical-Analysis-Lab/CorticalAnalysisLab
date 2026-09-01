@@ -1,7 +1,6 @@
 .fellowship-shell { max-width: 1440px; width: 100%; }
 .questionnaire-hero, .catalog-status, .questionnaire-panel { max-width: 1120px; margin-left: auto; margin-right: auto; }
-.result-summary.two-outcomes { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 720px; }
-.eligibility-caveat { margin: 1rem 0 2rem; color: var(--gray); font-size: 0.82rem; max-width: 760px; }
+.availability-summary { margin: 0 0 1.25rem; font-weight: 700; color: var(--text); }
 .explorer-layout {
   display: grid;
   grid-template-columns: clamp(220px, 19vw, 275px) minmax(0, 1fr);
@@ -82,7 +81,6 @@
 }
 
 @media (max-width: 720px) {
-  .result-summary.two-outcomes { grid-template-columns: 1fr; }
   .opportunity-results, .preference-filters { grid-template-columns: 1fr; }
   .opportunity-toolbar { align-items: start; flex-direction: column; }
   .sort-control, .sort-control select { width: 100%; }

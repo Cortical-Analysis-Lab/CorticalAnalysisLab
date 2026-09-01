@@ -8,9 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/fellowship-database.css">
-  <link rel="stylesheet" href="assets/fellowship-results.css?v=2">
+  <link rel="stylesheet" href="assets/fellowship-results.css?v=3">
   <script defer src="assets/site.js?v=4"></script>
-  <script defer src="assets/fellowship-questionnaire.js?v=4"></script>
+  <script defer src="assets/fellowship-questionnaire.js?v=5"></script>
 </head>
 <body>
   <nav>
@@ -103,15 +103,11 @@
 
     <section id="eligibility-results" class="eligibility-results" aria-labelledby="results-heading" hidden>
       <div class="results-heading-row">
-        <div><p class="step-label">Step 2 of 2</p><h2 id="results-heading">Your eligibility results</h2></div>
+        <div><p class="step-label">Step 2 of 2</p><h2 id="results-heading">Available Opportunities</h2></div>
         <button id="edit-answers" class="secondary-action" type="button">Go Back</button>
       </div>
       <p id="results-explanation" class="results-explanation"></p>
-      <div class="result-summary two-outcomes" aria-live="polite">
-        <div class="summary-card eligible"><strong id="potential-count">0</strong><span>Potentially eligible</span></div>
-        <div class="summary-card ineligible"><strong id="not-eligible-count">0</strong><span>Not eligible</span></div>
-      </div>
-      <p class="eligibility-caveat">Potentially eligible means no known hard requirement conflicts with your answers. Always confirm N/A or incomplete requirements on the official program page.</p>
+      <p id="availability-summary" class="availability-summary" aria-live="polite"></p>
       <div class="explorer-layout">
         <aside class="preference-filters" aria-labelledby="preference-heading">
           <p class="filter-kicker">Preferences</p>

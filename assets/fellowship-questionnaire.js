@@ -160,8 +160,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!form.reportValidity()) return;
     const answers = new FormData(form);
     evaluatedResults = opportunities.map(opportunity => ({opportunity, evaluation: evaluate(opportunity, answers)}));
-    document.getElementById("potential-count").textContent = evaluatedResults.filter(item => item.evaluation.state !== "ineligible").length;
-    document.getElementById("not-eligible-count").textContent = evaluatedResults.filter(item => item.evaluation.state === "ineligible").length;
+    const availableCount = evaluatedResults.filter(item => item.evaluation.state !== "ineligible").length;
+    document.getElementById("availability-summary").textContent = `${availableCount} eligible opportunities out of ${evaluatedResults.length} total available`;
     document.getElementById("results-explanation").textContent = "Your opportunity list includes programs with no known conflicts. N/A means a requirement or program detail has not yet been verified.";
     renderResults();
     panel.hidden = true;
