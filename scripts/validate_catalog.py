@@ -19,6 +19,11 @@ def validate(database: Path):
     foreign_keys = connection.execute("PRAGMA foreign_key_check").fetchall()
     if foreign_keys:
         errors.append(f"Foreign-key violations: {len(foreign_keys)}")
+    invalid_supported_fields = connection.execute(
+        "SELECT COUNT(*) FROM source_verifications WHERE fields_supported IS NOT NULL AND NOT json_valid(fields_supported)"
+    ).fetchone()[0]
+    if invalid_supported_fields:
+        errors.append(f"Invalid fields_supported JSON values: {invalid_supported_fields}")
 
     for row in connection.execute("SELECT public_id, program_name, program_url, application_url FROM opportunities ORDER BY public_id"):
         if not row["program_name"]:
@@ -56,6 +61,8 @@ def validate(database: Path):
             errors.append(f"{label}: program_end precedes program_start")
         if row["application_open"] and row["application_deadline"] and row["application_deadline"] < row["application_open"]:
             errors.append(f"{label}: application_deadline precedes application_open")
+        if row["application_url"] and not valid_url(row["application_url"]):
+            errors.append(f"{label}: invalid cycle application_url: {row['application_url']}")
         if row["parse_status"] == "needs_review":
             warnings.append(f"{label}: eligibility text needs structured review")
 
@@ -69,7 +76,7 @@ def validate(database: Path):
             errors.append(f"{count} {label}")
     counts = {
         table: connection.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0]
-        for table in ("institutions", "opportunities", "program_cycles", "eligibility_rules", "research_categories", "research_tags", "sources", "source_verifications")
+        for table in ("institutions", "opportunities", "program_cycles", "eligibility_rules", "research_categories", "research_tags", "research_modes", "opportunity_research_modes", "sources", "source_verifications")
     }
     connection.close()
     return {"valid": not errors, "counts": counts, "errors": errors, "warnings": warnings}

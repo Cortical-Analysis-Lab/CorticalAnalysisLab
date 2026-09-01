@@ -14,7 +14,7 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DB = ROOT / "database" / "research_opportunities.sqlite"
 SCHEMA = ROOT / "schema" / "schema.sql"
-IMPORTER_VERSION = "1.0.0"
+IMPORTER_VERSION = "1.1.0"
 
 CATEGORIES = [
     ("biomedical-health", "Biomedical & Health", "Human health, medicine, public health, and biomedical research"),
@@ -49,6 +49,65 @@ TAG_ALIASES = {
     "varies by host": ("scope", "Varies by host"),
     "varies by project": ("scope", "Varies by project"),
 }
+
+RESEARCH_MODES = [
+    ("wet_lab", "Wet lab", "Laboratory research involving biological, chemical, or physical materials"),
+    ("computational", "Computational", "Research centered on computation, software, simulation, or data"),
+    ("field", "Field research", "Research conducted primarily in natural or community settings"),
+    ("clinical", "Clinical", "Research involving clinical settings, populations, or health data"),
+    ("translational", "Translational", "Research connecting foundational findings to practical or clinical use"),
+    ("engineering_design", "Engineering / design", "Engineering, prototyping, systems, or design work"),
+    ("theoretical", "Theoretical", "Theory-focused or mathematical research"),
+    ("archival", "Archival", "Research centered on archives, collections, or historical records"),
+    ("qualitative", "Qualitative", "Interview, observational, textual, or other qualitative methods"),
+    ("quantitative", "Quantitative", "Statistical, mathematical, or other quantitative methods"),
+    ("mixed", "Mixed methods", "Programs explicitly combining multiple research modes"),
+]
+
+MODE_ALIASES = {
+    "wet lab": "wet_lab",
+    "wet_lab": "wet_lab",
+    "computational": "computational",
+    "computational research": "computational",
+    "field": "field",
+    "field research": "field",
+    "clinical": "clinical",
+    "clinical research": "clinical",
+    "translational": "translational",
+    "engineering/design": "engineering_design",
+    "engineering design": "engineering_design",
+    "theoretical": "theoretical",
+    "archival": "archival",
+    "qualitative": "qualitative",
+    "quantitative": "quantitative",
+    "mixed": "mixed",
+    "mixed methods": "mixed",
+}
+
+
+def research_modes_from_tag(value):
+    """Return modes stated explicitly in a reviewed tag; do not infer methods."""
+    normalized = (text_or_none(value) or "").lower().replace("_", " ")
+    modes = set()
+    if "computational" in normalized or normalized in {"computation", "computing"}:
+        modes.add("computational")
+    if "field research" in normalized:
+        modes.add("field")
+    if "clinical research" in normalized:
+        modes.add("clinical")
+    if "translational" in normalized:
+        modes.add("translational")
+    if "theoretical" in normalized:
+        modes.add("theoretical")
+    if "archival" in normalized:
+        modes.add("archival")
+    if "qualitative" in normalized:
+        modes.add("qualitative")
+    if "quantitative" in normalized:
+        modes.add("quantitative")
+    if "mixed method" in normalized:
+        modes.add("mixed")
+    return sorted(modes)
 
 
 def text_or_none(value):

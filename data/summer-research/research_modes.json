@@ -1,0 +1,68 @@
+[
+  {
+    "research_mode_id": 1,
+    "mode_code": "wet_lab",
+    "mode_name": "Wet lab",
+    "description": "Laboratory research involving biological, chemical, or physical materials"
+  },
+  {
+    "research_mode_id": 2,
+    "mode_code": "computational",
+    "mode_name": "Computational",
+    "description": "Research centered on computation, software, simulation, or data"
+  },
+  {
+    "research_mode_id": 3,
+    "mode_code": "field",
+    "mode_name": "Field research",
+    "description": "Research conducted primarily in natural or community settings"
+  },
+  {
+    "research_mode_id": 4,
+    "mode_code": "clinical",
+    "mode_name": "Clinical",
+    "description": "Research involving clinical settings, populations, or health data"
+  },
+  {
+    "research_mode_id": 5,
+    "mode_code": "translational",
+    "mode_name": "Translational",
+    "description": "Research connecting foundational findings to practical or clinical use"
+  },
+  {
+    "research_mode_id": 6,
+    "mode_code": "engineering_design",
+    "mode_name": "Engineering / design",
+    "description": "Engineering, prototyping, systems, or design work"
+  },
+  {
+    "research_mode_id": 7,
+    "mode_code": "theoretical",
+    "mode_name": "Theoretical",
+    "description": "Theory-focused or mathematical research"
+  },
+  {
+    "research_mode_id": 8,
+    "mode_code": "archival",
+    "mode_name": "Archival",
+    "description": "Research centered on archives, collections, or historical records"
+  },
+  {
+    "research_mode_id": 9,
+    "mode_code": "qualitative",
+    "mode_name": "Qualitative",
+    "description": "Interview, observational, textual, or other qualitative methods"
+  },
+  {
+    "research_mode_id": 10,
+    "mode_code": "quantitative",
+    "mode_name": "Quantitative",
+    "description": "Statistical, mathematical, or other quantitative methods"
+  },
+  {
+    "research_mode_id": 11,
+    "mode_code": "mixed",
+    "mode_name": "Mixed methods",
+    "description": "Programs explicitly combining multiple research modes"
+  }
+]

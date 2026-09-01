@@ -47,18 +47,19 @@ CREATE TABLE IF NOT EXISTS program_cycles (
     program_end TEXT,
     application_open TEXT,
     application_deadline TEXT,
+    application_url TEXT,
     deadline_text TEXT,
     status_code TEXT NOT NULL DEFAULT 'unknown' CHECK (status_code IN ('upcoming', 'open', 'closed', 'active', 'unknown')),
     status_text TEXT,
     stipend_total_usd REAL CHECK (stipend_total_usd IS NULL OR stipend_total_usd >= 0),
     stipend_weekly_usd REAL CHECK (stipend_weekly_usd IS NULL OR stipend_weekly_usd >= 0),
-    housing_status TEXT NOT NULL DEFAULT 'unknown',
+    housing_status TEXT NOT NULL DEFAULT 'unknown' CHECK (housing_status IN ('yes', 'no', 'partial', 'allowance', 'assistance', 'local', 'varies', 'unknown')),
     housing_details TEXT,
-    meals_status TEXT NOT NULL DEFAULT 'unknown',
+    meals_status TEXT NOT NULL DEFAULT 'unknown' CHECK (meals_status IN ('yes', 'no', 'partial', 'allowance', 'assistance', 'local', 'varies', 'unknown')),
     meals_details TEXT,
-    travel_status TEXT NOT NULL DEFAULT 'unknown',
+    travel_status TEXT NOT NULL DEFAULT 'unknown' CHECK (travel_status IN ('yes', 'no', 'partial', 'allowance', 'assistance', 'local', 'varies', 'unknown')),
     travel_details TEXT,
-    academic_credit_status TEXT NOT NULL DEFAULT 'unknown',
+    academic_credit_status TEXT NOT NULL DEFAULT 'unknown' CHECK (academic_credit_status IN ('yes', 'no', 'partial', 'allowance', 'assistance', 'local', 'varies', 'unknown')),
     last_verified TEXT,
     data_confidence TEXT,
     created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -87,6 +88,8 @@ CREATE TABLE IF NOT EXISTS eligibility_rules (
     two_year_institution_eligible INTEGER CHECK (two_year_institution_eligible IN (0, 1)),
     four_year_institution_eligible INTEGER CHECK (four_year_institution_eligible IN (0, 1)),
     degree_seeking_required INTEGER CHECK (degree_seeking_required IN (0, 1)),
+    prior_research_status TEXT NOT NULL DEFAULT 'unknown' CHECK (prior_research_status IN ('required', 'preferred', 'not_required', 'unknown')),
+    raw_eligibility_text TEXT,
     other_rule_text TEXT,
     parse_status TEXT NOT NULL DEFAULT 'needs_review' CHECK (parse_status IN ('reviewed', 'needs_review', 'not_applicable'))
 );
@@ -109,6 +112,14 @@ CREATE TABLE IF NOT EXISTS research_tags (
     active INTEGER NOT NULL DEFAULT 1 CHECK (active IN (0, 1))
 );
 
+CREATE TABLE IF NOT EXISTS research_modes (
+    research_mode_id INTEGER PRIMARY KEY,
+    mode_code TEXT NOT NULL UNIQUE CHECK (mode_code IN ('wet_lab', 'computational', 'field', 'clinical', 'translational', 'engineering_design', 'theoretical', 'archival', 'qualitative', 'quantitative', 'mixed')),
+    mode_name TEXT NOT NULL UNIQUE,
+    description TEXT,
+    active INTEGER NOT NULL DEFAULT 1 CHECK (active IN (0, 1))
+);
+
 CREATE TABLE IF NOT EXISTS opportunity_categories (
     opportunity_id INTEGER NOT NULL REFERENCES opportunities(opportunity_id) ON DELETE CASCADE,
     category_id INTEGER NOT NULL REFERENCES research_categories(category_id),
@@ -123,6 +134,14 @@ CREATE TABLE IF NOT EXISTS opportunity_tags (
     source_text TEXT,
     assignment_method TEXT NOT NULL DEFAULT 'imported',
     PRIMARY KEY (opportunity_id, tag_id)
+);
+
+CREATE TABLE IF NOT EXISTS opportunity_research_modes (
+    opportunity_id INTEGER NOT NULL REFERENCES opportunities(opportunity_id) ON DELETE CASCADE,
+    research_mode_id INTEGER NOT NULL REFERENCES research_modes(research_mode_id),
+    source_text TEXT,
+    assignment_method TEXT NOT NULL DEFAULT 'imported',
+    PRIMARY KEY (opportunity_id, research_mode_id)
 );
 
 CREATE TABLE IF NOT EXISTS sources (
@@ -174,6 +193,7 @@ CREATE INDEX IF NOT EXISTS idx_opportunities_institution ON opportunities(instit
 CREATE INDEX IF NOT EXISTS idx_cycles_year_status ON program_cycles(cycle_year, status_code);
 CREATE INDEX IF NOT EXISTS idx_cycles_deadline ON program_cycles(application_deadline);
 CREATE INDEX IF NOT EXISTS idx_eligibility_cycle ON eligibility_rules(cycle_id);
+CREATE INDEX IF NOT EXISTS idx_opportunity_modes_mode ON opportunity_research_modes(research_mode_id, opportunity_id);
 CREATE INDEX IF NOT EXISTS idx_verifications_opportunity ON source_verifications(opportunity_id, date_checked);
 
-INSERT OR REPLACE INTO schema_metadata(key, value) VALUES ('schema_version', '1.0.0');
+INSERT OR REPLACE INTO schema_metadata(key, value) VALUES ('schema_version', '1.1.0');

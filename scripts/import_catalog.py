@@ -9,9 +9,11 @@ import sqlite3
 from pathlib import Path
 
 from catalog_common import (
-    CATEGORIES, DEFAULT_DB, IMPORTER_VERSION, SCHEMA, TAG_ALIASES, connect,
+    CATEGORIES, DEFAULT_DB, IMPORTER_VERSION, MODE_ALIASES, RESEARCH_MODES,
+    SCHEMA, TAG_ALIASES, connect,
     int_or_none, iso_date, load_rows, normalize_choice, normalize_country,
-    normalize_external, normalize_status, number_or_none, sha256, slugify,
+    normalize_external, normalize_status, number_or_none, research_modes_from_tag,
+    sha256, slugify,
     text_or_none, valid_url,
 )
 
@@ -66,6 +68,12 @@ def upsert_import(connection, path, rows):
             "ON CONFLICT(category_slug) DO UPDATE SET category_name=excluded.category_name, description=excluded.description, sort_order=excluded.sort_order",
             (slug, name, description, order),
         )
+    for mode_code, mode_name, description in RESEARCH_MODES:
+        connection.execute(
+            "INSERT INTO research_modes(mode_code, mode_name, description) VALUES (?, ?, ?) "
+            "ON CONFLICT(mode_code) DO UPDATE SET mode_name=excluded.mode_name, description=excluded.description",
+            (mode_code, mode_name, description),
+        )
 
     for row in rows:
         public_id = text_or_none(row["Program_ID"])
@@ -88,24 +96,25 @@ def upsert_import(connection, path, rows):
         cycle_year = int_or_none(row["Cycle_Year"])
         cycle_values = (
             opportunity_id, cycle_year, number_or_none(row.get("Duration_Weeks")), iso_date(row.get("Program_Start")), iso_date(row.get("Program_End")),
-            iso_date(row.get("Application_Open")), iso_date(row.get("Application_Deadline")), text_or_none(row.get("Deadline_Text")), normalize_status(row.get("Status")), text_or_none(row.get("Status")),
+            iso_date(row.get("Application_Open")), iso_date(row.get("Application_Deadline")), text_or_none(row.get("Application_URL")), text_or_none(row.get("Deadline_Text")), normalize_status(row.get("Status")), text_or_none(row.get("Status")),
             number_or_none(row.get("Stipend_Total_USD")), number_or_none(row.get("Stipend_Weekly_USD")), normalize_choice(row.get("Housing_Included")), text_or_none(row.get("Housing_Details")),
             normalize_choice(row.get("Meals_Included")), text_or_none(row.get("Meals_Details")), normalize_choice(row.get("Travel_Included")), text_or_none(row.get("Travel_Details")),
             normalize_choice(row.get("Academic_Credit")), iso_date(row.get("Last_Verified")), text_or_none(row.get("Data_Confidence")),
         )
         connection.execute(
-            "INSERT INTO program_cycles(opportunity_id, cycle_year, duration_weeks, program_start, program_end, application_open, application_deadline, deadline_text, status_code, status_text, stipend_total_usd, stipend_weekly_usd, housing_status, housing_details, meals_status, meals_details, travel_status, travel_details, academic_credit_status, last_verified, data_confidence) "
-            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(opportunity_id, cycle_year) DO UPDATE SET duration_weeks=excluded.duration_weeks, program_start=excluded.program_start, program_end=excluded.program_end, application_open=excluded.application_open, application_deadline=excluded.application_deadline, deadline_text=excluded.deadline_text, status_code=excluded.status_code, status_text=excluded.status_text, stipend_total_usd=excluded.stipend_total_usd, stipend_weekly_usd=excluded.stipend_weekly_usd, housing_status=excluded.housing_status, housing_details=excluded.housing_details, meals_status=excluded.meals_status, meals_details=excluded.meals_details, travel_status=excluded.travel_status, travel_details=excluded.travel_details, academic_credit_status=excluded.academic_credit_status, last_verified=excluded.last_verified, data_confidence=excluded.data_confidence, updated_at=CURRENT_TIMESTAMP",
+            "INSERT INTO program_cycles(opportunity_id, cycle_year, duration_weeks, program_start, program_end, application_open, application_deadline, application_url, deadline_text, status_code, status_text, stipend_total_usd, stipend_weekly_usd, housing_status, housing_details, meals_status, meals_details, travel_status, travel_details, academic_credit_status, last_verified, data_confidence) "
+            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(opportunity_id, cycle_year) DO UPDATE SET duration_weeks=excluded.duration_weeks, program_start=excluded.program_start, program_end=excluded.program_end, application_open=excluded.application_open, application_deadline=excluded.application_deadline, application_url=excluded.application_url, deadline_text=excluded.deadline_text, status_code=excluded.status_code, status_text=excluded.status_text, stipend_total_usd=excluded.stipend_total_usd, stipend_weekly_usd=excluded.stipend_weekly_usd, housing_status=excluded.housing_status, housing_details=excluded.housing_details, meals_status=excluded.meals_status, meals_details=excluded.meals_details, travel_status=excluded.travel_status, travel_details=excluded.travel_details, academic_credit_status=excluded.academic_credit_status, last_verified=excluded.last_verified, data_confidence=excluded.data_confidence, updated_at=CURRENT_TIMESTAMP",
             cycle_values,
         )
         cycle_id = connection.execute("SELECT cycle_id FROM program_cycles WHERE opportunity_id=? AND cycle_year=?", (opportunity_id, cycle_year)).fetchone()[0]
         connection.execute(
-            "INSERT INTO eligibility_rules(cycle_id, external_applicants_status, citizenship_rule_text, eligible_years_text, min_gpa, parse_status) VALUES (?, ?, ?, ?, ?, 'needs_review') "
-            "ON CONFLICT(cycle_id) DO UPDATE SET external_applicants_status=excluded.external_applicants_status, citizenship_rule_text=excluded.citizenship_rule_text, eligible_years_text=excluded.eligible_years_text, min_gpa=excluded.min_gpa, parse_status='needs_review'",
-            (cycle_id, normalize_external(row.get("External_Applicants")), text_or_none(row.get("Citizenship")), text_or_none(row.get("Eligible_Years")), number_or_none(row.get("Min_GPA"))),
+            "INSERT INTO eligibility_rules(cycle_id, external_applicants_status, citizenship_rule_text, eligible_years_text, min_gpa, raw_eligibility_text, parse_status) VALUES (?, ?, ?, ?, ?, ?, 'needs_review') "
+            "ON CONFLICT(cycle_id) DO UPDATE SET external_applicants_status=excluded.external_applicants_status, citizenship_rule_text=excluded.citizenship_rule_text, eligible_years_text=excluded.eligible_years_text, min_gpa=excluded.min_gpa, raw_eligibility_text=excluded.raw_eligibility_text, parse_status='needs_review'",
+            (cycle_id, normalize_external(row.get("External_Applicants")), text_or_none(row.get("Citizenship")), text_or_none(row.get("Eligible_Years")), number_or_none(row.get("Min_GPA")), " | ".join(filter(None, [text_or_none(row.get("External_Applicants")), text_or_none(row.get("Citizenship")), text_or_none(row.get("Eligible_Years"))])) or None),
         )
         connection.execute("DELETE FROM opportunity_categories WHERE opportunity_id=?", (opportunity_id,))
         connection.execute("DELETE FROM opportunity_tags WHERE opportunity_id=?", (opportunity_id,))
+        connection.execute("DELETE FROM opportunity_research_modes WHERE opportunity_id=?", (opportunity_id,))
         primary = text_or_none(row.get("Primary_Field"))
         category = connection.execute("SELECT category_id FROM research_categories WHERE category_name=?", (primary,)).fetchone()
         if category:
@@ -123,6 +132,13 @@ def upsert_import(connection, path, rows):
             connection.execute("INSERT INTO research_tags(tag_slug, tag_name, tag_group) VALUES (?, ?, ?) ON CONFLICT(tag_slug) DO UPDATE SET tag_name=excluded.tag_name, tag_group=excluded.tag_group", (tag_slug, canonical, group))
             tag_id = connection.execute("SELECT tag_id FROM research_tags WHERE tag_slug=?", (tag_slug,)).fetchone()[0]
             connection.execute("INSERT OR REPLACE INTO opportunity_tags(opportunity_id, tag_id, source_text, assignment_method) VALUES (?, ?, ?, 'imported')", (opportunity_id, tag_id, raw_tag))
+            mode_codes = set(research_modes_from_tag(raw_tag))
+            alias_mode = MODE_ALIASES.get(raw_tag.lower())
+            if alias_mode:
+                mode_codes.add(alias_mode)
+            for mode_code in sorted(mode_codes):
+                research_mode_id = connection.execute("SELECT research_mode_id FROM research_modes WHERE mode_code=?", (mode_code,)).fetchone()[0]
+                connection.execute("INSERT OR REPLACE INTO opportunity_research_modes(opportunity_id, research_mode_id, source_text, assignment_method) VALUES (?, ?, ?, 'explicit_seed_tag')", (opportunity_id, research_mode_id, raw_tag))
 
         for source_url, source_name, source_type in (
             (text_or_none(row.get("Program_URL")), text_or_none(row.get("Network_Source")) or text_or_none(row.get("Program_Name")), "official_program"),
