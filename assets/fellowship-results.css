@@ -1,6 +1,10 @@
+.fellowship-shell { max-width: 1440px; width: 100%; }
+.questionnaire-hero, .catalog-status, .questionnaire-panel { max-width: 1120px; margin-left: auto; margin-right: auto; }
+.result-summary.two-outcomes { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 720px; }
+.eligibility-caveat { margin: 1rem 0 2rem; color: var(--gray); font-size: 0.82rem; max-width: 760px; }
 .explorer-layout {
   display: grid;
-  grid-template-columns: 245px minmax(0, 1fr);
+  grid-template-columns: clamp(220px, 19vw, 275px) minmax(0, 1fr);
   gap: 1.5rem;
   align-items: start;
 }
@@ -32,7 +36,7 @@
 
 .opportunity-results {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 1rem;
 }
 
@@ -54,6 +58,10 @@
 .eligibility-card .institution-line { font-size: 0.82rem; color: var(--gray); margin: 0; }
 .eligibility-status { align-self: auto; font-size: 0.7rem; font-weight: 700; border-radius: 999px; padding: 0.3rem 0.55rem; white-space: nowrap; }
 .cycle-status { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; color: var(--gray); }
+.status-badge { display: inline-block; border-radius: 999px; padding: 0.34rem 0.58rem; background: #ece8e9; }
+.status-badge.open { background: #dcefe3; color: #215f39; }
+.status-badge.upcoming { background: #e5e5f4; color: #40417b; }
+.status-badge.closed { background: #f3dddd; color: #7a2727; }
 .program-details { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin: 1rem 0; padding: 1rem 0; border-block: 1px solid #eee8e9; font-size: 0.78rem; }
 .program-details dt { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray); font-weight: 700; }
 .program-details dd { margin: 0; }
@@ -74,6 +82,7 @@
 }
 
 @media (max-width: 720px) {
+  .result-summary.two-outcomes { grid-template-columns: 1fr; }
   .opportunity-results, .preference-filters { grid-template-columns: 1fr; }
   .opportunity-toolbar { align-items: start; flex-direction: column; }
   .sort-control, .sort-control select { width: 100%; }

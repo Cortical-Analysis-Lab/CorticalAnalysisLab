@@ -8,9 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/fellowship-database.css">
-  <link rel="stylesheet" href="assets/fellowship-results.css">
+  <link rel="stylesheet" href="assets/fellowship-results.css?v=2">
   <script defer src="assets/site.js?v=4"></script>
-  <script defer src="assets/fellowship-questionnaire.js?v=3"></script>
+  <script defer src="assets/fellowship-questionnaire.js?v=4"></script>
 </head>
 <body>
   <nav>
@@ -107,12 +107,11 @@
         <button id="edit-answers" class="secondary-action" type="button">Go Back</button>
       </div>
       <p id="results-explanation" class="results-explanation"></p>
-      <div class="result-summary" aria-live="polite">
-        <div class="summary-card eligible"><strong id="eligible-count">0</strong><span>Appear eligible</span></div>
-        <div class="summary-card review"><strong id="review-count">0</strong><span>Need review</span></div>
-        <div class="summary-card ineligible"><strong id="ineligible-count">0</strong><span>Likely ineligible</span></div>
+      <div class="result-summary two-outcomes" aria-live="polite">
+        <div class="summary-card eligible"><strong id="potential-count">0</strong><span>Potentially eligible</span></div>
+        <div class="summary-card ineligible"><strong id="not-eligible-count">0</strong><span>Not eligible</span></div>
       </div>
-      <div class="result-legend"><span><i class="status-dot eligible"></i> No known rule conflicts</span><span><i class="status-dot review"></i> Official requirements are incomplete</span><span><i class="status-dot ineligible"></i> At least one known hard rule conflicts</span></div>
+      <p class="eligibility-caveat">Potentially eligible means no known hard requirement conflicts with your answers. Always confirm N/A or incomplete requirements on the official program page.</p>
       <div class="explorer-layout">
         <aside class="preference-filters" aria-labelledby="preference-heading">
           <p class="filter-kicker">Preferences</p>

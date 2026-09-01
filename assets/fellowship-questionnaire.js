@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const answerValue = (data, name) => data.get(name);
   const display = value => value === null || value === undefined || value === "" || value === "unknown" ? "N/A" : value;
   const dateDisplay = value => value ? new Date(`${value}T00:00:00`).toLocaleDateString("en-US", {month: "short", day: "numeric", year: "numeric"}) : "N/A";
-  const moneyDisplay = value => value === null || value === undefined ? "N/A" : new Intl.NumberFormat("en-US", {style: "currency", currency: "USD", maximumFractionDigits: 0}).format(value);
   const escapeHtml = value => String(value ?? "").replace(/[&<>"']/g, character => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"})[character]);
   const categoryTerms = {
     "biomedical-health": ["biomedical", "health", "medicine", "medical", "cancer", "immunology", "public health"],
@@ -103,21 +102,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     return {state: "eligible", reasons: ["No known hard eligibility rules conflict with your answers."]};
   }
 
-  function card({opportunity, evaluation}) {
+  function card({opportunity}) {
     const cycle = opportunity.cycles?.[0] || {};
     const institution = opportunity.institution || {};
-    const stateLabels = {eligible: "Appears eligible", review: "Needs review", ineligible: "Likely ineligible"};
     const location = [institution.city, institution.state_code].filter(Boolean).join(", ") || "N/A";
     const categories = opportunity.categories || [];
     const activeCategory = document.getElementById("filter-category").value;
     const tags = [...(opportunity.tags || [])].sort((a, b) => Number(tagMatchesCategory(b.tag_name, activeCategory)) - Number(tagMatchesCategory(a.tag_name, activeCategory))).slice(0, 4);
     const activeCategoryLabel = activeCategory ? document.getElementById("filter-category").selectedOptions[0]?.textContent : "";
     return `<article class="eligibility-card">
-      <div class="card-status-row"><span class="eligibility-status ${evaluation.state}">${stateLabels[evaluation.state]}</span><span class="cycle-status">${escapeHtml(display(cycle.status_code))}</span></div>
+      <div class="card-status-row"><span class="cycle-status status-badge ${escapeHtml(display(cycle.status_code).toLowerCase())}">${escapeHtml(display(cycle.status_code))}</span></div>
       <h3>${escapeHtml(opportunity.program_name)}</h3><p class="institution-line">${escapeHtml(institution.institution_name)} · ${escapeHtml(location)}</p>
-      <dl class="program-details"><div><dt>Deadline</dt><dd>${escapeHtml(dateDisplay(cycle.application_deadline))}</dd></div><div><dt>Stipend</dt><dd>${escapeHtml(moneyDisplay(cycle.stipend_total_usd))}</dd></div><div><dt>Duration</dt><dd>${cycle.duration_weeks === null || cycle.duration_weeks === undefined ? "N/A" : `${escapeHtml(cycle.duration_weeks)} weeks`}</dd></div><div><dt>Housing</dt><dd>${escapeHtml(display(cycle.housing_status))}</dd></div></dl>
+      <dl class="program-details"><div><dt>Deadline</dt><dd>${escapeHtml(dateDisplay(cycle.application_deadline))}</dd></div><div><dt>Format</dt><dd>${escapeHtml(display(opportunity.delivery_format))}</dd></div><div><dt>Duration</dt><dd>${cycle.duration_weeks === null || cycle.duration_weeks === undefined ? "N/A" : `${escapeHtml(cycle.duration_weeks)} weeks`}</dd></div><div><dt>Housing</dt><dd>${escapeHtml(display(cycle.housing_status))}</dd></div></dl>
       <div class="program-tags">${activeCategoryLabel ? `<span class="meta-chip category-chip">${escapeHtml(activeCategoryLabel)}</span>` : categories.map(category => `<span class="meta-chip category-chip">${escapeHtml(category.category_name)}</span>`).join("")}${tags.map(tag => `<span class="meta-chip">${escapeHtml(tag.tag_name)}</span>`).join("")}</div>
-      <ul class="reason-list">${evaluation.reasons.slice(0, 3).map(reason => `<li>${escapeHtml(reason)}</li>`).join("")}</ul>
       <div class="card-actions"><a class="program-link" href="${escapeHtml(opportunity.program_url)}" target="_blank" rel="noopener">View program →</a><span class="verification-date">Verified ${escapeHtml(display(cycle.last_verified))}</span></div>
     </article>`;
   }
@@ -163,10 +160,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!form.reportValidity()) return;
     const answers = new FormData(form);
     evaluatedResults = opportunities.map(opportunity => ({opportunity, evaluation: evaluate(opportunity, answers)}));
-    ["eligible", "review", "ineligible"].forEach(stateName => {
-      document.getElementById(`${stateName}-count`).textContent = evaluatedResults.filter(item => item.evaluation.state === stateName).length;
-    });
-    document.getElementById("results-explanation").textContent = "Programs with incomplete official requirements remain in “Need review.” N/A means the catalog does not yet contain a verified value.";
+    document.getElementById("potential-count").textContent = evaluatedResults.filter(item => item.evaluation.state !== "ineligible").length;
+    document.getElementById("not-eligible-count").textContent = evaluatedResults.filter(item => item.evaluation.state === "ineligible").length;
+    document.getElementById("results-explanation").textContent = "Your opportunity list includes programs with no known conflicts. N/A means a requirement or program detail has not yet been verified.";
     renderResults();
     panel.hidden = true;
     resultsPanel.hidden = false;
