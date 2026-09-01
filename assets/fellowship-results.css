@@ -1,5 +1,6 @@
-.fellowship-shell { max-width: 1440px; width: 100%; }
+.fellowship-shell { max-width: none; width: 100%; padding-left: clamp(1rem, 2vw, 2rem); padding-right: clamp(1rem, 2vw, 2rem); }
 .questionnaire-hero, .catalog-status, .questionnaire-panel { max-width: 1120px; margin-left: auto; margin-right: auto; }
+.eligibility-results { width: 100%; padding: clamp(1rem, 2vw, 2rem); }
 .radio-question > p { font-size: 0.92rem; font-weight: 500; margin: 0 0 0.5rem; }
 .optional-label { margin-left: 0.35rem; color: var(--gray); font-size: 0.72rem; font-weight: 400; }
 .radio-options { display: grid; gap: 0.5rem; }
@@ -13,7 +14,7 @@
 .explorer-layout {
   display: grid;
   grid-template-columns: clamp(220px, 19vw, 275px) minmax(0, 1fr);
-  gap: 1.5rem;
+  gap: 1.25rem;
   align-items: start;
 }
 
@@ -44,15 +45,15 @@
 
 .opportunity-results {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: 0.8rem;
 }
 
 .eligibility-card {
   background: #fff;
   border: 1px solid rgba(34, 34, 34, 0.1);
   border-radius: 14px;
-  padding: 1.25rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -62,23 +63,23 @@
 
 .eligibility-card:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(47, 31, 36, 0.1); }
 .card-status-row { display: flex; justify-content: space-between; gap: 0.5rem; align-items: start; }
-.eligibility-card h3 { font-size: 1.08rem; line-height: 1.3; margin: 1rem 0 0.3rem; }
-.eligibility-card .institution-line { font-size: 0.82rem; color: var(--gray); margin: 0; }
+.eligibility-card h3 { font-size: 0.98rem; line-height: 1.28; margin: 0.7rem 0 0.25rem; }
+.eligibility-card .institution-line { font-size: 0.75rem; color: var(--gray); margin: 0; }
 .eligibility-status { align-self: auto; font-size: 0.7rem; font-weight: 700; border-radius: 999px; padding: 0.3rem 0.55rem; white-space: nowrap; }
 .cycle-status { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; color: var(--gray); }
 .status-badge { display: inline-block; border-radius: 999px; padding: 0.34rem 0.58rem; background: #ece8e9; }
 .status-badge.open { background: #dcefe3; color: #215f39; }
 .status-badge.upcoming { background: #e5e5f4; color: #40417b; }
 .status-badge.closed { background: #f3dddd; color: #7a2727; }
-.program-details { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin: 1rem 0; padding: 1rem 0; border-block: 1px solid #eee8e9; font-size: 0.78rem; }
-.program-details dt { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray); font-weight: 700; }
+.program-details { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin: 0.7rem 0; padding: 0.7rem 0; border-block: 1px solid #eee8e9; font-size: 0.72rem; }
+.program-details dt { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray); font-weight: 700; }
 .program-details dd { margin: 0; }
-.program-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1rem; }
-.meta-chip { font-size: 0.68rem; background: #f1eeee; padding: 0.28rem 0.48rem; border-radius: 5px; }
+.program-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.7rem; }
+.meta-chip { font-size: 0.62rem; background: #f1eeee; padding: 0.22rem 0.4rem; border-radius: 5px; }
 .category-chip { background: #f4dfe5; color: #7f092c; font-weight: 700; }
 .reason-list { grid-column: auto; margin: 0 0 1rem 1rem; font-size: 0.75rem; color: var(--gray); }
 .card-actions { display: flex; justify-content: space-between; align-items: center; gap: 0.8rem; margin-top: auto; }
-.program-link { color: var(--red); font-size: 0.78rem; font-weight: 700; text-decoration: none; }
+.program-link { color: var(--red); font-size: 0.72rem; font-weight: 700; text-decoration: none; }
 .program-link:hover { text-decoration: underline; }
 .verification-date { font-size: 0.65rem; color: var(--gray); }
 .empty-results { grid-column: 1 / -1; background: #fff; border-radius: 14px; padding: 3rem 1.5rem; text-align: center; color: var(--gray); }
