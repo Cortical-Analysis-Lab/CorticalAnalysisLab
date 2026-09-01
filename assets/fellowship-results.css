@@ -59,6 +59,7 @@
 .program-details dd { margin: 0; }
 .program-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1rem; }
 .meta-chip { font-size: 0.68rem; background: #f1eeee; padding: 0.28rem 0.48rem; border-radius: 5px; }
+.category-chip { background: #f4dfe5; color: #7f092c; font-weight: 700; }
 .reason-list { grid-column: auto; margin: 0 0 1rem 1rem; font-size: 0.75rem; color: var(--gray); }
 .card-actions { display: flex; justify-content: space-between; align-items: center; gap: 0.8rem; margin-top: auto; }
 .program-link { color: var(--red); font-size: 0.78rem; font-weight: 700; text-decoration: none; }

@@ -38,6 +38,30 @@ document.addEventListener("DOMContentLoaded", async () => {
   const dateDisplay = value => value ? new Date(`${value}T00:00:00`).toLocaleDateString("en-US", {month: "short", day: "numeric", year: "numeric"}) : "N/A";
   const moneyDisplay = value => value === null || value === undefined ? "N/A" : new Intl.NumberFormat("en-US", {style: "currency", currency: "USD", maximumFractionDigits: 0}).format(value);
   const escapeHtml = value => String(value ?? "").replace(/[&<>"']/g, character => ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"})[character]);
+  const categoryTerms = {
+    "biomedical-health": ["biomedical", "health", "medicine", "medical", "cancer", "immunology", "public health"],
+    "life-sciences": ["biology", "biological", "bioscience", "ecology", "genetics", "genomics", "molecular", "cell biology"],
+    "neuroscience-cognitive": ["neuroscience", "neural", "brain", "cognitive"],
+    "computer-data-ai": ["computer", "computational", "computing", "data", "machine learning", "artificial intelligence", "ai"],
+    "mathematics-statistics": ["mathematics", "math", "statistics", "statistical", "quantitative"],
+    "physics-astronomy": ["physics", "astrophysics", "astronomy", "space science"],
+    "chemistry-materials": ["chemistry", "chemical", "materials"],
+    "engineering": ["engineering", "robotics", "electronics", "devices", "nanotechnology"],
+    "earth-environment-ocean": ["earth", "environment", "climate", "ocean", "marine"],
+    "social-behavioral": ["psychology", "behavior", "social science", "sociology", "economics", "education"],
+    "humanities-arts": ["humanities", "arts", "history", "language", "archaeology"],
+  };
+
+  function tagMatchesCategory(tagName, categorySlug) {
+    const tag = String(tagName || "").toLowerCase();
+    return (categoryTerms[categorySlug] || []).some(term => tag.includes(term));
+  }
+
+  function matchesResearchArea(opportunity, categorySlug) {
+    if (!categorySlug) return true;
+    return (opportunity.categories || []).some(item => item.category_slug === categorySlug)
+      || (opportunity.tags || []).some(tag => tagMatchesCategory(tag.tag_name, categorySlug));
+  }
 
   function evaluate(opportunity, answers) {
     const cycle = opportunity.cycles?.[0];
@@ -84,25 +108,26 @@ document.addEventListener("DOMContentLoaded", async () => {
     const institution = opportunity.institution || {};
     const stateLabels = {eligible: "Appears eligible", review: "Needs review", ineligible: "Likely ineligible"};
     const location = [institution.city, institution.state_code].filter(Boolean).join(", ") || "N/A";
-    const tags = (opportunity.tags || []).slice(0, 4);
+    const categories = opportunity.categories || [];
+    const activeCategory = document.getElementById("filter-category").value;
+    const tags = [...(opportunity.tags || [])].sort((a, b) => Number(tagMatchesCategory(b.tag_name, activeCategory)) - Number(tagMatchesCategory(a.tag_name, activeCategory))).slice(0, 4);
+    const activeCategoryLabel = activeCategory ? document.getElementById("filter-category").selectedOptions[0]?.textContent : "";
     return `<article class="eligibility-card">
       <div class="card-status-row"><span class="eligibility-status ${evaluation.state}">${stateLabels[evaluation.state]}</span><span class="cycle-status">${escapeHtml(display(cycle.status_code))}</span></div>
       <h3>${escapeHtml(opportunity.program_name)}</h3><p class="institution-line">${escapeHtml(institution.institution_name)} · ${escapeHtml(location)}</p>
       <dl class="program-details"><div><dt>Deadline</dt><dd>${escapeHtml(dateDisplay(cycle.application_deadline))}</dd></div><div><dt>Stipend</dt><dd>${escapeHtml(moneyDisplay(cycle.stipend_total_usd))}</dd></div><div><dt>Duration</dt><dd>${cycle.duration_weeks === null || cycle.duration_weeks === undefined ? "N/A" : `${escapeHtml(cycle.duration_weeks)} weeks`}</dd></div><div><dt>Housing</dt><dd>${escapeHtml(display(cycle.housing_status))}</dd></div></dl>
-      <div class="program-tags">${tags.map(tag => `<span class="meta-chip">${escapeHtml(tag.tag_name)}</span>`).join("")}</div>
+      <div class="program-tags">${activeCategoryLabel ? `<span class="meta-chip category-chip">${escapeHtml(activeCategoryLabel)}</span>` : categories.map(category => `<span class="meta-chip category-chip">${escapeHtml(category.category_name)}</span>`).join("")}${tags.map(tag => `<span class="meta-chip">${escapeHtml(tag.tag_name)}</span>`).join("")}</div>
       <ul class="reason-list">${evaluation.reasons.slice(0, 3).map(reason => `<li>${escapeHtml(reason)}</li>`).join("")}</ul>
       <div class="card-actions"><a class="program-link" href="${escapeHtml(opportunity.program_url)}" target="_blank" rel="noopener">View program →</a><span class="verification-date">Verified ${escapeHtml(display(cycle.last_verified))}</span></div>
     </article>`;
   }
 
-  const filterIds = ["filter-keyword", "filter-category", "filter-state", "filter-eligibility", "filter-stipend", "filter-housing", "filter-travel", "filter-open", "sort-results"];
+  const filterIds = ["filter-keyword", "filter-category", "filter-state", "filter-housing", "filter-travel", "filter-open", "sort-results"];
 
   function renderResults() {
     const keyword = document.getElementById("filter-keyword").value.trim().toLowerCase();
     const category = document.getElementById("filter-category").value;
     const state = document.getElementById("filter-state").value;
-    const allowedEligibility = new Set(document.getElementById("filter-eligibility").value.split(","));
-    const minimumStipend = Number(document.getElementById("filter-stipend").value || 0);
     const housing = document.getElementById("filter-housing").checked;
     const travel = document.getElementById("filter-travel").checked;
     const open = document.getElementById("filter-open").checked;
@@ -111,11 +136,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     const filtered = evaluatedResults.filter(({opportunity, evaluation}) => {
       const cycle = opportunity.cycles?.[0] || {};
       const haystack = [opportunity.program_name, opportunity.institution?.institution_name, opportunity.institution?.city, opportunity.institution?.state_code, ...(opportunity.tags || []).map(tag => tag.tag_name)].join(" ").toLowerCase();
-      return allowedEligibility.has(evaluation.state)
+      return evaluation.state !== "ineligible"
         && (!keyword || haystack.includes(keyword))
-        && (!category || (opportunity.categories || []).some(item => item.category_slug === category))
+        && matchesResearchArea(opportunity, category)
         && (!state || opportunity.institution?.state_code === state)
-        && (!minimumStipend || Number(cycle.stipend_total_usd || 0) >= minimumStipend)
         && (!housing || cycle.housing_status === "yes")
         && (!travel || ["yes", "allowance"].includes(cycle.travel_status))
         && (!open || ["open", "upcoming"].includes(cycle.status_code));
@@ -162,8 +186,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   filterIds.forEach(id => document.getElementById(id).addEventListener(id === "filter-keyword" ? "input" : "change", renderResults));
   document.getElementById("clear-filters").addEventListener("click", () => {
-    ["filter-keyword", "filter-category", "filter-state", "filter-stipend"].forEach(id => { document.getElementById(id).value = ""; });
-    document.getElementById("filter-eligibility").value = "eligible,review";
+    ["filter-keyword", "filter-category", "filter-state"].forEach(id => { document.getElementById(id).value = ""; });
     ["filter-housing", "filter-travel", "filter-open"].forEach(id => { document.getElementById(id).checked = false; });
     document.getElementById("sort-results").value = "name";
     renderResults();
