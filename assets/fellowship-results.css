@@ -1,5 +1,6 @@
 .fellowship-shell { max-width: none; width: 100%; padding-left: clamp(1rem, 2vw, 2rem); padding-right: clamp(1rem, 2vw, 2rem); }
-.questionnaire-hero, .catalog-status, .questionnaire-panel { max-width: 1120px; margin-left: auto; margin-right: auto; }
+.questionnaire-hero { width: 100%; max-width: none; }
+.catalog-status, .questionnaire-panel { max-width: 1120px; margin-left: auto; margin-right: auto; }
 .eligibility-results { width: 100%; max-width: none; margin-left: 0; margin-right: 0; padding: clamp(1rem, 2vw, 2rem); }
 .radio-question > p { font-size: 0.92rem; font-weight: 500; margin: 0 0 0.5rem; }
 .optional-label { margin-left: 0.35rem; color: var(--gray); font-size: 0.72rem; font-weight: 400; }
