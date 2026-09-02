@@ -172,46 +172,6 @@ def list_candidates(database=DEFAULT_STAGING_DB, limit=500):
     return rows
 
 
-def claim_investigation_batch(limit=25, database=DEFAULT_STAGING_DB):
-    if not 1 <= int(limit) <= 100:
-        raise ValueError("Batch limit must be between 1 and 100")
-    connection = connect(database)
-    with connection:
-        rows = [dict(row) for row in connection.execute("""
-            SELECT * FROM candidates
-            WHERE review_status IN ('pending', 'needs_review')
-            ORDER BY
-                CASE match_state
-                    WHEN 'POSSIBLE_DUPLICATE' THEN 0
-                    WHEN 'NEW_CYCLE_FOR_EXISTING_PROGRAM' THEN 1
-                    WHEN 'NEW_PROGRAM' THEN 2
-                    ELSE 3
-                END,
-                last_seen_at DESC,
-                candidate_id
-            LIMIT ?
-        """, (int(limit),))]
-        for row in rows:
-            connection.execute(
-                "UPDATE candidates SET review_status='investigating' WHERE candidate_id=?",
-                (row["candidate_id"],),
-            )
-    connection.close()
-    return rows
-
-
-def investigation_counts(database=DEFAULT_STAGING_DB):
-    connection = connect(database)
-    counts = {row["review_status"]: row["count"] for row in connection.execute(
-        "SELECT review_status, COUNT(*) AS count FROM candidates GROUP BY review_status"
-    )}
-    match_counts = {row["match_state"]: row["count"] for row in connection.execute(
-        "SELECT match_state, COUNT(*) AS count FROM candidates GROUP BY match_state"
-    )}
-    connection.close()
-    return {"by_review_status": counts, "by_match_state": match_counts}
-
-
 def candidate_counts(database=DEFAULT_STAGING_DB):
     connection = connect(database)
     counts = {row["review_status"]: row["count"] for row in connection.execute(
@@ -233,20 +193,3 @@ def set_review_status(candidate_id, status, database=DEFAULT_STAGING_DB):
         if cursor.rowcount != 1:
             raise KeyError(candidate_id)
     connection.close()
-
-
-def set_many_review_status(candidate_ids, status, database=DEFAULT_STAGING_DB):
-    allowed = {"pending", "investigating", "needs_review", "approved", "rejected", "included"}
-    if status not in allowed:
-        raise ValueError(f"Unsupported review status: {status}")
-    ids = list(candidate_ids)
-    if not ids:
-        return 0
-    connection = connect(database)
-    with connection:
-        connection.executemany(
-            "UPDATE candidates SET review_status=? WHERE candidate_id=?",
-            [(status, candidate_id) for candidate_id in ids],
-        )
-    connection.close()
-    return len(ids)

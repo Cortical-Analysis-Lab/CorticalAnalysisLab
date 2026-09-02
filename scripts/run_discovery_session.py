@@ -152,43 +152,6 @@ def discover_nsf(source, catalog, deadline, max_results):
     return results
 
 
-def discovery_counts(candidates):
-    return {state: sum(row["match_state"] == state for row in candidates) for state in (
-        "NEW_PROGRAM", "EXISTING_PROGRAM", "POSSIBLE_DUPLICATE", "NEW_CYCLE_FOR_EXISTING_PROGRAM"
-    )}
-
-
-def write_candidate_csv(path, candidates):
-    fields = list(candidates[0]) if candidates else [
-        "candidate_id", "match_state", "matched_public_id", "match_rationale",
-        "program_name_observed", "institution_observed", "cycle_year_observed",
-        "official_program_url", "discovery_source", "discovery_source_url",
-        "government_award_id", "government_award_url", "verification_status", "inclusion_status",
-    ]
-    with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fields)
-        writer.writeheader()
-        writer.writerows(candidates)
-
-
-def write_progress(output, session_id, started_at, candidates, source_errors, canonical_count, current_source=None):
-    output.mkdir(parents=True, exist_ok=True)
-    candidates = deduplicate(candidates)
-    write_candidate_csv(output / "candidates.csv", candidates)
-    progress = {
-        "session_id": session_id,
-        "started_at": started_at,
-        "updated_at": datetime.now(timezone.utc).isoformat(),
-        "status": "running",
-        "canonical_programs_before": canonical_count,
-        "discovered_unique": len(candidates),
-        "counts": discovery_counts(candidates),
-        "source_errors": source_errors,
-        "current_source": current_source,
-    }
-    (output / "progress.json").write_text(json.dumps(progress, indent=2) + "\n", encoding="utf-8")
-
-
 def deduplicate(candidates):
     deduplicated = {}
     for candidate in candidates:
@@ -204,8 +167,19 @@ def deduplicate(candidates):
 
 def write_outputs(output, session_id, started_at, candidates, source_errors, canonical_count):
     output.mkdir(parents=True, exist_ok=True)
-    write_candidate_csv(output / "candidates.csv", candidates)
-    counts = discovery_counts(candidates)
+    fields = list(candidates[0]) if candidates else [
+        "candidate_id", "match_state", "matched_public_id", "match_rationale",
+        "program_name_observed", "institution_observed", "cycle_year_observed",
+        "official_program_url", "discovery_source", "discovery_source_url",
+        "government_award_id", "government_award_url", "verification_status", "inclusion_status",
+    ]
+    with (output / "candidates.csv").open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fields)
+        writer.writeheader()
+        writer.writerows(candidates)
+    counts = {state: sum(row["match_state"] == state for row in candidates) for state in (
+        "NEW_PROGRAM", "EXISTING_PROGRAM", "POSSIBLE_DUPLICATE", "NEW_CYCLE_FOR_EXISTING_PROGRAM"
+    )}
     report = {
         "session_id": session_id,
         "started_at": started_at,
@@ -219,10 +193,6 @@ def write_outputs(output, session_id, started_at, candidates, source_errors, can
         "note": "Discovery candidates require official host-page verification and reviewed promotion before canonical inclusion.",
     }
     (output / "report.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
-    progress = dict(report)
-    progress["status"] = "complete"
-    progress["updated_at"] = report["completed_at"]
-    (output / "progress.json").write_text(json.dumps(progress, indent=2) + "\n", encoding="utf-8")
     lines = [
         f"# Summer research discovery session {session_id}", "",
         f"- Completed: {report['completed_at']}",
@@ -257,17 +227,13 @@ def main():
     catalog = load_catalog(args.database)
     deadline = time.monotonic() + args.time_budget_minutes * 60
     candidates, errors = [], []
-    write_progress(args.output, session_id, started_at, candidates, errors, len(catalog))
     for source in APPROVED_DISCOVERY_SOURCES:
         if time.monotonic() >= deadline:
             break
         try:
-            source_candidates = discover_nsf(source, catalog, deadline, args.max_results_per_source)
-            candidates.extend(source_candidates)
-            write_progress(args.output, session_id, started_at, candidates, errors, len(catalog), source["source_code"])
+            candidates.extend(discover_nsf(source, catalog, deadline, args.max_results_per_source))
         except Exception as error:  # Preserve a partial session report when one source is unavailable.
             errors.append(f"{source['source_code']}: {type(error).__name__}: {error}")
-            write_progress(args.output, session_id, started_at, candidates, errors, len(catalog), source["source_code"])
     candidates = deduplicate(candidates)
     write_outputs(args.output, session_id, started_at, candidates, errors, len(catalog))
     print(f"Discovery session {session_id}: {len(candidates)} unique candidates; {len(errors)} source errors")
