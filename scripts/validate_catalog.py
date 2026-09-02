@@ -7,7 +7,7 @@ import argparse
 import json
 from pathlib import Path
 
-from catalog_common import DEFAULT_DB, connect, valid_url
+from catalog_common import DEFAULT_DB, connect, disallowed_verification_source, valid_url
 
 
 def validate(database: Path):
@@ -24,6 +24,12 @@ def validate(database: Path):
     ).fetchone()[0]
     if invalid_supported_fields:
         errors.append(f"Invalid fields_supported JSON values: {invalid_supported_fields}")
+
+    for row in connection.execute("SELECT source_id, source_url FROM sources WHERE authoritative = 1"):
+        if disallowed_verification_source(row["source_url"]):
+            errors.append(
+                f"Authoritative source {row['source_id']} uses a social/discovery-only host: {row['source_url']}"
+            )
 
     for row in connection.execute("SELECT public_id, program_name, program_url, application_url FROM opportunities ORDER BY public_id"):
         if not row["program_name"]:

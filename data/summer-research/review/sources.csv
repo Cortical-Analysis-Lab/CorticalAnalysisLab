@@ -1,35 +1,42 @@
 source_id,source_url,source_name,source_type,publisher,authoritative
 1,https://btaa.org/resources-for/students/srop/campus-profiles,Big Ten Academic Alliance SROP,official_program,,1
 2,https://apps.btaa.org/srop/apply,Big Ten SROP – University of Wisconsin–Madison application,official_application,,1
-3,https://science.osti.gov/wdts/suli,DOE Office of Science,official_program,,1
-4,https://science.osti.gov/wdts/suli/how-to-apply,Science Undergraduate Laboratory Internships (SULI) application,official_application,,1
-5,https://www.training.nih.gov/research-training/pb/sip/,NIH Summer Internship Program (SIP) application,official_program,,1
-6,https://www.nasa.gov/learning-resources/internship-programs/,NASA OSTEM,official_program,,1
-7,https://www.stemgateway.nasa.gov/,NASA OSTEM Internship Program application,official_application,,1
-8,https://www.nist.gov/surf,NIST Summer Undergraduate Research Fellowship (SURF) application,official_program,,1
-9,https://www.onr.navy.mil/education-outreach/undergraduate-graduate/nreip-naval-internship,Naval Research Enterprise Internship Program (NREIP) application,official_program,,1
-10,https://www.daad.de/rise/en/rise-germany/,DAAD RISE Germany,official_program,,1
-11,https://www.daad.de/rise/en/rise-germany/find-an-internship/what-applicants-need-to-know/,RISE Germany application,official_application,,1
-12,https://theleadershipalliance.org/summer-research-early-identification-program,The Leadership Alliance,official_program,,1
-13,https://app.theleadershipalliance.org/,Summer Research Early Identification Program (SR-EIP) application,official_application,,1
-14,https://www.med.upenn.edu/research-trainee-affairs/suip/,Summer Undergraduate Internship Program (SUIP) application,official_program,,1
-15,https://www.rockefeller.edu/education-and-training/surf/application-information/,University program,official_program,,1
-16,https://surfapplication.rockefeller.edu/,Summer Undergraduate Research Fellowship (SURF) application,official_application,,1
-17,https://www.cshl.edu/education/undergraduate-research-program/,Undergraduate Research Program (URP) application,official_program,,1
-18,https://www.fredhutch.org/en/education-training/undergraduate-students/summer-undergraduate-research-program.html,Summer Undergraduate Research Program (SURP) application,official_program,,1
-19,https://www.fredhutch.org/en/education-training/undergraduate-students/pathways-undergraduate-researchers.html,Pathways Undergraduate Researchers application,official_program,,1
-20,https://www.fredhutch.org/en/education-training/undergraduate-students/seattlestatgrows.html,SeattleStatGROWS application,official_program,,1
-21,https://www.bu.edu/surf/,NSF REU / university program,official_program,,1
-22,https://etap.nsf.gov/,Boston University SURF / REU application,official_application,,1
-23,https://sites.bu.edu/physics-resources/physics-reu/,BU Physics Research Opportunities (BU-PRO) application,official_program,,1
-24,https://www.bu.edu/photonics-programs/reu/programs/,NSF REU / university program,official_program,,1
-25,https://www.bu.edu/photonics-programs/reu/apply/,Integrated Nanomanufacturing REU application,official_application,,1
-26,https://amgenscholars.berkeley.edu/,Amgen Scholars,official_program,,1
-27,https://amgenscholars.berkeley.edu/applicants/,Amgen Scholars Program at UC Berkeley application,official_application,,1
-28,https://biosciences.stanford.edu/pathways/ssrp-amgen-scholars-program/,Amgen Scholars,official_program,,1
-29,https://biosciences.stanford.edu/pathways/ssrp-amgen-scholars-program/the-ssrp-amgen-scholars-program-application/,Stanford SSRP-Amgen Scholars Program application,official_application,,1
-30,https://uraf.harvard.edu/amgen-scholars,Harvard Amgen Scholars Program application,official_program,,1
-31,https://harvardforest.fas.harvard.edu/education-opportunities/undergraduate-students/summer-research-program/summer-research-program-information-for-students/,Harvard Forest Summer Research Program in Ecology application,official_program,,1
-32,https://www.ipam.ucla.edu/programs/student-research-programs/research-in-industrial-projects-for-students-rips-2026-los-angeles/,Research in Industrial Projects for Students (RIPS-LA) application,official_program,,1
-33,https://reu.dimacs.rutgers.edu/,DIMACS REU application,official_program,,1
-34,https://cos.gatech.edu/qbiosreu,Quantitative Biosciences Undergraduate Summer Research Experience (QBioS REU) application,official_program,,1
+3,https://btaa.org/resources-for/students/srop/eligibility,Big Ten SROP – University of Iowa eligibility,official_program,,1
+4,https://science.osti.gov/wdts/suli,DOE Office of Science,official_program,,1
+5,https://science.osti.gov/wdts/suli/how-to-apply,Science Undergraduate Laboratory Internships (SULI) application,official_application,,1
+6,https://science.osti.gov/wdts/suli/Eligibility,Science Undergraduate Laboratory Internships (SULI) eligibility,official_program,,1
+7,https://www.training.nih.gov/research-training/pb/sip/,NIH Summer Internship Program (SIP) application,official_program,,1
+8,https://www.nasa.gov/learning-resources/internship-programs/,NASA OSTEM,official_program,,1
+9,https://www.stemgateway.nasa.gov/,NASA OSTEM Internship Program application,official_application,,1
+10,https://www.nasa.gov/learning-resources/internship-programs/intern-frequently-asked-questions/,NASA OSTEM Internship Program eligibility,official_program,,1
+11,https://www.nist.gov/surf,NIST Summer Undergraduate Research Fellowship (SURF) application,official_program,,1
+12,https://www.onr.navy.mil/education-outreach/undergraduate-graduate/nreip-naval-internship,Naval Research Enterprise Internship Program (NREIP) application,official_program,,1
+13,https://www.daad.de/rise/en/rise-germany/,DAAD RISE Germany,official_program,,1
+14,https://www.daad.de/rise/en/rise-germany/find-an-internship/what-applicants-need-to-know/,RISE Germany application,official_application,,1
+15,https://theleadershipalliance.org/summer-research-early-identification-program,The Leadership Alliance,official_program,,1
+16,https://app.theleadershipalliance.org/,Summer Research Early Identification Program (SR-EIP) application,official_application,,1
+17,https://www.med.upenn.edu/research-trainee-affairs/suip/,Summer Undergraduate Internship Program (SUIP) application,official_program,,1
+18,https://www.rockefeller.edu/education-and-training/surf/application-information/,University program,official_program,,1
+19,https://surfapplication.rockefeller.edu/,Summer Undergraduate Research Fellowship (SURF) application,official_application,,1
+20,https://www.cshl.edu/education/undergraduate-research-program/,Undergraduate Research Program (URP) application,official_program,,1
+21,https://www.fredhutch.org/en/education-training/undergraduate-students/summer-undergraduate-research-program.html,Summer Undergraduate Research Program (SURP) application,official_program,,1
+22,https://www.fredhutch.org/en/education-training/undergraduate-students/pathways-undergraduate-researchers.html,Pathways Undergraduate Researchers application,official_program,,1
+23,https://www.fredhutch.org/en/education-training/undergraduate-students/seattlestatgrows.html,SeattleStatGROWS application,official_program,,1
+24,https://www.bu.edu/surf/,NSF REU / university program,official_program,,1
+25,https://etap.nsf.gov/,Boston University SURF / REU application,official_application,,1
+26,https://sites.bu.edu/physics-resources/physics-reu/,BU Physics Research Opportunities (BU-PRO) application,official_program,,1
+27,https://sites.bu.edu/physics-resources/physics-reu/about-the-program/,BU Physics Research Opportunities (BU-PRO) eligibility,official_program,,1
+28,https://www.bu.edu/photonics-programs/reu/programs/,NSF REU / university program,official_program,,1
+29,https://www.bu.edu/photonics-programs/reu/apply/,Integrated Nanomanufacturing REU application,official_application,,1
+30,https://amgenscholars.berkeley.edu/,Amgen Scholars,official_program,,1
+31,https://amgenscholars.berkeley.edu/applicants/,Amgen Scholars Program at UC Berkeley application,official_application,,1
+32,https://biosciences.stanford.edu/pathways/ssrp-amgen-scholars-program/,Amgen Scholars,official_program,,1
+33,https://biosciences.stanford.edu/pathways/ssrp-amgen-scholars-program/the-ssrp-amgen-scholars-program-application/,Stanford SSRP-Amgen Scholars Program application,official_application,,1
+34,https://biosciences.stanford.edu/pathways/ssrp-amgen-scholars-program/criteria-and-application-requirements/,Stanford SSRP-Amgen Scholars Program eligibility,official_program,,1
+35,https://uraf.harvard.edu/amgen-scholars,Harvard Amgen Scholars Program application,official_program,,1
+36,https://harvardforest.fas.harvard.edu/education-opportunities/undergraduate-students/summer-research-program/summer-research-program-information-for-students/,Harvard Forest Summer Research Program in Ecology application,official_program,,1
+37,https://www.ipam.ucla.edu/programs/student-research-programs/research-in-industrial-projects-for-students-rips-2026-los-angeles/,Research in Industrial Projects for Students (RIPS-LA) application,official_program,,1
+38,https://www.ipam.ucla.edu/programs/student-research-programs/research-in-industrial-projects-for-students-rips-2026-los-angeles/?tab=faq,Research in Industrial Projects for Students (RIPS-LA) eligibility,official_program,,1
+39,https://reu.dimacs.rutgers.edu/,DIMACS REU application,official_program,,1
+40,https://dimacs.rutgers.edu/apply-to-the-dimacs-reu,DIMACS REU eligibility,official_program,,1
+41,https://cos.gatech.edu/qbiosreu,Quantitative Biosciences Undergraduate Summer Research Experience (QBioS REU) application,official_program,,1

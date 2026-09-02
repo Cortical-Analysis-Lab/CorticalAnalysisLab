@@ -14,7 +14,12 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DB = ROOT / "database" / "research_opportunities.sqlite"
 SCHEMA = ROOT / "schema" / "schema.sql"
-IMPORTER_VERSION = "1.1.0"
+IMPORTER_VERSION = "1.2.1"
+
+NON_AUTHORITATIVE_EVIDENCE_HOSTS = {
+    "facebook.com", "instagram.com", "linkedin.com", "reddit.com", "tiktok.com",
+    "twitter.com", "x.com", "youtube.com", "pathwaystoscience.org",
+}
 
 CATEGORIES = [
     ("biomedical-health", "Biomedical & Health", "Human health, medicine, public health, and biomedical research"),
@@ -115,6 +120,35 @@ def text_or_none(value):
         return None
     value = str(value).strip()
     return value or None
+
+
+def url_host(value):
+    """Return a normalized URL hostname without treating it as proof of authority."""
+    return (urlparse(text_or_none(value) or "").hostname or "").lower().rstrip(".")
+
+
+def host_is_or_belongs_to(host, parent):
+    """Match an exact host or a real subdomain boundary, never a string suffix alone."""
+    return bool(host and parent and (host == parent or host.endswith("." + parent)))
+
+
+def disallowed_verification_source(value):
+    """Reject social and discovery-only hosts as canonical field evidence."""
+    host = url_host(value)
+    return any(host_is_or_belongs_to(host, blocked) for blocked in NON_AUTHORITATIVE_EVIDENCE_HOSTS)
+
+
+def eligibility_source_matches_official_program(source_url, program_url):
+    """Require eligibility evidence to share the reviewed program's domain family.
+
+    Cross-domain government/network evidence must be modeled as an explicitly reviewed
+    additional source rather than silently accepted by the flat seed importer.
+    """
+    source_host = url_host(source_url)
+    program_host = url_host(program_url)
+    if disallowed_verification_source(source_url):
+        return False
+    return host_is_or_belongs_to(source_host, program_host) or host_is_or_belongs_to(program_host, source_host)
 
 
 def number_or_none(value):

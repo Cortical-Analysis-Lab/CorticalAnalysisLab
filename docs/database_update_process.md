@@ -6,7 +6,7 @@ SQLite is canonical. Files in `data/summer-research/` are generated and must not
 
 1. **Discover** a candidate from a public directory or institutional search.
 2. **Extract** candidate values and exact source URLs into a staging CSV/XLSX. Leave absent facts blank.
-3. **Verify** against an official program, institution, or application page. Record the check date, supported fields, conflicts, and whether the source is authoritative.
+3. **Verify** against a validated official program, host-institution, government, network, or explicitly delegated opportunity-specific application page. Social posts, aggregators, search snippets, forums, and third-party summaries are discovery-only and cannot support canonical fields. Record the check date, narrowly supported fields, conflicts, authority rationale, and whether the source is authoritative.
 4. **Classify** reviewed broad categories, detailed tags, and only explicitly supported research modes.
 5. **Deduplicate** before import using the rules below.
 6. **Import** into a temporary database first, validate it, review warnings, and then update canonical SQLite.

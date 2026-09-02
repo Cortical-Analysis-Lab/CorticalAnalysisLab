@@ -36,6 +36,10 @@ Missing or ambiguous information is stored as `NULL` in typed fields and preserv
 | `fields_supported` | JSON array of field names supported by that source. |
 | `evidence_hash` | Reserved for a future content snapshot hash from the verification pipeline. |
 
+## Reviewed eligibility staging
+
+The reviewed import seed may include explicit `Eligibility_*` columns corresponding to structured `eligibility_rules` fields. Blank staging booleans remain `NULL`; the importer never derives them from missing text. `Eligibility_Source_URL`, `Eligibility_Checked_On`, and `Eligibility_Checked_By` create the verification audit record that supports a `reviewed` parse status.
+
 ## Future agent pipeline compatibility
 
 Discovery agents should write candidate imports or staging files, not modify public JSON directly. Verification agents can add source records, hashes, supported-field lists, and conflict notes. A deterministic import/update step should promote reviewed changes into SQLite, followed by validation and export.
