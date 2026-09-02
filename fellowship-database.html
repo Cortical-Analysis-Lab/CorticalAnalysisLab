@@ -8,9 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/fellowship-database.css">
-  <link rel="stylesheet" href="assets/fellowship-results.css?v=15">
+  <link rel="stylesheet" href="assets/fellowship-results.css?v=24">
   <script defer src="assets/site.js?v=4"></script>
-  <script defer src="assets/fellowship-questionnaire.js?v=9"></script>
+  <script defer src="assets/fellowship-questionnaire.js?v=20"></script>
 </head>
 <body>
   <nav>
@@ -109,22 +109,6 @@
       </div>
       <p id="results-explanation" class="results-explanation"></p>
       <p id="availability-summary" class="availability-summary" aria-live="polite"></p>
-      <section class="location-explorer" aria-labelledby="location-map-heading">
-        <div class="location-map-copy">
-          <p class="filter-kicker">Browse by location</p>
-          <h3 id="location-map-heading">Institutions by state</h3>
-          <p>Numbers show institutions with matching opportunities. Select a state or location to filter the cards.</p>
-        </div>
-        <div class="state-map-frame">
-          <div id="state-map" class="state-map" role="group" aria-label="Filter opportunities by U.S. state"></div>
-        </div>
-        <aside class="other-locations" aria-labelledby="other-locations-heading">
-          <h4 id="other-locations-heading">Other</h4>
-          <div id="other-location-list" class="other-location-list"></div>
-        </aside>
-        <button id="clear-location" class="clear-location" type="button" hidden>Show all locations</button>
-        <p id="map-status" class="visually-hidden" aria-live="polite"></p>
-      </section>
       <div class="explorer-layout">
         <aside class="preference-filters" aria-labelledby="preference-heading">
           <p class="filter-kicker">Preferences</p>
@@ -133,7 +117,9 @@
           <label class="filter-field">Research area
             <select id="filter-category"><option value="">All research areas</option></select>
           </label>
-          <input id="filter-state" type="hidden" value="">
+          <label class="filter-field location-filter">Location
+            <select id="filter-state"><option value="">All locations</option></select>
+          </label>
           <div class="filter-group" aria-labelledby="support-filter-label">
             <span id="support-filter-label">Program support</span>
             <label class="filter-check"><input id="filter-housing" type="checkbox"> Housing included</label>
