@@ -13,6 +13,8 @@ from catalog_common import (
     DEFAULT_DB, ROOT, disallowed_verification_source,
     eligibility_source_matches_official_program,
 )
+from catalog_staging import add_manual_links, candidate_counts, list_candidates, set_review_status
+from run_discovery_session import classify_candidate, deduplicate, nsf_awards
 
 
 class CatalogTests(unittest.TestCase):
@@ -95,6 +97,51 @@ class CatalogTests(unittest.TestCase):
         self.assertFalse(eligibility_source_matches_official_program(
             "https://third-party-example.org/dimacs", program
         ))
+
+    def test_discovery_matches_canonical_identity_before_deep_verification(self):
+        catalog = [{
+            "public_id": "DIMACS-REU", "program_name": "DIMACS REU",
+            "institution_name": "Rutgers University-New Brunswick", "program_url": "https://dimacs.rutgers.edu/",
+        }]
+        state, public_id, _ = classify_candidate(
+            "REU Site: DIMACS REU", "Rutgers University-New Brunswick", catalog
+        )
+        self.assertEqual((state, public_id), ("EXISTING_PROGRAM", "DIMACS-REU"))
+        state, public_id, _ = classify_candidate(
+            "REU Site: A New Ocean Science Program", "Example University", catalog
+        )
+        self.assertEqual((state, public_id), ("NEW_PROGRAM", ""))
+
+    def test_nsf_discovery_payload_and_duplicate_awards_are_normalized(self):
+        payload = {"response": {"award": {"id": "123", "title": "REU Site: Example"}, "metadata": [{"totalCount": "1"}]}}
+        awards, total = nsf_awards(payload)
+        self.assertEqual((len(awards), total), (1, 1))
+        candidate = {
+            "candidate_id": "NSF-123", "discovery_source": "source-a",
+            "match_state": "NEW_PROGRAM", "institution_observed": "Example", "program_name_observed": "Example",
+        }
+        duplicate = dict(candidate, discovery_source="source-b")
+        rows = deduplicate([candidate, duplicate])
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["discovery_source"], "source-a;source-b")
+
+    def test_local_staging_persists_manual_links_and_review_state(self):
+        with tempfile.TemporaryDirectory() as directory:
+            staging = Path(directory) / "candidates.sqlite"
+            first = add_manual_links(
+                ["https://example.edu/research/summer#details"],
+                "User supplied", staging,
+            )
+            second = add_manual_links(
+                ["https://example.edu/research/summer"],
+                "Seen again", staging,
+            )
+            self.assertEqual(first, second)
+            self.assertEqual(candidate_counts(staging)["total"], 1)
+            set_review_status(first[0], "investigating", staging)
+            row = list_candidates(staging)[0]
+            self.assertEqual(row["review_status"], "investigating")
+            self.assertEqual(row["normalized_url"], "https://example.edu/research/summer")
 
     def test_public_catalog_matches_database(self):
         payload = json.loads((ROOT / "data" / "summer-research" / "catalog.json").read_text())

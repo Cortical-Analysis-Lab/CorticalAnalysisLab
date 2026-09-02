@@ -2,6 +2,20 @@
 
 SQLite is canonical. Files in `data/summer-research/` are generated and must not be edited directly.
 
+## Local GUI workflow
+
+`local_catalog_manager.py` is the recommended workstation entry point. It binds only to `127.0.0.1`, uses a per-launch request token, and keeps resumable operational state in the git-ignored `database/local/catalog_candidates.sqlite`.
+
+1. Add official or potential opportunity links through **Add opportunity links**.
+2. Run an approved-source discovery session. Results are merged into persistent staging and matched against canonical identities.
+3. Generate the Desktop Codex investigation bundle.
+4. In Desktop Codex, open this repository and execute `database/local/agent_queue/CODEX_TASK.md`.
+5. Review proposed records and evidence. Only approved, official-source-supported changes belong in the reviewed import files.
+6. Use **Rebuild and validate** to regenerate canonical SQLite, browser JSON, and review exports and to run regression checks.
+7. Review and commit the repository diff. Local staging and agent work queues remain uncommitted.
+
+The GUI deliberately does not embed an API key, invoke an undocumented Desktop Codex interface, or promote discovery-only candidates. This keeps agent investigation adjustable in Desktop Codex while repository updates remain deterministic and reviewable.
+
 ## Reviewed update sequence
 
 1. **Discover** a candidate from a public directory or institutional search.
@@ -35,6 +49,14 @@ Potential fuzzy matches should be emitted for human review. An automated updater
 - Research modes are assigned only when an imported or reviewed source explicitly supports them.
 
 ## Commands
+
+Run a bounded discovery session locally (this writes staging reports only):
+
+```bash
+python scripts/run_discovery_session.py --time-budget-minutes 30 --output /tmp/summer-research-discovery
+```
+
+The GitHub **Update summer research catalog** workflow runs the same catalog-aware session, uploads `candidates.csv`, `report.json`, and `summary.md`, then rebuilds and validates reviewed inclusions. When requested, it opens a GitHub issue containing the completion summary.
 
 Dry-run a reviewed import:
 
