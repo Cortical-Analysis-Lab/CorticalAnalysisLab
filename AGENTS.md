@@ -47,7 +47,6 @@ Current seed scale:
 
 Known gaps:
 
-- All 33 institutions need verified latitude/longitude before map launch.
 - All 35 eligibility records still have `parse_status = needs_review`.
 - Some deadlines, durations, stipends, and benefits are unknown; validator warnings are expected.
 
@@ -119,21 +118,19 @@ python3 -m http.server 4174 --bind 0.0.0.0
 
 The prior port 4173 prototype is only a visual reference and may not exist in a new session. The repository implementation on port 4174 is authoritative.
 
-## Next phase: interactive map
+## State opportunity map
 
-The next requested feature is an institution-centered interactive U.S. map.
+The explorer uses an institution-count U.S. state map instead of institution-level location markers. Do not collect coordinates or add a map provider for this feature.
 
-Required sequence:
-
-1. Verify and add latitude/longitude for the 33 seed institutions. Record authoritative sources and verification dates; do not guess coordinates.
-2. Choose a static-host-compatible map library and document any external asset/provider implications.
-3. Add one marker per institution, never one overlapping marker per program.
-4. Aggregate currently matching opportunities at each institution.
-5. Keep questionnaire eligibility, preference filters, keyword search, map markers, and opportunity cards synchronized through one shared filtered result state.
-6. Selecting a marker should focus/filter or clearly highlight its program cards.
-7. Selecting or focusing a card should highlight its institution marker.
-8. Marker details should support institution, city/state, matching count, broad fields, stipend range, housing count, and earliest deadline where verified.
-9. Provide keyboard-accessible and mobile-friendly alternatives to hover-only interactions.
-10. Validate map behavior with missing/unknown facts and do not begin national-scale scraping yet.
+- Show all U.S. states in a self-contained, static-host-compatible map.
+- States with matching institutions are white with bold Sacred Heart red institution counts.
+- States without matching institutions remain Sacred Heart red.
+- Keep a thick black border around the map.
+- Selecting a state filters the opportunity cards through the same shared result state as the other preference controls.
+- Count each institution once per state, even when it offers multiple matching programs.
+- Put non-single-state catalog locations such as `Multiple`, `International`, and `MD / CO` in an **Other** list beside the map; selecting one filters the cards to that exact catalog value.
+- Keep the state map, Other list, eligibility results, preference filters, keyword search, and opportunity cards synchronized.
+- Provide keyboard-accessible buttons and responsive/mobile presentation.
+- Preserve unknown location values rather than assigning them to a state.
 
 Do not build the future application-profile/template system yet.

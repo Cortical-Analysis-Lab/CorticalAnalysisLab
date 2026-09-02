@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   const resultContainer = document.getElementById("opportunity-results");
   let opportunities = [];
   let evaluatedResults = [];
+  const stateLayout = {
+    AK:[1,1],AL:[5,8],AR:[4,6],AZ:[4,3],CA:[3,2],CO:[4,4],CT:[3,12],DC:[5,10],DE:[4,10],FL:[7,10],GA:[6,9],HI:[6,2],IA:[2,6],ID:[2,3],IL:[2,7],IN:[2,8],KS:[4,5],KY:[3,7],LA:[5,6],MA:[2,12],MD:[3,10],ME:[1,12],MI:[1,8],MN:[1,6],MO:[3,6],MS:[5,7],MT:[1,4],NC:[4,9],ND:[1,5],NE:[3,5],NH:[1,11],NJ:[3,11],NM:[5,4],NV:[3,3],NY:[2,11],OH:[2,9],OK:[5,5],OR:[2,2],PA:[2,10],RI:[4,12],SC:[5,9],SD:[2,5],TN:[4,7],TX:[6,5],UT:[3,4],VA:[3,9],VT:[1,10],WA:[1,2],WI:[1,7],WV:[3,8],WY:[2,4]
+  };
+  const stateNames = {AL:"Alabama",AK:"Alaska",AZ:"Arizona",AR:"Arkansas",CA:"California",CO:"Colorado",CT:"Connecticut",DE:"Delaware",DC:"District of Columbia",FL:"Florida",GA:"Georgia",HI:"Hawaii",ID:"Idaho",IL:"Illinois",IN:"Indiana",IA:"Iowa",KS:"Kansas",KY:"Kentucky",LA:"Louisiana",ME:"Maine",MD:"Maryland",MA:"Massachusetts",MI:"Michigan",MN:"Minnesota",MS:"Mississippi",MO:"Missouri",MT:"Montana",NE:"Nebraska",NV:"Nevada",NH:"New Hampshire",NJ:"New Jersey",NM:"New Mexico",NY:"New York",NC:"North Carolina",ND:"North Dakota",OH:"Ohio",OK:"Oklahoma",OR:"Oregon",PA:"Pennsylvania",RI:"Rhode Island",SC:"South Carolina",SD:"South Dakota",TN:"Tennessee",TX:"Texas",UT:"Utah",VT:"Vermont",VA:"Virginia",WA:"Washington",WV:"West Virginia",WI:"Wisconsin",WY:"Wyoming"};
 
   try {
     const response = await fetch("data/summer-research/catalog.json");
@@ -17,8 +21,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("summary-topics").textContent = new Set(opportunities.flatMap(opportunity => (opportunity.tags || []).map(tag => tag.tag_id))).size;
     const categories = new Map(opportunities.flatMap(opportunity => opportunity.categories || []).map(category => [category.category_slug, category.category_name]));
     [...categories].sort((a, b) => a[1].localeCompare(b[1])).forEach(([value, label]) => document.getElementById("filter-category").add(new Option(label, value)));
-    const states = [...new Set(opportunities.map(opportunity => opportunity.institution?.state_code).filter(Boolean))].sort();
-    states.forEach(state => document.getElementById("filter-state").add(new Option(state, state)));
+    buildLocationMap();
     status.hidden = true;
     panel.hidden = false;
   } catch (error) {
@@ -127,6 +130,49 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const filterIds = ["filter-keyword", "filter-category", "filter-state", "filter-housing", "filter-travel", "filter-open", "sort-results"];
 
+  function buildLocationMap() {
+    const map = document.getElementById("state-map");
+    map.innerHTML = Object.entries(stateLayout).map(([code, [row, column]]) => `<button class="state-tile" type="button" data-location="${code}" style="--row:${row};--column:${column}" aria-label="${stateNames[code]}"><span class="state-code">${code}</span><strong class="state-count" aria-hidden="true"></strong></button>`).join("");
+    map.addEventListener("click", event => {
+      const button = event.target.closest("button[data-location]");
+      if (button && !button.disabled) selectLocation(button.dataset.location);
+    });
+  }
+
+  function selectLocation(location) {
+    document.getElementById("filter-state").value = location;
+    renderResults();
+  }
+
+  function updateLocationMap(locationBase) {
+    const counts = new Map();
+    const institutions = new Map();
+    locationBase.forEach(({opportunity}) => {
+      const institution = opportunity.institution || {};
+      const location = institution.state_code;
+      const institutionId = institution.institution_id;
+      if (!location || !institutionId) return;
+      if (!institutions.has(location)) institutions.set(location, new Set());
+      institutions.get(location).add(institutionId);
+    });
+    institutions.forEach((ids, location) => counts.set(location, ids.size));
+
+    const activeLocation = document.getElementById("filter-state").value;
+    document.querySelectorAll(".state-tile").forEach(button => {
+      const count = counts.get(button.dataset.location) || 0;
+      button.classList.toggle("has-opportunities", count > 0);
+      button.classList.toggle("is-selected", activeLocation === button.dataset.location);
+      button.disabled = count === 0;
+      button.querySelector(".state-count").textContent = count || "";
+      button.setAttribute("aria-label", `${stateNames[button.dataset.location]}: ${count} matching ${count === 1 ? "institution" : "institutions"}`);
+      button.setAttribute("aria-pressed", String(activeLocation === button.dataset.location));
+    });
+
+    const otherLocations = [...counts].filter(([location]) => !stateLayout[location]).sort((a, b) => a[0].localeCompare(b[0]));
+    document.getElementById("other-location-list").innerHTML = otherLocations.length ? otherLocations.map(([location, count]) => `<button type="button" data-location="${escapeHtml(location)}" class="other-location-button${activeLocation === location ? " is-selected" : ""}" aria-pressed="${activeLocation === location}"><span>${escapeHtml(location)}</span><strong>${count}</strong></button>`).join("") : `<p class="no-other-locations">No other matching locations</p>`;
+    document.getElementById("clear-location").hidden = !activeLocation;
+  }
+
   function renderResults() {
     const keyword = document.getElementById("filter-keyword").value.trim().toLowerCase();
     const category = document.getElementById("filter-category").value;
@@ -136,17 +182,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     const open = document.getElementById("filter-open").checked;
     const sort = document.getElementById("sort-results").value;
 
-    const filtered = evaluatedResults.filter(({opportunity, evaluation}) => {
+    const matchesNonLocationFilters = ({opportunity, evaluation}) => {
       const cycle = opportunity.cycles?.[0] || {};
       const haystack = [opportunity.program_name, opportunity.institution?.institution_name, opportunity.institution?.city, opportunity.institution?.state_code, ...(opportunity.tags || []).map(tag => tag.tag_name)].join(" ").toLowerCase();
       return evaluation.state !== "ineligible"
         && (!keyword || haystack.includes(keyword))
         && matchesResearchArea(opportunity, category)
-        && (!state || opportunity.institution?.state_code === state)
         && (!housing || cycle.housing_status === "yes")
         && (!travel || ["yes", "allowance"].includes(cycle.travel_status))
         && (!open || ["open", "upcoming"].includes(cycle.status_code));
-    });
+    };
+    const locationBase = evaluatedResults.filter(matchesNonLocationFilters);
+    updateLocationMap(locationBase);
+    const filtered = locationBase.filter(({opportunity}) => !state || opportunity.institution?.state_code === state);
 
     filtered.sort((a, b) => {
       const aCycle = a.opportunity.cycles?.[0] || {};
@@ -159,6 +207,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.getElementById("filtered-result-count").textContent = `Showing ${filtered.length} of ${evaluatedResults.length} programs`;
     resultContainer.innerHTML = filtered.length ? filtered.map(card).join("") : `<div class="empty-results">No opportunities match these preference filters. Try clearing one or more filters.</div>`;
+    document.getElementById("map-status").textContent = state ? `Opportunity cards filtered to ${stateNames[state] || state}.` : "Opportunity cards show all matching locations.";
   }
 
   form.addEventListener("submit", event => {
@@ -187,6 +236,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   filterIds.forEach(id => document.getElementById(id).addEventListener(id === "filter-keyword" ? "input" : "change", renderResults));
+  document.getElementById("other-location-list").addEventListener("click", event => {
+    const button = event.target.closest("button[data-location]");
+    if (button) selectLocation(button.dataset.location);
+  });
+  document.getElementById("clear-location").addEventListener("click", () => selectLocation(""));
   document.getElementById("clear-filters").addEventListener("click", () => {
     ["filter-keyword", "filter-category", "filter-state"].forEach(id => { document.getElementById(id).value = ""; });
     ["filter-housing", "filter-travel", "filter-open"].forEach(id => { document.getElementById(id).checked = false; });
