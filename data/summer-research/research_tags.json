@@ -49,9 +49,86 @@
     "description": null
   },
   {
+    "tag_id": 169,
+    "tag_slug": "mgi-materials-genome-initiative-harnessing-the-data-revolution-materials-data-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "(MGI) Materials Genome Initiative, Harnessing the Data Revolution, Materials Data, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 188,
+    "tag_slug": "mgi-materials-genome-initiative-materials-data-materials-education-and-research-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "(MGI) Materials Genome Initiative, Materials Data, MATERIALS EDUCATION AND RESEARCH, EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 173,
+    "tag_slug": "mgi-materials-genome-initiative-synthetic-biology-dod-assure-program-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "(MGI) Materials Genome Initiative, Synthetic biology, DOD ASSURE PROGRAM, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 67,
     "tag_slug": "ai",
     "tag_name": "AI",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 322,
+    "tag_slug": "ai-education-workforce-develop-quantum-education-workforce-developmnt-biotechnology-improv-undergrad-stem-ed-iuse-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "AI Education/Workforce Develop, Quantum Education & Workforce Developmnt, Biotechnology, Improv Undergrad STEM Ed(IUSE), UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 341,
+    "tag_slug": "ai-education-workforce-develop-research-in-disabilties-education-improv-undergrad-stem-ed-iuse-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "AI Education/Workforce Develop, Research in Disabilties Education, Improv Undergrad STEM Ed(IUSE), UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 204,
+    "tag_slug": "ai-supported-learning-ai-education-workforce-develop-research-exp-for-undergrads-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "AI-Supported Learning, AI Education/Workforce Develop, RESEARCH EXP FOR UNDERGRADS, EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 180,
+    "tag_slug": "ant-glaciology",
+    "tag_name": "ANT Glaciology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 179,
+    "tag_slug": "antarctic-glaciology-usgcrp-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "ANTARCTIC GLACIOLOGY, USGCRP, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 181,
+    "tag_slug": "antarctic-glaciology-usgcrp-reu-site-res-exp-for-ugrd-site-reu-supp-res-exp-for-ugrd-supp",
+    "tag_name": "ANTARCTIC GLACIOLOGY, USGCRP, REU SITE-Res Exp for Ugrd Site, REU SUPP-Res Exp for Ugrd Supp",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 348,
+    "tag_slug": "antarctic-ocean-atmosph-sci-antarctic-glaciology-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "ANTARCTIC OCEAN & ATMOSPH SCI, ANTARCTIC GLACIOLOGY, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 233,
+    "tag_slug": "arctic-research-usgcrp-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "ARCTIC RESEARCH, USGCRP, REU SITE-Res Exp for Ugrd Site",
     "tag_group": "research_topic",
     "description": null
   },
@@ -66,6 +143,195 @@
     "tag_id": 80,
     "tag_slug": "applied-mathematics",
     "tag_name": "Applied mathematics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 352,
+    "tag_slug": "artificial-intelligence-ai-ai-education-workforce-develop-eager",
+    "tag_name": "Artificial Intelligence (AI), AI Education/Workforce Develop, EAGER",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 304,
+    "tag_slug": "artificial-intelligence-ai-biotechnology-exp-prog-to-stim-comp-res-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Artificial Intelligence (AI), Biotechnology, EXP PROG TO STIM COMP RES, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 287,
+    "tag_slug": "artificial-intelligence-ai-biotechnology-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Artificial Intelligence (AI), Biotechnology, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 295,
+    "tag_slug": "artificial-intelligence-ai-dod-assure-program-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Artificial Intelligence (AI), DOD ASSURE PROGRAM, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 309,
+    "tag_slug": "artificial-intelligence-ai-exp-prog-to-stim-comp-res-graduate-involvement-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Artificial Intelligence (AI), EXP PROG TO STIM COMP RES, GRADUATE INVOLVEMENT, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 312,
+    "tag_slug": "artificial-intelligence-ai-exp-prog-to-stim-comp-res-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Artificial Intelligence (AI), EXP PROG TO STIM COMP RES, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 305,
+    "tag_slug": "artificial-intelligence-ai-fusion-enabling-science-technology-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "Artificial Intelligence (AI), Fusion Enabling Science & Technology, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 326,
+    "tag_slug": "artificial-intelligence-ai-graduate-involvement-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Artificial Intelligence (AI), GRADUATE INVOLVEMENT, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 335,
+    "tag_slug": "artificial-intelligence-ai-multidisciplinary-biotechnology-quantum-information-science-biotechnology-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "Artificial Intelligence (AI), MULTIDISCIPLINARY BIOTECHNOLOGY, QUANTUM INFORMATION SCIENCE, Biotechnology, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 289,
+    "tag_slug": "artificial-intelligence-ai-machine-learning-theory-exp-prog-to-stim-comp-res-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Artificial Intelligence (AI), Machine Learning Theory, EXP PROG TO STIM COMP RES, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 206,
+    "tag_slug": "artificial-intelligence-ai-machine-learning-theory-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Artificial Intelligence (AI), Machine Learning Theory, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 259,
+    "tag_slug": "artificial-intelligence-ai-machine-learning-theory-translational-research-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Artificial Intelligence (AI), Machine Learning Theory, Translational Research, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 332,
+    "tag_slug": "artificial-intelligence-ai-quantum-information-science-advanced-manufacturing-biotechnology-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Artificial Intelligence (AI), QUANTUM INFORMATION SCIENCE, Advanced Manufacturing, Biotechnology, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 313,
+    "tag_slug": "artificial-intelligence-ai-quantum-information-science-biotechnology-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Artificial Intelligence (AI), QUANTUM INFORMATION SCIENCE, Biotechnology, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 300,
+    "tag_slug": "artificial-intelligence-ai-quantum-information-science-biotechnology-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "Artificial Intelligence (AI), QUANTUM INFORMATION SCIENCE, Biotechnology, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 327,
+    "tag_slug": "artificial-intelligence-ai-quantum-information-science-dod-assure-program-biotechnology-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Artificial Intelligence (AI), QUANTUM INFORMATION SCIENCE, DOD ASSURE PROGRAM, Biotechnology, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 324,
+    "tag_slug": "artificial-intelligence-ai-quantum-information-science-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Artificial Intelligence (AI), QUANTUM INFORMATION SCIENCE, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 303,
+    "tag_slug": "artificial-intelligence-ai-quantum-information-science-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "Artificial Intelligence (AI), QUANTUM INFORMATION SCIENCE, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 329,
+    "tag_slug": "artificial-intelligence-ai-ret-site-res-exp-for-tchr-site-quantum-information-science-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "Artificial Intelligence (AI), RET SITE-Res Exp for Tchr Site, QUANTUM INFORMATION SCIENCE, EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 128,
+    "tag_slug": "artificial-intelligence-ai-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Artificial Intelligence (AI), REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 314,
+    "tag_slug": "artificial-intelligence-ai-theoretical-computational-astrophysics-observational-astronomy-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Artificial Intelligence (AI), THEORETICAL & COMPUTATIONAL ASTROPHYSICS, OBSERVATIONAL ASTRONOMY, EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 302,
+    "tag_slug": "artificial-intelligence-ai-theoretical-computational-astrophysics-observational-astronomy-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Artificial Intelligence (AI), THEORETICAL & COMPUTATIONAL ASTROPHYSICS, OBSERVATIONAL ASTRONOMY, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 255,
+    "tag_slug": "artificial-intelligence-ai-translational-research-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Artificial Intelligence (AI), Translational Research, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 323,
+    "tag_slug": "artificial-intelligence-ai-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Artificial Intelligence (AI), UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 311,
+    "tag_slug": "artificial-intelligence-ai-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "Artificial Intelligence (AI), UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 264,
+    "tag_slug": "bio-related-materials-research-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "BIO-RELATED MATERIALS RESEARCH, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 94,
+    "tag_slug": "broadening-participation-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "BROADENING PARTICIPATION, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
     "tag_group": "research_topic",
     "description": null
   },
@@ -91,9 +357,121 @@
     "description": null
   },
   {
+    "tag_id": 301,
+    "tag_slug": "biotechnology-exp-prog-to-stim-comp-res-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Biotechnology, EXP PROG TO STIM COMP RES, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 299,
+    "tag_slug": "biotechnology-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Biotechnology, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 190,
+    "tag_slug": "cds-e-exp-prog-to-stim-comp-res-reu-site-res-exp-for-ugrd-site-computational-science-enging",
+    "tag_name": "CDS&E, EXP PROG TO STIM COMP RES, REU SITE-Res Exp for Ugrd Site, COMPUTATIONAL SCIENCE & ENGING",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 250,
+    "tag_slug": "centers-for-rsch-excell-in-s-t-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "CENTERS FOR RSCH EXCELL IN S&T, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 351,
+    "tag_slug": "cer-computingeducationresearch",
+    "tag_name": "CER-ComputingEducationResearch",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 349,
+    "tag_slug": "conference-and-workshops-biotechnology-exp-prog-to-stim-comp-res-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "CONFERENCE AND WORKSHOPS, Biotechnology, EXP PROG TO STIM COMP RES, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 91,
+    "tag_slug": "covid-disproportionate-impcts-inst-indiv-post-baccalaureate-involvement-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "COVID-Disproportionate Impcts Inst-Indiv, Post-baccalaureate Involvement, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 106,
+    "tag_slug": "covid-disproportionate-impcts-inst-indiv-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "COVID-Disproportionate Impcts Inst-Indiv, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 115,
+    "tag_slug": "covid-disproportionate-impcts-inst-indiv-racial-equity-in-stem-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "COVID-Disproportionate Impcts Inst-Indiv, Racial Equity in STEM, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 273,
+    "tag_slug": "cyber-physical-systems-cps-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "CYBER-PHYSICAL SYSTEMS (CPS), REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 46,
     "tag_slug": "cancer-biology",
     "tag_name": "Cancer biology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 167,
+    "tag_slug": "capacity-building-projects-exp-prog-to-stim-comp-res-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Capacity-Building Projects, EXP PROG TO STIM COMP RES, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 251,
+    "tag_slug": "centers-for-rsch-excell-in-s-t",
+    "tag_name": "Centers for Rsch Excell in S&T",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 241,
+    "tag_slug": "clean-energy-technology-energy-storage-or-transmission-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Clean Energy Technology, Energy Storage or Transmission, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 224,
+    "tag_slug": "clean-energy-technology-energy-storage-or-transmission-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "Clean Energy Technology, Energy Storage or Transmission, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 174,
+    "tag_slug": "clean-energy-technology-hydrocarbon-conversion-other-energy-research-critical-elements-exp-prog-to-stim-comp-res-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Clean Energy Technology, Hydrocarbon Conversion, Other Energy Research, Critical Elements, EXP PROG TO STIM COMP RES, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 202,
+    "tag_slug": "clean-energy-technology-solar-energy-capture-conver-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Clean Energy Technology, Solar Energy Capture&Conver, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
     "tag_group": "research_topic",
     "description": null
   },
@@ -105,9 +483,555 @@
     "description": null
   },
   {
+    "tag_id": 320,
+    "tag_slug": "critical-minerals-materials-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Critical Minerals & Materials, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 153,
+    "tag_slug": "cross-bio-activities-biology-postdoctoral-research-rsch-exper-for-undergrad-sites",
+    "tag_name": "Cross-BIO Activities, Biology Postdoctoral Research, RSCH EXPER FOR UNDERGRAD SITES",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 92,
+    "tag_slug": "cross-bio-activities-rsch-exper-for-undergrad-sites",
+    "tag_name": "Cross-BIO Activities, RSCH EXPER FOR UNDERGRAD SITES",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 337,
+    "tag_slug": "cross-directorate-activities",
+    "tag_name": "Cross-Directorate  Activities",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 338,
+    "tag_slug": "dod-assure-program-biotechnology-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "DOD ASSURE PROGRAM, Biotechnology, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 226,
+    "tag_slug": "dod-assure-program-exp-prog-to-stim-comp-res-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "DOD ASSURE PROGRAM, EXP PROG TO STIM COMP RES, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 333,
+    "tag_slug": "dod-assure-program-nano-non-solic-sci-eng-awd-microelectronics-and-semiconductors-advanced-manufacturing-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "DOD ASSURE PROGRAM, NANO NON-SOLIC SCI & ENG AWD, Microelectronics and Semiconductors, Advanced Manufacturing, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 123,
+    "tag_slug": "dod-assure-program-rahss-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "DOD ASSURE PROGRAM, RAHSS, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 122,
+    "tag_slug": "dod-assure-program-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "DOD ASSURE PROGRAM, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 346,
+    "tag_slug": "dod-assure-program-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "DOD ASSURE PROGRAM, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 178,
+    "tag_slug": "dod-assure-program-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "DOD ASSURE PROGRAM, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 242,
+    "tag_slug": "dod-assure-program-women-minority-disabled-nec-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "DOD ASSURE PROGRAM, WOMEN, MINORITY, DISABLED, NEC, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 93,
+    "tag_slug": "division-of-astronomical-sciences",
+    "tag_name": "Division Of Astronomical Sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 96,
+    "tag_slug": "division-of-chemistry",
+    "tag_name": "Division Of Chemistry",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 99,
+    "tag_slug": "division-of-computer-and-network-systems",
+    "tag_name": "Division Of Computer and Network Systems",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 105,
+    "tag_slug": "division-of-earth-sciences",
+    "tag_name": "Division Of Earth Sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 120,
+    "tag_slug": "division-of-materials-research",
+    "tag_name": "Division Of Materials Research",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 114,
+    "tag_slug": "division-of-mathematical-sciences",
+    "tag_name": "Division Of Mathematical Sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 118,
+    "tag_slug": "division-of-ocean-sciences",
+    "tag_name": "Division Of Ocean Sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 109,
+    "tag_slug": "division-of-physics",
+    "tag_name": "Division Of Physics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 147,
+    "tag_slug": "division-of-undergraduate-education",
+    "tag_name": "Division Of Undergraduate Education",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 133,
+    "tag_slug": "division-of-atmospheric-and-geospace-sciences",
+    "tag_name": "Division of Atmospheric and Geospace Sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 90,
+    "tag_slug": "division-of-biological-infrastructure",
+    "tag_name": "Division of Biological Infrastructure",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 130,
+    "tag_slug": "division-of-computing-and-communication-foundations",
+    "tag_name": "Division of Computing and Communication Foundations",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 102,
+    "tag_slug": "division-of-engineering-education-and-centers",
+    "tag_name": "Division of Engineering Education and Centers",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 266,
+    "tag_slug": "division-of-information-intelligent-systems",
+    "tag_name": "Division of Information & Intelligent Systems",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 350,
+    "tag_slug": "eager-quantum-computing",
+    "tag_name": "EAGER, QUANTUM COMPUTING",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 240,
+    "tag_slug": "ecr-edu-core-research",
+    "tag_name": "ECR-EDU Core Research",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 168,
+    "tag_slug": "ecr-bcser-capcity-stem-ed-rscr",
+    "tag_name": "ECR:BCSER Capcity STEM Ed Rscr",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 113,
+    "tag_slug": "education-and-human-resources",
+    "tag_name": "EDUCATION AND HUMAN RESOURCES",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 217,
+    "tag_slug": "education-and-human-resources-earth-system-through-time",
+    "tag_name": "EDUCATION AND HUMAN RESOURCES, Earth System Through Time",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 166,
+    "tag_slug": "education-and-human-resources-special-programs-in-astronomy",
+    "tag_name": "EDUCATION AND HUMAN RESOURCES, SPECIAL PROGRAMS IN ASTRONOMY",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 107,
+    "tag_slug": "education-and-human-resources-special-initiatives",
+    "tag_name": "EDUCATION AND HUMAN RESOURCES, Special Initiatives",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 119,
+    "tag_slug": "education-human-resources-oce",
+    "tag_name": "EDUCATION/HUMAN RESOURCES,OCE",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 243,
+    "tag_slug": "education-human-resources-oce-education-and-human-resources",
+    "tag_name": "EDUCATION/HUMAN RESOURCES,OCE, EDUCATION AND HUMAN RESOURCES",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 288,
+    "tag_slug": "education-human-resources-oce-gwf-geosciences-workforce",
+    "tag_name": "EDUCATION/HUMAN RESOURCES,OCE, GWF-Geosciences Workforce",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 207,
+    "tag_slug": "education-human-resources-oce-oce-ocean-sciences-research",
+    "tag_name": "EDUCATION/HUMAN RESOURCES,OCE, OCE-Ocean Sciences Research",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 176,
+    "tag_slug": "education-human-resources-oce-ship-operations-oce-ocean-sciences-research",
+    "tag_name": "EDUCATION/HUMAN RESOURCES,OCE, SHIP OPERATIONS, OCE-Ocean Sciences Research",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 137,
+    "tag_slug": "educational-linkages",
+    "tag_name": "EDUCATIONAL LINKAGES",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 229,
+    "tag_slug": "educational-linkages-atmospheric-chemistry-paleoclimate",
+    "tag_name": "EDUCATIONAL LINKAGES, Atmospheric Chemistry, Paleoclimate",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 171,
+    "tag_slug": "educational-linkages-solar-terrestrial-aeronomy",
+    "tag_name": "EDUCATIONAL LINKAGES, SOLAR-TERRESTRIAL, AERONOMY",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 317,
+    "tag_slug": "educational-linkages-spcewthrinvtn-linkgsciresilnce",
+    "tag_name": "EDUCATIONAL LINKAGES, SpceWthrInvtn-LinkgSciResilnce",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 193,
+    "tag_slug": "epscor-co-funding",
+    "tag_name": "EPSCoR Co-Funding",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 146,
+    "tag_slug": "epscor-co-funding-education-human-resources-oce-education-and-human-resources",
+    "tag_name": "EPSCoR Co-Funding, EDUCATION/HUMAN RESOURCES,OCE, EDUCATION AND HUMAN RESOURCES",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 132,
+    "tag_slug": "epscor-co-funding-ewfd-eng-workforce-development",
+    "tag_name": "EPSCoR Co-Funding, EWFD-Eng Workforce Development",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 230,
+    "tag_slug": "epscor-co-funding-integrative-activities-in-phys",
+    "tag_name": "EPSCoR Co-Funding, Integrative Activities in Phys",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 177,
+    "tag_slug": "epscor-co-funding-rsch-exper-for-undergrad-sites",
+    "tag_name": "EPSCoR Co-Funding, RSCH EXPER FOR UNDERGRAD SITES",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 184,
+    "tag_slug": "epscor-co-funding-ssa-special-studies-analysis",
+    "tag_name": "EPSCoR Co-Funding, SSA-Special Studies & Analysis",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 185,
+    "tag_slug": "epscor-co-funding-undergraduate-programs-in-chem",
+    "tag_name": "EPSCoR Co-Funding, UNDERGRADUATE PROGRAMS IN CHEM",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 198,
+    "tag_slug": "epscor-co-funding-xc-crosscutting-activities-pro",
+    "tag_name": "EPSCoR Co-Funding, XC-Crosscutting Activities Pro",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 104,
+    "tag_slug": "ewfd-eng-workforce-development",
+    "tag_name": "EWFD-Eng Workforce Development",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 319,
+    "tag_slug": "ewfd-eng-workforce-development-cscs-circuits-and-systems-for",
+    "tag_name": "EWFD-Eng Workforce Development, CSCS: Circuits and Systems for",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 163,
+    "tag_slug": "ewfd-eng-workforce-development-epscor-co-funding",
+    "tag_name": "EWFD-Eng Workforce Development, EPSCoR Co-Funding",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 227,
+    "tag_slug": "ewfd-eng-workforce-development-epscor-co-funding-education-and-human-resources",
+    "tag_name": "EWFD-Eng Workforce Development, EPSCoR Co-Funding, EDUCATION AND HUMAN RESOURCES",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 136,
+    "tag_slug": "ewfd-eng-workforce-development-eddie-bernice-johnson-includes",
+    "tag_name": "EWFD-Eng Workforce Development, Eddie Bernice Johnson INCLUDES",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 249,
+    "tag_slug": "ewfd-eng-workforce-development-hsi-hispanic-serving-instituti-partnership-funding-from-src",
+    "tag_name": "EWFD-Eng Workforce Development, HSI-Hispanic Serving Instituti, Partnership Funding from SRC",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 232,
+    "tag_slug": "ewfd-eng-workforce-development-iuse",
+    "tag_name": "EWFD-Eng Workforce Development, IUSE",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 208,
+    "tag_slug": "ewfd-eng-workforce-development-partnership-funding-from-src",
+    "tag_name": "EWFD-Eng Workforce Development, Partnership Funding from SRC",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 238,
+    "tag_slug": "ewfd-eng-workforce-development-partnership-funding-from-src-hsi-hispanic-serving-instituti",
+    "tag_name": "EWFD-Eng Workforce Development, Partnership Funding from SRC, HSI-Hispanic Serving Instituti",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 293,
+    "tag_slug": "ewfd-eng-workforce-development-qiset-quan-info-sci-eng-tech-epmqd-electronic-photonic-m",
+    "tag_name": "EWFD-Eng Workforce Development, QISET-Quan Info Sci Eng & Tech, EPMQD: Electronic, Photonic, M",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 205,
+    "tag_slug": "ewfd-eng-workforce-development-ssa-special-studies-analysis",
+    "tag_name": "EWFD-Eng Workforce Development, SSA-Special Studies & Analysis",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 236,
+    "tag_slug": "ewfd-eng-workforce-development-ssa-special-studies-analysis-epscor-co-funding",
+    "tag_name": "EWFD-Eng Workforce Development, SSA-Special Studies & Analysis, EPSCoR Co-Funding",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 279,
+    "tag_slug": "ewfd-eng-workforce-development-special-initiatives",
+    "tag_name": "EWFD-Eng Workforce Development, Special Initiatives",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 267,
+    "tag_slug": "exp-prog-to-stim-comp-res-nat-security-secure-border-pub-safety-reu-site-res-exp-for-ugrd-site-translational-research",
+    "tag_name": "EXP PROG TO STIM COMP RES, Nat Security, Secure Border & Pub Safety, REU SITE-Res Exp for Ugrd Site, Translational Research",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 100,
+    "tag_slug": "exp-prog-to-stim-comp-res-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "EXP PROG TO STIM COMP RES, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 210,
+    "tag_slug": "exp-prog-to-stim-comp-res-reu-site-res-exp-for-ugrd-site-reu-supp-res-exp-for-ugrd-supp",
+    "tag_name": "EXP PROG TO STIM COMP RES, REU SITE-Res Exp for Ugrd Site, REU SUPP-Res Exp for Ugrd Supp",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 276,
+    "tag_slug": "exp-prog-to-stim-comp-res-reu-site-res-exp-for-ugrd-site-undergraduate-education-research-exp-for-undergrads-human-resources-development",
+    "tag_name": "EXP PROG TO STIM COMP RES, REU SITE-Res Exp for Ugrd Site, UNDERGRADUATE EDUCATION, RESEARCH EXP FOR UNDERGRADS, HUMAN RESOURCES DEVELOPMENT",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 117,
+    "tag_slug": "exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 218,
+    "tag_slug": "exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 75,
     "tag_slug": "ecology",
     "tag_name": "Ecology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 139,
+    "tag_slug": "france-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "FRANCE, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 282,
+    "tag_slug": "gold-geo-opps-leadersdiversity-educational-linkages",
+    "tag_name": "GOLD-GEO Opps LeadersDiversity, EDUCATIONAL LINKAGES",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 138,
+    "tag_slug": "gwf-geosciences-workforce-education-human-resources-oce",
+    "tag_name": "GWF-Geosciences Workforce, EDUCATION/HUMAN RESOURCES,OCE",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 290,
+    "tag_slug": "gwf-geosciences-workforce-education-human-resources-oce-epscor-co-funding",
+    "tag_name": "GWF-Geosciences Workforce, EDUCATION/HUMAN RESOURCES,OCE, EPSCoR Co-Funding",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 284,
+    "tag_slug": "gwf-geosciences-workforce-epscor-co-funding-education-human-resources-oce",
+    "tag_name": "GWF-Geosciences Workforce, EPSCoR Co-Funding, EDUCATION/HUMAN RESOURCES,OCE",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 245,
+    "tag_slug": "grad-prep-apg-enhan-experience-grant-opp-for-acad-lia-w-indus-interagency-agreements-materials-education-and-research-optics-and-photonics-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Grad Prep APG:Enhan. Experience, GRANT OPP FOR ACAD LIA W/INDUS, Interagency Agreements, MATERIALS EDUCATION AND RESEARCH, Optics and Photonics, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 247,
+    "tag_slug": "hsi-hispanic-serving-instituti-partnership-funding-from-src-ewfd-eng-workforce-development",
+    "tag_name": "HSI-Hispanic Serving Instituti, Partnership Funding from SRC, EWFD-Eng Workforce Development",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 286,
+    "tag_slug": "human-resources-development-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site-research-exp-for-undergrads",
+    "tag_name": "HUMAN RESOURCES DEVELOPMENT, EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, RESEARCH EXP FOR UNDERGRADS",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 281,
+    "tag_slug": "human-resources-development-research-exp-for-undergrads-microelectronics-and-semiconductors-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "HUMAN RESOURCES DEVELOPMENT, RESEARCH EXP FOR UNDERGRADS, Microelectronics and Semiconductors, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
     "tag_group": "research_topic",
     "description": null
   },
@@ -119,9 +1043,289 @@
     "description": null
   },
   {
+    "tag_id": 248,
+    "tag_slug": "infrastructure-program",
+    "tag_name": "INFRASTRUCTURE PROGRAM",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 157,
+    "tag_slug": "interdisciplinary-proposals-broadening-participation-dod-assure-program-undergraduate-education-reu-site-res-exp-for-ugrd-site-reu-supp-res-exp-for-ugrd-supp-science-math-eng-tech-education",
+    "tag_name": "INTERDISCIPLINARY PROPOSALS, BROADENING PARTICIPATION, DOD ASSURE PROGRAM, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, REU SUPP-Res Exp for Ugrd Supp, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 308,
+    "tag_slug": "interdisciplinary-proposals-exp-prog-to-stim-comp-res-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "INTERDISCIPLINARY PROPOSALS, EXP PROG TO STIM COMP RES, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 170,
+    "tag_slug": "interdisciplinary-proposals-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "INTERDISCIPLINARY PROPOSALS, EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 325,
+    "tag_slug": "interdisciplinary-proposals-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "INTERDISCIPLINARY PROPOSALS, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 316,
+    "tag_slug": "interdisciplinary-proposals-space-weather-research-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "INTERDISCIPLINARY PROPOSALS, Space Weather Research, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 160,
+    "tag_slug": "interdisciplinary-proposals-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "INTERDISCIPLINARY PROPOSALS, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 149,
+    "tag_slug": "iuse",
+    "tag_name": "IUSE",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 214,
+    "tag_slug": "iuse-ewfd-eng-workforce-development",
+    "tag_name": "IUSE, EWFD-Eng Workforce Development",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 200,
+    "tag_slug": "improv-undergrad-stem-ed-iuse-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Improv Undergrad STEM Ed(IUSE), EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 148,
+    "tag_slug": "improv-undergrad-stem-ed-iuse-undergraduate-education",
+    "tag_name": "Improv Undergrad STEM Ed(IUSE), UNDERGRADUATE EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 262,
+    "tag_slug": "improv-undergrad-stem-ed-iuse-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Improv Undergrad STEM Ed(IUSE), UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 129,
+    "tag_slug": "integrative-activities-in-phys",
+    "tag_name": "Integrative Activities in Phys",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 219,
+    "tag_slug": "integrative-activities-in-phys-epscor-co-funding",
+    "tag_name": "Integrative Activities in Phys, EPSCoR Co-Funding",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 151,
+    "tag_slug": "integrative-activities-in-phys-epscor-co-funding-xc-crosscutting-activities-pro",
+    "tag_name": "Integrative Activities in Phys, EPSCoR Co-Funding, XC-Crosscutting Activities Pro",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 330,
+    "tag_slug": "integrative-activities-in-phys-office-of-multidisciplinary-ac",
+    "tag_name": "Integrative Activities in Phys, OFFICE OF MULTIDISCIPLINARY AC",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 296,
+    "tag_slug": "integrative-activities-in-phys-special-programs-in-astronomy",
+    "tag_name": "Integrative Activities in Phys, SPECIAL PROGRAMS IN ASTRONOMY",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 256,
+    "tag_slug": "integrative-activities-in-phys-special-programs-in-astronomy-wou-windows-on-the-universe-t",
+    "tag_name": "Integrative Activities in Phys, SPECIAL PROGRAMS IN ASTRONOMY, WoU-Windows on the Universe: T",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 291,
+    "tag_slug": "integrative-and-collaborative-education-and-research-icer",
+    "tag_name": "Integrative and Collaborative Education and Research (ICER)",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 35,
     "tag_slug": "life-sciences",
     "tag_name": "Life sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 201,
+    "tag_slug": "materials-education-and-research-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "MATERIALS EDUCATION AND RESEARCH, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 260,
+    "tag_slug": "machine-learning-theory-multidisciplinary-biotechnology-quantum-information-science-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "Machine Learning Theory, MULTIDISCIPLINARY BIOTECHNOLOGY, QUANTUM INFORMATION SCIENCE, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 334,
+    "tag_slug": "materials-ai-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Materials AI, EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 331,
+    "tag_slug": "materials-data-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Materials Data, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 254,
+    "tag_slug": "materials-under-extreme-conditions-bio-related-materials-research-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Materials Under Extreme Conditions, BIO-RELATED MATERIALS RESEARCH, EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 342,
+    "tag_slug": "microelectronics-and-semiconductors-advanced-manufacturing-biotechnology-exp-prog-to-stim-comp-res-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Microelectronics and Semiconductors, Advanced Manufacturing, Biotechnology, EXP PROG TO STIM COMP RES, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 225,
+    "tag_slug": "microelectronics-and-semiconductors-clean-energy-technology-energy-efficiency-and-end-use-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Microelectronics and Semiconductors, Clean Energy Technology, Energy Efficiency and End Use, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 211,
+    "tag_slug": "microelectronics-and-semiconductors-clean-energy-technology-energy-storage-or-transmission-energy-efficiency-and-end-use-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Microelectronics and Semiconductors, Clean Energy Technology, Energy Storage or Transmission, Energy Efficiency and End Use, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 345,
+    "tag_slug": "microelectronics-and-semiconductors-dod-assure-program-optics-and-photonics-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Microelectronics and Semiconductors, DOD ASSURE PROGRAM, Optics and Photonics, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 213,
+    "tag_slug": "microelectronics-and-semiconductors-research-exp-for-undergrads-dod-assure-program-improv-undergrad-stem-ed-iuse-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Microelectronics and Semiconductors, RESEARCH EXP FOR UNDERGRADS, DOD ASSURE PROGRAM, Improv Undergrad STEM Ed(IUSE), UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 285,
+    "tag_slug": "microelectronics-and-semiconductors-research-exp-for-undergrads-human-resources-development-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Microelectronics and Semiconductors, RESEARCH EXP FOR UNDERGRADS, HUMAN RESOURCES DEVELOPMENT, EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 261,
+    "tag_slug": "microelectronics-and-semiconductors-research-exp-for-undergrads-human-resources-development-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Microelectronics and Semiconductors, RESEARCH EXP FOR UNDERGRADS, HUMAN RESOURCES DEVELOPMENT, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 231,
+    "tag_slug": "microelectronics-and-semiconductors-research-exp-for-undergrads-improv-undergrad-stem-ed-iuse-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Microelectronics and Semiconductors, RESEARCH EXP FOR UNDERGRADS, Improv Undergrad STEM Ed(IUSE), EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 182,
+    "tag_slug": "microelectronics-and-semiconductors-research-exp-for-undergrads-improv-undergrad-stem-ed-iuse-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Microelectronics and Semiconductors, RESEARCH EXP FOR UNDERGRADS, Improv Undergrad STEM Ed(IUSE), UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 237,
+    "tag_slug": "microelectronics-and-semiconductors-research-exp-for-undergrads-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Microelectronics and Semiconductors, RESEARCH EXP FOR UNDERGRADS, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 344,
+    "tag_slug": "microelectronics-and-semiconductors-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Microelectronics and Semiconductors, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 164,
+    "tag_slug": "microelectronics-and-semiconductors-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Microelectronics and Semiconductors, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 258,
+    "tag_slug": "nano-non-solic-sci-eng-awd-bio-related-materials-research-nanomaterials-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "NANO NON-SOLIC SCI & ENG AWD, BIO-RELATED MATERIALS RESEARCH, Nanomaterials, EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 143,
+    "tag_slug": "nano-non-solic-sci-eng-awd-nanomaterials-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "NANO NON-SOLIC SCI & ENG AWD, Nanomaterials, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 127,
+    "tag_slug": "nsci-national-strategic-computing-initi-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "NSCI: National Strategic Computing Initi, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 321,
+    "tag_slug": "nsf-criticalminerals-materials",
+    "tag_name": "NSF CriticalMinerals&Materials",
     "tag_group": "research_topic",
     "description": null
   },
@@ -133,9 +1337,646 @@
     "description": null
   },
   {
+    "tag_id": 252,
+    "tag_slug": "observational-astronomy-broadening-participation",
+    "tag_name": "OBSERVATIONAL ASTRONOMY, BROADENING PARTICIPATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 223,
+    "tag_slug": "oce-ocean-sciences-research-education-human-resources-oce",
+    "tag_name": "OCE-Ocean Sciences Research, EDUCATION/HUMAN RESOURCES,OCE",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 111,
+    "tag_slug": "office-of-multidisciplinary-ac",
+    "tag_name": "OFFICE OF MULTIDISCIPLINARY AC",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 126,
+    "tag_slug": "office-of-advanced-cyberinfrastructure-oac",
+    "tag_name": "Office of Advanced Cyberinfrastructure (OAC)",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 155,
+    "tag_slug": "office-of-polar-programs-opp",
+    "tag_name": "Office of Polar Programs (OPP)",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 253,
+    "tag_slug": "paare",
+    "tag_name": "PAARE",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 244,
+    "tag_slug": "physics-educ-interdiscip-res-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "PHYSICS EDUC & INTERDISCIP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 140,
+    "tag_slug": "partnership-funding-from-src-ewfd-eng-workforce-development",
+    "tag_name": "Partnership Funding from SRC, EWFD-Eng Workforce Development",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 183,
+    "tag_slug": "partnership-funding-from-src-iuse-ewfd-eng-workforce-development",
+    "tag_name": "Partnership Funding from SRC, IUSE, EWFD-Eng Workforce Development",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 199,
+    "tag_slug": "partnership-funding-from-src-ssa-special-studies-analysis",
+    "tag_name": "Partnership Funding from SRC, SSA-Special Studies & Analysis",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 272,
+    "tag_slug": "partnership-funding-from-src-undergraduate-programs-in-chem",
+    "tag_name": "Partnership Funding from SRC, UNDERGRADUATE PROGRAMS IN CHEM",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 165,
+    "tag_slug": "partnership-funding-from-src-xc-crosscutting-activities-pro",
+    "tag_name": "Partnership Funding from SRC, XC-Crosscutting Activities Pro",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 239,
+    "tag_slug": "persons-w-disabilities-engagement-access-persons-w-disabilities-workplace-equity-research-in-disabilties-education-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Persons w Disabilities Engagement&Access, Persons w Disabilities Workplace Equity, Research in Disabilties Education, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 156,
+    "tag_slug": "polar-special-initiatives",
+    "tag_name": "Polar Special Initiatives",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 234,
+    "tag_slug": "polar-special-initiatives-cross-bio-activities-rsch-exper-for-undergrad-sites",
+    "tag_name": "Polar Special Initiatives, Cross-BIO Activities, RSCH EXPER FOR UNDERGRAD SITES",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 145,
+    "tag_slug": "post-baccalaureate-involvement-res-oppor-awards-roa-supplem-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Post-baccalaureate Involvement, RES OPPOR AWARDS(ROA) (SUPPLEM, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 318,
+    "tag_slug": "quantum-computing-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "QUANTUM COMPUTING, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 307,
+    "tag_slug": "quantum-information-science-advanced-manufacturing-biotechnology-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "QUANTUM INFORMATION SCIENCE, Advanced Manufacturing, Biotechnology, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 328,
+    "tag_slug": "quantum-information-science-biotechnology-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "QUANTUM INFORMATION SCIENCE, Biotechnology, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 306,
+    "tag_slug": "quantum-information-science-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "QUANTUM INFORMATION SCIENCE, EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 310,
+    "tag_slug": "quantum-information-science-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "QUANTUM INFORMATION SCIENCE, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 87,
     "tag_slug": "quantitative-biosciences",
     "tag_name": "Quantitative biosciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 235,
+    "tag_slug": "research-exp-for-teachers-research-exp-for-undergrads-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "RESEARCH EXP FOR TEACHERS, RESEARCH EXP FOR UNDERGRADS, EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 141,
+    "tag_slug": "research-exp-for-undergrads-dod-assure-program-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "RESEARCH EXP FOR UNDERGRADS, DOD ASSURE PROGRAM, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 125,
+    "tag_slug": "research-exp-for-undergrads-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "RESEARCH EXP FOR UNDERGRADS, EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 265,
+    "tag_slug": "research-exp-for-undergrads-human-resources-development-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "RESEARCH EXP FOR UNDERGRADS, HUMAN RESOURCES DEVELOPMENT, EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 263,
+    "tag_slug": "research-exp-for-undergrads-human-resources-development-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "RESEARCH EXP FOR UNDERGRADS, HUMAN RESOURCES DEVELOPMENT, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 292,
+    "tag_slug": "research-exp-for-undergrads-quantum-information-science-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "RESEARCH EXP FOR UNDERGRADS, QUANTUM INFORMATION SCIENCE, EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 221,
+    "tag_slug": "research-exp-for-undergrads-reu-site-res-exp-for-ugrd-site-undergraduate-education",
+    "tag_name": "RESEARCH EXP FOR UNDERGRADS, REU SITE-Res Exp for Ugrd Site, UNDERGRADUATE EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 103,
+    "tag_slug": "research-exp-for-undergrads-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "RESEARCH EXP FOR UNDERGRADS, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 294,
+    "tag_slug": "research-exp-for-undergrads-undergraduate-education-reu-site-res-exp-for-ugrd-site-human-resources-development-microelectronics-and-semiconductors",
+    "tag_name": "RESEARCH EXP FOR UNDERGRADS, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, HUMAN RESOURCES DEVELOPMENT, Microelectronics and Semiconductors",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 280,
+    "tag_slug": "research-exp-for-undergrads-undergraduate-education-reu-site-res-exp-for-ugrd-site-microelectronics-and-semiconductors",
+    "tag_name": "RESEARCH EXP FOR UNDERGRADS, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, Microelectronics and Semiconductors",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 216,
+    "tag_slug": "ret-site-res-exp-for-tchr-site-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "RET SITE-Res Exp for Tchr Site, EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 150,
+    "tag_slug": "ret-site-res-exp-for-tchr-site-nano-non-solic-sci-eng-awd-nanomaterials-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "RET SITE-Res Exp for Tchr Site, NANO NON-SOLIC SCI & ENG AWD, Nanomaterials, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 131,
+    "tag_slug": "ret-site-res-exp-for-tchr-site-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "RET SITE-Res Exp for Tchr Site, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 112,
+    "tag_slug": "reu-site-res-exp-for-ugrd-site",
+    "tag_name": "REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 270,
+    "tag_slug": "reu-site-res-exp-for-ugrd-site-artificial-intelligence-ai-translational-research",
+    "tag_name": "REU SITE-Res Exp for Ugrd Site, Artificial Intelligence (AI), Translational Research",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 269,
+    "tag_slug": "reu-site-res-exp-for-ugrd-site-computational-science-enging",
+    "tag_name": "REU SITE-Res Exp for Ugrd Site, COMPUTATIONAL SCIENCE & ENGING",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 246,
+    "tag_slug": "reu-site-res-exp-for-ugrd-site-exp-prog-to-stim-comp-res",
+    "tag_name": "REU SITE-Res Exp for Ugrd Site, EXP PROG TO STIM COMP RES",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 275,
+    "tag_slug": "reu-site-res-exp-for-ugrd-site-research-exp-for-undergrads-undergraduate-education",
+    "tag_name": "REU SITE-Res Exp for Ugrd Site, RESEARCH EXP FOR UNDERGRADS, UNDERGRADUATE EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 347,
+    "tag_slug": "reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 228,
+    "tag_slug": "reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education-interdisciplinary-proposals-undergraduate-education",
+    "tag_name": "REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION, INTERDISCIPLINARY PROPOSALS, UNDERGRADUATE EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 101,
+    "tag_slug": "rsch-exper-for-undergrad-sites",
+    "tag_name": "RSCH EXPER FOR UNDERGRAD SITES",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 116,
+    "tag_slug": "rsch-exper-for-undergrad-sites-cross-bio-activities",
+    "tag_name": "RSCH EXPER FOR UNDERGRAD SITES, Cross-BIO Activities",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 220,
+    "tag_slug": "rsch-exper-for-undergrad-sites-cross-bio-activities-epscor-co-funding",
+    "tag_name": "RSCH EXPER FOR UNDERGRAD SITES, Cross-BIO Activities, EPSCoR Co-Funding",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 187,
+    "tag_slug": "rsch-exper-for-undergrad-sites-epscor-co-funding",
+    "tag_name": "RSCH EXPER FOR UNDERGRAD SITES, EPSCoR Co-Funding",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 203,
+    "tag_slug": "rsch-exper-for-undergrad-sites-hist-black-colleges-and-univ",
+    "tag_name": "RSCH EXPER FOR UNDERGRAD SITES, Hist Black Colleges and Univ",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 154,
+    "tag_slug": "rsch-exper-for-undergrad-sites-hist-black-colleges-and-univ-epscor-co-funding",
+    "tag_name": "RSCH EXPER FOR UNDERGRAD SITES, Hist Black Colleges and Univ, EPSCoR Co-Funding",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 268,
+    "tag_slug": "rsch-exper-for-undergrad-sites-ndcc-natl-discvry-cloud-climat",
+    "tag_name": "RSCH EXPER FOR UNDERGRAD SITES, NDCC-Natl Discvry Cloud Climat",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 336,
+    "tag_slug": "rsch-exper-for-undergrad-sites-office-of-multidisciplinary-ac",
+    "tag_name": "RSCH EXPER FOR UNDERGRAD SITES, OFFICE OF MULTIDISCIPLINARY AC",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 315,
+    "tag_slug": "rsch-exper-for-undergrad-sites-statistics",
+    "tag_name": "RSCH EXPER FOR UNDERGRAD SITES, STATISTICS",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 108,
+    "tag_slug": "sbe-office-of-multidisciplinary-activities",
+    "tag_name": "SBE Office of Multidisciplinary Activities",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 158,
+    "tag_slug": "solar-terrestrial-space-weather-research-educational-linkages",
+    "tag_name": "SOLAR-TERRESTRIAL, Space Weather Research, EDUCATIONAL LINKAGES",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 144,
+    "tag_slug": "special-programs-in-astronomy",
+    "tag_name": "SPECIAL PROGRAMS IN ASTRONOMY",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 340,
+    "tag_slug": "special-programs-in-astronomy-educational-linkages",
+    "tag_name": "SPECIAL PROGRAMS IN ASTRONOMY, EDUCATIONAL LINKAGES",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 134,
+    "tag_slug": "special-programs-in-astronomy-interdisciplinary-proposals-broadening-participation-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "SPECIAL PROGRAMS IN ASTRONOMY, INTERDISCIPLINARY PROPOSALS, BROADENING PARTICIPATION, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 339,
+    "tag_slug": "special-programs-in-astronomy-interdisciplinary-proposals-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "SPECIAL PROGRAMS IN ASTRONOMY, INTERDISCIPLINARY PROPOSALS, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 159,
+    "tag_slug": "special-programs-in-astronomy-integrative-activities-in-phys",
+    "tag_name": "SPECIAL PROGRAMS IN ASTRONOMY, Integrative Activities in Phys",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 95,
+    "tag_slug": "special-programs-in-astronomy-office-of-multidisciplinary-ac-integrative-activities-in-phys",
+    "tag_name": "SPECIAL PROGRAMS IN ASTRONOMY, OFFICE OF MULTIDISCIPLINARY AC, Integrative Activities in Phys",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 135,
+    "tag_slug": "special-programs-in-astronomy-space-weather-research-educational-linkages",
+    "tag_name": "SPECIAL PROGRAMS IN ASTRONOMY, Space Weather Research, EDUCATIONAL LINKAGES",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 215,
+    "tag_slug": "ssa-special-studies-analysis",
+    "tag_name": "SSA-Special Studies & Analysis",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 196,
+    "tag_slug": "ssa-special-studies-analysis-epscor-co-funding",
+    "tag_name": "SSA-Special Studies & Analysis, EPSCoR Co-Funding",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 222,
+    "tag_slug": "ssa-special-studies-analysis-partnership-funding-from-src",
+    "tag_name": "SSA-Special Studies & Analysis, Partnership Funding from SRC",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 274,
+    "tag_slug": "stem-access-for-persons-w-disabilities-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "STEM Access for Persons w Disabilities, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 277,
+    "tag_slug": "special-initiatives-ewfd-eng-workforce-development",
+    "tag_name": "Special Initiatives, EWFD-Eng Workforce Development",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 197,
+    "tag_slug": "sustainable-materials-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Sustainable Materials, EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 192,
+    "tag_slug": "theoretical-computational-astrophysics-observational-astronomy-dod-assure-program-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "THEORETICAL & COMPUTATIONAL ASTROPHYSICS, OBSERVATIONAL ASTRONOMY, DOD ASSURE PROGRAM, EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 209,
+    "tag_slug": "theoretical-computational-astrophysics-observational-astronomy-dod-assure-program-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "THEORETICAL & COMPUTATIONAL ASTROPHYSICS, OBSERVATIONAL ASTRONOMY, DOD ASSURE PROGRAM, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 343,
+    "tag_slug": "theoretical-computational-astrophysics-observational-astronomy-exp-prog-to-stim-comp-res-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "THEORETICAL & COMPUTATIONAL ASTROPHYSICS, OBSERVATIONAL ASTRONOMY, EXP PROG TO STIM COMP RES, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 194,
+    "tag_slug": "theoretical-computational-astrophysics-observational-astronomy-ret-site-res-exp-for-tchr-site-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "THEORETICAL & COMPUTATIONAL ASTROPHYSICS, OBSERVATIONAL ASTRONOMY, RET SITE-Res Exp for Tchr Site, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 161,
+    "tag_slug": "theoretical-computational-astrophysics-observational-astronomy-undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "THEORETICAL & COMPUTATIONAL ASTROPHYSICS, OBSERVATIONAL ASTRONOMY, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 257,
+    "tag_slug": "translational-research-dod-assure-program-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Translational Research, DOD ASSURE PROGRAM, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 278,
+    "tag_slug": "undergraduate-education-human-resources-development-reu-site-res-exp-for-ugrd-site-research-exp-for-undergrads",
+    "tag_name": "UNDERGRADUATE EDUCATION, HUMAN RESOURCES DEVELOPMENT, REU SITE-Res Exp for Ugrd Site, RESEARCH EXP FOR UNDERGRADS",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 97,
+    "tag_slug": "undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 283,
+    "tag_slug": "undergraduate-education-reu-site-res-exp-for-ugrd-site-ai-education-workforce-develop",
+    "tag_name": "UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, AI Education/Workforce Develop",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 271,
+    "tag_slug": "undergraduate-education-reu-site-res-exp-for-ugrd-site-research-exp-for-undergrads",
+    "tag_name": "UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, RESEARCH EXP FOR UNDERGRADS",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 110,
+    "tag_slug": "undergraduate-education-reu-site-res-exp-for-ugrd-site-science-math-eng-tech-education",
+    "tag_name": "UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site, SCIENCE, MATH, ENG & TECH EDUCATION",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 124,
+    "tag_slug": "undergraduate-programs-in-chem",
+    "tag_name": "UNDERGRADUATE PROGRAMS IN CHEM",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 175,
+    "tag_slug": "undergraduate-programs-in-chem-epscor-co-funding",
+    "tag_name": "UNDERGRADUATE PROGRAMS IN CHEM, EPSCoR Co-Funding",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 191,
+    "tag_slug": "undergraduate-programs-in-chem-office-of-multidisciplinary-ac",
+    "tag_name": "UNDERGRADUATE PROGRAMS IN CHEM, OFFICE OF MULTIDISCIPLINARY AC",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 212,
+    "tag_slug": "undergraduate-programs-in-chem-partnership-funding-from-src",
+    "tag_name": "UNDERGRADUATE PROGRAMS IN CHEM, Partnership Funding from SRC",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 142,
+    "tag_slug": "united-kingdom-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "UNITED KINGDOM, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 186,
+    "tag_slug": "women-minority-disabled-nec-exp-prog-to-stim-comp-res-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "WOMEN, MINORITY, DISABLED, NEC, EXP PROG TO STIM COMP RES, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 121,
+    "tag_slug": "women-minority-disabled-nec-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "WOMEN, MINORITY, DISABLED, NEC, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 162,
+    "tag_slug": "women-minority-disabled-nec-undergraduate-education-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "WOMEN, MINORITY, DISABLED, NEC, UNDERGRADUATE EDUCATION, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 297,
+    "tag_slug": "windows-on-the-universe-wou-theoretical-computational-astrophysics-observational-astronomy-reu-site-res-exp-for-ugrd-site",
+    "tag_name": "Windows on the Universe (WoU), THEORETICAL & COMPUTATIONAL ASTROPHYSICS, OBSERVATIONAL ASTRONOMY, REU SITE-Res Exp for Ugrd Site",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 298,
+    "tag_slug": "wou-windows-on-the-universe-t",
+    "tag_name": "WoU-Windows on the Universe: T",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 152,
+    "tag_slug": "wou-windows-on-the-universe-t-integrative-activities-in-phys",
+    "tag_name": "WoU-Windows on the Universe: T, Integrative Activities in Phys",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 98,
+    "tag_slug": "xc-crosscutting-activities-pro",
+    "tag_name": "XC-Crosscutting Activities Pro",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 189,
+    "tag_slug": "xc-crosscutting-activities-pro-epscor-co-funding",
+    "tag_name": "XC-Crosscutting Activities Pro, EPSCoR Co-Funding",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 172,
+    "tag_slug": "xc-crosscutting-activities-pro-integrative-activities-in-phys",
+    "tag_name": "XC-Crosscutting Activities Pro, Integrative Activities in Phys",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 195,
+    "tag_slug": "xc-crosscutting-activities-pro-integrative-activities-in-phys-special-programs-in-astronomy",
+    "tag_name": "XC-Crosscutting Activities Pro, Integrative Activities in Phys, SPECIAL PROGRAMS IN ASTRONOMY",
     "tag_group": "research_topic",
     "description": null
   },

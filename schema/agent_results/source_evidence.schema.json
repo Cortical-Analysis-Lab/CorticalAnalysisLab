@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://corticalanalysislab.org/schema/agent_results/source_evidence.schema.json",
+  "title": "Catalog Agent Source Evidence",
+  "type": "object",
+  "required": ["contract_version", "generated_at", "evidence"],
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": { "const": "1.0" },
+    "generated_at": { "type": "string" },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["candidate_id", "source_url", "source_type", "authoritative", "fields_supported", "evidence_hash"],
+        "additionalProperties": true,
+        "properties": {
+          "candidate_id": { "type": "string", "minLength": 1 },
+          "source_url": { "type": "string", "pattern": "^https?://" },
+          "source_type": {
+            "type": "string",
+            "enum": ["official_program", "official_institution", "official_government", "official_network", "official_application", "discovery_only"]
+          },
+          "publisher": { "type": ["string", "null"] },
+          "authoritative": { "type": "boolean" },
+          "authority_rationale": { "type": ["string", "null"] },
+          "date_checked": { "type": ["string", "null"] },
+          "retrieved_at": { "type": ["string", "null"] },
+          "fields_supported": { "type": "array", "items": { "type": "string" } },
+          "evidence_hash": { "type": "string", "minLength": 12 },
+          "conflict_notes": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}

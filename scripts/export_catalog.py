@@ -11,6 +11,16 @@ from pathlib import Path
 from catalog_common import DEFAULT_DB, ROOT, connect, dump_json
 
 DEFAULT_OUTPUT = ROOT / "data" / "summer-research"
+VISIBLE_NA_FIELDS = {
+    "Duration_Weeks",
+    "Program_Start",
+    "Program_End",
+    "Application_Open",
+    "Application_Deadline",
+    "Deadline_Text",
+    "Stipend_Total_USD",
+    "Stipend_Weekly_USD",
+}
 
 
 def records(connection, sql, params=()):
@@ -26,6 +36,17 @@ def write_csv(path, rows):
         writer = csv.DictWriter(handle, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
+
+
+def visible_na_rows(rows, fields=VISIBLE_NA_FIELDS):
+    normalized = []
+    for row in rows:
+        item = dict(row)
+        for field in fields:
+            if field in item and (item[field] is None or item[field] == ""):
+                item[field] = "N/A"
+        normalized.append(item)
+    return normalized
 
 
 def export(database: Path, output: Path):
@@ -104,9 +125,20 @@ def export(database: Path, output: Path):
         LEFT JOIN opportunity_tags ot ON ot.opportunity_id=o.opportunity_id LEFT JOIN research_tags rt USING(tag_id)
         GROUP BY c.cycle_id ORDER BY o.public_id, c.cycle_year
     """)
-    write_csv(output / "review" / "opportunities_review.csv", review)
+    write_csv(output / "review" / "opportunities_review.csv", visible_na_rows(review))
     for name, rows in {"institutions": institutions, "program_cycles": cycles, "eligibility_rules": eligibility, "sources": sources, "source_verifications": verifications}.items():
         normalized = [{key: json.dumps(value) if isinstance(value, list) else value for key, value in row.items()} for row in rows]
+        if name == "program_cycles":
+            normalized = visible_na_rows(normalized, {
+                "duration_weeks",
+                "program_start",
+                "program_end",
+                "application_open",
+                "application_deadline",
+                "deadline_text",
+                "stipend_total_usd",
+                "stipend_weekly_usd",
+            })
         write_csv(output / "review" / f"{name}.csv", normalized)
     connection.close()
     return len(catalog)

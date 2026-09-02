@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://corticalanalysislab.org/schema/agent_results/proposed_records.schema.json",
+  "title": "Catalog Agent Proposed Records",
+  "type": "object",
+  "required": ["contract_version", "generated_at", "records"],
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": { "const": "1.0" },
+    "generated_at": { "type": "string" },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["candidate_id", "proposal_version", "identity", "cycle_year", "classification", "fields"],
+        "additionalProperties": true,
+        "properties": {
+          "candidate_id": { "type": "string", "minLength": 1 },
+          "proposal_version": { "type": "string", "minLength": 1 },
+          "identity": {
+            "type": "object",
+            "required": ["program_name", "institution_name", "match_state"],
+            "additionalProperties": true,
+            "properties": {
+              "program_name": { "type": ["string", "null"] },
+              "institution_name": { "type": ["string", "null"] },
+              "public_id": { "type": ["string", "null"] },
+              "matched_public_id": { "type": ["string", "null"] },
+              "match_state": {
+                "type": "string",
+                "enum": ["NEW_PROGRAM", "EXISTING_PROGRAM", "POSSIBLE_DUPLICATE", "NEW_CYCLE_FOR_EXISTING_PROGRAM", "AMBIGUOUS"]
+              },
+              "duplicate_notes": { "type": ["string", "null"] }
+            }
+          },
+          "cycle_year": { "type": ["integer", "null"], "minimum": 2000, "maximum": 2200 },
+          "classification": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+              "primary_field": { "type": ["string", "null"] },
+              "field_tags": { "type": "array", "items": { "type": "string" } },
+              "research_modes": { "type": "array", "items": { "type": "string" } }
+            }
+          },
+          "fields": { "type": "object" },
+          "conditional_rules": { "type": "array", "items": { "type": "string" } },
+          "conflicts": { "type": "array", "items": { "type": "string" } },
+          "validation_warnings": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    }
+  }
+}

@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DB = ROOT / "database" / "research_opportunities.sqlite"
 SCHEMA = ROOT / "schema" / "schema.sql"
 IMPORTER_VERSION = "1.2.1"
+NA_VALUES = {"n/a", "na", "not applicable"}
 
 NON_AUTHORITATIVE_EVIDENCE_HOSTS = {
     "facebook.com", "instagram.com", "linkedin.com", "reddit.com", "tiktok.com",
@@ -155,6 +156,8 @@ def number_or_none(value):
     value = text_or_none(value)
     if value is None:
         return None
+    if value.lower() in NA_VALUES:
+        return None
     return float(value.replace(",", "").replace("$", ""))
 
 
@@ -166,6 +169,8 @@ def int_or_none(value):
 def iso_date(value):
     value = text_or_none(value)
     if value is None:
+        return None
+    if value.lower() in NA_VALUES:
         return None
     return value[:10]
 
