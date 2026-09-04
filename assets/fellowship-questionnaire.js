@@ -151,10 +151,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   function populateLocationFilter(items) {
     const locations = [...new Set(items.map(({opportunity, location}) => location?.stateCode || opportunity.institution?.state_code).filter(Boolean))];
-    const stateLocations = locations.filter(location => stateNames[location]).sort((a, b) => stateNames[a].localeCompare(stateNames[b]));
-    const otherLocations = locations.filter(location => !stateNames[location]).sort((a, b) => a.localeCompare(b));
     const locationSelect = document.getElementById("filter-state");
     const selectedLocation = locationSelect.value;
+    // Keep the active preference available even when it has no matching programs.
+    if (selectedLocation && !locations.includes(selectedLocation)) locations.push(selectedLocation);
+    const stateLocations = locations.filter(location => stateNames[location]).sort((a, b) => stateNames[a].localeCompare(stateNames[b]));
+    const otherLocations = locations.filter(location => !stateNames[location]).sort((a, b) => a.localeCompare(b));
     locationSelect.replaceChildren(new Option("All locations", ""));
     const stateGroup = document.createElement("optgroup");
     stateGroup.label = "States";
@@ -166,7 +168,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       otherLocations.forEach(location => otherGroup.append(new Option(location, location)));
       locationSelect.add(otherGroup);
     }
-    locationSelect.value = locations.includes(selectedLocation) ? selectedLocation : "";
+    locationSelect.value = selectedLocation;
   }
 
   function renderResults() {
