@@ -46,7 +46,7 @@
 .filter-kicker { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); }
 .filter-explanation { font-size: 0.75rem; color: var(--gray); margin-bottom: 1.25rem; }
 .filter-field { display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.76rem; font-weight: 700; margin-bottom: 1rem; }
-.location-filter { display: flex; }
+.location-filter { display: flex; flex-direction: column; }
 .filter-field input, .filter-field select, .sort-control select { width: 100%; min-height: 42px; border: 1px solid #c9c1c3; border-radius: 8px; background: #fff; padding: 0.55rem; color: var(--text); font: inherit; font-size: 0.82rem; }
 .filter-group { display: grid; gap: 0.55rem; margin: 1.2rem 0; font-size: 0.78rem; }
 .filter-group > span { font-weight: 700; }
