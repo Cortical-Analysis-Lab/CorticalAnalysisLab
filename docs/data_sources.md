@@ -1,5 +1,7 @@
 # Summer research data sources
 
+The authoritative national discovery strategy is documented in `docs/national_discovery_protocol.md`. NSF REUs are one important source family, not the full universe. The discovery goal is a national census of legitimate summer undergraduate research opportunities across universities, medical schools, hospitals, research institutes, field stations, government labs, professional societies, and organized networks.
+
 ## Source priority
 
 Use sources in this order when practical:
@@ -10,6 +12,8 @@ Use sources in this order when practical:
 4. Reputable discovery aggregator, used to find—not silently verify—a program
 
 Use the [NSF Directory of REU Sites](https://www.nsf.gov/crssprgm/reu/reu_search.cfm) and [NSF ETAP](https://etap.nsf.gov/) as recurring discovery channels. An NSF directory or ETAP entry can establish discovery provenance and provide identity signals such as an award or site identifier. It does not replace the host program's official page for cycle-specific dates, benefits, local eligibility conditions, or application instructions.
+
+Discovery follows five passes: structured directories, federal/network sources, institutional host universe, grant database backfill, and broad web gap search. Candidate and coverage tracking must preserve the discovery source separately from authoritative verification evidence.
 
 ## Verification authority gate
 

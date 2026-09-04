@@ -1,0 +1,109 @@
+{
+  "version": "2026-09-04",
+  "purpose": "Configuration skeleton for national, coverage-measurable summer undergraduate research discovery. Populate target records from authoritative public directories before large crawls.",
+  "institutional_universes": [
+    {
+      "target_type": "carnegie_r1",
+      "source": "Carnegie 2025 Research Activity designations",
+      "priority": 100,
+      "crawl_strategy": "Search every official domain with standardized institutional vocabulary."
+    },
+    {
+      "target_type": "carnegie_r2",
+      "source": "Carnegie 2025 Research Activity designations",
+      "priority": 110,
+      "crawl_strategy": "Search every official domain with standardized institutional vocabulary."
+    },
+    {
+      "target_type": "carnegie_rcu",
+      "source": "Carnegie 2025 Research Colleges and Universities",
+      "priority": 120,
+      "crawl_strategy": "Search every official domain, prioritizing known undergraduate research offices and STEM departments."
+    },
+    {
+      "target_type": "ipeds",
+      "source": "IPEDS",
+      "priority": 200,
+      "crawl_strategy": "Use as completeness/backfill universe; prioritize four-year institutions, MSIs, research-active colleges, and institutions with research indicators."
+    },
+    {
+      "target_type": "medical_school",
+      "source": "LCME and AACOM accredited school lists",
+      "priority": 130,
+      "crawl_strategy": "Search undergraduate research, summer biomedical research, graduate biomedical sciences, MD-PhD, diversity/pathway, and medical-school training pages."
+    },
+    {
+      "target_type": "nci_cancer_center",
+      "source": "NCI-designated Cancer Centers directory",
+      "priority": 140,
+      "crawl_strategy": "Search education, training, cancer research, and undergraduate summer program pages."
+    },
+    {
+      "target_type": "ctsa_hub",
+      "source": "NCATS CTSA hub directory",
+      "priority": 150,
+      "crawl_strategy": "Search clinical/translational science education and undergraduate research pathways at hubs and partner institutions."
+    },
+    {
+      "target_type": "independent_research_institute",
+      "source": "AIRI and curated independent research institute lists",
+      "priority": 160,
+      "crawl_strategy": "Search institute education, internships, summer scholars, undergraduate research, and training pages."
+    },
+    {
+      "target_type": "ffrdc",
+      "source": "NSF master list of Federally Funded Research and Development Centers",
+      "priority": 170,
+      "crawl_strategy": "Search each center for undergraduate internships and summer research programs."
+    },
+    {
+      "target_type": "field_station",
+      "source": "Organization of Biological Field Stations and FieldStations.org",
+      "priority": 180,
+      "crawl_strategy": "Search undergraduate research, REU, summer internship, field research, and summer scholars pages."
+    },
+    {
+      "target_type": "marine_lab",
+      "source": "National Association of Marine Laboratories",
+      "priority": 185,
+      "crawl_strategy": "Search marine, ocean, coastal, aquatic, and summer undergraduate research pages."
+    }
+  ],
+  "standard_vocabulary": {
+    "program_names": ["REU", "Research Experiences for Undergraduates", "SURP", "SURF", "SURE", "SROP", "SUIP", "SURIP", "SRIP", "SPUR"],
+    "generic_terms": ["summer undergraduate research", "undergraduate summer research", "summer research program", "summer research experience", "summer research internship", "summer student research", "summer research fellowship", "undergraduate research fellowship", "undergraduate research internship", "visiting undergraduate research", "summer scholars", "summer research scholars", "summer research academy", "undergraduate research program", "research internship", "research intern", "summer fellowship"],
+    "external_student_terms": ["external students", "visiting students", "students from other institutions", "students from other colleges", "non-institution students"],
+    "cycle_terms": ["2027", "Summer 2027", "2027 application", "2027 deadline", "applications open", "applications closed"]
+  },
+  "suborganizations": [
+    "Office of Undergraduate Research",
+    "Graduate School",
+    "Graduate Biomedical Sciences",
+    "School of Medicine",
+    "School of Engineering",
+    "College of Arts and Sciences",
+    "Biology",
+    "Neuroscience",
+    "Psychology",
+    "Chemistry",
+    "Physics",
+    "Mathematics",
+    "Statistics",
+    "Computer Science",
+    "Engineering",
+    "Economics",
+    "Social Sciences",
+    "Public Health",
+    "Agricultural Sciences",
+    "Environmental Science",
+    "research institutes",
+    "centers",
+    "cancer center",
+    "clinical/translational institute",
+    "honors college",
+    "student opportunities",
+    "training programs",
+    "internships",
+    "diversity/pathway programs"
+  ]
+}

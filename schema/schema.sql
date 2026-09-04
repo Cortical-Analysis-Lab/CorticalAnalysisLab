@@ -154,6 +154,68 @@ CREATE TABLE IF NOT EXISTS sources (
     created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS discovery_sources (
+    discovery_source_id INTEGER PRIMARY KEY,
+    source_key TEXT NOT NULL UNIQUE,
+    source_name TEXT NOT NULL,
+    source_type TEXT NOT NULL CHECK (source_type IN (
+        'official_directory', 'aggregator', 'professional_society',
+        'government_database', 'grant_database', 'institution_directory',
+        'search_engine', 'secondary_lead', 'federal_agency',
+        'national_network', 'institutional_universe'
+    )),
+    source_url TEXT,
+    source_priority INTEGER NOT NULL DEFAULT 999,
+    discovery_pass INTEGER NOT NULL CHECK (discovery_pass BETWEEN 1 AND 5),
+    automated_search_supported INTEGER NOT NULL DEFAULT 0 CHECK (automated_search_supported IN (0, 1)),
+    authority_scope TEXT NOT NULL DEFAULT 'discovery_only' CHECK (authority_scope IN ('discovery_only', 'network_rules', 'government_record', 'official_program')),
+    notes TEXT,
+    active INTEGER NOT NULL DEFAULT 1 CHECK (active IN (0, 1)),
+    created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS opportunity_discovery (
+    opportunity_discovery_id INTEGER PRIMARY KEY,
+    opportunity_id INTEGER REFERENCES opportunities(opportunity_id) ON DELETE CASCADE,
+    candidate_id TEXT,
+    discovery_source_id INTEGER NOT NULL REFERENCES discovery_sources(discovery_source_id),
+    discovered_at TEXT NOT NULL,
+    discovery_url TEXT,
+    raw_title TEXT,
+    raw_host TEXT,
+    discovery_notes TEXT,
+    UNIQUE (opportunity_id, candidate_id, discovery_source_id, discovery_url)
+);
+
+CREATE TABLE IF NOT EXISTS crawl_targets (
+    crawl_target_id INTEGER PRIMARY KEY,
+    discovery_source_id INTEGER REFERENCES discovery_sources(discovery_source_id),
+    target_name TEXT NOT NULL,
+    target_type TEXT NOT NULL CHECK (target_type IN (
+        'carnegie_r1', 'carnegie_r2', 'carnegie_rcu', 'ipeds',
+        'medical_school', 'nci_cancer_center', 'ctsa_hub',
+        'independent_research_institute', 'ffrdc', 'research_hospital',
+        'field_station', 'marine_lab', 'museum_observatory_botanical',
+        'federal_agency', 'professional_society', 'institutional_domain',
+        'network_host', 'other'
+    )),
+    official_domain TEXT,
+    seed_url TEXT,
+    priority INTEGER NOT NULL DEFAULT 999,
+    search_vocabulary_group TEXT,
+    crawl_status TEXT NOT NULL DEFAULT 'not_started' CHECK (crawl_status IN (
+        'not_started', 'queued', 'in_progress', 'searched',
+        'no_opportunity_found', 'candidates_found', 'inaccessible',
+        'deferred', 'error'
+    )),
+    last_checked TEXT,
+    next_check_after TEXT,
+    candidates_found INTEGER NOT NULL DEFAULT 0,
+    notes TEXT,
+    UNIQUE (target_type, target_name, official_domain)
+);
+
 CREATE TABLE IF NOT EXISTS source_verifications (
     verification_id INTEGER PRIMARY KEY,
     opportunity_id INTEGER NOT NULL REFERENCES opportunities(opportunity_id) ON DELETE CASCADE,
@@ -194,6 +256,10 @@ CREATE INDEX IF NOT EXISTS idx_cycles_year_status ON program_cycles(cycle_year, 
 CREATE INDEX IF NOT EXISTS idx_cycles_deadline ON program_cycles(application_deadline);
 CREATE INDEX IF NOT EXISTS idx_eligibility_cycle ON eligibility_rules(cycle_id);
 CREATE INDEX IF NOT EXISTS idx_opportunity_modes_mode ON opportunity_research_modes(research_mode_id, opportunity_id);
+CREATE INDEX IF NOT EXISTS idx_discovery_sources_pass ON discovery_sources(discovery_pass, source_priority);
+CREATE INDEX IF NOT EXISTS idx_opportunity_discovery_candidate ON opportunity_discovery(candidate_id);
+CREATE INDEX IF NOT EXISTS idx_opportunity_discovery_opportunity ON opportunity_discovery(opportunity_id);
+CREATE INDEX IF NOT EXISTS idx_crawl_targets_status ON crawl_targets(target_type, crawl_status, priority);
 CREATE INDEX IF NOT EXISTS idx_verifications_opportunity ON source_verifications(opportunity_id, date_checked);
 
-INSERT OR REPLACE INTO schema_metadata(key, value) VALUES ('schema_version', '1.1.0');
+INSERT OR REPLACE INTO schema_metadata(key, value) VALUES ('schema_version', '1.2.0');

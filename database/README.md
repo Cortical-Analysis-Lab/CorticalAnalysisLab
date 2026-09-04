@@ -28,9 +28,11 @@ Do not store student profiles, questionnaire answers, saved programs, essays, tr
 
 `imports/` contains human-reviewable source files. Import provenance and each original row are also retained inside SQLite.
 
-The schema is documented in `schema/data_dictionary.md`. Reviewed update and agent rules are in `docs/database_update_process.md` and `docs/data_sources.md`.
+The schema is documented in `schema/data_dictionary.md`. Reviewed update and agent rules are in `docs/database_update_process.md`, `docs/data_sources.md`, and `docs/national_discovery_protocol.md`.
 
 The database stores stable program identities separately from annual cycles, plus institutions, structured eligibility, controlled categories/tags/modes, and field-level source verification.
+
+Discovery provenance is tracked separately from verification evidence. A source such as AAMC, PathwaysToScience, NSF ETAP, or a search engine may discover a candidate, while an official host page verifies cycle facts. Source-family seeds live in `database/discovery/source_catalog_seed.json`; host-universe and standardized vocabulary configuration lives in `database/discovery/host_universe_protocol.json`.
 
 ## Discovery sources
 
