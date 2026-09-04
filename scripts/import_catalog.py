@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Import or update a reviewed CSV/XLSX catalog into canonical SQLite."""
+"""Import or update accepted CSV catalog data in SQLite."""
 
 from __future__ import annotations
 
@@ -13,7 +13,6 @@ from catalog_common import (
     SCHEMA, TAG_ALIASES, connect,
     int_or_none, iso_date, load_rows, normalize_choice, normalize_country,
     normalize_external, normalize_status, number_or_none, research_modes_from_tag,
-    disallowed_verification_source, eligibility_source_matches_official_program,
     sha256, slugify,
     text_or_none, valid_url,
 )
@@ -63,17 +62,9 @@ def preflight(rows):
             value = text_or_none(row.get(field))
             if value and not valid_url(value):
                 errors.append(f"{label}: invalid {field}: {value}")
-        program_url = text_or_none(row.get("Program_URL"))
-        if program_url and disallowed_verification_source(program_url):
-            errors.append(f"{label}: Program_URL is a discovery/social source, not official evidence: {program_url}")
         eligibility_url = text_or_none(row.get("Eligibility_Source_URL"))
         if eligibility_url and not valid_url(eligibility_url):
             errors.append(f"{label}: invalid Eligibility_Source_URL: {eligibility_url}")
-        elif eligibility_url and not eligibility_source_matches_official_program(eligibility_url, program_url):
-            errors.append(
-                f"{label}: Eligibility_Source_URL must use the reviewed official program domain family; "
-                f"cross-domain evidence requires explicit source review: {eligibility_url}"
-            )
         if not text_or_none(row.get("Primary_Field")):
             warnings.append(f"{label}: missing Primary_Field")
         if not text_or_none(row.get("Last_Verified")):

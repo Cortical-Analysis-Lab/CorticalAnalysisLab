@@ -1,52 +1,17 @@
 #!/usr/bin/env python3
-"""Create deterministic static JSON and human-review CSV exports from SQLite."""
+"""Create deterministic static JSON exports from SQLite."""
 
 from __future__ import annotations
 
 import argparse
-import csv
 import json
 from pathlib import Path
 
 from catalog_common import DEFAULT_DB, ROOT, connect, dump_json
 
 DEFAULT_OUTPUT = ROOT / "data" / "summer-research"
-VISIBLE_NA_FIELDS = {
-    "Duration_Weeks",
-    "Program_Start",
-    "Program_End",
-    "Application_Open",
-    "Application_Deadline",
-    "Deadline_Text",
-    "Stipend_Total_USD",
-    "Stipend_Weekly_USD",
-}
-
-
 def records(connection, sql, params=()):
     return [dict(row) for row in connection.execute(sql, params)]
-
-
-def write_csv(path, rows):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    if not rows:
-        path.write_text("", encoding="utf-8")
-        return
-    with path.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0]), lineterminator="\n")
-        writer.writeheader()
-        writer.writerows(rows)
-
-
-def visible_na_rows(rows, fields=VISIBLE_NA_FIELDS):
-    normalized = []
-    for row in rows:
-        item = dict(row)
-        for field in fields:
-            if field in item and (item[field] is None or item[field] == ""):
-                item[field] = "N/A"
-        normalized.append(item)
-    return normalized
 
 
 def export(database: Path, output: Path):
@@ -107,42 +72,6 @@ def export(database: Path, output: Path):
     ).fetchone()[0]
     dump_json(output / "catalog.json", {"schema_version": schema_version, "opportunities": catalog})
 
-    review = records(connection, """
-        SELECT o.public_id AS Program_ID, o.program_name AS Program_Name, i.institution_name AS Host_Institution,
-          o.network_source AS Network_Source, o.program_type AS Program_Type, rc.category_name AS Primary_Field,
-          GROUP_CONCAT(ot.source_text, '; ') AS Field_Tags, i.city AS City, i.state_code AS State, i.country_code AS Country,
-          o.location_scope AS Location_Scope, o.delivery_format AS Format, e.external_applicants_status AS External_Applicants,
-          e.citizenship_rule_text AS Citizenship, e.eligible_years_text AS Eligible_Years, e.min_gpa AS Min_GPA,
-          c.duration_weeks AS Duration_Weeks, c.program_start AS Program_Start, c.program_end AS Program_End,
-          c.application_open AS Application_Open, c.application_deadline AS Application_Deadline, c.deadline_text AS Deadline_Text,
-          c.cycle_year AS Cycle_Year, c.status_text AS Status, c.stipend_total_usd AS Stipend_Total_USD,
-          c.stipend_weekly_usd AS Stipend_Weekly_USD, c.housing_status AS Housing_Included, c.housing_details AS Housing_Details,
-          c.meals_status AS Meals_Included, c.meals_details AS Meals_Details, c.travel_status AS Travel_Included,
-          c.travel_details AS Travel_Details, c.academic_credit_status AS Academic_Credit, o.program_url AS Program_URL,
-          c.application_url AS Application_URL, c.last_verified AS Last_Verified, c.data_confidence AS Data_Confidence,
-          e.parse_status AS Eligibility_Parse_Status, o.notes AS Notes
-        FROM opportunities o JOIN institutions i USING(institution_id)
-        JOIN program_cycles c USING(opportunity_id) JOIN eligibility_rules e USING(cycle_id)
-        LEFT JOIN opportunity_categories oc ON oc.opportunity_id=o.opportunity_id AND oc.is_primary=1
-        LEFT JOIN research_categories rc USING(category_id)
-        LEFT JOIN opportunity_tags ot ON ot.opportunity_id=o.opportunity_id LEFT JOIN research_tags rt USING(tag_id)
-        GROUP BY c.cycle_id ORDER BY o.public_id, c.cycle_year
-    """)
-    write_csv(output / "review" / "opportunities_review.csv", visible_na_rows(review))
-    for name, rows in {"institutions": institutions, "program_cycles": cycles, "eligibility_rules": eligibility, "sources": sources, "source_verifications": verifications}.items():
-        normalized = [{key: json.dumps(value) if isinstance(value, list) else value for key, value in row.items()} for row in rows]
-        if name == "program_cycles":
-            normalized = visible_na_rows(normalized, {
-                "duration_weeks",
-                "program_start",
-                "program_end",
-                "application_open",
-                "application_deadline",
-                "deadline_text",
-                "stipend_total_usd",
-                "stipend_weekly_usd",
-            })
-        write_csv(output / "review" / f"{name}.csv", normalized)
     connection.close()
     return len(catalog)
 

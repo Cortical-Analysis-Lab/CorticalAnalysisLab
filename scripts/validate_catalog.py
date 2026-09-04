@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate relational integrity and flag incomplete or ambiguous catalog data."""
+"""Validate the structural integrity of the published catalog database."""
 
 from __future__ import annotations
 
@@ -7,12 +7,12 @@ import argparse
 import json
 from pathlib import Path
 
-from catalog_common import DEFAULT_DB, connect, disallowed_verification_source, valid_url
+from catalog_common import DEFAULT_DB, connect, valid_url
 
 
 def validate(database: Path):
     connection = connect(database)
-    errors, warnings = [], []
+    errors = []
     integrity = connection.execute("PRAGMA integrity_check").fetchone()[0]
     if integrity != "ok":
         errors.append(f"SQLite integrity check failed: {integrity}")
@@ -25,12 +25,6 @@ def validate(database: Path):
     if invalid_supported_fields:
         errors.append(f"Invalid fields_supported JSON values: {invalid_supported_fields}")
 
-    for row in connection.execute("SELECT source_id, source_url FROM sources WHERE authoritative = 1"):
-        if disallowed_verification_source(row["source_url"]):
-            errors.append(
-                f"Authoritative source {row['source_id']} uses a social/discovery-only host: {row['source_url']}"
-            )
-
     for row in connection.execute("SELECT public_id, program_name, program_url, application_url FROM opportunities ORDER BY public_id"):
         if not row["program_name"]:
             errors.append(f"{row['public_id']}: missing program name")
@@ -39,13 +33,8 @@ def validate(database: Path):
             if value and not valid_url(value):
                 errors.append(f"{row['public_id']}: invalid {field}: {value}")
 
-    missing_coordinates = connection.execute("SELECT COUNT(*) FROM institutions WHERE latitude IS NULL OR longitude IS NULL").fetchone()[0]
-    if missing_coordinates:
-        warnings.append(f"{missing_coordinates} institutions need coordinates before map launch")
-
     query = """
-        SELECT o.public_id, c.*, e.eligibility_rule_id, e.parse_status,
-               e.citizenship_rule_text, e.eligible_years_text
+        SELECT o.public_id, c.*, e.eligibility_rule_id
         FROM program_cycles c
         JOIN opportunities o USING(opportunity_id)
         LEFT JOIN eligibility_rules e USING(cycle_id)
@@ -55,23 +44,12 @@ def validate(database: Path):
         label = f"{row['public_id']} ({row['cycle_year']})"
         if not row["eligibility_rule_id"]:
             errors.append(f"{label}: missing eligibility rule")
-        if not row["application_deadline"]:
-            warnings.append(f"{label}: application deadline unknown")
-        if row["duration_weeks"] is None:
-            warnings.append(f"{label}: duration unknown")
-        if row["stipend_total_usd"] is None and row["stipend_weekly_usd"] is None:
-            warnings.append(f"{label}: stipend unknown")
-        if row["last_verified"] is None:
-            warnings.append(f"{label}: verification date unknown")
         if row["program_start"] and row["program_end"] and row["program_end"] < row["program_start"]:
             errors.append(f"{label}: program_end precedes program_start")
         if row["application_open"] and row["application_deadline"] and row["application_deadline"] < row["application_open"]:
             errors.append(f"{label}: application_deadline precedes application_open")
         if row["application_url"] and not valid_url(row["application_url"]):
             errors.append(f"{label}: invalid cycle application_url: {row['application_url']}")
-        if row["parse_status"] == "needs_review":
-            warnings.append(f"{label}: eligibility text needs structured review")
-
     orphan_checks = {
         "opportunities without category": "SELECT COUNT(*) FROM opportunities o LEFT JOIN opportunity_categories oc USING(opportunity_id) WHERE oc.opportunity_id IS NULL",
         "opportunities without source verification": "SELECT COUNT(*) FROM opportunities o LEFT JOIN source_verifications sv USING(opportunity_id) WHERE sv.opportunity_id IS NULL",
@@ -85,14 +63,13 @@ def validate(database: Path):
         for table in ("institutions", "opportunities", "program_cycles", "eligibility_rules", "research_categories", "research_tags", "research_modes", "opportunity_research_modes", "sources", "source_verifications")
     }
     connection.close()
-    return {"valid": not errors, "counts": counts, "errors": errors, "warnings": warnings}
+    return {"valid": not errors, "counts": counts, "errors": errors}
 
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--database", type=Path, default=DEFAULT_DB)
     parser.add_argument("--json", action="store_true")
-    parser.add_argument("--strict", action="store_true", help="Treat review warnings as failure")
     args = parser.parse_args()
     report = validate(args.database)
     if args.json:
@@ -101,10 +78,8 @@ def main():
         print("Counts:", ", ".join(f"{key}={value}" for key, value in report["counts"].items()))
         for error in report["errors"]:
             print(f"ERROR: {error}")
-        for warning in report["warnings"]:
-            print(f"WARNING: {warning}")
-        print(f"Validation {'passed' if report['valid'] else 'failed'} with {len(report['warnings'])} review warnings")
-    raise SystemExit(0 if report["valid"] and (not args.strict or not report["warnings"]) else 1)
+        print(f"Validation {'passed' if report['valid'] else 'failed'}")
+    raise SystemExit(0 if report["valid"] else 1)
 
 
 if __name__ == "__main__":

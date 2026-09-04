@@ -1,6 +1,6 @@
 # Generated website data
 
-These JSON and CSV files are generated from `database/research_opportunities.sqlite` by `scripts/export_catalog.py`. They are static assets suitable for GitHub Pages.
+These JSON files are generated from `database/research_opportunities.sqlite` by `scripts/export_catalog.py`. They are static assets suitable for GitHub Pages.
 
 - `catalog.json`: denormalized payload for opportunity cards, filters, comparison, and eligibility evaluation.
 - `institutions.json`: map markers and institution-level aggregation inputs.
@@ -10,6 +10,4 @@ These JSON and CSV files are generated from `database/research_opportunities.sql
 - `research_categories.json` and `research_tags.json`: controlled filter vocabularies.
 - `research_modes.json`: controlled methodology vocabulary for preference filtering.
 - `sources.json`: source and verification metadata.
-- `review/*.csv` and `review/*.xlsx`: human review/import/export artifacts.
-
 Do not hand-edit generated files.

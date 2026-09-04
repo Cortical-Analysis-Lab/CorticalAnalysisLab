@@ -4,11 +4,11 @@
 
 This site is a static GitHub Pages repository with existing browser data in `/data`. The catalog therefore uses:
 
-- `/database/research_opportunities.sqlite` — canonical structured source of truth
-- `/database/imports/` — reviewed CSV/XLSX import staging
+- `/database/research_opportunities.sqlite` — canonical published database
+- `/database/imports/` — accepted CSV data used to reproduce SQLite
 - `/schema/` — versioned SQL schema and data dictionary
-- `/scripts/` — deterministic import, validation, rebuild, test, and export commands
-- `/data/summer-research/` — generated static JSON for the browser plus review exports
+- `/scripts/` — deterministic import, structural validation, rebuild, test, and export commands
+- `/data/summer-research/` — generated static JSON for the browser
 
 The current pages and existing `data/people.json` and `data/publications.json` remain unchanged.
 
@@ -24,32 +24,14 @@ GitHub Pages reads static JSON only; it does not open SQLite in the browser. `ca
 
 Eligibility fields are nullable. A future evaluator must return three outcomes: `eligible`, `ineligible`, or `unknown/review needed`. Unknown must never be treated as false. Preference filters—including research mode—operate separately from hard eligibility.
 
-## Update workflow
-
-```bash
-python scripts/import_catalog.py path/to/reviewed.csv --dry-run
-python scripts/import_catalog.py path/to/reviewed.csv
-python scripts/validate_catalog.py
-python scripts/export_catalog.py
-python scripts/export_review_xlsx.py
-python scripts/test_catalog.py
-```
-
-For a clean deterministic seed rebuild:
+## Data build
 
 ```bash
 python scripts/rebuild_database.py
+python scripts/test_catalog.py
 ```
 
-The validator treats missing deadlines, stipends, durations, and unparsed eligibility as review warnings. Structural corruption, broken foreign keys, invalid URLs, duplicates, and missing required relationships are errors.
-
-## Future discovery and verification agents
-
-Use a staged pipeline: discovery → extraction → verification → classification → deduplication → reviewed update. Agents should emit candidate rows and source evidence into staging. They should not write public JSON or silently overwrite canonical records. Promotion into SQLite remains deterministic, validated, and attributable to an import run.
-
-Potential next schema additions include immutable source snapshots, proposed-change tables, reviewer decisions, and job/run metadata. The current source hashes, raw imports, verification events, and stable public IDs provide the attachment points for those additions.
-
-See `docs/database_update_process.md` for the reviewed update and deduplication contract, and `docs/data_sources.md` for source priority and collection behavior.
+Opportunity discovery, evaluation, verification, and review happen outside this repository. Only accepted records enter the committed CSV. The repository build checks relational integrity and produces SQLite and browser JSON deterministically.
 
 ## Explicitly out of scope
 

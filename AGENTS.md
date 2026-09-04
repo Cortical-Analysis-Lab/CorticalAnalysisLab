@@ -6,7 +6,7 @@
 - The branch contains the Summer Undergraduate Research Opportunity Explorer database foundation and questionnaire UI.
 - Keep unrelated lab website pages and styles intact.
 - The repository is a static HTML/CSS/JavaScript GitHub Pages site. There is no frontend framework or application server.
-- `database/research_opportunities.sqlite` is canonical. Browser code reads generated JSON from `data/summer-research/`; it must never query SQLite directly.
+- The accepted CSV under `database/imports/` is the version-controlled source used to reproduce `database/research_opportunities.sqlite`, the canonical published database. Browser code reads generated JSON from `data/summer-research/`; it must never query SQLite directly.
 - Do not push, merge, or modify remote branches unless the user explicitly requests it.
 
 ## Product and privacy boundaries
@@ -25,30 +25,25 @@ Key files:
 - `schema/schema.sql` — normalized SQLite schema
 - `schema/data_dictionary.md` — field semantics and unknown-value policy
 - `database/research_opportunities.sqlite` — canonical public database
-- `database/imports/` — reviewed 35-row CSV/XLSX seed
-- `scripts/import_catalog.py` — deterministic CSV/XLSX importer
-- `scripts/validate_catalog.py` — integrity and completeness validation
-- `scripts/export_catalog.py` — browser JSON and review CSV exports
+- `database/imports/` — accepted 706-row CSV source
+- `scripts/import_catalog.py` — deterministic CSV importer
+- `scripts/validate_catalog.py` — structural integrity validation
+- `scripts/export_catalog.py` — browser JSON exports
 - `scripts/rebuild_database.py` — clean seed rebuild
 - `scripts/test_catalog.py` — regression and round-trip tests
-- `docs/database_update_process.md` — reviewed updater/deduplication contract
-- `docs/data_sources.md` — source priority and collection rules
 
 The schema separates institutions, stable programs (`opportunities`), annual cycles, structured eligibility, categories, tags, research modes, sources, verifications, and import provenance. Stable program identity and annual cycle data must remain separate.
 
 Current seed scale:
 
-- 35 programs and annual cycles
-- 33 normalized institutions
+- 706 programs and annual cycles
+- 337 normalized institutions
 - 13 broad categories
-- 89 detailed research tags
+- 352 detailed research tags
 - 11 controlled research modes
-- 56 source-verification events
+- 842 source-verification events
 
-Known gaps:
-
-- All 35 eligibility records still have `parse_status = needs_review`.
-- Some deadlines, durations, stipends, and benefits are unknown; validator warnings are expected.
+Opportunity discovery, evaluation, verification, and review happen outside this repository. Only accepted records enter the committed CSV. Missing facts remain `NULL`/`unknown`.
 
 ## Implemented Fellowship Database UI
 
@@ -95,11 +90,9 @@ Current behavior:
 Run after database changes:
 
 ```bash
-python3 -m pip install -r scripts/requirements.txt
 python3 scripts/rebuild_database.py
 python3 scripts/validate_catalog.py
 python3 scripts/test_catalog.py
-python3 scripts/export_review_xlsx.py
 ```
 
 Run after questionnaire/UI changes:
@@ -122,15 +115,18 @@ The prior port 4173 prototype is only a visual reference and may not exist in a 
 
 The explorer uses an institution-count U.S. state map instead of institution-level location markers. Do not collect coordinates or add a map provider for this feature.
 
-- Show all U.S. states in a self-contained, static-host-compatible map.
+- Show the contiguous lower 48 states plus D.C. in a tightly cropped, self-contained geographic SVG map, not a tile grid. Do not show Alaska, Hawaii, territories, Canada, Mexico, or the rest of the Americas.
 - States with matching institutions are white with bold Sacred Heart red institution counts.
+- Provide SVG leader-line callouts for geographically small states whose in-map counts are difficult to read; show the state abbreviation and institution count in red when opportunities match and in black when none match. Opportunity callouts must activate the same shared state filter. Do not use separate cards or button blocks for these labels.
 - States without matching institutions remain Sacred Heart red.
-- Keep a thick black border around the map.
+- Use thick black geographic state/coastline borders; do not place the map in a framed or horizontally scrolling box.
 - Selecting a state filters the opportunity cards through the same shared result state as the other preference controls.
 - Count each institution once per state, even when it offers multiple matching programs.
-- Put non-single-state catalog locations such as `Multiple`, `International`, and `MD / CO` in an **Other** list beside the map; selecting one filters the cards to that exact catalog value.
+- Put non-specific catalog locations such as `Multiple` and `International` in an **Other** list beside the map; selecting one filters the cards to that exact catalog value.
+- When a catalog record explicitly identifies multiple city/state pairs, render one card per verified location and count the institution in each applicable state. Keep unspecified `Multiple` records in **Other** until their host sites are verified.
 - Keep the state map, Other list, eligibility results, preference filters, keyword search, and opportunity cards synchronized.
 - Provide keyboard-accessible buttons and responsive/mobile presentation.
+- On screens 720px wide or narrower, hide the map and Other panel and show a location dropdown in the preference filters instead.
 - Preserve unknown location values rather than assigning them to a state.
 
 Do not build the future application-profile/template system yet.
