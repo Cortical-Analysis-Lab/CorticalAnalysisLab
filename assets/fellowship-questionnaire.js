@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     evaluatedResults = opportunities.map(opportunity => ({opportunity, evaluation: evaluate(opportunity, answers)}));
     const availableCount = evaluatedResults.filter(item => item.evaluation.state !== "ineligible").length;
     document.getElementById("availability-summary").textContent = `${availableCount} eligible opportunities out of ${evaluatedResults.length} total available`;
-    document.getElementById("results-explanation").textContent = "Your opportunity list includes programs with no known conflicts. N/A means a requirement or program detail has not yet been verified.";
+    document.getElementById("results-explanation").textContent = "N/A means a requirement or program detail has not yet been verified.";
     renderResults();
     panel.hidden = true;
     resultsPanel.hidden = false;
