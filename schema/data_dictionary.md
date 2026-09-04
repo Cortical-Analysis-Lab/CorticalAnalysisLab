@@ -12,6 +12,9 @@ SQLite is the canonical store. Files under `data/summer-research/` are generated
 - **Tag**: narrower research topic, method, mode, audience, or program characteristic.
 - **Research mode**: controlled, many-to-many methodology values such as wet lab, computational, field, or clinical. Modes are assigned only when the seed or a reviewed source states them explicitly.
 - **Source verification**: which source supported which fields, when it was checked, and whether conflicts existed.
+- **Discovery source**: a directory, database, network, search engine, professional society, host universe, or secondary lead source that produced a candidate. It may or may not be authoritative for any program fact.
+- **Opportunity discovery**: many-to-many provenance linking a candidate or canonical opportunity to the source and URL where it was discovered.
+- **Crawl target**: a coverage-tracked institution, agency, research center, society, lab, field station, or host domain searched by the national discovery protocol.
 
 ## Unknown-value policy
 
@@ -35,6 +38,9 @@ Missing or ambiguous information is stored as `NULL` in typed fields and preserv
 | `research_modes.mode_code` | Controlled preference/filter vocabulary; absent assignments mean unknown, not “no.” |
 | `fields_supported` | JSON array of field names supported by that source. |
 | `evidence_hash` | Reserved for a future content snapshot hash from the verification pipeline. |
+| `discovery_sources.authority_scope` | Whether the source is discovery-only, can support network rules, can support government records, or is itself an official program source. |
+| `opportunity_discovery.discovery_url` | The URL that revealed the candidate; this is preserved even if a later official verification source is different. |
+| `crawl_targets.crawl_status` | Coverage state for institutional and organized-source crawling. Counts based on this field support completeness claims. |
 
 ## Reviewed eligibility staging
 
@@ -42,4 +48,4 @@ The reviewed import seed may include explicit `Eligibility_*` columns correspond
 
 ## Future agent pipeline compatibility
 
-Discovery agents should write candidate imports or staging files, not modify public JSON directly. Verification agents can add source records, hashes, supported-field lists, and conflict notes. A deterministic import/update step should promote reviewed changes into SQLite, followed by validation and export.
+Discovery agents should write candidate imports or staging files, not modify public JSON directly. They should normalize discovered leads to the candidate schema, link them to `discovery_sources`, and update `crawl_targets` coverage state. Verification agents can add source records, hashes, supported-field lists, and conflict notes. A deterministic import/update step should promote reviewed changes into SQLite, followed by validation and export.

@@ -22,6 +22,7 @@ REQUIRED_COLUMNS = {
     "Program_ID", "Program_Name", "Host_Institution", "Primary_Field",
     "Cycle_Year", "Program_URL", "Last_Verified",
 }
+DISCOVERY_SOURCE_SEED = DEFAULT_DB.parents[1] / "database" / "discovery" / "source_catalog_seed.json"
 
 ELIGIBILITY_BOOLEAN_COLUMNS = {
     "Citizenship_US_Citizen", "Citizenship_Permanent_Resident", "Citizenship_International",
@@ -110,6 +111,7 @@ def upsert_import(connection, path, rows):
             "ON CONFLICT(mode_code) DO UPDATE SET mode_name=excluded.mode_name, description=excluded.description",
             (mode_code, mode_name, description),
         )
+    seed_discovery_sources(connection)
 
     for row in rows:
         public_id = text_or_none(row["Program_ID"])
@@ -225,6 +227,44 @@ def upsert_import(connection, path, rows):
             )
     connection.execute("UPDATE import_runs SET status='completed' WHERE import_run_id=?", (run_id,))
     return run_id
+
+
+def seed_discovery_sources(connection):
+    if not DISCOVERY_SOURCE_SEED.exists():
+        return
+    records = json.loads(DISCOVERY_SOURCE_SEED.read_text(encoding="utf-8"))
+    for item in records:
+        connection.execute(
+            """
+            INSERT INTO discovery_sources(
+                source_key, source_name, source_type, source_url, source_priority,
+                discovery_pass, automated_search_supported, authority_scope, notes, active
+            )
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 1)
+            ON CONFLICT(source_key) DO UPDATE SET
+                source_name=excluded.source_name,
+                source_type=excluded.source_type,
+                source_url=excluded.source_url,
+                source_priority=excluded.source_priority,
+                discovery_pass=excluded.discovery_pass,
+                automated_search_supported=excluded.automated_search_supported,
+                authority_scope=excluded.authority_scope,
+                notes=excluded.notes,
+                active=excluded.active,
+                updated_at=CURRENT_TIMESTAMP
+            """,
+            (
+                item["source_key"],
+                item["source_name"],
+                item["source_type"],
+                item.get("source_url"),
+                int(item.get("source_priority", 999)),
+                int(item["discovery_pass"]),
+                1 if item.get("automated_search_supported") else 0,
+                item.get("authority_scope", "discovery_only"),
+                item.get("notes"),
+            ),
+        )
 
 
 def main():

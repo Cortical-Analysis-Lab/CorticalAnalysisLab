@@ -7,14 +7,12 @@ SQLite is canonical. Files in `data/summer-research/` are generated and must not
 `local_catalog_manager.py` is the recommended workstation entry point. It binds only to `127.0.0.1`, uses a per-launch request token, and keeps resumable operational state in the git-ignored `database/local/catalog_candidates.sqlite`.
 
 1. Add official or potential opportunity links through **Add opportunity links**.
-2. Run an approved-source discovery session. Results are merged into persistent staging and matched against canonical identities.
-3. Generate the Desktop Codex investigation bundle.
-4. In Desktop Codex, open this repository and execute `database/local/agent_queue/CODEX_TASK.md`.
-5. Review proposed records and evidence. Only approved, official-source-supported changes belong in the reviewed import files.
-6. Use **Rebuild and validate** to regenerate canonical SQLite, browser JSON, and review exports and to run regression checks.
-7. Review and commit the repository diff. Local staging and agent work queues remain uncommitted.
+2. Run the local automated pipeline. Results are merged into persistent staging, matched against canonical identities, evaluated against official-source rules, and promoted only when the promotion gate can identify a program-level official source.
+3. Let the pipeline rebuild and validate canonical SQLite, browser JSON, and review exports.
+4. Review the local audit outputs for incomplete data, rejected candidates, inaccessible pages, and coverage gaps.
+5. Review and commit the repository diff. Local staging, API keys, crawl cache, and agent work queues remain uncommitted.
 
-The GUI deliberately does not embed an API key, invoke an undocumented Desktop Codex interface, or promote discovery-only candidates. This keeps agent investigation adjustable in Desktop Codex while repository updates remain deterministic and reviewable.
+The GUI deliberately does not commit local state or embed credentials in tracked files. Automated promotion is allowed only through the deterministic reviewed import and rebuild path, and missing optional facts must remain blank or unknown with a local incomplete-data log.
 
 ## Reviewed update sequence
 
@@ -28,6 +26,8 @@ The GUI deliberately does not embed an API key, invoke an undocumented Desktop C
 8. **Review the diff** for unexpected deletions, invented values, changed stable IDs, or overwritten historical cycles.
 
 Automated discovery or extraction agents may create candidate staging rows. They must not modify canonical SQLite or public JSON without the deterministic reviewed import step.
+
+The national baseline protocol is `docs/national_discovery_protocol.md`. Discovery agents should execute that strategy in bounded passes and update `discovery_sources`, `opportunity_discovery`, and `crawl_targets` so progress is measurable by coverage universe, not just by record count.
 
 ## Deduplication and identity rules
 

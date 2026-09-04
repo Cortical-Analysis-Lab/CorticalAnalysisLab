@@ -1,7 +1,7 @@
 source_id,source_url,source_name,source_type,publisher,authoritative
 1,https://btaa.org/resources-for/students/srop/campus-profiles,Big Ten Academic Alliance SROP,official_program,,1
-2,https://apps.btaa.org/srop/apply,Big Ten SROP – University of Wisconsin–Madison application,official_application,,1
-3,https://btaa.org/resources-for/students/srop/eligibility,Big Ten SROP – University of Iowa eligibility,official_program,,1
+2,https://apps.btaa.org/srop/apply,Big Ten SROP â€“ University of Wisconsinâ€“Madison application,official_application,,1
+3,https://btaa.org/resources-for/students/srop/eligibility,Big Ten SROP â€“ University of Iowa eligibility,official_program,,1
 4,https://science.osti.gov/wdts/suli,DOE Office of Science,official_program,,1
 5,https://science.osti.gov/wdts/suli/how-to-apply,Science Undergraduate Laboratory Internships (SULI) application,official_application,,1
 6,https://science.osti.gov/wdts/suli/Eligibility,Science Undergraduate Laboratory Internships (SULI) eligibility,official_program,,1
@@ -78,7 +78,7 @@ source_id,source_url,source_name,source_type,publisher,authoritative
 77,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2150424,Plastic Recycling and Advanced Chemical-physical Transformations for Improved Circular Economy (PRACTICE-REU) application,official_program,,1
 78,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2150434,Combinatorics and Coding Theory in the Tropics application,official_program,,1
 79,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2150436,From Bench to Market: Engineering Systems for High Efficiency Separations application,official_program,,1
-80,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2150441,"Ecohydrology of Tropical Montane Forests—Diversity in Science, Interdisciplinary Breadth, and Global Awareness application",official_program,,1
+80,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2150441,"Ecohydrology of Tropical Montane Forestsâ€”Diversity in Science, Interdisciplinary Breadth, and Global Awareness application",official_program,,1
 81,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2150491,Interdisciplinary Research Experience in Computational Sciences application,official_program,,1
 82,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2150515,UC Davis Physics and Astronomy application,official_program,,1
 83,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2150643,Interdisciplinary AI Research for Undergraduates application,official_program,,1
@@ -397,7 +397,7 @@ source_id,source_url,source_name,source_type,publisher,authoritative
 396,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2349731,Research at the interface between engineering and medicine (ENGMED) application,official_program,,1
 397,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2349747,Robots in the Real World application,official_program,,1
 398,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2349748,Elevating Culturally Relevant Chemistry application,official_program,,1
-399,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2349752,Engineering for Bouncing Back Better — Integrating Resiliency and Engineering Disciplines Through Systems Thinking application,official_program,,1
+399,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2349752,Engineering for Bouncing Back Better â€” Integrating Resiliency and Engineering Disciplines Through Systems Thinking application,official_program,,1
 400,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2349757,Interdisciplinary Biological Engineering and Science Training (I-BEST),official_program,,1
 401,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2349762,A Community College Based REU Site for the Wyoming Region application,official_program,,1
 402,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2349765,Controlled Environment Agriculture (CEAfREU) application,official_program,,1
@@ -478,7 +478,7 @@ source_id,source_url,source_name,source_type,publisher,authoritative
 477,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2447443,"Saving Critically Endangered Species and Habitats: Next-generation Education, Research, and Training for Conservation Biologists",official_program,,1
 478,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2447444,RE@CSU Rehabilitation Engineering application,official_program,,1
 479,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2447453,Digital Forensic Research on Emerging Computing Environments application,official_program,,1
-480,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2447455,Launching Aerospace’s Undergraduates into the Next Chapter – Space Technology (LAUNCH-SPACE) application,official_program,,1
+480,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2447455,Launching Aerospaceâ€™s Undergraduates into the Next Chapter â€“ Space Technology (LAUNCH-SPACE) application,official_program,,1
 481,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2447466,"Combinatorics, Algorithms, and AI applied to Real Problems (CAAR) application",official_program,,1
 482,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2447479,Research Experience for Undergraduates in Translational Applications of AI to Engineering (REU-TrACE) application,official_program,,1
 483,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2447482,Opportunities for Growth and Research in Nuclear Science at the Texas A&M Cyclotron Institute application,official_program,,1
@@ -712,3 +712,60 @@ source_id,source_url,source_name,source_type,publisher,authoritative
 711,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2619097,Conference: 2026 BIO-REU Principal Investigator Virtual Meeting application,official_program,,1
 712,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2620473,EAGER: Distributed Research Experiences for Undergraduates in Quantum Information Science application,official_program,,1
 713,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2620474,EAGER: Distributed Research Experiences for Undergraduates in Artificial Intelligence application,official_program,,1
+714,https://science.osti.gov/wdts/cci,doe_cci,official_program,,1
+715,https://chemistry.princeton.edu/undergrads/surf-c/,expanded_chemistry_princeton_edu_undergrads_sur_e7071990,official_program,,1
+716,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2309083,nsf_awards_reu_site,official_program,,1
+717,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2348755,nsf_awards_reu_site,official_program,,1
+718,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2349023,nsf_awards_reu_site,official_program,,1
+719,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2349028,nsf_awards_reu_site,official_program,,1
+720,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2349080,nsf_awards_reu_site,official_program,,1
+721,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2349102,nsf_awards_reu_site,official_program,,1
+722,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2349250,nsf_awards_reu_site,official_program,,1
+723,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2349530,nsf_awards_reu_site,official_program,,1
+724,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2349652,nsf_awards_reu_site,official_program,,1
+725,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2349682,nsf_awards_reu_site,official_program,,1
+726,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2447788,nsf_awards_reu_site,official_program,,1
+727,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2447895,nsf_awards_reu_site,official_program,,1
+728,https://www.nsf.gov/awardsearch/showAward?AWD_ID=2445866,nsf_awards_reu_site,official_program,,1
+729,https://www.cs.umd.edu/projects/reucaar/,frontier_www_cs_umd_edu_projects_reucaar_d2e334bc,official_program,,1
+730,https://www.math.rutgers.edu/academics/undergraduate/courses/research-opportunities/reu,frontier_www_math_rutgers_edu_academics_undergr_fc5c2729,official_program,,1
+731,https://scholars.hms.harvard.edu/,frontier_scholars_hms_harvard_edu_19163011,official_program,,1
+732,https://science.osti.gov/wdts/suli/,expanded_science_osti_gov_wdts_suli_23619288,official_program,,1
+733,https://med.umn.edu/education-training/medical-scientist-training-program-mdphd/mstp-admissions/pre-mstp-summer-research-program,expanded_med_umn_edu_education_training_medical_3d9bfc25,official_program,,1
+734,https://reu.cse.sc.edu/,frontier_reu_cse_sc_edu_551ee09c,official_program,,1
+735,https://www.massgeneral.org/orthopaedics/education-and-training/internships/womens-sports-medicine-internship-program,frontier_www_massgeneral_org_orthopaedics_educa_98d473c2,official_program,,1
+736,https://lasp.colorado.edu/reu/,frontier_lasp_colorado_edu_home_education_reu_90a13ceb,official_program,,1
+737,https://www.chemistry.ucla.edu/undergraduate/scholarships-awards/surf/,expanded_www_chemistry_ucla_edu_undergraduate_s_aca06491,official_program,,1
+738,https://www.massgeneral.org/children/autism/lurie-center/summer-clinical-research-internship,frontier_www_massgeneral_org_children_autism_lu_ef773578,official_program,,1
+739,https://harvardforest.fas.harvard.edu/summer-research-program-information-for-mentors/,frontier_harvardforest_fas_harvard_edu_summer_r_201e853b,official_program,,1
+740,https://www.cnf.cornell.edu/education/reu/2019,frontier_www_cnf_cornell_edu_cnf5_reuprogram_ht_7d138522;frontier_www_cnf_cornell_edu_education_reu_cure_3d099e0c,official_program,,1
+741,https://www.cnf.cornell.edu/education/reu,frontier_www_cnf_cornell_edu_cnf5_reuprogram_ht_7d138522;frontier_www_cnf_cornell_edu_education_reu_cure_3d099e0c,official_program,,1
+742,https://www.paradim.org/reu/cornell,frontier_www_paradim_org_reu_cornell_351a0097,official_program,,1
+743,https://harvardforest.fas.harvard.edu/notes/summer-research-program-in-ecology-welcomes-20-students-in-its-31st-year/,frontier_harvardforest_fas_harvard_edu_notes_su_45c22601,official_program,,1
+744,http://www.nsf.gov/funding/initiatives/reu/search,frontier_www_nsf_gov_funding_initiatives_reu_se_4a6b3e0c,official_program,,1
+745,https://harvardforest.fas.harvard.edu/education-opportunities/undergraduate-students/summer-research-program/summer-research-program-information-for-mentors/,frontier_harvardforest_fas_harvard_edu_educatio_75b6aaf5,official_program,,1
+746,https://www.cnf.cornell.edu/cnf5_reuprogram.html,frontier_www_cnf_cornell_edu_cnf5_reuprogram_ht_7d138522,official_program,,1
+747,https://aspb.org/awards-funding/aspb-awards/surf/,frontier_aspb_org_awards_funding_aspb_awards_su_99edca75,official_program,,1
+748,https://harvardforest.fas.harvard.edu/summer-research-program-information-for-students/,frontier_harvardforest_fas_harvard_edu_summer_r_c7230a8d,official_program,,1
+749,https://btiscience.org/education-outreach/research-internships/,frontier_btiscience_org_education_outreach_rese_d2346e24,official_program,,1
+750,https://strobe.colorado.edu/education-outreach/undergraduate/surs/,frontier_strobe_colorado_edu_education_outreach_10887999,official_program,,1
+751,https://bri.ucla.edu/outreach/undergraduate-summer-research-programs/bri-sure/,frontier_bri_ucla_edu_outreach_undergraduate_su_2948b591,official_program,,1
+752,https://www.seasoasa.ucla.edu/urp/,frontier_www_seasoasa_ucla_edu_urp_50019ea0,official_program,,1
+753,https://www.seasoasa.ucla.edu/surp-2/,frontier_www_seasoasa_ucla_edu_surp_2_8e773f42,official_program,,1
+754,https://www.nsf.gov/crssprgm/reu/list_result.jsp?unitid=5048,frontier_www_nsf_gov_crssprgm_reu_list_result_j_aebeb588,official_program,,1
+755,https://gccri.uthscsa.edu/research/summer-program/,frontier_gccri_uthscsa_edu_gccri_donald_g_mcewe_8b2505cb,official_program,,1
+756,https://fellowships.missouri.edu/fellowship/amgen-scholars/,frontier_fellowships_missouri_edu_fellowship_am_29ae4f6d;frontier_fellowships_missouri_edu_fellowship_ch_cce1783b,official_program,,1
+757,https://surf.rutgers.edu/activities/crest/,frontier_surf_rutgers_edu_931687be,official_program,,1
+758,https://gccri.uthscsa.edu/research/gccri-donald-g-mcewen-memorial-summer-research-program/,frontier_gccri_uthscsa_edu_gccri_donald_g_mcewe_8b2505cb,official_program,,1
+759,https://www.cur.org/coeur/summer-research-program/,frontier_www_cur_org_coeur_summer_research_prog_6ccf8894,official_program,,1
+760,https://med.miami.edu/graduate-studies/miamisurf,frontier_med_miami_edu_graduate_studies_miamisu_875614cf,official_program,,1
+761,https://gccri.uthscsa.edu/gccri-donald-g-mcewen-memorial-summer-research-program/,frontier_gccri_uthscsa_edu_gccri_donald_g_mcewe_8b2505cb,official_program,,1
+762,https://fellowships.missouri.edu/fellowship/national-science-foundation-research-experience-for-undergraduates-nsf-reu/,frontier_fellowships_missouri_edu_fellowship_na_8e18ce08,official_program,,1
+763,https://surf.rutgers.edu/,frontier_surf_rutgers_edu_931687be,official_program,,1
+764,https://csm.fresnostate.edu/hcop/summerresearchopportunities.html,frontier_csm_fresnostate_edu_hcop_summerresearc_9df99f5c,official_program,,1
+765,https://surf.rutgers.edu/outcomes/surf-to-jgpt-journey/,frontier_surf_rutgers_edu_931687be,official_program,,1
+766,https://www.uh.edu/health-professions-advising/pre-health-resources/summer-programs/,frontier_www_uh_edu_health_professions_advising_c14c921b,official_program,,1
+767,https://med.uc.edu/education/graduate-education/summer-undergraduate-research-fellowships,frontier_med_uc_edu_education_graduate_educatio_d0f1c402,official_program,,1
+768,https://reu.math.iastate.edu/,nsf_awards_reu_site,official_program,,1
+769,https://spaceweather.njit.edu/reu,nsf_awards_reu_site,official_program,,1
+770,https://maa.org/resource/nreup/,nsf_awards_research_experiences_undergraduates,official_program,,1

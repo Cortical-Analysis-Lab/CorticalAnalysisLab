@@ -144,18 +144,30 @@ class CatalogTests(unittest.TestCase):
             self.assertEqual(row["normalized_url"], "https://example.edu/research/summer")
 
     def test_public_catalog_matches_database(self):
-        payload = json.loads((ROOT / "data" / "summer-research" / "catalog.json").read_text())
+        payload = json.loads((ROOT / "data" / "summer-research" / "catalog.json").read_text(encoding="utf-8"))
         self.assertEqual(len(payload["opportunities"]), self.count("opportunities"))
-        self.assertEqual(payload["schema_version"], "1.1.0")
+        self.assertEqual(payload["schema_version"], "1.2.0")
+
+    def test_discovery_protocol_tables_are_seeded(self):
+        self.assertGreaterEqual(self.count("discovery_sources"), 25)
+        self.assertEqual(self.count("opportunity_discovery"), 0)
+        self.assertEqual(self.count("crawl_targets"), 0)
+        passes = {
+            row[0]: row[1]
+            for row in self.db.execute(
+                "SELECT discovery_pass, COUNT(*) FROM discovery_sources GROUP BY discovery_pass"
+            )
+        }
+        self.assertTrue({1, 2, 3, 4, 5}.issubset(passes))
 
     def test_research_modes_are_controlled_and_exported(self):
         self.assertEqual(self.count("research_modes"), 11)
         self.assertGreater(self.count("opportunity_research_modes"), 0)
-        payload = json.loads((ROOT / "data" / "summer-research" / "catalog.json").read_text())
+        payload = json.loads((ROOT / "data" / "summer-research" / "catalog.json").read_text(encoding="utf-8"))
         self.assertTrue(all("research_modes" in item for item in payload["opportunities"]))
 
-    def test_application_urls_are_preserved_per_cycle(self):
-        missing = self.db.execute("SELECT COUNT(*) FROM program_cycles WHERE application_url IS NULL").fetchone()[0]
+    def test_program_urls_are_preserved_for_public_catalog(self):
+        missing = self.db.execute("SELECT COUNT(*) FROM opportunities WHERE program_url IS NULL").fetchone()[0]
         self.assertEqual(missing, 0)
 
     def test_csv_seed_round_trip_matches_committed_json(self):
@@ -174,7 +186,11 @@ class CatalogTests(unittest.TestCase):
             ], cwd=ROOT, check=True, capture_output=True, text=True)
             for generated in sorted(output.glob("*.json")):
                 committed = ROOT / "data" / "summer-research" / generated.name
-                self.assertEqual(json.loads(generated.read_text()), json.loads(committed.read_text()), generated.name)
+                self.assertEqual(
+                    json.loads(generated.read_text(encoding="utf-8")),
+                    json.loads(committed.read_text(encoding="utf-8")),
+                    generated.name,
+                )
 
 
 if __name__ == "__main__":

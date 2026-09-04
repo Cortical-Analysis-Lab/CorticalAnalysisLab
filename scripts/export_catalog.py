@@ -102,7 +102,10 @@ def export(database: Path, output: Path):
             cycle_item["eligibility"] = eligibility_by_cycle.get(cycle["cycle_id"])
             item["cycles"].append(cycle_item)
         catalog.append(item)
-    dump_json(output / "catalog.json", {"schema_version": "1.1.0", "opportunities": catalog})
+    schema_version = connection.execute(
+        "SELECT value FROM schema_metadata WHERE key='schema_version'"
+    ).fetchone()[0]
+    dump_json(output / "catalog.json", {"schema_version": schema_version, "opportunities": catalog})
 
     review = records(connection, """
         SELECT o.public_id AS Program_ID, o.program_name AS Program_Name, i.institution_name AS Host_Institution,
