@@ -8,9 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/fellowship-database.css">
-  <link rel="stylesheet" href="assets/fellowship-results.css?v=24">
+  <link rel="stylesheet" href="assets/fellowship-results.css?v=25">
   <script defer src="assets/site.js?v=4"></script>
-  <script defer src="assets/fellowship-questionnaire.js?v=23"></script>
+  <script defer src="assets/fellowship-questionnaire.js?v=24"></script>
 </head>
 <body>
   <nav>
@@ -114,12 +114,19 @@
           <p class="filter-kicker">Preferences</p>
           <h3 id="preference-heading">Refine results</h3>
           <p class="filter-explanation">These choices do not affect whether you can apply.</p>
-          <label class="filter-field">Research area
-            <select id="filter-category"><option value="">All research areas</option></select>
-          </label>
-          <label class="filter-field location-filter">Location
-            <select id="filter-state"><option value="">All locations</option></select>
-          </label>
+          <div class="selection-filter">
+            <label class="filter-field">Research area
+              <select id="filter-category" aria-describedby="selection-help"><option value="">Add a research area…</option></select>
+            </label>
+            <ul id="selected-categories" class="selected-preferences" aria-label="Selected research areas"></ul>
+          </div>
+          <div class="selection-filter location-filter">
+            <label class="filter-field">Location
+              <select id="filter-state" aria-describedby="selection-help"><option value="">Add a location…</option></select>
+            </label>
+            <ul id="selected-locations" class="selected-preferences" aria-label="Selected locations"></ul>
+          </div>
+          <p id="selection-help" class="filter-explanation">Add one or more choices in each menu. No selections means all options; matches can include any choice within each list.</p>
           <div class="filter-group" aria-labelledby="support-filter-label">
             <span id="support-filter-label">Program support</span>
             <label class="filter-check"><input id="filter-housing" type="checkbox"> Housing included</label>

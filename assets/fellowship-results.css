@@ -125,3 +125,12 @@
   .opportunity-toolbar { grid-template-columns: 1fr; align-items: start; }
   .opportunity-toolbar > div, .results-search, .sort-control, .sort-control select { width: 100%; grid-column: 1; }
 }
+
+.selection-filter { min-width: 0; }
+.selected-preferences { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; padding: 0; margin: -0.3rem 0 1rem; }
+.selected-preferences:empty { display: none; }
+.selected-preference { display: flex; align-items: center; gap: 0.3rem; max-width: 100%; padding-left: 0.6rem; border-radius: 8px; background: #f4dfe5; color: #7f092c; font-size: 0.78rem; font-weight: 600; }
+.selected-preference span { overflow-wrap: anywhere; }
+.selected-preference button { flex-shrink: 0; min-width: 36px; min-height: 36px; border: 0; border-radius: 8px; background: transparent; color: inherit; font: inherit; font-size: 1.25rem; cursor: pointer; }
+.selected-preference button:hover { background: #e9c5d0; }
+.selected-preference button:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }

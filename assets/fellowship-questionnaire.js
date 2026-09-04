@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   const resultContainer = document.getElementById("opportunity-results");
   let opportunities = [];
   let evaluatedResults = [];
+  const selectedCategories = new Map();
+  const selectedLocations = new Map();
   const stateNames = {AL:"Alabama",AK:"Alaska",AZ:"Arizona",AR:"Arkansas",CA:"California",CO:"Colorado",CT:"Connecticut",DE:"Delaware",DC:"District of Columbia",FL:"Florida",GA:"Georgia",HI:"Hawaii",ID:"Idaho",IL:"Illinois",IN:"Indiana",IA:"Iowa",KS:"Kansas",KY:"Kentucky",LA:"Louisiana",ME:"Maine",MD:"Maryland",MA:"Massachusetts",MI:"Michigan",MN:"Minnesota",MS:"Mississippi",MO:"Missouri",MT:"Montana",NE:"Nebraska",NV:"Nevada",NH:"New Hampshire",NJ:"New Jersey",NM:"New Mexico",NY:"New York",NC:"North Carolina",ND:"North Dakota",OH:"Ohio",OK:"Oklahoma",OR:"Oregon",PA:"Pennsylvania",RI:"Rhode Island",SC:"South Carolina",SD:"South Dakota",TN:"Tennessee",TX:"Texas",UT:"Utah",VT:"Vermont",VA:"Virginia",WA:"Washington",WV:"West Virginia",WI:"Wisconsin",WY:"Wyoming"};
 
   try {
@@ -121,19 +123,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     const institution = opportunity.institution || {};
     const location = locationVariant ? `${locationVariant.city}, ${locationVariant.stateCode}` : [institution.city, institution.state_code].filter(Boolean).join(", ") || "N/A";
     const categories = opportunity.categories || [];
-    const activeCategory = document.getElementById("filter-category").value;
-    const tags = [...(opportunity.tags || [])].sort((a, b) => Number(tagMatchesCategory(b.tag_name, activeCategory)) - Number(tagMatchesCategory(a.tag_name, activeCategory))).slice(0, 4);
-    const activeCategoryLabel = activeCategory ? document.getElementById("filter-category").selectedOptions[0]?.textContent : "";
+    const activeCategories = [...selectedCategories].filter(([slug]) => matchesResearchArea(opportunity, slug));
+    const matchesSelectedTag = tag => activeCategories.some(([slug]) => tagMatchesCategory(tag.tag_name, slug));
+    const tags = [...(opportunity.tags || [])].sort((a, b) => Number(matchesSelectedTag(b)) - Number(matchesSelectedTag(a))).slice(0, 4);
+    const cardCategories = activeCategories.length ? activeCategories.map(([, label]) => label) : categories.map(category => category.category_name);
     return `<article class="eligibility-card">
       <div class="card-status-row"><span class="cycle-status status-badge ${escapeHtml(display(cycle.status_code).toLowerCase())}">${escapeHtml(display(cycle.status_code))}</span></div>
       <h3>${escapeHtml(opportunity.program_name)}</h3><p class="institution-line">${escapeHtml(institution.institution_name)} · ${escapeHtml(location)}</p>
       <dl class="program-details"><div><dt>Deadline</dt><dd>${escapeHtml(dateDisplay(cycle.application_deadline))}</dd></div><div><dt>Format</dt><dd>${escapeHtml(display(opportunity.delivery_format))}</dd></div><div><dt>Duration</dt><dd>${cycle.duration_weeks === null || cycle.duration_weeks === undefined ? "N/A" : `${escapeHtml(cycle.duration_weeks)} weeks`}</dd></div><div><dt>Stipend</dt><dd>${escapeHtml(stipendDisplay(cycle))}</dd></div><div><dt>Housing</dt><dd>${escapeHtml(display(cycle.housing_status))}</dd></div><div><dt>Minimum GPA</dt><dd>${escapeHtml(display(cycle.eligibility?.min_gpa))}</dd></div></dl>
-      <div class="program-tags">${activeCategoryLabel ? `<span class="meta-chip category-chip">${escapeHtml(activeCategoryLabel)}</span>` : categories.map(category => `<span class="meta-chip category-chip">${escapeHtml(category.category_name)}</span>`).join("")}${tags.map(tag => `<span class="meta-chip">${escapeHtml(tag.tag_name)}</span>`).join("")}</div>
+      <div class="program-tags">${cardCategories.map(label => `<span class="meta-chip category-chip">${escapeHtml(label)}</span>`).join("")}${tags.map(tag => `<span class="meta-chip">${escapeHtml(tag.tag_name)}</span>`).join("")}</div>
       <div class="card-actions"><a class="program-link" href="${escapeHtml(opportunity.program_url)}" target="_blank" rel="noopener">View program →</a><span class="verification-date">Verified ${escapeHtml(display(cycle.last_verified))}</span></div>
     </article>`;
   }
 
-  const filterIds = ["filter-keyword", "filter-category", "filter-state", "filter-housing", "filter-travel", "filter-open", "sort-results"];
+  const filterIds = ["filter-keyword", "filter-housing", "filter-travel", "filter-open", "sort-results"];
 
   function locationVariants(opportunity) {
     const institution = opportunity.institution || {};
@@ -152,12 +155,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   function populateLocationFilter(items) {
     const locations = [...new Set(items.map(({opportunity, location}) => location?.stateCode || opportunity.institution?.state_code).filter(Boolean))];
     const locationSelect = document.getElementById("filter-state");
-    const selectedLocation = locationSelect.value;
-    // Keep the active preference available even when it has no matching programs.
-    if (selectedLocation && !locations.includes(selectedLocation)) locations.push(selectedLocation);
     const stateLocations = locations.filter(location => stateNames[location]).sort((a, b) => stateNames[a].localeCompare(stateNames[b]));
     const otherLocations = locations.filter(location => !stateNames[location]).sort((a, b) => a.localeCompare(b));
-    locationSelect.replaceChildren(new Option("All locations", ""));
+    locationSelect.replaceChildren(new Option("Add a location…", ""));
     const stateGroup = document.createElement("optgroup");
     stateGroup.label = "States";
     stateLocations.forEach(location => stateGroup.append(new Option(stateNames[location], location)));
@@ -168,12 +168,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       otherLocations.forEach(location => otherGroup.append(new Option(location, location)));
       locationSelect.add(otherGroup);
     }
-    locationSelect.value = selectedLocation;
+    for (const option of locationSelect.options) option.disabled = selectedLocations.has(option.value);
   }
 
   function renderResults() {
     const keyword = document.getElementById("filter-keyword").value.trim().toLowerCase();
-    const category = document.getElementById("filter-category").value;
     const housing = document.getElementById("filter-housing").checked;
     const travel = document.getElementById("filter-travel").checked;
     const open = document.getElementById("filter-open").checked;
@@ -184,15 +183,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       const haystack = [opportunity.program_name, opportunity.institution?.institution_name, opportunity.institution?.city, opportunity.institution?.state_code, ...(opportunity.tags || []).map(tag => tag.tag_name)].join(" ").toLowerCase();
       return evaluation.state !== "ineligible"
         && (!keyword || haystack.includes(keyword))
-        && matchesResearchArea(opportunity, category)
+        && (!selectedCategories.size || [...selectedCategories.keys()].some(category => matchesResearchArea(opportunity, category)))
         && (!housing || cycle.housing_status === "yes")
         && (!travel || ["yes", "allowance"].includes(cycle.travel_status))
         && (!open || ["open", "upcoming"].includes(cycle.status_code));
     };
     const locationBase = expandLocationCards(evaluatedResults.filter(matchesNonLocationFilters));
     populateLocationFilter(locationBase);
-    const state = document.getElementById("filter-state").value;
-    const filtered = locationBase.filter(({opportunity, location}) => !state || (location?.stateCode || opportunity.institution?.state_code) === state);
+    const filtered = locationBase.filter(({opportunity, location}) => !selectedLocations.size || selectedLocations.has(location?.stateCode || opportunity.institution?.state_code));
 
     filtered.sort((a, b) => {
       const aCycle = a.opportunity.cycles?.[0] || {};
@@ -233,8 +231,53 @@ document.addEventListener("DOMContentLoaded", async () => {
     resultContainer.innerHTML = "";
   });
 
+  function renderSelections(selectId, listId, selections) {
+    const select = document.getElementById(selectId);
+    const list = document.getElementById(listId);
+    list.replaceChildren();
+    for (const [value, label] of selections) {
+      const item = document.createElement("li");
+      item.className = "selected-preference";
+      const text = document.createElement("span");
+      text.textContent = label;
+      const remove = document.createElement("button");
+      remove.type = "button";
+      remove.textContent = "×";
+      remove.setAttribute("aria-label", `Remove ${label}`);
+      remove.addEventListener("click", () => {
+        const index = [...list.children].indexOf(item);
+        selections.delete(value);
+        renderResults();
+        renderSelections(selectId, listId, selections);
+        (list.children[index]?.querySelector("button") || list.lastElementChild?.querySelector("button") || select).focus();
+      });
+      item.append(text, remove);
+      list.append(item);
+    }
+    for (const option of select.options) option.disabled = selections.has(option.value);
+  }
+
+  const selectionFilters = [
+    ["filter-category", "selected-categories", selectedCategories],
+    ["filter-state", "selected-locations", selectedLocations],
+  ];
+  selectionFilters.forEach(([selectId, listId, selections]) => {
+    const select = document.getElementById(selectId);
+    select.addEventListener("change", () => {
+      if (!select.value) return;
+      selections.set(select.value, select.selectedOptions[0].textContent);
+      select.value = "";
+      renderResults();
+      renderSelections(selectId, listId, selections);
+    });
+  });
+
   filterIds.forEach(id => document.getElementById(id).addEventListener(id === "filter-keyword" ? "input" : "change", renderResults));
   document.getElementById("clear-filters").addEventListener("click", () => {
+    selectionFilters.forEach(([selectId, listId, selections]) => {
+      selections.clear();
+      renderSelections(selectId, listId, selections);
+    });
     ["filter-keyword", "filter-category", "filter-state"].forEach(id => { document.getElementById(id).value = ""; });
     ["filter-housing", "filter-travel", "filter-open"].forEach(id => { document.getElementById(id).checked = false; });
     document.getElementById("sort-results").value = "name";
