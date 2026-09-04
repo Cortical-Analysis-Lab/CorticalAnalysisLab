@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("summary-topics").textContent = new Set(opportunities.flatMap(opportunity => (opportunity.tags || []).map(tag => tag.tag_id))).size;
     const categories = new Map(opportunities.flatMap(opportunity => opportunity.categories || []).map(category => [category.category_slug, category.category_name]));
     [...categories].sort((a, b) => a[1].localeCompare(b[1])).forEach(([value, label]) => document.getElementById("filter-category").add(new Option(label, value)));
-    populateLocationFilter();
     status.hidden = true;
     panel.hidden = false;
   } catch (error) {
@@ -150,27 +149,29 @@ document.addEventListener("DOMContentLoaded", async () => {
     return items.flatMap(item => locationVariants(item.opportunity).map(location => ({...item, location})));
   }
 
-  function populateLocationFilter() {
-    const locations = [...new Set(opportunities.flatMap(opportunity => locationVariants(opportunity).map(location => location?.stateCode || opportunity.institution?.state_code)).filter(Boolean))];
+  function populateLocationFilter(items) {
+    const locations = [...new Set(items.map(({opportunity, location}) => location?.stateCode || opportunity.institution?.state_code).filter(Boolean))];
     const stateLocations = locations.filter(location => stateNames[location]).sort((a, b) => stateNames[a].localeCompare(stateNames[b]));
     const otherLocations = locations.filter(location => !stateNames[location]).sort((a, b) => a.localeCompare(b));
     const locationSelect = document.getElementById("filter-state");
+    const selectedLocation = locationSelect.value;
+    locationSelect.replaceChildren(new Option("All locations", ""));
     const stateGroup = document.createElement("optgroup");
     stateGroup.label = "States";
     stateLocations.forEach(location => stateGroup.append(new Option(stateNames[location], location)));
-    locationSelect.add(stateGroup);
+    if (stateLocations.length) locationSelect.add(stateGroup);
     if (otherLocations.length) {
       const otherGroup = document.createElement("optgroup");
       otherGroup.label = "Other";
       otherLocations.forEach(location => otherGroup.append(new Option(location, location)));
       locationSelect.add(otherGroup);
     }
+    locationSelect.value = locations.includes(selectedLocation) ? selectedLocation : "";
   }
 
   function renderResults() {
     const keyword = document.getElementById("filter-keyword").value.trim().toLowerCase();
     const category = document.getElementById("filter-category").value;
-    const state = document.getElementById("filter-state").value;
     const housing = document.getElementById("filter-housing").checked;
     const travel = document.getElementById("filter-travel").checked;
     const open = document.getElementById("filter-open").checked;
@@ -187,6 +188,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         && (!open || ["open", "upcoming"].includes(cycle.status_code));
     };
     const locationBase = expandLocationCards(evaluatedResults.filter(matchesNonLocationFilters));
+    populateLocationFilter(locationBase);
+    const state = document.getElementById("filter-state").value;
     const filtered = locationBase.filter(({opportunity, location}) => !state || (location?.stateCode || opportunity.institution?.state_code) === state);
 
     filtered.sort((a, b) => {
