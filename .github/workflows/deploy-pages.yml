@@ -1,0 +1,63 @@
+name: Deploy website
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  workflow_run:
+    workflows: [Validate fellowship database, "🧠 Update Publications from ORCID"]
+    branches: [main, Summer-REU-Database]
+    types: [completed]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out lab website
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: lab
+          persist-credentials: false
+      - name: Check out fellowship database
+        uses: actions/checkout@v4
+        with:
+          ref: Summer-REU-Database
+          path: fellowship
+          persist-credentials: false
+      - name: Validate the selected fellowship revision
+        working-directory: fellowship
+        run: |
+          python3 scripts/validate_catalog.py
+          python3 scripts/test_catalog.py
+          node --check assets/fellowship-questionnaire.js
+      - name: Assemble public files
+        run: python3 lab/scripts/build_pages.py --main lab --fellowship fellowship --output _site
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Publish website
+        id: deployment
+        uses: actions/deploy-pages@v4
