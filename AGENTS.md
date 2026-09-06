@@ -2,6 +2,8 @@
 
 ## Current working state
 
+- Fellowship publication is suspended as of September 6, 2026 pending catalog-quality remediation. Production publishes only the lab site from `main`; the fellowship UI and data remain in this development branch.
+- Database-branch pushes run validation but do not publish. Do not restore publication without an explicit user request. See `docs/website-deployment.md`.
 - Work on `Summer-REU-Database`, not `main`.
 - The branch contains the Summer Undergraduate Research Opportunity Explorer database foundation and questionnaire UI.
 - Keep unrelated lab website pages and styles intact.
