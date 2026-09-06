@@ -1,0 +1,23 @@
+name: Validate fellowship database
+
+on:
+  push:
+    branches: [Summer-REU-Database]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check catalog and browser code
+        run: |
+          python3 scripts/validate_catalog.py
+          python3 scripts/test_catalog.py
+          node --check assets/fellowship-questionnaire.js
+          git diff --check
