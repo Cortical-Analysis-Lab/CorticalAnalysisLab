@@ -7,7 +7,7 @@ import argparse
 import json
 from pathlib import Path
 
-from catalog_common import DEFAULT_DB, connect, valid_url
+from catalog_common import DEFAULT_DB, connect, disallowed_verification_source, valid_url
 
 
 def validate(database: Path):
@@ -32,6 +32,11 @@ def validate(database: Path):
             value = row[field]
             if value and not valid_url(value):
                 errors.append(f"{row['public_id']}: invalid {field}: {value}")
+            if value and disallowed_verification_source(value):
+                errors.append(
+                    f"{row['public_id']}: {field} is discovery-only/social/funding evidence, "
+                    f"not a canonical opportunity URL: {value}"
+                )
 
     query = """
         SELECT o.public_id, c.*, e.eligibility_rule_id

@@ -160,7 +160,7 @@ CREATE TABLE IF NOT EXISTS discovery_sources (
     source_name TEXT NOT NULL,
     source_type TEXT NOT NULL CHECK (source_type IN (
         'official_directory', 'aggregator', 'professional_society',
-        'government_database', 'grant_database', 'institution_directory',
+        'institution_directory',
         'search_engine', 'secondary_lead', 'federal_agency',
         'national_network', 'institutional_universe'
     )),

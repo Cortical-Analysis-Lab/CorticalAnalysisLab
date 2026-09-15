@@ -11,10 +11,12 @@ Use layered discovery:
 1. Structured directories
 2. Federal and organized network sources
 3. Institutional host universe
-4. Grant database backfill
+4. Official host/domain gap crawl
 5. Broad web gap search
 
-Every candidate should ultimately be verified against the official host/program source wherever practical. A discovery source and a verification source are different relationships. For example, AAMC may discover a biomedical summer program, a university page may verify deadline and eligibility, and NIH RePORTER may document R25 funding.
+Every candidate should ultimately be verified against the official host/program source wherever practical. A discovery source and a verification source are different relationships. For example, AAMC may discover a biomedical summer program, while the university program page verifies deadline, eligibility, and benefits.
+
+Funding, grant, and award records are not opportunity records. They may be retained locally as discovery hints only when needed, but they must not be promoted into the public catalog, used as canonical program/application URLs, or used as field verification evidence.
 
 ## Pass 1: Structured Directories
 
@@ -52,15 +54,18 @@ Do not search only R1 universities. Build target lists from authoritative host u
 
 Each target should carry status fields such as `not_started`, `queued`, `searched`, `candidates_found`, `no_opportunity_found`, `inaccessible`, or `error`.
 
-## Pass 4: Grant Database Backfill
+## Pass 4: Official Host/Domain Gap Crawl
 
-Use funding databases to discover hosts and program leads, then locate student-facing official pages before canonical inclusion.
+Use each target host's official domain, sitemap, undergraduate research office,
+training office, department pages, and program-directory pages to find
+student-facing summer undergraduate research programs that did not appear in
+structured directories or network sources.
 
-Search NIH RePORTER for terms such as `summer undergraduate`, `summer research`, `undergraduate research program`, `R25`, `ENDURE`, `CURE`, `SURP`, `SURF`, `research education`, `pipeline`, and `undergraduate training`.
-
-Search NSF Award Search for REU Sites, REU supplements, IRES, LSAMP, EPSCoR, Engineering Research Centers, Science and Technology Centers, MRSECs, AI Institutes, undergraduate research, and summer research.
-
-Search USDA NIFA awards and USAspending carefully for undergraduate research and summer research phrases. Award records are discovery/funding evidence, not a replacement for host verification.
+Funding databases such as NSF Award Search, NIH RePORTER, USDA award systems,
+TAGGS, and USAspending are excluded from the default acquisition loop. If they
+are used manually as a last-resort lead source, the discovered funding identity
+must be resolved to an official student-facing program page before the candidate
+can be promoted.
 
 ## Pass 5: Broad Web Gap Search
 

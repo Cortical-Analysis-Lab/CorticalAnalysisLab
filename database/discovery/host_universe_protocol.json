@@ -71,7 +71,7 @@
   ],
   "standard_vocabulary": {
     "program_names": ["REU", "Research Experiences for Undergraduates", "SURP", "SURF", "SURE", "SROP", "SUIP", "SURIP", "SRIP", "SPUR"],
-    "generic_terms": ["summer undergraduate research", "undergraduate summer research", "summer research program", "summer research experience", "summer research internship", "summer student research", "summer research fellowship", "undergraduate research fellowship", "undergraduate research internship", "visiting undergraduate research", "summer scholars", "summer research scholars", "summer research academy", "undergraduate research program", "research internship", "research intern", "summer fellowship"],
+    "generic_terms": ["summer undergraduate research", "undergraduate summer research", "summer research program", "summer research experience", "summer research internship", "summer student research", "summer research fellowship", "undergraduate research fellowship", "undergraduate research internship", "visiting undergraduate research", "summer scholars", "summer research scholars", "summer research academy", "undergraduate research program", "research internship", "research intern", "summer fellowship", "cognitive science summer research"],
     "external_student_terms": ["external students", "visiting students", "students from other institutions", "students from other colleges", "non-institution students"],
     "cycle_terms": ["2027", "Summer 2027", "2027 application", "2027 deadline", "applications open", "applications closed"]
   },
@@ -84,6 +84,7 @@
     "College of Arts and Sciences",
     "Biology",
     "Neuroscience",
+    "Cognitive Science",
     "Psychology",
     "Chemistry",
     "Physics",

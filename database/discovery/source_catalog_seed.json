@@ -88,39 +88,6 @@
     "notes": "Use for discovery of discipline and institutional leads."
   },
   {
-    "source_key": "nih_reporter",
-    "source_name": "NIH RePORTER",
-    "source_type": "grant_database",
-    "source_url": "https://reporter.nih.gov/",
-    "source_priority": 300,
-    "discovery_pass": 4,
-    "automated_search_supported": true,
-    "authority_scope": "government_record",
-    "notes": "Grant backfill for R25, ENDURE, CURE, SURP, SURF, and undergraduate training leads. Locate public student-facing host pages before canonical inclusion."
-  },
-  {
-    "source_key": "nsf_award_search",
-    "source_name": "NSF Award Search",
-    "source_type": "grant_database",
-    "source_url": "https://www.nsf.gov/awardsearch/",
-    "source_priority": 310,
-    "discovery_pass": 4,
-    "automated_search_supported": true,
-    "authority_scope": "government_record",
-    "notes": "Backfill REU Sites, REU supplements, IRES, LSAMP, EPSCoR, ERC, STC, MRSEC, and undergraduate research awards."
-  },
-  {
-    "source_key": "usda_nifa_awards",
-    "source_name": "USDA NIFA awards and REEU",
-    "source_type": "grant_database",
-    "source_url": "https://www.nifa.usda.gov/grants/programs/research-and-extension-experiences-undergraduates-reeu",
-    "source_priority": 320,
-    "discovery_pass": 4,
-    "automated_search_supported": false,
-    "authority_scope": "government_record",
-    "notes": "Use for agricultural, food, animal, environmental, and land-grant undergraduate research programs."
-  },
-  {
     "source_key": "nih_training_and_oite",
     "source_name": "NIH Training and OITE",
     "source_type": "federal_agency",
