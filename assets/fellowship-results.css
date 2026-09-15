@@ -10,14 +10,15 @@
 .questionnaire-heading-row .privacy-note { grid-column: 3; justify-self: end; }
 .eligibility-results { width: 100%; max-width: none; margin-left: 0; margin-right: 0; padding: clamp(1rem, 2vw, 2rem); }
 .radio-question > p { font-size: 0.92rem; font-weight: 500; margin: 0 0 0.5rem; }
-.optional-label { margin-left: 0.35rem; color: var(--gray); font-size: 0.72rem; font-weight: 400; }
+.question-stack { display: grid; align-content: start; gap: 1.25rem; }
+#eligibility-form legend { text-align: center; }
 .radio-options { display: grid; gap: 0.5rem; }
 .radio-options label { display: flex; align-items: center; gap: 0.6rem; min-height: 42px; padding: 0.55rem 0.7rem; border: 1px solid #d2c9cb; border-radius: 9px; background: #fff; font-size: 0.82rem; font-weight: 400; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
 .radio-options label:hover { border-color: #b98896; background: #fcf7f8; }
 .radio-options label:has(input:checked) { border-color: var(--red); background: #f8e9ed; }
 .radio-options input[type="radio"] { width: 18px; height: 18px; margin: 0; flex: 0 0 auto; accent-color: var(--red); cursor: pointer; }
 .radio-options label:has(input:focus-visible) { outline: 3px solid rgba(179, 8, 56, 0.15); outline-offset: 2px; }
-.compact-options { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.compact-options { grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
 .availability-summary { margin: 0 0 1.25rem; font-weight: 700; color: var(--text); }
 .results-heading-row { align-items: center; justify-content: flex-start; gap: 1rem; }
 .results-heading-row > .secondary-action { margin-left: auto; }

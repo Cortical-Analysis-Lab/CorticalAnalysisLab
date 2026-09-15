@@ -77,7 +77,7 @@ Current behavior:
 - The main page title is **Find Your Fellowship**.
 - The top hero uses the wide 4173-inspired layout in Sacred Heart red. Only the top hero received that treatment; the rest retains the existing explorer/questionnaire styling.
 - Step 1 uses accessible circular radio controls for hard eligibility questions.
-- GPA is an optional text field. Blank or invalid GPA does not filter results. A valid GPA excludes only programs with a verified higher minimum. Programs with unknown minimum GPA remain available.
+- The preliminary form groups academic standing and enrollment, then residency and institution. GPA is not collected or used to filter results; program minimum GPA remains visible on opportunity cards.
 - Step 2 is titled **Available Opportunities**.
 - A subtle bold sentence reports eligible opportunities out of total catalog opportunities; do not restore prominent eligible/ineligible score cards.
 - Catalog summary cards beside the Step 2 title show program, institution, and topic counts. They are enlarged, close to the title, and center-aligned.
