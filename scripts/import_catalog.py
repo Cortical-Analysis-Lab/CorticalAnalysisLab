@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Import or update accepted CSV catalog data in SQLite."""
+"""Import or update a reviewed CSV/XLSX catalog into canonical SQLite."""
 
 from __future__ import annotations
 
@@ -13,6 +13,8 @@ from catalog_common import (
     SCHEMA, TAG_ALIASES, connect,
     int_or_none, iso_date, load_rows, normalize_choice, normalize_country,
     normalize_external, normalize_status, number_or_none, research_modes_from_tag,
+    disallowed_verification_source, eligibility_source_matches_official_program,
+    is_funding_identity_url,
     sha256, slugify,
     text_or_none, valid_url,
 )
@@ -30,6 +32,20 @@ ELIGIBILITY_BOOLEAN_COLUMNS = {
     "Four_Year_Institution_Eligible", "Degree_Seeking_Required",
 }
 
+CATEGORY_KEYWORD_MAP = {
+    "Neuroscience & Cognitive Science": ("neuro", "cognitive", "brain"),
+}
+
+
+def is_funding_metadata_row(row):
+    checked_by = (text_or_none(row.get("Eligibility_Checked_By")) or "").lower()
+    network_source = (text_or_none(row.get("Network_Source")) or "").lower()
+    return (
+        checked_by == "automated_nsf_metadata"
+        or network_source == "nsf_awards_reu_site"
+        or is_funding_identity_url(row.get("Program_URL"))
+    )
+
 
 def reviewed_bool(value):
     """Parse only explicit staging booleans; blanks remain unknown."""
@@ -39,6 +55,32 @@ def reviewed_bool(value):
     if value in {"0", "no", "false"}:
         return 0
     return None
+
+
+def inferred_secondary_categories(row, primary):
+    """Add category facets only from explicit reviewed title/tag text."""
+    haystack = " ".join(
+        text_or_none(row.get(field)) or ""
+        for field in ("Program_Name", "Field_Tags")
+    ).lower()
+    categories = []
+    for category_name, terms in CATEGORY_KEYWORD_MAP.items():
+        if category_name != primary and any(term in haystack for term in terms):
+            categories.append(category_name)
+    return categories
+
+
+def link_category(connection, opportunity_id, category_name, is_primary, assignment_method):
+    category = connection.execute(
+        "SELECT category_id FROM research_categories WHERE category_name=?",
+        (category_name,),
+    ).fetchone()
+    if not category:
+        return
+    connection.execute(
+        "INSERT OR REPLACE INTO opportunity_categories(opportunity_id, category_id, is_primary, assignment_method) VALUES (?, ?, ?, ?)",
+        (opportunity_id, category[0], 1 if is_primary else 0, assignment_method),
+    )
 
 
 def preflight(rows):
@@ -62,9 +104,19 @@ def preflight(rows):
             value = text_or_none(row.get(field))
             if value and not valid_url(value):
                 errors.append(f"{label}: invalid {field}: {value}")
+        program_url = text_or_none(row.get("Program_URL"))
+        if program_url and disallowed_verification_source(program_url):
+            errors.append(f"{label}: Program_URL is discovery-only/social/funding evidence, not an official student-facing program page: {program_url}")
+        if text_or_none(row.get("Application_URL")) and is_funding_identity_url(row.get("Application_URL")):
+            errors.append(f"{label}: Application_URL is a funding/award record, not an application page: {row.get('Application_URL')}")
         eligibility_url = text_or_none(row.get("Eligibility_Source_URL"))
         if eligibility_url and not valid_url(eligibility_url):
             errors.append(f"{label}: invalid Eligibility_Source_URL: {eligibility_url}")
+        elif eligibility_url and not eligibility_source_matches_official_program(eligibility_url, program_url):
+            errors.append(
+                f"{label}: Eligibility_Source_URL must use the reviewed official program domain family; "
+                f"cross-domain evidence requires explicit source review: {eligibility_url}"
+            )
         if not text_or_none(row.get("Primary_Field")):
             warnings.append(f"{label}: missing Primary_Field")
         if not text_or_none(row.get("Last_Verified")):
@@ -139,16 +191,28 @@ def upsert_import(connection, path, rows):
         prior_research = normalize_choice(row.get("Prior_Research_Status"))
         if prior_research not in {"required", "preferred", "not_required", "unknown"}:
             prior_research = "unknown"
-        parse_status = text_or_none(row.get("Eligibility_Parse_Status")) or "needs_review"
+        funding_metadata_only = is_funding_metadata_row(row)
+        parse_status = "needs_review" if funding_metadata_only else text_or_none(row.get("Eligibility_Parse_Status")) or "needs_review"
         raw_eligibility = text_or_none(row.get("Raw_Eligibility_Text")) or " | ".join(filter(None, [text_or_none(row.get("External_Applicants")), text_or_none(row.get("Citizenship")), text_or_none(row.get("Eligible_Years"))])) or None
         eligibility_values = (
             cycle_id, normalize_external(row.get("External_Applicants")), text_or_none(row.get("Citizenship")),
-            reviewed_bool(row.get("Citizenship_US_Citizen")), reviewed_bool(row.get("Citizenship_Permanent_Resident")), reviewed_bool(row.get("Citizenship_International")),
-            text_or_none(row.get("Eligible_Years")), reviewed_bool(row.get("First_Year_Eligible")), reviewed_bool(row.get("Sophomore_Eligible")),
-            reviewed_bool(row.get("Junior_Eligible")), reviewed_bool(row.get("Senior_Eligible")), reviewed_bool(row.get("Graduating_Senior_Eligible")),
-            number_or_none(row.get("Min_GPA")), reviewed_bool(row.get("Enrolled_Required")), text_or_none(row.get("Graduation_Rule_Text")),
-            text_or_none(row.get("Institution_Type_Rule_Text")), reviewed_bool(row.get("Two_Year_Institution_Eligible")), reviewed_bool(row.get("Four_Year_Institution_Eligible")),
-            reviewed_bool(row.get("Degree_Seeking_Required")), prior_research, raw_eligibility, text_or_none(row.get("Other_Rule_Text")), parse_status,
+            None if funding_metadata_only else reviewed_bool(row.get("Citizenship_US_Citizen")),
+            None if funding_metadata_only else reviewed_bool(row.get("Citizenship_Permanent_Resident")),
+            None if funding_metadata_only else reviewed_bool(row.get("Citizenship_International")),
+            text_or_none(row.get("Eligible_Years")),
+            None if funding_metadata_only else reviewed_bool(row.get("First_Year_Eligible")),
+            None if funding_metadata_only else reviewed_bool(row.get("Sophomore_Eligible")),
+            None if funding_metadata_only else reviewed_bool(row.get("Junior_Eligible")),
+            None if funding_metadata_only else reviewed_bool(row.get("Senior_Eligible")),
+            None if funding_metadata_only else reviewed_bool(row.get("Graduating_Senior_Eligible")),
+            number_or_none(row.get("Min_GPA")),
+            None if funding_metadata_only else reviewed_bool(row.get("Enrolled_Required")),
+            text_or_none(row.get("Graduation_Rule_Text")),
+            text_or_none(row.get("Institution_Type_Rule_Text")),
+            None if funding_metadata_only else reviewed_bool(row.get("Two_Year_Institution_Eligible")),
+            None if funding_metadata_only else reviewed_bool(row.get("Four_Year_Institution_Eligible")),
+            None if funding_metadata_only else reviewed_bool(row.get("Degree_Seeking_Required")),
+            prior_research, raw_eligibility, text_or_none(row.get("Other_Rule_Text")), parse_status,
         )
         connection.execute(
             "INSERT INTO eligibility_rules(cycle_id, external_applicants_status, citizenship_rule_text, citizenship_us_citizen, citizenship_permanent_resident, citizenship_international, eligible_years_text, first_year_eligible, sophomore_eligible, junior_eligible, senior_eligible, graduating_senior_eligible, min_gpa, enrolled_required, graduation_rule_text, institution_type_rule_text, two_year_institution_eligible, four_year_institution_eligible, degree_seeking_required, prior_research_status, raw_eligibility_text, other_rule_text, parse_status) "
@@ -161,12 +225,14 @@ def upsert_import(connection, path, rows):
         primary = text_or_none(row.get("Primary_Field"))
         category = connection.execute("SELECT category_id FROM research_categories WHERE category_name=?", (primary,)).fetchone()
         if category:
-            connection.execute("INSERT OR REPLACE INTO opportunity_categories(opportunity_id, category_id, is_primary, assignment_method) VALUES (?, ?, 1, 'imported')", (opportunity_id, category[0]))
+            link_category(connection, opportunity_id, primary, True, "imported")
         else:
             category_slug = slugify(primary or "uncategorized")
             connection.execute("INSERT OR IGNORE INTO research_categories(category_slug, category_name, description, sort_order) VALUES (?, ?, 'Imported category requiring review', 999)", (category_slug, primary or "Uncategorized"))
             category_id = connection.execute("SELECT category_id FROM research_categories WHERE category_slug=?", (category_slug,)).fetchone()[0]
             connection.execute("INSERT OR REPLACE INTO opportunity_categories(opportunity_id, category_id, is_primary, assignment_method) VALUES (?, ?, 1, 'imported')", (opportunity_id, category_id))
+        for category_name in inferred_secondary_categories(row, primary):
+            link_category(connection, opportunity_id, category_name, False, "tag_keyword")
 
         raw_tags = [tag.strip() for tag in (text_or_none(row.get("Field_Tags")) or "").split(";") if tag.strip()]
         for raw_tag in raw_tags:
@@ -191,16 +257,16 @@ def upsert_import(connection, path, rows):
                 continue
             connection.execute("INSERT INTO sources(source_url, source_name, source_type, authoritative) VALUES (?, ?, ?, 1) ON CONFLICT(source_url) DO UPDATE SET source_name=excluded.source_name", (source_url, source_name, source_type))
             source_id = connection.execute("SELECT source_id FROM sources WHERE source_url=?", (source_url,)).fetchone()[0]
-            supported = (
-                [key for key, value in row.items() if text_or_none(value) and key not in {"Application_URL"}]
-                if source_type == "official_program" else ["Application_URL"]
-            )
+            if source_type == "official_program":
+                supported = [key for key, value in row.items() if text_or_none(value) and key not in {"Application_URL"}]
+            else:
+                supported = ["Application_URL"]
             connection.execute(
                 "INSERT OR IGNORE INTO source_verifications(opportunity_id, cycle_id, source_id, date_checked, verification_status, fields_supported, checked_by) VALUES (?, ?, ?, ?, ?, ?, 'seed_dataset')",
                 (opportunity_id, cycle_id, source_id, iso_date(row.get("Last_Verified")), "partially_verified", json.dumps(supported)),
             )
         eligibility_source_url = text_or_none(row.get("Eligibility_Source_URL"))
-        if eligibility_source_url:
+        if eligibility_source_url and not funding_metadata_only:
             connection.execute("INSERT INTO sources(source_url, source_name, source_type, authoritative) VALUES (?, ?, 'official_program', 1) ON CONFLICT(source_url) DO NOTHING", (eligibility_source_url, f"{text_or_none(row.get('Program_Name'))} eligibility"))
             source_id = connection.execute("SELECT source_id FROM sources WHERE source_url=?", (eligibility_source_url,)).fetchone()[0]
             eligibility_fields = ["eligibility_rules." + field for field in (

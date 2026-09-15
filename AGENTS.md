@@ -27,7 +27,7 @@ Key files:
 - `schema/schema.sql` — normalized SQLite schema
 - `schema/data_dictionary.md` — field semantics and unknown-value policy
 - `database/research_opportunities.sqlite` — canonical public database
-- `database/imports/` — accepted 706-row CSV source
+- `database/imports/` — accepted 75-row CSV source
 - `scripts/import_catalog.py` — deterministic CSV importer
 - `scripts/validate_catalog.py` — structural integrity validation
 - `scripts/export_catalog.py` — browser JSON exports
@@ -38,14 +38,14 @@ The schema separates institutions, stable programs (`opportunities`), annual cyc
 
 Current seed scale:
 
-- 706 programs and annual cycles
-- 337 normalized institutions
+- 75 programs and annual cycles
+- 71 normalized institutions
 - 13 broad categories
-- 352 detailed research tags
+- 92 detailed research tags
 - 11 controlled research modes
-- 842 source-verification events
+- 129 source-verification events
 
-Opportunity discovery, evaluation, verification, and review happen outside this repository. Only accepted records enter the committed CSV. Missing facts remain `NULL`/`unknown`.
+Opportunity discovery, evaluation, verification, and review happen outside this repository. Only accepted records enter the committed CSV. Missing facts remain `NULL`/`unknown`. Funding, grant, and award records are local discovery leads only; do not use them as canonical program records, application URLs, or field-verification evidence.
 
 ## Implemented Fellowship Database UI
 

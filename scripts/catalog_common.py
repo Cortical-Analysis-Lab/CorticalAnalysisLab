@@ -17,6 +17,28 @@ SCHEMA = ROOT / "schema" / "schema.sql"
 IMPORTER_VERSION = "1.2.1"
 NA_VALUES = {"n/a", "na", "not applicable"}
 
+NON_AUTHORITATIVE_EVIDENCE_HOSTS = {
+    "facebook.com", "instagram.com", "linkedin.com", "reddit.com", "tiktok.com",
+    "twitter.com", "x.com", "youtube.com", "pathwaystoscience.org",
+    "par.nsf.gov", "fellowships.missouri.edu",
+}
+
+NON_AUTHORITATIVE_EVIDENCE_PATH_TERMS = (
+    "/biblio/",
+    "/journal-article/",
+    "/outcomes/",
+    "/health-professions-advising/pre-health-resources/summer-programs",
+)
+
+FUNDING_IDENTITY_PATHS = (
+    ("nsf.gov", "/awardsearch/"),
+    ("api.nsf.gov", "/services/v1/awards"),
+    ("reporter.nih.gov", ""),
+    ("usaspending.gov", "/award/"),
+    ("taggs.hhs.gov", "award"),
+    ("nifa.usda.gov", "/grants/"),
+)
+
 CATEGORIES = [
     ("biomedical-health", "Biomedical & Health", "Human health, medicine, public health, and biomedical research"),
     ("life-sciences", "Life Sciences", "Biology, molecular and cellular sciences, ecology, and related life sciences"),
@@ -118,6 +140,58 @@ def text_or_none(value):
     return value or None
 
 
+def url_host(value):
+    """Return a normalized URL hostname without treating it as proof of authority."""
+    return (urlparse(text_or_none(value) or "").hostname or "").lower().rstrip(".")
+
+
+def host_is_or_belongs_to(host, parent):
+    """Match an exact host or a real subdomain boundary, never a string suffix alone."""
+    return bool(host and parent and (host == parent or host.endswith("." + parent)))
+
+
+def is_funding_identity_url(value):
+    """Return True for grant/award/funding database records.
+
+    These URLs may be useful discovery leads, but they are not student-facing
+    opportunity pages and must not be canonical program/application/evidence URLs.
+    """
+    parsed = urlparse(text_or_none(value) or "")
+    host = (parsed.hostname or "").lower().rstrip(".")
+    path = parsed.path.lower()
+    if not host:
+        return False
+    for parent, path_term in FUNDING_IDENTITY_PATHS:
+        if host_is_or_belongs_to(host, parent) and (not path_term or path_term in path):
+            return True
+    return False
+
+
+def disallowed_verification_source(value):
+    """Reject discovery-only, social, article, and funding identity URLs as evidence."""
+    parsed = urlparse(text_or_none(value) or "")
+    host = (parsed.hostname or "").lower().rstrip(".")
+    path = parsed.path.lower()
+    return (
+        any(host_is_or_belongs_to(host, blocked) for blocked in NON_AUTHORITATIVE_EVIDENCE_HOSTS)
+        or any(term in path for term in NON_AUTHORITATIVE_EVIDENCE_PATH_TERMS)
+        or is_funding_identity_url(value)
+    )
+
+
+def eligibility_source_matches_official_program(source_url, program_url):
+    """Require eligibility evidence to share the reviewed program's domain family.
+
+    Cross-domain government/network evidence must be modeled as an explicitly reviewed
+    additional source rather than silently accepted by the flat seed importer.
+    """
+    source_host = url_host(source_url)
+    program_host = url_host(program_url)
+    if disallowed_verification_source(source_url):
+        return False
+    return host_is_or_belongs_to(source_host, program_host) or host_is_or_belongs_to(program_host, source_host)
+
+
 def number_or_none(value):
     value = text_or_none(value)
     if value is None:
@@ -191,7 +265,17 @@ def load_rows(path: Path):
     if path.suffix.lower() == ".csv":
         with path.open(encoding="utf-8-sig", newline="") as handle:
             return list(csv.DictReader(handle))
-    raise ValueError(f"Unsupported import format (expected CSV): {path.suffix}")
+    if path.suffix.lower() == ".xlsx":
+        try:
+            import openpyxl
+        except ImportError as exc:
+            raise SystemExit("XLSX import requires: pip install -r scripts/requirements.txt") from exc
+        workbook = openpyxl.load_workbook(path, read_only=True, data_only=True)
+        sheet = workbook["Programs"] if "Programs" in workbook.sheetnames else workbook.active
+        values = sheet.iter_rows(values_only=True)
+        headers = [str(value) if value is not None else "" for value in next(values)]
+        return [dict(zip(headers, row)) for row in values if any(value is not None for value in row)]
+    raise ValueError(f"Unsupported import format: {path.suffix}")
 
 
 def sha256(path: Path):
