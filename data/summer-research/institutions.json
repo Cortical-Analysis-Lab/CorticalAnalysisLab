@@ -385,8 +385,8 @@
   },
   {
     "institution_id": 11,
-    "institution_slug": "rutgers-universityanew-brunswick-new-brunswick-nj-us",
-    "institution_name": "Rutgers Universityâ€“New Brunswick",
+    "institution_slug": "rutgers-universitynew-brunswick-new-brunswick-nj-us",
+    "institution_name": "Rutgers University–New Brunswick",
     "institution_type": null,
     "city": "New Brunswick",
     "state_code": "NJ",
@@ -757,8 +757,8 @@
   },
   {
     "institution_id": 6,
-    "institution_slug": "university-of-nebraskaalincoln-lincoln-ne-us",
-    "institution_name": "University of Nebraskaâ€“Lincoln",
+    "institution_slug": "university-of-nebraskalincoln-lincoln-ne-us",
+    "institution_name": "University of Nebraska–Lincoln",
     "institution_type": null,
     "city": "Lincoln",
     "state_code": "NE",
@@ -781,8 +781,8 @@
   },
   {
     "institution_id": 12,
-    "institution_slug": "university-of-wisconsinamadison-madison-wi-us",
-    "institution_name": "University of Wisconsinâ€“Madison",
+    "institution_slug": "university-of-wisconsinmadison-madison-wi-us",
+    "institution_name": "University of Wisconsin–Madison",
     "institution_type": null,
     "city": "Madison",
     "state_code": "WI",
