@@ -36,14 +36,14 @@ Key files:
 
 The schema separates institutions, stable programs (`opportunities`), annual cycles, structured eligibility, categories, tags, research modes, sources, verifications, and import provenance. Stable program identity and annual cycle data must remain separate.
 
-Current accepted catalog scale after the September 2026 Amgen update:
+Current accepted catalog scale after the September 2026 catalog expansion:
 
-- 86 programs and annual cycles
-- 81 normalized institutions
+- 341 programs and annual cycles
+- 286 normalized institutions
 - 13 broad categories
 - 105 detailed research tags
 - 11 controlled research modes
-- 151 source-verification events
+- 406 source-verification events
 
 Planning scale target:
 
