@@ -15,6 +15,7 @@ from catalog_common import (
     normalize_external, normalize_status, number_or_none, research_modes_from_tag,
     disallowed_verification_source, eligibility_source_matches_official_program,
     is_funding_identity_url,
+    non_program_scope_reason,
     sha256, slugify,
     text_or_none, valid_url,
 )
@@ -93,6 +94,12 @@ def preflight(rows):
     seen = set()
     for number, row in enumerate(rows, start=2):
         label = row.get("Program_ID") or f"row {number}"
+        scope_reason = non_program_scope_reason(row)
+        if scope_reason:
+            errors.append(f"{label}: non-program page: {scope_reason}")
+        if (row.get("Eligibility_Parse_Status") == "reviewed"
+                and (row.get("Eligibility_Checked_By") or "").startswith("local automated pipeline")):
+            errors.append(f"{label}: automated retrieval is not reviewed eligibility")
         for field in ("Program_ID", "Program_Name", "Host_Institution", "Cycle_Year"):
             if not text_or_none(row.get(field)):
                 errors.append(f"{label}: missing {field}")
@@ -266,7 +273,7 @@ def upsert_import(connection, path, rows):
                 (opportunity_id, cycle_id, source_id, iso_date(row.get("Last_Verified")), "partially_verified", json.dumps(supported)),
             )
         eligibility_source_url = text_or_none(row.get("Eligibility_Source_URL"))
-        if eligibility_source_url and not funding_metadata_only:
+        if eligibility_source_url and not funding_metadata_only and parse_status == "reviewed":
             connection.execute("INSERT INTO sources(source_url, source_name, source_type, authoritative) VALUES (?, ?, 'official_program', 1) ON CONFLICT(source_url) DO NOTHING", (eligibility_source_url, f"{text_or_none(row.get('Program_Name'))} eligibility"))
             source_id = connection.execute("SELECT source_id FROM sources WHERE source_url=?", (eligibility_source_url,)).fetchone()[0]
             eligibility_fields = ["eligibility_rules." + field for field in (

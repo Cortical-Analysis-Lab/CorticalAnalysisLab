@@ -20,6 +20,7 @@ from audit_catalog_accuracy import audit_rows
 from apply_duplicate_identity_review import apply_review
 from remove_funding_identity_records import remove_funding_identity_rows
 from review_duplicate_identities import build_review_rows
+from import_catalog import preflight
 
 
 class CatalogTests(unittest.TestCase):
@@ -38,6 +39,41 @@ class CatalogTests(unittest.TestCase):
         self.assertGreaterEqual(self.count("opportunities"), 35)
         self.assertGreaterEqual(self.count("program_cycles"), 35)
         self.assertGreaterEqual(self.count("institutions"), 33)
+
+    def test_non_program_pages_cannot_be_imported(self):
+        examples = [
+            ("Faculty member", "https://example.edu/directory/person/"),
+            ("REU search", "https://www.nsf.gov/funding/initiatives/reu/search"),
+            ("REU mentors", "https://example.edu/summer-research-program-information-for-mentors/"),
+            ("Degree Requirements", "https://example.edu/requirements/"),
+            ("REU evaluation", "https://cra.org/cerp/cerp-reu-evaluation/"),
+        ]
+        for name, url in examples:
+            row = dict(Program_ID="TEST", Program_Name=name, Host_Institution="Example",
+                       Primary_Field="Multidisciplinary", Cycle_Year="2026",
+                       Program_URL=url, Last_Verified="2026-09-16")
+            with self.subTest(url=url):
+                errors, _ = preflight([row])
+                self.assertTrue(any("non-program page" in error for error in errors))
+        # Shared network pages and legitimate /programs/ pages remain allowed.
+        for url in ("https://example.edu/programs/summer-reu/",
+                    "https://btaa.org/resources-for/students/srop/campus-profiles"):
+            row.update(Program_Name="Summer Research Program", Program_URL=url)
+            self.assertEqual(preflight([row])[0], [])
+
+    def test_automated_retrieval_is_not_verified_eligibility(self):
+        rows = load_rows(ROOT / "database/imports/summer_undergraduate_research_opportunities_starter.csv")
+        automated = [r for r in rows if r.get("Eligibility_Checked_By", "").startswith("local automated pipeline")]
+        self.assertTrue(automated)
+        for row in automated:
+            self.assertEqual(row["Eligibility_Parse_Status"], "needs_review")
+        candidate = dict(automated[0], Eligibility_Parse_Status="reviewed")
+        self.assertTrue(any("automated retrieval" in error for error in preflight([candidate])[0]))
+        count = self.db.execute("""
+            SELECT COUNT(*) FROM source_verifications v JOIN eligibility_rules e USING(cycle_id)
+            WHERE e.parse_status='needs_review' AND v.verification_status='verified'
+        """).fetchone()[0]
+        self.assertEqual(count, 0)
 
     def test_every_cycle_has_eligibility(self):
         missing = self.db.execute("SELECT COUNT(*) FROM program_cycles c LEFT JOIN eligibility_rules e USING(cycle_id) WHERE e.cycle_id IS NULL").fetchone()[0]

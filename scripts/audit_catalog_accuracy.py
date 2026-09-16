@@ -10,7 +10,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from urllib.parse import urlparse
 
-from catalog_common import ROOT, disallowed_verification_source, is_funding_identity_url, load_rows, text_or_none
+from catalog_common import ROOT, disallowed_verification_source, is_funding_identity_url, load_rows, text_or_none, non_program_scope_reason
 
 
 DEFAULT_IMPORT = ROOT / "database" / "imports" / "summer_undergraduate_research_opportunities_starter.csv"
@@ -132,6 +132,9 @@ def audit_rows(rows):
     by_identity = defaultdict(list)
 
     for row in rows:
+        scope_reason = non_program_scope_reason(row)
+        if scope_reason:
+            findings.append(issue(row, "error", "non_program_scope", scope_reason))
         program_url = normalized(row.get("Program_URL"))
         title = normalized(row.get("Program_Name")).lower()
         path = path_text(program_url)

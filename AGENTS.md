@@ -36,14 +36,14 @@ Key files:
 
 The schema separates institutions, stable programs (`opportunities`), annual cycles, structured eligibility, categories, tags, research modes, sources, verifications, and import provenance. Stable program identity and annual cycle data must remain separate.
 
-Current accepted catalog scale after the September 2026 catalog expansion:
+Current catalog scale after the September 2026 scope cleanup (remaining entries are not all fact-verified):
 
-- 403 programs and annual cycles
-- 316 normalized institutions
+- 285 programs and annual cycles
+- 213 normalized institutions
 - 13 broad categories
 - 105 detailed research tags
 - 11 controlled research modes
-- 468 source-verification events
+- 350 source-verification events
 
 Planning scale target:
 

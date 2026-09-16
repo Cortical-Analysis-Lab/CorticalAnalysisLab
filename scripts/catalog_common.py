@@ -14,7 +14,7 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DB = ROOT / "database" / "research_opportunities.sqlite"
 SCHEMA = ROOT / "schema" / "schema.sql"
-IMPORTER_VERSION = "1.2.1"
+IMPORTER_VERSION = "1.2.2"
 NA_VALUES = {"n/a", "na", "not applicable"}
 
 NON_AUTHORITATIVE_EVIDENCE_HOSTS = {
@@ -177,6 +177,36 @@ def disallowed_verification_source(value):
         or any(term in path for term in NON_AUTHORITATIVE_EVIDENCE_PATH_TERMS)
         or is_funding_identity_url(value)
     )
+
+
+def non_program_scope_reason(row):
+    """Catch clear page types; passing this check does not verify a program.
+
+    Do not reject whole institution domains or generic /programs/ paths: real
+    summer programs and collaborative campus listings legitimately use them.
+    """
+    parsed = urlparse(text_or_none(row.get("Program_URL")) or "")
+    path = parsed.path.lower().rstrip("/")
+    title = (text_or_none(row.get("Program_Name")) or "").lower()
+    if re.search(r"/(directory|cerp-reu-evaluation|reu-evaluation-surveys-request-form)(/|$)", path):
+        return "Personnel directory/profile or program-evaluation service, not a program."
+    if parsed.hostname in {"www.nsf.gov", "nsf.gov"} and (
+        path.endswith("/reu/search") or path.endswith("/reu/list_result.jsp")
+    ):
+        return "NSF discovery search/listing, not a host program."
+    if any(term in path for term in (
+        "information-for-mentors", "reu_abstract_view.php", "reu_projects.php",
+        "/reu_participants", "/reu_project_list", "-webinar-series",
+    )):
+        return "Mentor, project, participant, abstract, or webinar support page."
+    if any(title.startswith(term) for term in (
+        "degree requirements", "course listings", "ph.d. admissions",
+        "ph.d. courses", "phd teaching", "phd requirements", "after admission",
+        "steps to degree", "transfer credit", "overrides and authorizations",
+        "student photo gallery", "labs & research", "scholarship office",
+    )):
+        return "Degree administration or institutional support page."
+    return None
 
 
 def eligibility_source_matches_official_program(source_url, program_url):
