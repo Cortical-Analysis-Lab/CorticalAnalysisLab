@@ -38,12 +38,12 @@ The schema separates institutions, stable programs (`opportunities`), annual cyc
 
 Current accepted catalog scale after the September 2026 catalog expansion:
 
-- 341 programs and annual cycles
-- 286 normalized institutions
+- 412 programs and annual cycles
+- 324 normalized institutions
 - 13 broad categories
 - 105 detailed research tags
 - 11 controlled research modes
-- 406 source-verification events
+- 477 source-verification events
 
 Planning scale target:
 

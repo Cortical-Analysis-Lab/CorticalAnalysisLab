@@ -25,6 +25,6 @@ The database stores stable program identities separately from annual cycles, plu
 
 Discovery-source metadata is seeded from `database/discovery/source_catalog_seed.json`. Discovery provenance remains separate from official-source verification evidence. Funding, grant, and award records are discovery-only leads; do not commit them as public program records, application URLs, or field-verification evidence.
 
-Current accepted scale after rebuild: 341 program identities and 341 annual cycles.
+Current accepted scale after rebuild: 412 program identities and 412 annual cycles.
 
 Planning target: design the discovery/review workflow for at least 5,000 stable program identities and 15,000 to 25,000 annual-cycle records over time. A program identity is a separately named research program, research internship, research fellowship, scholars program, or application at a host institution. Student slots, individual faculty projects, annual cycles, funding records, directories, generic non-research internships/jobs, and news/support pages are not program identities.
