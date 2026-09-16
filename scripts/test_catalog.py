@@ -364,6 +364,10 @@ class CatalogTests(unittest.TestCase):
             "oist_research_internship",
         ):
             self.assertIn(source_key, source_keys)
+        pathways = next(row for row in source_catalog if row["source_key"] == "pathways_to_science")
+        self.assertTrue(pathways["automated_search_supported"])
+        self.assertEqual(pathways["authority_scope"], "discovery_only")
+        self.assertIn("programhub", pathways["notes"].lower())
 
     def test_program_urls_are_preserved_for_public_catalog(self):
         missing = self.db.execute("SELECT COUNT(*) FROM opportunities WHERE program_url IS NULL").fetchone()[0]

@@ -53,6 +53,8 @@ High-priority discovery sources:
 
 Deduplicate candidates before continuing to later passes.
 
+PathwaysToScience may be parsed automatically as a discovery-only aggregator. Use its Summer Research / Undergraduate result pages and `programhub.aspx` detail pages to find official outbound program URLs, then verify identity, eligibility, dates, benefits, and application facts on the official host page. Do not use Pathways pages themselves as canonical program URLs or field-verification evidence.
+
 ## Pass 2: Federal And Organized Networks
 
 Search dedicated sources and host pages for NIH, NCI cancer centers, DOE national laboratories, NASA centers, NIST, NOAA, Sea Grant, USDA/NIFA REEU, EPA, FDA, CDC, USGS, DoD, DHS, Smithsonian, Library of Congress, Federal Reserve, federal statistical or research agencies, Big Ten Academic Alliance SROP, Leadership Alliance, Amgen Scholars, HHMI, LSAMP, McNair/TRIO, UC-HBCU, EPSCoR, and similar networks.

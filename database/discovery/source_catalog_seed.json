@@ -25,12 +25,12 @@
     "source_key": "pathways_to_science",
     "source_name": "PathwaysToScience summer research programs",
     "source_type": "aggregator",
-    "source_url": "https://www.pathwaystoscience.org/programs.aspx",
+    "source_url": "https://www.pathwaystoscience.org/programs.aspx?dd=SummerResearch_Summer+Research+Opportunity&dhub=SummerResearch_Summer+Research+Opportunity&submit=y&u=Undergrads_Undergraduate+Students",
     "source_priority": 30,
     "discovery_pass": 1,
-    "automated_search_supported": false,
+    "automated_search_supported": true,
     "authority_scope": "discovery_only",
-    "notes": "Discovery only. Verify all program facts on official host sources."
+    "notes": "Discovery only. Automated parser may use alphabet result pages and programhub detail pages to find official outbound program URLs; verify all program facts on official host sources."
   },
   {
     "source_key": "aamc_summer_undergraduate_research_programs",
