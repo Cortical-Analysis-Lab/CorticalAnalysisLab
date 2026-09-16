@@ -344,9 +344,26 @@ class CatalogTests(unittest.TestCase):
         host_protocol = json.loads((ROOT / "database" / "discovery" / "host_universe_protocol.json").read_text(encoding="utf-8"))
         source_types = {row["source_type"] for row in source_catalog}
         self.assertNotIn("grant_database", source_types)
+        self.assertIn("international_network", source_types)
+        self.assertIn("international_program", source_types)
         text = json.dumps(host_protocol).lower()
         for term in ("neuroscience", "cognitive", "biology", "chemistry", "engineering", "public health", "physics"):
             self.assertIn(term, text)
+        scale_targets = host_protocol["scale_targets"]
+        self.assertGreaterEqual(scale_targets["design_capacity"]["program_identities"], 5000)
+        self.assertGreaterEqual(scale_targets["design_capacity"]["annual_cycle_records_high"], 25000)
+        identity_policy = host_protocol["program_identity_policy"]
+        self.assertIn("student slots", json.dumps(identity_policy).lower())
+        self.assertIn("individual faculty projects", json.dumps(identity_policy).lower())
+        source_keys = {row["source_key"] for row in source_catalog}
+        for source_key in (
+            "mitacs_globalink_research_internship",
+            "daad_rise_germany",
+            "eth_student_summer_research_fellowship",
+            "epfl_life_sciences_summer_research_program",
+            "oist_research_internship",
+        ):
+            self.assertIn(source_key, source_keys)
 
     def test_program_urls_are_preserved_for_public_catalog(self):
         missing = self.db.execute("SELECT COUNT(*) FROM opportunities WHERE program_url IS NULL").fetchone()[0]

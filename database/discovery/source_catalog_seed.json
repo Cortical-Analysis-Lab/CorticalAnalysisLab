@@ -253,6 +253,61 @@
     "notes": "Create separate host-specific records; do not collapse all Amgen Scholars hosts into one opportunity."
   },
   {
+    "source_key": "mitacs_globalink_research_internship",
+    "source_name": "Mitacs Globalink Research Internship",
+    "source_type": "international_network",
+    "source_url": "https://www.mitacs.ca/our-programs/globalink-research-internship-students/",
+    "source_priority": 230,
+    "discovery_pass": 2,
+    "automated_search_supported": true,
+    "authority_scope": "network_rules",
+    "notes": "International undergraduate research network. Count the shared application as one program unless a Canadian host has a separately named student-facing program."
+  },
+  {
+    "source_key": "daad_rise_germany",
+    "source_name": "DAAD RISE Germany",
+    "source_type": "international_network",
+    "source_url": "https://www.daad.de/rise/en/rise-germany/",
+    "source_priority": 235,
+    "discovery_pass": 2,
+    "automated_search_supported": true,
+    "authority_scope": "network_rules",
+    "notes": "International summer research program for undergraduates from North America, Ireland, and the UK. Do not count individual project listings as separate program identities."
+  },
+  {
+    "source_key": "eth_student_summer_research_fellowship",
+    "source_name": "ETH Student Summer Research Fellowship",
+    "source_type": "international_program",
+    "source_url": "https://inf.ethz.ch/studies/summer-research-fellowship.html",
+    "source_priority": 310,
+    "discovery_pass": 4,
+    "automated_search_supported": true,
+    "authority_scope": "official_program",
+    "notes": "Official ETH Computer Science summer research fellowship page; verify cycle dates and eligibility on the program and application pages."
+  },
+  {
+    "source_key": "epfl_life_sciences_summer_research_program",
+    "source_name": "EPFL School of Life Sciences Summer Research Program",
+    "source_type": "international_program",
+    "source_url": "https://www.epfl.ch/schools/sv/education/summer-research-program/",
+    "source_priority": 315,
+    "discovery_pass": 4,
+    "automated_search_supported": true,
+    "authority_scope": "official_program",
+    "notes": "Official EPFL program page for international bachelor and first-year master's life-science students."
+  },
+  {
+    "source_key": "oist_research_internship",
+    "source_name": "OIST Research Internship",
+    "source_type": "international_program",
+    "source_url": "https://www.oist.jp/admissions/research-internship/apply-research-internship",
+    "source_priority": 320,
+    "discovery_pass": 4,
+    "automated_search_supported": true,
+    "authority_scope": "official_program",
+    "notes": "Official OIST research internship page; not strictly summer-only, so encode cycle and duration carefully."
+  },
+  {
     "source_key": "carnegie_research_activity_universe",
     "source_name": "Carnegie 2025 research activity institutions",
     "source_type": "institutional_universe",

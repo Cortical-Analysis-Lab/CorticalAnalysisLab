@@ -4,6 +4,21 @@ This is the baseline crawling and discovery protocol for the Summer Undergraduat
 
 Do not begin a full national crawl unless the staging database, provenance tables, coverage tracking, deduplication checks, and rebuild/test path are working.
 
+## Scale Target
+
+Design the discovery and review system for at least 5,000 stable program identities and 15,000 to 25,000 annual-cycle records over time. The working planning estimate is roughly 2,300 to 4,200 distinct programs across U.S. and international coverage after the full search plan is executed.
+
+This target is a capacity and coverage goal, not a permission to relax verification. The public catalog should grow only through accepted records with official-source evidence, stable identity handling, and unknown facts preserved as unknown.
+
+Expected coverage bands:
+
+- U.S. NSF REUs and related NSF undergraduate research programs: roughly 400 to 600 distinct programs.
+- Other U.S. university SURP, SURF, SURE, SROP, and similar named programs: roughly 900 to 1,500.
+- Medical schools, hospitals, cancer centers, and research institutes: roughly 250 to 450.
+- Federal labs, agencies, and national programs: roughly 100 to 200.
+- Social science, humanities, field stations, museums, observatories, and specialized programs: roughly 200 to 400.
+- International programs genuinely open to U.S. students: roughly 300 to 700.
+
 ## Core principle
 
 Use layered discovery:
@@ -17,6 +32,12 @@ Use layered discovery:
 Every candidate should ultimately be verified against the official host/program source wherever practical. A discovery source and a verification source are different relationships. For example, AAMC may discover a biomedical summer program, while the university program page verifies deadline, eligibility, and benefits.
 
 Funding, grant, and award records are not opportunity records. They may be retained locally as discovery hints only when needed, but they must not be promoted into the public catalog, used as canonical program/application URLs, or used as field verification evidence.
+
+## Program Identity Rule
+
+Count one program as one separately named research program or application at a host institution. A university-wide SURP with many participating labs is one program, not one record per lab or faculty project. A university with separate named neuroscience, chemistry, physics, and cancer summer research programs has separate program identities. Summer 2026 and Summer 2027 are annual cycles of the same stable program, not separate programs.
+
+Network programs require special handling. A network-level page such as Amgen Scholars, Big Ten SROP, Mitacs Globalink, or DAAD RISE may be a discovery source or may verify network-wide rules, but host-specific applications should become separate records only when the host page or application process identifies a distinct student-facing program. Do not count directories, partner lists, or host networks as public opportunities unless the network itself is the application students apply to.
 
 ## Pass 1: Structured Directories
 
@@ -37,6 +58,12 @@ Deduplicate candidates before continuing to later passes.
 Search dedicated sources and host pages for NIH, NCI cancer centers, DOE national laboratories, NASA centers, NIST, NOAA, Sea Grant, USDA/NIFA REEU, EPA, FDA, CDC, USGS, DoD, DHS, Smithsonian, Library of Congress, Federal Reserve, federal statistical or research agencies, Big Ten Academic Alliance SROP, Leadership Alliance, Amgen Scholars, HHMI, LSAMP, McNair/TRIO, UC-HBCU, EPSCoR, and similar networks.
 
 When a program has a service commitment, flag that condition clearly.
+
+## Pass 2B: International Programs Open To U.S. Students
+
+Search international programs only when they are genuinely open to U.S. undergraduates or broadly international undergraduates. Examples include Mitacs Globalink, DAAD RISE Germany, ETH Student Summer Research Fellowship, EPFL summer research programs, OIST research internships, Max Planck institute summer programs, EMBL and similar institute programs, and host-specific university summer research programs.
+
+International projects or lab placements should not be over-counted as separate programs when students apply through one common program. Count the umbrella program once unless the host offers a separately named application.
 
 ## Pass 3: Institutional Host Universe
 

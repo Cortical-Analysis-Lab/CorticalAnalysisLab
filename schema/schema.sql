@@ -162,7 +162,8 @@ CREATE TABLE IF NOT EXISTS discovery_sources (
         'official_directory', 'aggregator', 'professional_society',
         'institution_directory',
         'search_engine', 'secondary_lead', 'federal_agency',
-        'national_network', 'institutional_universe'
+        'national_network', 'institutional_universe',
+        'international_network', 'international_program'
     )),
     source_url TEXT,
     source_priority INTEGER NOT NULL DEFAULT 999,

@@ -18,6 +18,12 @@ Institutions and stable opportunities are independent of annual cycles. Dates, d
 
 The starter's original row is retained as JSON with its import-run hash. This makes later corrections auditable and prevents normalization from destroying source wording.
 
+## Scale posture
+
+The schema is intended to support at least 5,000 stable program identities and 15,000 to 25,000 annual-cycle records over time. Program identity is intentionally separate from annual cycle data so refreshes create or update cycle records rather than duplicating the same opportunity each year.
+
+Use one stable opportunity for a separately named research program or application at a host institution. Do not model student slots, individual lab projects, grant records, annual cycles, directories, or news/support pages as separate opportunities.
+
 ## Website contract
 
 GitHub Pages reads static JSON only; it does not open SQLite in the browser. `catalog.json` is the convenient denormalized payload. Normalized JSON files are also exported for smaller or specialized loads.

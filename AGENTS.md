@@ -36,14 +36,22 @@ Key files:
 
 The schema separates institutions, stable programs (`opportunities`), annual cycles, structured eligibility, categories, tags, research modes, sources, verifications, and import provenance. Stable program identity and annual cycle data must remain separate.
 
-Current seed scale:
+Current accepted catalog scale after the September 2026 Amgen update:
 
-- 75 programs and annual cycles
-- 71 normalized institutions
+- 86 programs and annual cycles
+- 81 normalized institutions
 - 13 broad categories
-- 92 detailed research tags
+- 105 detailed research tags
 - 11 controlled research modes
-- 129 source-verification events
+- 151 source-verification events
+
+Planning scale target:
+
+- 2,300 to 4,200 verified distinct programs as a working discovery estimate
+- Schema and workflow capacity for at least 5,000 stable program identities
+- 15,000 to 25,000 annual-cycle records over time
+
+A distinct program is a separately named research program or application at a host institution. Do not count student slots, individual faculty projects, annual cycles, funding records, directories, news/support pages, or program-list hubs as separate public opportunity records.
 
 Opportunity discovery, evaluation, verification, and review happen outside this repository. Only accepted records enter the committed CSV. Missing facts remain `NULL`/`unknown`. Funding, grant, and award records are local discovery leads only; do not use them as canonical program records, application URLs, or field-verification evidence.
 
