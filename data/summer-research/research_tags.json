@@ -140,6 +140,13 @@
     "description": null
   },
   {
+    "tag_id": 106,
+    "tag_slug": "mechanobiology",
+    "tag_name": "Mechanobiology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 62,
     "tag_slug": "nanotechnology",
     "tag_name": "Nanotechnology",

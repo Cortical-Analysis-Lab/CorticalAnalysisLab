@@ -1,6 +1,6 @@
 [
   {
-    "institution_id": 162,
+    "institution_id": 161,
     "institution_slug": "acoustical-society-of-america-us",
     "institution_name": "Acoustical Society of America",
     "institution_type": null,
@@ -12,43 +12,7 @@
     "website_url": null
   },
   {
-    "institution_id": 196,
-    "institution_slug": "admissions-us",
-    "institution_name": "Admissions",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 197,
-    "institution_slug": "after-admission-to-a-phd-program-us",
-    "institution_name": "After Admission to a PHD Program",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 198,
-    "institution_slug": "aidong-lu-us",
-    "institution_name": "Aidong Lu",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 98,
+    "institution_id": 97,
     "institution_slug": "alabama-a-m-university-us",
     "institution_name": "Alabama A&M University",
     "institution_type": null,
@@ -60,19 +24,7 @@
     "website_url": null
   },
   {
-    "institution_id": 199,
-    "institution_slug": "albert-park-us",
-    "institution_name": "Albert Park",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 195,
+    "institution_id": 194,
     "institution_slug": "american-gastroenterological-association-us",
     "institution_name": "American Gastroenterological Association",
     "institution_type": null,
@@ -84,7 +36,7 @@
     "website_url": null
   },
   {
-    "institution_id": 128,
+    "institution_id": 127,
     "institution_slug": "american-meteorological-society-us",
     "institution_name": "American Meteorological Society",
     "institution_type": null,
@@ -96,7 +48,7 @@
     "website_url": null
   },
   {
-    "institution_id": 182,
+    "institution_id": 181,
     "institution_slug": "american-physiological-society-us",
     "institution_name": "American Physiological Society",
     "institution_type": null,
@@ -120,7 +72,7 @@
     "website_url": null
   },
   {
-    "institution_id": 139,
+    "institution_id": 138,
     "institution_slug": "american-university-us",
     "institution_name": "American University",
     "institution_type": null,
@@ -132,7 +84,7 @@
     "website_url": null
   },
   {
-    "institution_id": 193,
+    "institution_id": 192,
     "institution_slug": "ann-robert-h-lurie-children-s-hospital-of-chicago-us",
     "institution_name": "Ann & Robert H. Lurie Children's Hospital of Chicago",
     "institution_type": null,
@@ -144,7 +96,7 @@
     "website_url": null
   },
   {
-    "institution_id": 84,
+    "institution_id": 83,
     "institution_slug": "appalachian-state-university-us",
     "institution_name": "Appalachian State University",
     "institution_type": null,
@@ -156,7 +108,7 @@
     "website_url": null
   },
   {
-    "institution_id": 287,
+    "institution_id": 202,
     "institution_slug": "appleton-whittell-research-ranch-us",
     "institution_name": "Appleton-Whittell Research Ranch",
     "institution_type": null,
@@ -168,7 +120,7 @@
     "website_url": null
   },
   {
-    "institution_id": 288,
+    "institution_id": 203,
     "institution_slug": "arizona-state-university-us",
     "institution_name": "Arizona State University",
     "institution_type": null,
@@ -180,21 +132,9 @@
     "website_url": null
   },
   {
-    "institution_id": 123,
+    "institution_id": 122,
     "institution_slug": "auburn-university-us",
     "institution_name": "Auburn University",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 200,
-    "institution_slug": "audrey-rorrer-us",
-    "institution_name": "Audrey Rorrer",
     "institution_type": null,
     "city": null,
     "state_code": null,
@@ -216,7 +156,7 @@
     "website_url": null
   },
   {
-    "institution_id": 140,
+    "institution_id": 139,
     "institution_slug": "baylor-college-of-medicine-us",
     "institution_name": "Baylor College of Medicine",
     "institution_type": null,
@@ -228,19 +168,7 @@
     "website_url": null
   },
   {
-    "institution_id": 201,
-    "institution_slug": "become-a-cci-student-us",
-    "institution_name": "Become a CCI Student",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 184,
+    "institution_id": 183,
     "institution_slug": "bermuda-institute-of-ocean-sciences-bios-us",
     "institution_name": "Bermuda Institute of Ocean Sciences (BIOS)",
     "institution_type": null,
@@ -252,7 +180,7 @@
     "website_url": null
   },
   {
-    "institution_id": 175,
+    "institution_id": 174,
     "institution_slug": "bigelow-laboratory-for-ocean-sciences-us",
     "institution_name": "Bigelow Laboratory for Ocean Sciences",
     "institution_type": null,
@@ -264,31 +192,7 @@
     "website_url": null
   },
   {
-    "institution_id": 202,
-    "institution_slug": "bill-chu-us",
-    "institution_name": "Bill Chu",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 203,
-    "institution_slug": "bill-tolone-us",
-    "institution_name": "Bill Tolone,",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 188,
+    "institution_id": 187,
     "institution_slug": "boise-state-university-us",
     "institution_name": "Boise State University",
     "institution_type": null,
@@ -300,19 +204,7 @@
     "website_url": null
   },
   {
-    "institution_id": 204,
-    "institution_slug": "bojan-cukic-us",
-    "institution_name": "Bojan Cukic",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 94,
+    "institution_id": 93,
     "institution_slug": "boston-university-us",
     "institution_name": "Boston University",
     "institution_type": null,
@@ -360,7 +252,7 @@
     "website_url": null
   },
   {
-    "institution_id": 173,
+    "institution_id": 172,
     "institution_slug": "brigham-young-university-us",
     "institution_name": "Brigham Young University",
     "institution_type": null,
@@ -372,7 +264,7 @@
     "website_url": null
   },
   {
-    "institution_id": 170,
+    "institution_id": 169,
     "institution_slug": "brown-university-us",
     "institution_name": "Brown University",
     "institution_type": null,
@@ -384,7 +276,7 @@
     "website_url": null
   },
   {
-    "institution_id": 136,
+    "institution_id": 135,
     "institution_slug": "buck-institute-for-research-on-aging-us",
     "institution_name": "Buck Institute for Research on Aging",
     "institution_type": null,
@@ -396,79 +288,7 @@
     "website_url": null
   },
   {
-    "institution_id": 205,
-    "institution_slug": "c-fit-us",
-    "institution_name": "C-FIT",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 206,
-    "institution_slug": "cci-change-of-major-adding-minor-process-us",
-    "institution_name": "CCI Change of Major/Adding Minor Process",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 207,
-    "institution_slug": "cci-mentoring-us",
-    "institution_name": "CCI Mentoring",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 208,
-    "institution_slug": "cci-tutoring-us",
-    "institution_name": "CCI Tutoring",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 209,
-    "institution_slug": "cs-department-intranet-us",
-    "institution_name": "CS Department Intranet",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 210,
-    "institution_slug": "cs-research-us",
-    "institution_name": "CS Research",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 194,
+    "institution_id": 193,
     "institution_slug": "california-academy-of-sciences-us",
     "institution_name": "California Academy of Sciences",
     "institution_type": null,
@@ -480,7 +300,7 @@
     "website_url": null
   },
   {
-    "institution_id": 72,
+    "institution_id": 71,
     "institution_slug": "california-institute-of-technology-pasadena-ca-us",
     "institution_name": "California Institute of Technology",
     "institution_type": null,
@@ -492,7 +312,7 @@
     "website_url": null
   },
   {
-    "institution_id": 118,
+    "institution_id": 117,
     "institution_slug": "california-state-university-monterey-bay-us",
     "institution_name": "California State University, Monterey Bay",
     "institution_type": null,
@@ -504,7 +324,7 @@
     "website_url": null
   },
   {
-    "institution_id": 163,
+    "institution_id": 162,
     "institution_slug": "cankdeska-cikana-community-college-us",
     "institution_name": "Cankdeska Cikana Community College",
     "institution_type": null,
@@ -516,7 +336,7 @@
     "website_url": null
   },
   {
-    "institution_id": 114,
+    "institution_id": 113,
     "institution_slug": "carnegie-mellon-university-us",
     "institution_name": "Carnegie Mellon University",
     "institution_type": null,
@@ -528,7 +348,7 @@
     "website_url": null
   },
   {
-    "institution_id": 166,
+    "institution_id": 165,
     "institution_slug": "case-western-reserve-university-us",
     "institution_name": "Case Western Reserve University",
     "institution_type": null,
@@ -540,7 +360,7 @@
     "website_url": null
   },
   {
-    "institution_id": 150,
+    "institution_id": 149,
     "institution_slug": "chicago-botanic-garden-us",
     "institution_name": "Chicago Botanic Garden",
     "institution_type": null,
@@ -552,7 +372,7 @@
     "website_url": null
   },
   {
-    "institution_id": 153,
+    "institution_id": 152,
     "institution_slug": "childrens-hospital-of-philadelphia-us",
     "institution_name": "Childrens Hospital of Philadelphia",
     "institution_type": null,
@@ -564,7 +384,7 @@
     "website_url": null
   },
   {
-    "institution_id": 187,
+    "institution_id": 186,
     "institution_slug": "city-university-of-new-york-cuny-brooklyn-college-us",
     "institution_name": "City University of New York (CUNY), Brooklyn College",
     "institution_type": null,
@@ -576,7 +396,7 @@
     "website_url": null
   },
   {
-    "institution_id": 101,
+    "institution_id": 100,
     "institution_slug": "clarkson-university-us",
     "institution_name": "Clarkson University",
     "institution_type": null,
@@ -588,7 +408,7 @@
     "website_url": null
   },
   {
-    "institution_id": 108,
+    "institution_id": 107,
     "institution_slug": "coe-college-us",
     "institution_name": "Coe College",
     "institution_type": null,
@@ -612,7 +432,7 @@
     "website_url": null
   },
   {
-    "institution_id": 130,
+    "institution_id": 129,
     "institution_slug": "colorado-state-university-us",
     "institution_name": "Colorado State University",
     "institution_type": null,
@@ -624,7 +444,7 @@
     "website_url": null
   },
   {
-    "institution_id": 165,
+    "institution_id": 164,
     "institution_slug": "columbia-university-us",
     "institution_name": "Columbia University",
     "institution_type": null,
@@ -636,7 +456,7 @@
     "website_url": null
   },
   {
-    "institution_id": 73,
+    "institution_id": 72,
     "institution_slug": "columbia-university-new-york-ny-us",
     "institution_name": "Columbia University",
     "institution_type": null,
@@ -648,19 +468,7 @@
     "website_url": null
   },
   {
-    "institution_id": 289,
-    "institution_slug": "communicating-reu-science-us",
-    "institution_name": "Communicating REU Science",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 211,
+    "institution_id": 195,
     "institution_slug": "computer-science-engineering-research-experience-for-undergraduates-us",
     "institution_name": "Computer Science & Engineering Research Experience for Undergraduates",
     "institution_type": null,
@@ -684,57 +492,9 @@
     "website_url": null
   },
   {
-    "institution_id": 116,
+    "institution_id": 115,
     "institution_slug": "cornell-university-us",
     "institution_name": "Cornell University",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 212,
-    "institution_slug": "course-listings-us",
-    "institution_name": "Course Listings",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 213,
-    "institution_slug": "current-cci-students-us",
-    "institution_name": "Current CCI Students",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 214,
-    "institution_slug": "cybercorps-scholarship-for-service-sfs-us",
-    "institution_name": "CyberCorps: Scholarship for Service (SFS)",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 215,
-    "institution_slug": "cybersecurity-program-us",
-    "institution_name": "Cybersecurity Program",
     "institution_type": null,
     "city": null,
     "state_code": null,
@@ -756,19 +516,7 @@
     "website_url": null
   },
   {
-    "institution_id": 216,
-    "institution_slug": "dale-marie-wilson-us",
-    "institution_name": "Dale-Marie Wilson",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 290,
+    "institution_id": 204,
     "institution_slug": "dartmouth-college-us",
     "institution_name": "Dartmouth College",
     "institution_type": null,
@@ -780,7 +528,7 @@
     "website_url": null
   },
   {
-    "institution_id": 133,
+    "institution_id": 132,
     "institution_slug": "dauphin-island-sea-lab-us",
     "institution_name": "Dauphin Island Sea Lab",
     "institution_type": null,
@@ -792,67 +540,7 @@
     "website_url": null
   },
   {
-    "institution_id": 217,
-    "institution_slug": "david-wilson-us",
-    "institution_name": "David Wilson",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 218,
-    "institution_slug": "degree-requirements-us",
-    "institution_name": "Degree Requirements",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 219,
-    "institution_slug": "department-of-software-information-systems-labs-research-us",
-    "institution_name": "Department of Software & Information Systems Labs & Research",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 220,
-    "institution_slug": "department-of-software-information-systems-us",
-    "institution_name": "Department of Software information Systems",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 221,
-    "institution_slug": "dewan-ahmed-us",
-    "institution_name": "Dewan Ahmed",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 192,
+    "institution_id": 191,
     "institution_slug": "don-danforth-plant-science-center-us",
     "institution_name": "Don Danforth Plant Science Center",
     "institution_type": null,
@@ -864,7 +552,7 @@
     "website_url": null
   },
   {
-    "institution_id": 60,
+    "institution_id": 59,
     "institution_slug": "donald-g-mcewen-memorial-summer-research-program-greehey-children-s-cancer-us",
     "institution_name": "Donald G McEwen Memorial Summer Research Program - Greehey Children's Cancer",
     "institution_type": null,
@@ -876,19 +564,7 @@
     "website_url": null
   },
   {
-    "institution_id": 222,
-    "institution_slug": "dr-zbigniew-ras-us",
-    "institution_name": "Dr. Zbigniew Ras",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 112,
+    "institution_id": 111,
     "institution_slug": "duke-university-us",
     "institution_name": "Duke University",
     "institution_type": null,
@@ -900,7 +576,7 @@
     "website_url": null
   },
   {
-    "institution_id": 74,
+    "institution_id": 73,
     "institution_slug": "duke-university-durham-nc-us",
     "institution_name": "Duke University",
     "institution_type": null,
@@ -912,31 +588,7 @@
     "website_url": null
   },
   {
-    "institution_id": 223,
-    "institution_slug": "early-entry-4-1-program-us",
-    "institution_name": "Early Entry (4+1) Program",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 224,
-    "institution_slug": "early-entry-ms-program-us",
-    "institution_name": "Early-Entry MS Program",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 291,
+    "institution_id": 205,
     "institution_slug": "earthscope-consortium-us",
     "institution_name": "EarthScope Consortium",
     "institution_type": null,
@@ -948,7 +600,7 @@
     "website_url": null
   },
   {
-    "institution_id": 102,
+    "institution_id": 101,
     "institution_slug": "eastern-kentucky-university-us",
     "institution_name": "Eastern Kentucky University",
     "institution_type": null,
@@ -960,7 +612,7 @@
     "website_url": null
   },
   {
-    "institution_id": 111,
+    "institution_id": 110,
     "institution_slug": "ecological-society-of-america-esa-us",
     "institution_name": "Ecological Society of America (ESA)",
     "institution_type": null,
@@ -972,7 +624,7 @@
     "website_url": null
   },
   {
-    "institution_id": 227,
+    "institution_id": 196,
     "institution_slug": "eidgenossische-technische-hochschule-zurich-switzerland-us",
     "institution_name": "Eidgenössische Technische Hochschule Zürich (Switzerland)",
     "institution_type": null,
@@ -984,7 +636,7 @@
     "website_url": null
   },
   {
-    "institution_id": 176,
+    "institution_id": 175,
     "institution_slug": "emory-university-us",
     "institution_name": "Emory University",
     "institution_type": null,
@@ -996,7 +648,7 @@
     "website_url": null
   },
   {
-    "institution_id": 135,
+    "institution_id": 134,
     "institution_slug": "florida-atlantic-university-us",
     "institution_name": "Florida Atlantic University",
     "institution_type": null,
@@ -1008,7 +660,7 @@
     "website_url": null
   },
   {
-    "institution_id": 95,
+    "institution_id": 94,
     "institution_slug": "florida-international-university-us",
     "institution_name": "Florida International University",
     "institution_type": null,
@@ -1020,21 +672,9 @@
     "website_url": null
   },
   {
-    "institution_id": 171,
+    "institution_id": 170,
     "institution_slug": "florida-state-university-us",
     "institution_name": "Florida State University",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 225,
-    "institution_slug": "for-additional-information-us",
-    "institution_name": "For additional information",
     "institution_type": null,
     "city": null,
     "state_code": null,
@@ -1056,7 +696,7 @@
     "website_url": null
   },
   {
-    "institution_id": 160,
+    "institution_id": 159,
     "institution_slug": "fred-hutchinson-cancer-research-center-us",
     "institution_name": "Fred Hutchinson Cancer Research Center",
     "institution_type": null,
@@ -1068,19 +708,7 @@
     "website_url": null
   },
   {
-    "institution_id": 226,
-    "institution_slug": "gabriel-terejanu-us",
-    "institution_name": "Gabriel Terejanu",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 179,
+    "institution_id": 178,
     "institution_slug": "georgetown-university-us",
     "institution_name": "Georgetown University",
     "institution_type": null,
@@ -1092,7 +720,7 @@
     "website_url": null
   },
   {
-    "institution_id": 109,
+    "institution_id": 108,
     "institution_slug": "georgia-institute-of-technology-us",
     "institution_name": "Georgia Institute of Technology",
     "institution_type": null,
@@ -1116,7 +744,7 @@
     "website_url": null
   },
   {
-    "institution_id": 89,
+    "institution_id": 88,
     "institution_slug": "gladstone-institutes-us",
     "institution_name": "Gladstone Institutes",
     "institution_type": null,
@@ -1128,7 +756,7 @@
     "website_url": null
   },
   {
-    "institution_id": 178,
+    "institution_id": 177,
     "institution_slug": "grand-valley-state-university-us",
     "institution_name": "Grand Valley State University",
     "institution_type": null,
@@ -1140,33 +768,9 @@
     "website_url": null
   },
   {
-    "institution_id": 93,
+    "institution_id": 92,
     "institution_slug": "gulf-of-maine-research-institute-us",
     "institution_name": "Gulf of Maine Research Institute",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 229,
-    "institution_slug": "hack-clt-us",
-    "institution_name": "Hack CLT",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 230,
-    "institution_slug": "harini-ramaprasad-us",
-    "institution_name": "Harini Ramaprasad",
     "institution_type": null,
     "city": null,
     "state_code": null,
@@ -1188,7 +792,7 @@
     "website_url": null
   },
   {
-    "institution_id": 190,
+    "institution_id": 189,
     "institution_slug": "harvard-university-us",
     "institution_name": "Harvard University",
     "institution_type": null,
@@ -1212,7 +816,7 @@
     "website_url": null
   },
   {
-    "institution_id": 292,
+    "institution_id": 206,
     "institution_slug": "health-effects-institute-us",
     "institution_name": "Health Effects Institute",
     "institution_type": null,
@@ -1224,19 +828,7 @@
     "website_url": null
   },
   {
-    "institution_id": 231,
-    "institution_slug": "heather-lipford-us",
-    "institution_name": "Heather Lipford",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 120,
+    "institution_id": 119,
     "institution_slug": "howard-university-us",
     "institution_name": "Howard University",
     "institution_type": null,
@@ -1248,7 +840,7 @@
     "website_url": null
   },
   {
-    "institution_id": 75,
+    "institution_id": 74,
     "institution_slug": "howard-university-washington-dc-us",
     "institution_name": "Howard University",
     "institution_type": null,
@@ -1260,7 +852,7 @@
     "website_url": null
   },
   {
-    "institution_id": 137,
+    "institution_id": 136,
     "institution_slug": "hubbard-brook-ecosystem-study-us",
     "institution_name": "Hubbard Brook Ecosystem Study",
     "institution_type": null,
@@ -1272,7 +864,7 @@
     "website_url": null
   },
   {
-    "institution_id": 151,
+    "institution_id": 150,
     "institution_slug": "indiana-university-bloomington-us",
     "institution_name": "Indiana University, Bloomington",
     "institution_type": null,
@@ -1284,7 +876,7 @@
     "website_url": null
   },
   {
-    "institution_id": 168,
+    "institution_id": 167,
     "institution_slug": "indiana-university-indianapolis-us",
     "institution_name": "Indiana University, Indianapolis",
     "institution_type": null,
@@ -1296,7 +888,7 @@
     "website_url": null
   },
   {
-    "institution_id": 167,
+    "institution_id": 166,
     "institution_slug": "indiana-university-school-of-medicine-us",
     "institution_name": "Indiana University, School of Medicine",
     "institution_type": null,
@@ -1308,7 +900,7 @@
     "website_url": null
   },
   {
-    "institution_id": 293,
+    "institution_id": 207,
     "institution_slug": "inroads-inc-us",
     "institution_name": "Inroads, Inc.",
     "institution_type": null,
@@ -1320,7 +912,7 @@
     "website_url": null
   },
   {
-    "institution_id": 228,
+    "institution_id": 197,
     "institution_slug": "institut-pasteur-france-us",
     "institution_name": "Institut Pasteur (France)",
     "institution_type": null,
@@ -1332,7 +924,7 @@
     "website_url": null
   },
   {
-    "institution_id": 96,
+    "institution_id": 95,
     "institution_slug": "iowa-state-university-us",
     "institution_name": "Iowa State University",
     "institution_type": null,
@@ -1344,31 +936,7 @@
     "website_url": null
   },
   {
-    "institution_id": 232,
-    "institution_slug": "jake-lee-us",
-    "institution_name": "Jake Lee",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 233,
-    "institution_slug": "jing-yang-us",
-    "institution_name": "Jing Yang",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 286,
+    "institution_id": 201,
     "institution_slug": "johns-hopkins-university-us",
     "institution_name": "Johns Hopkins University",
     "institution_type": null,
@@ -1380,7 +948,7 @@
     "website_url": null
   },
   {
-    "institution_id": 76,
+    "institution_id": 75,
     "institution_slug": "johns-hopkins-university-baltimore-md-us",
     "institution_name": "Johns Hopkins University",
     "institution_type": null,
@@ -1392,31 +960,7 @@
     "website_url": null
   },
   {
-    "institution_id": 234,
-    "institution_slug": "julio-bahamon-us",
-    "institution_name": "Julio Bahamon",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 235,
-    "institution_slug": "kalpathi-subramanian-us",
-    "institution_name": "Kalpathi Subramanian",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 127,
+    "institution_id": 126,
     "institution_slug": "kansas-state-university-us",
     "institution_name": "Kansas State University",
     "institution_type": null,
@@ -1428,7 +972,7 @@
     "website_url": null
   },
   {
-    "institution_id": 144,
+    "institution_id": 143,
     "institution_slug": "keck-geology-consortium-us",
     "institution_name": "Keck Geology Consortium",
     "institution_type": null,
@@ -1440,7 +984,7 @@
     "website_url": null
   },
   {
-    "institution_id": 180,
+    "institution_id": 179,
     "institution_slug": "kent-state-university-us",
     "institution_name": "Kent State University",
     "institution_type": null,
@@ -1452,31 +996,7 @@
     "website_url": null
   },
   {
-    "institution_id": 236,
-    "institution_slug": "labs-research-us",
-    "institution_name": "Labs & Research",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 237,
-    "institution_slug": "learning-communities-us",
-    "institution_name": "Learning Communities",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 142,
+    "institution_id": 141,
     "institution_slug": "lewis-and-clark-community-college-us",
     "institution_name": "Lewis and Clark Community College",
     "institution_type": null,
@@ -1488,31 +1008,7 @@
     "website_url": null
   },
   {
-    "institution_id": 238,
-    "institution_slug": "link-to-website-us",
-    "institution_name": "Link to website",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 239,
-    "institution_slug": "liyue-fan-us",
-    "institution_name": "Liyue Fan",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 294,
+    "institution_id": 208,
     "institution_slug": "los-alamos-national-laboratory-us",
     "institution_name": "Los Alamos National Laboratory",
     "institution_type": null,
@@ -1524,7 +1020,7 @@
     "website_url": null
   },
   {
-    "institution_id": 107,
+    "institution_id": 106,
     "institution_slug": "louisiana-state-university-us",
     "institution_name": "Louisiana State University",
     "institution_type": null,
@@ -1536,7 +1032,7 @@
     "website_url": null
   },
   {
-    "institution_id": 143,
+    "institution_id": 142,
     "institution_slug": "massachusetts-general-hospital-us",
     "institution_name": "Massachusetts General Hospital",
     "institution_type": null,
@@ -1548,7 +1044,7 @@
     "website_url": null
   },
   {
-    "institution_id": 82,
+    "institution_id": 81,
     "institution_slug": "massachusetts-institute-of-technology-mit-us",
     "institution_name": "Massachusetts Institute of Technology (MIT)",
     "institution_type": null,
@@ -1560,19 +1056,7 @@
     "website_url": null
   },
   {
-    "institution_id": 240,
-    "institution_slug": "master-of-science-in-cybersecurity-us",
-    "institution_name": "Master of Science in Cybersecurity",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 295,
+    "institution_id": 209,
     "institution_slug": "medical-college-of-wisconsin-us",
     "institution_name": "Medical College of Wisconsin",
     "institution_type": null,
@@ -1584,21 +1068,9 @@
     "website_url": null
   },
   {
-    "institution_id": 97,
+    "institution_id": 96,
     "institution_slug": "medical-university-of-south-carolina-us",
     "institution_name": "Medical University of South Carolina",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 241,
-    "institution_slug": "meera-sridhar-us",
-    "institution_name": "Meera Sridhar",
     "institution_type": null,
     "city": null,
     "state_code": null,
@@ -1620,7 +1092,7 @@
     "website_url": null
   },
   {
-    "institution_id": 155,
+    "institution_id": 154,
     "institution_slug": "metropolitan-state-university-of-denver-us",
     "institution_name": "Metropolitan State University of Denver",
     "institution_type": null,
@@ -1644,31 +1116,7 @@
     "website_url": null
   },
   {
-    "institution_id": 242,
-    "institution_slug": "min-shin-us",
-    "institution_name": "Min Shin",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 243,
-    "institution_slug": "mirsad-hadzikadic-us",
-    "institution_name": "Mirsad Hadzikadic",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 148,
+    "institution_id": 147,
     "institution_slug": "missouri-botanical-garden-us",
     "institution_name": "Missouri Botanical Garden",
     "institution_type": null,
@@ -1680,31 +1128,7 @@
     "website_url": null
   },
   {
-    "institution_id": 244,
-    "institution_slug": "mohammad-atif-us",
-    "institution_name": "Mohammad Atif",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 245,
-    "institution_slug": "mohsen-dorodchi-us",
-    "institution_name": "Mohsen Dorodchi",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 183,
+    "institution_id": 182,
     "institution_slug": "montana-state-university-us",
     "institution_name": "Montana State University",
     "institution_type": null,
@@ -1716,7 +1140,7 @@
     "website_url": null
   },
   {
-    "institution_id": 181,
+    "institution_id": 180,
     "institution_slug": "monterey-bay-aquarium-research-institute-us",
     "institution_name": "Monterey Bay Aquarium Research Institute",
     "institution_type": null,
@@ -1728,7 +1152,7 @@
     "website_url": null
   },
   {
-    "institution_id": 138,
+    "institution_id": 137,
     "institution_slug": "mote-marine-laboratory-us",
     "institution_name": "Mote Marine Laboratory",
     "institution_type": null,
@@ -1740,7 +1164,7 @@
     "website_url": null
   },
   {
-    "institution_id": 161,
+    "institution_id": 160,
     "institution_slug": "mount-desert-island-biological-laboratory-mdibl-us",
     "institution_name": "Mount Desert Island Biological Laboratory (MDIBL)",
     "institution_type": null,
@@ -1752,7 +1176,7 @@
     "website_url": null
   },
   {
-    "institution_id": 149,
+    "institution_id": 148,
     "institution_slug": "mystic-aquarium-us",
     "institution_name": "Mystic Aquarium",
     "institution_type": null,
@@ -1776,7 +1200,7 @@
     "website_url": null
   },
   {
-    "institution_id": 99,
+    "institution_id": 98,
     "institution_slug": "nasa-ames-research-center-us",
     "institution_name": "NASA Ames Research Center",
     "institution_type": null,
@@ -1788,7 +1212,7 @@
     "website_url": null
   },
   {
-    "institution_id": 85,
+    "institution_id": 84,
     "institution_slug": "noaa-sea-grant-us",
     "institution_name": "NOAA Sea Grant",
     "institution_type": null,
@@ -1800,7 +1224,7 @@
     "website_url": null
   },
   {
-    "institution_id": 177,
+    "institution_id": 176,
     "institution_slug": "nobcche-collaborative-us",
     "institution_name": "NOBCChE Collaborative",
     "institution_type": null,
@@ -1836,7 +1260,7 @@
     "website_url": null
   },
   {
-    "institution_id": 59,
+    "institution_id": 58,
     "institution_slug": "national-science-foundation-us",
     "institution_name": "National Science Foundation",
     "institution_type": null,
@@ -1848,7 +1272,7 @@
     "website_url": null
   },
   {
-    "institution_id": 159,
+    "institution_id": 158,
     "institution_slug": "national-solar-observatory-us",
     "institution_name": "National Solar Observatory",
     "institution_type": null,
@@ -1860,7 +1284,7 @@
     "website_url": null
   },
   {
-    "institution_id": 86,
+    "institution_id": 85,
     "institution_slug": "new-york-university-us",
     "institution_name": "New York University",
     "institution_type": null,
@@ -1872,7 +1296,7 @@
     "website_url": null
   },
   {
-    "institution_id": 92,
+    "institution_id": 91,
     "institution_slug": "north-carolina-state-university-us",
     "institution_name": "North Carolina State University",
     "institution_type": null,
@@ -1884,7 +1308,7 @@
     "website_url": null
   },
   {
-    "institution_id": 152,
+    "institution_id": 151,
     "institution_slug": "north-dakota-state-university-us",
     "institution_name": "North Dakota State University",
     "institution_type": null,
@@ -1896,7 +1320,7 @@
     "website_url": null
   },
   {
-    "institution_id": 100,
+    "institution_id": 99,
     "institution_slug": "northern-arizona-university-us",
     "institution_name": "Northern Arizona University",
     "institution_type": null,
@@ -1908,7 +1332,7 @@
     "website_url": null
   },
   {
-    "institution_id": 113,
+    "institution_id": 112,
     "institution_slug": "northwestern-university-us",
     "institution_name": "Northwestern University",
     "institution_type": null,
@@ -1932,7 +1356,7 @@
     "website_url": null
   },
   {
-    "institution_id": 134,
+    "institution_id": 133,
     "institution_slug": "oak-ridge-institute-for-science-and-education-us",
     "institution_name": "Oak Ridge Institute for Science and Education",
     "institution_type": null,
@@ -1944,7 +1368,7 @@
     "website_url": null
   },
   {
-    "institution_id": 154,
+    "institution_id": 153,
     "institution_slug": "ohio-state-university-us",
     "institution_name": "Ohio State University",
     "institution_type": null,
@@ -1956,7 +1380,7 @@
     "website_url": null
   },
   {
-    "institution_id": 189,
+    "institution_id": 188,
     "institution_slug": "oregon-health-science-university-us",
     "institution_name": "Oregon Health & Science University",
     "institution_type": null,
@@ -1968,45 +1392,9 @@
     "website_url": null
   },
   {
-    "institution_id": 106,
+    "institution_id": 105,
     "institution_slug": "oregon-state-university-us",
     "institution_name": "Oregon State University",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 246,
-    "institution_slug": "overrides-and-authorizations-for-cci-courses-us",
-    "institution_name": "Overrides and authorizations for CCI courses",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 247,
-    "institution_slug": "phd-coordinators-us",
-    "institution_name": "PHD Coordinators",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 248,
-    "institution_slug": "peer-advisors-us",
-    "institution_name": "Peer Advisors",
     "institution_type": null,
     "city": null,
     "state_code": null,
@@ -2028,81 +1416,9 @@
     "website_url": null
   },
   {
-    "institution_id": 122,
+    "institution_id": 121,
     "institution_slug": "pennsylvania-state-university-us",
     "institution_name": "Pennsylvania State University",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 249,
-    "institution_slug": "ph-d-admissions-us",
-    "institution_name": "Ph.D. Admissions",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 250,
-    "institution_slug": "ph-d-computing-and-information-systems-software-and-information-systems-track-us",
-    "institution_name": "Ph.D. Computing and Information Systems: Software and Information Systems Track",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 251,
-    "institution_slug": "ph-d-courses-us",
-    "institution_name": "Ph.D. Courses",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 252,
-    "institution_slug": "ph-d-in-computing-and-information-systems-with-concentration-in-software-and-information-systems-sis-us",
-    "institution_name": "Ph.D. in Computing and Information Systems with Concentration in Software and Information Systems (SIS)",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 253,
-    "institution_slug": "phd-requirements-for-completion-us",
-    "institution_name": "PhD Requirements for Completion",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 254,
-    "institution_slug": "phd-teaching-certification-program-us",
-    "institution_name": "PhD Teaching Certification Program",
     "institution_type": null,
     "city": null,
     "state_code": null,
@@ -2124,7 +1440,7 @@
     "website_url": null
   },
   {
-    "institution_id": 191,
+    "institution_id": 190,
     "institution_slug": "platform-for-the-accelerated-realization-analysis-and-discovery-of-interface-material-paradim-reu-program-and-summer-schools-us",
     "institution_name": "Platform for the Accelerated Realization, Analysis, and Discovery of Interface Material (PARADIM) REU Program and Summer Schools",
     "institution_type": null,
@@ -2172,19 +1488,7 @@
     "website_url": null
   },
   {
-    "institution_id": 255,
-    "institution_slug": "pu-wang-us",
-    "institution_name": "Pu Wang",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 185,
+    "institution_id": 184,
     "institution_slug": "purdue-university-us",
     "institution_name": "Purdue University",
     "institution_type": null,
@@ -2208,7 +1512,7 @@
     "website_url": null
   },
   {
-    "institution_id": 256,
+    "institution_id": 198,
     "institution_slug": "purdy-summer-research-fellowship-program-us",
     "institution_name": "Purdy Summer Research Fellowship Program",
     "institution_type": null,
@@ -2220,19 +1524,7 @@
     "website_url": null
   },
   {
-    "institution_id": 257,
-    "institution_slug": "qiong-cheng-us",
-    "institution_name": "Qiong Cheng",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 66,
+    "institution_id": 65,
     "institution_slug": "reu-participants-us",
     "institution_name": "REU Participants",
     "institution_type": null,
@@ -2244,7 +1536,7 @@
     "website_url": null
   },
   {
-    "institution_id": 91,
+    "institution_id": 90,
     "institution_slug": "reu-program-at-jhu-us",
     "institution_name": "REU Program at JHU",
     "institution_type": null,
@@ -2268,7 +1560,7 @@
     "website_url": null
   },
   {
-    "institution_id": 70,
+    "institution_id": 69,
     "institution_slug": "reu-projects-descriptions-2016-2025-us",
     "institution_name": "REU projects descriptions (2016-2025)",
     "institution_type": null,
@@ -2292,19 +1584,7 @@
     "website_url": null
   },
   {
-    "institution_id": 258,
-    "institution_slug": "razvan-bunescu-us",
-    "institution_name": "Razvan Bunescu",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 121,
+    "institution_id": 120,
     "institution_slug": "rice-university-us",
     "institution_name": "Rice University",
     "institution_type": null,
@@ -2328,7 +1608,7 @@
     "website_url": null
   },
   {
-    "institution_id": 186,
+    "institution_id": 185,
     "institution_slug": "rutgers-university-us",
     "institution_name": "Rutgers University",
     "institution_type": null,
@@ -2364,45 +1644,9 @@
     "website_url": null
   },
   {
-    "institution_id": 259,
-    "institution_slug": "sis-academics-us",
-    "institution_name": "SIS Academics",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
     "institution_id": 53,
     "institution_slug": "students-us",
     "institution_name": "STUDENTS",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 260,
-    "institution_slug": "scholarship-office-us",
-    "institution_name": "Scholarship Office",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 261,
-    "institution_slug": "scholarships-us",
-    "institution_name": "Scholarships",
     "institution_type": null,
     "city": null,
     "state_code": null,
@@ -2424,18 +1668,6 @@
     "website_url": null
   },
   {
-    "institution_id": 262,
-    "institution_slug": "siddharth-krishnan-us",
-    "institution_name": "Siddharth Krishnan",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
     "institution_id": 43,
     "institution_slug": "solar-and-space-physics-reu-program-us",
     "institution_name": "Solar and Space Physics REU Program",
@@ -2448,7 +1680,7 @@
     "website_url": null
   },
   {
-    "institution_id": 129,
+    "institution_id": 128,
     "institution_slug": "south-dakota-school-of-mines-and-technology-us",
     "institution_name": "South Dakota School of Mines and Technology",
     "institution_type": null,
@@ -2460,31 +1692,7 @@
     "website_url": null
   },
   {
-    "institution_id": 263,
-    "institution_slug": "srijan-das-us",
-    "institution_name": "Srijan Das",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 264,
-    "institution_slug": "srinivas-akella-us",
-    "institution_name": "Srinivas Akella",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 156,
+    "institution_id": 155,
     "institution_slug": "stanford-university-us",
     "institution_name": "Stanford University",
     "institution_type": null,
@@ -2508,7 +1716,7 @@
     "website_url": null
   },
   {
-    "institution_id": 105,
+    "institution_id": 104,
     "institution_slug": "state-university-of-new-york-suny-albany-us",
     "institution_name": "State University of New York (SUNY), Albany",
     "institution_type": null,
@@ -2520,7 +1728,7 @@
     "website_url": null
   },
   {
-    "institution_id": 147,
+    "institution_id": 146,
     "institution_slug": "state-university-of-new-york-suny-buffalo-us",
     "institution_name": "State University of New York (SUNY), Buffalo",
     "institution_type": null,
@@ -2532,7 +1740,7 @@
     "website_url": null
   },
   {
-    "institution_id": 125,
+    "institution_id": 124,
     "institution_slug": "state-university-of-new-york-suny-oneonta-us",
     "institution_name": "State University of New York (SUNY), Oneonta",
     "institution_type": null,
@@ -2544,31 +1752,7 @@
     "website_url": null
   },
   {
-    "institution_id": 265,
-    "institution_slug": "steps-to-degree-completion-us",
-    "institution_name": "Steps to Degree Completion",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 266,
-    "institution_slug": "student-photo-gallery-us",
-    "institution_name": "Student Photo Gallery",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 267,
+    "institution_id": 199,
     "institution_slug": "submit-an-interest-form-us",
     "institution_name": "Submit an interest form",
     "institution_type": null,
@@ -2580,103 +1764,7 @@
     "website_url": null
   },
   {
-    "institution_id": 268,
-    "institution_slug": "summer-2018-us",
-    "institution_name": "Summer 2018",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 269,
-    "institution_slug": "summer-2019-us",
-    "institution_name": "Summer 2019",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 270,
-    "institution_slug": "summer-2020-us",
-    "institution_name": "Summer 2020",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 271,
-    "institution_slug": "summer-2021-us",
-    "institution_name": "Summer 2021",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 272,
-    "institution_slug": "summer-2022-us",
-    "institution_name": "Summer 2022",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 273,
-    "institution_slug": "summer-2023-us",
-    "institution_name": "Summer 2023",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 274,
-    "institution_slug": "summer-2024-us",
-    "institution_name": "Summer 2024",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 275,
-    "institution_slug": "summer-2025-us",
-    "institution_name": "Summer 2025",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 64,
+    "institution_id": 63,
     "institution_slug": "summer-research-internships-health-careers-opportunity-program-us",
     "institution_name": "Summer Research & Internships - Health Careers Opportunity Program",
     "institution_type": null,
@@ -2688,7 +1776,7 @@
     "website_url": null
   },
   {
-    "institution_id": 62,
+    "institution_id": 61,
     "institution_slug": "summer-research-program-the-council-on-undergraduate-research-us",
     "institution_name": "Summer Research Program - The Council on Undergraduate Research",
     "institution_type": null,
@@ -2736,7 +1824,7 @@
     "website_url": null
   },
   {
-    "institution_id": 63,
+    "institution_id": 62,
     "institution_slug": "summer-undergraduate-research-fellowship-surf-miller-school-of-medicine-us",
     "institution_name": "Summer Undergraduate Research Fellowship (SURF) Miller School of Medicine",
     "institution_type": null,
@@ -2748,7 +1836,7 @@
     "website_url": null
   },
   {
-    "institution_id": 61,
+    "institution_id": 60,
     "institution_slug": "summer-undergraduate-research-fellowship-ernest-mario-school-of-pharmacy-us",
     "institution_name": "Summer Undergraduate Research Fellowship – Ernest Mario School of Pharmacy",
     "institution_type": null,
@@ -2760,21 +1848,9 @@
     "website_url": null
   },
   {
-    "institution_id": 65,
+    "institution_id": 64,
     "institution_slug": "summer-undergraduate-research-fellowships-us",
     "institution_name": "Summer Undergraduate Research Fellowships",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 58,
-    "institution_slug": "summer-undergraduate-research-program-us",
-    "institution_name": "Summer Undergraduate Research Program",
     "institution_type": null,
     "city": null,
     "state_code": null,
@@ -2808,7 +1884,7 @@
     "website_url": null
   },
   {
-    "institution_id": 145,
+    "institution_id": 144,
     "institution_slug": "syracuse-university-us",
     "institution_name": "Syracuse University",
     "institution_type": null,
@@ -2820,7 +1896,7 @@
     "website_url": null
   },
   {
-    "institution_id": 83,
+    "institution_id": 82,
     "institution_slug": "texas-a-m-university-us",
     "institution_name": "Texas A&M University",
     "institution_type": null,
@@ -2868,31 +1944,7 @@
     "website_url": null
   },
   {
-    "institution_id": 276,
-    "institution_slug": "transfer-credit-reevaluation-us",
-    "institution_name": "Transfer Credit Reevaluation",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 277,
-    "institution_slug": "transient-study-us",
-    "institution_name": "Transient Study",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 131,
+    "institution_id": 130,
     "institution_slug": "turtle-mountain-community-college-us",
     "institution_name": "Turtle Mountain Community College",
     "institution_type": null,
@@ -2952,7 +2004,7 @@
     "website_url": null
   },
   {
-    "institution_id": 296,
+    "institution_id": 210,
     "institution_slug": "us-environmental-protection-agency-epa-research-fellowships-scholarships-us",
     "institution_name": "US Environmental Protection Agency (EPA) Research Fellowships & Scholarships",
     "institution_type": null,
@@ -2964,36 +2016,12 @@
     "website_url": null
   },
   {
-    "institution_id": 77,
+    "institution_id": 76,
     "institution_slug": "ut-southwestern-medical-center-dallas-tx-us",
     "institution_name": "UT Southwestern Medical Center",
     "institution_type": null,
     "city": "Dallas",
     "state_code": "TX",
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 278,
-    "institution_slug": "undergraduate-cs-concentrations-us",
-    "institution_name": "Undergraduate CS Concentrations",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 279,
-    "institution_slug": "undergraduate-minors-us",
-    "institution_name": "Undergraduate Minors",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
     "country_code": "US",
     "latitude": null,
     "longitude": null,
@@ -3012,7 +2040,7 @@
     "website_url": null
   },
   {
-    "institution_id": 88,
+    "institution_id": 87,
     "institution_slug": "university-of-alabama-birmingham-us",
     "institution_name": "University of Alabama, Birmingham",
     "institution_type": null,
@@ -3024,7 +2052,7 @@
     "website_url": null
   },
   {
-    "institution_id": 115,
+    "institution_id": 114,
     "institution_slug": "university-of-alaska-anchorage-us",
     "institution_name": "University of Alaska, Anchorage",
     "institution_type": null,
@@ -3036,7 +2064,7 @@
     "website_url": null
   },
   {
-    "institution_id": 87,
+    "institution_id": 86,
     "institution_slug": "university-of-arizona-us",
     "institution_name": "University of Arizona",
     "institution_type": null,
@@ -3048,7 +2076,7 @@
     "website_url": null
   },
   {
-    "institution_id": 141,
+    "institution_id": 140,
     "institution_slug": "university-of-arkansas-us",
     "institution_name": "University of Arkansas",
     "institution_type": null,
@@ -3060,7 +2088,7 @@
     "website_url": null
   },
   {
-    "institution_id": 158,
+    "institution_id": 157,
     "institution_slug": "university-of-california-berkeley-us",
     "institution_name": "University of California, Berkeley",
     "institution_type": null,
@@ -3084,7 +2112,7 @@
     "website_url": null
   },
   {
-    "institution_id": 157,
+    "institution_id": 156,
     "institution_slug": "university-of-california-los-angeles-us",
     "institution_name": "University of California, Los Angeles",
     "institution_type": null,
@@ -3108,7 +2136,7 @@
     "website_url": null
   },
   {
-    "institution_id": 169,
+    "institution_id": 168,
     "institution_slug": "university-of-california-riverside-us",
     "institution_name": "University of California, Riverside",
     "institution_type": null,
@@ -3120,7 +2148,7 @@
     "website_url": null
   },
   {
-    "institution_id": 103,
+    "institution_id": 102,
     "institution_slug": "university-of-california-san-diego-us",
     "institution_name": "University of California, San Diego",
     "institution_type": null,
@@ -3132,7 +2160,7 @@
     "website_url": null
   },
   {
-    "institution_id": 164,
+    "institution_id": 163,
     "institution_slug": "university-of-california-san-diego-scripps-institution-of-oceanography-us",
     "institution_name": "University of California, San Diego, Scripps Institution of Oceanography",
     "institution_type": null,
@@ -3144,7 +2172,7 @@
     "website_url": null
   },
   {
-    "institution_id": 78,
+    "institution_id": 77,
     "institution_slug": "university-of-california-san-francisco-san-francisco-ca-us",
     "institution_name": "University of California, San Francisco",
     "institution_type": null,
@@ -3156,7 +2184,7 @@
     "website_url": null
   },
   {
-    "institution_id": 297,
+    "institution_id": 211,
     "institution_slug": "university-of-california-santa-barbara-us",
     "institution_name": "University of California, Santa Barbara",
     "institution_type": null,
@@ -3168,7 +2196,7 @@
     "website_url": null
   },
   {
-    "institution_id": 132,
+    "institution_id": 131,
     "institution_slug": "university-of-chicago-us",
     "institution_name": "University of Chicago",
     "institution_type": null,
@@ -3180,7 +2208,7 @@
     "website_url": null
   },
   {
-    "institution_id": 110,
+    "institution_id": 109,
     "institution_slug": "university-of-cincinnati-us",
     "institution_name": "University of Cincinnati",
     "institution_type": null,
@@ -3192,7 +2220,7 @@
     "website_url": null
   },
   {
-    "institution_id": 119,
+    "institution_id": 118,
     "institution_slug": "university-of-colorado-boulder-us",
     "institution_name": "University of Colorado, Boulder",
     "institution_type": null,
@@ -3204,7 +2232,7 @@
     "website_url": null
   },
   {
-    "institution_id": 71,
+    "institution_id": 70,
     "institution_slug": "university-of-connecticut-storrs-ct-us",
     "institution_name": "University of Connecticut",
     "institution_type": null,
@@ -3216,7 +2244,7 @@
     "website_url": null
   },
   {
-    "institution_id": 146,
+    "institution_id": 145,
     "institution_slug": "university-of-delaware-us",
     "institution_name": "University of Delaware",
     "institution_type": null,
@@ -3228,7 +2256,7 @@
     "website_url": null
   },
   {
-    "institution_id": 172,
+    "institution_id": 171,
     "institution_slug": "university-of-denver-us",
     "institution_name": "University of Denver",
     "institution_type": null,
@@ -3240,7 +2268,7 @@
     "website_url": null
   },
   {
-    "institution_id": 117,
+    "institution_id": 116,
     "institution_slug": "university-of-florida-us",
     "institution_name": "University of Florida",
     "institution_type": null,
@@ -3252,7 +2280,7 @@
     "website_url": null
   },
   {
-    "institution_id": 298,
+    "institution_id": 212,
     "institution_slug": "university-of-georgia-us",
     "institution_name": "University of Georgia",
     "institution_type": null,
@@ -3264,7 +2292,7 @@
     "website_url": null
   },
   {
-    "institution_id": 299,
+    "institution_id": 213,
     "institution_slug": "university-of-houston-us",
     "institution_name": "University of Houston",
     "institution_type": null,
@@ -3276,7 +2304,7 @@
     "website_url": null
   },
   {
-    "institution_id": 300,
+    "institution_id": 214,
     "institution_slug": "university-of-illinois-urbana-champaign-us",
     "institution_name": "University of Illinois, Urbana-Champaign",
     "institution_type": null,
@@ -3288,7 +2316,7 @@
     "website_url": null
   },
   {
-    "institution_id": 301,
+    "institution_id": 215,
     "institution_slug": "university-of-iowa-us",
     "institution_name": "University of Iowa",
     "institution_type": null,
@@ -3312,7 +2340,7 @@
     "website_url": null
   },
   {
-    "institution_id": 302,
+    "institution_id": 216,
     "institution_slug": "university-of-kansas-us",
     "institution_name": "University of Kansas",
     "institution_type": null,
@@ -3336,7 +2364,7 @@
     "website_url": null
   },
   {
-    "institution_id": 303,
+    "institution_id": 217,
     "institution_slug": "university-of-massachusetts-boston-us",
     "institution_name": "University of Massachusetts, Boston",
     "institution_type": null,
@@ -3348,7 +2376,7 @@
     "website_url": null
   },
   {
-    "institution_id": 304,
+    "institution_id": 218,
     "institution_slug": "university-of-michigan-us",
     "institution_name": "University of Michigan",
     "institution_type": null,
@@ -3372,7 +2400,7 @@
     "website_url": null
   },
   {
-    "institution_id": 305,
+    "institution_id": 219,
     "institution_slug": "university-of-minnesota-us",
     "institution_name": "University of Minnesota",
     "institution_type": null,
@@ -3396,7 +2424,7 @@
     "website_url": null
   },
   {
-    "institution_id": 306,
+    "institution_id": 220,
     "institution_slug": "university-of-mississippi-us",
     "institution_name": "University of Mississippi",
     "institution_type": null,
@@ -3408,7 +2436,7 @@
     "website_url": null
   },
   {
-    "institution_id": 307,
+    "institution_id": 221,
     "institution_slug": "university-of-missouri-columbia-us",
     "institution_name": "University of Missouri, Columbia",
     "institution_type": null,
@@ -3420,7 +2448,7 @@
     "website_url": null
   },
   {
-    "institution_id": 308,
+    "institution_id": 222,
     "institution_slug": "university-of-nebraska-lincoln-us",
     "institution_name": "University of Nebraska, Lincoln",
     "institution_type": null,
@@ -3444,7 +2472,7 @@
     "website_url": null
   },
   {
-    "institution_id": 309,
+    "institution_id": 223,
     "institution_slug": "university-of-nevada-las-vegas-us",
     "institution_name": "University of Nevada, Las Vegas",
     "institution_type": null,
@@ -3456,7 +2484,7 @@
     "website_url": null
   },
   {
-    "institution_id": 79,
+    "institution_id": 78,
     "institution_slug": "university-of-north-carolina-at-chapel-hill-chapel-hill-nc-us",
     "institution_name": "University of North Carolina at Chapel Hill",
     "institution_type": null,
@@ -3468,7 +2496,7 @@
     "website_url": null
   },
   {
-    "institution_id": 310,
+    "institution_id": 224,
     "institution_slug": "university-of-north-carolina-chapel-hill-us",
     "institution_name": "University of North Carolina, Chapel Hill",
     "institution_type": null,
@@ -3480,7 +2508,7 @@
     "website_url": null
   },
   {
-    "institution_id": 311,
+    "institution_id": 225,
     "institution_slug": "university-of-north-carolina-charlotte-us",
     "institution_name": "University of North Carolina, Charlotte",
     "institution_type": null,
@@ -3492,7 +2520,7 @@
     "website_url": null
   },
   {
-    "institution_id": 312,
+    "institution_id": 226,
     "institution_slug": "university-of-pennsylvania-us",
     "institution_name": "University of Pennsylvania",
     "institution_type": null,
@@ -3516,7 +2544,7 @@
     "website_url": null
   },
   {
-    "institution_id": 313,
+    "institution_id": 227,
     "institution_slug": "university-of-pittsburgh-us",
     "institution_name": "University of Pittsburgh",
     "institution_type": null,
@@ -3528,7 +2556,7 @@
     "website_url": null
   },
   {
-    "institution_id": 314,
+    "institution_id": 228,
     "institution_slug": "university-of-rhode-island-us",
     "institution_name": "University of Rhode Island",
     "institution_type": null,
@@ -3540,7 +2568,7 @@
     "website_url": null
   },
   {
-    "institution_id": 315,
+    "institution_id": 229,
     "institution_slug": "university-of-rochester-us",
     "institution_name": "University of Rochester",
     "institution_type": null,
@@ -3552,7 +2580,7 @@
     "website_url": null
   },
   {
-    "institution_id": 316,
+    "institution_id": 230,
     "institution_slug": "university-of-south-carolina-columbia-us",
     "institution_name": "University of South Carolina, Columbia",
     "institution_type": null,
@@ -3564,7 +2592,7 @@
     "website_url": null
   },
   {
-    "institution_id": 317,
+    "institution_id": 231,
     "institution_slug": "university-of-southern-california-us",
     "institution_name": "University of Southern California",
     "institution_type": null,
@@ -3576,7 +2604,7 @@
     "website_url": null
   },
   {
-    "institution_id": 318,
+    "institution_id": 232,
     "institution_slug": "university-of-southern-mississippi-us",
     "institution_name": "University of Southern Mississippi",
     "institution_type": null,
@@ -3588,7 +2616,7 @@
     "website_url": null
   },
   {
-    "institution_id": 319,
+    "institution_id": 233,
     "institution_slug": "university-of-texas-austin-us",
     "institution_name": "University of Texas, Austin",
     "institution_type": null,
@@ -3600,7 +2628,7 @@
     "website_url": null
   },
   {
-    "institution_id": 320,
+    "institution_id": 234,
     "institution_slug": "university-of-texas-el-paso-us",
     "institution_name": "University of Texas, El Paso",
     "institution_type": null,
@@ -3612,7 +2640,7 @@
     "website_url": null
   },
   {
-    "institution_id": 321,
+    "institution_id": 235,
     "institution_slug": "university-of-utah-us",
     "institution_name": "University of Utah",
     "institution_type": null,
@@ -3624,7 +2652,7 @@
     "website_url": null
   },
   {
-    "institution_id": 322,
+    "institution_id": 236,
     "institution_slug": "university-of-vermont-us",
     "institution_name": "University of Vermont",
     "institution_type": null,
@@ -3648,7 +2676,7 @@
     "website_url": null
   },
   {
-    "institution_id": 104,
+    "institution_id": 103,
     "institution_slug": "vanderbilt-university-us",
     "institution_name": "Vanderbilt University",
     "institution_type": null,
@@ -3660,7 +2688,7 @@
     "website_url": null
   },
   {
-    "institution_id": 126,
+    "institution_id": 125,
     "institution_slug": "virginia-polytechnic-institute-and-state-university-us",
     "institution_name": "Virginia Polytechnic Institute and State University",
     "institution_type": null,
@@ -3684,7 +2712,7 @@
     "website_url": null
   },
   {
-    "institution_id": 174,
+    "institution_id": 173,
     "institution_slug": "washington-state-university-us",
     "institution_name": "Washington State University",
     "institution_type": null,
@@ -3696,7 +2724,7 @@
     "website_url": null
   },
   {
-    "institution_id": 80,
+    "institution_id": 79,
     "institution_slug": "washington-university-in-st-louis-st-louis-mo-us",
     "institution_name": "Washington University in St. Louis",
     "institution_type": null,
@@ -3708,7 +2736,7 @@
     "website_url": null
   },
   {
-    "institution_id": 323,
+    "institution_id": 237,
     "institution_slug": "weill-cornell-graduate-school-of-medicine-us",
     "institution_name": "Weill Cornell Graduate School of Medicine",
     "institution_type": null,
@@ -3720,19 +2748,7 @@
     "website_url": null
   },
   {
-    "institution_id": 280,
-    "institution_slug": "wenwen-dou-us",
-    "institution_name": "Wenwen Dou",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 90,
+    "institution_id": 89,
     "institution_slug": "western-michigan-university-us",
     "institution_name": "Western Michigan University",
     "institution_type": null,
@@ -3744,7 +2760,7 @@
     "website_url": null
   },
   {
-    "institution_id": 124,
+    "institution_id": 123,
     "institution_slug": "western-washington-university-us",
     "institution_name": "Western Washington University",
     "institution_type": null,
@@ -3756,19 +2772,7 @@
     "website_url": null
   },
   {
-    "institution_id": 281,
-    "institution_slug": "wlodek-zadrozny-us",
-    "institution_name": "Wlodek Zadrozny",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 282,
+    "institution_id": 200,
     "institution_slug": "women-s-health-engineering-summer-research-program-us",
     "institution_name": "Women's Health Engineering Summer Research Program",
     "institution_type": null,
@@ -3792,7 +2796,7 @@
     "website_url": null
   },
   {
-    "institution_id": 324,
+    "institution_id": 238,
     "institution_slug": "woods-hole-oceanographic-institution-us",
     "institution_name": "Woods Hole Oceanographic Institution",
     "institution_type": null,
@@ -3804,19 +2808,7 @@
     "website_url": null
   },
   {
-    "institution_id": 283,
-    "institution_slug": "xiang-zhang-us",
-    "institution_name": "Xiang Zhang",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 81,
+    "institution_id": 80,
     "institution_slug": "yale-university-new-haven-ct-us",
     "institution_name": "Yale University",
     "institution_type": null,
@@ -3828,31 +2820,7 @@
     "website_url": null
   },
   {
-    "institution_id": 284,
-    "institution_slug": "yaorong-ge-us",
-    "institution_name": "Yaorong Ge",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 285,
-    "institution_slug": "yonghong-yan-us",
-    "institution_name": "Yonghong Yan",
-    "institution_type": null,
-    "city": null,
-    "state_code": null,
-    "country_code": "US",
-    "latitude": null,
-    "longitude": null,
-    "website_url": null
-  },
-  {
-    "institution_id": 69,
+    "institution_id": 68,
     "institution_slug": "zubia-hasanfrom-reu-student-to-user-mrs-award-winner-us",
     "institution_name": "Zubia Hasan—From REU Student to User & MRS Award Winner",
     "institution_type": null,
@@ -3864,7 +2832,7 @@
     "website_url": null
   },
   {
-    "institution_id": 67,
+    "institution_id": 66,
     "institution_slug": "explore-2026-symposium-abstracts-us",
     "institution_name": "explore 2026 Symposium abstracts",
     "institution_type": null,
@@ -3876,7 +2844,7 @@
     "website_url": null
   },
   {
-    "institution_id": 68,
+    "institution_id": 67,
     "institution_slug": "research-project-descriptions-us",
     "institution_name": "research project descriptions",
     "institution_type": null,
