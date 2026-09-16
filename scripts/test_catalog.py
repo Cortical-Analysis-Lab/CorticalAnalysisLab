@@ -43,6 +43,16 @@ class CatalogTests(unittest.TestCase):
         missing = self.db.execute("SELECT COUNT(*) FROM program_cycles c LEFT JOIN eligibility_rules e USING(cycle_id) WHERE e.cycle_id IS NULL").fetchone()[0]
         self.assertEqual(missing, 0)
 
+    def test_historical_cohort_pages_are_not_separate_programs(self):
+        urls = {row[0] for row in self.db.execute("SELECT program_url FROM opportunities")}
+        self.assertIn("https://mechanobiology.wustl.edu/programs/reu/", urls)
+        for year in range(2018, 2026):
+            self.assertNotIn(f"https://mechanobiology.wustl.edu/{year}-reu-program/", urls)
+        self.assertIn("https://www.cnf.cornell.edu/education/reu", urls)
+        self.assertNotIn("https://www.cnf.cornell.edu/education/reu/2019", urls)
+        self.assertIn("https://www.seasoasa.ucla.edu/surp/", urls)
+        self.assertNotIn("https://www.seasoasa.ucla.edu/surp-2/", urls)
+
     def test_reviewed_amgen_eligibility_is_structured(self):
         rows = self.db.execute("""
             SELECT o.public_id, e.parse_status, e.citizenship_us_citizen,

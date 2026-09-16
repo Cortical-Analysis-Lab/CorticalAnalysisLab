@@ -27,7 +27,7 @@ Key files:
 - `schema/schema.sql` — normalized SQLite schema
 - `schema/data_dictionary.md` — field semantics and unknown-value policy
 - `database/research_opportunities.sqlite` — canonical public database
-- `database/imports/` — accepted 75-row CSV source
+- `database/imports/` — accepted CSV source
 - `scripts/import_catalog.py` — deterministic CSV importer
 - `scripts/validate_catalog.py` — structural integrity validation
 - `scripts/export_catalog.py` — browser JSON exports
@@ -38,12 +38,12 @@ The schema separates institutions, stable programs (`opportunities`), annual cyc
 
 Current accepted catalog scale after the September 2026 catalog expansion:
 
-- 412 programs and annual cycles
-- 324 normalized institutions
+- 403 programs and annual cycles
+- 316 normalized institutions
 - 13 broad categories
 - 105 detailed research tags
 - 11 controlled research modes
-- 477 source-verification events
+- 468 source-verification events
 
 Planning scale target:
 
