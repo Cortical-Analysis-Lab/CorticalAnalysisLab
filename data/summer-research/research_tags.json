@@ -70,6 +70,13 @@
     "description": null
   },
   {
+    "tag_id": 101,
+    "tag_slug": "basic-sciences",
+    "tag_name": "Basic sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 73,
     "tag_slug": "biological-sciences",
     "tag_name": "Biological sciences",
@@ -84,23 +91,9 @@
     "description": null
   },
   {
-    "tag_id": 14,
-    "tag_slug": "biomedical-sciences",
-    "tag_name": "Biomedical sciences",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 71,
-    "tag_slug": "biosciences",
-    "tag_name": "Biosciences",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 46,
-    "tag_slug": "cancer-biology",
-    "tag_name": "Cancer biology",
+    "tag_id": 104,
+    "tag_slug": "bioscience",
+    "tag_name": "Bioscience",
     "tag_group": "research_topic",
     "description": null
   },
@@ -122,6 +115,13 @@
     "tag_id": 75,
     "tag_slug": "ecology",
     "tag_name": "Ecology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 97,
+    "tag_slug": "health-science",
+    "tag_name": "Health science",
     "tag_group": "research_topic",
     "description": null
   },
@@ -157,6 +157,13 @@
     "tag_id": 87,
     "tag_slug": "quantitative-biosciences",
     "tag_name": "Quantitative biosciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 98,
+    "tag_slug": "science",
+    "tag_name": "Science",
     "tag_group": "research_topic",
     "description": null
   },
@@ -231,6 +238,13 @@
     "description": null
   },
   {
+    "tag_id": 96,
+    "tag_slug": "biomedical-engineering",
+    "tag_name": "biomedical engineering",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 72,
     "tag_slug": "biomedical-science",
     "tag_name": "biomedical science",
@@ -238,9 +252,30 @@
     "description": null
   },
   {
+    "tag_id": 14,
+    "tag_slug": "biomedical-sciences",
+    "tag_name": "biomedical sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 105,
+    "tag_slug": "biomedicine",
+    "tag_name": "biomedicine",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 42,
     "tag_slug": "biophysics",
     "tag_name": "biophysics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 71,
+    "tag_slug": "biosciences",
+    "tag_name": "biosciences",
     "tag_group": "research_topic",
     "description": null
   },
@@ -269,6 +304,13 @@
     "tag_id": 17,
     "tag_slug": "cancer",
     "tag_name": "cancer",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 46,
+    "tag_slug": "cancer-biology",
+    "tag_name": "cancer biology",
     "tag_group": "research_topic",
     "description": null
   },
@@ -357,6 +399,13 @@
     "description": null
   },
   {
+    "tag_id": 94,
+    "tag_slug": "drug-discovery",
+    "tag_name": "drug discovery",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 33,
     "tag_slug": "earth-sciences",
     "tag_name": "earth sciences",
@@ -434,6 +483,20 @@
     "description": null
   },
   {
+    "tag_id": 100,
+    "tag_slug": "health-sciences",
+    "tag_name": "health sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 102,
+    "tag_slug": "health-related-research",
+    "tag_name": "health-related research",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 18,
     "tag_slug": "immunology",
     "tag_name": "immunology",
@@ -476,6 +539,13 @@
     "description": null
   },
   {
+    "tag_id": 93,
+    "tag_slug": "laboratory-research",
+    "tag_name": "laboratory research",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 8,
     "tag_slug": "materials",
     "tag_name": "materials",
@@ -493,6 +563,13 @@
     "tag_id": 29,
     "tag_slug": "measurement-science",
     "tag_name": "measurement science",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 99,
+    "tag_slug": "medicine",
+    "tag_name": "medicine",
     "tag_group": "research_topic",
     "description": null
   },
@@ -528,6 +605,20 @@
     "tag_id": 27,
     "tag_slug": "other-majors",
     "tag_name": "other majors",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 103,
+    "tag_slug": "pharmaceutical-sciences",
+    "tag_name": "pharmaceutical sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 95,
+    "tag_slug": "pharmacology",
+    "tag_name": "pharmacology",
     "tag_group": "research_topic",
     "description": null
   },

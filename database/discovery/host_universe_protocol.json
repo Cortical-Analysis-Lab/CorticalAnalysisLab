@@ -1,6 +1,70 @@
 {
   "version": "2026-09-04",
   "purpose": "Configuration skeleton for national, coverage-measurable summer undergraduate research discovery. Populate target records from authoritative public directories before large crawls.",
+  "scale_targets": {
+    "estimate_date": "2026-09-16",
+    "estimate_status": "planning_target_not_verified_catalog_count",
+    "distinct_program_estimate": {
+      "low": 2300,
+      "high": 4200
+    },
+    "design_capacity": {
+      "program_identities": 5000,
+      "annual_cycle_records_low": 15000,
+      "annual_cycle_records_high": 25000
+    },
+    "scope_estimates": [
+      {
+        "scope": "U.S. NSF REUs and related NSF undergraduate research programs",
+        "low": 400,
+        "high": 600
+      },
+      {
+        "scope": "Other U.S. university SURP, SURF, SURE, SROP, and similar named programs",
+        "low": 900,
+        "high": 1500
+      },
+      {
+        "scope": "Medical schools, hospitals, cancer centers, and independent research institutes",
+        "low": 250,
+        "high": 450
+      },
+      {
+        "scope": "Federal labs, agencies, and national research programs",
+        "low": 100,
+        "high": 200
+      },
+      {
+        "scope": "Social science, humanities, field stations, museums, observatories, and specialized programs",
+        "low": 200,
+        "high": 400
+      },
+      {
+        "scope": "International programs genuinely open to U.S. students",
+        "low": 300,
+        "high": 700
+      }
+    ]
+  },
+  "program_identity_policy": {
+    "one_program_rule": "A program identity is a separately named research program or application at a host institution.",
+    "count_as_one": [
+      "A university-wide SURP with many participating labs",
+      "A network host page for one named host-specific application",
+      "A multi-year program with separate annual cycles"
+    ],
+    "count_separately": [
+      "Separate named neuroscience, chemistry, physics, cancer, or other departmental programs at the same institution",
+      "Separate host-specific applications in a national or international network when each host has its own program page or application process"
+    ],
+    "never_count_as_program_identities": [
+      "Student slots",
+      "Individual faculty projects",
+      "Annual cycles",
+      "Grant, award, or funding records",
+      "Program directories, news pages, advice pages, conference pages, alumni pages, or symposium pages"
+    ]
+  },
   "institutional_universes": [
     {
       "target_type": "carnegie_r1",
@@ -67,6 +131,12 @@
       "source": "National Association of Marine Laboratories",
       "priority": 185,
       "crawl_strategy": "Search marine, ocean, coastal, aquatic, and summer undergraduate research pages."
+    },
+    {
+      "target_type": "international_host_network",
+      "source": "Official international research-program networks and host pages",
+      "priority": 300,
+      "crawl_strategy": "Search only programs genuinely open to U.S. undergraduate students or broadly international undergraduates; verify eligibility on official program pages."
     }
   ],
   "standard_vocabulary": {

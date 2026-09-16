@@ -50,6 +50,27 @@ HUB_PATH_TERMS = (
     "/pre-health-resources/",
 )
 
+RESEARCH_OPPORTUNITY_TERMS = (
+    "research",
+    "reu",
+    "surf",
+    "surp",
+    "srop",
+    "suli",
+    "cci",
+    "nreip",
+    "amgen scholars",
+)
+
+EXPERIENTIAL_OPPORTUNITY_TERMS = (
+    "internship",
+    "internships",
+    "fellowship",
+    "fellowships",
+    "scholar",
+    "scholars",
+)
+
 
 def normalized(value):
     return (text_or_none(value) or "").strip()
@@ -80,6 +101,16 @@ def is_award_only(row):
 def path_text(url):
     parsed = urlparse(normalized(url))
     return parsed.path.replace("-", " ").replace("_", " ").lower()
+
+
+def research_related_title_or_path(title, path):
+    haystack = f"{title} {path}".lower()
+    if any(term in haystack for term in RESEARCH_OPPORTUNITY_TERMS):
+        return True
+    return (
+        any(term in haystack for term in EXPERIENTIAL_OPPORTUNITY_TERMS)
+        and ("research" in haystack or "lab" in haystack or "laboratory" in haystack)
+    )
 
 
 def issue(row, severity, code, reason, field="record"):
@@ -151,6 +182,14 @@ def audit_rows(rows):
                 "possible_hub_or_listing",
                 "Record may be a hub/listing page. Use it for discovery unless the page is the maintained canonical program page.",
                 "Program_URL",
+            ))
+        if not research_related_title_or_path(title, path):
+            findings.append(issue(
+                row,
+                "review",
+                "missing_research_opportunity_signal",
+                "Title/path does not clearly identify a research-related summer program, internship, fellowship, scholars program, or REU-style opportunity.",
+                "Program_Name",
             ))
         if normalized(row.get("Eligibility_Parse_Status")) == "reviewed" and is_award_only(row):
             findings.append(issue(
