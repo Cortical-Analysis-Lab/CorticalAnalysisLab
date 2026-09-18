@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS opportunities (
 CREATE TABLE IF NOT EXISTS program_cycles (
     cycle_id INTEGER PRIMARY KEY,
     opportunity_id INTEGER NOT NULL REFERENCES opportunities(opportunity_id) ON DELETE CASCADE,
-    cycle_year INTEGER NOT NULL CHECK (cycle_year BETWEEN 2000 AND 2200),
+    cycle_year INTEGER CHECK (cycle_year IS NULL OR cycle_year BETWEEN 2000 AND 2200),
     duration_weeks REAL CHECK (duration_weeks IS NULL OR duration_weeks > 0),
     program_start TEXT,
     program_end TEXT,
@@ -66,6 +66,10 @@ CREATE TABLE IF NOT EXISTS program_cycles (
     updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
     UNIQUE (opportunity_id, cycle_year)
 );
+
+-- One undated program-information snapshot, separate from known annual cycles.
+CREATE UNIQUE INDEX IF NOT EXISTS idx_cycles_undated
+    ON program_cycles(opportunity_id) WHERE cycle_year IS NULL;
 
 CREATE TABLE IF NOT EXISTS eligibility_rules (
     eligibility_rule_id INTEGER PRIMARY KEY,
@@ -263,4 +267,4 @@ CREATE INDEX IF NOT EXISTS idx_opportunity_discovery_opportunity ON opportunity_
 CREATE INDEX IF NOT EXISTS idx_crawl_targets_status ON crawl_targets(target_type, crawl_status, priority);
 CREATE INDEX IF NOT EXISTS idx_verifications_opportunity ON source_verifications(opportunity_id, date_checked);
 
-INSERT OR REPLACE INTO schema_metadata(key, value) VALUES ('schema_version', '1.2.0');
+INSERT OR REPLACE INTO schema_metadata(key, value) VALUES ('schema_version', '1.3.0');

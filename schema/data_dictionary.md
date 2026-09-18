@@ -7,6 +7,7 @@ The accepted CSV under `database/imports/` is the version-controlled source used
 - **Institution**: one physical host/location used for map aggregation. A national network or multi-site federal program may use a clearly labeled umbrella institution until site-level placements are modeled.
 - **Opportunity**: the stable identity of a named program, independent of year.
 - **Program cycle**: annual dates, status, compensation, benefits, and verification metadata.
+- **Undated snapshot**: one `program_cycles` row with a NULL `cycle_year` per stable program when its identity is verified but a cycle year is not established. Exact annual dates and claims of current application availability require a known year. An undated snapshot can coexist with dated cycles without creating another public program listing.
 - **Eligibility rule**: cycle-specific hard eligibility. Nullable Boolean fields mean “not established,” not “no.” The original rule text is always retained.
 - **Category**: broad, controlled subject grouping used for filters.
 - **Tag**: narrower research topic, method, mode, audience, or program characteristic.
@@ -38,6 +39,9 @@ Missing or ambiguous information is stored as `NULL` in typed fields and preserv
 | `program_cycles.application_url` | Cycle-specific application destination; historical cycles retain their own URL. |
 | `research_modes.mode_code` | Controlled preference/filter vocabulary; absent assignments mean unknown, not “no.” |
 | `fields_supported` | JSON array of field names supported by that source. |
+| `Source_Evidence_JSON` (CSV) | Explicit per-source field assignments, reviewer, check date and limitations; imported as partial source verifications rather than a claim that all eligibility is reviewed. |
+| `Secondary_Fields` (CSV) | Additional controlled research categories, separated by semicolons; complements specific topic tags. |
+| `Bundle_Provenance` (CSV) | Bundle revision and originating discovery ID retained in raw import records; not factual source evidence. |
 | `evidence_hash` | Optional content snapshot hash supplied with accepted source data. |
 
 | `discovery_sources.authority_scope` | Whether the source is discovery-only, can support network rules, can support government records, or is itself an official program source. |

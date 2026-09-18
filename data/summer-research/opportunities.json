@@ -196,9 +196,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 220,
+    "opportunity_id": 219,
     "public_id": "AUTO-0091180CBE",
-    "institution_id": 178,
+    "institution_id": 177,
     "program_name": "Computational Sensing and Medical Robotics (CS&MR) REU",
     "network_source": "pathways_summer_undergrad_j",
     "program_type": "Summer undergraduate research opportunity",
@@ -210,7 +210,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 199,
+    "opportunity_id": 198,
     "public_id": "AUTO-02443DC588",
     "institution_id": 139,
     "program_name": "Center for Energy Efficient Electronics Science Transfer- to- Excellence Research Experiences for Undergraduates Program",
@@ -227,14 +227,14 @@
     "opportunity_id": 46,
     "public_id": "AUTO-02FA219764",
     "institution_id": 44,
-    "program_name": "Lurie Center for Autism Summer Internship",
+    "program_name": "MGH Lurie Center for Autism Summer Undergraduate Research Program",
     "network_source": "frontier_www_massgeneral_org_children_autism_lu_ef773578",
     "program_type": "Summer undergraduate research opportunity",
-    "location_scope": "Unknown",
-    "delivery_format": "Unknown",
-    "program_url": "https://www.massgeneral.org/children/autism/lurie-center/summer-clinical-research-internship",
+    "location_scope": null,
+    "delivery_format": "In person",
+    "program_url": "https://research.massgeneralbrigham.org/en/education-and-training/graduate-medical-education/pediatrics/mgb-lurie-center-for-autism-summer-internship",
     "application_url": null,
-    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.",
+    "notes": "Class-standing preferences are not hard exclusions; citizenship and stipend remain unknown.",
     "active": 1
   },
   {
@@ -294,9 +294,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 264,
+    "opportunity_id": 263,
     "public_id": "AUTO-07FC405774",
-    "institution_id": 197,
+    "institution_id": 196,
     "program_name": "Research Experiences for Undergraduates in Chemical Assembly",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -322,7 +322,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 174,
+    "opportunity_id": 173,
     "public_id": "AUTO-08F18D37E0",
     "institution_id": 102,
     "program_name": "Climate Science Research Experiences for Undergraduates",
@@ -350,9 +350,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 246,
+    "opportunity_id": 245,
     "public_id": "AUTO-097D6DA43E",
-    "institution_id": 191,
+    "institution_id": 190,
     "program_name": "Research Experiences for Undergraduates: IDEA Incubator in Porous Materials",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -364,7 +364,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 177,
+    "opportunity_id": 176,
     "public_id": "AUTO-0A3BCC9370",
     "institution_id": 87,
     "program_name": "Summer Research Program for Undergraduates, Networked Ventures for Collaborative Biological Discovery",
@@ -378,9 +378,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 255,
+    "opportunity_id": 254,
     "public_id": "AUTO-0AFA826865",
-    "institution_id": 194,
+    "institution_id": 193,
     "program_name": "NSF-REU/Lando/CSP Program",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -392,9 +392,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 271,
+    "opportunity_id": 270,
     "public_id": "AUTO-0B035326D6",
-    "institution_id": 202,
+    "institution_id": 201,
     "program_name": "Summer Undergraduate Research Program (SURP)",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -406,9 +406,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 201,
+    "opportunity_id": 200,
     "public_id": "AUTO-0B42C6CE83",
-    "institution_id": 166,
+    "institution_id": 165,
     "program_name": "Brooklyn College Psychology and Neuroscience REU Program",
     "network_source": "pathways_summer_undergrad_c",
     "program_type": "Summer undergraduate research opportunity",
@@ -420,9 +420,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 195,
+    "opportunity_id": 194,
     "public_id": "AUTO-0CA7DE48A7",
-    "institution_id": 165,
+    "institution_id": 164,
     "program_name": "REU in Cellular Bioengineering: From Biomaterials to Stem Cells",
     "network_source": "pathways_summer_undergrad_r",
     "program_type": "Summer undergraduate research opportunity",
@@ -490,9 +490,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 260,
+    "opportunity_id": 259,
     "public_id": "AUTO-0FA2E8CE46",
-    "institution_id": 196,
+    "institution_id": 195,
     "program_name": "REU in Material Science and Engineering",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -504,23 +504,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 170,
-    "public_id": "AUTO-11C6F87A9D",
-    "institution_id": 148,
-    "program_name": "Indiana University Melvin and Bren Simon Comprehensive Cancer Center Summer Research Program Internship",
-    "network_source": "pathways_summer_undergrad_i",
-    "program_type": "Summer undergraduate research opportunity",
-    "location_scope": "Unknown",
-    "delivery_format": "Unknown",
-    "program_url": "https://cancer.iu.edu/education/summer/index.html",
-    "application_url": null,
-    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.",
-    "active": 1
-  },
-  {
-    "opportunity_id": 244,
+    "opportunity_id": 243,
     "public_id": "AUTO-11D853C6E3",
-    "institution_id": 190,
+    "institution_id": 189,
     "program_name": "Microbiology at the Host-Pathogen Interface",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -546,9 +532,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 275,
+    "opportunity_id": 274,
     "public_id": "AUTO-120F3A45B5",
-    "institution_id": 205,
+    "institution_id": 204,
     "program_name": "REU in CO2 Chemical Engineering",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -616,7 +602,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 176,
+    "opportunity_id": 175,
     "public_id": "AUTO-1D5D83B4EA",
     "institution_id": 128,
     "program_name": "Paid Undergraduate Summer Research Program in Biosciences - CLIMB UP",
@@ -644,9 +630,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 229,
+    "opportunity_id": 228,
     "public_id": "AUTO-22A75B2288",
-    "institution_id": 184,
+    "institution_id": 183,
     "program_name": "Parallel Computing Summer Research Internship",
     "network_source": "pathways_summer_undergrad_l",
     "program_type": "Summer research internship",
@@ -728,7 +714,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 213,
+    "opportunity_id": 212,
     "public_id": "AUTO-29C5ACA58F",
     "institution_id": 145,
     "program_name": "Summer Undergraduate Research Opportunity with The Artificial and Natural Intelligence Institute (ARNI)",
@@ -742,9 +728,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 218,
+    "opportunity_id": 217,
     "public_id": "AUTO-2C54519F07",
-    "institution_id": 177,
+    "institution_id": 176,
     "program_name": "Purdy Summer Research Fellowship Program | Radiation Oncology | Washington University in St. Louis",
     "network_source": "expanded_radonc_wustl_edu_education_summer_educ_8fb1402a",
     "program_type": "Summer undergraduate research opportunity",
@@ -770,9 +756,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 266,
+    "opportunity_id": 265,
     "public_id": "AUTO-2E562DBF3E",
-    "institution_id": 199,
+    "institution_id": 198,
     "program_name": "Carolina Summer Fellowship Program in Pharmacology",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer research fellowship",
@@ -784,9 +770,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 247,
+    "opportunity_id": 246,
     "public_id": "AUTO-2EC0C0157C",
-    "institution_id": 191,
+    "institution_id": 190,
     "program_name": "The Stressed Life of Cells",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -826,7 +812,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 221,
+    "opportunity_id": 220,
     "public_id": "AUTO-30DF323D2E",
     "institution_id": 99,
     "program_name": "Research Experiences for Undergraduates (REU) with the Kluane Red Squirrel Project (KRSP)",
@@ -840,9 +826,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 257,
+    "opportunity_id": 256,
     "public_id": "AUTO-311B7C93A4",
-    "institution_id": 194,
+    "institution_id": 193,
     "program_name": "Physics and Astronomy REU",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -868,9 +854,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 209,
+    "opportunity_id": 208,
     "public_id": "AUTO-33D3082C8F",
-    "institution_id": 171,
+    "institution_id": 170,
     "program_name": "Katz and Manne Research Institute Summer Scholars Program",
     "network_source": "pathways_summer_undergrad_a",
     "program_type": "Summer undergraduate research opportunity",
@@ -882,9 +868,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 236,
+    "opportunity_id": 235,
     "public_id": "AUTO-33D7C6C37E",
-    "institution_id": 186,
+    "institution_id": 185,
     "program_name": "Quantum Foundry Undergraduate Summer Research Internship program",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer research internship",
@@ -938,7 +924,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 235,
+    "opportunity_id": 234,
     "public_id": "AUTO-3B0D3767FD",
     "institution_id": 139,
     "program_name": "UC Berkeley Language and Cognitive Development Lab Summer Internship",
@@ -1022,7 +1008,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 197,
+    "opportunity_id": 196,
     "public_id": "AUTO-3FCFA46C84",
     "institution_id": 67,
     "program_name": "Research Experiences for Undergraduates: Reimagining the Chemical Heartland: Chemistry for a Changing Gulf Coast",
@@ -1050,9 +1036,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 184,
+    "opportunity_id": 183,
     "public_id": "AUTO-41BF431435",
-    "institution_id": 158,
+    "institution_id": 157,
     "program_name": "KBS REU Site- Understanding biological responses to global change in a field station community",
     "network_source": "pathways_summer_undergrad_g;pathways_summer_undergrad_m;pathways_summer_undergrad_w",
     "program_type": "Summer undergraduate research opportunity",
@@ -1064,9 +1050,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 252,
+    "opportunity_id": 251,
     "public_id": "AUTO-421A424E0B",
-    "institution_id": 193,
+    "institution_id": 192,
     "program_name": "Perrigo Undergraduate Summer Fellowship Program",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer research fellowship",
@@ -1078,9 +1064,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 273,
+    "opportunity_id": 272,
     "public_id": "AUTO-42D1872A7D",
-    "institution_id": 204,
+    "institution_id": 203,
     "program_name": "Nano-, Bio-, Quantum Photonics",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -1092,9 +1078,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 250,
+    "opportunity_id": 249,
     "public_id": "AUTO-432BEE1FB1",
-    "institution_id": 193,
+    "institution_id": 192,
     "program_name": "Electric Vehicle Center Undergradute Research Internships",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer research internship",
@@ -1106,9 +1092,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 172,
+    "opportunity_id": 171,
     "public_id": "AUTO-4384F1E653",
-    "institution_id": 150,
+    "institution_id": 149,
     "program_name": "Carney Summer Scholars in Computational Neuroscience",
     "network_source": "pathways_summer_undergrad_b",
     "program_type": "Summer undergraduate research opportunity",
@@ -1165,14 +1151,14 @@
     "opportunity_id": 43,
     "public_id": "AUTO-49B85D77A2",
     "institution_id": 41,
-    "program_name": "Women's Sports Medicine Summer Internship Program",
+    "program_name": "MGH Women’s Sports Medicine Summer Internship",
     "network_source": "frontier_www_massgeneral_org_orthopaedics_educa_98d473c2",
     "program_type": "Summer undergraduate research opportunity",
-    "location_scope": "Unknown",
-    "delivery_format": "Unknown",
-    "program_url": "https://www.massgeneral.org/orthopaedics/education-and-training/internships/womens-sports-medicine-internship-program",
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://research.massgeneralbrigham.org/en/education-and-training/graduate-medical-education/orthopedics/womens-sports-medicine-summer-internship-program",
     "application_url": null,
-    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.",
+    "notes": "Includes a summer research project alongside clinical observation; advertised as one month. Unstated requirements and benefits remain unknown; eligibility parsing is incomplete.",
     "active": 1
   },
   {
@@ -1204,9 +1190,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 263,
+    "opportunity_id": 262,
     "public_id": "AUTO-4CD495FF00",
-    "institution_id": 197,
+    "institution_id": 196,
     "program_name": "REU: National Nanotechnology Coordinated Infrastructure",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -1218,9 +1204,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 181,
+    "opportunity_id": 180,
     "public_id": "AUTO-4DBF7205DE",
-    "institution_id": 155,
+    "institution_id": 154,
     "program_name": "Gulf of Maine and the World Ocean REU",
     "network_source": "pathways_summer_undergrad_b",
     "program_type": "Summer undergraduate research opportunity",
@@ -1246,9 +1232,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 253,
+    "opportunity_id": 252,
     "public_id": "AUTO-53143E217F",
-    "institution_id": 193,
+    "institution_id": 192,
     "program_name": "REU in Biophysics",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -1330,9 +1316,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 206,
+    "opportunity_id": 205,
     "public_id": "AUTO-581D731281",
-    "institution_id": 169,
+    "institution_id": 168,
     "program_name": "Research Experience For Undergraduates (REU) in Engineering and Applied Science",
     "network_source": "pathways_summer_undergrad_h",
     "program_type": "Summer undergraduate research opportunity",
@@ -1358,9 +1344,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 272,
+    "opportunity_id": 271,
     "public_id": "AUTO-5889A39949",
-    "institution_id": 203,
+    "institution_id": 202,
     "program_name": "Summer Undergraduate Research Fellowships in Oceanography (SURFO)",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer research fellowship",
@@ -1386,9 +1372,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 191,
+    "opportunity_id": 190,
     "public_id": "AUTO-5A4FE1A7CD",
-    "institution_id": 162,
+    "institution_id": 161,
     "program_name": "APS Undergraduate Summer Research Fellowship (UGSRF)",
     "network_source": "pathways_summer_undergrad_a",
     "program_type": "Summer undergraduate research opportunity",
@@ -1428,9 +1414,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 186,
+    "opportunity_id": 185,
     "public_id": "AUTO-5C5E82F13B",
-    "institution_id": 159,
+    "institution_id": 158,
     "program_name": "Summer Research Experiences for Undergraduates in Materials Physics",
     "network_source": "pathways_summer_undergrad_g",
     "program_type": "Summer undergraduate research opportunity",
@@ -1456,9 +1442,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 258,
+    "opportunity_id": 257,
     "public_id": "AUTO-5D9A647027",
-    "institution_id": 194,
+    "institution_id": 193,
     "program_name": "Summer Undergraduate Research Experience (SURE) Internship program at The Hormel Institute in Biomedical Science",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer research internship",
@@ -1470,9 +1456,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 180,
+    "opportunity_id": 179,
     "public_id": "AUTO-5DD4222260",
-    "institution_id": 154,
+    "institution_id": 153,
     "program_name": "Summer Undergraduate Research Experience (SURE) - Materials Under Extreme Conditions",
     "network_source": "pathways_summer_undergrad_w",
     "program_type": "Summer undergraduate research opportunity",
@@ -1484,9 +1470,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 270,
+    "opportunity_id": 269,
     "public_id": "AUTO-5DD7A0716B",
-    "institution_id": 201,
+    "institution_id": 200,
     "program_name": "SUPERS@PENN - Summer Research Program for Educating Radiation Scientists",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -1568,9 +1554,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 208,
+    "opportunity_id": 207,
     "public_id": "AUTO-6259B7E559",
-    "institution_id": 170,
+    "institution_id": 169,
     "program_name": "REU at the Danford Plant Science Center",
     "network_source": "pathways_summer_undergrad_d",
     "program_type": "Summer undergraduate research opportunity",
@@ -1596,9 +1582,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 269,
+    "opportunity_id": 268,
     "public_id": "AUTO-63C5926D18",
-    "institution_id": 201,
+    "institution_id": 200,
     "program_name": "Laboratory for Research on the Structure of Matter (LRSM) Summer Research Program",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -1610,9 +1596,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 211,
+    "opportunity_id": 210,
     "public_id": "AUTO-641C20FF63",
-    "institution_id": 173,
+    "institution_id": 172,
     "program_name": "Aman Armaan Ahmed Family Summer Undergraduate Research Fellowships (SURF) for Success Program",
     "network_source": "pathways_summer_undergrad_a",
     "program_type": "Summer undergraduate research opportunity",
@@ -1624,9 +1610,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 232,
+    "opportunity_id": 231,
     "public_id": "AUTO-6564B82665",
-    "institution_id": 168,
+    "institution_id": 167,
     "program_name": "Biomedical & Bioinformatics Research Internship and Training Experience (B-BRITE)",
     "network_source": "pathways_summer_undergrad_o",
     "program_type": "Summer research internship",
@@ -1652,9 +1638,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 217,
+    "opportunity_id": 216,
     "public_id": "AUTO-65AB42B8CB",
-    "institution_id": 174,
+    "institution_id": 173,
     "program_name": "Washington University Women's Health Engineering Summer Research Program",
     "network_source": "expanded_womenshealthengineering_wustl_edu_trai_9b802071;expanded_womenshealthengineering_wustl_edu_trai_df3a0f1e",
     "program_type": "Summer undergraduate research opportunity",
@@ -1708,9 +1694,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 194,
+    "opportunity_id": 193,
     "public_id": "AUTO-68828A9C0C",
-    "institution_id": 164,
+    "institution_id": 163,
     "program_name": "Research Experience for Undergraduates (REU): Molecular and Biochemical Analysis of Proteins",
     "network_source": "pathways_summer_undergrad_p",
     "program_type": "Summer undergraduate research opportunity",
@@ -1764,9 +1750,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 210,
+    "opportunity_id": 209,
     "public_id": "AUTO-6C239CBC3A",
-    "institution_id": 172,
+    "institution_id": 171,
     "program_name": "Summer Systematics Institute (SSI) REU",
     "network_source": "pathways_summer_undergrad_c",
     "program_type": "Summer undergraduate research opportunity",
@@ -1806,9 +1792,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 223,
+    "opportunity_id": 222,
     "public_id": "AUTO-6E5416B256",
-    "institution_id": 180,
+    "institution_id": 179,
     "program_name": "BioXFEL Undergraduate Summer Internship",
     "network_source": "pathways_summer_undergrad_a;pathways_summer_undergrad_h;pathways_summer_undergrad_s",
     "program_type": "Summer research internship",
@@ -1820,7 +1806,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 193,
+    "opportunity_id": 192,
     "public_id": "AUTO-6F6C217B9C",
     "institution_id": 135,
     "program_name": "Stone Lab Research Experience for Undergraduates Scholarship Program",
@@ -1834,9 +1820,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 228,
+    "opportunity_id": 227,
     "public_id": "AUTO-6F8983D50A",
-    "institution_id": 183,
+    "institution_id": 182,
     "program_name": "Health Effects Institute Summer Fellowship Program",
     "network_source": "pathways_summer_undergrad_h;pathways_summer_undergrad_i",
     "program_type": "Summer research fellowship",
@@ -1848,7 +1834,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 203,
+    "opportunity_id": 202,
     "public_id": "AUTO-7062B2391D",
     "institution_id": 116,
     "program_name": "Cell Manufacturing Technologies REU Program",
@@ -1862,9 +1848,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 259,
+    "opportunity_id": 258,
     "public_id": "AUTO-70C1D299F7",
-    "institution_id": 195,
+    "institution_id": 194,
     "program_name": "Ole Miss Physical Chemistry Summer Research Program",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -1918,9 +1904,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 262,
+    "opportunity_id": 261,
     "public_id": "AUTO-74E58D8CB5",
-    "institution_id": 197,
+    "institution_id": 196,
     "program_name": "REU: Harnessing beneficial bacteria to control plant diseases",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -1946,9 +1932,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 285,
+    "opportunity_id": 284,
     "public_id": "AUTO-7667128285",
-    "institution_id": 213,
+    "institution_id": 212,
     "program_name": "Summer Student Fellowship Program",
     "network_source": "pathways_summer_undergrad_w",
     "program_type": "Summer research internship",
@@ -1988,9 +1974,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 284,
+    "opportunity_id": 283,
     "public_id": "AUTO-7A52BE9F22",
-    "institution_id": 212,
+    "institution_id": 211,
     "program_name": "Weill Cornell Medicine Biostatistics Internship Program",
     "network_source": "pathways_summer_undergrad_w",
     "program_type": "Summer research internship",
@@ -2030,9 +2016,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 226,
+    "opportunity_id": 225,
     "public_id": "AUTO-7CF6436776",
-    "institution_id": 182,
+    "institution_id": 181,
     "program_name": "Research Experiences in Solid Earth Sciences",
     "network_source": "pathways_summer_undergrad_e",
     "program_type": "Summer research internship",
@@ -2044,9 +2030,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 242,
+    "opportunity_id": 241,
     "public_id": "AUTO-7E2AC292C7",
-    "institution_id": 189,
+    "institution_id": 188,
     "program_name": "Illinois Physics Research Experience for Undergraduates",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -2058,9 +2044,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 219,
+    "opportunity_id": 218,
     "public_id": "AUTO-7F03609722",
-    "institution_id": 174,
+    "institution_id": 173,
     "program_name": "Center for Engineering MechanoBiology Summer Research Experiences for Undergraduates (CEMB REU) – Washington University in St. Louis",
     "network_source": "expanded_mechanobiology_wustl_edu_2018_reu_prog_61c8fda5",
     "program_type": "Summer undergraduate research opportunity",
@@ -2086,9 +2072,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 230,
+    "opportunity_id": 229,
     "public_id": "AUTO-833141F872",
-    "institution_id": 185,
+    "institution_id": 184,
     "program_name": "ASPIRE NIH-Funded Summer Cardiovascular Research Fellowship in Milwaukee for Undergraduates",
     "network_source": "pathways_summer_undergrad_m",
     "program_type": "Summer research fellowship",
@@ -2114,9 +2100,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 251,
+    "opportunity_id": 250,
     "public_id": "AUTO-85C2549FCF",
-    "institution_id": 193,
+    "institution_id": 192,
     "program_name": "Optics in the City of Light - and international REU program from the University of Michigan in Paris, France",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -2142,9 +2128,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 178,
+    "opportunity_id": 177,
     "public_id": "AUTO-862185FB01",
-    "institution_id": 152,
+    "institution_id": 151,
     "program_name": "Summer REU in Power and Energy Systems for Smart Cities",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -2170,7 +2156,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 173,
+    "opportunity_id": 172,
     "public_id": "AUTO-8851978E49",
     "institution_id": 94,
     "program_name": "Materials Research Science and Engineering Center: Summer Research Experience for Undergraduates",
@@ -2212,7 +2198,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 237,
+    "opportunity_id": 236,
     "public_id": "AUTO-8CB8038553",
     "institution_id": 117,
     "program_name": "Dynamic Experiences in Neuroscience to Diversify Research Internship Training Exposures for Students (DENDRITES)",
@@ -2226,9 +2212,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 249,
+    "opportunity_id": 248,
     "public_id": "AUTO-8CBD83411D",
-    "institution_id": 193,
+    "institution_id": 192,
     "program_name": "ASPET Summer Undergraduate Research Fellow (SURF) Awards",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -2268,9 +2254,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 205,
+    "opportunity_id": 204,
     "public_id": "AUTO-8D181DB1EA",
-    "institution_id": 168,
+    "institution_id": 167,
     "program_name": "Vollum Institute Undergraduate Summer Research Program",
     "network_source": "pathways_summer_undergrad_o",
     "program_type": "Summer undergraduate research opportunity",
@@ -2282,7 +2268,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 212,
+    "opportunity_id": 211,
     "public_id": "AUTO-8D90E58C92",
     "institution_id": 100,
     "program_name": "Blandy Experimental Farm REU",
@@ -2296,7 +2282,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 207,
+    "opportunity_id": 206,
     "public_id": "AUTO-8F60334A97",
     "institution_id": 147,
     "program_name": "INSPIRE summer REU in Alzheimer's disease and related dementia (ADRD) research",
@@ -2310,9 +2296,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 282,
+    "opportunity_id": 281,
     "public_id": "AUTO-900A6E81D5",
-    "institution_id": 210,
+    "institution_id": 209,
     "program_name": "Undergraduate Research Experience in ALpine Meteorology (REALM) REU",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -2338,9 +2324,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 241,
+    "opportunity_id": 240,
     "public_id": "AUTO-91340EA84B",
-    "institution_id": 189,
+    "institution_id": 188,
     "program_name": "Illinois MRSEC Research Experience for Undergraduates Program",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -2394,9 +2380,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 189,
+    "opportunity_id": 188,
     "public_id": "AUTO-943D64D03F",
-    "institution_id": 161,
+    "institution_id": 160,
     "program_name": "MBARI Summer Internship Program",
     "network_source": "pathways_summer_undergrad_m",
     "program_type": "Summer undergraduate research opportunity",
@@ -2422,9 +2408,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 256,
+    "opportunity_id": 255,
     "public_id": "AUTO-96C7678ADF",
-    "institution_id": 194,
+    "institution_id": 193,
     "program_name": "Materials Research Science and Engineering Center (MRSEC) REU in Nanomaterials",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -2436,9 +2422,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 215,
+    "opportunity_id": 214,
     "public_id": "AUTO-97DF9D9FCB",
-    "institution_id": 175,
+    "institution_id": 174,
     "program_name": "Eidgenössische Technische Hochschule Zürich (Switzerland) – Amgen Scholars",
     "network_source": "expanded_amgenscholars_com_182c0b77",
     "program_type": "Summer undergraduate research opportunity",
@@ -2450,9 +2436,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 182,
+    "opportunity_id": 181,
     "public_id": "AUTO-991044C5BC",
-    "institution_id": 156,
+    "institution_id": 155,
     "program_name": "Neuroscience Research Experience for Undergraduates at Georgia Tech and Georgia State",
     "network_source": "pathways_summer_undergrad_e;pathways_summer_undergrad_g",
     "program_type": "Summer undergraduate research opportunity",
@@ -2478,7 +2464,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 234,
+    "opportunity_id": 233,
     "public_id": "AUTO-9B8B6DFE61",
     "institution_id": 139,
     "program_name": "SETI Research Center Summer Research Undergraduate Internships",
@@ -2520,7 +2506,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 190,
+    "opportunity_id": 189,
     "public_id": "AUTO-9E2CFA3779",
     "institution_id": 35,
     "program_name": "Summer Undergraduate Research Program for Diversity in Chemistry (SURP-DC)",
@@ -2548,9 +2534,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 225,
+    "opportunity_id": 224,
     "public_id": "AUTO-A11BE59501",
-    "institution_id": 182,
+    "institution_id": 181,
     "program_name": "Geo-Launchpad",
     "network_source": "pathways_summer_undergrad_e;pathways_summer_undergrad_n",
     "program_type": "Summer research internship",
@@ -2576,9 +2562,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 261,
+    "opportunity_id": 260,
     "public_id": "AUTO-A334F8E38B",
-    "institution_id": 196,
+    "institution_id": 195,
     "program_name": "Translational Biomedicine Undergraduate Summer Research Program",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -2590,7 +2576,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 204,
+    "opportunity_id": 203,
     "public_id": "AUTO-A6B8FCEEE8",
     "institution_id": 91,
     "program_name": "Summer Undergraduate Research Fellowship (SURF) at Cincinnati Children’s Hospital Medical Center",
@@ -2604,9 +2590,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 283,
+    "opportunity_id": 282,
     "public_id": "AUTO-A6F958696D",
-    "institution_id": 211,
+    "institution_id": 210,
     "program_name": "Vermont EPSCoR SOCKS Undergraduate Internships",
     "network_source": "pathways_summer_undergrad_u;pathways_summer_undergrad_v",
     "program_type": "Summer research internship",
@@ -2618,9 +2604,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 278,
+    "opportunity_id": 277,
     "public_id": "AUTO-A8011B8628",
-    "institution_id": 208,
+    "institution_id": 207,
     "program_name": "MRSEC Research Experience for Undergraduates (REU) Program",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -2632,9 +2618,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 268,
+    "opportunity_id": 267,
     "public_id": "AUTO-A822058035",
-    "institution_id": 200,
+    "institution_id": 199,
     "program_name": "Summer Research Experience in Urban Science (REU)",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -2646,9 +2632,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 277,
+    "opportunity_id": 276,
     "public_id": "AUTO-A82657B5B8",
-    "institution_id": 207,
+    "institution_id": 206,
     "program_name": "Research Experiences for Undergraduates (REU) - Gulf Coastal Plain Ecology",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -2660,9 +2646,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 214,
+    "opportunity_id": 213,
     "public_id": "AUTO-A9AAD76F8C",
-    "institution_id": 174,
+    "institution_id": 173,
     "program_name": "Washington University Computer Science & Engineering REU",
     "network_source": "expanded_sites_wustl_edu_csereu_a4031dce",
     "program_type": "Summer undergraduate research opportunity",
@@ -2674,9 +2660,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 239,
+    "opportunity_id": 238,
     "public_id": "AUTO-A9B13BB9D4",
-    "institution_id": 188,
+    "institution_id": 187,
     "program_name": "Innovations in Nanotechnology REU",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -2688,9 +2674,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 267,
+    "opportunity_id": 266,
     "public_id": "AUTO-AA4C6A509D",
-    "institution_id": 200,
+    "institution_id": 199,
     "program_name": "Summer REU in Computing; Infrastructure and Interaction Design for CyberPhysical Systems",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -2744,9 +2730,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 179,
+    "opportunity_id": 178,
     "public_id": "AUTO-ABBA32D659",
-    "institution_id": 153,
+    "institution_id": 152,
     "program_name": "BYU Physics REU and RET",
     "network_source": "pathways_summer_undergrad_b",
     "program_type": "Summer undergraduate research opportunity",
@@ -2758,7 +2744,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 185,
+    "opportunity_id": 184,
     "public_id": "AUTO-B4E424CC6D",
     "institution_id": 117,
     "program_name": "UD CPI (Center for Plastics Innovation) Summer Research Experience for Undergraduates",
@@ -2800,9 +2786,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 188,
+    "opportunity_id": 187,
     "public_id": "AUTO-BD50BBB518",
-    "institution_id": 160,
+    "institution_id": 159,
     "program_name": "Research Experience for Undergraduates (NSF-REU): Liquid Crystals and Advanced Materials",
     "network_source": "pathways_summer_undergrad_k",
     "program_type": "Summer undergraduate research opportunity",
@@ -2814,9 +2800,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 274,
+    "opportunity_id": 273,
     "public_id": "AUTO-BDC7804BAE",
-    "institution_id": 204,
+    "institution_id": 203,
     "program_name": "REU in Physics, Optics and Astrophysics",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -2856,9 +2842,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 175,
+    "opportunity_id": 174,
     "public_id": "AUTO-BF60D99DED",
-    "institution_id": 151,
+    "institution_id": 150,
     "program_name": "National High Magnetic Field Lab REU",
     "network_source": "pathways_summer_undergrad_f;pathways_summer_undergrad_n;pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -2898,9 +2884,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 243,
+    "opportunity_id": 242,
     "public_id": "AUTO-C373A5A5FD",
-    "institution_id": 190,
+    "institution_id": 189,
     "program_name": "Biochemistry Summer Undergraduate Fellowship (BSURF) Program",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer research fellowship",
@@ -2912,7 +2898,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 200,
+    "opportunity_id": 199,
     "public_id": "AUTO-C41DBF060F",
     "institution_id": 82,
     "program_name": "Human Impacts on the Colorado Plateau: Place Based Research and Education",
@@ -2954,9 +2940,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 227,
+    "opportunity_id": 226,
     "public_id": "AUTO-CAF6B8649D",
-    "institution_id": 169,
+    "institution_id": 168,
     "program_name": "Cedar Creek LTER (Long Term Ecological Research Network) Summer Internships and Spring Field Technician Positions",
     "network_source": "pathways_summer_undergrad_h;pathways_summer_undergrad_s;pathways_summer_undergrad_u",
     "program_type": "Summer research internship",
@@ -2982,9 +2968,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 240,
+    "opportunity_id": 239,
     "public_id": "AUTO-CD1A31CA42",
-    "institution_id": 189,
+    "institution_id": 188,
     "program_name": "Center for Digital Agriculture REU",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -2996,9 +2982,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 202,
+    "opportunity_id": 201,
     "public_id": "AUTO-CEC7390E96",
-    "institution_id": 167,
+    "institution_id": 166,
     "program_name": "DOE CINR Research for Undergraduates (REU)",
     "network_source": "pathways_summer_undergrad_b;pathways_summer_undergrad_i",
     "program_type": "Summer undergraduate research opportunity",
@@ -3024,9 +3010,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 279,
+    "opportunity_id": 278,
     "public_id": "AUTO-D0DA126FEC",
-    "institution_id": 208,
+    "institution_id": 207,
     "program_name": "Moncrief Summer Internship at the Oden Institute for Computational Engineering and Sciences",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer research internship",
@@ -3038,7 +3024,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 233,
+    "opportunity_id": 232,
     "public_id": "AUTO-D105C37DD0",
     "institution_id": 88,
     "program_name": "Summer Research Internships at Cooperative Institute for Climate, Ocean, and Ecosystem Studies",
@@ -3052,7 +3038,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 198,
+    "opportunity_id": 197,
     "public_id": "AUTO-D1B6036C41",
     "institution_id": 133,
     "program_name": "Collaborations in Discipline-based Education Research (CiDER): A summer REU program",
@@ -3080,9 +3066,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 231,
+    "opportunity_id": 230,
     "public_id": "AUTO-D59211B24F",
-    "institution_id": 185,
+    "institution_id": 184,
     "program_name": "SURE AHA-Funded Summer Cardiovascular Research Fellowship in Milwaukee for Undergraduates",
     "network_source": "pathways_summer_undergrad_m",
     "program_type": "Summer research fellowship",
@@ -3108,9 +3094,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 238,
+    "opportunity_id": 237,
     "public_id": "AUTO-D93E041E52",
-    "institution_id": 187,
+    "institution_id": 186,
     "program_name": "Summer Undergraduate Fellowship in Genetics (SUNFIG)",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer research fellowship",
@@ -3150,9 +3136,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 183,
+    "opportunity_id": 182,
     "public_id": "AUTO-DC4364A59E",
-    "institution_id": 157,
+    "institution_id": 156,
     "program_name": "REU: Experimental and Computational Spectroscopy:Fundamental Probes of Molecules, Molecular Interactions, and Materials",
     "network_source": "pathways_summer_undergrad_n;pathways_summer_undergrad_o",
     "program_type": "Summer undergraduate research opportunity",
@@ -3164,9 +3150,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 224,
+    "opportunity_id": 223,
     "public_id": "AUTO-DC7599E710",
-    "institution_id": 181,
+    "institution_id": 180,
     "program_name": "MD-PhD Undergraduate Summer Fellowship",
     "network_source": "pathways_summer_undergrad_d",
     "program_type": "Summer research fellowship",
@@ -3178,9 +3164,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 222,
+    "opportunity_id": 221,
     "public_id": "AUTO-DDAF04E521",
-    "institution_id": 179,
+    "institution_id": 178,
     "program_name": "Appleton-Whittell Research Ranch of the National Audubon Society Research Fellowship",
     "network_source": "pathways_summer_undergrad_a;pathways_summer_undergrad_n;pathways_summer_undergrad_u",
     "program_type": "Summer research fellowship",
@@ -3206,9 +3192,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 280,
+    "opportunity_id": 279,
     "public_id": "AUTO-DEF391830F",
-    "institution_id": 208,
+    "institution_id": 207,
     "program_name": "NSF REU: Cyberinfrastructure Research 4 Social Change",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -3248,9 +3234,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 171,
+    "opportunity_id": 170,
     "public_id": "AUTO-E542FDAA8A",
-    "institution_id": 149,
+    "institution_id": 148,
     "program_name": "NSF-CEPCEB REU Program in Next Generation Plant Biology",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -3304,9 +3290,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 248,
+    "opportunity_id": 247,
     "public_id": "AUTO-E7EB5D6BCB",
-    "institution_id": 192,
+    "institution_id": 191,
     "program_name": "Research Experiences for Undergraduates in Integrative and Evolutionary Biology (REU)",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -3360,9 +3346,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 245,
+    "opportunity_id": 244,
     "public_id": "AUTO-ED04A33EBD",
-    "institution_id": 191,
+    "institution_id": 190,
     "program_name": "Chemistry REU Program: A Summer Experience for Undergraduates Integrating Research, Education, and Career Development in an Interdisciplinary Environment",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -3374,7 +3360,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 187,
+    "opportunity_id": 186,
     "public_id": "AUTO-ED34824776",
     "institution_id": 70,
     "program_name": "Vilcek Institute of Graduate Biomedical Sciences at NYU Grosssman School of Medicine, Summer Undergraduate Research Program (SURP)",
@@ -3388,7 +3374,7 @@
     "active": 1
   },
   {
-    "opportunity_id": 196,
+    "opportunity_id": 195,
     "public_id": "AUTO-EFA8E60A0B",
     "institution_id": 93,
     "program_name": "Research Triangle – Research Experience for Undergraduates (RT-REU) on Hybrid Perovskite Materials",
@@ -3416,9 +3402,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 254,
+    "opportunity_id": 253,
     "public_id": "AUTO-F4000FA3D6",
-    "institution_id": 193,
+    "institution_id": 192,
     "program_name": "Research Experience for Undergraduates (REU) at the Center for Materials Innovation",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -3430,9 +3416,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 216,
+    "opportunity_id": 215,
     "public_id": "AUTO-F44FD4F2FE",
-    "institution_id": 176,
+    "institution_id": 175,
     "program_name": "Institut Pasteur (France) – Amgen Scholars",
     "network_source": "expanded_amgenscholars_com_182c0b77",
     "program_type": "Summer undergraduate research opportunity",
@@ -3444,9 +3430,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 192,
+    "opportunity_id": 191,
     "public_id": "AUTO-F5E99DD562",
-    "institution_id": 163,
+    "institution_id": 162,
     "program_name": "Exploring the Limits of Life - Understanding Biofilms in Extreme Environments",
     "network_source": "pathways_summer_undergrad_m",
     "program_type": "Summer undergraduate research opportunity",
@@ -3458,9 +3444,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 281,
+    "opportunity_id": 280,
     "public_id": "AUTO-FC6559F2C1",
-    "institution_id": 209,
+    "institution_id": 208,
     "program_name": "Research Experience for Undergraduates in Chihuahuan Desert Biodiversity",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -3486,9 +3472,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 276,
+    "opportunity_id": 275,
     "public_id": "AUTO-FDEA7DB19D",
-    "institution_id": 206,
+    "institution_id": 205,
     "program_name": "Southern California Earthquake Center/Summer Undergraduate Research Experience (SCEC/SURE)",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer research internship",
@@ -3514,9 +3500,9 @@
     "active": 1
   },
   {
-    "opportunity_id": 265,
+    "opportunity_id": 264,
     "public_id": "AUTO-FED0079B4B",
-    "institution_id": 198,
+    "institution_id": 197,
     "program_name": "Mechanisms of Evolution (MOE)",
     "network_source": "pathways_summer_undergrad_u",
     "program_type": "Summer undergraduate research opportunity",
@@ -3525,6 +3511,608 @@
     "program_url": "https://www.unlv.edu/lifesciences/moereu",
     "application_url": null,
     "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 290,
+    "public_id": "BND-016968799EAFA1FF",
+    "institution_id": 217,
+    "program_name": "Harvard Stem Cell Institute Internship Program (HIP)",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": "Harvard affiliated hospitals and research centers in Cambridge and Boston",
+    "delivery_format": null,
+    "program_url": "https://www.hsci.harvard.edu/research/hsci-internship-program-hip",
+    "application_url": null,
+    "notes": "2027 cycle explicitly announced. June/August dates, housing and meal details on the page are not explicitly assigned to 2027 and are not carried forward.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 304,
+    "public_id": "BND-042E169C1257475F",
+    "institution_id": 230,
+    "program_name": "Harvard Orthopedic Trauma Undergraduate Summer Internship",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": "Massachusetts General Hospital and Brigham and Women’s Hospital",
+    "delivery_format": "In person",
+    "program_url": "https://research.massgeneralbrigham.org/en/education-and-training/graduate-medical-education/orthopedics/orthopedic-trauma-undergraduate-medical-student-summer-internship",
+    "application_url": null,
+    "notes": "Unpaid status explicitly verified. Individual participation is at least ten weeks within a longer available window, so fixed duration remains unknown.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 319,
+    "public_id": "BND-0526704D904A7B9B",
+    "institution_id": 243,
+    "program_name": "Interactive Technologies Institute Summer Research Internships",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://iti.larsys.pt/summer-internships-with-the-hci-leaders-in-portugal-2025/",
+    "application_url": null,
+    "notes": "Three-month research-assistant programme beginning June 2025; some projects explicitly in Funchal. Individual projects remain within one program. Historical named application retained as a potential future option; recurrence is unconfirmed. Current program dates and benefits not inferred.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 317,
+    "public_id": "BND-0FD32711D40006A0",
+    "institution_id": 241,
+    "program_name": "MDRC Gueron Scholars Undergraduate Internship",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://www.mdrc.org/about/careers/gueron-scholars-program/undergraduate-internship",
+    "application_url": null,
+    "notes": "Unstated requirements and benefits remain unknown; eligibility parsing is incomplete.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 310,
+    "public_id": "BND-105242E0C290B8A5",
+    "institution_id": 234,
+    "program_name": "Boston Children’s Newborn Medicine Summer Student Research Program",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://cecourses.childrenshospital.org/undergraduate-medical-education/newborn-medicine-summer-student-research-program/about/",
+    "application_url": null,
+    "notes": "Hourly compensation varies with education level. Research includes laboratory, clinical and epidemiologic projects; observation is supplementary. Unstated requirements and benefits remain unknown; eligibility parsing is incomplete.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 307,
+    "public_id": "BND-10C2DBCECC2450FD",
+    "institution_id": 233,
+    "program_name": "IU Cancer Research Internship Summer Program (CRISP)",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://cancer.iu.edu/education/summer/acs-cancer-research-internship.html",
+    "application_url": null,
+    "notes": "Stipend provided; amount unknown. Separate named CRISP program, not the IU summer-program directory. 2026 requirements retained; 2027 reopening announcement does not transfer historical exclusions or benefits to that cycle.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 298,
+    "public_id": "BND-13B2F7D71670221A",
+    "institution_id": 225,
+    "program_name": "Math REU at Kent State",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://www.math.kent.edu/~soprunova/reu/",
+    "application_url": null,
+    "notes": "$5,600 supports stipend and expenses; the separate stipend amount is unknown. Unstated requirements and benefits remain unknown; eligibility parsing is incomplete.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 297,
+    "public_id": "BND-1B7A018F8D13AD41",
+    "institution_id": 224,
+    "program_name": "Michigan State ACRES: Advanced Computational Research Experience",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://icer-acres.msu.edu/",
+    "application_url": null,
+    "notes": "Unstated requirements and benefits remain unknown; eligibility parsing is incomplete.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 318,
+    "public_id": "BND-1ECDDC0758E4C878",
+    "institution_id": 242,
+    "program_name": "Harvard Program for Research in Markets & Organizations (PRIMO)",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://www.hbs.edu/doctoral/research-opportunities/primo",
+    "application_url": null,
+    "notes": "Research stipend offered, amount unknown. Unstated requirements and benefits remain unknown; eligibility parsing is incomplete.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 291,
+    "public_id": "BND-20237D237DB15D9A",
+    "institution_id": 218,
+    "program_name": "Harvard Immunology Undergraduate Summer Program",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://immunologysummer.hms.harvard.edu/",
+    "application_url": null,
+    "notes": "Unstated requirements and benefits remain unknown; eligibility parsing is incomplete.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 302,
+    "public_id": "BND-22646DCE6E6BBF90",
+    "institution_id": 229,
+    "program_name": "OHSU Biomedical Informatics and Data Science Internship",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://www.ohsu.edu/school-of-medicine/medical-informatics-and-clinical-epidemiology/college-undergraduate-and-graduate",
+    "application_url": null,
+    "notes": "Host describes a 10-12 week commitment; no single duration inferred. Distinct from OHSU B-BRITE and Vollum programs. Benefits and delivery format not established.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 295,
+    "public_id": "BND-243DA7FF3D4DDFA6",
+    "institution_id": 222,
+    "program_name": "Bee Health and Ecology Research Objective (Bee-HERO) Summer",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": "Preparation at Sacred Heart University in Fairfield, Connecticut; research at SLU in Uppsala, Sweden; subsequent conference participation",
+    "delivery_format": "Hybrid",
+    "program_url": "https://www.sacredheart.edu/academics/colleges--schools/college-of-arts--sciences/departments--schools/biology/bee-health-and-ecology-research-objective-bee-hero/",
+    "application_url": null,
+    "notes": "Four weeks remote preparation, two-week SHU bootcamp, eight weeks research in Sweden, three-day return session, and conference the following spring. Ten weeks describes paid phases, not total commitment. Undated host description; current recruitment unconfirmed. Total duration kept unknown because required phases extend beyond the ten paid weeks. Research site is Sweden, not the U.S. grant address.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 286,
+    "public_id": "BND-2C367B1C520C35CD",
+    "institution_id": 214,
+    "program_name": "Irvine Summer Institute in Neuroscience",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": "Hybrid",
+    "program_url": "https://cnlm.uci.edu/summerinstitute/",
+    "application_url": null,
+    "notes": "Ten weeks total, including two remote weeks. Funding cohorts remain one program. GPA exceptions and cohort-specific admission require host confirmation; unstated rules remain unknown.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 320,
+    "public_id": "BND-331673672AEF2B91",
+    "institution_id": 221,
+    "program_name": "Data Science Institute Summer Lab",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://datascience.uchicago.edu/education/summerlab/",
+    "application_url": null,
+    "notes": "Paid research; amount unknown. 2027 applications announced for fall 2026, with dates still unconfirmed. Unstated requirements and benefits remain unknown; eligibility parsing is incomplete.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 321,
+    "public_id": "BND-33A0067A0044A145",
+    "institution_id": 244,
+    "program_name": "Canary Cancer Research Education Summer Training (CREST) Program",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "http://canarycenter.stanford.edu/canarycrest.html",
+    "application_url": null,
+    "notes": "Stanford enrollment provides an exception to citizenship restrictions; no blanket international exclusion. Housing and travel assistance are not guaranteed full coverage.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 313,
+    "public_id": "BND-3B085FB25BD2BF2C",
+    "institution_id": 237,
+    "program_name": "Biozentrum Research Summer",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://www.biozentrum.unibas.ch/summer-schools/biozentrum-research-summer",
+    "application_url": null,
+    "notes": "Seven-to-nine weeks, scheduled individually in July-September. Gross pay CHF 1,736 monthly, prorated; no USD conversion. Citizenship/Swiss-permit condition retained explicitly. U.S. students with qualifying dual citizenship may be eligible; no blanket nationality boolean inferred.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 322,
+    "public_id": "BND-464A056240B6B30B",
+    "institution_id": 245,
+    "program_name": "Vienna BioCenter Summer School",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://training.vbc.ac.at/summer-school/",
+    "application_url": null,
+    "notes": "EUR 1,400 net for nine weeks; accommodation and medical insurance provided. No USD conversion. Program identity and general terms confirmed; cycle year and future application availability remain unknown.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 288,
+    "public_id": "BND-5305A9021F6CF0A0",
+    "institution_id": 10,
+    "program_name": "REU: Purdue Undergraduate Research Experiences for Plant Biology and Data Science",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://ag.purdue.edu/cpb/intern-applications.html",
+    "application_url": null,
+    "notes": "Official 2026 dates verified. Stale graduation-year parenthetical conflicts with the remaining-semester rule; no class-standing or graduation booleans inferred.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 296,
+    "public_id": "BND-73BBBE2428FA40F0",
+    "institution_id": 223,
+    "program_name": "Math REU - Summer Undergraduate Math Research at Yale (SUMRY)",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://sumry.yale.edu/",
+    "application_url": null,
+    "notes": "Unstated requirements and benefits remain unknown; eligibility parsing is incomplete.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 314,
+    "public_id": "BND-79F21F31A047E404",
+    "institution_id": 238,
+    "program_name": "Max Planck Infection Biology International Summer Internship",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://www.mpiib-berlin.mpg.de/mpiib-isi",
+    "application_url": null,
+    "notes": "Named international summer internship extends through October. Host lists EUR 1,400 living stipend without a clear payment basis in this page; no USD or total amount inferred. Late-summer/autumn schedule remains explicit; program is not represented as compatible with a standard June-August break.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 315,
+    "public_id": "BND-7B6ED5F870DF9DEE",
+    "institution_id": 239,
+    "program_name": "Max Planck Dresden Biological Physics Summer Internship",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://www.pks.mpg.de/biophys-internship",
+    "application_url": null,
+    "notes": "Financial support provided. Individually arranged placement up to 90 days; fixed duration and amount unknown. Unstated requirements and benefits remain unknown; eligibility parsing is incomplete.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 292,
+    "public_id": "BND-804B27DFE7E2D01A",
+    "institution_id": 219,
+    "program_name": "Stowers Summer Scholars Program",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://www.stowers.org/gradschool/summer-scholars",
+    "application_url": null,
+    "notes": "2027 dates verified in Key Dates. Eligibility/application prose still references 2026; its benefits and exclusions have not been copied into the 2027 cycle.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 285,
+    "public_id": "BND-8E928A3C32D5CA98",
+    "institution_id": 213,
+    "program_name": "NSF - ERC Center for Quantum Networks Summer REU",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://cqn-erc.arizona.edu/education/research-experience-undergraduates",
+    "application_url": null,
+    "notes": "Unstated requirements and benefits remain unknown; eligibility parsing is incomplete.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 308,
+    "public_id": "BND-96A34FBE16F81CB3",
+    "institution_id": 233,
+    "program_name": "IU Summer Program for Academic Research in Cancer (SPARC)",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": "In person",
+    "program_url": "https://cancer.iu.edu/education/summer/sparc.html",
+    "application_url": null,
+    "notes": "Stipend provided; amount unknown. Funding-specific citizenship restriction remains in text, not a program-wide exclusion. Separate SPARC identity despite shared host/application processes.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 326,
+    "public_id": "BND-9F88C54D6EEEEC73",
+    "institution_id": 249,
+    "program_name": "USC Wrigley Summer Research Internship Program",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": "University Park Campus in Los Angeles and Wrigley Marine Science Center on Catalina Island; project-dependent",
+    "delivery_format": "In person",
+    "program_url": "https://dornsife.usc.edu/wrigley/education/undergraduate-internships/summer-research-internships/",
+    "application_url": null,
+    "notes": "Retained with explicit internal-only eligibility; not presented as open to external students. Research projects and two physical sites are not separate program identities.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 305,
+    "public_id": "BND-A6C3522AB1BE8D15",
+    "institution_id": 231,
+    "program_name": "Harvard Biological Sciences in Public Health Summer Internship (BPH-SIP)",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://hsph.harvard.edu/fellowship-special-program/biological-sciences-undergraduate-summer-internship/",
+    "application_url": null,
+    "notes": "2027 participation dates confirmed. Host says full application and eligibility details are still forthcoming; no exact application deadline or stipend inferred.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 301,
+    "public_id": "BND-AA16732F7CF13127",
+    "institution_id": 228,
+    "program_name": "DOE EM STARS Scholarship and Summer Internship",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": "DOE headquarters, field offices and national laboratories; individual placement site varies",
+    "delivery_format": null,
+    "program_url": "https://orise.orau.gov/em-stars/",
+    "application_url": null,
+    "notes": "Integrated scholarship includes two mentored summer internships and an expected postgraduation employment commitment. Academic-year awards are separate from summer stipends. Named placement component verified, not a standalone funding record. Unknown cycle; qualified-institution condition remains explicit and unresolved.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 300,
+    "public_id": "BND-AD9E145142C3DA1D",
+    "institution_id": 227,
+    "program_name": "Cornell Food Science Summer Scholars",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://cals.cornell.edu/food-science/degrees-programs/undergraduate/summer-scholars",
+    "application_url": null,
+    "notes": "Stipend amount provided individually by host; remains unknown. Preferred GPA is not imported as a minimum.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 312,
+    "public_id": "BND-AF92E5175A9419E0",
+    "institution_id": 236,
+    "program_name": "John Innes Centre International Undergraduate Summer School",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": "Norwich Research Park partner institutes",
+    "delivery_format": null,
+    "program_url": "https://jic.ac.uk/training-careers/summer-schools/international-undergraduate/",
+    "application_url": null,
+    "notes": "Accommodation and contribution to living costs provided; amount unknown. Unstated requirements and benefits remain unknown; eligibility parsing is incomplete.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 299,
+    "public_id": "BND-B90359FB3952035A",
+    "institution_id": 226,
+    "program_name": "Cornell Cardiac Undergraduate Research Experience (CURE)",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://www.cnf.cornell.edu/education/reu/cure-biomed-research-experience",
+    "application_url": null,
+    "notes": "CURE is a separately named AHA program; shared CNF administration does not make it the CNF REU. Citizenship and class standing remain unknown.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 316,
+    "public_id": "BND-BDE6D307BDA71B98",
+    "institution_id": 240,
+    "program_name": "Helmholtz Munich Epigenetics, Stem Cells and AI Summer Internship",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://www.helmholtz-munich.de/en/cross-disciplinary-initiatives/epigenetics/summer-internship",
+    "application_url": null,
+    "notes": "Two-month July-August placement; accommodation and monthly allowance provided, amount unknown. Unstated requirements and benefits remain unknown; eligibility parsing is incomplete.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 309,
+    "public_id": "BND-C2DF1B29996A2B09",
+    "institution_id": 233,
+    "program_name": "IU Educational Pathways for Cancer Research (EPCR) — Undergraduate Track",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": "In person",
+    "program_url": "https://cancer.iu.edu/education/summer/epcr.html",
+    "application_url": null,
+    "notes": "Undergraduate track only; four-week teacher program is not included. Stipend provided, amount unknown. Two-year commitment is retained. Funding-specific citizenship rule is not generalized to all admission routes.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 306,
+    "public_id": "BND-C6B9312351378BFE",
+    "institution_id": 232,
+    "program_name": "KU Cancer Center Jewell Summer Research Training Program",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://www.kucancercenter.org/training-education/graduate-education/jewell-summer-research-training-program",
+    "application_url": null,
+    "notes": "Pay is $17 hourly for 20-40 hours weekly. No weekly or total stipend inferred. 2027 cycle documented; application not yet available. Hourly pay is retained without inventing a fixed stipend.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 303,
+    "public_id": "BND-DB88DECA55467223",
+    "institution_id": 229,
+    "program_name": "ONPRC Undergraduate Summer Fellowship",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": "Oregon National Primate Research Center / OHSU West Campus",
+    "delivery_format": null,
+    "program_url": "https://www.ohsu.edu/onprc/training-and-education",
+    "application_url": null,
+    "notes": "General Undergraduate Summer Fellowship kept distinct from Oregon-only Provost Scholar track. Provost housing/meal support is not copied to this program. DACA is retained in text.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 311,
+    "public_id": "BND-DBC535C54583B38C",
+    "institution_id": 235,
+    "program_name": "CNIO Summer Training Programme",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://www.cnio.es/en/education-and-career-development/career-development-programmes/undergraduate-students/",
+    "application_url": null,
+    "notes": "Named summer research programme; individual laboratory placements and annual calls are not separate programs. Unverified benefits remain unknown.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 287,
+    "public_id": "BND-ED2CE6021F3AF531",
+    "institution_id": 215,
+    "program_name": "USC ICT REU Site",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": "In person",
+    "program_url": "https://ict.usc.edu/reu/",
+    "application_url": null,
+    "notes": "2026 dates retained; December announcement for 2027 does not roll forward 2026 benefits. Combined $8,650 package is not recorded as stipend alone.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 293,
+    "public_id": "BND-EE1A33FDBC219779",
+    "institution_id": 220,
+    "program_name": "BCM–Dana Foundation Neuroscience and Society Summer Internship",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": "Remote; in-person option in Houston, Texas",
+    "delivery_format": "Virtual or in person",
+    "program_url": "https://www.bcm.edu/academic-centers/medical-ethics-and-health-policy/education/bioethics-research-clinical-ethics-internship",
+    "application_url": null,
+    "notes": "Paid summer research, approximately 20 hours weekly during June-August; stipend amount unknown. No laboratory or clinical work. Summer-cycle year is unstated; fall 2027 enrollment is preserved as a requirement, not converted into a summer year.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 327,
+    "public_id": "BND-EPFL-SRP",
+    "institution_id": 250,
+    "program_name": "EPFL Life Sciences Summer Research Program",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://www.epfl.ch/schools/sv/education/summer-research-program/",
+    "application_url": null,
+    "notes": "Unstated requirements and benefits remain unknown; eligibility parsing is incomplete.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 325,
+    "public_id": "BND-F53ABA314FA6ECCE",
+    "institution_id": 248,
+    "program_name": "MPIA Summer Internship",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": "In person",
+    "program_url": "https://www.mpia.de/en/careers/internships/summer",
+    "application_url": null,
+    "notes": "Up to three months, normally May-September. Approximately EUR 1,000 net monthly plus social benefits. Applications for 2027 expected January 2027; exact date unknown. Host explicitly labels detailed terms as 2026 and subject to change. No historical benefits or exclusions rolled forward to 2027.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 289,
+    "public_id": "BND-F59FA276BAF2E64D",
+    "institution_id": 216,
+    "program_name": "REU: Center for Computation and Technology at Louisiana State University",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://reu.cct.lsu.edu/",
+    "application_url": null,
+    "notes": "May 25 start and July 31 forum are tentative, so exact program dates remain unknown. Current page retains stale open-application wording; 2026 cycle is historical.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 324,
+    "public_id": "BND-FAFD06616CCDF8CB",
+    "institution_id": 247,
+    "program_name": "DESY Summer Student Programme",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://summerstudents.desy.de/",
+    "application_url": null,
+    "notes": "Daily salary EUR 28.50; travel reimbursed at least in part. No USD conversion. Unstated requirements and benefits remain unknown; eligibility parsing is incomplete.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 294,
+    "public_id": "BND-FC787A676E49233A",
+    "institution_id": 221,
+    "program_name": "University of Chicago REU in Contemporary Physics",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://physics.uchicago.edu/research-experiences-for-undergraduates/",
+    "application_url": null,
+    "notes": "Historical program remains a potential future option. Host explicitly says it will not run in summer 2026. No dated active cycle verified. Historical benefits and eligibility exclusions are not applied as current structured facts.",
+    "active": 1
+  },
+  {
+    "opportunity_id": 323,
+    "public_id": "BND-ISTA-ISTERNSHIP",
+    "institution_id": 246,
+    "program_name": "ISTA ISTernship Summer Fellowship",
+    "network_source": null,
+    "program_type": null,
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://phd.pages.ist.ac.at/isternship/",
+    "application_url": null,
+    "notes": "Two-to-three-month summer research placements historically offered to bachelor/master students and recent graduates. Program paused in 2026; host plans a 2027 announcement later in 2026. Retained as a potential future option. Historical eligibility and 2025 compensation are not applied as current-cycle facts.",
     "active": 1
   },
   {
@@ -3881,14 +4469,14 @@
     "opportunity_id": 8,
     "public_id": "SROP-OSU",
     "institution_id": 8,
-    "program_name": "Big Ten SROP – The Ohio State University",
+    "program_name": "Ohio State University Summer Research Opportunities Program (SROP)",
     "network_source": "Big Ten Academic Alliance SROP",
     "program_type": "SROP / multidisciplinary summer research",
-    "location_scope": "On-site host campus",
-    "delivery_format": "In person",
-    "program_url": "https://btaa.org/resources-for/students/srop/campus-profiles",
-    "application_url": "https://apps.btaa.org/srop/apply",
-    "notes": "Shared SROP application permits selection of multiple participating universities; intended for students interested in PhD study.",
+    "location_scope": null,
+    "delivery_format": null,
+    "program_url": "https://gradsch.osu.edu/faculty-and-staff/graduate-student-access-and-fairness/summer-research-opportunities-program-srop",
+    "application_url": null,
+    "notes": "Existing SROP-OSU identity retained; 2027 is an additional cycle, not a second public opportunity. Host gives eight weeks in overview and eight-to-ten in participation prose; confirm schedule.",
     "active": 1
   },
   {

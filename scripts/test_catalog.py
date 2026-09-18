@@ -120,7 +120,7 @@ class CatalogTests(unittest.TestCase):
             JOIN eligibility_rules e USING(cycle_id)
             ORDER BY o.public_id
         """).fetchall()
-        self.assertEqual(len(rows), self.count("opportunities"))
+        self.assertEqual(len(rows), self.count("program_cycles"))
         for public_id, parse_status, has_source in rows:
             if parse_status == "reviewed":
                 self.assertEqual(has_source, 1, public_id)
@@ -220,7 +220,54 @@ class CatalogTests(unittest.TestCase):
     def test_public_catalog_matches_database(self):
         payload = json.loads((ROOT / "data" / "summer-research" / "catalog.json").read_text(encoding="utf-8"))
         self.assertEqual(len(payload["opportunities"]), self.count("opportunities"))
-        self.assertEqual(payload["schema_version"], "1.2.0")
+        self.assertEqual(payload["schema_version"], "1.3.0")
+
+    def test_undated_and_annual_records_share_one_public_program(self):
+        from catalog_common import SCHEMA, connect
+        from import_catalog import upsert_import
+        from export_catalog import export
+
+        row = dict(Program_ID="TEST-UNDATED", Program_Name="Summer Biology Research",
+                   Host_Institution="Example University", Primary_Field="Life Sciences",
+                   Secondary_Fields="Neuroscience & Cognitive Science",
+                   Cycle_Year="", Status="Unknown", Last_Verified="2026-09-18",
+                   Program_URL="https://example.edu/summer-research/",
+                   Eligibility_Parse_Status="needs_review")
+        evidence = dict(url=row["Program_URL"], date_checked="2026-09-18",
+                        fields_supported=["Program_Name", "Secondary_Fields"],
+                        checked_by="Official source review", limitations="Cycle unknown")
+        row["Source_Evidence_JSON"] = json.dumps([evidence])
+        self.assertEqual(preflight([row])[0], [])
+        self.assertTrue(preflight([row, row])[0])
+        for changes in ({"Status": "Open"}, {"Application_Deadline": "2027-01-01"}):
+            self.assertTrue(preflight([{**row, **changes}])[0])
+        for changes in ({"date_checked": "2026-02-30"},
+                        {"fields_supported": ["Stipend_Total_USD"]}):
+            invalid = {**row, "Source_Evidence_JSON": json.dumps([{**evidence, **changes}])}
+            self.assertTrue(preflight([invalid])[0])
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory)
+            source = path / "accepted.csv"
+            source.write_text("accepted fixture\n")
+            database = path / "catalog.sqlite"
+            connection = connect(database)
+            connection.executescript(SCHEMA.read_text())
+            with connection:
+                upsert_import(connection, source, [row])
+                upsert_import(connection, source, [row])
+                upsert_import(connection, source, [{**row, "Cycle_Year": "2027"}])
+            self.assertEqual(connection.execute("SELECT COUNT(*) FROM program_cycles").fetchone()[0], 2)
+            self.assertEqual(connection.execute("SELECT COUNT(*) FROM source_verifications").fetchone()[0], 2)
+            connection.close()
+            export(database, path / "output")
+            catalog = json.loads((path / "output/catalog.json").read_text())
+            self.assertEqual(len(catalog["opportunities"]), 1)
+            program = catalog["opportunities"][0]
+            self.assertEqual([c["cycle_year"] for c in program["cycles"]], [2027, None])
+            self.assertIn("Neuroscience & Cognitive Science", [c["category_name"] for c in program["categories"]])
+            verifications = json.loads((path / "output/sources.json").read_text())["verifications"]
+            self.assertTrue(all(v["fields_supported"] == evidence["fields_supported"] for v in verifications))
+            self.assertTrue(all(v["conflict_notes"] == "Cycle unknown" for v in verifications))
 
     def test_discovery_protocol_tables_are_seeded(self):
         self.assertGreaterEqual(self.count("discovery_sources"), 25)

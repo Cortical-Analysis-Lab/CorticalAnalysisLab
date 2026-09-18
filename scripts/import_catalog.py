@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 import sqlite3
+from datetime import date
 from pathlib import Path
 
 from catalog_common import (
@@ -100,9 +101,19 @@ def preflight(rows):
         if (row.get("Eligibility_Parse_Status") == "reviewed"
                 and (row.get("Eligibility_Checked_By") or "").startswith("local automated pipeline")):
             errors.append(f"{label}: automated retrieval is not reviewed eligibility")
-        for field in ("Program_ID", "Program_Name", "Host_Institution", "Cycle_Year"):
+        for field in ("Program_ID", "Program_Name", "Host_Institution"):
             if not text_or_none(row.get(field)):
                 errors.append(f"{label}: missing {field}")
+        year = text_or_none(row.get("Cycle_Year"))
+        if year and (not year.isdigit() or not 2000 <= int(year) <= 2200):
+            errors.append(f"{label}: Cycle_Year must be blank or a year between 2000 and 2200")
+        if not year:
+            if normalize_status(row.get("Status")) in {"open", "upcoming", "active"}:
+                errors.append(f"{label}: undated program cannot claim current application availability")
+            if any(iso_date(row.get(field)) for field in (
+                "Program_Start", "Program_End", "Application_Open", "Application_Deadline"
+            )):
+                errors.append(f"{label}: exact cycle dates require a known Cycle_Year")
         key = (text_or_none(row.get("Program_ID")), int_or_none(row.get("Cycle_Year")))
         if key in seen:
             errors.append(f"{label}: duplicate Program_ID/Cycle_Year {key}")
@@ -135,6 +146,41 @@ def preflight(rows):
         parse_status = text_or_none(row.get("Eligibility_Parse_Status"))
         if parse_status and parse_status not in {"reviewed", "needs_review", "not_applicable"}:
             errors.append(f"{label}: invalid Eligibility_Parse_Status: {parse_status}")
+        for category in (row.get("Secondary_Fields") or "").split(";"):
+            if category.strip() and category.strip() not in {item[1] for item in CATEGORIES}:
+                errors.append(f"{label}: unknown secondary category: {category.strip()}")
+        if text_or_none(row.get("Source_Evidence_JSON")):
+            try:
+                evidence = json.loads(row["Source_Evidence_JSON"])
+                if not isinstance(evidence, list) or not evidence:
+                    raise ValueError("must be a nonempty list")
+                seen_sources = set()
+                for item in evidence:
+                    if not isinstance(item, dict):
+                        raise ValueError("each source must be an object")
+                    url = item.get("url")
+                    if not isinstance(url, str) or not valid_url(url) or disallowed_verification_source(url):
+                        raise ValueError("evidence must use official program URLs")
+                    checked = item.get("date_checked")
+                    if not isinstance(checked, str) or date.fromisoformat(checked).isoformat() != checked:
+                        raise ValueError("date_checked must be an ISO date")
+                    key = (url, checked)
+                    if key in seen_sources:
+                        raise ValueError("duplicate source/date evidence")
+                    seen_sources.add(key)
+                    fields = item.get("fields_supported")
+                    if not isinstance(fields, list) or not fields or any(
+                        not isinstance(field, str) or field not in row or not text_or_none(row[field])
+                        or field in {"Source_Evidence_JSON", "Bundle_Provenance"}
+                        for field in fields
+                    ):
+                        raise ValueError("fields_supported must name populated CSV data fields")
+                    if not isinstance(item.get("checked_by"), str) or not item["checked_by"].strip():
+                        raise ValueError("checked_by is required")
+                    if item.get("limitations") is not None and not isinstance(item["limitations"], str):
+                        raise ValueError("limitations must be text")
+            except (ValueError, TypeError) as exc:
+                errors.append(f"{label}: invalid Source_Evidence_JSON: {exc}")
     return errors, warnings
 
 
@@ -191,10 +237,10 @@ def upsert_import(connection, path, rows):
         )
         connection.execute(
             "INSERT INTO program_cycles(opportunity_id, cycle_year, duration_weeks, program_start, program_end, application_open, application_deadline, application_url, deadline_text, status_code, status_text, stipend_total_usd, stipend_weekly_usd, housing_status, housing_details, meals_status, meals_details, travel_status, travel_details, academic_credit_status, last_verified, data_confidence) "
-            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT(opportunity_id, cycle_year) DO UPDATE SET duration_weeks=excluded.duration_weeks, program_start=excluded.program_start, program_end=excluded.program_end, application_open=excluded.application_open, application_deadline=excluded.application_deadline, application_url=excluded.application_url, deadline_text=excluded.deadline_text, status_code=excluded.status_code, status_text=excluded.status_text, stipend_total_usd=excluded.stipend_total_usd, stipend_weekly_usd=excluded.stipend_weekly_usd, housing_status=excluded.housing_status, housing_details=excluded.housing_details, meals_status=excluded.meals_status, meals_details=excluded.meals_details, travel_status=excluded.travel_status, travel_details=excluded.travel_details, academic_credit_status=excluded.academic_credit_status, last_verified=excluded.last_verified, data_confidence=excluded.data_confidence, updated_at=CURRENT_TIMESTAMP",
+            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ON CONFLICT DO UPDATE SET duration_weeks=excluded.duration_weeks, program_start=excluded.program_start, program_end=excluded.program_end, application_open=excluded.application_open, application_deadline=excluded.application_deadline, application_url=excluded.application_url, deadline_text=excluded.deadline_text, status_code=excluded.status_code, status_text=excluded.status_text, stipend_total_usd=excluded.stipend_total_usd, stipend_weekly_usd=excluded.stipend_weekly_usd, housing_status=excluded.housing_status, housing_details=excluded.housing_details, meals_status=excluded.meals_status, meals_details=excluded.meals_details, travel_status=excluded.travel_status, travel_details=excluded.travel_details, academic_credit_status=excluded.academic_credit_status, last_verified=excluded.last_verified, data_confidence=excluded.data_confidence, updated_at=CURRENT_TIMESTAMP",
             cycle_values,
         )
-        cycle_id = connection.execute("SELECT cycle_id FROM program_cycles WHERE opportunity_id=? AND cycle_year=?", (opportunity_id, cycle_year)).fetchone()[0]
+        cycle_id = connection.execute("SELECT cycle_id FROM program_cycles WHERE opportunity_id=? AND cycle_year IS ?", (opportunity_id, cycle_year)).fetchone()[0]
         prior_research = normalize_choice(row.get("Prior_Research_Status"))
         if prior_research not in {"required", "preferred", "not_required", "unknown"}:
             prior_research = "unknown"
@@ -240,6 +286,9 @@ def upsert_import(connection, path, rows):
             connection.execute("INSERT OR REPLACE INTO opportunity_categories(opportunity_id, category_id, is_primary, assignment_method) VALUES (?, ?, 1, 'imported')", (opportunity_id, category_id))
         for category_name in inferred_secondary_categories(row, primary):
             link_category(connection, opportunity_id, category_name, False, "tag_keyword")
+        for category_name in (row.get("Secondary_Fields") or "").split(";"):
+            if category_name.strip() and category_name.strip() != primary:
+                link_category(connection, opportunity_id, category_name.strip(), False, "reviewed_seed_category")
 
         raw_tags = [tag.strip() for tag in (text_or_none(row.get("Field_Tags")) or "").split(";") if tag.strip()]
         for raw_tag in raw_tags:
@@ -264,13 +313,27 @@ def upsert_import(connection, path, rows):
                 continue
             connection.execute("INSERT INTO sources(source_url, source_name, source_type, authoritative) VALUES (?, ?, ?, 1) ON CONFLICT(source_url) DO UPDATE SET source_name=excluded.source_name", (source_url, source_name, source_type))
             source_id = connection.execute("SELECT source_id FROM sources WHERE source_url=?", (source_url,)).fetchone()[0]
+            if text_or_none(row.get("Source_Evidence_JSON")):
+                continue  # Explicit field evidence replaces blanket program-page attribution.
             if source_type == "official_program":
-                supported = [key for key, value in row.items() if text_or_none(value) and key not in {"Application_URL"}]
+                supported = [key for key, value in row.items() if text_or_none(value) and key not in {"Application_URL", "Bundle_Provenance", "Source_Evidence_JSON"}]
             else:
                 supported = ["Application_URL"]
             connection.execute(
                 "INSERT OR IGNORE INTO source_verifications(opportunity_id, cycle_id, source_id, date_checked, verification_status, fields_supported, checked_by) VALUES (?, ?, ?, ?, ?, ?, 'seed_dataset')",
                 (opportunity_id, cycle_id, source_id, iso_date(row.get("Last_Verified")), "partially_verified", json.dumps(supported)),
+            )
+        for evidence in json.loads(row.get("Source_Evidence_JSON") or "[]"):
+            connection.execute(
+                "INSERT INTO sources(source_url, source_name, source_type, authoritative) VALUES (?, ?, 'official_program', 1) ON CONFLICT(source_url) DO NOTHING",
+                (evidence["url"], f"{row['Program_Name']} field evidence"),
+            )
+            source_id = connection.execute("SELECT source_id FROM sources WHERE source_url=?", (evidence["url"],)).fetchone()[0]
+            connection.execute(
+                "INSERT INTO source_verifications(opportunity_id, cycle_id, source_id, date_checked, verification_status, fields_supported, checked_by, conflict_notes) "
+                "VALUES (?, ?, ?, ?, 'partially_verified', ?, ?, ?) ON CONFLICT(opportunity_id, cycle_id, source_id, date_checked) "
+                "DO UPDATE SET fields_supported=excluded.fields_supported, checked_by=excluded.checked_by, conflict_notes=excluded.conflict_notes",
+                (opportunity_id, cycle_id, source_id, evidence["date_checked"], json.dumps(evidence["fields_supported"]), evidence["checked_by"], evidence.get("limitations")),
             )
         eligibility_source_url = text_or_none(row.get("Eligibility_Source_URL"))
         if eligibility_source_url and not funding_metadata_only and parse_status == "reviewed":

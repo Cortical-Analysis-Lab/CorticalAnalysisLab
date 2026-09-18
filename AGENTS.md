@@ -36,14 +36,14 @@ Key files:
 
 The schema separates institutions, stable programs (`opportunities`), annual cycles, structured eligibility, categories, tags, research modes, sources, verifications, and import provenance. Stable program identity and annual cycle data must remain separate.
 
-Current catalog scale after the September 2026 scope cleanup (remaining entries are not all fact-verified):
+Current catalog scale after the September 18, 2026 accepted bundle batch (remaining entries are not all fact-verified):
 
-- 285 programs and annual cycles
-- 213 normalized institutions
+- 327 distinct programs; 328 cycle/snapshot records, including 8 undated snapshots
+- 250 normalized host/location records
 - 13 broad categories
-- 105 detailed research tags
+- 191 detailed research tags
 - 11 controlled research modes
-- 350 source-verification events
+- 393 source-verification events
 
 Planning scale target:
 
@@ -61,7 +61,7 @@ Apply these checks to existing records and future additions before accepting cor
 
 - **Scope:** Confirm a distinct undergraduate summer research opportunity. Directories, search results, mentor/advice pages, historical recaps, PI conferences, and academic-year-only programs must not become independent summer opportunities.
 - **Identity and duplicates:** Check redirects, URL variants, repeated program/host names, and NSF grant renewals. Preserve stable program IDs and provenance when consolidating. Shared names or portals alone do not prove duplication; retain legitimate collaborative hosts and campuses.
-- **Annual cycles:** Verify cycle years, application windows, deadlines, and availability from official evidence. Do not use grant funding/end years as application-cycle years or roll historical dates forward. If a year is unknown, keep the record in external review or explicitly resolve missing-cycle support; never invent a year to satisfy the importer.
+- **Annual cycles:** Verify cycle years, application windows, deadlines, and availability from official evidence. Do not use grant funding/end years as application-cycle years or roll historical dates forward. Verified identities may remain included with a blank CSV `Cycle_Year` (NULL in SQLite). Retain historical and paused programs as potential options without claiming current availability. Keep the same `Program_ID` across cycles: one public program listing, with dated cycles and at most one undated snapshot. Never invent a year to satisfy the importer.
 - **Eligibility:** Verify external applicants, citizenship/residency, class standing, graduation timing, enrollment, institution type, minimum GPA, and other hard requirements. Separate preferences from exclusions and NSF-funded eligibility from host-wide admission rules. Unsupported booleans remain NULL; incomplete parsing is `needs_review`, not `reviewed`.
 - **Duration and format:** Verify full program duration rather than an orientation/training segment, and confirm in-person, virtual, or hybrid delivery. Investigate outliers without automatically changing valid values.
 - **Institutions and locations:** Verify institution names and actual participant locations rather than assuming the grant recipient's mailing address is the research site. Preserve supported multi-site/international locations and distinguish real campuses from naming artifacts. Do not infer coordinates or missing locations.
