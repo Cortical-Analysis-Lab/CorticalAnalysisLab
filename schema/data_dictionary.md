@@ -13,6 +13,7 @@ The accepted CSV under `database/imports/` is the version-controlled source used
 - **Tag**: narrower research topic, method, mode, audience, or program characteristic.
 - **Research mode**: controlled, many-to-many methodology values such as wet lab, computational, field, or clinical.
 - **Source verification**: which source supported which fields, when it was checked, and whether conflicts existed.
+- **Opportunity review**: explicit provisional status, pending checks and original bundle reports. Reported housing availability is distinct from who pays for it; room and board may be covered, paid through a fee, conditional, or unknown. Bundle extraction/review labels do not imply independent verification. These records add no source-verification event.
 
 - **Discovery source**: a directory, database, network, search engine, professional society, host universe, or secondary lead source that produced a candidate. It may or may not be authoritative for any program fact.
 - **Opportunity discovery**: many-to-many provenance linking a candidate or canonical opportunity to the source and URL where it was discovered.

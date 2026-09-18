@@ -137,7 +137,7 @@ def preflight(rows):
             )
         if not text_or_none(row.get("Primary_Field")):
             warnings.append(f"{label}: missing Primary_Field")
-        if not text_or_none(row.get("Last_Verified")):
+        if not text_or_none(row.get("Last_Verified")) and row.get("Catalog_Review_Status") != "needs_review":
             warnings.append(f"{label}: missing Last_Verified")
         for field in ELIGIBILITY_BOOLEAN_COLUMNS:
             value = text_or_none(row.get(field))
@@ -146,6 +146,23 @@ def preflight(rows):
         parse_status = text_or_none(row.get("Eligibility_Parse_Status"))
         if parse_status and parse_status not in {"reviewed", "needs_review", "not_applicable"}:
             errors.append(f"{label}: invalid Eligibility_Parse_Status: {parse_status}")
+        review_status = text_or_none(row.get("Catalog_Review_Status"))
+        if review_status:
+            if review_status not in {"needs_review", "supplement_needs_review"}:
+                errors.append(f"{label}: invalid Catalog_Review_Status")
+            if not text_or_none(row.get("Review_Notes")):
+                errors.append(f"{label}: provisional information requires Review_Notes")
+            if review_status == "needs_review" and (parse_status == "reviewed" or text_or_none(row.get("Last_Verified")) or text_or_none(row.get("Source_Evidence_JSON"))):
+                errors.append(f"{label}: provisional program cannot claim completed source or eligibility verification")
+        if row.get("Bundle_Details_JSON"):
+            try:
+                details = json.loads(row["Bundle_Details_JSON"])
+                if not isinstance(details, list) or any(not isinstance(item, dict) for item in details):
+                    raise ValueError("must be a list of objects")
+                if not review_status:
+                    raise ValueError("requires Catalog_Review_Status")
+            except (ValueError, TypeError) as exc:
+                errors.append(f"{label}: invalid Bundle_Details_JSON: {exc}")
         for category in (row.get("Secondary_Fields") or "").split(";"):
             if category.strip() and category.strip() not in {item[1] for item in CATEGORIES}:
                 errors.append(f"{label}: unknown secondary category: {category.strip()}")
@@ -227,6 +244,12 @@ def upsert_import(connection, path, rows):
             (public_id, institution_id, text_or_none(row["Program_Name"]), text_or_none(row.get("Network_Source")), text_or_none(row.get("Program_Type")), text_or_none(row.get("Location_Scope")), text_or_none(row.get("Format")), text_or_none(row.get("Program_URL")), text_or_none(row.get("Application_URL")), text_or_none(row.get("Notes"))),
         )
         opportunity_id = connection.execute("SELECT opportunity_id FROM opportunities WHERE public_id=?", (public_id,)).fetchone()[0]
+        if row.get("Catalog_Review_Status"):
+            connection.execute(
+                "INSERT INTO opportunity_review(opportunity_id, review_status, review_notes, bundle_details_json) VALUES (?, ?, ?, ?) "
+                "ON CONFLICT(opportunity_id) DO UPDATE SET review_status=excluded.review_status, review_notes=excluded.review_notes, bundle_details_json=excluded.bundle_details_json",
+                (opportunity_id, row["Catalog_Review_Status"], row["Review_Notes"], row.get("Bundle_Details_JSON") or "[]"),
+            )
         cycle_year = int_or_none(row["Cycle_Year"])
         cycle_values = (
             opportunity_id, cycle_year, number_or_none(row.get("Duration_Weeks")), iso_date(row.get("Program_Start")), iso_date(row.get("Program_End")),
@@ -311,12 +334,17 @@ def upsert_import(connection, path, rows):
         ):
             if not source_url:
                 continue
+            if row.get("Catalog_Review_Status") == "needs_review":
+                connection.execute("INSERT OR IGNORE INTO sources(source_url, source_name, source_type, authoritative) VALUES (?, ?, 'unreviewed_program_link', 0)", (source_url, source_name))
+                continue  # Importing a bundle is not an official-source verification event.
             connection.execute("INSERT INTO sources(source_url, source_name, source_type, authoritative) VALUES (?, ?, ?, 1) ON CONFLICT(source_url) DO UPDATE SET source_name=excluded.source_name", (source_url, source_name, source_type))
             source_id = connection.execute("SELECT source_id FROM sources WHERE source_url=?", (source_url,)).fetchone()[0]
             if text_or_none(row.get("Source_Evidence_JSON")):
                 continue  # Explicit field evidence replaces blanket program-page attribution.
             if source_type == "official_program":
-                supported = [key for key, value in row.items() if text_or_none(value) and key not in {"Application_URL", "Bundle_Provenance", "Source_Evidence_JSON"}]
+                supported = [key for key, value in row.items() if text_or_none(value) and key not in {"Application_URL", "Bundle_Provenance", "Source_Evidence_JSON", "Catalog_Review_Status", "Review_Notes", "Bundle_Details_JSON"}]
+                if row.get("Catalog_Review_Status") == "supplement_needs_review":
+                    supported = [key for key in supported if key not in {"Field_Tags", "Secondary_Fields"}]
             else:
                 supported = ["Application_URL"]
             connection.execute(

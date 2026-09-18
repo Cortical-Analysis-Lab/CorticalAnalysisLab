@@ -57,6 +57,10 @@ def export(database: Path, output: Path):
     catalog = []
     for opportunity in opportunities:
         item = dict(opportunity)
+        review = connection.execute("SELECT review_status, review_notes, bundle_details_json FROM opportunity_review WHERE opportunity_id=?", (item["opportunity_id"],)).fetchone()
+        item["review_status"] = review["review_status"] if review else None
+        item["review_notes"] = review["review_notes"] if review else None
+        item["bundle_details"] = json.loads(review["bundle_details_json"]) if review else []
         item["institution"] = institution_by_id[item.pop("institution_id")]
         item["categories"] = cats_by_opp.get(item["opportunity_id"], [])
         item["tags"] = tags_by_opp.get(item["opportunity_id"], [])

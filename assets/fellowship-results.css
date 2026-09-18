@@ -135,3 +135,12 @@
 .selected-preference button { flex-shrink: 0; min-width: 36px; min-height: 36px; border: 0; border-radius: 8px; background: transparent; color: inherit; font: inherit; font-size: 1.25rem; cursor: pointer; }
 .selected-preference button:hover { background: #e9c5d0; }
 .selected-preference button:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+
+.program-review-details { margin: 0.75rem 0; font-size: 0.82rem; line-height: 1.5; overflow-wrap: anywhere; }
+.program-review-details summary { color: var(--red); cursor: pointer; font-weight: 600; }
+.program-review-details summary:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+.program-review-details p { margin: 0.6rem 0; }
+.bundle-report { border-top: 1px solid #ddd; margin-top: 0.6rem; padding-top: 0.4rem; }
+.bundle-report dl { margin: 0.5rem 0; }
+.bundle-report dt { font-weight: 600; }
+.bundle-report dd { margin: 0 0 0.4rem; }

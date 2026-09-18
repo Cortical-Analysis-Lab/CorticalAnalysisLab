@@ -14,7 +14,7 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DB = ROOT / "database" / "research_opportunities.sqlite"
 SCHEMA = ROOT / "schema" / "schema.sql"
-IMPORTER_VERSION = "1.3.0"
+IMPORTER_VERSION = "1.4.0"
 NA_VALUES = {"n/a", "na", "not applicable"}
 
 NON_AUTHORITATIVE_EVIDENCE_HOSTS = {

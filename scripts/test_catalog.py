@@ -220,7 +220,7 @@ class CatalogTests(unittest.TestCase):
     def test_public_catalog_matches_database(self):
         payload = json.loads((ROOT / "data" / "summer-research" / "catalog.json").read_text(encoding="utf-8"))
         self.assertEqual(len(payload["opportunities"]), self.count("opportunities"))
-        self.assertEqual(payload["schema_version"], "1.3.0")
+        self.assertEqual(payload["schema_version"], "1.4.0")
 
     def test_undated_and_annual_records_share_one_public_program(self):
         from catalog_common import SCHEMA, connect
@@ -463,8 +463,32 @@ class CatalogTests(unittest.TestCase):
         self.assertIn("programhub", pathways["notes"].lower())
 
     def test_program_urls_are_preserved_for_public_catalog(self):
-        missing = self.db.execute("SELECT COUNT(*) FROM opportunities WHERE program_url IS NULL").fetchone()[0]
+        missing = self.db.execute("SELECT COUNT(*) FROM opportunities o LEFT JOIN opportunity_review r USING(opportunity_id) WHERE program_url IS NULL AND COALESCE(r.review_status, '') != 'needs_review'").fetchone()[0]
         self.assertEqual(missing, 0)
+
+    def test_provisional_import_does_not_invent_verification_or_eligibility(self):
+        rows = load_rows(ROOT / "database/imports/summer_undergraduate_research_opportunities_starter.csv")
+        provisional = [r for r in rows if r.get("Catalog_Review_Status") == "needs_review"]
+        self.assertTrue(provisional)
+        for row in provisional:
+            self.assertFalse(row["Last_Verified"])
+            self.assertTrue(row["Review_Notes"])
+            self.assertTrue(json.loads(row["Bundle_Details_JSON"]))
+        self.assertTrue(preflight([{**provisional[0], "Last_Verified": "2026-09-18"}])[0])
+        self.assertTrue(preflight([{**provisional[0], "Eligibility_Parse_Status": "reviewed"}])[0])
+        self.assertTrue(preflight([{**provisional[0], "Review_Notes": ""}])[0])
+        count = self.db.execute("SELECT COUNT(*) FROM opportunity_review r JOIN source_verifications v USING(opportunity_id) WHERE r.review_status='needs_review'").fetchone()[0]
+        self.assertEqual(count, 0)
+        payload = json.loads((ROOT / "data/summer-research/catalog.json").read_text())
+        public = {r["public_id"]: r for r in payload["opportunities"]}
+        for row in provisional:
+            program = public[row["Program_ID"]]
+            self.assertEqual(program["bundle_details"], json.loads(row["Bundle_Details_JSON"]))
+            self.assertEqual(program["review_notes"], row["Review_Notes"])
+        # A shared ONPRC page describes both an Oregon-only track and a general fellowship.
+        self.assertIn("BND-DB88DECA55467223", public)
+        for excluded in ("BND-9F88C54D6EEEEC73", "AUTO-66F10F2519", "BND-AA16732F7CF13127"):
+            self.assertNotIn(excluded, public)
 
     def test_csv_seed_round_trip_matches_committed_json(self):
         with tempfile.TemporaryDirectory() as directory:

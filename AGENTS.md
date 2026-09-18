@@ -38,12 +38,12 @@ The schema separates institutions, stable programs (`opportunities`), annual cyc
 
 Current catalog scale after the September 18, 2026 accepted bundle batch (remaining entries are not all fact-verified):
 
-- 327 distinct programs; 328 cycle/snapshot records, including 8 undated snapshots
-- 250 normalized host/location records
+- 982 program identities; 983 cycle/snapshot records, including 669 undated snapshots
+- 675 reported host/location records; provisional locations still need review
 - 13 broad categories
-- 191 detailed research tags
+- 1,847 detailed research tags, including provisional bundle topic assignments
 - 11 controlled research modes
-- 393 source-verification events
+- 386 source-verification events; provisional imports do not create verification events
 
 Planning scale target:
 
@@ -54,6 +54,10 @@ Planning scale target:
 A distinct program is a separately named research program or application at a host institution. Do not count student slots, individual faculty projects, annual cycles, funding records, directories, news/support pages, or program-list hubs as separate public opportunity records.
 
 Opportunity discovery, evaluation, verification, and review happen outside this repository. Only accepted records enter the committed CSV. Missing facts remain `NULL`/`unknown`. Funding, grant, and award records are local discovery leads only; do not use them as canonical program records, application URLs, or field-verification evidence.
+
+The user's September 18 instruction explicitly accepts the remaining bundle program candidates provisionally. The catalog includes 662 provisional identities plus unreviewed bundle supplements on 283 existing identities. Keep their `Catalog_Review_Status`, `Review_Notes` and `Bundle_Details_JSON` visible and reproducible; do not call them independently verified. Keep reported benefits and topic evidence without overwriting verified cycle facts. Exclude confirmed host-only, partner-only or institution-type restrictions that rule out SHU students; retain unknown external eligibility for review. Never exclude a general program because a different track shares its URL. Publication remains suspended.
+
+Next requested work is tracked in [docs/catalog-follow-up.md](docs/catalog-follow-up.md): complete the overlap audit across the bundle and existing catalog, review remaining provisional opportunities and supplements, and remove cycle dates from canonical program names during that cleanup. The current listing count is not a verified distinct-program count. Preserve original names and dates in provenance/cycle history, and retain meaningful program-name numbers such as Biosphere 2.
 
 ## Required opportunity verification
 
