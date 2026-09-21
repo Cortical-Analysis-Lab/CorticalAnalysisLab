@@ -38,7 +38,7 @@ The schema separates institutions, stable programs (`opportunities`), annual cyc
 
 Current catalog scale after the September 21, 2026 name/identity cleanup (remaining entries are not all fact-verified):
 
-- 953 program identities; 954 cycle/snapshot records, including 638 undated snapshots
+- 953 program identities; 954 cycle/snapshot records, including 639 undated snapshots
 - 661 reported host/location records; provisional locations still need review
 - 13 broad categories
 - 1,843 detailed research tags, including provisional bundle topic assignments
@@ -97,7 +97,8 @@ Current behavior:
 - Catalog summary cards beside the Step 2 title show program, institution, and topic counts. They are enlarged, close to the title, and center-aligned.
 - Opportunity cards use the original explorer presentation, not eligibility-result badges or reasons. Cards show status, program, institution, deadline, format, duration, housing, minimum GPA, category/tags, official link, and verification date.
 - Unknown card values display as `N/A`. U.S. location labels show the full state name only; international labels show country and city. Expand ISO country codes for display, reuse an explicit `City, Country` location if the structured city is missing, and otherwise keep missing city/state as `N/A`. Do not guess locations from institution names.
-- Every card opens **Program details** through its title or details button, including records without bundle reports. Use a native modal dialog capped at 800px wide over a strongly dimmed backdrop, with a visible X close button and Escape support. Keep the header visible, scroll long content within the available viewport, and restore focus to the trigger on close. Use compact responsive sections for overview, location/dates, eligibility, funding/living arrangements, and research areas/topics. Keep historical source reports in separately expandable sections with cycle context and preserve specific review notes.
+- Every card opens **Program details** through its title or details button, including records without bundle reports. Use a native modal dialog capped at 800px wide over a strongly dimmed backdrop, with a visible X close button and Escape support. Keep the header visible, scroll long content within the available viewport, and restore focus to the trigger on close. Render details only when opened. Use compact responsive sections for location/dates, eligibility, funding/living arrangements, and research areas/topics. Keep descriptions and historical source reports in separately expandable sections with cycle context and preserve specific review notes.
+- Missing structured fields may show attributed narrative reports from generated `reported_facts`, with reported year and full source text accessible under the relevant detail field. These reports do not become numeric amounts, eligibility exclusions or other canonical facts. Preserve qualifications, ranges, currency/unit text and distinct report years. Accepted `catalogDisplayNotes` in bundle JSON supply cycle-specific wording for reviewed conditions (such as housing deductions); preserve prior values in `catalogFactHistory`.
 - The card matrix is compact, full-width, and responsive. Do not reintroduce the global 900px section cap.
 - The prominent keyword search sits beside **Matching opportunities**, not in the filter sidebar.
 - Current preference filters are research area, state, housing, travel, and separate Open and Upcoming checkboxes. Selecting both includes either status; selecting neither includes all statuses. Stipend and eligibility-result filters were intentionally removed.

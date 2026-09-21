@@ -189,3 +189,8 @@ button.program-title-button:focus-visible, button.program-details-button:focus-v
 
 button.program-title-button:hover, button.program-details-button:hover { background: transparent; color: var(--red); transform: none; }
 button.program-dialog-close:hover { background: #f7eff1; color: var(--red); transform: none; }
+
+.card-fact-value { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden; }
+.reported-field { margin-top: 0.25rem; }
+.reported-field summary { font-size: 0.8rem; }
+.reported-field p { font-size: 0.85rem; }

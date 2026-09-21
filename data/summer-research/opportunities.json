@@ -374,7 +374,7 @@
     "delivery_format": "Unknown",
     "program_url": "https://cse.umn.edu/chem/nsf-reulandocsp-program",
     "application_url": null,
-    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review. Scope consolidation 2026-09-16: AUTO-9F7D9A90CA (https://ugresearch.umn.edu/opportunities/urop); Same program represented by a support page or URL variant; retain the program listing. No cycle facts copied. Scope review 2026-09-16: identity/link corrected using https://cse.umn.edu/chem/nsf-reulandocsp-program. Prior URL: https://chem.umn.edu/lando. Remaining cycle and eligibility fields require review.; Identity consolidation: retained AUTO-0AFA826865; merged BND-012C3A26C715AC1C. Same named Lando chemistry REU at Minnesota; the official page names NSF-REU/Lando/CSP as one program. Original rows and bundle reports retained in Bundle_Details_JSON; no factual re-verification.",
+    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review. Scope consolidation 2026-09-16: AUTO-9F7D9A90CA (https://ugresearch.umn.edu/opportunities/urop); Same program represented by a support page or URL variant; retain the program listing. No cycle facts copied. Scope review 2026-09-16: identity/link corrected using https://cse.umn.edu/chem/nsf-reulandocsp-program. Prior URL: https://chem.umn.edu/lando. Remaining cycle and eligibility fields require review.; Identity consolidation: retained AUTO-0AFA826865; merged BND-012C3A26C715AC1C. Same named Lando chemistry REU at Minnesota; the official page names NSF-REU/Lando/CSP as one program. Original rows and bundle reports retained in Bundle_Details_JSON; no factual re-verification.; Display consistency review 2026-09-21: Official 2026 domestic stipend is $9,747; housing charges may be deducted. The older approximately $7,400 report does not supersede it.",
     "active": 1
   },
   {
@@ -444,7 +444,7 @@
     "delivery_format": "Unknown",
     "program_url": "http://ocean.tamu.edu/academics/reu/",
     "application_url": null,
-    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.; Identity consolidation: retained AUTO-0E5D3B84D0; merged BND-8FCBB0B58EE8F88C. The Texas A&M Oceanography bundle description explicitly identifies its theme as Observing the Ocean, matching the incumbent. Original rows and bundle reports retained in Bundle_Details_JSON; no factual re-verification.",
+    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.; Identity consolidation: retained AUTO-0E5D3B84D0; merged BND-8FCBB0B58EE8F88C. The Texas A&M Oceanography bundle description explicitly identifies its theme as Observing the Ocean, matching the incumbent. Original rows and bundle reports retained in Bundle_Details_JSON; no factual re-verification.; Display consistency review 2026-09-21: Official program financial-support page states $600/week for ten weeks. The separate $2,000 presentation prize is not stipend support.",
     "active": 1
   },
   {
@@ -906,7 +906,7 @@
     "delivery_format": "Unknown",
     "program_url": "https://lcdlab.berkeley.edu/summer-internship/",
     "application_url": null,
-    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.",
+    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.; Display consistency review 2026-09-21: Official 2026 page states the internship is unpaid, with $2,700 living-cost support for a limited number unable to secure external funding.",
     "active": 1
   },
   {
@@ -1116,7 +1116,7 @@
     "delivery_format": "Unknown",
     "program_url": "https://www.geosc.psu.edu/beyond-classroom/geopeers-reu",
     "application_url": null,
-    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.",
+    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.; Display consistency review 2026-09-21: Official page specifies $600/week and eight weeks but no application year. Removed unsupported 2026 snapshot label; preserved original values in history.",
     "active": 1
   },
   {
@@ -1214,7 +1214,7 @@
     "delivery_format": "Unknown",
     "program_url": "http://reu.biop.lsa.umich.edu/",
     "application_url": null,
-    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.",
+    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.; Display consistency review 2026-09-21: Official 2026 program states $6,000 stipend; corrected $6 parsing error. Funding is contingent on NSF support.",
     "active": 1
   },
   {
@@ -1326,7 +1326,7 @@
     "delivery_format": "Unknown",
     "program_url": "https://web.uri.edu/gso/academics/surfo/",
     "application_url": null,
-    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.",
+    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.; Display consistency review 2026-09-21: Seven weeks and $600/week are explicitly the 2025 program. The page says 2026 is contingent on funding; removed the 2025 duration from the 2026 snapshot.",
     "active": 1
   },
   {
@@ -1494,7 +1494,7 @@
     "delivery_format": "Unknown",
     "program_url": "https://artsci.tamu.edu/mathematics/academics/undergraduate/reu-index.html",
     "application_url": null,
-    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.",
+    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.; Display consistency review 2026-09-21: Official page calls the $4,400 stipend anticipated; its year is not explicit. Display qualification rather than a guaranteed current award.",
     "active": 1
   },
   {
@@ -1690,7 +1690,7 @@
     "delivery_format": "Unknown",
     "program_url": "https://tunl.duke.edu/education/reu",
     "application_url": null,
-    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.",
+    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.; Display consistency review 2026-09-21: Official program financial-support page confirms $7,000 for the summer; program application page identifies the 2026 cycle. Travel support depends on research location.",
     "active": 1
   },
   {
@@ -1872,7 +1872,7 @@
     "delivery_format": "Unknown",
     "program_url": "https://www.gmri.org/projects/research-experience-undergraduates/",
     "application_url": null,
-    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.",
+    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.; Display consistency review 2026-09-21: Official 2026 listing specifies $600 per week for ten weeks, not a $600 total. No total was calculated.",
     "active": 1
   },
   {
@@ -2628,7 +2628,7 @@
     "delivery_format": "Unknown",
     "program_url": "http://reu.byu.edu/",
     "application_url": null,
-    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.",
+    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.; Display consistency review 2026-09-21: The $2,500 amount belongs to housing support for teachers, not an undergraduate stipend. Current page describes 2027 undergraduate support of $7,000; do not copy it into 2026.",
     "active": 1
   },
   {
@@ -2654,9 +2654,9 @@
     "program_type": "Summer undergraduate research opportunity",
     "location_scope": "Unknown",
     "delivery_format": "Unknown",
-    "program_url": "http://med.stanford.edu/cvi/education/aha-cvi-undergraduate-summer-research-program.html",
+    "program_url": "https://med.stanford.edu/cvi/education/cvi-summer-research-program.html",
     "application_url": null,
-    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.",
+    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.; Display consistency review 2026-09-21: Official 2026 program gives minimum $7,000 support; approximately $1,900 is remaining support after the eight-week housing option, not a weekly stipend. Fully virtual placements have a different package.",
     "active": 1
   },
   {
@@ -2684,7 +2684,7 @@
     "delivery_format": "Unknown",
     "program_url": "https://www.kent.edu/chemistry/undergraduate-summer-research-experience-reu",
     "application_url": null,
-    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.",
+    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.; Display consistency review 2026-09-21: Official program page states no funding for Summer 2026. Its general $7,000 support description is not a confirmed 2026 offer.",
     "active": 1
   },
   {
@@ -2894,7 +2894,7 @@
     "delivery_format": "Unknown",
     "program_url": "https://physics.uark.edu/undergraduate/reu-program/index.php",
     "application_url": null,
-    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.",
+    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.; Display consistency review 2026-09-21: Official page with 2026 research projects lists $6,000 per participant, not the canonical $7,000 or older report $5,000.",
     "active": 1
   },
   {
@@ -2950,7 +2950,7 @@
     "delivery_format": "Unknown",
     "program_url": "https://www.classe.cornell.edu/StudentOpportunities/ReuProgram.html",
     "application_url": null,
-    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.",
+    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.; Display consistency review 2026-09-21: Official page assigns its $6,000 stipend to the 2025 program. Preserve as reported 2025 support rather than an unverified 2026 amount.",
     "active": 1
   },
   {
@@ -3356,7 +3356,7 @@
     "delivery_format": "Unknown",
     "program_url": "https://med.und.edu/education-training/biomedical-sciences/reu/index.html",
     "application_url": null,
-    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.",
+    "notes": "Automated local promotion from official-source discovery; incomplete fields logged as N/A for review.; Display consistency review 2026-09-21: Official 2026 listing separates a $7,000 salary/stipend from travel reimbursement capped at $1,000.",
     "active": 1
   },
   {

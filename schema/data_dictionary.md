@@ -2,6 +2,10 @@
 
 The accepted CSV under `database/imports/` is the version-controlled source used to reproduce the canonical published SQLite database. Files under `data/summer-research/` are generated views and must not be edited directly.
 
+The catalog JSON also exposes derived `reported_facts`: field-indexed excerpts of accepted bundle descriptions with the original reported cycle, source URL, text-year mentions and report index. These are presentation evidence, not parsed canonical facts. Do not use them for numeric sorting or eligibility exclusions. Text-year mentions do not establish a program cycle. Missing canonical values remain NULL even when a reported statement is displayed.
+
+Within `Bundle_Details_JSON`, accepted `catalogDisplayNotes` can supply cycle-specific display wording and source context for reviewed qualifications (for example, minimum support before housing deductions). They must match the displayed cycle and must not overwrite preserved source reports. Prior values remain in `catalogFactHistory`.
+
 ## Entity boundaries
 
 - **Institution**: one physical host/location used for map aggregation. A national network or multi-site federal program may use a clearly labeled umbrella institution until site-level placements are modeled.

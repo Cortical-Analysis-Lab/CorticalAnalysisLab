@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 
 from catalog_common import DEFAULT_DB, ROOT, connect, dump_json
+from reported_catalog_facts import reported_facts
 
 DEFAULT_OUTPUT = ROOT / "data" / "summer-research"
 def records(connection, sql, params=()):
@@ -61,6 +62,7 @@ def export(database: Path, output: Path):
         item["review_status"] = review["review_status"] if review else None
         item["review_notes"] = review["review_notes"] if review else None
         item["bundle_details"] = json.loads(review["bundle_details_json"]) if review else []
+        item["reported_facts"] = reported_facts(item)
         item["institution"] = institution_by_id[item.pop("institution_id")]
         item["categories"] = cats_by_opp.get(item["opportunity_id"], [])
         item["tags"] = tags_by_opp.get(item["opportunity_id"], [])

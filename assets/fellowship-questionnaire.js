@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const resultContainer = document.getElementById("opportunity-results");
   let opportunities = [];
   let evaluatedResults = [];
+  let displayedResults = [];
   const selectedCategories = new Map();
   const researchAreaLabels = new Map();
   const selectedLocations = new Map();
@@ -58,8 +59,50 @@ document.addEventListener("DOMContentLoaded", async () => {
     return (opportunity.bundle_details || []).find(item => known(item[field]))?.[field];
   }
   function benefitDisplay(opportunity, cycle, field, bundleField) {
-    return known(cycle[field]) ? display(cycle[field]) : known(reportedBenefit(opportunity, bundleField))
-      ? `${reportedValue(reportedBenefit(opportunity, bundleField))} (reported)` : "N/A";
+    if (known(cycle[field])) return display(cycle[field]);
+    if (cycle[field.replace("_status", "_details")]) return cycle[field.replace("_status", "_details")];
+    const report = (opportunity.bundle_details || []).find(item => known(item[bundleField]));
+    if (!report) return "N/A";
+    const cost = report[bundleField.replace("Provision", "Cost")];
+    const year = report.benefitsCycle || report.cycle;
+    return `${reportedValue(report[bundleField])}${known(cost) ? `; ${reportedValue(cost)}` : "; cost N/A"} (reported${year ? ` ${year}` : "; year unspecified"})`;
+  }
+  function fieldNote(opportunity, cycle, field) {
+    return (opportunity.bundle_details || []).flatMap(report => report.catalogDisplayNotes || [])
+      .find(note => note.field === field && (note.cycle ?? null) === (cycle.cycle_year ?? null));
+  }
+  function reportContext(report) {
+    const years = [...new Set((report.text_years || []).map(String))].filter(year => year !== String(report.reported_cycle));
+    const context = report.reported_cycle ? `Reported ${report.reported_cycle}` : "Reported; year unspecified";
+    return context + (years.length ? ` (text also mentions ${years.join(" / ")})` : "");
+  }
+  function reportPreview(report, field) {
+    if (field !== "stipend" || report.text.length <= 160) return report.text;
+    // Quote a monetary phrase only when it explicitly names the stipend. Keep
+    // ranges/truncation and combined compensation packages in the full report.
+    if (/between|ranging|compensation package|\$[\d,]+(?:\.\d+)?\s*[-–]\s*\$?\d|\$[\d,]+\s*(?:and|to)\s*(?:\$|…)/i.test(report.text)) return "Amount described; see program details";
+    const phrases = report.text.match(/(?:stipend\s*(?:of|is|:)\s*(?:(?:approximately|up to|at least|a minimum of)\s*)?\$[\d,]+(?:\.\d+)?(?:\s*(?:\/|per)\s*(?:week|hour|month))?|(?:(?:approximately|up to|at least|minimum)\s+)?\$[\d,]+(?:\.\d+)?(?:\s*(?:\/|per)\s*(?:week|hour|month))?\s+(?:weekly\s+)?stipend)/gi);
+    if (!phrases || phrases.length !== 1) return "Funding described; see program details";
+    return `${phrases[0]} — see reported terms`;
+  }
+  function fieldDisplay(opportunity, cycle, field, value) {
+    const note = fieldNote(opportunity, cycle, field);
+    if (note?.display) return note.display;
+    if (display(value) !== "N/A") return display(value);
+    const reports = opportunity.reported_facts?.[field] || [];
+    if (!reports.length) return "N/A";
+    const report = reports[0];
+    // Display the statement as reported, never convert its numbers into a
+    // canonical amount, minimum requirement, duration, or eligibility exclusion.
+    return `${reportContext(report)}: ${reportPreview(report, field)}`;
+  }
+  function reportedFieldDetails(opportunity, cycle, field, value) {
+    const reports = opportunity.reported_facts?.[field] || [];
+    const note = fieldNote(opportunity, cycle, field);
+    if (!reports.length && !note) return "";
+    const isMissing = display(value) === "N/A";
+    const noteText = note ? `<p>${escapeHtml(note.text || note.display)} ${referenceLink(note.sourceUrl)}</p>` : "";
+    return `${noteText}${reports.length ? `<details class="reported-field"><summary>${isMissing ? "Reported information" : "Other reported information"}</summary>${reports.map(report => `<p class="detail-context">${escapeHtml(reportContext(report))}</p>${detailText(report.text)}${referenceLink(report.source_url)}`).join("")}</details>` : ""}`;
   }
   function referenceLink(value) {
     try {
@@ -102,9 +145,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     const cycle = opportunity.cycles?.[0] || {};
     const eligibility = cycle.eligibility || {};
     const reports = opportunity.bundle_details || [];
-    const row = (label, value) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(display(value))}</dd></div>`;
+    const row = (label, value, field = null) => {
+      const primary = field ? fieldDisplay(opportunity, cycle, field, value) : display(value);
+      const missingReport = field && display(value) === "N/A" && opportunity.reported_facts?.[field]?.length && !fieldNote(opportunity, cycle, field)?.display;
+      // Full statements are available in the disclosure, keeping long imported
+      // descriptions from overwhelming the compact facts grid.
+      const shown = missingReport && primary.length > 180 ? "See reported information below" : primary;
+      return `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(shown)}${field ? reportedFieldDetails(opportunity, cycle, field, value) : ""}</dd></div>`;
+    };
     const section = (title, content) => `<section class="program-detail-section"><h4>${title}</h4>${content}</section>`;
-    const overview = reports.find(item => item.summary);
     const sourceReports = reports.map(item => {
       const amount = prefix => [item[`${prefix}Amount`], item[`${prefix}Currency`], reportedValue(item[`${prefix}AmountBasis`])].filter(value => value !== null && value !== undefined && value !== "N/A" && value !== "").join(" ");
       const sources = [...new Set([item.programUrl, item.sourceUrl, ...(item.benefitsSourceUrls || [])].filter(Boolean))].map(referenceLink).filter(Boolean);
@@ -122,11 +171,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     return `<div class="program-review-details">
       <div class="expanded-program-content">
         ${opportunity.review_notes ? `<aside class="program-review-note"><strong>Review notes</strong>${detailText(opportunity.review_notes)}</aside>` : ""}
-        ${overview ? section("Overview", `<p class="detail-context">Reported cycle: ${escapeHtml(overview.cycle || overview.benefitsCycle || "N/A")}</p>${detailText(overview.summary)}`) : ""}
         <div class="expanded-program-layout">
-          ${section("Location and dates", `<dl class="expanded-facts">${row("Location", locationLabel(opportunity, locationVariant))}${row("Format", opportunity.delivery_format)}${row("Duration", cycle.duration_weeks == null ? null : `${cycle.duration_weeks} weeks`)}${row("Cycle", cycle.cycle_year)}${row("Starts", dateDisplay(cycle.program_start))}${row("Ends", dateDisplay(cycle.program_end))}${row("Application deadline", dateDisplay(cycle.application_deadline))}${row("Availability", cycle.status_text || cycle.status_code)}</dl>`)}
-          ${section("Eligibility", `<dl class="expanded-facts">${row("Minimum GPA", eligibility.min_gpa)}</dl>` + detailText(eligibility.raw_eligibility_text) + (eligibility.other_rule_text ? detailText(eligibility.other_rule_text) : ""))}
-          ${section("Funding and living arrangements", `<dl class="expanded-facts">${row("Stipend", stipendDisplay(cycle))}${row("Housing", cycle.housing_details || benefitDisplay(opportunity, cycle, "housing_status", "housingProvision"))}${row("Meals", cycle.meals_details || benefitDisplay(opportunity, cycle, "meals_status", "mealsProvision"))}${row("Travel", cycle.travel_details || cycle.travel_status)}${row("Academic credit", cycle.academic_credit_status)}</dl>`)}
+          ${section("Location and dates", `<dl class="expanded-facts">${row("Location", locationLabel(opportunity, locationVariant))}${row("Format", opportunity.delivery_format, "format")}${row("Duration", cycle.duration_weeks == null ? null : `${cycle.duration_weeks} weeks`, "duration")}${row("Cycle", cycle.cycle_year)}${row("Starts", dateDisplay(cycle.program_start))}${row("Ends", dateDisplay(cycle.program_end))}${row("Application deadline", dateDisplay(cycle.application_deadline), "deadline")}${row("Availability", cycle.status_text || cycle.status_code)}</dl>`)}
+          ${section("Eligibility", `<dl class="expanded-facts">${row("Minimum GPA", eligibility.min_gpa, "minimum_gpa")}</dl>` + (eligibility.raw_eligibility_text ? detailText(eligibility.raw_eligibility_text) : reportedFieldDetails(opportunity, cycle, "eligibility", null) || detailText(null)) + (eligibility.other_rule_text ? detailText(eligibility.other_rule_text) : ""))}
+          ${section("Funding and living arrangements", `<dl class="expanded-facts">${row("Stipend", stipendDisplay(cycle), "stipend")}${row("Housing", cycle.housing_details || benefitDisplay(opportunity, cycle, "housing_status", "housingProvision"), "housing")}${row("Meals", cycle.meals_details || benefitDisplay(opportunity, cycle, "meals_status", "mealsProvision"), "meals")}${row("Travel", cycle.travel_details || cycle.travel_status, "travel")}${row("Academic credit", cycle.academic_credit_status, "academic_credit")}</dl>`)}
           ${section("Research areas and topics", `<p>${associatedResearchAreas(opportunity).map(([, label]) => escapeHtml(label)).join(" · ") || "N/A"}</p><ul class="detail-topics">${(opportunity.tags || []).map(tag => `<li>${escapeHtml(tag.tag_name)}</li>`).join("") || "<li>N/A</li>"}</ul>`)}
         </div>
         ${sourceReports ? `<section class="program-source-reports"><h4>Additional source information</h4><p class="detail-context">Expand a source to see its reported requirements and benefits. Reports may describe different cycles.</p>${sourceReports}</section>` : ""}
@@ -205,7 +253,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     return {state: "eligible", reasons: ["No known hard eligibility rules conflict with your answers."]};
   }
 
-  function card({opportunity, location: locationVariant}) {
+  function card({opportunity, location: locationVariant}, resultIndex = 0) {
     const cycle = opportunity.cycles?.[0] || {};
     const institution = opportunity.institution || {};
     const location = locationLabel(opportunity, locationVariant);
@@ -213,13 +261,23 @@ document.addEventListener("DOMContentLoaded", async () => {
     const matchesSelectedTag = tag => activeCategories.some(([slug]) => tagMatchesCategory(tag.tag_name, slug));
     const tags = [...(opportunity.tags || [])].sort((a, b) => Number(matchesSelectedTag(b)) - Number(matchesSelectedTag(a))).slice(0, 4);
     const cardCategories = associatedResearchAreas(opportunity).map(([, label]) => label);
-    return `<article class="eligibility-card">
+    return `<article class="eligibility-card" data-result-index="${resultIndex}">
       <div class="card-status-row"><span class="cycle-status status-badge ${escapeHtml(display(cycle.status_code).toLowerCase())}">${escapeHtml(display(cycle.status_code))}</span></div>
       <h3><button type="button" class="program-title-button" data-program-details aria-haspopup="dialog">${escapeHtml(opportunity.program_name)}</button></h3><p class="institution-line">${escapeHtml(institution.institution_name)} · ${escapeHtml(location)}</p>
-      <dl class="program-details"><div><dt>Deadline</dt><dd>${escapeHtml(dateDisplay(cycle.application_deadline))}</dd></div><div><dt>Format</dt><dd>${escapeHtml(display(opportunity.delivery_format))}</dd></div><div><dt>Duration</dt><dd>${cycle.duration_weeks === null || cycle.duration_weeks === undefined ? "N/A" : `${escapeHtml(cycle.duration_weeks)} weeks`}</dd></div><div><dt>Stipend</dt><dd>${escapeHtml(stipendDisplay(cycle))}</dd></div><div><dt>Housing</dt><dd>${escapeHtml(benefitDisplay(opportunity, cycle, "housing_status", "housingProvision"))}</dd></div><div><dt>Meals</dt><dd>${escapeHtml(benefitDisplay(opportunity, cycle, "meals_status", "mealsProvision"))}</dd></div><div><dt>Minimum GPA</dt><dd>${escapeHtml(display(cycle.eligibility?.min_gpa))}</dd></div></dl>
+      <dl class="program-details">${[
+        ["Deadline", "deadline", dateDisplay(cycle.application_deadline)],
+        ["Format", "format", opportunity.delivery_format],
+        ["Duration", "duration", cycle.duration_weeks == null ? null : `${cycle.duration_weeks} weeks`],
+        ["Stipend", "stipend", stipendDisplay(cycle)],
+        ["Housing", "housing", benefitDisplay(opportunity, cycle, "housing_status", "housingProvision")],
+        ["Meals", "meals", benefitDisplay(opportunity, cycle, "meals_status", "mealsProvision")],
+        ["Minimum GPA", "minimum_gpa", cycle.eligibility?.min_gpa],
+      ].map(([label, field, value]) => {
+        const shown = fieldDisplay(opportunity, cycle, field, value);
+        return `<div><dt>${label}</dt><dd><span class="card-fact-value" title="${escapeHtml(shown)}">${escapeHtml(shown)}</span></dd></div>`;
+      }).join("")}</dl>
       <div class="program-tags">${cardCategories.map(label => `<span class="meta-chip category-chip">${escapeHtml(label)}</span>`).join("")}${tags.map(tag => `<span class="meta-chip">${escapeHtml(tag.tag_name)}</span>`).join("")}</div>
       <button type="button" class="program-details-button" data-program-details aria-haspopup="dialog">${opportunity.review_notes ? "Program details — review notes" : "Program details"}</button>
-      <template class="program-details-template">${bundleDetails(opportunity, locationVariant)}</template>
       <div class="card-actions">${opportunity.program_url ? `<a class="program-link" href="${escapeHtml(opportunity.program_url)}" target="_blank" rel="noopener">View program →</a>` : "<span>Official program link: N/A</span>"}<span class="verification-date">Source checked ${escapeHtml(display(cycle.last_verified))}</span></div>
     </article>`;
   }
@@ -236,7 +294,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("program-detail-title").textContent = selectedCard.querySelector("h3").textContent;
     document.getElementById("program-detail-institution").textContent = selectedCard.querySelector(".institution-line").textContent;
     const content = document.getElementById("program-detail-body");
-    content.replaceChildren(selectedCard.querySelector("template").content.cloneNode(true));
+    const selected = displayedResults[Number(selectedCard.dataset.resultIndex)];
+    content.innerHTML = bundleDetails(selected.opportunity, selected.location);
     const actions = selectedCard.querySelector(".card-actions").cloneNode(true);
     content.append(actions);
     detailDialog.showModal();
@@ -314,6 +373,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     const filteredProgramCount = new Set(filtered.map(({opportunity}) => opportunity.opportunity_id)).size;
     document.getElementById("filtered-result-count").textContent = `Showing ${filtered.length} opportunity ${filtered.length === 1 ? "card" : "cards"} from ${filteredProgramCount} ${filteredProgramCount === 1 ? "program" : "programs"}`;
+    displayedResults = filtered;
     resultContainer.innerHTML = filtered.length ? filtered.map(card).join("") : `<div class="empty-results">No opportunities match these preference filters. Try clearing one or more filters.</div>`;
   }
 

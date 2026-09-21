@@ -35,7 +35,7 @@ def known(value):
     return value not in UNKNOWN
 
 
-def displayed(opportunity, cycle, field):
+def canonical_displayed(opportunity, cycle, field):
     eligibility = cycle.get('eligibility') or {}
     if field == 'stipend':
         values = [f'{cycle[key]} USD {unit}' for key, unit in
@@ -63,6 +63,17 @@ def displayed(opportunity, cycle, field):
         'eligibility': eligibility.get('raw_eligibility_text'),
     }.get(field)
     return str(value) if known(value) else 'N/A'
+
+
+def displayed(opportunity, cycle, field):
+    for report in opportunity.get('bundle_details', []):
+        for note in report.get('catalogDisplayNotes', []):
+            if note.get('field') == field and note.get('cycle') == cycle.get('cycle_year') and note.get('display'):
+                return note['display']
+    value = canonical_displayed(opportunity, cycle, field)
+    if value == 'N/A' and opportunity.get('reported_facts', {}).get(field):
+        return 'Reported information with source/cycle context; canonical value remains unknown'
+    return value
 
 
 def snippets(text):
@@ -132,11 +143,11 @@ def audit(opportunities):
                             if field == 'stipend' and not MONEY.search(sentence):
                                 kind = 'funding_mentioned_without_amount'
                             add(field, kind, sentence, source, year, url)
-                        elif field == 'stipend' and MONEY.search(sentence):
+                        elif field == 'stipend' and MONEY.search(sentence) and canonical_displayed(opportunity, cycle, field) != 'N/A':
                             # Amounts may be other benefits, ranges or historical; do not
                             # equate all dollar figures with a total student stipend.
                             add(field, 'compare_reported_amount', sentence, source, year, url)
-                        elif field in ('duration', 'minimum_gpa'):
+                        elif field in ('duration', 'minimum_gpa') and re.fullmatch(r'\d+(?:\.\d+)?', current):
                             number_pattern = r'\b(\d+(?:\.\d+)?)[ -]weeks?\b' if field == 'duration' else r'(?:GPA\s*(?:of|:|>=|at least)?\s*(\d\.\d+)|(\d\.\d+)\s*(?:minimum\s+)?GPA)'
                             matches = re.findall(number_pattern, sentence, re.I)
                             values = [float(value if isinstance(value, str) else next(x for x in value if x)) for value in matches]

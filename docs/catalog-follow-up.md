@@ -37,4 +37,10 @@ For new imports, repeat name, host, link and redirect screening; never automatic
 
 ## Validation and publication
 
+The September 21 display-consistency correction pass updated 15 accepted records, including stipend amount/unit corrections, housing deductions, and removal of unsupported annual benefit claims. GeoPEERS is now an undated snapshot because the official page does not establish a year (639 undated snapshots total). Prior values are preserved in bundle fact history. Field-specific official evidence remains distinct from full-program verification.
+
+Generated `reported_facts` now connects narrative evidence to the corresponding detail field when structured facts are unknown. Statements retain their source, reported year, wording and qualifications; they are not numeric data or eligibility rules. Older descriptions remain expandable instead of appearing as the main overview. Audit and correction records are local under `database/local/review/display-consistency/` and `database/local/review/display-fixes/`; the latter includes accepted changes and an after-audit. Dates, locations and unresolved source/track differences still require factual review rather than inferred completion.
+
+Additional regression checks: `python3 scripts/test_display_consistency.py` and `node scripts/test_fellowship_display.js`.
+
 Rebuild SQLite/JSON with `python3 scripts/rebuild_database.py`, then run `scripts/validate_catalog.py`, `scripts/test_catalog.py`, `node --check assets/fellowship-questionnaire.js` and `git diff --check`. Schema 1.5 adds accepted bundle status; rebuild older databases before importing. Publication remains suspended; do not push or restore publication without an explicit request.
