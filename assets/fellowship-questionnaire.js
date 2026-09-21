@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         ${sources.length ? `<p class="detail-references"><strong>Sources:</strong> ${sources.join(" · ")}</p>` : ""}</details>`;
     }).join("");
     return `<details class="program-review-details"><summary>${opportunity.review_notes ? "Program details — review notes" : "Program details"}</summary>
-      <div class="expanded-program-content">
+      <div class="expanded-program-content" tabindex="0" role="region" aria-label="Program details">
         ${opportunity.review_notes ? `<aside class="program-review-note"><strong>Review notes</strong>${detailText(opportunity.review_notes)}</aside>` : ""}
         ${overview ? section("Overview", `<p class="detail-context">Reported cycle: ${escapeHtml(overview.cycle || overview.benefitsCycle || "N/A")}</p>${detailText(overview.summary)}`) : ""}
         <div class="expanded-program-layout">
