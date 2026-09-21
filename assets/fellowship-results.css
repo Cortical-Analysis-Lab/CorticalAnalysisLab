@@ -141,9 +141,9 @@
 .program-review-details { margin: 0.75rem 0; font-size: 0.9rem; line-height: 1.65; overflow-wrap: anywhere; }
 .program-review-details summary { color: var(--red); cursor: pointer; font-weight: 600; padding: 0.5rem 0; }
 .program-review-details summary:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
-.expanded-program-content { padding: 0.5rem 0.5rem 0 0; max-height: min(26rem, 60vh); overflow-y: auto; }
-.expanded-program-content:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
-.expanded-program-layout { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 1rem 0; }
+.eligibility-card:has(> .program-review-details[open]) { grid-column: 1 / -1; width: 100%; max-width: 800px; box-sizing: border-box; justify-self: center; }
+.expanded-program-content { padding-top: 0.75rem; }
+.expanded-program-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: 1.25rem 1.5rem; margin: 1.25rem 0; }
 .program-detail-section { min-width: 0; }
 .program-review-details h4 { font-size: 0.95rem; margin: 0 0 0.65rem; color: var(--text); }
 .program-review-details p { max-width: 75ch; font-size: 0.9rem; line-height: 1.65; margin: 0 0 0.75rem; color: var(--text); white-space: normal; }
