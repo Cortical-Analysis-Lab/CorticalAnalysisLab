@@ -138,11 +138,27 @@
 .selected-preference button:hover { background: #e9c5d0; }
 .selected-preference button:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
 
-.program-review-details { margin: 0.75rem 0; font-size: 0.82rem; line-height: 1.5; overflow-wrap: anywhere; }
-.program-review-details summary { color: var(--red); cursor: pointer; font-weight: 600; }
+.program-review-details { margin: 0.75rem 0; font-size: 0.9rem; line-height: 1.65; overflow-wrap: anywhere; }
+.program-review-details summary { color: var(--red); cursor: pointer; font-weight: 600; padding: 0.5rem 0; }
 .program-review-details summary:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
-.program-review-details p { margin: 0.6rem 0; }
-.bundle-report { border-top: 1px solid #ddd; margin-top: 0.6rem; padding-top: 0.4rem; }
-.bundle-report dl { margin: 0.5rem 0; }
-.bundle-report dt { font-weight: 600; }
-.bundle-report dd { margin: 0 0 0.4rem; }
+.eligibility-card:has(> .program-review-details[open]) { grid-column: 1 / -1; }
+.expanded-program-content { padding-top: 1rem; }
+.expanded-program-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: 1.5rem 2rem; margin: 1.5rem 0; }
+.program-detail-section { min-width: 0; }
+.program-review-details h4 { font-size: 0.95rem; margin: 0 0 0.65rem; color: var(--text); }
+.program-review-details p { max-width: 75ch; font-size: 0.9rem; line-height: 1.65; margin: 0 0 0.75rem; color: var(--text); white-space: normal; }
+.expanded-facts { margin: 0; display: grid; gap: 0.8rem; }
+.expanded-facts > div { display: grid; grid-template-columns: minmax(7rem, 0.35fr) minmax(0, 1fr); gap: 0.75rem; }
+.expanded-facts dt { font-weight: 600; color: var(--gray); }
+.expanded-facts dd { margin: 0; }
+.program-review-note { padding: 1rem; background: #f7eff1; border-left: 3px solid var(--red); margin-bottom: 1.5rem; }
+.program-review-note p:last-child { margin-bottom: 0; }
+.detail-topics { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; margin: 0; padding: 0; }
+.detail-topics li { padding: 0.25rem 0.6rem; background: #f1eeee; border-radius: 5px; font-size: 0.8rem; }
+.program-source-reports { border-top: 1px solid #ddd; padding-top: 1.25rem; }
+.bundle-report { border-top: 1px solid #eee8e9; padding: 0.5rem 0; }
+.bundle-report > summary { font-size: 0.85rem; }
+.bundle-report .program-detail-section { margin-top: 1rem; }
+.program-review-details .detail-context { color: var(--gray); font-size: 0.8rem; }
+.detail-references { margin-top: 1rem !important; }
+@media (max-width: 480px) { .expanded-facts > div { grid-template-columns: 1fr; gap: 0.15rem; } }

@@ -68,25 +68,69 @@ document.addEventListener("DOMContentLoaded", async () => {
       return `<a href="${escapeHtml(url.href)}" target="_blank" rel="noopener">${escapeHtml(url.hostname)}</a>`;
     } catch { return ""; }
   }
-  function bundleDetails(opportunity) {
-    if (!opportunity.review_status) return "";
-    const reports = (opportunity.bundle_details || []).map(item => {
+  function locationLabel(opportunity, variant = null) {
+    const institution = opportunity.institution || {};
+    const state = variant?.stateCode || institution.state_code;
+    const country = String(institution.country_code || "").trim();
+    const isUS = /^(US|USA|United States(?: of America)?)$/i.test(country);
+    const states = String(state || "").split("/").map(value => value.trim());
+    if (isUS || (!country && states.every(value => stateNames[value]))) {
+      return [...new Set(states.map(value => stateNames[value] || (value === "Multiple" ? "Multiple states" : "N/A")))].join(" / ");
+    }
+    if (!country && state !== "International") return state === "Multiple" ? "Multiple locations" : "N/A";
+    const countryName = country.split("/").map(value => {
+      const name = value.trim();
+      if (/^(US|USA)$/i.test(name)) return "United States";
+      if (/^[A-Z]{2}$/.test(name)) {
+        try { return new Intl.DisplayNames(["en"], {type: "region"}).of(name); } catch { return name; }
+      }
+      return name || "Country: N/A";
+    }).join(" / ");
+    let city = variant?.city || institution.city;
+    // Reuse an explicit "City, Country" location when structured city is absent.
+    // Do not derive a participant city from the institution name or its address.
+    const locationParts = String(opportunity.location_scope || "").split(",").map(value => value.trim());
+    if (!city && locationParts.length === 2 && locationParts[1].toLowerCase() === countryName.toLowerCase()) city = locationParts[0];
+    return `${countryName}, ${city && city !== "unknown" ? city : "City: N/A"}`;
+  }
+
+  function detailText(value) {
+    return String(value || "N/A").split(/\n+/).filter(line => line.trim()).map(line => `<p>${escapeHtml(line.trim())}</p>`).join("");
+  }
+
+  function bundleDetails(opportunity, locationVariant = null) {
+    const cycle = opportunity.cycles?.[0] || {};
+    const eligibility = cycle.eligibility || {};
+    const reports = opportunity.bundle_details || [];
+    const row = (label, value) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(display(value))}</dd></div>`;
+    const section = (title, content) => `<section class="program-detail-section"><h4>${title}</h4>${content}</section>`;
+    const overview = reports.find(item => item.summary);
+    const sourceReports = reports.map(item => {
       const amount = prefix => [item[`${prefix}Amount`], item[`${prefix}Currency`], reportedValue(item[`${prefix}AmountBasis`])].filter(value => value !== null && value !== undefined && value !== "N/A" && value !== "").join(" ");
       const sources = [...new Set([item.programUrl, item.sourceUrl, ...(item.benefitsSourceUrls || [])].filter(Boolean))].map(referenceLink).filter(Boolean);
-      return `<section class="bundle-report"><p><strong>${escapeHtml(item.title || "Imported program information")}</strong></p>
-        <p>Reported cycle: ${escapeHtml(item.benefitsCycle || item.cycle || "N/A")}. Benefits review in bundle: ${escapeHtml(reportedValue(item.benefitsReviewStatus))}.</p>
-        <dl><dt>Housing</dt><dd>${escapeHtml(reportedValue(item.housingProvision))}; cost: ${escapeHtml(reportedValue(item.housingCost))}${amount("housing") ? `; ${escapeHtml(amount("housing"))}` : ""}</dd>
-        <dt>Meals</dt><dd>${escapeHtml(reportedValue(item.mealsProvision))}; cost: ${escapeHtml(reportedValue(item.mealsCost))}${amount("meals") ? `; ${escapeHtml(amount("meals"))}` : ""}</dd>
-        <dt>Room and board</dt><dd>${escapeHtml(reportedValue(item.roomAndBoardStatus))}</dd></dl>
-        ${item.benefitNotes ? `<p>${escapeHtml(item.benefitNotes)}</p>` : ""}
-        ${item.summary ? `<p>${escapeHtml(item.summary)}</p>` : ""}
-        ${item.eligibility ? `<p><strong>Reported requirements:</strong> ${escapeHtml(item.eligibility)}</p>` : ""}
-        ${item.notes ? `<p>${escapeHtml(item.notes)}</p>` : ""}
-        ${sources.length ? `<p>References: ${sources.join(" · ")}</p>` : ""}</section>`;
+      return `<details class="bundle-report"><summary>${escapeHtml(item.title || "Additional program information")}</summary>
+        <p class="detail-context">Reported cycle: ${escapeHtml(item.benefitsCycle || item.cycle || "N/A")}</p>
+        ${section("Overview", detailText(item.summary))}
+        ${section("Reported requirements", detailText(item.eligibility))}
+        <dl class="expanded-facts">${row("Housing", `${reportedValue(item.housingProvision)}; cost: ${reportedValue(item.housingCost)}${amount("housing") ? `; ${amount("housing")}` : ""}`)}
+        ${row("Meals", `${reportedValue(item.mealsProvision)}; cost: ${reportedValue(item.mealsCost)}${amount("meals") ? `; ${amount("meals")}` : ""}`)}
+        ${row("Room and board", reportedValue(item.roomAndBoardStatus))}</dl>
+        ${item.benefitNotes ? section("Benefit details", detailText(item.benefitNotes)) : ""}
+        ${item.notes ? section("Additional notes", detailText(item.notes)) : ""}
+        ${sources.length ? `<p class="detail-references"><strong>Sources:</strong> ${sources.join(" · ")}</p>` : ""}</details>`;
     }).join("");
-    return `<details class="program-review-details"><summary>${opportunity.review_status === "bundle_accepted" ? "Program details" : "Program details — review notes"}</summary>
-      ${opportunity.review_notes ? `<p>${escapeHtml(opportunity.review_notes)}</p>` : ""}${reports}
-      <p><strong>All topics:</strong> ${escapeHtml((opportunity.tags || []).map(tag => tag.tag_name).join("; ") || "N/A")}</p></details>`;
+    return `<details class="program-review-details"><summary>${opportunity.review_notes ? "Program details — review notes" : "Program details"}</summary>
+      <div class="expanded-program-content">
+        ${opportunity.review_notes ? `<aside class="program-review-note"><strong>Review notes</strong>${detailText(opportunity.review_notes)}</aside>` : ""}
+        ${overview ? section("Overview", `<p class="detail-context">Reported cycle: ${escapeHtml(overview.cycle || overview.benefitsCycle || "N/A")}</p>${detailText(overview.summary)}`) : ""}
+        <div class="expanded-program-layout">
+          ${section("Location and dates", `<dl class="expanded-facts">${row("Location", locationLabel(opportunity, locationVariant))}${row("Cycle", cycle.cycle_year)}${row("Starts", dateDisplay(cycle.program_start))}${row("Ends", dateDisplay(cycle.program_end))}${row("Application deadline", dateDisplay(cycle.application_deadline))}${row("Availability", cycle.status_text || cycle.status_code)}</dl>`)}
+          ${section("Eligibility", detailText(eligibility.raw_eligibility_text) + (eligibility.other_rule_text ? detailText(eligibility.other_rule_text) : ""))}
+          ${section("Funding and living arrangements", `<dl class="expanded-facts">${row("Stipend", stipendDisplay(cycle))}${row("Housing", cycle.housing_details || benefitDisplay(opportunity, cycle, "housing_status", "housingProvision"))}${row("Meals", cycle.meals_details || benefitDisplay(opportunity, cycle, "meals_status", "mealsProvision"))}${row("Travel", cycle.travel_details || cycle.travel_status)}${row("Academic credit", cycle.academic_credit_status)}</dl>`)}
+          ${section("Research areas and topics", `<p>${associatedResearchAreas(opportunity).map(([, label]) => escapeHtml(label)).join(" · ") || "N/A"}</p><ul class="detail-topics">${(opportunity.tags || []).map(tag => `<li>${escapeHtml(tag.tag_name)}</li>`).join("") || "<li>N/A</li>"}</ul>`)}
+        </div>
+        ${sourceReports ? `<section class="program-source-reports"><h4>Additional source information</h4><p class="detail-context">Expand a source to see its reported requirements and benefits. Reports may describe different cycles.</p>${sourceReports}</section>` : ""}
+      </div></details>`;
   }
   const categoryTerms = {
     "biomedical-health": ["biomedical", "health", "medicine", "medical", "cancer", "immunology", "public health"],
@@ -164,7 +208,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   function card({opportunity, location: locationVariant}) {
     const cycle = opportunity.cycles?.[0] || {};
     const institution = opportunity.institution || {};
-    const location = locationVariant ? `${locationVariant.city}, ${locationVariant.stateCode}` : [institution.city, institution.state_code].filter(Boolean).join(", ") || "N/A";
+    const location = locationLabel(opportunity, locationVariant);
     const activeCategories = [...selectedCategories].filter(([slug]) => matchesResearchArea(opportunity, slug));
     const matchesSelectedTag = tag => activeCategories.some(([slug]) => tagMatchesCategory(tag.tag_name, slug));
     const tags = [...(opportunity.tags || [])].sort((a, b) => Number(matchesSelectedTag(b)) - Number(matchesSelectedTag(a))).slice(0, 4);
@@ -174,12 +218,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       <h3>${escapeHtml(opportunity.program_name)}</h3><p class="institution-line">${escapeHtml(institution.institution_name)} · ${escapeHtml(location)}</p>
       <dl class="program-details"><div><dt>Deadline</dt><dd>${escapeHtml(dateDisplay(cycle.application_deadline))}</dd></div><div><dt>Format</dt><dd>${escapeHtml(display(opportunity.delivery_format))}</dd></div><div><dt>Duration</dt><dd>${cycle.duration_weeks === null || cycle.duration_weeks === undefined ? "N/A" : `${escapeHtml(cycle.duration_weeks)} weeks`}</dd></div><div><dt>Stipend</dt><dd>${escapeHtml(stipendDisplay(cycle))}</dd></div><div><dt>Housing</dt><dd>${escapeHtml(benefitDisplay(opportunity, cycle, "housing_status", "housingProvision"))}</dd></div><div><dt>Meals</dt><dd>${escapeHtml(benefitDisplay(opportunity, cycle, "meals_status", "mealsProvision"))}</dd></div><div><dt>Minimum GPA</dt><dd>${escapeHtml(display(cycle.eligibility?.min_gpa))}</dd></div></dl>
       <div class="program-tags">${cardCategories.map(label => `<span class="meta-chip category-chip">${escapeHtml(label)}</span>`).join("")}${tags.map(tag => `<span class="meta-chip">${escapeHtml(tag.tag_name)}</span>`).join("")}</div>
-      ${bundleDetails(opportunity)}
+      ${bundleDetails(opportunity, locationVariant)}
       <div class="card-actions">${opportunity.program_url ? `<a class="program-link" href="${escapeHtml(opportunity.program_url)}" target="_blank" rel="noopener">View program →</a>` : "<span>Official program link: N/A</span>"}<span class="verification-date">Source checked ${escapeHtml(display(cycle.last_verified))}</span></div>
     </article>`;
   }
 
-  const filterIds = ["filter-keyword", "filter-housing", "filter-travel", "filter-open", "sort-results"];
+  const filterIds = ["filter-keyword", "filter-housing", "filter-travel", "filter-open", "filter-upcoming", "sort-results"];
 
   function locationVariants(opportunity) {
     const institution = opportunity.institution || {};
@@ -219,17 +263,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     const housing = document.getElementById("filter-housing").checked;
     const travel = document.getElementById("filter-travel").checked;
     const open = document.getElementById("filter-open").checked;
+    const upcoming = document.getElementById("filter-upcoming").checked;
     const sort = document.getElementById("sort-results").value;
 
     const matchesNonLocationFilters = ({opportunity, evaluation}) => {
       const cycle = opportunity.cycles?.[0] || {};
-      const haystack = [opportunity.program_name, opportunity.institution?.institution_name, opportunity.institution?.city, opportunity.institution?.state_code, ...(opportunity.tags || []).map(tag => tag.tag_name)].join(" ").toLowerCase();
+      const haystack = [opportunity.program_name, opportunity.institution?.institution_name, opportunity.institution?.city, opportunity.institution?.state_code, locationLabel(opportunity), ...(opportunity.tags || []).map(tag => tag.tag_name)].join(" ").toLowerCase();
       return evaluation.state !== "ineligible"
         && (!keyword || haystack.includes(keyword))
         && (!selectedCategories.size || [...selectedCategories.keys()].some(category => matchesResearchArea(opportunity, category)))
         && (!housing || cycle.housing_status === "yes" || (!known(cycle.housing_status) && reportedBenefit(opportunity, "housingProvision") === "provided"))
         && (!travel || ["yes", "allowance"].includes(cycle.travel_status))
-        && (!open || ["open", "upcoming"].includes(cycle.status_code));
+        && ((!open && !upcoming) || (open && cycle.status_code === "open") || (upcoming && cycle.status_code === "upcoming"));
     };
     const locationBase = expandLocationCards(evaluatedResults.filter(matchesNonLocationFilters));
     populateLocationFilter(locationBase);
@@ -322,7 +367,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       renderSelections(selectId, listId, selections);
     });
     ["filter-keyword", "filter-category", "filter-state"].forEach(id => { document.getElementById(id).value = ""; });
-    ["filter-housing", "filter-travel", "filter-open"].forEach(id => { document.getElementById(id).checked = false; });
+    ["filter-housing", "filter-travel", "filter-open", "filter-upcoming"].forEach(id => { document.getElementById(id).checked = false; });
     document.getElementById("sort-results").value = "name";
     renderResults();
   });

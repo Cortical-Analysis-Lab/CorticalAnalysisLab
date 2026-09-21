@@ -96,10 +96,11 @@ Current behavior:
 - A subtle bold sentence reports eligible opportunities out of total catalog opportunities; do not restore prominent eligible/ineligible score cards.
 - Catalog summary cards beside the Step 2 title show program, institution, and topic counts. They are enlarged, close to the title, and center-aligned.
 - Opportunity cards use the original explorer presentation, not eligibility-result badges or reasons. Cards show status, program, institution, deadline, format, duration, housing, minimum GPA, category/tags, official link, and verification date.
-- Unknown card values display as `N/A`.
+- Unknown card values display as `N/A`. U.S. location labels show the full state name only; international labels show country and city. Expand ISO country codes for display, reuse an explicit `City, Country` location if the structured city is missing, and otherwise keep missing city/state as `N/A`. Do not guess locations from institution names.
+- Every card has expandable **Program details**, including records without bundle reports. Opening details spans the results row and separates overview, location/dates, eligibility, funding/living arrangements, and research areas/topics. Keep historical source reports in separately expandable sections with cycle context and preserve specific review notes.
 - The card matrix is compact, full-width, and responsive. Do not reintroduce the global 900px section cap.
 - The prominent keyword search sits beside **Matching opportunities**, not in the filter sidebar.
-- Current preference filters are research area, state, housing, travel, and open/upcoming. Stipend and eligibility-result filters were intentionally removed.
+- Current preference filters are research area, state, housing, travel, and separate Open and Upcoming checkboxes. Selecting both includes either status; selecting neither includes all statuses. Stipend and eligibility-result filters were intentionally removed.
 - Keyword input and every preference filter update displayed cards immediately.
 - Research-area matching uses primary/secondary categories plus explicit topic-tag terms, so multidisciplinary physics programs remain visible when Physics & Astronomy is selected. Cards always show all matching research-area labels, including the associated disciplines on multidisciplinary programs; selecting a filter must not hide their other areas. Match short terms such as AI as whole words to avoid false matches from words like training.
 - Known eligibility conflicts are excluded automatically; incomplete official requirements remain available rather than being guessed.
