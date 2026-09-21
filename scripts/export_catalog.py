@@ -18,7 +18,7 @@ def records(connection, sql, params=()):
 def export(database: Path, output: Path):
     connection = connect(database)
     institutions = records(connection, "SELECT institution_id, institution_slug, institution_name, institution_type, city, state_code, country_code, latitude, longitude, website_url FROM institutions ORDER BY institution_name, city")
-    opportunities = records(connection, "SELECT opportunity_id, public_id, institution_id, program_name, network_source, program_type, location_scope, delivery_format, program_url, application_url, notes, active FROM opportunities ORDER BY public_id")
+    opportunities = records(connection, "SELECT opportunity_id, public_id, institution_id, program_name, network_source, program_type, catalog_audience, location_scope, delivery_format, program_url, application_url, notes, active FROM opportunities ORDER BY public_id")
     cycles = records(connection, "SELECT cycle_id, opportunity_id, cycle_year, duration_weeks, program_start, program_end, application_open, application_deadline, application_url, deadline_text, status_code, status_text, stipend_total_usd, stipend_weekly_usd, housing_status, housing_details, meals_status, meals_details, travel_status, travel_details, academic_credit_status, last_verified, data_confidence FROM program_cycles ORDER BY cycle_year DESC, opportunity_id")
     eligibility = records(connection, "SELECT eligibility_rule_id, cycle_id, external_applicants_status, citizenship_rule_text, citizenship_us_citizen, citizenship_permanent_resident, citizenship_international, eligible_years_text, first_year_eligible, sophomore_eligible, junior_eligible, senior_eligible, graduating_senior_eligible, min_gpa, enrolled_required, graduation_rule_text, institution_type_rule_text, two_year_institution_eligible, four_year_institution_eligible, degree_seeking_required, prior_research_status, raw_eligibility_text, other_rule_text, parse_status FROM eligibility_rules ORDER BY cycle_id")
     categories = records(connection, "SELECT category_id, category_slug, category_name, description, sort_order FROM research_categories WHERE active=1 ORDER BY sort_order, category_name")
@@ -62,6 +62,7 @@ def export(database: Path, output: Path):
         item["review_status"] = review["review_status"] if review else None
         item["review_notes"] = review["review_notes"] if review else None
         item["bundle_details"] = json.loads(review["bundle_details_json"]) if review else []
+        item["high_school_details"] = next((report["highSchoolRecord"] for report in reversed(item["bundle_details"]) if report.get("highSchoolRecord")), None)
         item["reported_facts"] = reported_facts(item)
         item["institution"] = institution_by_id[item.pop("institution_id")]
         item["categories"] = cats_by_opp.get(item["opportunity_id"], [])

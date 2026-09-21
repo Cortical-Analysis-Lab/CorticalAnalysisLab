@@ -88,7 +88,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   function fieldDisplay(opportunity, cycle, field, value) {
     const note = fieldNote(opportunity, cycle, field);
     if (note?.display) return note.display;
-    if (display(value) !== "N/A") return display(value);
+    if (display(value) !== "N/A") return opportunity.high_school_view && field === "stipend" && cycle.cycle_year ? `${cycle.cycle_year}: ${display(value)}` : display(value);
+    const costReport = opportunity.high_school_details?.costStatus;
+    if (opportunity.high_school_view && field === "stipend" && /stipend|paid internship|hourly wage|unpaid|no student pay/i.test(costReport || "")) return `Reported: ${costReport}`;
     const reports = opportunity.reported_facts?.[field] || [];
     if (!reports.length) return "N/A";
     const report = reports[0];
@@ -154,7 +156,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       return `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(shown)}${field ? reportedFieldDetails(opportunity, cycle, field, value) : ""}</dd></div>`;
     };
     const section = (title, content) => `<section class="program-detail-section"><h4>${title}</h4>${content}</section>`;
-    const sourceReports = reports.map(item => {
+    const sourceReports = reports.filter(item => !item.highSchoolRecord).map(item => {
       const amount = prefix => [item[`${prefix}Amount`], item[`${prefix}Currency`], reportedValue(item[`${prefix}AmountBasis`])].filter(value => value !== null && value !== undefined && value !== "N/A" && value !== "").join(" ");
       const sources = [...new Set([item.programUrl, item.sourceUrl, ...(item.benefitsSourceUrls || [])].filter(Boolean))].map(referenceLink).filter(Boolean);
       return `<details class="bundle-report"><summary>${escapeHtml(item.title || "Additional program information")}</summary>
@@ -172,6 +174,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       <div class="expanded-program-content">
         ${opportunity.review_notes ? `<aside class="program-review-note"><strong>Review notes</strong>${detailText(opportunity.review_notes)}</aside>` : ""}
         <div class="expanded-program-layout">
+          ${highSchoolDetails(opportunity.high_school_details)}
           ${section("Location and dates", `<dl class="expanded-facts">${row("Location", locationLabel(opportunity, locationVariant))}${row("Format", opportunity.delivery_format, "format")}${row("Duration", cycle.duration_weeks == null ? null : `${cycle.duration_weeks} weeks`, "duration")}${row("Cycle", cycle.cycle_year)}${row("Starts", dateDisplay(cycle.program_start))}${row("Ends", dateDisplay(cycle.program_end))}${row("Application deadline", dateDisplay(cycle.application_deadline), "deadline")}${row("Availability", cycle.status_text || cycle.status_code)}</dl>`)}
           ${section("Eligibility", `<dl class="expanded-facts">${row("Minimum GPA", eligibility.min_gpa, "minimum_gpa")}</dl>` + (eligibility.raw_eligibility_text ? detailText(eligibility.raw_eligibility_text) : reportedFieldDetails(opportunity, cycle, "eligibility", null) || detailText(null)) + (eligibility.other_rule_text ? detailText(eligibility.other_rule_text) : ""))}
           ${section("Funding and living arrangements", `<dl class="expanded-facts">${row("Stipend", stipendDisplay(cycle), "stipend")}${row("Housing", cycle.housing_details || benefitDisplay(opportunity, cycle, "housing_status", "housingProvision"), "housing")}${row("Meals", cycle.meals_details || benefitDisplay(opportunity, cycle, "meals_status", "mealsProvision"), "meals")}${row("Travel", cycle.travel_details || cycle.travel_status, "travel")}${row("Academic credit", cycle.academic_credit_status, "academic_credit")}</dl>`)}
@@ -218,7 +221,58 @@ document.addEventListener("DOMContentLoaded", async () => {
       || Number(selectedCategories.has(b)) - Number(selectedCategories.has(a)));
   }
 
+  // Audience is catalog coverage, not a claim that every applicant qualifies.
+  // Shared program identities use their high-school report without inheriting
+  // undergraduate-only amounts, dates, housing or eligibility restrictions.
+  function forAudience(opportunity, classYear) {
+    const report = opportunity.high_school_details;
+    if (classYear !== "high_school" || !report) return opportunity;
+    const today = new Date().toISOString().slice(0, 10);
+    const benefit = value => ({provided: "yes", not_provided: "no", available_student_paid: "no", included_in_paid_residential_package: "no", student_paid: "no"}[value] || "unknown");
+    const human = value => value && value !== "unknown" ? value.replaceAll("_", " ") : null;
+    const cycles = (report.cycles?.length ? report.cycles : [{}]).map(item => ({
+      cycle_year: item.year ?? null,
+      program_start: item.start || null, program_end: item.end || null,
+      application_deadline: item.deadline || null,
+      duration_weeks: report.durationWeeks ?? null,
+      stipend_total_usd: item.stipendUSD ?? null, stipend_weekly_usd: null,
+      housing_status: benefit(report.housing), housing_details: human(report.housing),
+      meals_status: benefit(report.meals), meals_details: human(report.meals),
+      travel_status: report.catalogTravelStatus || "unknown", travel_details: report.catalogTravelStatus === "allowance" ? report.summerLinkedAid?.details : null, academic_credit_status: "unknown", last_verified: null,
+      status_code: (item.end && item.end < today) || (item.deadline && item.deadline < today) ? "closed" : report.catalogCycleStatus?.[item.year] || "unknown",
+      status_text: [report.recruitmentStatus, item.note].filter(Boolean).join(" "),
+      eligibility: {
+        external_applicants_status: "unknown", parse_status: "needs_review",
+        raw_eligibility_text: report.eligibility, min_gpa: null,
+        citizenship_us_citizen: report.catalogCitizenship?.us_citizen ?? null,
+        citizenship_permanent_resident: report.catalogCitizenship?.permanent_resident ?? null,
+        citizenship_international: report.catalogCitizenship?.international ?? null,
+      },
+    })).sort((a,b) => (b.cycle_year || 0) - (a.cycle_year || 0));
+    return {...opportunity, cycles, reported_facts: {},
+      bundle_details: opportunity.bundle_details.filter(item => item.highSchoolRecord),
+      program_url: report.url,
+      delivery_format: report.state === "Remote" ? "virtual" : null,
+      institution: {...opportunity.institution, state_code: report.state, country_code: report.country, city: report.city || null},
+      high_school_view: true,
+    };
+  }
+
+  function highSchoolDetails(report) {
+    if (!report) return "";
+    const fact = (label, value) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(display(value))}</dd></div>`;
+    const cycleLabels = {year:"Cycle", start:"Starts", end:"Ends", deadline:"Deadline", stipendUSD:"Stipend (USD)", stipendMaximumUSD:"Maximum stipend (USD)", commuterUSD:"Commuter cost (USD)", residentialUSD:"Residential cost (USD)", applicationFeeUSD:"Application fee (USD)", tuitionUSD:"Tuition (USD)", residentialHousingMealsUSD:"Residential housing/meals cost (USD)", inPersonStart:"In-person start", inPersonEnd:"In-person end", onlineStart:"Online start", onlineEnd:"Online end", format:"Format", note:"Notes"};
+    return `<section class="program-detail-section"><h4>High-school program information</h4>${detailText(report.summary)}${detailText(report.eligibility)}
+      <dl class="expanded-facts">${fact("Costs and pay", report.costStatus)}${fact("Summer financial aid", report.summerLinkedAid?.status === "available" ? report.summerLinkedAid.details : null)}${fact("Grades at application", report.gradesAtApplication?.length ? report.gradesAtApplication.join(", ") : null)}${fact("Minimum age", report.minimumAge)}${fact("Evidence", report.evidenceStatus)}</dl>
+      <p class="detail-context">Imported review dated ${escapeHtml(report.checkedOn)}. Confirm grade, age, location and other conditions with the program.</p>
+      ${(report.cycles || []).length ? `<details><summary>Reported cycles and costs</summary>${report.cycles.map(cycle => `<dl class="expanded-facts">${Object.entries(cycle).map(([key,value]) => fact(cycleLabels[key] || key, value)).join("")}</dl>`).join("")}</details>` : ""}
+      <p class="detail-references">${(report.sources || []).map(referenceLink).filter(Boolean).join(" · ")}</p></section>`;
+  }
+
   function evaluate(opportunity, answers) {
+    const highSchool = answerValue(answers, "classYear") === "high_school";
+    const audience = opportunity.catalog_audience || "undergraduate";
+    if ((highSchool && audience === "undergraduate") || (!highSchool && audience === "high_school")) return {state: "ineligible", reasons: ["This listing is for a different academic level."]};
     const cycle = opportunity.cycles?.[0];
     const rule = cycle?.eligibility;
     if (!cycle || !rule) return {state: "review", reasons: ["No structured eligibility record is available."]};
@@ -238,8 +292,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (rule.enrolled_required === 1 || rule.degree_seeking_required === 1) unknowns.push("Confirm the program's enrollment and degree requirements.");
 
     const institutionField = answerValue(answers, "institutionType") === "two_year" ? "two_year_institution_eligible" : answerValue(answers, "institutionType") === "four_year" ? "four_year_institution_eligible" : null;
-    if (institutionField && rule[institutionField] === 0) conflicts.push("Your institution type is not eligible.");
-    else if (!institutionField || rule[institutionField] === null) unknowns.push("Institution-type eligibility needs review.");
+    if (!highSchool && institutionField && rule[institutionField] === 0) conflicts.push("Your institution type is not eligible.");
+    else if (!highSchool && (!institutionField || rule[institutionField] === null)) unknowns.push("Institution-type eligibility needs review.");
 
     const citizenshipField = {us_citizen: "citizenship_us_citizen", permanent_resident: "citizenship_permanent_resident", international: "citizenship_international"}[answerValue(answers, "citizenship")];
     if (citizenshipField && rule[citizenshipField] === 0) conflicts.push("Your citizenship/residency status is not eligible.");
@@ -272,6 +326,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         ["Housing", "housing", benefitDisplay(opportunity, cycle, "housing_status", "housingProvision")],
         ["Meals", "meals", benefitDisplay(opportunity, cycle, "meals_status", "mealsProvision")],
         ["Minimum GPA", "minimum_gpa", cycle.eligibility?.min_gpa],
+        ...(opportunity.high_school_view ? [["Costs and pay", "costs", opportunity.high_school_details.costStatus]] : []),
       ].map(([label, field, value]) => {
         const shown = fieldDisplay(opportunity, cycle, field, value);
         return `<div><dt>${label}</dt><dd><span class="card-fact-value" title="${escapeHtml(shown)}">${escapeHtml(shown)}</span></dd></div>`;
@@ -377,14 +432,28 @@ document.addEventListener("DOMContentLoaded", async () => {
     resultContainer.innerHTML = filtered.length ? filtered.map(card).join("") : `<div class="empty-results">No opportunities match these preference filters. Try clearing one or more filters.</div>`;
   }
 
+  const institutionQuestion = document.getElementById("institution-question");
+  function syncAcademicLevel() {
+    const highSchool = form.querySelector('input[name="classYear"]:checked')?.value === "high_school";
+    institutionQuestion.hidden = highSchool;
+    institutionQuestion.disabled = highSchool;
+    form.querySelector(".eligibility-question-grid").classList.toggle("high-school-selected", highSchool);
+  }
+  form.addEventListener("change", syncAcademicLevel);
+  form.addEventListener("reset", () => setTimeout(syncAcademicLevel, 0));
+  syncAcademicLevel();
+
   form.addEventListener("submit", event => {
     event.preventDefault();
     if (!form.reportValidity()) return;
     const answers = new FormData(form);
-    evaluatedResults = opportunities.map(opportunity => ({opportunity, evaluation: evaluate(opportunity, answers)}));
+    evaluatedResults = opportunities.map(item => {
+      const opportunity = forAudience(item, answers.get("classYear"));
+      return {opportunity, evaluation: evaluate(opportunity, answers)};
+    });
     const availableCount = evaluatedResults.filter(item => item.evaluation.state !== "ineligible").length;
-    document.getElementById("availability-summary").textContent = `${availableCount} eligible opportunities out of ${evaluatedResults.length} total available`;
-    document.getElementById("results-explanation").textContent = "N/A means a requirement or program detail has not yet been verified.";
+    document.getElementById("availability-summary").textContent = `${availableCount} potentially eligible opportunities out of ${evaluatedResults.length} catalog programs`;
+    document.getElementById("results-explanation").textContent = "Confirm the program’s full requirements before applying. N/A means a requirement or program detail is unknown.";
     renderResults();
     panel.hidden = true;
     resultsPanel.hidden = false;

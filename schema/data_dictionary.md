@@ -52,3 +52,11 @@ Missing or ambiguous information is stored as `NULL` in typed fields and preserv
 | `discovery_sources.authority_scope` | Whether the source is discovery-only, can support network rules, can support government records, or is itself an official program source. |
 | `opportunity_discovery.discovery_url` | The URL that revealed the candidate; this is preserved even if a later official verification source is different. |
 | `crawl_targets.crawl_status` | Coverage state for institutional and organized-source crawling. Counts based on this field support completeness claims. |
+
+## High-school audiences (schema 1.6.0)
+
+`Catalog_Audience` in the accepted CSV maps to `opportunities.catalog_audience`: `undergraduate`, `high_school`, or `both`. It routes listings to the appropriate academic-level collection. The default preserves the legacy undergraduate collection; it does not establish a verified high-school exclusion. Rebuild the database to upgrade older schemas.
+
+Accepted high-school reports are stored in `Bundle_Details_JSON[].highSchoolRecord` and exported as `high_school_details`. Preserve the original ID, descriptions, evidence labels, sources, checked date, eligibility text, age/grades, housing/cost distinctions, financial aid and all reported annual cycles. `catalogCitizenship` contains nullable, explicitly reviewed admission mappings; employment authorization and NSF funding rules alone do not establish exclusion. `catalogCycleStatus` records explicitly reported annual availability, never an inferred opening from a future deadline. `catalogTravelStatus` retains conditional allowances with their full text.
+
+New identities have canonical annual cycles for supplied dated facts, or one undated snapshot. Shared identities keep existing cycles intact; their high-school reports provide cohort-specific presentation. The browser projects high-school facts into the selected view without changing the canonical undergraduate facts or transferring benefits between cohorts. Historical prices remain year-labelled in the detail panel. Paid housing is not included housing. Unknown city, stipend and eligibility fields remain unknown. Imported review dates do not create independent verification events.

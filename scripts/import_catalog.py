@@ -104,6 +104,8 @@ def preflight(rows):
         for field in ("Program_ID", "Program_Name", "Host_Institution"):
             if not text_or_none(row.get(field)):
                 errors.append(f"{label}: missing {field}")
+        if row.get("Catalog_Audience") and row["Catalog_Audience"] not in {"undergraduate", "high_school", "both"}:
+            errors.append(f"{label}: invalid Catalog_Audience")
         year = text_or_none(row.get("Cycle_Year"))
         if year and (not year.isdigit() or not 2000 <= int(year) <= 2200):
             errors.append(f"{label}: Cycle_Year must be blank or a year between 2000 and 2200")
@@ -239,9 +241,9 @@ def upsert_import(connection, path, rows):
         )
         institution_id = connection.execute("SELECT institution_id FROM institutions WHERE institution_slug=?", (institution_slug,)).fetchone()[0]
         connection.execute(
-            "INSERT INTO opportunities(public_id, institution_id, program_name, network_source, program_type, location_scope, delivery_format, program_url, application_url, notes) "
-            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(public_id) DO UPDATE SET institution_id=excluded.institution_id, program_name=excluded.program_name, network_source=excluded.network_source, program_type=excluded.program_type, location_scope=excluded.location_scope, delivery_format=excluded.delivery_format, program_url=excluded.program_url, application_url=excluded.application_url, notes=excluded.notes, updated_at=CURRENT_TIMESTAMP",
-            (public_id, institution_id, text_or_none(row["Program_Name"]), text_or_none(row.get("Network_Source")), text_or_none(row.get("Program_Type")), text_or_none(row.get("Location_Scope")), text_or_none(row.get("Format")), text_or_none(row.get("Program_URL")), text_or_none(row.get("Application_URL")), text_or_none(row.get("Notes"))),
+            "INSERT INTO opportunities(public_id, institution_id, program_name, network_source, program_type, catalog_audience, location_scope, delivery_format, program_url, application_url, notes) "
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(public_id) DO UPDATE SET institution_id=excluded.institution_id, program_name=excluded.program_name, network_source=excluded.network_source, program_type=excluded.program_type, catalog_audience=excluded.catalog_audience, location_scope=excluded.location_scope, delivery_format=excluded.delivery_format, program_url=excluded.program_url, application_url=excluded.application_url, notes=excluded.notes, updated_at=CURRENT_TIMESTAMP",
+            (public_id, institution_id, text_or_none(row["Program_Name"]), text_or_none(row.get("Network_Source")), text_or_none(row.get("Program_Type")), text_or_none(row.get("Catalog_Audience")) or "undergraduate", text_or_none(row.get("Location_Scope")), text_or_none(row.get("Format")), text_or_none(row.get("Program_URL")), text_or_none(row.get("Application_URL")), text_or_none(row.get("Notes"))),
         )
         opportunity_id = connection.execute("SELECT opportunity_id FROM opportunities WHERE public_id=?", (public_id,)).fetchone()[0]
         if row.get("Catalog_Review_Status"):

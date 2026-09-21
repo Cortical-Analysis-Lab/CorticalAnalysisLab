@@ -1,5 +1,17 @@
 [
   {
+    "institution_id": 689,
+    "institution_slug": "ada-forsyth-institute-ma-us",
+    "institution_name": "ADA Forsyth Institute",
+    "institution_type": null,
+    "city": null,
+    "state_code": "MA",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 646,
     "institution_slug": "aalto-university-international-finland",
     "institution_name": "Aalto University",
@@ -264,6 +276,18 @@
     "website_url": null
   },
   {
+    "institution_id": 711,
+    "institution_slug": "army-educational-outreach-program-rit-multiple-us",
+    "institution_name": "Army Educational Outreach Program / RIT",
+    "institution_type": null,
+    "city": null,
+    "state_code": "Multiple",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 99,
     "institution_slug": "auburn-university-us",
     "institution_name": "Auburn University",
@@ -336,6 +360,18 @@
     "website_url": null
   },
   {
+    "institution_id": 714,
+    "institution_slug": "benedictine-university-university-of-michigan-mi-us",
+    "institution_name": "Benedictine University / University of Michigan",
+    "institution_type": null,
+    "city": null,
+    "state_code": "MI",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 332,
     "institution_slug": "bernice-p-bishop-museum-honolulu-hi",
     "institution_name": "Bernice P Bishop Museum",
@@ -348,12 +384,36 @@
     "website_url": null
   },
   {
+    "institution_id": 708,
+    "institution_slug": "bethel-college-ks-us",
+    "institution_name": "Bethel College",
+    "institution_type": null,
+    "city": null,
+    "state_code": "KS",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 151,
     "institution_slug": "bigelow-laboratory-for-ocean-sciences-us",
     "institution_name": "Bigelow Laboratory for Ocean Sciences",
     "institution_type": null,
     "city": null,
     "state_code": null,
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 728,
+    "institution_slug": "biobus-ny-us",
+    "institution_name": "BioBus",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
     "country_code": "US",
     "latitude": null,
     "longitude": null,
@@ -463,6 +523,18 @@
     "city": null,
     "state_code": "MA",
     "country_code": null,
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 664,
+    "institution_slug": "boston-university-ma-us",
+    "institution_name": "Boston University",
+    "institution_type": null,
+    "city": null,
+    "state_code": "MA",
+    "country_code": "US",
     "latitude": null,
     "longitude": null,
     "website_url": null
@@ -600,6 +672,18 @@
     "website_url": null
   },
   {
+    "institution_id": 667,
+    "institution_slug": "broad-institute-ma-us",
+    "institution_name": "Broad Institute",
+    "institution_type": null,
+    "city": null,
+    "state_code": "MA",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 360,
     "institution_slug": "broad-institute-of-mit-and-harvard-cambridge-ma",
     "institution_name": "Broad Institute of MIT and Harvard",
@@ -607,6 +691,18 @@
     "city": "Cambridge",
     "state_code": "MA",
     "country_code": null,
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 672,
+    "institution_slug": "brookhaven-national-laboratory-ny-us",
+    "institution_name": "Brookhaven National Laboratory",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
     "latitude": null,
     "longitude": null,
     "website_url": null
@@ -679,6 +775,102 @@
     "city": null,
     "state_code": "International",
     "country_code": "Switzerland",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 695,
+    "institution_slug": "cuny-baruch-college-ny-us",
+    "institution_name": "CUNY Baruch College",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 696,
+    "institution_slug": "cuny-brooklyn-college-ny-us",
+    "institution_name": "CUNY Brooklyn College",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 697,
+    "institution_slug": "cuny-city-college-of-new-york-ny-us",
+    "institution_name": "CUNY City College of New York",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 698,
+    "institution_slug": "cuny-lehman-college-ny-us",
+    "institution_name": "CUNY Lehman College",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 712,
+    "institution_slug": "cuny-new-york-city-college-of-technology-ny-us",
+    "institution_name": "CUNY New York City College of Technology",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 699,
+    "institution_slug": "cuny-queens-college-ny-us",
+    "institution_name": "CUNY Queens College",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 700,
+    "institution_slug": "cuny-queensborough-community-college-ny-us",
+    "institution_name": "CUNY Queensborough Community College",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 701,
+    "institution_slug": "cuny-york-college-ny-us",
+    "institution_name": "CUNY York College",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
     "latitude": null,
     "longitude": null,
     "website_url": null
@@ -852,6 +1044,18 @@
     "website_url": null
   },
   {
+    "institution_id": 670,
+    "institution_slug": "center-for-excellence-in-education-mit-ma-us",
+    "institution_name": "Center for Excellence in Education / MIT",
+    "institution_type": null,
+    "city": null,
+    "state_code": "MA",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 451,
     "institution_slug": "central-new-mexico-community-college-albuquerque-nm",
     "institution_name": "Central New Mexico Community College",
@@ -906,6 +1110,18 @@
     "institution_type": null,
     "city": null,
     "state_code": null,
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 693,
+    "institution_slug": "city-college-of-new-york-ny-us",
+    "institution_name": "City College of New York",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
     "country_code": "US",
     "latitude": null,
     "longitude": null,
@@ -1116,6 +1332,30 @@
     "website_url": null
   },
   {
+    "institution_id": 694,
+    "institution_slug": "columbia-university-lamont-doherty-earth-observatory-ny-us",
+    "institution_name": "Columbia University Lamont-Doherty Earth Observatory",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 691,
+    "institution_slug": "columbia-university-zuckerman-institute-ny-us",
+    "institution_name": "Columbia University Zuckerman Institute",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 328,
     "institution_slug": "columbus-state-university-columbus-ga",
     "institution_name": "Columbus State University",
@@ -1284,6 +1524,18 @@
     "website_url": null
   },
   {
+    "institution_id": 716,
+    "institution_slug": "dartmouth-college-greenland-and-danish-partners-international-greenland",
+    "institution_name": "Dartmouth College / Greenland and Danish partners",
+    "institution_type": null,
+    "city": null,
+    "state_code": "International",
+    "country_code": "Greenland",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 109,
     "institution_slug": "dauphin-island-sea-lab-us",
     "institution_name": "Dauphin Island Sea Lab",
@@ -1303,6 +1555,30 @@
     "city": "Dauphin Island",
     "state_code": "AL",
     "country_code": null,
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 717,
+    "institution_slug": "denver-museum-of-nature-science-co-us",
+    "institution_name": "Denver Museum of Nature & Science",
+    "institution_type": null,
+    "city": null,
+    "state_code": "CO",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 713,
+    "institution_slug": "department-of-the-navy-multiple-us",
+    "institution_name": "Department of the Navy",
+    "institution_type": null,
+    "city": null,
+    "state_code": "Multiple",
+    "country_code": "US",
     "latitude": null,
     "longitude": null,
     "website_url": null
@@ -1632,6 +1908,18 @@
     "website_url": null
   },
   {
+    "institution_id": 686,
+    "institution_slug": "florida-state-university-fl-us",
+    "institution_name": "Florida State University",
+    "institution_type": null,
+    "city": null,
+    "state_code": "FL",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 314,
     "institution_slug": "florida-state-university-multiple",
     "institution_name": "Florida State University",
@@ -1668,6 +1956,18 @@
     "website_url": null
   },
   {
+    "institution_id": 666,
+    "institution_slug": "fred-hutch-cancer-center-wa-us",
+    "institution_name": "Fred Hutch Cancer Center",
+    "institution_type": null,
+    "city": null,
+    "state_code": "WA",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 23,
     "institution_slug": "fred-hutch-cancer-center-seattle-wa-us",
     "institution_name": "Fred Hutch Cancer Center",
@@ -1699,6 +1999,30 @@
     "city": null,
     "state_code": null,
     "country_code": null,
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 702,
+    "institution_slug": "genspace-ny-us",
+    "institution_name": "Genspace",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 668,
+    "institution_slug": "george-mason-university-va-us",
+    "institution_name": "George Mason University",
+    "institution_type": null,
+    "city": null,
+    "state_code": "VA",
+    "country_code": "US",
     "latitude": null,
     "longitude": null,
     "website_url": null
@@ -1920,6 +2244,18 @@
     "website_url": null
   },
   {
+    "institution_id": 729,
+    "institution_slug": "hypothekids-partner-university-and-industry-labs-ny-us",
+    "institution_name": "HYPOTHEkids / partner university and industry labs",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 550,
     "institution_slug": "hampton-university-hampton-va",
     "institution_name": "Hampton University",
@@ -2100,6 +2436,18 @@
     "website_url": null
   },
   {
+    "institution_id": 733,
+    "institution_slug": "hofstra-university-ny-us",
+    "institution_name": "Hofstra University",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 660,
     "institution_slug": "host-pending-review-international-canada",
     "institution_name": "Host pending review",
@@ -2244,6 +2592,18 @@
     "website_url": null
   },
   {
+    "institution_id": 704,
+    "institution_slug": "hudson-river-park-trust-ny-us",
+    "institution_name": "Hudson River Park Trust",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 380,
     "institution_slug": "internet2-multiple",
     "institution_name": "INTERNET2",
@@ -2275,6 +2635,18 @@
     "city": "Bloomington",
     "state_code": "IN",
     "country_code": null,
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 688,
+    "institution_slug": "indiana-university-simon-comprehensive-cancer-center-in-us",
+    "institution_name": "Indiana University Simon Comprehensive Cancer Center",
+    "institution_type": null,
+    "city": null,
+    "state_code": "IN",
+    "country_code": "US",
     "latitude": null,
     "longitude": null,
     "website_url": null
@@ -2676,6 +3048,18 @@
     "website_url": null
   },
   {
+    "institution_id": 674,
+    "institution_slug": "los-alamos-national-laboratory-nm-us",
+    "institution_name": "Los Alamos National Laboratory",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NM",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 85,
     "institution_slug": "louisiana-state-university-us",
     "institution_name": "Louisiana State University",
@@ -2748,6 +3132,18 @@
     "website_url": null
   },
   {
+    "institution_id": 675,
+    "institution_slug": "magee-womens-research-institute-pa-us",
+    "institution_name": "Magee-Womens Research Institute",
+    "institution_type": null,
+    "city": null,
+    "state_code": "PA",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 389,
     "institution_slug": "maine-medical-center-portland-me",
     "institution_name": "Maine Medical Center",
@@ -2767,6 +3163,18 @@
     "city": "Orono",
     "state_code": "ME",
     "country_code": null,
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 718,
+    "institution_slug": "maine-space-grant-consortium-me-us",
+    "institution_name": "Maine Space Grant Consortium",
+    "institution_type": null,
+    "city": null,
+    "state_code": "ME",
+    "country_code": "US",
     "latitude": null,
     "longitude": null,
     "website_url": null
@@ -3036,6 +3444,18 @@
     "website_url": null
   },
   {
+    "institution_id": 703,
+    "institution_slug": "memorial-sloan-kettering-cancer-center-ny-us",
+    "institution_name": "Memorial Sloan Kettering Cancer Center",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 465,
     "institution_slug": "memorial-sloan-kettering-cancer-center-new-york-ny",
     "institution_name": "Memorial Sloan-Kettering Cancer Center",
@@ -3115,6 +3535,18 @@
     "city": null,
     "state_code": null,
     "country_code": null,
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 709,
+    "institution_slug": "michigan-state-university-mi-us",
+    "institution_name": "Michigan State University",
+    "institution_type": null,
+    "city": null,
+    "state_code": "MI",
+    "country_code": "US",
     "latitude": null,
     "longitude": null,
     "website_url": null
@@ -3300,6 +3732,18 @@
     "website_url": null
   },
   {
+    "institution_id": 727,
+    "institution_slug": "montefiore-einstein-comprehensive-cancer-center-ny-us",
+    "institution_name": "Montefiore Einstein Comprehensive Cancer Center",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 157,
     "institution_slug": "monterey-bay-aquarium-research-institute-us",
     "institution_name": "Monterey Bay Aquarium Research Institute",
@@ -3480,6 +3924,30 @@
     "website_url": null
   },
   {
+    "institution_id": 690,
+    "institution_slug": "nyu-tandon-school-of-engineering-ny-us",
+    "institution_name": "NYU Tandon School of Engineering",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 671,
+    "institution_slug": "national-institute-of-standards-and-technology-multiple-us",
+    "institution_name": "National Institute of Standards and Technology",
+    "institution_type": null,
+    "city": null,
+    "state_code": "Multiple",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 16,
     "institution_slug": "national-institute-of-standards-and-technology-gaithersburg-boulder-md-co-us",
     "institution_name": "National Institute of Standards and Technology",
@@ -3523,6 +3991,18 @@
     "city": null,
     "state_code": "Multiple",
     "country_code": null,
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 732,
+    "institution_slug": "natural-areas-conservancy-ny-us",
+    "institution_name": "Natural Areas Conservancy",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
     "latitude": null,
     "longitude": null,
     "website_url": null
@@ -3948,6 +4428,18 @@
     "website_url": null
   },
   {
+    "institution_id": 715,
+    "institution_slug": "promys-boston-university-ma-us",
+    "institution_name": "PROMYS / Boston University",
+    "institution_type": null,
+    "city": null,
+    "state_code": "MA",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 339,
     "institution_slug": "parkland-college-champaign-il",
     "institution_name": "Parkland College",
@@ -4344,6 +4836,30 @@
     "website_url": null
   },
   {
+    "institution_id": 692,
+    "institution_slug": "rockaway-initiative-for-sustainability-and-equity-ny-us",
+    "institution_name": "Rockaway Initiative for Sustainability and Equity",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 663,
+    "institution_slug": "rockefeller-university-ny-us",
+    "institution_name": "Rockefeller University",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 470,
     "institution_slug": "roswell-park-cancer-institute-buffalo-ny",
     "institution_name": "Roswell Park Cancer Institute",
@@ -4351,6 +4867,18 @@
     "city": "Buffalo",
     "state_code": "NY",
     "country_code": null,
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 707,
+    "institution_slug": "roswell-park-comprehensive-cancer-center-ny-us",
+    "institution_name": "Roswell Park Comprehensive Cancer Center",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
     "latitude": null,
     "longitude": null,
     "website_url": null
@@ -4488,6 +5016,18 @@
     "website_url": null
   },
   {
+    "institution_id": 687,
+    "institution_slug": "ssp-international-multiple-us",
+    "institution_name": "SSP International",
+    "institution_type": null,
+    "city": null,
+    "state_code": "Multiple",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 467,
     "institution_slug": "suny-at-binghamton-binghamton-ny",
     "institution_name": "SUNY at Binghamton",
@@ -4584,6 +5124,18 @@
     "website_url": null
   },
   {
+    "institution_id": 726,
+    "institution_slug": "salk-institute-ca-us",
+    "institution_name": "Salk Institute",
+    "institution_type": null,
+    "city": null,
+    "state_code": "CA",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 281,
     "institution_slug": "san-francisco-state-university-san-francisco-ca",
     "institution_name": "San Francisco State University",
@@ -4603,6 +5155,18 @@
     "city": "San Jose",
     "state_code": "CA",
     "country_code": null,
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 673,
+    "institution_slug": "sandia-national-laboratories-multiple-us",
+    "institution_name": "Sandia National Laboratories",
+    "institution_type": null,
+    "city": null,
+    "state_code": "Multiple",
+    "country_code": "US",
     "latitude": null,
     "longitude": null,
     "website_url": null
@@ -4632,6 +5196,18 @@
     "website_url": null
   },
   {
+    "institution_id": 685,
+    "institution_slug": "science-mentorship-institute-remote-us",
+    "institution_name": "Science Mentorship Institute",
+    "institution_type": null,
+    "city": null,
+    "state_code": "Remote",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 566,
     "institution_slug": "seattle-children-s-research-institute-seattle-wa",
     "institution_name": "Seattle Children's Research Institute",
@@ -4639,6 +5215,18 @@
     "city": "Seattle",
     "state_code": "WA",
     "country_code": null,
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 705,
+    "institution_slug": "seattle-childrens-research-institute-wa-us",
+    "institution_name": "Seattle Children’s Research Institute",
+    "institution_type": null,
+    "city": null,
+    "state_code": "WA",
+    "country_code": "US",
     "latitude": null,
     "longitude": null,
     "website_url": null
@@ -4764,6 +5352,18 @@
     "website_url": null
   },
   {
+    "institution_id": 706,
+    "institution_slug": "st-jude-childrens-research-hospital-tn-us",
+    "institution_name": "St. Jude Children’s Research Hospital",
+    "institution_type": null,
+    "city": null,
+    "state_code": "TN",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 241,
     "institution_slug": "stanford-university",
     "institution_name": "Stanford University",
@@ -4782,6 +5382,18 @@
     "institution_type": null,
     "city": null,
     "state_code": null,
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 665,
+    "institution_slug": "stanford-university-ca-us",
+    "institution_name": "Stanford University",
+    "institution_type": null,
+    "city": null,
+    "state_code": "CA",
     "country_code": "US",
     "latitude": null,
     "longitude": null,
@@ -4854,6 +5466,18 @@
     "institution_type": null,
     "city": null,
     "state_code": null,
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 662,
+    "institution_slug": "stony-brook-university-ny-us",
+    "institution_name": "Stony Brook University",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
     "country_code": "US",
     "latitude": null,
     "longitude": null,
@@ -5208,6 +5832,18 @@
     "website_url": null
   },
   {
+    "institution_id": 719,
+    "institution_slug": "tuskegee-university-al-us",
+    "institution_name": "Tuskegee University",
+    "institution_type": null,
+    "city": null,
+    "state_code": "AL",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 13,
     "institution_slug": "u-s-department-of-energy-national-laboratories-multiple-multiple-us",
     "institution_name": "U.S. Department of Energy national laboratories",
@@ -5250,6 +5886,30 @@
     "institution_type": null,
     "city": "Los Angeles",
     "state_code": "CA",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 684,
+    "institution_slug": "ut-md-anderson-cancer-center-tx-us",
+    "institution_name": "UT MD Anderson Cancer Center",
+    "institution_type": null,
+    "city": null,
+    "state_code": "TX",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 676,
+    "institution_slug": "ut-southwestern-medical-center-tx-us",
+    "institution_name": "UT Southwestern Medical Center",
+    "institution_type": null,
+    "city": null,
+    "state_code": "TX",
     "country_code": "US",
     "latitude": null,
     "longitude": null,
@@ -5400,6 +6060,18 @@
     "website_url": null
   },
   {
+    "institution_id": 679,
+    "institution_slug": "university-of-arizona-bio5-institute-az-us",
+    "institution_name": "University of Arizona BIO5 Institute",
+    "institution_type": null,
+    "city": null,
+    "state_code": "AZ",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 119,
     "institution_slug": "university-of-arkansas-us",
     "institution_name": "University of Arkansas",
@@ -5501,6 +6173,18 @@
     "institution_name": "University of California, Berkeley",
     "institution_type": null,
     "city": "Berkeley",
+    "state_code": "CA",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 677,
+    "institution_slug": "university-of-california-davis-ca-us",
+    "institution_name": "University of California, Davis",
+    "institution_type": null,
+    "city": null,
     "state_code": "CA",
     "country_code": "US",
     "latitude": null,
@@ -5676,6 +6360,18 @@
     "website_url": null
   },
   {
+    "institution_id": 678,
+    "institution_slug": "university-of-california-santa-barbara-ca-us",
+    "institution_name": "University of California, Santa Barbara",
+    "institution_type": null,
+    "city": null,
+    "state_code": "CA",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 271,
     "institution_slug": "university-of-california-santa-barbara-santa-barbara-ca",
     "institution_name": "University of California, Santa Barbara",
@@ -5683,6 +6379,18 @@
     "city": "Santa Barbara",
     "state_code": "CA",
     "country_code": null,
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 669,
+    "institution_slug": "university-of-california-santa-cruz-ca-us",
+    "institution_name": "University of California, Santa Cruz",
+    "institution_type": null,
+    "city": null,
+    "state_code": "CA",
+    "country_code": "US",
     "latitude": null,
     "longitude": null,
     "website_url": null
@@ -5952,6 +6660,18 @@
     "website_url": null
   },
   {
+    "institution_id": 724,
+    "institution_slug": "university-of-florida-cpet-fl-us",
+    "institution_name": "University of Florida CPET",
+    "institution_type": null,
+    "city": null,
+    "state_code": "FL",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 184,
     "institution_slug": "university-of-georgia-us",
     "institution_name": "University of Georgia",
@@ -6060,6 +6780,18 @@
     "website_url": null
   },
   {
+    "institution_id": 681,
+    "institution_slug": "university-of-illinois-urbana-champaign-il-us",
+    "institution_name": "University of Illinois Urbana-Champaign",
+    "institution_type": null,
+    "city": null,
+    "state_code": "IL",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 596,
     "institution_slug": "university-of-illinois-at-chicago-il",
     "institution_name": "University of Illinois at Chicago",
@@ -6149,6 +6881,18 @@
     "institution_name": "University of Iowa",
     "institution_type": null,
     "city": "Iowa City",
+    "state_code": "IA",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 723,
+    "institution_slug": "university-of-iowa-belin-blank-center-ia-us",
+    "institution_name": "University of Iowa Belin-Blank Center",
+    "institution_type": null,
+    "city": null,
     "state_code": "IA",
     "country_code": "US",
     "latitude": null,
@@ -6444,6 +7188,30 @@
     "website_url": null
   },
   {
+    "institution_id": 682,
+    "institution_slug": "university-of-michigan-center-for-materials-innovation-mi-us",
+    "institution_name": "University of Michigan Center for Materials Innovation",
+    "institution_type": null,
+    "city": null,
+    "state_code": "MI",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 680,
+    "institution_slug": "university-of-michigan-life-sciences-institute-mi-us",
+    "institution_name": "University of Michigan Life Sciences Institute",
+    "institution_type": null,
+    "city": null,
+    "state_code": "MI",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 191,
     "institution_slug": "university-of-minnesota-us",
     "institution_name": "University of Minnesota",
@@ -6473,6 +7241,18 @@
     "institution_name": "University of Minnesota",
     "institution_type": null,
     "city": "Minneapolis",
+    "state_code": "MN",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 710,
+    "institution_slug": "university-of-minnesota-lillehei-heart-institute-mn-us",
+    "institution_name": "University of Minnesota Lillehei Heart Institute",
+    "institution_type": null,
+    "city": null,
     "state_code": "MN",
     "country_code": "US",
     "latitude": null,
@@ -6654,6 +7434,18 @@
     "institution_type": null,
     "city": null,
     "state_code": null,
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 683,
+    "institution_slug": "university-of-new-hampshire-interoperability-laboratory-nh-us",
+    "institution_name": "University of New Hampshire InterOperability Laboratory",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NH",
     "country_code": "US",
     "latitude": null,
     "longitude": null,
@@ -6912,6 +7704,18 @@
     "website_url": null
   },
   {
+    "institution_id": 725,
+    "institution_slug": "university-of-pittsburgh-upmc-pa-us",
+    "institution_name": "University of Pittsburgh / UPMC",
+    "institution_type": null,
+    "city": null,
+    "state_code": "PA",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 200,
     "institution_slug": "university-of-rhode-island-us",
     "institution_name": "University of Rhode Island",
@@ -7049,6 +7853,18 @@
     "institution_name": "University of Southern California",
     "institution_type": null,
     "city": "Los Angeles",
+    "state_code": "CA",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 720,
+    "institution_slug": "university-of-southern-california-bridge-institute-ca-us",
+    "institution_name": "University of Southern California Bridge Institute",
+    "institution_type": null,
+    "city": null,
     "state_code": "CA",
     "country_code": "US",
     "latitude": null,
@@ -7404,6 +8220,18 @@
     "website_url": null
   },
   {
+    "institution_id": 721,
+    "institution_slug": "university-of-washington-harborview-injury-prevention-research-center-remote-us",
+    "institution_name": "University of Washington Harborview Injury Prevention & Research Center",
+    "institution_type": null,
+    "city": null,
+    "state_code": "Remote",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 573,
     "institution_slug": "university-of-wisconsin-madison-madison-wi",
     "institution_name": "University of Wisconsin, Madison",
@@ -7692,6 +8520,18 @@
     "website_url": null
   },
   {
+    "institution_id": 731,
+    "institution_slug": "wave-hill-ny-us",
+    "institution_name": "Wave Hill",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 411,
     "institution_slug": "webster-university-saint-louis-mo",
     "institution_name": "Webster University",
@@ -7722,6 +8562,18 @@
     "institution_type": null,
     "city": null,
     "state_code": null,
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 734,
+    "institution_slug": "weill-cornell-medicine-ny-us",
+    "institution_name": "Weill Cornell Medicine",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
     "country_code": "US",
     "latitude": null,
     "longitude": null,
@@ -7824,6 +8676,18 @@
     "website_url": null
   },
   {
+    "institution_id": 730,
+    "institution_slug": "wildlife-conservation-society-bronx-zoo-fordham-university-ny-us",
+    "institution_name": "Wildlife Conservation Society / Bronx Zoo / Fordham University",
+    "institution_type": null,
+    "city": null,
+    "state_code": "NY",
+    "country_code": "US",
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
     "institution_id": 364,
     "institution_slug": "williams-college-williamstown-ma",
     "institution_name": "Williams College",
@@ -7843,6 +8707,18 @@
     "city": "PHILADELPHIA",
     "state_code": "PA",
     "country_code": null,
+    "latitude": null,
+    "longitude": null,
+    "website_url": null
+  },
+  {
+    "institution_id": 722,
+    "institution_slug": "womens-alliance-in-stem-and-humanities-remote-us",
+    "institution_name": "Women’s Alliance in STEM and Humanities",
+    "institution_type": null,
+    "city": null,
+    "state_code": "Remote",
+    "country_code": "US",
     "latitude": null,
     "longitude": null,
     "website_url": null

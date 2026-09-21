@@ -36,12 +36,12 @@ Key files:
 
 The schema separates institutions, stable programs (`opportunities`), annual cycles, structured eligibility, categories, tags, research modes, sources, verifications, and import provenance. Stable program identity and annual cycle data must remain separate.
 
-Current catalog scale after the September 21, 2026 name/identity cleanup (remaining entries are not all fact-verified):
+Current catalog scale after the September 21, 2026 high-school integration (remaining entries are not all fact-verified):
 
-- 953 program identities; 954 cycle/snapshot records, including 639 undated snapshots
-- 661 reported host/location records; provisional locations still need review
+- 1,035 program identities; 1,039 cycle/snapshot records, including 698 undated snapshots
+- 734 reported host/location records; provisional locations still need review
 - 13 broad categories
-- 1,843 detailed research tags, including provisional bundle topic assignments
+- 1,861 detailed research tags, including provisional bundle topic assignments
 - 11 controlled research modes
 - 397 source-verification events; provisional imports do not create verification events
 
@@ -55,17 +55,21 @@ A distinct program is a separately named research program or application at a ho
 
 Opportunity discovery, evaluation, verification, and review happen outside this repository. Only accepted records enter the committed CSV. Missing facts remain `NULL`/`unknown`. Funding, grant, and award records are local discovery leads only; do not use them as canonical program records, application URLs, or field-verification evidence.
 
-The user's September 21 instruction accepts the prior Chat Work review of bundle entries and removes the generic provisional-review tag. `Catalog_Review_Status=bundle_accepted` now identifies 923 accepted bundle/supplement identities and renders a neutral **Program details** section. This acceptance does not create official-source verification events, dates, or inferred eligibility. Keep original bundle reports, benefit claims and acceptance history reproducible. Five records retain specific review notes: UCSF SRTP, Penn CEMB, two Wisconsin chemistry REUs, and Western Michigan Environmental Signal Transduction. Do not restore generic provisional warnings on accepted entries.
+The user's September 21 instruction accepts the prior Chat Work review of bundle entries and removes the generic provisional-review tag. `Catalog_Review_Status=bundle_accepted` now identifies 1,005 accepted bundle/supplement identities and renders a neutral **Program details** section. This acceptance does not create official-source verification events, dates, or inferred eligibility. Keep original bundle reports, benefit claims and acceptance history reproducible. Five records retain specific review notes: UCSF SRTP, Penn CEMB, two Wisconsin chemistry REUs, and Western Michigan Environmental Signal Transduction. Do not restore generic provisional warnings on accepted entries.
 
 The unresolved-record review covered 29 records, merged UCSF SRTP/Amgen, removed four directory/umbrella records and excluded the WashU CEMB placement for institution restrictions. Penn CEMB remains separately represented with eligibility unknown. Corrected hosts include Blandy/UVA, Cedar Creek/UMN, CELL-MET/Michigan, and PARADIM/JHU. Keep the distinct Mote URE/NSF REU, Wisconsin, Michigan neuroscience, Rochester, Pittsburgh and UVA programs. See [docs/catalog-follow-up.md](docs/catalog-follow-up.md) for the remaining specific evidence gaps. Publication remains suspended.
 
 A listing count is not an independently verified distinct-program count. Preserve original names and dates in provenance/cycle history, meaningful numbers such as Biosphere 2, and missing facts as unknown. Exclude confirmed host-only, partner-only or institution-type restrictions that rule out SHU students; retain unknown external eligibility. Never exclude a general program because a different track shares its URL.
 
+The September 21 high-school ZIP integration accepted 89 supplied program reports: 82 new identities and supplements on seven existing identities (NIH SIP, Northwestern REM, Stanford STaRS, Oneonta BFS, AFRL Scholars, UChicago Summer Lab, MathILy-EST). Four unresolved leads remain outside the accepted catalog. Supplied source review is preserved as provenance, not new independent verification. Local/partner-school high-school programs are in scope even when unsuitable for SHU undergraduates.
+
+Schema 1.6.0 adds `Catalog_Audience` / `catalog_audience` (`undergraduate`, `high_school`, `both`) for collection routing. This is not a universal eligibility Boolean: legacy undergraduate-only coverage does not prove high-school exclusion. Preserve the accepted `highSchoolRecord` in bundle JSON and generated `high_school_details`, including source limitations, cycle-specific amounts, costs, aid, age/grade/geography restrictions and explicit reviewed citizenship mappings. High-school views of shared identities must not inherit undergraduate funding, housing or eligibility. Uncollected age, grade and local rules remain visible for applicant confirmation; do not guess answers.
+
 ## Required opportunity verification
 
 Apply these checks to existing records and future additions before accepting corrections or describing opportunities as verified. Structural validation and round-trip tests do not establish factual accuracy.
 
-- **Scope:** Confirm a distinct undergraduate summer research opportunity. Directories, search results, mentor/advice pages, historical recaps, PI conferences, and academic-year-only programs must not become independent summer opportunities.
+- **Scope:** Confirm a distinct undergraduate or high-school summer research opportunity. Directories, search results, mentor/advice pages, historical recaps, PI conferences, and academic-year-only programs must not become independent summer opportunities.
 - **Identity and duplicates:** Check redirects, URL variants, repeated program/host names, and NSF grant renewals. Preserve stable program IDs and provenance when consolidating. Shared names or portals alone do not prove duplication; retain legitimate collaborative hosts and campuses.
 - **Annual cycles:** Verify cycle years, application windows, deadlines, and availability from official evidence. Do not use grant funding/end years as application-cycle years or roll historical dates forward. Verified identities may remain included with a blank CSV `Cycle_Year` (NULL in SQLite). Retain historical and paused programs as potential options without claiming current availability. Keep the same `Program_ID` across cycles: one public program listing, with dated cycles and at most one undated snapshot. Never invent a year to satisfy the importer.
 - **Eligibility:** Verify external applicants, citizenship/residency, class standing, graduation timing, enrollment, institution type, minimum GPA, and other hard requirements. Separate preferences from exclusions and NSF-funded eligibility from host-wide admission rules. Unsupported booleans remain NULL; incomplete parsing is `needs_review`, not `reviewed`.
@@ -93,7 +97,7 @@ Current behavior:
 - Step 1 uses accessible circular radio controls in three equal columns for academic standing, citizenship/residency, and institution type; stack the groups at 900px and below. Each group uses a native fieldset and centered legend.
 - The preliminary form asks academic standing, citizenship/residency, and institution type. The two enrollment questions and degree-seeking question were removed at the user’s request; do not infer those answers from class standing. Program enrollment requirements remain in the catalog, but cannot exclude a user based on uncollected answers. GPA is not collected or used to filter results; program minimum GPA remains visible on opportunity cards.
 - Step 2 is titled **Available Opportunities**.
-- Institution type offers two-year college and four-year college/university only; do not restore the Other / unsure option.
+- Institution type offers two-year college and four-year college/university only; do not restore the Other / unsure option. High school is an academic-standing choice; hide and disable the institution-type fieldset for that choice and restore it on college selection or reset.
 - A subtle bold sentence reports eligible opportunities out of total catalog opportunities; do not restore prominent eligible/ineligible score cards.
 - Catalog summary cards beside the Step 2 title show program, institution, and topic counts. They are enlarged, close to the title, and center-aligned.
 - Opportunity cards use the original explorer presentation, not eligibility-result badges or reasons. Cards show status, program, institution, deadline, format, duration, housing, minimum GPA, category/tags, official link, and verification date.

@@ -28,6 +28,7 @@ CREATE TABLE IF NOT EXISTS opportunities (
     program_name TEXT NOT NULL,
     network_source TEXT,
     program_type TEXT,
+    catalog_audience TEXT NOT NULL DEFAULT 'undergraduate' CHECK (catalog_audience IN ('undergraduate', 'high_school', 'both')),
     location_scope TEXT,
     delivery_format TEXT,
     program_url TEXT,
@@ -275,4 +276,4 @@ CREATE INDEX IF NOT EXISTS idx_opportunity_discovery_opportunity ON opportunity_
 CREATE INDEX IF NOT EXISTS idx_crawl_targets_status ON crawl_targets(target_type, crawl_status, priority);
 CREATE INDEX IF NOT EXISTS idx_verifications_opportunity ON source_verifications(opportunity_id, date_checked);
 
-INSERT OR REPLACE INTO schema_metadata(key, value) VALUES ('schema_version', '1.5.0');
+INSERT OR REPLACE INTO schema_metadata(key, value) VALUES ('schema_version', '1.6.0');

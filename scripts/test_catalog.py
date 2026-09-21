@@ -25,6 +25,23 @@ from import_catalog import preflight
 
 
 class CatalogTests(unittest.TestCase):
+    def test_high_school_import_identity_and_audience(self):
+        payload = json.loads((ROOT / "data/summer-research/catalog.json").read_text())
+        programs = payload["opportunities"]
+        high_school = [p for p in programs if p.get("high_school_details")]
+        self.assertEqual(len(high_school), 89)
+        self.assertEqual(len({p["high_school_details"]["id"] for p in high_school}), 89)
+        self.assertEqual(sum(p["public_id"].startswith("hs:") for p in programs), 82)
+        self.assertEqual(sum("Neuroscience" in p["high_school_details"]["researchAreas"] for p in high_school), 7)
+        self.assertEqual(sum(p["high_school_details"]["summerLinkedAid"]["status"] == "available" for p in high_school), 17)
+        for program in high_school:
+            self.assertIn(program["catalog_audience"], ("high_school", "both"))
+        shared = {p["public_id"] for p in high_school if not p["public_id"].startswith("hs:")}
+        self.assertEqual(shared, {"NIH-SIP", "BND-9AA23EF5737E54EC", "BND-B83DAE59C761F92E", "AUTO-C1E6B2C256", "BND-3D2F2979986F74C6", "BND-331673672AEF2B91", "BND-66CEB010CAE9B467"})
+        rows = load_rows(ROOT / "database/imports/summer_undergraduate_research_opportunities_starter.csv")
+        invalid = dict(rows[0], Catalog_Audience="guessed")
+        self.assertTrue(any("invalid Catalog_Audience" in error for error in preflight([invalid])[0]))
+
     def test_unresolved_review_preserves_tracks_and_corrects_scope(self):
         rows = load_rows(ROOT / "database/imports/summer_undergraduate_research_opportunities_starter.csv")
         programs = {r["Program_ID"]: r for r in rows}
@@ -271,7 +288,7 @@ class CatalogTests(unittest.TestCase):
     def test_public_catalog_matches_database(self):
         payload = json.loads((ROOT / "data" / "summer-research" / "catalog.json").read_text(encoding="utf-8"))
         self.assertEqual(len(payload["opportunities"]), self.count("opportunities"))
-        self.assertEqual(payload["schema_version"], "1.5.0")
+        self.assertEqual(payload["schema_version"], "1.6.0")
 
     def test_undated_and_annual_records_share_one_public_program(self):
         from catalog_common import SCHEMA, connect

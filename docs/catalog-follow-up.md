@@ -44,3 +44,9 @@ Generated `reported_facts` now connects narrative evidence to the corresponding 
 Additional regression checks: `python3 scripts/test_display_consistency.py` and `node scripts/test_fellowship_display.js`.
 
 Rebuild SQLite/JSON with `python3 scripts/rebuild_database.py`, then run `scripts/validate_catalog.py`, `scripts/test_catalog.py`, `node --check assets/fellowship-questionnaire.js` and `git diff --check`. Schema 1.5 adds accepted bundle status; rebuild older databases before importing. Publication remains suspended; do not push or restore publication without an explicit request.
+
+## High-school integration — September 21, 2026
+
+Accepted 89 supplied high-school reports from `high-school-research-files.zip`: 82 new identities plus seven supplements, for 1,035 total programs. Four unresolved discovery leads remain outside the catalog. The complete imported review and integration decisions are kept locally under `database/local/review/high-school-files/`; accepted records and their full report provenance are reproducible from the CSV.
+
+The questionnaire now routes high-school and college applicants by catalog audience. Age, individual grade, nomination, local residence and partner-school conditions remain visible requirements to confirm; these answers are not collected. Existing undergraduate facts are preserved. This integration uses the supplied review and is not independent fact verification of all 89 programs. Publication remains suspended.

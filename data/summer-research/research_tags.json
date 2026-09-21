@@ -1,12 +1,5 @@
 [
   {
-    "tag_id": 140,
-    "tag_slug": "biomedical-research",
-    "tag_name": "Biomedical research",
-    "tag_group": "discipline",
-    "description": null
-  },
-  {
     "tag_id": 28,
     "tag_slug": "data-science",
     "tag_name": "Data science",
@@ -476,6 +469,13 @@
     "description": null
   },
   {
+    "tag_id": 705,
+    "tag_slug": "animal-behavior",
+    "tag_name": "Animal behavior",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 1472,
     "tag_slug": "animals",
     "tag_name": "Animals",
@@ -493,6 +493,13 @@
     "tag_id": 1652,
     "tag_slug": "anthropogenic",
     "tag_name": "Anthropogenic",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 1007,
+    "tag_slug": "anthropology",
+    "tag_name": "Anthropology",
     "tag_group": "research_topic",
     "description": null
   },
@@ -560,9 +567,9 @@
     "description": null
   },
   {
-    "tag_id": 233,
-    "tag_slug": "artificial-intelligence",
-    "tag_name": "Artificial Intelligence",
+    "tag_id": 1845,
+    "tag_slug": "art",
+    "tag_name": "Art",
     "tag_group": "research_topic",
     "description": null
   },
@@ -581,6 +588,13 @@
     "description": null
   },
   {
+    "tag_id": 233,
+    "tag_slug": "artificial-intelligence",
+    "tag_name": "Artificial intelligence",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 1655,
     "tag_slug": "artiricial-intelligence",
     "tag_name": "Artiricial Intelligence",
@@ -591,6 +605,13 @@
     "tag_id": 1138,
     "tag_slug": "arts-music-research",
     "tag_name": "Arts & music research",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 186,
+    "tag_slug": "astronomy",
+    "tag_name": "Astronomy",
     "tag_group": "research_topic",
     "description": null
   },
@@ -805,6 +826,20 @@
     "description": null
   },
   {
+    "tag_id": 1857,
+    "tag_slug": "behavioral-economics",
+    "tag_name": "Behavioral economics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 1858,
+    "tag_slug": "behavioral-neuroscience",
+    "tag_name": "Behavioral neuroscience",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 1572,
     "tag_slug": "behavioral-science",
     "tag_name": "Behavioral science",
@@ -847,6 +882,13 @@
     "description": null
   },
   {
+    "tag_id": 65,
+    "tag_slug": "biochemistry",
+    "tag_name": "Biochemistry",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 577,
     "tag_slug": "biodiversity",
     "tag_name": "Biodiversity",
@@ -878,6 +920,13 @@
     "tag_id": 88,
     "tag_slug": "biogeochemistry",
     "tag_name": "Biogeochemistry",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 96,
+    "tag_slug": "bioinformatics",
+    "tag_name": "Bioinformatics",
     "tag_group": "research_topic",
     "description": null
   },
@@ -980,6 +1029,27 @@
     "description": null
   },
   {
+    "tag_id": 134,
+    "tag_slug": "biomedical-engineering",
+    "tag_name": "Biomedical engineering",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 597,
+    "tag_slug": "biomedical-informatics",
+    "tag_name": "Biomedical informatics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 140,
+    "tag_slug": "biomedical-research",
+    "tag_name": "Biomedical research",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 159,
     "tag_slug": "biomedicine",
     "tag_name": "Biomedicine",
@@ -1004,6 +1074,13 @@
     "tag_id": 81,
     "tag_slug": "biosciences",
     "tag_name": "Biosciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 61,
+    "tag_slug": "biostatistics",
+    "tag_name": "Biostatistics",
     "tag_group": "research_topic",
     "description": null
   },
@@ -1190,6 +1267,13 @@
     "description": null
   },
   {
+    "tag_id": 55,
+    "tag_slug": "cancer-biology",
+    "tag_name": "Cancer biology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 603,
     "tag_slug": "cancer-research",
     "tag_name": "Cancer research",
@@ -1253,6 +1337,13 @@
     "description": null
   },
   {
+    "tag_id": 45,
+    "tag_slug": "cell-biology",
+    "tag_name": "Cell biology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 1754,
     "tag_slug": "cells",
     "tag_name": "Cells",
@@ -1291,6 +1382,13 @@
     "tag_id": 901,
     "tag_slug": "chemical-synthesis",
     "tag_name": "Chemical Synthesis",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 691,
+    "tag_slug": "chemical-biology",
+    "tag_name": "Chemical biology",
     "tag_group": "research_topic",
     "description": null
   },
@@ -1368,6 +1466,13 @@
     "tag_id": 375,
     "tag_slug": "climate-and-large-scale-atmospheric-dynamics",
     "tag_name": "Climate and Large-Scale Atmospheric Dynamics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 283,
+    "tag_slug": "climate-science",
+    "tag_name": "Climate science",
     "tag_group": "research_topic",
     "description": null
   },
@@ -1477,6 +1582,20 @@
     "description": null
   },
   {
+    "tag_id": 24,
+    "tag_slug": "computational-biology",
+    "tag_name": "Computational biology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 1861,
+    "tag_slug": "computational-biomedicine",
+    "tag_name": "Computational biomedicine",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 213,
     "tag_slug": "computational-design",
     "tag_name": "Computational design",
@@ -1487,6 +1606,20 @@
     "tag_id": 839,
     "tag_slug": "computational-design-of-materials",
     "tag_name": "Computational design of materials",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 1215,
+    "tag_slug": "computational-neuroscience",
+    "tag_name": "Computational neuroscience",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 1084,
+    "tag_slug": "computational-science",
+    "tag_name": "Computational science",
     "tag_group": "research_topic",
     "description": null
   },
@@ -1533,6 +1666,20 @@
     "description": null
   },
   {
+    "tag_id": 1409,
+    "tag_slug": "computer-engineering",
+    "tag_name": "Computer engineering",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 27,
+    "tag_slug": "computer-science",
+    "tag_name": "Computer science",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 1810,
     "tag_slug": "computer-vision-for-roadway-inspection",
     "tag_name": "Computer vision for roadway inspection",
@@ -1543,6 +1690,13 @@
     "tag_id": 231,
     "tag_slug": "computer-supported-cooperative-work",
     "tag_name": "Computer-Supported Cooperative Work",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 14,
+    "tag_slug": "computing",
+    "tag_name": "Computing",
     "tag_group": "research_topic",
     "description": null
   },
@@ -1571,6 +1725,13 @@
     "tag_id": 89,
     "tag_slug": "conservation",
     "tag_name": "Conservation",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 345,
+    "tag_slug": "conservation-biology",
+    "tag_name": "Conservation biology",
     "tag_group": "research_topic",
     "description": null
   },
@@ -2030,6 +2191,13 @@
     "description": null
   },
   {
+    "tag_id": 85,
+    "tag_slug": "ecology",
+    "tag_name": "Ecology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 160,
     "tag_slug": "economics-business-research",
     "tag_name": "Economics & business research",
@@ -2075,6 +2243,13 @@
     "tag_id": 236,
     "tag_slug": "education-technology",
     "tag_name": "Education Technology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 261,
+    "tag_slug": "electrical-engineering",
+    "tag_name": "Electrical engineering",
     "tag_group": "research_topic",
     "description": null
   },
@@ -2226,13 +2401,6 @@
     "description": null
   },
   {
-    "tag_id": 18,
-    "tag_slug": "environmental-science",
-    "tag_name": "Environmental Science",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
     "tag_id": 66,
     "tag_slug": "environmental-sciences",
     "tag_name": "Environmental Sciences",
@@ -2243,6 +2411,20 @@
     "tag_id": 1784,
     "tag_slug": "environmental-effects-on-solid-object-modal-dissipation-for-uxo-detection",
     "tag_name": "Environmental effects on solid-object modal dissipation for UXO detection",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 1405,
+    "tag_slug": "environmental-health",
+    "tag_name": "Environmental health",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 18,
+    "tag_slug": "environmental-science",
+    "tag_name": "Environmental science",
     "tag_group": "research_topic",
     "description": null
   },
@@ -2450,9 +2632,23 @@
     "description": null
   },
   {
+    "tag_id": 1850,
+    "tag_slug": "forensic-science",
+    "tag_name": "Forensic science",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 509,
     "tag_slug": "forest-health",
     "tag_name": "Forest Health",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 1236,
+    "tag_slug": "forestry",
+    "tag_name": "Forestry",
     "tag_group": "research_topic",
     "description": null
   },
@@ -2649,6 +2845,13 @@
     "tag_id": 378,
     "tag_slug": "geodynamics",
     "tag_name": "Geodynamics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 1859,
+    "tag_slug": "geographic-information-systems",
+    "tag_name": "Geographic information systems",
     "tag_group": "research_topic",
     "description": null
   },
@@ -2919,6 +3122,13 @@
     "description": null
   },
   {
+    "tag_id": 1856,
+    "tag_slug": "health-disparities",
+    "tag_name": "Health disparities",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 563,
     "tag_slug": "health-policy",
     "tag_name": "Health policy",
@@ -3080,6 +3290,13 @@
     "description": null
   },
   {
+    "tag_id": 23,
+    "tag_slug": "immunology",
+    "tag_name": "Immunology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 1702,
     "tag_slug": "inclusivity",
     "tag_name": "Inclusivity",
@@ -3167,6 +3384,13 @@
     "tag_id": 1811,
     "tag_slug": "infrastructure-resilience-and-sustainability",
     "tag_name": "Infrastructure resilience and sustainability",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 1855,
+    "tag_slug": "injury-prevention",
+    "tag_name": "Injury prevention",
     "tag_group": "research_topic",
     "description": null
   },
@@ -3661,6 +3885,13 @@
     "description": null
   },
   {
+    "tag_id": 350,
+    "tag_slug": "marine-biology",
+    "tag_name": "Marine biology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 779,
     "tag_slug": "maritime-navigation",
     "tag_name": "Maritime Navigation",
@@ -3710,16 +3941,16 @@
     "description": null
   },
   {
-    "tag_id": 138,
-    "tag_slug": "materials-science",
-    "tag_name": "Materials Science",
+    "tag_id": 743,
+    "tag_slug": "materials-lifecycle-engineering",
+    "tag_name": "Materials lifecycle engineering",
     "tag_group": "research_topic",
     "description": null
   },
   {
-    "tag_id": 743,
-    "tag_slug": "materials-lifecycle-engineering",
-    "tag_name": "Materials lifecycle engineering",
+    "tag_id": 138,
+    "tag_slug": "materials-science",
+    "tag_name": "Materials science",
     "tag_group": "research_topic",
     "description": null
   },
@@ -3752,6 +3983,13 @@
     "description": null
   },
   {
+    "tag_id": 36,
+    "tag_slug": "mathematics",
+    "tag_name": "Mathematics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 101,
     "tag_slug": "mathematics-statistics",
     "tag_name": "Mathematics & statistics",
@@ -3773,6 +4011,13 @@
     "description": null
   },
   {
+    "tag_id": 34,
+    "tag_slug": "measurement-science",
+    "tag_name": "Measurement science",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 1787,
     "tag_slug": "measuring-spin-transfer-in-alkali-metal-noble-gas-atomic-systems",
     "tag_name": "Measuring spin transfer in alkali-metal/noble-gas atomic systems",
@@ -3783,6 +4028,13 @@
     "tag_id": 1124,
     "tag_slug": "mechanical",
     "tag_name": "Mechanical",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 260,
+    "tag_slug": "mechanical-engineering",
+    "tag_name": "Mechanical engineering",
     "tag_group": "research_topic",
     "description": null
   },
@@ -3818,6 +4070,20 @@
     "tag_id": 1055,
     "tag_slug": "medical-devices",
     "tag_name": "Medical Devices",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 1851,
+    "tag_slug": "medical-imaging",
+    "tag_name": "Medical imaging",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 153,
+    "tag_slug": "medicine",
+    "tag_name": "Medicine",
     "tag_group": "research_topic",
     "description": null
   },
@@ -3888,6 +4154,13 @@
     "tag_id": 405,
     "tag_slug": "microbial-ecology",
     "tag_name": "Microbial Ecology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 189,
+    "tag_slug": "microbiology",
+    "tag_name": "Microbiology",
     "tag_group": "research_topic",
     "description": null
   },
@@ -3979,6 +4252,13 @@
     "tag_id": 892,
     "tag_slug": "molecular-and-optical-physics-amo",
     "tag_name": "Molecular and Optical Physics (AMO)",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 47,
+    "tag_slug": "molecular-biology",
+    "tag_name": "Molecular biology",
     "tag_group": "research_topic",
     "description": null
   },
@@ -4151,9 +4431,23 @@
     "description": null
   },
   {
+    "tag_id": 1854,
+    "tag_slug": "natural-resources",
+    "tag_name": "Natural resources",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 735,
     "tag_slug": "natural-rubber-value-chain",
     "tag_name": "Natural rubber value chain",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 1848,
+    "tag_slug": "natural-sciences",
+    "tag_name": "Natural sciences",
     "tag_group": "research_topic",
     "description": null
   },
@@ -4265,7 +4559,7 @@
   {
     "tag_id": 1561,
     "tag_slug": "number-theory",
-    "tag_name": "Number Theory",
+    "tag_name": "Number theory",
     "tag_group": "research_topic",
     "description": null
   },
@@ -4392,6 +4686,13 @@
     "tag_id": 513,
     "tag_slug": "optical-physics",
     "tag_name": "Optical Physics",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 486,
+    "tag_slug": "optics",
+    "tag_name": "Optics",
     "tag_group": "research_topic",
     "description": null
   },
@@ -4571,6 +4872,13 @@
     "description": null
   },
   {
+    "tag_id": 150,
+    "tag_slug": "pharmacology",
+    "tag_name": "Pharmacology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 1522,
     "tag_slug": "philadelphia",
     "tag_name": "Philadelphia",
@@ -4623,6 +4931,13 @@
     "tag_id": 358,
     "tag_slug": "physical-oceanography",
     "tag_name": "Physical oceanography",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 11,
+    "tag_slug": "physics",
+    "tag_name": "Physics",
     "tag_group": "research_topic",
     "description": null
   },
@@ -4697,6 +5012,13 @@
     "description": null
   },
   {
+    "tag_id": 51,
+    "tag_slug": "plant-biology",
+    "tag_name": "Plant biology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 408,
     "tag_slug": "plant-animal-microbe-interactions",
     "tag_name": "Plant-animal/Microbe Interactions",
@@ -4732,6 +5054,13 @@
     "description": null
   },
   {
+    "tag_id": 1852,
+    "tag_slug": "polar-science",
+    "tag_name": "Polar science",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 1550,
     "tag_slug": "pollution-prevention",
     "tag_name": "Pollution Prevention",
@@ -4749,6 +5078,13 @@
     "tag_id": 1506,
     "tag_slug": "portland",
     "tag_name": "Portland",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 1860,
+    "tag_slug": "precision-medicine",
+    "tag_name": "Precision medicine",
     "tag_group": "research_topic",
     "description": null
   },
@@ -4816,6 +5152,13 @@
     "description": null
   },
   {
+    "tag_id": 1844,
+    "tag_slug": "psychiatric-research",
+    "tag_name": "Psychiatric research",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 399,
     "tag_slug": "psychology",
     "tag_name": "Psychology",
@@ -4826,6 +5169,13 @@
     "tag_id": 240,
     "tag_slug": "psychology-behavioral-sciences",
     "tag_name": "Psychology & behavioral sciences",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 25,
+    "tag_slug": "public-health",
+    "tag_name": "Public health",
     "tag_group": "research_topic",
     "description": null
   },
@@ -5061,6 +5411,13 @@
     "description": null
   },
   {
+    "tag_id": 1252,
+    "tag_slug": "remote-sensing",
+    "tag_name": "Remote sensing",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 1607,
     "tag_slug": "representation-learning",
     "tag_name": "Representation Learning",
@@ -5071,6 +5428,13 @@
     "tag_id": 1700,
     "tag_slug": "reproducibility",
     "tag_name": "Reproducibility",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 1846,
+    "tag_slug": "reproductive-biology",
+    "tag_name": "Reproductive biology",
     "tag_group": "research_topic",
     "description": null
   },
@@ -5551,6 +5915,13 @@
     "description": null
   },
   {
+    "tag_id": 166,
+    "tag_slug": "sociology",
+    "tag_name": "Sociology",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 499,
     "tag_slug": "soft-materials-colloids",
     "tag_name": "Soft Materials/Colloids",
@@ -5673,6 +6044,13 @@
     "tag_id": 1833,
     "tag_slug": "statistical-modeling",
     "tag_name": "Statistical Modeling",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 1849,
+    "tag_slug": "stem-cell-research",
+    "tag_name": "Stem cell research",
     "tag_group": "research_topic",
     "description": null
   },
@@ -5848,6 +6226,13 @@
     "tag_id": 1408,
     "tag_slug": "team-science",
     "tag_name": "Team Science",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 1853,
+    "tag_slug": "technology",
+    "tag_name": "Technology",
     "tag_group": "research_topic",
     "description": null
   },
@@ -6244,6 +6629,13 @@
     "description": null
   },
   {
+    "tag_id": 727,
+    "tag_slug": "water-resources",
+    "tag_name": "Water resources",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 1785,
     "tag_slug": "waves-in-nuclear-dynamics-and-cold-atoms",
     "tag_name": "Waves in Nuclear Dynamics and Cold Atoms",
@@ -6268,6 +6660,13 @@
     "tag_id": 602,
     "tag_slug": "wet-lab",
     "tag_name": "Wet lab",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 961,
+    "tag_slug": "wildlife-biology",
+    "tag_name": "Wildlife biology",
     "tag_group": "research_topic",
     "description": null
   },
@@ -6300,6 +6699,13 @@
     "description": null
   },
   {
+    "tag_id": 1847,
+    "tag_slug": "womens-health",
+    "tag_name": "Women’s health",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
     "tag_id": 682,
     "tag_slug": "x-ray-diffraction",
     "tag_name": "X-ray diffraction",
@@ -6310,6 +6716,13 @@
     "tag_id": 1838,
     "tag_slug": "xr",
     "tag_name": "XR",
+    "tag_group": "research_topic",
+    "description": null
+  },
+  {
+    "tag_id": 960,
+    "tag_slug": "zoology",
+    "tag_name": "Zoology",
     "tag_group": "research_topic",
     "description": null
   },
@@ -6489,13 +6902,6 @@
     "description": null
   },
   {
-    "tag_id": 705,
-    "tag_slug": "animal-behavior",
-    "tag_name": "animal behavior",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
     "tag_id": 1622,
     "tag_slug": "animal-behaviors",
     "tag_name": "animal behaviors",
@@ -6534,13 +6940,6 @@
     "tag_id": 1249,
     "tag_slug": "anoxic",
     "tag_name": "anoxic",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 1007,
-    "tag_slug": "anthropology",
-    "tag_name": "anthropology",
     "tag_group": "research_topic",
     "description": null
   },
@@ -6695,13 +7094,6 @@
     "tag_id": 187,
     "tag_slug": "astrobiology",
     "tag_name": "astrobiology",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 186,
-    "tag_slug": "astronomy",
-    "tag_name": "astronomy",
     "tag_group": "research_topic",
     "description": null
   },
@@ -6895,13 +7287,6 @@
     "description": null
   },
   {
-    "tag_id": 65,
-    "tag_slug": "biochemistry",
-    "tag_name": "biochemistry",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
     "tag_id": 78,
     "tag_slug": "bioengineering",
     "tag_name": "bioengineering",
@@ -6926,13 +7311,6 @@
     "tag_id": 524,
     "tag_slug": "biogeography",
     "tag_name": "biogeography",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 96,
-    "tag_slug": "bioinformatics",
-    "tag_name": "bioinformatics",
     "tag_group": "research_topic",
     "description": null
   },
@@ -7014,23 +7392,9 @@
     "description": null
   },
   {
-    "tag_id": 134,
-    "tag_slug": "biomedical-engineering",
-    "tag_name": "biomedical engineering",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
     "tag_id": 1674,
     "tag_slug": "biomedical-genetics",
     "tag_name": "biomedical genetics",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 597,
-    "tag_slug": "biomedical-informatics",
-    "tag_name": "biomedical informatics",
     "tag_group": "research_topic",
     "description": null
   },
@@ -7140,13 +7504,6 @@
     "description": null
   },
   {
-    "tag_id": 61,
-    "tag_slug": "biostatistics",
-    "tag_name": "biostatistics",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
     "tag_id": 1029,
     "tag_slug": "biosystems",
     "tag_name": "biosystems",
@@ -7252,13 +7609,6 @@
     "description": null
   },
   {
-    "tag_id": 55,
-    "tag_slug": "cancer-biology",
-    "tag_name": "cancer biology",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
     "tag_id": 1098,
     "tag_slug": "carbon-capture",
     "tag_name": "carbon capture",
@@ -7283,13 +7633,6 @@
     "tag_id": 519,
     "tag_slug": "catalysis",
     "tag_name": "catalysis",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 45,
-    "tag_slug": "cell-biology",
-    "tag_name": "cell biology",
     "tag_group": "research_topic",
     "description": null
   },
@@ -7353,13 +7696,6 @@
     "tag_id": 1716,
     "tag_slug": "chemical-and-stem-education",
     "tag_name": "chemical and STEM education",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 691,
-    "tag_slug": "chemical-biology",
-    "tag_name": "chemical biology",
     "tag_group": "research_topic",
     "description": null
   },
@@ -7451,13 +7787,6 @@
     "tag_id": 284,
     "tag_slug": "climate-change",
     "tag_name": "climate change",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 283,
-    "tag_slug": "climate-science",
-    "tag_name": "climate science",
     "tag_group": "research_topic",
     "description": null
   },
@@ -7665,13 +7994,6 @@
     "description": null
   },
   {
-    "tag_id": 24,
-    "tag_slug": "computational-biology",
-    "tag_name": "computational biology",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
     "tag_id": 476,
     "tag_slug": "computational-chemistry",
     "tag_name": "computational chemistry",
@@ -7728,13 +8050,6 @@
     "description": null
   },
   {
-    "tag_id": 1215,
-    "tag_slug": "computational-neuroscience",
-    "tag_name": "computational neuroscience",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
     "tag_id": 883,
     "tag_slug": "computational-number-theory",
     "tag_name": "computational number theory",
@@ -7745,13 +8060,6 @@
     "tag_id": 893,
     "tag_slug": "computational-physics",
     "tag_name": "computational physics",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 1084,
-    "tag_slug": "computational-science",
-    "tag_name": "computational science",
     "tag_group": "research_topic",
     "description": null
   },
@@ -7777,13 +8085,6 @@
     "description": null
   },
   {
-    "tag_id": 1409,
-    "tag_slug": "computer-engineering",
-    "tag_name": "computer engineering",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
     "tag_id": 538,
     "tag_slug": "computer-graphics",
     "tag_name": "computer graphics",
@@ -7801,13 +8102,6 @@
     "tag_id": 263,
     "tag_slug": "computer-models",
     "tag_name": "computer models",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 27,
-    "tag_slug": "computer-science",
-    "tag_name": "computer science",
     "tag_group": "research_topic",
     "description": null
   },
@@ -7840,13 +8134,6 @@
     "description": null
   },
   {
-    "tag_id": 14,
-    "tag_slug": "computing",
-    "tag_name": "computing",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
     "tag_id": 69,
     "tag_slug": "condensed-matter",
     "tag_name": "condensed matter",
@@ -7864,13 +8151,6 @@
     "tag_id": 146,
     "tag_slug": "confocal-imaging",
     "tag_name": "confocal imaging",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 345,
-    "tag_slug": "conservation-biology",
-    "tag_name": "conservation biology",
     "tag_group": "research_topic",
     "description": null
   },
@@ -8267,13 +8547,6 @@
     "description": null
   },
   {
-    "tag_id": 85,
-    "tag_slug": "ecology",
-    "tag_name": "ecology",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
     "tag_id": 348,
     "tag_slug": "ecology-evolution",
     "tag_name": "ecology & evolution",
@@ -8368,13 +8641,6 @@
     "tag_id": 1122,
     "tag_slug": "electrical",
     "tag_name": "electrical",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 261,
-    "tag_slug": "electrical-engineering",
-    "tag_name": "electrical engineering",
     "tag_group": "research_topic",
     "description": null
   },
@@ -8522,13 +8788,6 @@
     "tag_id": 1279,
     "tag_slug": "environmental-geology",
     "tag_name": "environmental geology",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 1405,
-    "tag_slug": "environmental-health",
-    "tag_name": "environmental health",
     "tag_group": "research_topic",
     "description": null
   },
@@ -8879,13 +9138,6 @@
     "tag_id": 1238,
     "tag_slug": "forest-stand-dynamics",
     "tag_name": "forest stand dynamics",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 1236,
-    "tag_slug": "forestry",
-    "tag_name": "forestry",
     "tag_group": "research_topic",
     "description": null
   },
@@ -9436,13 +9688,6 @@
     "description": null
   },
   {
-    "tag_id": 23,
-    "tag_slug": "immunology",
-    "tag_name": "immunology",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
     "tag_id": 1289,
     "tag_slug": "industrial-electrification",
     "tag_name": "industrial electrification",
@@ -9870,13 +10115,6 @@
     "description": null
   },
   {
-    "tag_id": 350,
-    "tag_slug": "marine-biology",
-    "tag_name": "marine biology",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
     "tag_id": 637,
     "tag_slug": "marine-debris",
     "tag_name": "marine debris",
@@ -9996,13 +10234,6 @@
     "description": null
   },
   {
-    "tag_id": 36,
-    "tag_slug": "mathematics",
-    "tag_name": "mathematics",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
     "tag_id": 1773,
     "tag_slug": "mathematics-reu",
     "tag_name": "mathematics REU",
@@ -10017,23 +10248,9 @@
     "description": null
   },
   {
-    "tag_id": 34,
-    "tag_slug": "measurement-science",
-    "tag_name": "measurement science",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
     "tag_id": 1319,
     "tag_slug": "mechanical-ecology",
     "tag_name": "mechanical ecology",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 260,
-    "tag_slug": "mechanical-engineering",
-    "tag_name": "mechanical engineering",
     "tag_group": "research_topic",
     "description": null
   },
@@ -10062,13 +10279,6 @@
     "tag_id": 900,
     "tag_slug": "medicinal-chemistry",
     "tag_name": "medicinal chemistry",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 153,
-    "tag_slug": "medicine",
-    "tag_name": "medicine",
     "tag_group": "research_topic",
     "description": null
   },
@@ -10118,13 +10328,6 @@
     "tag_id": 1677,
     "tag_slug": "microbial-genetics",
     "tag_name": "microbial genetics",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 189,
-    "tag_slug": "microbiology",
-    "tag_name": "microbiology",
     "tag_group": "research_topic",
     "description": null
   },
@@ -10216,13 +10419,6 @@
     "tag_id": 681,
     "tag_slug": "molecular-and-optical-physics",
     "tag_name": "molecular and optical physics",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 47,
-    "tag_slug": "molecular-biology",
-    "tag_name": "molecular biology",
     "tag_group": "research_topic",
     "description": null
   },
@@ -10675,13 +10871,6 @@
     "description": null
   },
   {
-    "tag_id": 486,
-    "tag_slug": "optics",
-    "tag_name": "optics",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
     "tag_id": 1168,
     "tag_slug": "optimal-transport",
     "tag_name": "optimal transport",
@@ -10836,13 +11025,6 @@
     "description": null
   },
   {
-    "tag_id": 150,
-    "tag_slug": "pharmacology",
-    "tag_name": "pharmacology",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
     "tag_id": 841,
     "tag_slug": "phase-change-materials",
     "tag_name": "phase change materials",
@@ -10881,13 +11063,6 @@
     "tag_id": 42,
     "tag_slug": "physical-sciences",
     "tag_name": "physical sciences",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 11,
-    "tag_slug": "physics",
-    "tag_name": "physics",
     "tag_group": "research_topic",
     "description": null
   },
@@ -10965,13 +11140,6 @@
     "tag_id": 193,
     "tag_slug": "planets",
     "tag_name": "planets",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 51,
-    "tag_slug": "plant-biology",
-    "tag_name": "plant biology",
     "tag_group": "research_topic",
     "description": null
   },
@@ -11312,13 +11480,6 @@
     "description": null
   },
   {
-    "tag_id": 25,
-    "tag_slug": "public-health",
-    "tag_name": "public health",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
     "tag_id": 1814,
     "tag_slug": "pulsars",
     "tag_name": "pulsars",
@@ -11560,13 +11721,6 @@
     "tag_id": 1577,
     "tag_slug": "remediation",
     "tag_name": "remediation",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 1252,
-    "tag_slug": "remote-sensing",
-    "tag_name": "remote sensing",
     "tag_group": "research_topic",
     "description": null
   },
@@ -11973,13 +12127,6 @@
     "tag_id": 1335,
     "tag_slug": "sociolinguistics",
     "tag_name": "sociolinguistics",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 166,
-    "tag_slug": "sociology",
-    "tag_name": "sociology",
     "tag_group": "research_topic",
     "description": null
   },
@@ -12754,13 +12901,6 @@
     "description": null
   },
   {
-    "tag_id": 727,
-    "tag_slug": "water-resources",
-    "tag_name": "water resources",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
     "tag_id": 1175,
     "tag_slug": "watershed-science",
     "tag_name": "watershed science",
@@ -12799,13 +12939,6 @@
     "tag_id": 650,
     "tag_slug": "wetlands",
     "tag_name": "wetlands",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 961,
-    "tag_slug": "wildlife-biology",
-    "tag_name": "wildlife biology",
     "tag_group": "research_topic",
     "description": null
   },
@@ -12883,13 +13016,6 @@
     "tag_id": 706,
     "tag_slug": "working-landscapes",
     "tag_name": "working landscapes",
-    "tag_group": "research_topic",
-    "description": null
-  },
-  {
-    "tag_id": 960,
-    "tag_slug": "zoology",
-    "tag_name": "zoology",
     "tag_group": "research_topic",
     "description": null
   },
