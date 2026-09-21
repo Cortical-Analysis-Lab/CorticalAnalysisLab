@@ -141,7 +141,6 @@
 .program-review-details { margin: 0.75rem 0; font-size: 0.9rem; line-height: 1.65; overflow-wrap: anywhere; }
 .program-review-details summary { color: var(--red); cursor: pointer; font-weight: 600; padding: 0.5rem 0; }
 .program-review-details summary:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
-.eligibility-card:has(> .program-review-details[open]) { grid-column: 1 / -1; width: 100%; max-width: 800px; box-sizing: border-box; justify-self: center; }
 .expanded-program-content { padding-top: 0.75rem; }
 .expanded-program-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: 1.25rem 1.5rem; margin: 1.25rem 0; }
 .program-detail-section { min-width: 0; }
@@ -162,3 +161,25 @@
 .program-review-details .detail-context { color: var(--gray); font-size: 0.8rem; }
 .detail-references { margin-top: 1rem !important; }
 @media (max-width: 480px) { .expanded-facts > div { grid-template-columns: 1fr; gap: 0.15rem; } }
+
+body.program-dialog-open { overflow: hidden; }
+button.program-title-button { background: none; border: 0; padding: 0; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+button.program-title-button:hover { color: var(--red); }
+button.program-details-button { align-self: flex-start; margin: 0.25rem 0 0.8rem; padding: 0.4rem 0; background: none; border: 0; color: var(--red); font: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer; }
+.program-detail-dialog { width: min(800px, calc(100% - 2rem)); max-width: none; max-height: calc(100dvh - 3rem); padding: 0; border: 0; border-radius: 14px; background: #fff; color: var(--text); box-shadow: 0 20px 70px rgba(0, 0, 0, 0.35); overflow: hidden; box-sizing: border-box; }
+.program-detail-dialog[open] { display: flex; flex-direction: column; }
+.program-detail-dialog::backdrop { background: rgba(22, 16, 19, 0.78); }
+.program-dialog-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; padding: 1.1rem 1.25rem; border-bottom: 1px solid #e7e0e2; flex-shrink: 0; }
+.program-dialog-header h2 { margin: 0; font-size: 1.2rem; line-height: 1.3; }
+.program-dialog-header p { margin: 0.4rem 0 0; font-size: 0.85rem; line-height: 1.4; color: var(--gray); }
+.program-dialog-header form { margin: 0; }
+button.program-dialog-close { width: 40px; height: 40px; padding: 0; border: 1px solid #ddd; border-radius: 50%; background: #fff; color: var(--text); font-size: 1.7rem; cursor: pointer; }
+.program-dialog-body { padding: 0 1.25rem 1.25rem; overflow-y: auto; min-height: 0; overscroll-behavior: contain; }
+.program-dialog-body .program-review-details { margin: 0; }
+.program-dialog-body .expanded-program-layout { gap: 1rem 1.25rem; margin: 1rem 0; }
+.program-dialog-body .program-source-reports { padding-top: 0.8rem; }
+.program-dialog-body .card-actions { padding-top: 1rem; }
+button.program-title-button:focus-visible, button.program-details-button:focus-visible, button.program-dialog-close:focus-visible, .program-dialog-body:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+
+button.program-title-button:hover, button.program-details-button:hover { background: transparent; color: var(--red); transform: none; }
+button.program-dialog-close:hover { background: #f7eff1; color: var(--red); transform: none; }

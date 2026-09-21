@@ -119,18 +119,18 @@ document.addEventListener("DOMContentLoaded", async () => {
         ${item.notes ? section("Additional notes", detailText(item.notes)) : ""}
         ${sources.length ? `<p class="detail-references"><strong>Sources:</strong> ${sources.join(" · ")}</p>` : ""}</details>`;
     }).join("");
-    return `<details class="program-review-details"><summary>${opportunity.review_notes ? "Program details — review notes" : "Program details"}</summary>
+    return `<div class="program-review-details">
       <div class="expanded-program-content">
         ${opportunity.review_notes ? `<aside class="program-review-note"><strong>Review notes</strong>${detailText(opportunity.review_notes)}</aside>` : ""}
         ${overview ? section("Overview", `<p class="detail-context">Reported cycle: ${escapeHtml(overview.cycle || overview.benefitsCycle || "N/A")}</p>${detailText(overview.summary)}`) : ""}
         <div class="expanded-program-layout">
-          ${section("Location and dates", `<dl class="expanded-facts">${row("Location", locationLabel(opportunity, locationVariant))}${row("Cycle", cycle.cycle_year)}${row("Starts", dateDisplay(cycle.program_start))}${row("Ends", dateDisplay(cycle.program_end))}${row("Application deadline", dateDisplay(cycle.application_deadline))}${row("Availability", cycle.status_text || cycle.status_code)}</dl>`)}
-          ${section("Eligibility", detailText(eligibility.raw_eligibility_text) + (eligibility.other_rule_text ? detailText(eligibility.other_rule_text) : ""))}
+          ${section("Location and dates", `<dl class="expanded-facts">${row("Location", locationLabel(opportunity, locationVariant))}${row("Format", opportunity.delivery_format)}${row("Duration", cycle.duration_weeks == null ? null : `${cycle.duration_weeks} weeks`)}${row("Cycle", cycle.cycle_year)}${row("Starts", dateDisplay(cycle.program_start))}${row("Ends", dateDisplay(cycle.program_end))}${row("Application deadline", dateDisplay(cycle.application_deadline))}${row("Availability", cycle.status_text || cycle.status_code)}</dl>`)}
+          ${section("Eligibility", `<dl class="expanded-facts">${row("Minimum GPA", eligibility.min_gpa)}</dl>` + detailText(eligibility.raw_eligibility_text) + (eligibility.other_rule_text ? detailText(eligibility.other_rule_text) : ""))}
           ${section("Funding and living arrangements", `<dl class="expanded-facts">${row("Stipend", stipendDisplay(cycle))}${row("Housing", cycle.housing_details || benefitDisplay(opportunity, cycle, "housing_status", "housingProvision"))}${row("Meals", cycle.meals_details || benefitDisplay(opportunity, cycle, "meals_status", "mealsProvision"))}${row("Travel", cycle.travel_details || cycle.travel_status)}${row("Academic credit", cycle.academic_credit_status)}</dl>`)}
           ${section("Research areas and topics", `<p>${associatedResearchAreas(opportunity).map(([, label]) => escapeHtml(label)).join(" · ") || "N/A"}</p><ul class="detail-topics">${(opportunity.tags || []).map(tag => `<li>${escapeHtml(tag.tag_name)}</li>`).join("") || "<li>N/A</li>"}</ul>`)}
         </div>
         ${sourceReports ? `<section class="program-source-reports"><h4>Additional source information</h4><p class="detail-context">Expand a source to see its reported requirements and benefits. Reports may describe different cycles.</p>${sourceReports}</section>` : ""}
-      </div></details>`;
+      </div></div>`;
   }
   const categoryTerms = {
     "biomedical-health": ["biomedical", "health", "medicine", "medical", "cancer", "immunology", "public health"],
@@ -215,15 +215,38 @@ document.addEventListener("DOMContentLoaded", async () => {
     const cardCategories = associatedResearchAreas(opportunity).map(([, label]) => label);
     return `<article class="eligibility-card">
       <div class="card-status-row"><span class="cycle-status status-badge ${escapeHtml(display(cycle.status_code).toLowerCase())}">${escapeHtml(display(cycle.status_code))}</span></div>
-      <h3>${escapeHtml(opportunity.program_name)}</h3><p class="institution-line">${escapeHtml(institution.institution_name)} · ${escapeHtml(location)}</p>
+      <h3><button type="button" class="program-title-button" data-program-details aria-haspopup="dialog">${escapeHtml(opportunity.program_name)}</button></h3><p class="institution-line">${escapeHtml(institution.institution_name)} · ${escapeHtml(location)}</p>
       <dl class="program-details"><div><dt>Deadline</dt><dd>${escapeHtml(dateDisplay(cycle.application_deadline))}</dd></div><div><dt>Format</dt><dd>${escapeHtml(display(opportunity.delivery_format))}</dd></div><div><dt>Duration</dt><dd>${cycle.duration_weeks === null || cycle.duration_weeks === undefined ? "N/A" : `${escapeHtml(cycle.duration_weeks)} weeks`}</dd></div><div><dt>Stipend</dt><dd>${escapeHtml(stipendDisplay(cycle))}</dd></div><div><dt>Housing</dt><dd>${escapeHtml(benefitDisplay(opportunity, cycle, "housing_status", "housingProvision"))}</dd></div><div><dt>Meals</dt><dd>${escapeHtml(benefitDisplay(opportunity, cycle, "meals_status", "mealsProvision"))}</dd></div><div><dt>Minimum GPA</dt><dd>${escapeHtml(display(cycle.eligibility?.min_gpa))}</dd></div></dl>
       <div class="program-tags">${cardCategories.map(label => `<span class="meta-chip category-chip">${escapeHtml(label)}</span>`).join("")}${tags.map(tag => `<span class="meta-chip">${escapeHtml(tag.tag_name)}</span>`).join("")}</div>
-      ${bundleDetails(opportunity, locationVariant)}
+      <button type="button" class="program-details-button" data-program-details aria-haspopup="dialog">${opportunity.review_notes ? "Program details — review notes" : "Program details"}</button>
+      <template class="program-details-template">${bundleDetails(opportunity, locationVariant)}</template>
       <div class="card-actions">${opportunity.program_url ? `<a class="program-link" href="${escapeHtml(opportunity.program_url)}" target="_blank" rel="noopener">View program →</a>` : "<span>Official program link: N/A</span>"}<span class="verification-date">Source checked ${escapeHtml(display(cycle.last_verified))}</span></div>
     </article>`;
   }
 
   const filterIds = ["filter-keyword", "filter-housing", "filter-travel", "filter-open", "filter-upcoming", "sort-results"];
+
+  const detailDialog = document.getElementById("program-detail-dialog");
+  let detailTrigger = null;
+  resultContainer.addEventListener("click", event => {
+    const trigger = event.target.closest("[data-program-details]");
+    if (!trigger) return;
+    const selectedCard = trigger.closest(".eligibility-card");
+    detailTrigger = trigger;
+    document.getElementById("program-detail-title").textContent = selectedCard.querySelector("h3").textContent;
+    document.getElementById("program-detail-institution").textContent = selectedCard.querySelector(".institution-line").textContent;
+    const content = document.getElementById("program-detail-body");
+    content.replaceChildren(selectedCard.querySelector("template").content.cloneNode(true));
+    const actions = selectedCard.querySelector(".card-actions").cloneNode(true);
+    content.append(actions);
+    detailDialog.showModal();
+    content.scrollTop = 0;
+    document.body.classList.add("program-dialog-open");
+  });
+  detailDialog.addEventListener("close", () => {
+    document.body.classList.remove("program-dialog-open");
+    if (detailTrigger?.isConnected) detailTrigger.focus();
+  });
 
   function locationVariants(opportunity) {
     const institution = opportunity.institution || {};

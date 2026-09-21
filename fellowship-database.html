@@ -8,9 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/fellowship-database.css">
-  <link rel="stylesheet" href="assets/fellowship-results.css?v=32">
+  <link rel="stylesheet" href="assets/fellowship-results.css?v=33">
   <script defer src="assets/site.js?v=4"></script>
-  <script defer src="assets/fellowship-questionnaire.js?v=32"></script>
+  <script defer src="assets/fellowship-questionnaire.js?v=33"></script>
 </head>
 <body>
   <nav>
@@ -139,6 +139,13 @@
     </section>
   </main>
 
+  <dialog id="program-detail-dialog" class="program-detail-dialog" aria-labelledby="program-detail-title">
+    <header class="program-dialog-header">
+      <div><h2 id="program-detail-title"></h2><p id="program-detail-institution"></p></div>
+      <form method="dialog"><button class="program-dialog-close" aria-label="Close program details" autofocus>×</button></form>
+    </header>
+    <div id="program-detail-body" class="program-dialog-body" tabindex="0" role="region" aria-label="Program information"></div>
+  </dialog>
   <footer>© <span id="year"></span> Cortical Analysis Lab | Sacred Heart University</footer>
 </body>
 </html>
