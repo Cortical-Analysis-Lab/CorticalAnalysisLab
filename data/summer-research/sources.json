@@ -2371,7 +2371,7 @@
     {
       "source_id": 297,
       "source_url": "https://www.sacredheart.edu/academics/colleges--schools/college-of-arts--sciences/departments--schools/biology/bee-health-and-ecology-research-objective-bee-hero/",
-      "source_name": "Bee Health and Ecology Research Objective (Bee-HERO) Summer",
+      "source_name": "Bee Health and Ecology Research Objective (Bee-HERO)",
       "source_type": "official_program",
       "publisher": null,
       "authoritative": 1
@@ -2922,14 +2922,6 @@
     },
     {
       "source_id": 366,
-      "source_url": "https://www.seti.org/research-experience-undergraduates",
-      "source_name": "NSF ETAP",
-      "source_type": "unreviewed_program_link",
-      "publisher": null,
-      "authoritative": 0
-    },
-    {
-      "source_id": 367,
       "source_url": "https://reu-water.org/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -2937,7 +2929,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 368,
+      "source_id": 367,
       "source_url": "https://sites.google.com/csusb.edu/reuatcsusb/home",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -2945,7 +2937,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 369,
+      "source_id": 368,
       "source_url": "https://pccm.princeton.edu/reu",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -2953,7 +2945,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 370,
+      "source_id": 369,
       "source_url": "https://numentus.net/students/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -2961,7 +2953,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 371,
+      "source_id": 370,
       "source_url": "https://cabbi.bio/news/outreach/rise/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -2969,7 +2961,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 372,
+      "source_id": 371,
       "source_url": "https://www.simonsfoundation.org/simons-nsbp-summer-program-snsp/program-details",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -2977,7 +2969,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 373,
+      "source_id": 372,
       "source_url": "https://plasticsurgery.stanford.edu/research/stars.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -2985,7 +2977,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 374,
+      "source_id": 373,
       "source_url": "https://sustainability.stanford.edu/our-community/dei/surge",
       "source_name": "PathwaysToScience; The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -2993,7 +2985,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 375,
+      "source_id": 374,
       "source_url": "http://graduate.ucsf.edu/srtp",
       "source_name": "AAMC; FUN; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3001,7 +2993,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 376,
+      "source_id": 375,
       "source_url": "https://www.grad.uci.edu/about-us/diversity/grad-prep-programs/surf.php",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3009,7 +3001,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 377,
+      "source_id": 376,
       "source_url": "https://grad.ucsd.edu/oar2/oar2office/programs/undergraduate-programs/stars/index.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3017,7 +3009,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 378,
+      "source_id": 377,
       "source_url": "http://www.eecs.berkeley.edu/Programs/ugrad/superb/superb.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3025,7 +3017,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 379,
+      "source_id": 378,
       "source_url": "https://sfp.caltech.edu/undergraduate-research/programs/surf",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3033,7 +3025,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 380,
+      "source_id": 379,
       "source_url": "https://tahoe.ucdavis.edu/interns",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3041,7 +3033,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 381,
+      "source_id": 380,
       "source_url": "https://e4e.ucsd.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3049,7 +3041,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 382,
+      "source_id": 381,
       "source_url": "https://mcnair.ucsb.edu/apply-mcnair",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3057,7 +3049,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 383,
+      "source_id": 382,
       "source_url": "https://www.youngaisecuritylab.com/nsf-reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3065,7 +3057,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 384,
+      "source_id": 383,
       "source_url": "https://labcit.ligo.caltech.edu/LIGO_web/students/SURF/",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3073,7 +3065,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 385,
+      "source_id": 384,
       "source_url": "https://sfp.caltech.edu/undergraduate-research/programs/wavefellows",
       "source_name": "PathwaysToScience; The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -3081,7 +3073,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 386,
+      "source_id": 385,
       "source_url": "https://imod-stc.org/imod-reu-application/",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3089,7 +3081,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 387,
+      "source_id": 386,
       "source_url": "https://materialsreu.mines.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3097,7 +3089,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 388,
+      "source_id": 387,
       "source_url": "https://faculty.uccs.edu/jkalita/reu-site-advances-in-natural-language-processing/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3105,7 +3097,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 389,
+      "source_id": 388,
       "source_url": "https://soars.ucar.edu/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3113,15 +3105,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 390,
-      "source_url": "http://lasp.colorado.edu/home/education/reu/",
-      "source_name": "PathwaysToScience",
-      "source_type": "unreviewed_program_link",
-      "publisher": null,
-      "authoritative": 0
-    },
-    {
-      "source_id": 391,
+      "source_id": 389,
       "source_url": "https://www.colorado.edu/smart/undergraduates",
       "source_name": "FUN; PathwaysToScience; The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -3129,7 +3113,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 392,
+      "source_id": 390,
       "source_url": "https://www.bmb.colostate.edu/reu-program-description/",
       "source_name": "FUN; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3137,7 +3121,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 393,
+      "source_id": 391,
       "source_url": "https://web.uri.edu/naval-science-technology/students/undergraduate-students/anchor-fellowship/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3145,7 +3129,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 394,
+      "source_id": 392,
       "source_url": "http://www.knac.org/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3153,15 +3137,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 395,
-      "source_url": "https://pnbreu.uconn.edu/",
-      "source_name": "NSF ETAP; PathwaysToScience",
-      "source_type": "unreviewed_program_link",
-      "publisher": null,
-      "authoritative": 0
-    },
-    {
-      "source_id": 396,
+      "source_id": 393,
       "source_url": "https://mathreu.uconn.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3169,7 +3145,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 397,
+      "source_id": 394,
       "source_url": "https://gsas.yale.edu/programs-of-study/summer-undergraduate-research-fellowship-program",
       "source_name": "PathwaysToScience; The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -3177,7 +3153,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 398,
+      "source_id": 395,
       "source_url": "https://czn.coastal.udel.edu/opportunities/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3185,7 +3161,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 399,
+      "source_id": 396,
       "source_url": "https://www.udel.edu/academics/colleges/canr/current-students/current-undergrad/careers-and-internships/summer-institute/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3193,7 +3169,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 400,
+      "source_id": 397,
       "source_url": "http://www.ceoe.udel.edu/academics/for-current-undergraduates/marine-sciences-summer-program",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3201,7 +3177,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 401,
+      "source_id": 398,
       "source_url": "https://www.nemours.org/pediatric-research/education.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3209,7 +3185,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 402,
+      "source_id": 399,
       "source_url": "https://www.udel.edu/academics/colleges/grad/research/summer-research/source/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3217,7 +3193,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 403,
+      "source_id": 400,
       "source_url": "https://accessiblesharks.wordpress.com/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3225,7 +3201,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 404,
+      "source_id": 401,
       "source_url": "https://airehab.fiu.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3233,7 +3209,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 405,
+      "source_id": 402,
       "source_url": "https://www.bu.edu/cell-met/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3241,7 +3217,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 406,
+      "source_id": 403,
       "source_url": "https://www.coralrestoration.org/internships",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3249,7 +3225,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 407,
+      "source_id": 404,
       "source_url": "http://www.mote.org/reu",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3257,7 +3233,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 408,
+      "source_id": 405,
       "source_url": "https://www.usf.edu/marine-science/education/usf-making-waves-reu/index.aspx",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3265,7 +3241,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 409,
+      "source_id": 406,
       "source_url": "https://www.fau.edu/isense/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3273,7 +3249,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 410,
+      "source_id": 407,
       "source_url": "https://iotreu.cs.ucf.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3281,7 +3257,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 411,
+      "source_id": 408,
       "source_url": "https://www.usf.edu/arts-sciences/departments/geosciences/undergraduate/research-experiences/piaccart-reu.aspx",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3289,7 +3265,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 412,
+      "source_id": 409,
       "source_url": "https://creol.ucf.edu/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3297,7 +3273,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 413,
+      "source_id": 410,
       "source_url": "http://www.usf-crypto.org/reu-program/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3305,7 +3281,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 414,
+      "source_id": 411,
       "source_url": "https://www.usf.edu/ai-cybersecurity-computing/research/sees_reu.aspx",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3313,7 +3289,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 415,
+      "source_id": 412,
       "source_url": "https://cater.cecs.ucf.edu/hyper/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3321,7 +3297,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 416,
+      "source_id": 413,
       "source_url": "https://www.bio.fsu.edu/duval/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3329,7 +3305,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 417,
+      "source_id": 414,
       "source_url": "https://rider.eng.famu.fsu.edu/article/research-experiences-undergraduates-resilience-against-extreme-weather-events",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3337,7 +3313,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 418,
+      "source_id": 415,
       "source_url": "https://sciences.ucf.edu/physics/reu-energy/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3345,7 +3321,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 419,
+      "source_id": 416,
       "source_url": "https://daytonabeach.erau.edu/college-engineering/mechanical/nsf-ires-usa-brazil",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3353,7 +3329,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 420,
+      "source_id": 417,
       "source_url": "https://sst-reu.fiu.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3361,7 +3337,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 421,
+      "source_id": 418,
       "source_url": "https://faculty.eng.ufl.edu/assured-autonomy-networking/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3369,7 +3345,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 422,
+      "source_id": 419,
       "source_url": "https://www.crcv.ucf.edu/nsf-projects/reu/reu-2026/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3377,7 +3353,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 423,
+      "source_id": 420,
       "source_url": "https://www.usf.edu/arts-sciences/departments/geosciences/undergraduate/research-experiences/weather-climate-and-society.aspx",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3385,7 +3361,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 424,
+      "source_id": 421,
       "source_url": "https://savannahstate.edu/events/bridge-to-research-in-marine-sciences/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3393,7 +3369,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 425,
+      "source_id": 422,
       "source_url": "https://sites.google.com/view/csaw-reu/home",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3401,7 +3377,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 426,
+      "source_id": 423,
       "source_url": "https://www.math.emory.edu/site/cmds-reuret/",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3409,7 +3385,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 427,
+      "source_id": 424,
       "source_url": "https://plantcenter.uga.edu/study/undergraduate-research/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3417,7 +3393,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 428,
+      "source_id": 425,
       "source_url": "https://physicsreu.gatech.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3425,7 +3401,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 429,
+      "source_id": 426,
       "source_url": "https://bmb.uga.edu/fungal-genomics-and-computational-biology",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3433,7 +3409,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 430,
+      "source_id": 427,
       "source_url": "https://tree4health.emory.edu/programs/inspire.html",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3441,7 +3417,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 431,
+      "source_id": 428,
       "source_url": "https://reu.engr.uga.edu/",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3449,7 +3425,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 432,
+      "source_id": 429,
       "source_url": "https://bhamla.gatech.edu/project-blog/jungle-biomechanics-lab",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3457,7 +3433,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 433,
+      "source_id": 430,
       "source_url": "https://ccse.kennesaw.edu/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3465,7 +3441,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 434,
+      "source_id": 431,
       "source_url": "https://graduateschool.emory.edu/belonging/programming/lgs-soar/index.html",
       "source_name": "FUN; PathwaysToScience; The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -3473,7 +3449,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 435,
+      "source_id": 432,
       "source_url": "https://sites.google.com/view/reu-gda-gsu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3481,7 +3457,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 436,
+      "source_id": 433,
       "source_url": "https://cosm.georgiasouthern.edu/reu/about/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3489,7 +3465,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 437,
+      "source_id": 434,
       "source_url": "https://reu.emorychem.science/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3497,7 +3473,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 438,
+      "source_id": 435,
       "source_url": "https://research.gatech.edu/manufacturing/workforce-development/revamp-reu-program",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3505,7 +3481,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 439,
+      "source_id": 436,
       "source_url": "https://sites.google.com/georgiasouthern.edu/gsrescope/home",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3513,7 +3489,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 440,
+      "source_id": 437,
       "source_url": "https://www.reucsu.org/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3521,7 +3497,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 441,
+      "source_id": 438,
       "source_url": "http://iotreuatgsu.com/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3529,7 +3505,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 442,
+      "source_id": 439,
       "source_url": "https://www.agnesscott.edu/science-center-for-women/mentored-research/stem-scholars-program.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3537,7 +3513,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 443,
+      "source_id": 440,
       "source_url": "http://hilo.hawaii.edu/uhintern/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3545,7 +3521,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 444,
+      "source_id": 441,
       "source_url": "http://reu.pbrc.hawaii.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3553,7 +3529,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 445,
+      "source_id": 442,
       "source_url": "https://www.public-health.uiowa.edu/about-isib/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3561,7 +3537,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 446,
+      "source_id": 443,
       "source_url": "https://pandey.ece.iastate.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3569,7 +3545,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 447,
+      "source_id": 444,
       "source_url": "https://bit.ly/uiowacs_reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3577,7 +3553,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 448,
+      "source_id": 445,
       "source_url": "https://trac-ai.iastate.edu/education/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3585,7 +3561,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 449,
+      "source_id": 446,
       "source_url": "https://simcodes-isu.github.io/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3593,7 +3569,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 450,
+      "source_id": 447,
       "source_url": "https://www.vrac.iastate.edu/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3601,7 +3577,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 451,
+      "source_id": 448,
       "source_url": "https://medicine.uiowa.edu/mstp/sumr/information",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3609,7 +3585,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 452,
+      "source_id": 449,
       "source_url": "https://northcentralwater.org/watershed-management-research-and-outreach-internship-program/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3617,7 +3593,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 453,
+      "source_id": 450,
       "source_url": "https://www.boisestate.edu/raptorresearchcenter/ires/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3625,7 +3601,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 454,
+      "source_id": 451,
       "source_url": "https://sites.google.com/boisestate.edu/breu/home",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3633,7 +3609,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 455,
+      "source_id": 452,
       "source_url": "https://sites.google.com/boisestate.edu/reu-site-materials-for-society/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3641,7 +3617,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 456,
+      "source_id": 453,
       "source_url": "https://molbiosci.northwestern.edu/programs/biological-sciences-major/summer-outreach.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3649,15 +3625,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 457,
-      "source_url": "https://grad.illinois.edu/diversity/srop",
-      "source_name": "PathwaysToScience",
-      "source_type": "unreviewed_program_link",
-      "publisher": null,
-      "authoritative": 0
-    },
-    {
-      "source_id": 458,
+      "source_id": 454,
       "source_url": "https://publish.illinois.edu/micro-ccs/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3665,7 +3633,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 459,
+      "source_id": 455,
       "source_url": "https://syntheticbiology.northwestern.edu/education/undergraduate-education/synbreu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3673,7 +3641,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 460,
+      "source_id": 456,
       "source_url": "https://echinaceaproject.org/?s=REU",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3681,7 +3649,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 461,
+      "source_id": 457,
       "source_url": "https://ccrf.uchicago.edu/content/research-experiences-undergraduates-reus-university-chicago",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3689,7 +3657,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 462,
+      "source_id": 458,
       "source_url": "https://mortonarb.org/science/opportunities-in-science/research-experiences-for-undergraduates-program/#program-details",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3697,7 +3665,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 463,
+      "source_id": 459,
       "source_url": "https://pme.uchicago.edu/educational-outreach/research-experiences-undergraduates",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3705,7 +3673,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 464,
+      "source_id": 460,
       "source_url": "https://regenerative-engineering.northwestern.edu/programs/research-experience-and-mentoring-rem-summer-research-program/index.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3713,7 +3681,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 465,
+      "source_id": 461,
       "source_url": "https://grad.uic.edu/diversity/srop-program/",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3721,7 +3689,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 466,
+      "source_id": 462,
       "source_url": "https://www.rushu.rush.edu/graduate-college/about-graduate-college/undergraduate-research-programs",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3729,7 +3697,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 467,
+      "source_id": 463,
       "source_url": "https://reu.ncsa.illinois.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3737,7 +3705,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 468,
+      "source_id": 464,
       "source_url": "https://greenspaceresearchcollaborative.wordpress.com/nsf-reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3745,7 +3713,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 469,
+      "source_id": 465,
       "source_url": "https://tinyurl.com/3nrx8d72",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3753,7 +3721,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 470,
+      "source_id": 466,
       "source_url": "http://www.physics.purdue.edu/reu/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3761,7 +3729,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 471,
+      "source_id": 467,
       "source_url": "http://davisjam.github.io/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3769,7 +3737,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 472,
+      "source_id": 468,
       "source_url": "https://hhs.purdue.edu/research/departmental-research/school-of-health-sciences-research/puretox/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3777,7 +3745,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 473,
+      "source_id": 469,
       "source_url": "https://prohealth.luddy.indiana.edu/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3785,7 +3753,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 474,
+      "source_id": 470,
       "source_url": "https://polytechnic.purdue.edu/ppi-scmt-reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3793,7 +3761,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 475,
+      "source_id": 471,
       "source_url": "https://animalbehavior.indiana.edu/research/reu/index.html",
       "source_name": "FUN; NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3801,7 +3769,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 476,
+      "source_id": 472,
       "source_url": "https://graduateschool.nd.edu/admissions/summer-research-opportunities/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3809,7 +3777,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 477,
+      "source_id": 473,
       "source_url": "https://engineering.purdue.edu/Engr/Research/EURO/students/about-SURF",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3817,7 +3785,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 478,
+      "source_id": 474,
       "source_url": "https://physics.nd.edu/research/reu-program/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3825,7 +3793,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 479,
+      "source_id": 475,
       "source_url": "https://erc-earth.ku.edu/frost-fostering-research-opportunities-sustainable-technologies-reu-summer-2026",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3833,7 +3801,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 480,
+      "source_id": 476,
       "source_url": "https://cpe.ku.edu/reu-biopath",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3841,7 +3809,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 481,
+      "source_id": 477,
       "source_url": "https://www.plantpath.k-state.edu/academics/undergraduate-programs/reeu/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3849,7 +3817,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 482,
+      "source_id": 478,
       "source_url": "https://pharmchem.ku.edu/undergraduate-research-programs",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3857,7 +3825,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 483,
+      "source_id": 479,
       "source_url": "https://www.engr.uky.edu/research-faculty/summer-research-experiences",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3865,7 +3833,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 484,
+      "source_id": 480,
       "source_url": "https://engineering.louisville.edu/academics/departments/chemical/reu-site-summer-research-program-chemical-engineering/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3873,7 +3841,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 485,
+      "source_id": 481,
       "source_url": "https://www.aqlanlab.org/research/reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3881,7 +3849,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 486,
+      "source_id": 482,
       "source_url": "https://www.mesoprogram.com/reu-info-1",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3889,7 +3857,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 487,
+      "source_id": 483,
       "source_url": "https://www.lsu.edu/eng/che/research/reu-program.php",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3897,7 +3865,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 488,
+      "source_id": 484,
       "source_url": "https://www.lsu.edu/physics/undergraduate-programs/reu.php",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3905,7 +3873,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 489,
+      "source_id": 485,
       "source_url": "https://lumcon.edu/reu/",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3913,7 +3881,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 490,
+      "source_id": 486,
       "source_url": "https://www.lsu.edu/osi/programs/smart-reu/index.php",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3921,7 +3889,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 491,
+      "source_id": 487,
       "source_url": "https://www.mariamitchell.org/aquarium-internship",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3929,7 +3897,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 492,
+      "source_id": 488,
       "source_url": "https://www.mariamitchell.org/nsf-reu-internship-in-astronomy",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3937,7 +3905,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 493,
+      "source_id": 489,
       "source_url": "https://www.broadinstitute.org/bsrp/broad-summer-research-program-bsrp",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3945,7 +3913,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 494,
+      "source_id": 490,
       "source_url": "https://sites.tufts.edu/diamondsreu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -3953,7 +3921,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 495,
+      "source_id": 491,
       "source_url": "https://hst.mit.edu/applying-hst/applying-summer-institute-biomedical-optics",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3961,7 +3929,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 496,
+      "source_id": 492,
       "source_url": "https://www.umass.edu/diversitysciences/leadership-academy",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3969,7 +3937,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 497,
+      "source_id": 493,
       "source_url": "https://math.williams.edu/small/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3977,15 +3945,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 498,
-      "source_url": "https://www.bu.edu/photonics-programs/reu/",
-      "source_name": "PathwaysToScience",
-      "source_type": "unreviewed_program_link",
-      "publisher": null,
-      "authoritative": 0
-    },
-    {
-      "source_id": 499,
+      "source_id": 494,
       "source_url": "https://arboretum.harvard.edu/research/programs-and-opportunities/darin-butz-foundation-research-internship-program/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -3993,7 +3953,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 500,
+      "source_id": 495,
       "source_url": "https://promys.org/programs/promys/for-counselors/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4001,7 +3961,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 501,
+      "source_id": 496,
       "source_url": "https://www.uml.edu/engineering/reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4009,7 +3969,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 502,
+      "source_id": 497,
       "source_url": "https://www.haystack.mit.edu/edu/reu/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4017,7 +3977,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 503,
+      "source_id": 498,
       "source_url": "http://www.brandeis.edu/mrsec/education/reuoverview.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4025,7 +3985,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 504,
+      "source_id": 499,
       "source_url": "https://www.cfa.harvard.edu/opportunities/graduate-undergraduate-programs/reu-summer-intern-program",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4033,7 +3993,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 505,
+      "source_id": 500,
       "source_url": "https://www.cfa.harvard.edu/opportunities/solar_reu/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4041,7 +4001,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 506,
+      "source_id": 501,
       "source_url": "https://sgi.mit.edu/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4049,7 +4009,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 507,
+      "source_id": 502,
       "source_url": "https://shurp.hms.harvard.edu/",
       "source_name": "AAMC; PathwaysToScience; The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -4057,7 +4017,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 508,
+      "source_id": 503,
       "source_url": "http://www.bu.edu/sph/academics/departments/biostatistics/summer-institute-for-training-in-biostatistics/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4065,15 +4025,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 509,
-      "source_url": "https://www.brandeis.edu/mrsec/education/undergraduates/reu.html",
-      "source_name": "NSF ETAP; PathwaysToScience",
-      "source_type": "unreviewed_program_link",
-      "publisher": null,
-      "authoritative": 0
-    },
-    {
-      "source_id": 510,
+      "source_id": 504,
       "source_url": "https://www.wpi.edu/academics/departments/data-science/reu-program",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4081,7 +4033,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 511,
+      "source_id": 505,
       "source_url": "https://scienceeducation.fas.harvard.edu/research-opportunities",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4089,7 +4041,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 512,
+      "source_id": 506,
       "source_url": "https://cdi.brighamandwomens.org/bwh-stars-program/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4097,7 +4049,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 513,
+      "source_id": 507,
       "source_url": "http://nano.ecs.umass.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4105,7 +4057,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 514,
+      "source_id": 508,
       "source_url": "https://umaine.edu/swf3/education/#internship",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4113,7 +4065,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 515,
+      "source_id": 509,
       "source_url": "https://sites.tufts.edu/verseimreu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4121,7 +4073,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 516,
+      "source_id": 510,
       "source_url": "https://afrlscholars.usra.edu/scholarsprogram/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4129,7 +4081,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 517,
+      "source_id": 511,
       "source_url": "https://www.cbcb.umd.edu/summer-internships",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4137,7 +4089,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 518,
+      "source_id": 512,
       "source_url": "https://bsos.umd.edu/diversity/summer-research-initiative",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4145,7 +4097,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 519,
+      "source_id": 513,
       "source_url": "https://criticalzone.org/hub/critical-zone-collaborative-network-research-experiences-for-undergraduate-cznet-reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4153,7 +4105,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 520,
+      "source_id": 514,
       "source_url": "https://gastro.org/research-and-awards/apply-for-awards/award/aga-dr-harvey-young-education-development-foundations-young-guts-scholar-program/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4161,7 +4113,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 521,
+      "source_id": 515,
       "source_url": "https://www.bowiestate.edu/academics/colleges/college-of-arts-and-sciences/departments/computer-science/resources-for-students/scholarships/exlent-ai-internship-program/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4169,7 +4121,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 522,
+      "source_id": 516,
       "source_url": "https://serc.si.edu/internships",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4177,7 +4129,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 523,
+      "source_id": 517,
       "source_url": "http://www.lpi.usra.edu/lpiintern/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4185,7 +4137,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 524,
+      "source_id": 518,
       "source_url": "https://ms-cc.org/undergraduate-summer-research-internship-2026/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4193,7 +4145,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 525,
+      "source_id": 519,
       "source_url": "https://mathquantum.umd.edu/fellowship/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4201,7 +4153,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 526,
+      "source_id": 520,
       "source_url": "https://www.niehs.nih.gov/careers/research/scholars/index.cfm",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4209,7 +4161,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 527,
+      "source_id": 521,
       "source_url": "https://bigdatareu.umbc.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4217,7 +4169,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 528,
+      "source_id": 522,
       "source_url": "https://inbt.jhu.edu/nanobio-reu/",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4225,7 +4177,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 529,
+      "source_id": 523,
       "source_url": "https://trend.umd.edu/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4233,7 +4185,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 530,
+      "source_id": 524,
       "source_url": "https://explore.umbc.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4241,7 +4193,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 531,
+      "source_id": 525,
       "source_url": "https://energyinstitute.jhu.edu/research-experience-for-undergraduates-rosetas/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4249,7 +4201,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 532,
+      "source_id": 526,
       "source_url": "https://rqs.umd.edu/education-workforce/undergraduate",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4257,7 +4209,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 533,
+      "source_id": 527,
       "source_url": "https://reu.egr.uh.edu/regulatory-science",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4265,7 +4217,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 534,
+      "source_id": 528,
       "source_url": "http://faculty.salisbury.edu/~ealu/REU/REU.html",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4273,7 +4225,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 535,
+      "source_id": 529,
       "source_url": "https://www.spsnational.org/programs/internships",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4281,7 +4233,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 536,
+      "source_id": 530,
       "source_url": "http://www.stsci.edu/opportunities/space-astronomy-summer-program",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4289,7 +4241,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 537,
+      "source_id": 531,
       "source_url": "https://wwwcp.umes.edu/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4297,7 +4249,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 538,
+      "source_id": 532,
       "source_url": "https://mmcri.org/?page_id=505",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4305,7 +4257,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 539,
+      "source_id": 533,
       "source_url": "https://seagrant.umaine.edu/funding-opportunities/maine-sea-grant-noaa-fisheries-undergraduate-internships-in-sea-run-fish-research/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4313,7 +4265,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 540,
+      "source_id": 534,
       "source_url": "https://ece.umaine.edu/research/reu_sensors/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4321,15 +4273,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 541,
-      "source_url": "https://mcec.umaine.edu/2024/12/06/nsfreusensor/",
-      "source_name": "NSF ETAP; PathwaysToScience",
-      "source_type": "unreviewed_program_link",
-      "publisher": null,
-      "authoritative": 0
-    },
-    {
-      "source_id": 542,
+      "source_id": 535,
       "source_url": "https://umaine.edu/biomaterials/workforce-development/reu-program/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4337,7 +4281,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 543,
+      "source_id": 536,
       "source_url": "https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/learn-earn-and-explore/admission",
       "source_name": "AAMC; FUN; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4345,7 +4289,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 544,
+      "source_id": 537,
       "source_url": "https://dmc.umaine.edu/category/undergraduate-internships/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4353,7 +4297,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 545,
+      "source_id": 538,
       "source_url": "http://www.shoalsmarinelaboratory.org/student-research-internships",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4361,7 +4305,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 546,
+      "source_id": 539,
       "source_url": "https://medicine.umich.edu/dept/cancer-biology/cancer-research-summer-internship-program",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4369,7 +4313,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 547,
+      "source_id": 540,
       "source_url": "https://sites.google.com/site/cvcsummerfellowship/home",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4377,7 +4321,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 548,
+      "source_id": 541,
       "source_url": "https://www.glbrc.org/outreach/programs/summer-undergraduate-research-program",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4385,7 +4329,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 549,
+      "source_id": 542,
       "source_url": "https://ciglr.seas.umich.edu/opportunities/student-fellowships/faqs/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4393,7 +4337,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 550,
+      "source_id": 543,
       "source_url": "https://www.mtu.edu/reu-inspires/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4401,7 +4345,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 551,
+      "source_id": 544,
       "source_url": "https://researchops.web.illinois.edu/opportunity/university-michigan-interdisciplinary-reu-program",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4409,7 +4353,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 552,
+      "source_id": 545,
       "source_url": "https://sites.google.com/a/umich.edu/math-reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4417,7 +4361,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 553,
+      "source_id": 546,
       "source_url": "http://lsa.umich.edu/math/undergraduates/research-and-career-opportunities/research/research-experience-for-undergraduates--reu-.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4425,7 +4369,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 554,
+      "source_id": 547,
       "source_url": "https://picasso-reu.engin.umich.edu/",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4433,7 +4377,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 555,
+      "source_id": 548,
       "source_url": "https://cse-reu.secs.oakland.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4441,7 +4385,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 556,
+      "source_id": 549,
       "source_url": "https://sites.google.com/msu.edu/2026msuundergraduategeodesy/home",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4449,7 +4393,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 557,
+      "source_id": 550,
       "source_url": "http://www.plantgenomics.msu.edu/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4457,7 +4401,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 558,
+      "source_id": 551,
       "source_url": "https://medicine.umich.edu/medschool/education/md-phd-program/um-smart-undergrad-summer-program",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4465,7 +4409,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 559,
+      "source_id": 552,
       "source_url": "http://www.bu.edu/urop/apply/deadlines/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4473,7 +4417,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 560,
+      "source_id": 553,
       "source_url": "https://ltu.edu/arts-and-sciences/department-of-math-and-computer-science/nsf-reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4481,7 +4425,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 561,
+      "source_id": 554,
       "source_url": "https://www.kettering.edu/reu-grant",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4489,7 +4433,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 562,
+      "source_id": 555,
       "source_url": "https://lbc.msu.edu/research/suriem",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4497,7 +4441,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 563,
+      "source_id": 556,
       "source_url": "https://sph.umich.edu/sep/overview/index.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4505,7 +4449,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 564,
+      "source_id": 557,
       "source_url": "https://careers.cern/summer",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4513,7 +4457,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 565,
+      "source_id": 558,
       "source_url": "https://medschool.umich.edu/interdisciplinary-programs/neuroscience-graduate-program/summer-research-opportunities/nuro-program",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4521,7 +4465,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 566,
+      "source_id": 559,
       "source_url": "https://medschool.umich.edu/interdisciplinary-programs/neuroscience-graduate-program/summer-research-opportunities/siren-program",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4529,7 +4473,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 567,
+      "source_id": 560,
       "source_url": "https://sites.google.com/umich.edu/reusiteurbanwatershedscience/overview?authuser=0",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4537,7 +4481,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 568,
+      "source_id": 561,
       "source_url": "https://www.vai.org/graduate-school/research-internships/?tabUrl=tab-2",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4545,7 +4489,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 569,
+      "source_id": 562,
       "source_url": "https://ugresearch.umn.edu/opportunities/urop",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4553,15 +4497,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 570,
-      "source_url": "https://chem.umn.edu/lando",
-      "source_name": "PathwaysToScience",
-      "source_type": "unreviewed_program_link",
-      "publisher": null,
-      "authoritative": 0
-    },
-    {
-      "source_id": 571,
+      "source_id": 563,
       "source_url": "https://med.umn.edu/gps/undergraduate-research/life-sciences-summer",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4569,7 +4505,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 572,
+      "source_id": 564,
       "source_url": "https://med.umn.edu/caimh/college-premed",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4577,7 +4513,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 573,
+      "source_id": 565,
       "source_url": "https://cedarcreek.umn.edu/lter-plant-community-ecology-internships-reus-summer-2025",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4585,7 +4521,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 574,
+      "source_id": 566,
       "source_url": "https://reu.cs.umn.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4593,7 +4529,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 575,
+      "source_id": 567,
       "source_url": "https://reuslawr.org/",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4601,7 +4537,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 576,
+      "source_id": 568,
       "source_url": "http://www.mayo.edu/mgs/surf.html",
       "source_name": "AAMC; FUN; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4609,7 +4545,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 577,
+      "source_id": 569,
       "source_url": "https://cfans.umn.edu/about/diversity-inclusion/undergrad/SOAR-REEU",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4617,7 +4553,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 578,
+      "source_id": 570,
       "source_url": "https://cardiovascularreu.wustl.edu/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4625,7 +4561,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 579,
+      "source_id": 571,
       "source_url": "https://inroads.org/internships-program/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4633,7 +4569,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 580,
+      "source_id": 572,
       "source_url": "https://www.missouribotanicalgarden.org/plant-science/plant-science/about-science-conservation/resources-databases/study-opportunities/ires",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4641,7 +4577,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 581,
+      "source_id": 573,
       "source_url": "https://siteman.wustl.edu/research/training/opportunities/graduate/programs/summer/",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4649,7 +4585,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 582,
+      "source_id": 574,
       "source_url": "https://web.mst.edu/cswebdb/NSF_REU.html",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4657,7 +4593,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 583,
+      "source_id": 575,
       "source_url": "http://reu.rnet.missouri.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4665,7 +4601,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 584,
+      "source_id": 576,
       "source_url": "https://sites.google.com/view/nsf-reu-aiec-umkc/home",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4673,7 +4609,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 585,
+      "source_id": 577,
       "source_url": "https://sites.wustl.edu/rord/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4681,7 +4617,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 586,
+      "source_id": 578,
       "source_url": "https://undergradresearch.missouri.edu/interpersonal-relationships-summer-research-program/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4689,7 +4625,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 587,
+      "source_id": 579,
       "source_url": "https://sites.google.com/view/reu-research-ai",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4697,7 +4633,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 588,
+      "source_id": 580,
       "source_url": "https://nairs.mufaculty.umsystem.edu/research/nsf-neural-reu-project",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4705,7 +4641,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 589,
+      "source_id": 581,
       "source_url": "https://cemb.upenn.edu/education/undergraduate-research-opportunities/reu/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4713,7 +4649,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 590,
+      "source_id": 582,
       "source_url": "https://cps-smartfarm.github.io/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4721,7 +4657,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 591,
+      "source_id": 583,
       "source_url": "https://thermalmanagementreu.wustl.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4729,7 +4665,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 592,
+      "source_id": 584,
       "source_url": "http://endure.wustl.edu/",
       "source_name": "FUN; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4737,7 +4673,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 593,
+      "source_id": 585,
       "source_url": "https://www.usm.edu/mathematics-natural-sciences/chem_reu.php",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4745,7 +4681,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 594,
+      "source_id": 586,
       "source_url": "https://www.chemistry.msstate.edu/academics/undergraduate/reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4753,7 +4689,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 595,
+      "source_id": 587,
       "source_url": "https://www.ccs.msstate.edu/conferences/REU2026/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4761,7 +4697,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 596,
+      "source_id": 588,
       "source_url": "https://sites.google.com/view/nsf-reu-math-usm",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4769,7 +4705,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 597,
+      "source_id": 589,
       "source_url": "https://www.forestry.msstate.edu/reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4777,7 +4713,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 598,
+      "source_id": 590,
       "source_url": "https://www.usmspsereu.com/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4785,7 +4721,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 599,
+      "source_id": 591,
       "source_url": "https://nanoreu.olemiss.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4793,7 +4729,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 600,
+      "source_id": 592,
       "source_url": "https://www.cs.montana.edu/REU/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4801,7 +4737,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 601,
+      "source_id": 593,
       "source_url": "https://chemistry.montana.edu/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4809,7 +4745,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 602,
+      "source_id": 594,
       "source_url": "https://www.montana.edu/mbi/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4817,7 +4753,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 603,
+      "source_id": 595,
       "source_url": "https://ece.montana.edu/research/ece_reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4825,7 +4761,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 604,
+      "source_id": 596,
       "source_url": "https://animalrange.montana.edu/reu.html",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4833,7 +4769,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 605,
+      "source_id": 597,
       "source_url": "http://www.apsanet.org/rbsi",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4841,7 +4777,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 606,
+      "source_id": 598,
       "source_url": "https://sites.google.com/ncsu.edu/algorithm-design-theory-and-en?usp=sharing",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4849,7 +4785,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 607,
+      "source_id": 599,
       "source_url": "https://sites.google.com/ncsu.edu/afus-reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4857,7 +4793,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 608,
+      "source_id": 600,
       "source_url": "http://go.ncsu.edu/csaied-reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4865,7 +4801,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 609,
+      "source_id": 601,
       "source_url": "https://gradschool.duke.edu/about/diversity-equity-inclusion/duke-summer-research-opportunity-program/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4873,7 +4809,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 610,
+      "source_id": 602,
       "source_url": "https://news.ecu.edu/2025/08/18/ecu-faculty-lead-stem-students-in-immersive-environmental-science-research/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4881,7 +4817,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 611,
+      "source_id": 603,
       "source_url": "https://cals.ncsu.edu/plant-and-microbial-biology/students/integrative-molecular-plant-systems-research-experience/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4889,7 +4825,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 612,
+      "source_id": 604,
       "source_url": "https://bioimagingdynamics.ncsu.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4897,7 +4833,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 613,
+      "source_id": 605,
       "source_url": "http://clas-chemistry.uncc.edu/nanosure/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4905,7 +4841,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 614,
+      "source_id": 606,
       "source_url": "https://premier-microbiome.org/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4913,7 +4849,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 615,
+      "source_id": 607,
       "source_url": "https://reusite.renci.org/home",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4921,7 +4857,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 616,
+      "source_id": 608,
       "source_url": "https://coastal.ecu.edu/reu/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4929,7 +4865,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 617,
+      "source_id": 609,
       "source_url": "https://tecsreu.textiles.ncsu.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4937,7 +4873,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 618,
+      "source_id": 610,
       "source_url": "http://go.ncsu.edu/rise",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4945,7 +4881,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 619,
+      "source_id": 611,
       "source_url": "http://www.cs.ecu.edu/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4953,7 +4889,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 620,
+      "source_id": 612,
       "source_url": "https://bats-ires.cbes.vn/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -4961,7 +4897,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 621,
+      "source_id": 613,
       "source_url": "https://bezoscenter.ncsu.edu/spurs/#",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4969,7 +4905,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 622,
+      "source_id": 614,
       "source_url": "https://www.ndsu.edu/biology/research/pollination_nation",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4977,7 +4913,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 623,
+      "source_id": 615,
       "source_url": "https://summerprogram.unl.edu/programs/beneficial-insects/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4985,7 +4921,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 624,
+      "source_id": 616,
       "source_url": "https://summerprogram.unl.edu/programs/crop-food-innovation/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -4993,7 +4929,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 625,
+      "source_id": 617,
       "source_url": "https://summerprogram.unl.edu/programs/applied-plant-systems/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5001,7 +4937,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 626,
+      "source_id": 618,
       "source_url": "https://summerprogram.unl.edu/programs/engineering-education-research/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5009,7 +4945,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 627,
+      "source_id": 619,
       "source_url": "https://summerprogram.unl.edu/programs/sustainability/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5017,7 +4953,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 628,
+      "source_id": 620,
       "source_url": "https://summerprogram.unl.edu/",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5025,7 +4961,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 629,
+      "source_id": 621,
       "source_url": "https://summerprogram.unl.edu/programs/applied-unmanned-systems/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5033,7 +4969,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 630,
+      "source_id": 622,
       "source_url": "https://summerprogram.unl.edu/programs/plant-pathology/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5041,7 +4977,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 631,
+      "source_id": 623,
       "source_url": "https://summerprogram.unl.edu/programs/biomedical-engineering/",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5049,7 +4985,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 632,
+      "source_id": 624,
       "source_url": "https://www.unomahareu.org/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5057,7 +4993,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 633,
+      "source_id": 625,
       "source_url": "http://www.blueoceansociety.org/internships/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5065,7 +5001,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 634,
+      "source_id": 626,
       "source_url": "https://web.njit.edu/~ner3/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5073,7 +5009,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 635,
+      "source_id": 627,
       "source_url": "https://cimes.princeton.edu/education-outreach/intern-program",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5081,7 +5017,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 636,
+      "source_id": 628,
       "source_url": "https://inside.montclair.edu/colleges-schools-research/math-science/ires-summer-biology-research-program-japan",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5089,7 +5025,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 637,
+      "source_id": 629,
       "source_url": "https://sites.rutgers.edu/mechanical-ecology-group/nsf-bioflow-ires-summer-2024-in-chile/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5097,7 +5033,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 638,
+      "source_id": 630,
       "source_url": "https://web.njit.edu/~dmisra/reu/NSF_REU_Site/index.htm",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5105,7 +5041,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 639,
+      "source_id": 631,
       "source_url": "https://undergrad-language-research.org/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5113,7 +5049,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 640,
+      "source_id": 632,
       "source_url": "https://www.montclair.edu/pseg-sustainability-institute/green-teams/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5121,7 +5057,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 641,
+      "source_id": 633,
       "source_url": "https://pni.princeton.edu/apply/undergraduate-summer-interns",
       "source_name": "NSF ETAP; PathwaysToScience; The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -5129,7 +5065,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 642,
+      "source_id": 634,
       "source_url": "http://reu.physics.rutgers.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5137,7 +5073,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 643,
+      "source_id": 635,
       "source_url": "https://spaceweather.njit.edu/reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5145,7 +5081,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 644,
+      "source_id": 636,
       "source_url": "http://www.rise.rutgers.edu/",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5153,7 +5089,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 645,
+      "source_id": 637,
       "source_url": "https://mse.rutgers.edu/reu-advanced-materials",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5161,15 +5097,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 646,
-      "source_url": "https://surf.rutgers.edu/overview/",
-      "source_name": "PathwaysToScience",
-      "source_type": "unreviewed_program_link",
-      "publisher": null,
-      "authoritative": 0
-    },
-    {
-      "source_id": 647,
+      "source_id": 638,
       "source_url": "https://rwjms.rutgers.edu/department/neuroscience-cell-biology/about#tab=panel-7",
       "source_name": "AAMC; FUN; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5177,7 +5105,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 648,
+      "source_id": 639,
       "source_url": "https://www.cs.nmsu.edu/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5185,7 +5113,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 649,
+      "source_id": 640,
       "source_url": "https://sevilletareu.wordpress.com/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5193,7 +5121,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 650,
+      "source_id": 641,
       "source_url": "https://science.nrao.edu/opportunities/student-programs/summerstudents",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5201,7 +5129,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 651,
+      "source_id": 642,
       "source_url": "https://physics.unm.edu/undergraduate/reu-program.html",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5209,7 +5137,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 652,
+      "source_id": 643,
       "source_url": "https://unmhealth.org/cancer/career/training-education/csteps.html",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5217,7 +5145,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 653,
+      "source_id": 644,
       "source_url": "https://www.santafe.edu/engage/learn/programs/undergraduate-complexity-research",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5225,7 +5153,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 654,
+      "source_id": 645,
       "source_url": "https://hsc.unm.edu/research/brep/undergraduate/upn/index.html",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5233,7 +5161,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 655,
+      "source_id": 646,
       "source_url": "https://www.iris.edu/hq/internship/about",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5241,7 +5169,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 656,
+      "source_id": 647,
       "source_url": "https://sites.google.com/view/marist-reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5249,7 +5177,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 657,
+      "source_id": 648,
       "source_url": "https://www.cheme.columbia.edu/reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5257,7 +5185,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 658,
+      "source_id": 649,
       "source_url": "https://www.engineering.columbia.edu/about/engineering-community-engagement/hallmark-programs/sure-program",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5265,7 +5193,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 659,
+      "source_id": 650,
       "source_url": "https://www.urmc.rochester.edu/pediatrics/research/summer-training-program.aspx",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5273,7 +5201,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 660,
+      "source_id": 651,
       "source_url": "https://www.hws.edu/academics/microplastic-reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5281,7 +5209,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 661,
+      "source_id": 652,
       "source_url": "http://www.buffalo.edu/iseed/undergraduate-students/iseed-summer-program-details.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5289,7 +5217,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 662,
+      "source_id": 653,
       "source_url": "https://lamont.columbia.edu/education-outreach/student-summer-opportunities-intern-programs",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5297,7 +5225,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 663,
+      "source_id": 654,
       "source_url": "https://www.clarkson.edu/mbiots-research-experience-undergraduates-reu",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5305,7 +5233,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 664,
+      "source_id": 655,
       "source_url": "https://labs.icahn.mssm.edu/maayanlab/summer-research-program/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5313,7 +5241,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 665,
+      "source_id": 656,
       "source_url": "https://odonatainghana.myportfolio.com/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5321,7 +5249,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 666,
+      "source_id": 657,
       "source_url": "http://reu-hpc.clarkson.edu/",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5329,7 +5257,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 667,
+      "source_id": 658,
       "source_url": "https://undergrad-language-research.org/ling-in-caribbean/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5337,7 +5265,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 668,
+      "source_id": 659,
       "source_url": "https://people.rit.edu/~dansma/NSFREU2025.htm",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5345,7 +5273,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 669,
+      "source_id": 660,
       "source_url": "https://www.buffalo.edu/reu/programs/plastic-recycling-and-advanced-chemical-physical-transformations-for-improved-circular-economy.html",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5353,7 +5281,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 670,
+      "source_id": 661,
       "source_url": "https://cropps.cornell.edu/broader-impact/research-experience-for-undergrads/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5361,7 +5289,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 671,
+      "source_id": 662,
       "source_url": "https://www.mskcc.org/departments/epidemiology-biostatistics/educational-opportunities/quantitative-sciences-summer-undergraduate-research-experience-qsure",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5369,7 +5297,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 672,
+      "source_id": 663,
       "source_url": "https://ccrg.rit.edu/reu/introduction",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5377,7 +5305,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 673,
+      "source_id": 664,
       "source_url": "https://www.hajim.rochester.edu/dsc/undergraduate/reu.html",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5385,7 +5313,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 674,
+      "source_id": 665,
       "source_url": "https://www.rit.edu/computing/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5393,7 +5321,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 675,
+      "source_id": 666,
       "source_url": "https://www.binghamton.edu/centers/biofilm-research/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5401,7 +5329,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 676,
+      "source_id": 667,
       "source_url": "https://fusion.columbia.edu/reu-site",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5409,7 +5337,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 677,
+      "source_id": 668,
       "source_url": "https://www.rit.edu/computing/trustworthy-ai",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5417,7 +5345,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 678,
+      "source_id": 669,
       "source_url": "https://www.amnh.org/research/richard-gilder-graduate-school/reu-undergraduate-internships",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5425,7 +5353,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 679,
+      "source_id": 670,
       "source_url": "https://www.nyit.edu/academics/engineering-and-computing-sciences/research/research-experiences-for-undergraduates-reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5433,7 +5361,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 680,
+      "source_id": 671,
       "source_url": "https://mrsec.columbia.edu/reu",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5441,7 +5369,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 681,
+      "source_id": 672,
       "source_url": "http://www.rochester.edu/college/kearnscenter/undergraduate/mcnair.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5449,7 +5377,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 682,
+      "source_id": 673,
       "source_url": "https://www.roswellpark.org/education/high-school-undergrad/college-summer-research-program",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5457,7 +5385,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 683,
+      "source_id": 674,
       "source_url": "https://www.downstate.edu/about/our-administration/office-for-institutional-equity/pathway-programs/sprinter.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5465,7 +5393,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 684,
+      "source_id": 675,
       "source_url": "https://cancerdynamics.columbia.edu/summer-research-internship",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5473,7 +5401,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 685,
+      "source_id": 676,
       "source_url": "https://www.urmc.rochester.edu/education/graduate/summer-scholars/program-details.aspx",
       "source_name": "AAMC; FUN; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5481,7 +5409,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 686,
+      "source_id": 677,
       "source_url": "https://wp.nyu.edu/cmml/IRES/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5489,7 +5417,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 687,
+      "source_id": 678,
       "source_url": "http://www.fordham.edu/REUatCalder",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5497,7 +5425,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 688,
+      "source_id": 679,
       "source_url": "https://engineering.buffalo.edu/home/outreach/diversity/students-of-color/lsamp/summer.html",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5505,7 +5433,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 689,
+      "source_id": 680,
       "source_url": "https://gradschool.weill.cornell.edu/student-experience/diversity-and-inclusion/summer-undergraduate-research",
       "source_name": "AAMC; PathwaysToScience; The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -5513,7 +5441,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 690,
+      "source_id": 681,
       "source_url": "https://case.edu/cancer/training-education/cansur",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5521,7 +5449,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 691,
+      "source_id": 682,
       "source_url": "https://metacomposites.uakron.edu/ires-summer-2026/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5529,7 +5457,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 692,
+      "source_id": 683,
       "source_url": "https://nsf-nexus.osu.edu/nexus-reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5537,7 +5465,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 693,
+      "source_id": 684,
       "source_url": "https://physics.osu.edu/summer2026REU",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5545,7 +5473,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 694,
+      "source_id": 685,
       "source_url": "https://engineering.csuohio.edu/glwind_reu/glwind_reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5553,7 +5481,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 695,
+      "source_id": 686,
       "source_url": "https://ceg.osu.edu/resilient-and-sustainable-infrastructure-systems-smart-cities-reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5561,7 +5489,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 696,
+      "source_id": 687,
       "source_url": "https://physics.wooster.edu/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5569,7 +5497,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 697,
+      "source_id": 688,
       "source_url": "http://www.uc-bio-reu.com/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5577,7 +5505,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 698,
+      "source_id": 689,
       "source_url": "https://sites.google.com/a/miamioh.edu/summer-reu-in-chemistry-and-biochemistry/about-the-program",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5585,7 +5513,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 699,
+      "source_id": 690,
       "source_url": "https://med.uc.edu/depart/bmi/surf",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5593,7 +5521,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 700,
+      "source_id": 691,
       "source_url": "https://sites.miamioh.edu/ecologyreu/#:~:text=REU%20%E2%80%9CEcology%20in%20Human%20Dominated%20Landscapes%E2%80%9D&text=Our%20program%20is%20an%20exciting,on%20an%20independent%20research%20project.",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5601,7 +5529,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 701,
+      "source_id": 692,
       "source_url": "https://sites.utulsa.edu/ford-lab/home/met-reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5609,7 +5537,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 702,
+      "source_id": 693,
       "source_url": "https://physicsreu.okstate.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5617,7 +5545,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 703,
+      "source_id": 694,
       "source_url": "https://www.ou.edu/cas/physics-astronomy/students/undergraduate/research/reu",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5625,7 +5553,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 704,
+      "source_id": 695,
       "source_url": "https://sites.gsu.edu/phidalgo/projects/cjds/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5633,7 +5561,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 705,
+      "source_id": 696,
       "source_url": "https://engineering.oregonstate.edu/CoRIS/reu-robots-real-world",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5641,7 +5569,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 706,
+      "source_id": 697,
       "source_url": "https://www.pdx.edu/center-climate-aerosol-research/reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5649,7 +5577,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 707,
+      "source_id": 698,
       "source_url": "https://lternet.edu/?taxonomy=opportunity_types&term=research-experience-for-undergraduates",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5657,7 +5585,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 708,
+      "source_id": 699,
       "source_url": "http://www.ohsu.edu/xd/about/vision/center-for-diversity-inclusion/academic-resources/internships/summer-equity-internship.cfm",
       "source_name": "FUN; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5665,7 +5593,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 709,
+      "source_id": 700,
       "source_url": "https://spur.uoregon.edu/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5673,7 +5601,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 710,
+      "source_id": 701,
       "source_url": "https://www.teuscher-lab.com/reucomputing",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5681,7 +5609,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 711,
+      "source_id": 702,
       "source_url": "https://www.cmu.edu/ni/academics/undergraduate-training/summer-ugrad-comp-neuro.html",
       "source_name": "FUN; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5689,7 +5617,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 712,
+      "source_id": 703,
       "source_url": "https://sites.psu.edu/bjf5382/data-visualization-and-numerical-modeling-short-course/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5697,7 +5625,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 713,
+      "source_id": 704,
       "source_url": "https://www.herl.pitt.edu/REx/ELeVATE",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5705,7 +5633,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 714,
+      "source_id": 705,
       "source_url": "https://sites.psu.edu/chereu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5713,7 +5641,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 715,
+      "source_id": 706,
       "source_url": "https://www.cse.lehigh.edu/REU/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5721,7 +5649,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 716,
+      "source_id": 707,
       "source_url": "https://reu.ist.psu.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5729,7 +5657,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 717,
+      "source_id": 708,
       "source_url": "http://mathily.org/mathilyest/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5737,7 +5665,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 718,
+      "source_id": 709,
       "source_url": "https://www.cmu.edu/mcs/academics/undergrad/dasie",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5745,7 +5673,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 719,
+      "source_id": 710,
       "source_url": "https://www.cmu.edu/ai-physics-institute/outreach/nsf-reu/index.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5753,7 +5681,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 720,
+      "source_id": 711,
       "source_url": "https://med.psu.edu/education/certificate-and-undergraduate/promise",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5761,7 +5689,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 721,
+      "source_id": 712,
       "source_url": "https://mindcore.sas.upenn.edu/research-experience-for-undergraduates-in-interdisciplinary-mind-brain-studies/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5769,7 +5697,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 722,
+      "source_id": 713,
       "source_url": "https://icmshpc.com/nsf/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5777,7 +5705,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 723,
+      "source_id": 714,
       "source_url": "https://wistar.org/education-training/undergraduate-programs/wistar-research-experiences-undergraduates-reu-program",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5785,7 +5713,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 724,
+      "source_id": 715,
       "source_url": "https://sites.psu.edu/powerpropulsionreu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5793,7 +5721,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 725,
+      "source_id": 716,
       "source_url": "https://www.lrdc.pitt.edu/learningsciencesreu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5801,7 +5729,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 726,
+      "source_id": 717,
       "source_url": "http://web.sas.upenn.edu/reu-pennchemistry/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5809,7 +5737,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 727,
+      "source_id": 718,
       "source_url": "https://penn-repl.github.io/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5817,7 +5745,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 728,
+      "source_id": 719,
       "source_url": "https://riss.ri.cmu.edu/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5825,7 +5753,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 729,
+      "source_id": 720,
       "source_url": "http://www.nano.upenn.edu/resources/reu/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5833,7 +5761,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 730,
+      "source_id": 721,
       "source_url": "https://www.bme.psu.edu/stcsi/index.aspx",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5841,7 +5769,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 731,
+      "source_id": 722,
       "source_url": "http://ldi.upenn.edu/sumr",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5849,7 +5777,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 732,
+      "source_id": 723,
       "source_url": "https://sites.psu.edu/physicsreu/",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5857,7 +5785,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 733,
+      "source_id": 724,
       "source_url": "https://tecbioreu.pitt.edu/",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5865,7 +5793,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 734,
+      "source_id": 725,
       "source_url": "http://www.ucspinfo.org/",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5873,7 +5801,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 735,
+      "source_id": 726,
       "source_url": "https://curf.upenn.edu/content/department-medicine-undergraduate-student-scholars-program-ussp",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5881,7 +5809,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 736,
+      "source_id": 727,
       "source_url": "https://aireu.cs.brown.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5889,7 +5817,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 737,
+      "source_id": 728,
       "source_url": "https://web.uri.edu/plastics-reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5897,7 +5825,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 738,
+      "source_id": 729,
       "source_url": "https://cecas.clemson.edu/hcore/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5905,7 +5833,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 739,
+      "source_id": 730,
       "source_url": "https://scienceweb.clemson.edu/uacl/projects/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5913,7 +5841,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 740,
+      "source_id": 731,
       "source_url": "https://huixue.people.clemson.edu/REU.html",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5921,7 +5849,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 741,
+      "source_id": 732,
       "source_url": "https://gradstudies.musc.edu/programs/pathway/summer-undergraduate-research-program?_gl=1*zt29ea*_gcl_au*NjIyODYxODM4LjE3NjAwOTgzMDg.*_ga*MTU3Nzk3ODgzLjE3NjAwOTgzMDg.*_ga_5ECRFEFZL4*czE3NjA3ODg4NjYkbzIkZzEkdDE3NjA3ODg4ODAkajQ2JGwwJGgw",
       "source_name": "AAMC; FUN; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5929,7 +5857,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 742,
+      "source_id": 733,
       "source_url": "https://www.bhsu.edu/research/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5937,7 +5865,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 743,
+      "source_id": 734,
       "source_url": "https://tinyurl.com/BACE605",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5945,7 +5873,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 744,
+      "source_id": 735,
       "source_url": "http://c3.sdstate.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5953,7 +5881,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 745,
+      "source_id": 736,
       "source_url": "https://sites.google.com/sdsmt.edu/nsf-reu-li-smart",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5961,7 +5889,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 746,
+      "source_id": 737,
       "source_url": "https://sites.google.com/view/dsureu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -5969,7 +5897,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 747,
+      "source_id": 738,
       "source_url": "http://www.sanfordresearch.org/education/undergraduates/spur/",
       "source_name": "FUN; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5977,15 +5905,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 748,
-      "source_url": "https://sites.google.com/sdsmt.edu/bace/home",
-      "source_name": "NSF ETAP",
-      "source_type": "unreviewed_program_link",
-      "publisher": null,
-      "authoritative": 0
-    },
-    {
-      "source_id": 749,
+      "source_id": 739,
       "source_url": "https://orise.orau.gov/doescholars/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -5993,7 +5913,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 750,
+      "source_id": 740,
       "source_url": "https://meharry.edu/research-and-innovation/research-programs-and-partnerships/envit/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6001,7 +5921,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 751,
+      "source_id": 741,
       "source_url": "https://orise.orau.gov/mlef/?nrg_redirect=237656",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6009,7 +5929,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 752,
+      "source_id": 742,
       "source_url": "https://education.ornl.gov/undergraduate/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6017,7 +5937,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 753,
+      "source_id": 743,
       "source_url": "https://urc.mtsu.edu/raider-reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6025,7 +5945,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 754,
+      "source_id": 744,
       "source_url": "https://www.vumc.org/dbmi/summer-research-internship-program-biomedical-informatics",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6033,7 +5953,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 755,
+      "source_id": 745,
       "source_url": "https://orise.orau.gov/MEISPP/program-details.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6041,7 +5961,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 756,
+      "source_id": 746,
       "source_url": "https://bcmb.utk.edu/research/summer-research-opportunities/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6049,7 +5969,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 757,
+      "source_id": 747,
       "source_url": "https://microelectronicsandsensorsystems.utk.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6057,7 +5977,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 758,
+      "source_id": 748,
       "source_url": "https://uthsc.edu/summer-research-scholars/index.php",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6065,7 +5985,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 759,
+      "source_id": 749,
       "source_url": "https://microreu.utk.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6073,7 +5993,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 760,
+      "source_id": 750,
       "source_url": "https://medschool.vanderbilt.edu/vssa/",
       "source_name": "AAMC; FUN; PathwaysToScience; The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -6081,7 +6001,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 761,
+      "source_id": 751,
       "source_url": "https://www.txst.edu/chemistry/research/reu.html",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6089,7 +6009,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 762,
+      "source_id": 752,
       "source_url": "https://ires.engr.tamu.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6097,7 +6017,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 763,
+      "source_id": 753,
       "source_url": "https://sites.google.com/view/unt-reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6105,7 +6025,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 764,
+      "source_id": 754,
       "source_url": "https://utari.uta.edu/nsf-exlent/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6113,7 +6033,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 765,
+      "source_id": 755,
       "source_url": "https://reu.rice.edu/bionetworks",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6121,7 +6041,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 766,
+      "source_id": 756,
       "source_url": "https://www.tamusa.edu//student-research/reu-inspire/index.html",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6129,7 +6049,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 767,
+      "source_id": 757,
       "source_url": "https://people.tamu.edu/~mathew/reu26",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6137,7 +6057,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 768,
+      "source_id": 758,
       "source_url": "https://www.utmb.edu/dnb/nsurp",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6145,7 +6065,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 769,
+      "source_id": 759,
       "source_url": "https://www.jsg.utexas.edu/outreach/programs/nextstep-geo/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6153,7 +6073,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 770,
+      "source_id": 760,
       "source_url": "https://scienceinfluencers.org/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6161,7 +6081,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 771,
+      "source_id": 761,
       "source_url": "https://chemistry.utdallas.edu/reuchem/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6169,7 +6089,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 772,
+      "source_id": 762,
       "source_url": "https://uta-acl2.github.io/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6177,7 +6097,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 773,
+      "source_id": 763,
       "source_url": "https://summerreu.wp.txstate.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6185,7 +6105,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 774,
+      "source_id": 764,
       "source_url": "https://ranger.uta.edu/~reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6193,7 +6113,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 775,
+      "source_id": 765,
       "source_url": "https://responsibleailab.github.io/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6201,7 +6121,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 776,
+      "source_id": 766,
       "source_url": "https://reu.techconf.org/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6209,7 +6129,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 777,
+      "source_id": 767,
       "source_url": "https://liberalarts.utexas.edu/prc/training/undergraduate-training.html",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6217,7 +6137,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 778,
+      "source_id": 768,
       "source_url": "https://surfreutamucc.weebly.com/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6225,7 +6145,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 779,
+      "source_id": 769,
       "source_url": "https://www.uttyler.edu/math/research-experience-for-undergraduates/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6233,7 +6153,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 780,
+      "source_id": 770,
       "source_url": "https://www.uhd.edu/academics/sciences/computer-science-engineering-technology/reu.aspx",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6241,7 +6161,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 781,
+      "source_id": 771,
       "source_url": "https://engineering.tamu.edu/materials/undergraduate-research/multifunctional-materials-reu/index.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6249,7 +6169,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 782,
+      "source_id": 772,
       "source_url": "http://project.cs.uh.edu/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6257,7 +6177,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 783,
+      "source_id": 773,
       "source_url": "https://reu.egr.uh.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6265,7 +6185,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 784,
+      "source_id": 774,
       "source_url": "https://www.math.ttu.edu/undergraduate/reu2023/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6273,7 +6193,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 785,
+      "source_id": 775,
       "source_url": "https://autonomy.oden.utexas.edu/events/realtime-adaption-reu-summer-internship-nsf-cohort",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6281,7 +6201,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 786,
+      "source_id": 776,
       "source_url": "http://smartmind.utep.edu/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6289,7 +6209,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 787,
+      "source_id": 777,
       "source_url": "https://www.mdanderson.org/education-training/research-training/early-career-pathway-programs/summer-research-programs/programs.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6297,7 +6217,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 788,
+      "source_id": 778,
       "source_url": "https://genetics.tamu.edu/undergraduate-programs/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6305,7 +6225,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 789,
+      "source_id": 779,
       "source_url": "https://inside.tamuc.edu/academics/colleges/scienceEngineeringAgriculture/departments/mathematics/research/reu/default.aspx",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6313,7 +6233,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 790,
+      "source_id": 780,
       "source_url": "https://cse.tcu.edu/physics-astronomy/research/reu.php",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6321,7 +6241,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 791,
+      "source_id": 781,
       "source_url": "https://reuaihealth.wp.txstate.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6329,15 +6249,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 792,
-      "source_url": "https://artsci.tamu.edu/oceanography/academics/undergraduate/reu/index.html",
-      "source_name": "NSF ETAP",
-      "source_type": "unreviewed_program_link",
-      "publisher": null,
-      "authoritative": 0
-    },
-    {
-      "source_id": 793,
+      "source_id": 782,
       "source_url": "https://bcbp.tamu.edu/reu-program/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6345,7 +6257,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 794,
+      "source_id": 783,
       "source_url": "https://www.baylor.edu/CASPER/index.php?id=74374",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6353,7 +6265,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 795,
+      "source_id": 784,
       "source_url": "https://www.tamuk.edu/engineering/institutes-research/USDA-REEU/index.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6361,7 +6273,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 796,
+      "source_id": 785,
       "source_url": "https://medicine.utah.edu/pediatrics//research/education/gsrm.php",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6369,7 +6281,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 797,
+      "source_id": 786,
       "source_url": "https://medicine.utah.edu/pediatrics/research/education/nari",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6377,7 +6289,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 798,
+      "source_id": 787,
       "source_url": "https://treu.cs.utah.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6385,7 +6297,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 799,
+      "source_id": 788,
       "source_url": "https://www.ece.utah.edu/reu-site-program/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6393,7 +6305,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 800,
+      "source_id": 789,
       "source_url": "https://our.utah.edu/research-scholarship-opportunities/spur/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6401,7 +6313,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 801,
+      "source_id": 790,
       "source_url": "https://www.physics.utah.edu/reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6409,7 +6321,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 802,
+      "source_id": 791,
       "source_url": "https://chem.utah.edu/research/reu.php",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6417,7 +6329,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 803,
+      "source_id": 792,
       "source_url": "https://aapm.secure-platform.com/gaf/page/SFP",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6425,7 +6337,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 804,
+      "source_id": 793,
       "source_url": "https://cas.hamptonu.edu/education/internships-fellowships/research-experience-for-undergraduates/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6433,7 +6345,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 805,
+      "source_id": 794,
       "source_url": "https://www.jmu.edu/chemistry/research/reu/index.shtml",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6441,7 +6353,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 806,
+      "source_id": 795,
       "source_url": "http://csiip.spacegrant.org/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6449,7 +6361,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 807,
+      "source_id": 796,
       "source_url": "https://aapm.secure-platform.com/gaf/page/DREAM",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6457,7 +6369,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 808,
+      "source_id": 797,
       "source_url": "https://www.odu.edu/eng/programs/ccni/research/cyber",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6465,7 +6377,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 809,
+      "source_id": 798,
       "source_url": "https://chunjiangzhu.github.io/GraLNA/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6473,7 +6385,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 810,
+      "source_id": 799,
       "source_url": "https://www.jmu.edu/mathstat/reu/index.shtml",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6481,7 +6393,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 811,
+      "source_id": 800,
       "source_url": "https://engineering.virginia.edu/department/biomedical-engineering/research/systems-biology-and-biomedical-data-science/systems-bioengineering-reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6489,7 +6401,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 812,
+      "source_id": 801,
       "source_url": "https://www.maop.vt.edu/scholarship-support-and-summer-programs/sri-program.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6497,7 +6409,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 813,
+      "source_id": 802,
       "source_url": "https://egr.vcu.edu/departments/computer-science/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6505,15 +6417,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 814,
-      "source_url": "https://blandy.virginia.edu/reu-program-ecology",
-      "source_name": "NSF ETAP",
-      "source_type": "unreviewed_program_link",
-      "publisher": null,
-      "authoritative": 0
-    },
-    {
-      "source_id": 815,
+      "source_id": 803,
       "source_url": "https://egr.vcu.edu/departments/mechanical/magnetics-reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6521,7 +6425,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 816,
+      "source_id": 804,
       "source_url": "https://www.jlab.org/accelerator/reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6529,7 +6433,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 817,
+      "source_id": 805,
       "source_url": "https://mlbs.virginia.edu/reuprogram",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6537,7 +6441,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 818,
+      "source_id": 806,
       "source_url": "https://datascience.virginia.edu/nsf-reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6545,7 +6449,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 819,
+      "source_id": 807,
       "source_url": "https://smconservation.gmu.edu/nsf-reu",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6553,7 +6457,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 820,
+      "source_id": 808,
       "source_url": "https://med.virginia.edu/summer-research-internship-program/",
       "source_name": "AAMC; FUN; PathwaysToScience; The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -6561,7 +6465,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 821,
+      "source_id": 809,
       "source_url": "https://biology.richmond.edu/research/research-labs/cornell-lab.html",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6569,7 +6473,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 822,
+      "source_id": 810,
       "source_url": "https://www.vims.edu/engage/college/summer_intern/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6577,7 +6481,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 823,
+      "source_id": 811,
       "source_url": "https://egr.vcu.edu/departments/biomedical/mechanobiology-reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6585,7 +6489,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 824,
+      "source_id": 812,
       "source_url": "https://www.schmalelab.spes.vt.edu/IRES/home.html",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6593,7 +6497,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 825,
+      "source_id": 813,
       "source_url": "https://www.phys.vt.edu/Undergraduate/REU.html",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6601,7 +6505,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 826,
+      "source_id": 814,
       "source_url": "https://www.wef.org/events--education/career-resources/wef-inflow/STEMpath-Track/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6609,7 +6513,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 827,
+      "source_id": 815,
       "source_url": "https://www.uvm.edu/materialsciencegrad/ires",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6617,7 +6521,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 828,
+      "source_id": 816,
       "source_url": "https://www.gs.washington.edu/academics/summer/gssummer/index.htm#one",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6625,7 +6529,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 829,
+      "source_id": 817,
       "source_url": "https://www.ocean.washington.edu/story/Data_Science_in_Oceanography_Undergraduate_Summer_Program",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6633,7 +6537,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 830,
+      "source_id": 818,
       "source_url": "https://depts.washington.edu/hiprc/education/insight/",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6641,7 +6545,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 831,
+      "source_id": 819,
       "source_url": "https://isbscience.org/careers/internships/summer-undergraduate-research-experiences-program/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6649,7 +6553,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 832,
+      "source_id": 820,
       "source_url": "https://mem-c.washington.edu/undergraduates/reu/",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6657,7 +6561,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 833,
+      "source_id": 821,
       "source_url": "https://neurosurgery.uw.edu/education/summer-student-programs",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6665,7 +6569,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 834,
+      "source_id": 822,
       "source_url": "https://quantumreu.cs.washington.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6673,7 +6577,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 835,
+      "source_id": 823,
       "source_url": "https://www.uwb.edu/stem/research/reu/mathematics",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6681,7 +6585,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 836,
+      "source_id": 824,
       "source_url": "https://labs.wsu.edu/csi/reu-2/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6689,7 +6593,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 837,
+      "source_id": 825,
       "source_url": "https://physics.wsu.edu/overview-research/reu/",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6697,7 +6601,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 838,
+      "source_id": 826,
       "source_url": "https://fhl.uw.edu/research/summer-research-internships/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6705,7 +6609,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 839,
+      "source_id": 827,
       "source_url": "https://dub.washington.edu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6713,7 +6617,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 840,
+      "source_id": 828,
       "source_url": "https://hpc.uwec.edu/explore-opportunities/nsf-reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6721,7 +6625,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 841,
+      "source_id": 829,
       "source_url": "https://www.msoe.edu/academics/how-we-teach/labs-and-research/undergraduate-research/research-experience-for-undergraduates/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6729,7 +6633,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 842,
+      "source_id": 830,
       "source_url": "https://www.astro.wisc.edu/undergraduate-program/uw-madison-reu-program/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6737,7 +6641,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 843,
+      "source_id": 831,
       "source_url": "https://reucmre.chem.wisc.edu/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6745,7 +6649,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 844,
+      "source_id": 832,
       "source_url": "https://reucbe.chem.wisc.edu/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6753,7 +6657,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 845,
+      "source_id": 833,
       "source_url": "https://reumaterials.mrsec.wisc.edu/",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6761,7 +6665,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 846,
+      "source_id": 834,
       "source_url": "https://sites.google.com/wisc.edu/storm",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6769,7 +6673,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 847,
+      "source_id": 835,
       "source_url": "https://www.ssec.wisc.edu/summer-internships/",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6777,7 +6681,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 848,
+      "source_id": 836,
       "source_url": "http://www.mcw.edu/spur",
       "source_name": "AAMC; FUN; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6785,7 +6689,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 849,
+      "source_id": 837,
       "source_url": "https://sites.uwm.edu/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6793,7 +6697,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 850,
+      "source_id": 838,
       "source_url": "https://gwac.wvu.edu/reu",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6801,7 +6705,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 851,
+      "source_id": 839,
       "source_url": "https://soumyasrivastava.faculty.wvu.edu/rarest-reu-site",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6809,7 +6713,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 852,
+      "source_id": 840,
       "source_url": "https://sites.google.com/view/erislab/nsf-reu/safety-analysis-and-design-nexus?authuser=0",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6817,7 +6721,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 853,
+      "source_id": 841,
       "source_url": "https://robotics.wvu.edu/nsf-reu-site",
       "source_name": "PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6825,7 +6729,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 854,
+      "source_id": 842,
       "source_url": "https://www.psyc-reu-wvu.com/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6833,7 +6737,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 855,
+      "source_id": 843,
       "source_url": "https://health.wvu.edu/research-and-graduate-education/graduate-education/phd-programs/biomedical-sciences/summer-program-for-undergraduate-research-in-biomedical-sciences/",
       "source_name": "AAMC; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6841,7 +6745,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 856,
+      "source_id": 844,
       "source_url": "https://www.marshall.edu/reu/",
       "source_name": "NSF ETAP",
       "source_type": "unreviewed_program_link",
@@ -6849,7 +6753,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 857,
+      "source_id": 845,
       "source_url": "https://www.uwyo.edu/physics/reu-info/index.html",
       "source_name": "NSF ETAP; PathwaysToScience",
       "source_type": "unreviewed_program_link",
@@ -6857,7 +6761,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 858,
+      "source_id": 846,
       "source_url": "https://einsteinmed.edu/education/phd/the-summer-undergrad-research-program/how-to-apply.aspx",
       "source_name": "AAMC; FUN",
       "source_type": "unreviewed_program_link",
@@ -6865,7 +6769,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 859,
+      "source_id": 847,
       "source_url": "https://drexel.edu/medicine/research/student-research/summer-undergraduate-research-fellowship/",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -6873,7 +6777,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 860,
+      "source_id": 848,
       "source_url": "https://www.bumc.bu.edu/gms/students/summer-training-as-research-scholars-program/",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -6881,7 +6785,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 861,
+      "source_id": 849,
       "source_url": "https://sites.brown.edu/sreip/",
       "source_name": "AAMC; The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -6889,7 +6793,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 862,
+      "source_id": 850,
       "source_url": "https://case.edu/medicine/education/undergraduate-education/undergraduate-summer-research/heart-lung-and-blood-hlb-summer-research-program",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -6897,7 +6801,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 863,
+      "source_id": 851,
       "source_url": "https://www.ccmc-internships.com/",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -6905,7 +6809,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 864,
+      "source_id": 852,
       "source_url": "https://smhs.gwu.edu/research/research-workforce/undergraduate-research/gw-summer-program-advancing-research-cancer-gw",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -6913,7 +6817,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 865,
+      "source_id": 853,
       "source_url": "https://www.mskcc.org/education-training/summer-scientific-undergraduate-programs/mechanistic-biology-summer-program",
       "source_name": "AAMC; FUN",
       "source_type": "unreviewed_program_link",
@@ -6921,7 +6825,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 866,
+      "source_id": 854,
       "source_url": "https://www.medschool.lsuhsc.edu/mgi/summer_highschool_undergrad.aspx",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -6929,7 +6833,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 867,
+      "source_id": 855,
       "source_url": "https://mplsheart.org/clinical-research-internship-program",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -6937,7 +6841,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 868,
+      "source_id": 856,
       "source_url": "https://med.psu.edu/education/certificate-and-undergraduate",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -6945,7 +6849,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 869,
+      "source_id": 857,
       "source_url": "https://njms.rutgers.edu/sgs/prospective_students/info/summer_undergrad_research.php",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -6953,7 +6857,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 870,
+      "source_id": 858,
       "source_url": "https://gsbs.tufts.edu/academics/non-degree-options/summer-undergrad-research",
       "source_name": "AAMC; FUN",
       "source_type": "unreviewed_program_link",
@@ -6961,7 +6865,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 871,
+      "source_id": 859,
       "source_url": "https://inbre.uams.edu/outreach-programs/student-summer-progam/",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -6969,7 +6873,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 872,
+      "source_id": 860,
       "source_url": "https://pritzker.uchicago.edu/resources/summer-pathway-programs",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -6977,7 +6881,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 873,
+      "source_id": 861,
       "source_url": "https://health.uconn.edu/graduate-school/academics/programs/summer/",
       "source_name": "AAMC; FUN",
       "source_type": "unreviewed_program_link",
@@ -6985,7 +6889,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 874,
+      "source_id": 862,
       "source_url": "https://surf.pharmacy.uic.edu/",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -6993,7 +6897,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 875,
+      "source_id": 863,
       "source_url": "https://grad.uiowa.edu/biomedical-scholars-summer-undergraduate-research-program",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -7001,7 +6905,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 876,
+      "source_id": 864,
       "source_url": "https://www.medschool.umaryland.edu/osr/um_scholars/",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -7009,7 +6913,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 877,
+      "source_id": 865,
       "source_url": "https://research.umgccc.org/crtec/summer-undergraduate-research-programs/nathan-schnaper-intern-program",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -7017,7 +6921,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 878,
+      "source_id": 866,
       "source_url": "https://medicine.missouri.edu/offices-programs/research/education-training/summer-internship",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -7025,7 +6929,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 879,
+      "source_id": 867,
       "source_url": "https://www.unmc.edu/student-success/pathway-programs/summer-undergraduate-research-program/index.html",
       "source_name": "AAMC; FUN",
       "source_type": "unreviewed_program_link",
@@ -7033,7 +6937,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 880,
+      "source_id": 868,
       "source_url": "https://www.med.unc.edu/oge/stad/sure",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -7041,7 +6945,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 881,
+      "source_id": 869,
       "source_url": "https://www.urmc.rochester.edu/education/md-phd/summer-scholars",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -7049,15 +6953,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 882,
-      "source_url": "https://gccri.uthscsa.edu/gccri-donald-g-mcewen-memorial-summer-research-program/",
-      "source_name": "AAMC",
-      "source_type": "unreviewed_program_link",
-      "publisher": null,
-      "authoritative": 0
-    },
-    {
-      "source_id": 883,
+      "source_id": 870,
       "source_url": "https://dbbs.wustl.edu/admissions/summer-undergraduate-research-programs/",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -7065,7 +6961,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 884,
+      "source_id": 871,
       "source_url": "https://teach.weill.cornell.edu/mdphd/undergraduate-summer-program",
       "source_name": "AAMC; The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -7073,7 +6969,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 885,
+      "source_id": 872,
       "source_url": "https://teach.weill.cornell.edu/medical-education/programs/summer-research-fellowship",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -7081,7 +6977,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 886,
+      "source_id": 873,
       "source_url": "https://www.mskcc.org/education-training/summer-scientific-undergraduate-programs/computational-biology-summer-program-cbsp",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -7089,7 +6985,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 887,
+      "source_id": 874,
       "source_url": "https://www.mskcc.org/education-training/summer-scientific-undergraduate-programs/chemical-biology-summer-program-chbsp",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -7097,7 +6993,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 888,
+      "source_id": 875,
       "source_url": "https://www.mskcc.org/education-training/summer-scientific-undergraduate-programs/engineering-imaging-summer-program",
       "source_name": "AAMC",
       "source_type": "unreviewed_program_link",
@@ -7105,7 +7001,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 889,
+      "source_id": 876,
       "source_url": "https://alleninstitute.org/careers/internships",
       "source_name": "FUN",
       "source_type": "unreviewed_program_link",
@@ -7113,7 +7009,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 890,
+      "source_id": 877,
       "source_url": "https://sites.bu.edu/spin/",
       "source_name": "FUN",
       "source_type": "unreviewed_program_link",
@@ -7121,7 +7017,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 891,
+      "source_id": 878,
       "source_url": "https://www.neurology.columbia.edu/education/additional-educational-programs/summer-translational-aging-research-undergraduates-star-u",
       "source_name": "FUN",
       "source_type": "unreviewed_program_link",
@@ -7129,7 +7025,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 892,
+      "source_id": 879,
       "source_url": "https://www.hhmi.org/programs/cech-fellows",
       "source_name": "FUN",
       "source_type": "unreviewed_program_link",
@@ -7137,7 +7033,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 893,
+      "source_id": 880,
       "source_url": "https://www.marquette.edu/biology/undergraduate-summer-research-program.php",
       "source_name": "FUN",
       "source_type": "unreviewed_program_link",
@@ -7145,7 +7041,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 894,
+      "source_id": 881,
       "source_url": "https://med.nyu.edu/departments-institutes/neuroscience/education/undergraduate-summer-research-training",
       "source_name": "FUN",
       "source_type": "unreviewed_program_link",
@@ -7153,7 +7049,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 895,
+      "source_id": 882,
       "source_url": "https://seaver.pepperdine.edu/surb/",
       "source_name": "FUN",
       "source_type": "unreviewed_program_link",
@@ -7161,7 +7057,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 896,
+      "source_id": 883,
       "source_url": "https://artsandsciences.syracuse.edu/biology/biology-research/nsf-reu-site-microffabs/",
       "source_name": "FUN",
       "source_type": "unreviewed_program_link",
@@ -7169,7 +7065,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 897,
+      "source_id": 884,
       "source_url": "https://www.funfaculty.org/files/URBRAIN FULL FLIER_2023.pdf",
       "source_name": "FUN",
       "source_type": "unreviewed_program_link",
@@ -7177,7 +7073,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 898,
+      "source_id": 885,
       "source_url": "https://somgrad.pitt.edu/prospective-students/summer-research-programs",
       "source_name": "FUN",
       "source_type": "unreviewed_program_link",
@@ -7185,7 +7081,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 899,
+      "source_id": 886,
       "source_url": "https://www.laureateinstitute.org/summer-internships.html",
       "source_name": "FUN",
       "source_type": "unreviewed_program_link",
@@ -7193,7 +7089,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 900,
+      "source_id": 887,
       "source_url": "https://medicine.hsc.wvu.edu/neuroscience/about-us/training-and-internships/neuroscience-undergraduate-research-opportunity-nuro/",
       "source_name": "FUN",
       "source_type": "unreviewed_program_link",
@@ -7201,7 +7097,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 901,
+      "source_id": 888,
       "source_url": "https://www.mbl.edu/education/internships/nsf-reu-biological-discovery-woods-hole",
       "source_name": "FUN",
       "source_type": "unreviewed_program_link",
@@ -7209,7 +7105,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 902,
+      "source_id": 889,
       "source_url": "https://www.novartis.com/careers/early-careers/us-biomedical-research-internship-programs",
       "source_name": "Novartis",
       "source_type": "unreviewed_program_link",
@@ -7217,7 +7113,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 903,
+      "source_id": 890,
       "source_url": "https://careers.gene.com/us/en/internships",
       "source_name": "Genentech",
       "source_type": "unreviewed_program_link",
@@ -7225,7 +7121,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 904,
+      "source_id": 891,
       "source_url": "https://careers.regeneron.com/en/career-pathways/early-careers/",
       "source_name": "Regeneron; The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -7233,7 +7129,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 905,
+      "source_id": 892,
       "source_url": "https://www.abbvie.com/join-us/internships.html",
       "source_name": "AbbVie; The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -7241,7 +7137,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 906,
+      "source_id": 893,
       "source_url": "https://www.biogen.com/careers/students-and-graduates.html",
       "source_name": "Biogen",
       "source_type": "unreviewed_program_link",
@@ -7249,7 +7145,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 907,
+      "source_id": 894,
       "source_url": "https://jobs.merck.com/us/en/student-opportunities",
       "source_name": "Merck & Co.",
       "source_type": "unreviewed_program_link",
@@ -7257,7 +7153,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 908,
+      "source_id": 895,
       "source_url": "https://www.pfizer.com/en/about/careers/pfizer-futures",
       "source_name": "Pfizer",
       "source_type": "unreviewed_program_link",
@@ -7265,7 +7161,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 909,
+      "source_id": 896,
       "source_url": "https://careers.amgen.com/en/job/washington-d-c/undergrad-intern-data-scientist-technology-ai-and-data-summer-2027/87/100494061088",
       "source_name": "Amgen",
       "source_type": "unreviewed_program_link",
@@ -7273,7 +7169,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 910,
+      "source_id": 897,
       "source_url": "https://lilly.wd115.myworkdayjobs.com/en-US/CMP/job/Lilly-Research-Laboratories-TDA---2027-Summer-Undergraduate-Internship_R-110519",
       "source_name": "Eli Lilly and Company",
       "source_type": "unreviewed_program_link",
@@ -7281,7 +7177,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 911,
+      "source_id": 898,
       "source_url": "https://gsas.columbia.edu/graduate-life/diversity-inclusion/summer-research-program",
       "source_name": "The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -7289,7 +7185,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 912,
+      "source_id": 899,
       "source_url": "https://gsas.harvard.edu/diversity/outreach-programs/summer-research-opportunities-harvard",
       "source_name": "The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -7297,7 +7193,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 913,
+      "source_id": 900,
       "source_url": "https://theleadershipalliance.org/programs/summer-research/sites#howard",
       "source_name": "The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -7305,7 +7201,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 914,
+      "source_id": 901,
       "source_url": "https://www.montana.edu/",
       "source_name": "The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -7313,7 +7209,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 915,
+      "source_id": 902,
       "source_url": "https://ugr.miami.edu/programs/community-outreach-programs/leadership-alliance/index.html",
       "source_name": "The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -7321,7 +7217,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 916,
+      "source_id": 903,
       "source_url": "https://www.sas.upenn.edu/graduate-division/programs/summer-research-early-identification-program",
       "source_name": "The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -7329,7 +7225,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 917,
+      "source_id": 904,
       "source_url": "https://doctoral.wharton.upenn.edu/summer-research-early-identification-program/",
       "source_name": "The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -7337,7 +7233,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 918,
+      "source_id": 905,
       "source_url": "https://graddiversity.virginia.edu/initiatives/leadership-alliance",
       "source_name": "The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -7345,7 +7241,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 919,
+      "source_id": 906,
       "source_url": "https://theleadershipalliance.org/dana-foundation-neuroscience-and-society-scholars-dnss",
       "source_name": "The Leadership Alliance",
       "source_type": "unreviewed_program_link",
@@ -7353,7 +7249,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 920,
+      "source_id": 907,
       "source_url": "https://www.cornellagritechsummerscholars.org/",
       "source_name": "Cornell Undergraduate Research",
       "source_type": "unreviewed_program_link",
@@ -7361,7 +7257,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 921,
+      "source_id": 908,
       "source_url": "https://math.cornell.edu/undergraduate-research",
       "source_name": "Cornell Undergraduate Research",
       "source_type": "unreviewed_program_link",
@@ -7369,7 +7265,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 922,
+      "source_id": 909,
       "source_url": "https://www.paradim.org/REU_landing_page",
       "source_name": "Cornell Undergraduate Research",
       "source_type": "unreviewed_program_link",
@@ -7377,7 +7273,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 923,
+      "source_id": 910,
       "source_url": "https://www.ohsu.edu/oregon-institute-occupational-health-sciences/internships",
       "source_name": "Reddit lead / official host verified",
       "source_type": "unreviewed_program_link",
@@ -7385,7 +7281,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 924,
+      "source_id": 911,
       "source_url": "https://hsrpkm.bwh.harvard.edu",
       "source_name": "Official host expansion",
       "source_type": "unreviewed_program_link",
@@ -7393,7 +7289,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 925,
+      "source_id": 912,
       "source_url": "https://research.massgeneralbrigham.org/en/education-and-training/graduate-medical-education/pediatrics/mgb-digestive-disease-summer-research-program",
       "source_name": "Official host expansion",
       "source_type": "unreviewed_program_link",
@@ -7401,7 +7297,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 926,
+      "source_id": 913,
       "source_url": "https://sites.google.com/g.harvard.edu/spheer/home",
       "source_name": "Official host expansion",
       "source_type": "unreviewed_program_link",
@@ -7409,7 +7305,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 927,
+      "source_id": 914,
       "source_url": "https://www.kucancercenter.org/training-education/high-school-undergraduate/c-clear-program",
       "source_name": "Official host expansion",
       "source_type": "unreviewed_program_link",
@@ -7417,7 +7313,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 928,
+      "source_id": 915,
       "source_url": "https://www.tgen.org/education/helios-scholars-at-tgen/",
       "source_name": "Official host expansion",
       "source_type": "unreviewed_program_link",
@@ -7425,7 +7321,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 929,
+      "source_id": 916,
       "source_url": "https://www.projecthsf.org/internships",
       "source_name": "Official host expansion",
       "source_type": "unreviewed_program_link",
@@ -7433,7 +7329,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 930,
+      "source_id": 917,
       "source_url": "https://careers.bms.com/internships-co-ops/",
       "source_name": "Bristol Myers Squibb",
       "source_type": "unreviewed_program_link",
@@ -7441,7 +7337,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 931,
+      "source_id": 918,
       "source_url": "https://www.gilead.com/careers/opportunities/early-career-opportunities",
       "source_name": "Gilead Sciences",
       "source_type": "unreviewed_program_link",
@@ -7449,7 +7345,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 932,
+      "source_id": 919,
       "source_url": "https://www.iitk.ac.in/oir/iitk-rise-internship-programme",
       "source_name": "Official host expansion",
       "source_type": "unreviewed_program_link",
@@ -7457,7 +7353,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 933,
+      "source_id": 920,
       "source_url": "https://www.imb.de/students-postdocs/nextgen-training-programme",
       "source_name": "Official host expansion",
       "source_type": "unreviewed_program_link",
@@ -7465,7 +7361,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 934,
+      "source_id": 921,
       "source_url": "https://www.unil.ch/fbm/en/home/menuinst/formation/short-continuing-postgraduate-training/sur-programme.html",
       "source_name": "Official host expansion",
       "source_type": "unreviewed_program_link",
@@ -7473,7 +7369,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 935,
+      "source_id": 922,
       "source_url": "https://www.aalto.fi/en/aalto-science-institute-asci/aalto-science-institute-international-summer-research-programme",
       "source_name": "Official host expansion",
       "source_type": "unreviewed_program_link",
@@ -7481,7 +7377,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 936,
+      "source_id": 923,
       "source_url": "https://www.uclaphscholars.org/program-overview",
       "source_name": "Official host expansion",
       "source_type": "unreviewed_program_link",
@@ -7489,7 +7385,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 937,
+      "source_id": 924,
       "source_url": "https://www.loc.gov/item/internships/junior-fellows-program/",
       "source_name": "Official host expansion",
       "source_type": "unreviewed_program_link",
@@ -7497,7 +7393,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 938,
+      "source_id": 925,
       "source_url": "https://www.metmuseum.org/about-the-met/internships/undergraduate-and-graduate-students/summer",
       "source_name": "Official host expansion",
       "source_type": "unreviewed_program_link",
@@ -7505,7 +7401,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 939,
+      "source_id": 926,
       "source_url": "https://crowcanyon.org/internships/",
       "source_name": "Official host expansion",
       "source_type": "unreviewed_program_link",
@@ -7513,7 +7409,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 940,
+      "source_id": 927,
       "source_url": "https://www.sabin.org/about/opportunities/internships/",
       "source_name": "Official host expansion",
       "source_type": "unreviewed_program_link",
@@ -7521,7 +7417,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 941,
+      "source_id": 928,
       "source_url": "https://eee.epfl.ch/",
       "source_name": "EPFL Excellence in Engineering (E3)",
       "source_type": "unreviewed_program_link",
@@ -7529,7 +7425,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 942,
+      "source_id": 929,
       "source_url": "https://www.oist.jp/admissions/research-internship/program-description",
       "source_name": "OIST Research Internship",
       "source_type": "unreviewed_program_link",
@@ -7537,7 +7433,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 943,
+      "source_id": 930,
       "source_url": "https://www.crg.eu/en/content/training-undergraduates/crg-summer-internship-programme",
       "source_name": "CRG Summer Internship Programme",
       "source_type": "unreviewed_program_link",
@@ -7545,7 +7441,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 944,
+      "source_id": 931,
       "source_url": "https://summer.epfl.ch/",
       "source_name": "EPFL IC Summer Research Fellowship",
       "source_type": "unreviewed_program_link",
@@ -7553,7 +7449,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 945,
+      "source_id": 932,
       "source_url": "https://inf.ethz.ch/studies/summer-research-fellowship.html",
       "source_name": "ETH Student Summer Research Fellowship in Computer Science",
       "source_type": "unreviewed_program_link",
@@ -7561,7 +7457,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 946,
+      "source_id": 933,
       "source_url": "https://www.astron.nl/education/summer-research-programme/",
       "source_name": "ASTRON/JIVE Summer Student Programme",
       "source_type": "unreviewed_program_link",
@@ -7569,7 +7465,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 947,
+      "source_id": 934,
       "source_url": "https://www.embl.org/about/info/undergraduates/",
       "source_name": "EMBL Undergraduate Research Internships",
       "source_type": "unreviewed_program_link",
@@ -7577,7 +7473,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 948,
+      "source_id": 935,
       "source_url": "https://www.s.u-tokyo.ac.jp/en/utrip/",
       "source_name": "University of Tokyo Research Internship Program (UTRIP)",
       "source_type": "unreviewed_program_link",
@@ -7585,7 +7481,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 949,
+      "source_id": 936,
       "source_url": "https://www.nig.ac.jp/en/students/nig-intern/",
       "source_name": "NIG-INTERN",
       "source_type": "unreviewed_program_link",
@@ -7593,7 +7489,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 950,
+      "source_id": 937,
       "source_url": "https://vsrp.kaust.edu.sa/",
       "source_name": "KAUST Visiting Student Research Program",
       "source_type": "unreviewed_program_link",
@@ -7601,7 +7497,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 951,
+      "source_id": 938,
       "source_url": "https://www.perimeterinstitute.ca/psi-start",
       "source_name": "Perimeter PSI Start Research Internship",
       "source_type": "unreviewed_program_link",
@@ -7609,7 +7505,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 952,
+      "source_id": 939,
       "source_url": "https://www.imperial.ac.uk/urop/",
       "source_name": "Imperial Undergraduate Research Opportunities Programme",
       "source_type": "unreviewed_program_link",
@@ -7617,7 +7513,7 @@
       "authoritative": 0
     },
     {
-      "source_id": 953,
+      "source_id": 940,
       "source_url": "https://cbs.riken.jp/en/summer/",
       "source_name": "RIKEN CBS Summer Program — Internship Course",
       "source_type": "unreviewed_program_link",
@@ -11865,7 +11761,6 @@
         "Network_Source",
         "Program_Type",
         "Primary_Field",
-        "Field_Tags",
         "Country",
         "Location_Scope",
         "Format",
@@ -11986,7 +11881,6 @@
         "Network_Source",
         "Program_Type",
         "Primary_Field",
-        "Field_Tags",
         "Country",
         "Location_Scope",
         "Format",
@@ -12213,7 +12107,6 @@
         "Network_Source",
         "Program_Type",
         "Primary_Field",
-        "Field_Tags",
         "Country",
         "Location_Scope",
         "Format",
@@ -12349,7 +12242,6 @@
         "Network_Source",
         "Program_Type",
         "Primary_Field",
-        "Field_Tags",
         "Country",
         "Location_Scope",
         "Format",
@@ -12438,7 +12330,6 @@
         "Host_Institution",
         "Program_Type",
         "Primary_Field",
-        "Field_Tags",
         "City",
         "State",
         "Country",
@@ -13967,7 +13858,6 @@
         "Network_Source",
         "Program_Type",
         "Primary_Field",
-        "Field_Tags",
         "Country",
         "Location_Scope",
         "Format",
@@ -18845,7 +18735,6 @@
         "Network_Source",
         "Program_Type",
         "Primary_Field",
-        "Field_Tags",
         "Country",
         "Location_Scope",
         "Format",
@@ -20085,7 +19974,6 @@
         "Network_Source",
         "Program_Type",
         "Primary_Field",
-        "Field_Tags",
         "Country",
         "Location_Scope",
         "Format",
@@ -21636,7 +21524,6 @@
         "Network_Source",
         "Program_Type",
         "Primary_Field",
-        "Field_Tags",
         "Country",
         "Location_Scope",
         "Format",

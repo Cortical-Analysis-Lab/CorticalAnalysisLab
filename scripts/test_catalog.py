@@ -20,6 +20,7 @@ from audit_catalog_accuracy import audit_rows
 from apply_duplicate_identity_review import apply_review
 from remove_funding_identity_records import remove_funding_identity_rows
 from review_duplicate_identities import build_review_rows
+from review_catalog_names import apply_decisions, canonical_url, clean_name, screen
 from import_catalog import preflight
 
 
@@ -369,6 +370,70 @@ class CatalogTests(unittest.TestCase):
         self.assertTrue(all(row["Recommended_Action"] == "review_same_program_multiple_pages" for row in review))
         keep_rows = [row for row in review if row["Recommendation"] == "keep"]
         self.assertEqual(keep_rows[0]["Program_ID"], "PROGRAM-CURRENT")
+
+    def test_identity_names_remove_cycles_but_preserve_meaningful_numbers(self):
+        for original, expected in (
+            ("2026 UConn REU", "UConn REU"),
+            ("AI REU (Summer '26)", "AI REU"),
+            ("Math REU26 at Michigan-Dearborn", "Math REU at Michigan-Dearborn"),
+            ("Biology REU 2025–2026", "Biology REU"),
+            ("Biosphere 2", "Biosphere 2"),
+            ("Biozentrum Research Summer", "Biozentrum Research Summer"),
+            ("CO2 Chemical Engineering", "CO2 Chemical Engineering"),
+            ("3D Interfaces / I3M / E3", "3D Interfaces / I3M / E3"),
+        ):
+            self.assertEqual(clean_name(original), expected)
+            self.assertEqual(clean_name(expected), expected)
+
+    def test_identity_screen_includes_aliases_and_ignores_same_id_cycles(self):
+        row = dict(Program_ID="UCONN", Program_Name="UConn Physiology and Neurobiology REU Program",
+                   Host_Institution="University of Connecticut", Program_URL="https://pnb.uconn.edu/reu/", Cycle_Year="2025")
+        duplicate = dict(row, Program_ID="BUNDLE", Program_Name="REU - UConn Physiology and Neurobiology", Program_URL="https://pnbreu.uconn.edu/", Cycle_Year="")
+        self.assertEqual(screen([row, dict(row, Cycle_Year="2026")]), [])
+        self.assertEqual(len(screen([row, duplicate])), 1)
+        # Identical portals are candidates only: no merge is implicit.
+        track = dict(duplicate, Program_ID="OTHER", Program_Name="Separate Partner Track")
+        self.assertEqual(len(apply_decisions([duplicate, track], {})), 2)
+        self.assertNotEqual(canonical_url("https://example.edu/apply?track=one"), canonical_url("https://example.edu/apply?track=two"))
+
+    def test_identity_merge_preserves_facts_cycles_and_provisional_evidence(self):
+        old = dict(Program_ID="STABLE", Program_Name="Example REU", Host_Institution="Example",
+                   Cycle_Year="2025", Housing_Included="No", Stipend_Total_USD="5000",
+                   Field_Tags="Physics", Last_Verified="2025-01-01", Bundle_Details_JSON="")
+        report = {"title": "Example REU 2026", "housingProvision": "provided", "housingCost": "paid", "benefitNotes": "Conditional meal allowance"}
+        bundle = dict(old, Program_ID="BUNDLE", Cycle_Year="", Stipend_Total_USD="9000",
+                      Housing_Included="Yes", Field_Tags="Biology", Last_Verified="",
+                      Catalog_Review_Status="needs_review", Bundle_Details_JSON=json.dumps([report]))
+        historical = dict(bundle, Cycle_Year="2024", Stipend_Total_USD="4000", Application_URL="https://example.edu/2024/apply")
+        plan = {"merges": [{"keep": "STABLE", "remove": ["BUNDLE"], "reason": "Accepted same-program identity"}]}
+        result = apply_decisions([old, bundle, historical], plan)
+        self.assertEqual({r["Program_ID"] for r in result}, {"STABLE"})
+        self.assertEqual({r["Cycle_Year"] for r in result}, {"2024", "2025"})
+        current = next(r for r in result if r["Cycle_Year"] == "2025")
+        self.assertEqual(current["Stipend_Total_USD"], "5000")
+        self.assertEqual(current["Housing_Included"], "No")
+        self.assertEqual(current["Last_Verified"], "2025-01-01")
+        self.assertEqual(current["Catalog_Review_Status"], "supplement_needs_review")
+        self.assertEqual(current["Field_Tags"], "Physics; Biology")
+        stored = json.loads(current["Bundle_Details_JSON"])[0]
+        self.assertEqual({key: stored[key] for key in report}, report)
+        self.assertEqual(len(stored["catalogIdentityHistory"][0]["originalRows"]), 3)
+        self.assertEqual(next(r for r in result if r["Cycle_Year"] == "2024")["Application_URL"], "https://example.edu/2024/apply")
+        self.assertEqual(apply_decisions(result, plan), result)
+        # An identity merge never makes two provisional sources verified.
+        provisional = apply_decisions([dict(bundle, Program_ID="STABLE"), bundle], plan)
+        self.assertEqual(provisional[0]["Catalog_Review_Status"], "needs_review")
+        self.assertFalse(provisional[0]["Last_Verified"])
+
+    def test_uconn_bundle_alias_has_one_public_identity(self):
+        payload = json.loads((ROOT / "data/summer-research/catalog.json").read_text())
+        programs = {p["public_id"]: p for p in payload["opportunities"]}
+        self.assertIn("UCONN-PNB-REU", programs)
+        self.assertNotIn("BND-759781B767455A24", programs)
+        self.assertIn("BND-342502C36862A9E3", programs)  # UConn Math is distinct.
+        program = programs["UCONN-PNB-REU"]
+        self.assertTrue(any(r.get("id") == "program:759781b767455a24" for r in program["bundle_details"]))
+        self.assertEqual(program["review_status"], "supplement_needs_review")
 
     def test_apply_duplicate_identity_review_removes_duplicates_and_logs_merge(self):
         import tempfile
