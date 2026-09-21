@@ -136,6 +136,8 @@ def apply_decisions(rows, decisions):
                 incumbents.append(cycle)
                 years.add(year)
         status = "needs_review" if all(r.get("Catalog_Review_Status") == "needs_review" for r in all_rows) else "supplement_needs_review"
+        if any(r.get("Catalog_Review_Status") == "bundle_accepted" for r in all_rows) and all(r.get("Catalog_Review_Status", "") in {"", "bundle_accepted"} for r in all_rows):
+            status = "bundle_accepted"
         metadata = {
             "Bundle_Details_JSON": json.dumps(reports, ensure_ascii=False, separators=(",", ":")),
             "Bundle_Provenance": combine(*(r.get("Bundle_Provenance") for r in all_rows)),
@@ -145,6 +147,8 @@ def apply_decisions(rows, decisions):
             "Review_Notes": combine(*(r.get("Review_Notes") for r in all_rows), "Name/identity overlap reviewed; imported facts and conflicting claims remain subject to review. Original rows retained in catalogIdentityHistory."),
             "Notes": combine(*(r.get("Notes") for r in incumbents), f"Identity consolidation: retained {keep_id}; merged {', '.join(merge['remove'])}. {merge['reason']} Original rows and bundle reports retained in Bundle_Details_JSON; no factual re-verification."),
         }
+        if status == "bundle_accepted":
+            metadata["Review_Notes"] = combine(*(r.get("Review_Notes") for r in all_rows))
         for row in incumbents:
             row.update(metadata)
         removed.update(merge["remove"])

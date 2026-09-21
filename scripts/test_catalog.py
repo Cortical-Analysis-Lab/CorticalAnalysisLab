@@ -25,6 +25,28 @@ from import_catalog import preflight
 
 
 class CatalogTests(unittest.TestCase):
+    def test_unresolved_review_preserves_tracks_and_corrects_scope(self):
+        rows = load_rows(ROOT / "database/imports/summer_undergraduate_research_opportunities_starter.csv")
+        programs = {r["Program_ID"]: r for r in rows}
+        for excluded in ("BND-084EF69750C5A3D1", "AUTO-5BDE34CD1E", "BND-EF0857A517205E5A",
+                         "BND-9247DF9AB8E522C6", "BND-CA3CDDC5738FE044", "AUTO-7F03609722"):
+            self.assertNotIn(excluded, programs)
+        # A WashU restriction must not exclude the separately represented Penn site.
+        penn = programs["BND-21B2481861C524C2"]
+        self.assertEqual(penn["Host_Institution"], "University of Pennsylvania")
+        self.assertEqual(penn["External_Applicants"], "Unknown")
+        self.assertEqual(penn["Housing_Included"], "Unknown")
+        self.assertTrue(penn["Review_Notes"])
+        # Broad SRTP must not inherit the Amgen funding track's GPA requirement.
+        self.assertEqual(programs["AMGEN-UCSF"]["Min_GPA"], "")
+        self.assertEqual(programs["AMGEN-UCSF"]["Eligibility_Parse_Status"], "needs_review")
+        self.assertEqual(programs["AUTO-531D141B73"]["Stipend_Total_USD"], "6000")
+        self.assertEqual(programs["BND-B79CDBD477F02CEB"]["Stipend_Total_USD"], "7000")
+        for identity in ("AUTO-583E67E91D", "AUTO-6CDAF7E06A"):
+            self.assertIn("cancelled", programs[identity]["Status"])
+        self.assertEqual(programs["BND-4334627EF951B1D4"]["Program_URL"], "")
+        self.assertFalse(programs["BND-4334627EF951B1D4"]["Source_Evidence_JSON"])
+
     def test_full_overlap_batch_and_test_name_exclusion(self):
         rows = load_rows(ROOT / "database/imports/summer_undergraduate_research_opportunities_starter.csv")
         by_id = {r["Program_ID"]: r for r in rows}
@@ -43,7 +65,7 @@ class CatalogTests(unittest.TestCase):
             history = [h for report in reports for h in report.get("catalogIdentityHistory", [])]
             self.assertTrue(any(removed in h["removedProgramIds"] for h in history))
         # Shared institutions/portals do not erase independent tracks or campuses.
-        for retained in ("AMGEN-UCSF", "BND-084EF69750C5A3D1", "SROP-PU",
+        for retained in ("AMGEN-UCSF", "SROP-PU",
                          "AUTO-583E67E91D", "AUTO-6CDAF7E06A", "AUTO-5B0ACCEDAC",
                          "AUTO-ED34824776", "BND-468A7A2484882590"):
             self.assertIn(retained, by_id)
@@ -110,7 +132,7 @@ class CatalogTests(unittest.TestCase):
 
     def test_historical_cohort_pages_are_not_separate_programs(self):
         urls = {row[0] for row in self.db.execute("SELECT program_url FROM opportunities")}
-        self.assertIn("https://mechanobiology.wustl.edu/programs/reu/", urls)
+        self.assertIn("https://cemb.upenn.edu/about-cemb/education-network/undergraduate-research-opportunities/", urls)
         for year in range(2018, 2026):
             self.assertNotIn(f"https://mechanobiology.wustl.edu/{year}-reu-program/", urls)
         self.assertIn("https://www.cnf.cornell.edu/education/reu", urls)
@@ -249,7 +271,7 @@ class CatalogTests(unittest.TestCase):
     def test_public_catalog_matches_database(self):
         payload = json.loads((ROOT / "data" / "summer-research" / "catalog.json").read_text(encoding="utf-8"))
         self.assertEqual(len(payload["opportunities"]), self.count("opportunities"))
-        self.assertEqual(payload["schema_version"], "1.4.0")
+        self.assertEqual(payload["schema_version"], "1.5.0")
 
     def test_undated_and_annual_records_share_one_public_program(self):
         from catalog_common import SCHEMA, connect
@@ -452,6 +474,13 @@ class CatalogTests(unittest.TestCase):
         provisional = apply_decisions([dict(bundle, Program_ID="STABLE"), bundle], plan)
         self.assertEqual(provisional[0]["Catalog_Review_Status"], "needs_review")
         self.assertFalse(provisional[0]["Last_Verified"])
+        accepted = apply_decisions([
+            dict(bundle, Program_ID="STABLE", Catalog_Review_Status="bundle_accepted", Review_Notes=""),
+            dict(bundle, Catalog_Review_Status="bundle_accepted", Review_Notes=""),
+        ], plan)
+        self.assertEqual(accepted[0]["Catalog_Review_Status"], "bundle_accepted")
+        self.assertEqual(accepted[0]["Review_Notes"], "")
+        self.assertFalse(accepted[0]["Last_Verified"])
 
     def test_uconn_bundle_alias_has_one_public_identity(self):
         payload = json.loads((ROOT / "data/summer-research/catalog.json").read_text())
@@ -461,7 +490,7 @@ class CatalogTests(unittest.TestCase):
         self.assertIn("BND-342502C36862A9E3", programs)  # UConn Math is distinct.
         program = programs["UCONN-PNB-REU"]
         self.assertTrue(any(r.get("id") == "program:759781b767455a24" for r in program["bundle_details"]))
-        self.assertEqual(program["review_status"], "supplement_needs_review")
+        self.assertEqual(program["review_status"], "bundle_accepted")
 
     def test_apply_duplicate_identity_review_removes_duplicates_and_logs_merge(self):
         import tempfile
@@ -556,25 +585,26 @@ class CatalogTests(unittest.TestCase):
         self.assertIn("programhub", pathways["notes"].lower())
 
     def test_program_urls_are_preserved_for_public_catalog(self):
-        missing = self.db.execute("SELECT COUNT(*) FROM opportunities o LEFT JOIN opportunity_review r USING(opportunity_id) WHERE program_url IS NULL AND COALESCE(r.review_status, '') != 'needs_review'").fetchone()[0]
+        missing = self.db.execute("SELECT COUNT(*) FROM opportunities o LEFT JOIN opportunity_review r USING(opportunity_id) WHERE program_url IS NULL AND COALESCE(r.review_status, '') NOT IN ('needs_review', 'bundle_accepted')").fetchone()[0]
         self.assertEqual(missing, 0)
 
     def test_provisional_import_does_not_invent_verification_or_eligibility(self):
         rows = load_rows(ROOT / "database/imports/summer_undergraduate_research_opportunities_starter.csv")
-        provisional = [r for r in rows if r.get("Catalog_Review_Status") == "needs_review"]
-        self.assertTrue(provisional)
-        for row in provisional:
-            self.assertFalse(row["Last_Verified"])
-            self.assertTrue(row["Review_Notes"])
+        accepted = [r for r in rows if r.get("Catalog_Review_Status") == "bundle_accepted" and not r["Last_Verified"]]
+        self.assertTrue(accepted)
+        for row in accepted:
+            self.assertFalse(row["Review_Notes"])
             self.assertTrue(json.loads(row["Bundle_Details_JSON"]))
-        self.assertTrue(preflight([{**provisional[0], "Last_Verified": "2026-09-18"}])[0])
-        self.assertTrue(preflight([{**provisional[0], "Eligibility_Parse_Status": "reviewed"}])[0])
-        self.assertTrue(preflight([{**provisional[0], "Review_Notes": ""}])[0])
-        count = self.db.execute("SELECT COUNT(*) FROM opportunity_review r JOIN source_verifications v USING(opportunity_id) WHERE r.review_status='needs_review'").fetchone()[0]
+        # Future genuinely provisional imports still cannot invent verification.
+        candidate = dict(accepted[0], Catalog_Review_Status="needs_review", Review_Notes="Identity unresolved")
+        self.assertTrue(preflight([{**candidate, "Last_Verified": "2026-09-18"}])[0])
+        self.assertTrue(preflight([{**candidate, "Eligibility_Parse_Status": "reviewed"}])[0])
+        self.assertTrue(preflight([{**candidate, "Review_Notes": ""}])[0])
+        count = self.db.execute("SELECT COUNT(*) FROM opportunity_review r JOIN program_cycles c USING(opportunity_id) JOIN source_verifications v USING(cycle_id) WHERE r.review_status='bundle_accepted' AND c.last_verified IS NULL").fetchone()[0]
         self.assertEqual(count, 0)
         payload = json.loads((ROOT / "data/summer-research/catalog.json").read_text())
         public = {r["public_id"]: r for r in payload["opportunities"]}
-        for row in provisional:
+        for row in accepted:
             program = public[row["Program_ID"]]
             self.assertEqual(program["bundle_details"], json.loads(row["Bundle_Details_JSON"]))
             self.assertEqual(program["review_notes"], row["Review_Notes"])

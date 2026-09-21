@@ -137,7 +137,7 @@ def preflight(rows):
             )
         if not text_or_none(row.get("Primary_Field")):
             warnings.append(f"{label}: missing Primary_Field")
-        if not text_or_none(row.get("Last_Verified")) and row.get("Catalog_Review_Status") != "needs_review":
+        if not text_or_none(row.get("Last_Verified")) and row.get("Catalog_Review_Status") not in {"needs_review", "bundle_accepted"}:
             warnings.append(f"{label}: missing Last_Verified")
         for field in ELIGIBILITY_BOOLEAN_COLUMNS:
             value = text_or_none(row.get(field))
@@ -148,9 +148,9 @@ def preflight(rows):
             errors.append(f"{label}: invalid Eligibility_Parse_Status: {parse_status}")
         review_status = text_or_none(row.get("Catalog_Review_Status"))
         if review_status:
-            if review_status not in {"needs_review", "supplement_needs_review"}:
+            if review_status not in {"needs_review", "supplement_needs_review", "bundle_accepted"}:
                 errors.append(f"{label}: invalid Catalog_Review_Status")
-            if not text_or_none(row.get("Review_Notes")):
+            if review_status != "bundle_accepted" and not text_or_none(row.get("Review_Notes")):
                 errors.append(f"{label}: provisional information requires Review_Notes")
             if review_status == "needs_review" and (parse_status == "reviewed" or text_or_none(row.get("Last_Verified")) or text_or_none(row.get("Source_Evidence_JSON"))):
                 errors.append(f"{label}: provisional program cannot claim completed source or eligibility verification")
@@ -334,7 +334,7 @@ def upsert_import(connection, path, rows):
         ):
             if not source_url:
                 continue
-            if row.get("Catalog_Review_Status") == "needs_review":
+            if row.get("Catalog_Review_Status") == "needs_review" or (row.get("Catalog_Review_Status") == "bundle_accepted" and not text_or_none(row.get("Last_Verified"))):
                 connection.execute("INSERT OR IGNORE INTO sources(source_url, source_name, source_type, authoritative) VALUES (?, ?, 'unreviewed_program_link', 0)", (source_url, source_name))
                 continue  # Importing a bundle is not an official-source verification event.
             connection.execute("INSERT INTO sources(source_url, source_name, source_type, authoritative) VALUES (?, ?, ?, 1) ON CONFLICT(source_url) DO UPDATE SET source_name=excluded.source_name", (source_url, source_name, source_type))
@@ -343,7 +343,7 @@ def upsert_import(connection, path, rows):
                 continue  # Explicit field evidence replaces blanket program-page attribution.
             if source_type == "official_program":
                 supported = [key for key, value in row.items() if text_or_none(value) and key not in {"Application_URL", "Bundle_Provenance", "Source_Evidence_JSON", "Catalog_Review_Status", "Review_Notes", "Bundle_Details_JSON"}]
-                if row.get("Catalog_Review_Status") == "supplement_needs_review":
+                if row.get("Catalog_Review_Status") in {"supplement_needs_review", "bundle_accepted"}:
                     supported = [key for key in supported if key not in {"Field_Tags", "Secondary_Fields"}]
             else:
                 supported = ["Application_URL"]

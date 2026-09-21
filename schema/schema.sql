@@ -67,10 +67,10 @@ CREATE TABLE IF NOT EXISTS program_cycles (
     UNIQUE (opportunity_id, cycle_year)
 );
 
--- User-accepted provisional information stays separate from verified cycle facts.
+-- Bundle acceptance and specific review concerns stay separate from verified cycle facts.
 CREATE TABLE IF NOT EXISTS opportunity_review (
     opportunity_id INTEGER PRIMARY KEY REFERENCES opportunities(opportunity_id) ON DELETE CASCADE,
-    review_status TEXT NOT NULL CHECK (review_status IN ('needs_review', 'supplement_needs_review')),
+    review_status TEXT NOT NULL CHECK (review_status IN ('needs_review', 'supplement_needs_review', 'bundle_accepted')),
     review_notes TEXT NOT NULL,
     bundle_details_json TEXT NOT NULL DEFAULT '[]'
 );
@@ -275,4 +275,4 @@ CREATE INDEX IF NOT EXISTS idx_opportunity_discovery_opportunity ON opportunity_
 CREATE INDEX IF NOT EXISTS idx_crawl_targets_status ON crawl_targets(target_type, crawl_status, priority);
 CREATE INDEX IF NOT EXISTS idx_verifications_opportunity ON source_verifications(opportunity_id, date_checked);
 
-INSERT OR REPLACE INTO schema_metadata(key, value) VALUES ('schema_version', '1.4.0');
+INSERT OR REPLACE INTO schema_metadata(key, value) VALUES ('schema_version', '1.5.0');

@@ -57,9 +57,9 @@ def validate(database: Path):
             errors.append(f"{label}: invalid cycle application_url: {row['application_url']}")
     orphan_checks = {
         "opportunities without category": "SELECT COUNT(*) FROM opportunities o LEFT JOIN opportunity_categories oc USING(opportunity_id) WHERE oc.opportunity_id IS NULL",
-        "opportunities without verification or explicit provisional status": "SELECT COUNT(*) FROM opportunities o LEFT JOIN source_verifications sv USING(opportunity_id) LEFT JOIN opportunity_review r USING(opportunity_id) WHERE sv.opportunity_id IS NULL AND COALESCE(r.review_status, '') != 'needs_review'",
+        "opportunities without verification or explicit catalog acceptance/review status": "SELECT COUNT(*) FROM opportunities o LEFT JOIN source_verifications sv USING(opportunity_id) LEFT JOIN opportunity_review r USING(opportunity_id) WHERE sv.opportunity_id IS NULL AND COALESCE(r.review_status, '') NOT IN ('needs_review', 'bundle_accepted')",
         "provisional programs claiming verified facts": "SELECT COUNT(*) FROM opportunity_review r JOIN program_cycles c USING(opportunity_id) JOIN eligibility_rules e USING(cycle_id) WHERE r.review_status='needs_review' AND (c.last_verified IS NOT NULL OR e.parse_status='reviewed' OR EXISTS (SELECT 1 FROM source_verifications v WHERE v.opportunity_id=r.opportunity_id))",
-        "invalid provisional review metadata": "SELECT COUNT(*) FROM opportunity_review WHERE trim(review_notes)='' OR NOT json_valid(bundle_details_json)",
+        "invalid catalog review metadata": "SELECT COUNT(*) FROM opportunity_review WHERE (review_status != 'bundle_accepted' AND trim(review_notes)='') OR NOT json_valid(bundle_details_json)",
     }
     for label, sql in orphan_checks.items():
         count = connection.execute(sql).fetchone()[0]

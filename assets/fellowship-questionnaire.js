@@ -82,8 +82,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         ${item.notes ? `<p>${escapeHtml(item.notes)}</p>` : ""}
         ${sources.length ? `<p>References: ${sources.join(" · ")}</p>` : ""}</section>`;
     }).join("");
-    return `<details class="program-review-details"><summary>${opportunity.review_status === "needs_review" ? "Provisional listing — review needed" : "Additional bundle information — review needed"}</summary>
-      <p>${escapeHtml(opportunity.review_notes)}</p>${reports}
+    return `<details class="program-review-details"><summary>${opportunity.review_status === "bundle_accepted" ? "Program details" : "Program details — review notes"}</summary>
+      ${opportunity.review_notes ? `<p>${escapeHtml(opportunity.review_notes)}</p>` : ""}${reports}
       <p><strong>All topics:</strong> ${escapeHtml((opportunity.tags || []).map(tag => tag.tag_name).join("; ") || "N/A")}</p></details>`;
   }
   const categoryTerms = {
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       <dl class="program-details"><div><dt>Deadline</dt><dd>${escapeHtml(dateDisplay(cycle.application_deadline))}</dd></div><div><dt>Format</dt><dd>${escapeHtml(display(opportunity.delivery_format))}</dd></div><div><dt>Duration</dt><dd>${cycle.duration_weeks === null || cycle.duration_weeks === undefined ? "N/A" : `${escapeHtml(cycle.duration_weeks)} weeks`}</dd></div><div><dt>Stipend</dt><dd>${escapeHtml(stipendDisplay(cycle))}</dd></div><div><dt>Housing</dt><dd>${escapeHtml(benefitDisplay(opportunity, cycle, "housing_status", "housingProvision"))}</dd></div><div><dt>Meals</dt><dd>${escapeHtml(benefitDisplay(opportunity, cycle, "meals_status", "mealsProvision"))}</dd></div><div><dt>Minimum GPA</dt><dd>${escapeHtml(display(cycle.eligibility?.min_gpa))}</dd></div></dl>
       <div class="program-tags">${cardCategories.map(label => `<span class="meta-chip category-chip">${escapeHtml(label)}</span>`).join("")}${tags.map(tag => `<span class="meta-chip">${escapeHtml(tag.tag_name)}</span>`).join("")}</div>
       ${bundleDetails(opportunity)}
-      <div class="card-actions">${opportunity.program_url ? `<a class="program-link" href="${escapeHtml(opportunity.program_url)}" target="_blank" rel="noopener">View program →</a>` : "<span>Official program link needs review</span>"}<span class="verification-date">${opportunity.review_status === "needs_review" ? "Source verification pending" : `Source checked ${escapeHtml(display(cycle.last_verified))}`}</span></div>
+      <div class="card-actions">${opportunity.program_url ? `<a class="program-link" href="${escapeHtml(opportunity.program_url)}" target="_blank" rel="noopener">View program →</a>` : "<span>Official program link: N/A</span>"}<span class="verification-date">Source checked ${escapeHtml(display(cycle.last_verified))}</span></div>
     </article>`;
   }
 
