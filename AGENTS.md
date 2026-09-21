@@ -90,8 +90,8 @@ Current behavior:
 
 - The main page title is **Find Your Fellowship**.
 - The top hero uses the wide 4173-inspired layout in Sacred Heart red. Only the top hero received that treatment; the rest retains the existing explorer/questionnaire styling.
-- Step 1 uses accessible circular radio controls for hard eligibility questions.
-- The preliminary form groups academic standing and enrollment, then residency and institution. GPA is not collected or used to filter results; program minimum GPA remains visible on opportunity cards.
+- Step 1 uses accessible circular radio controls in three equal columns for academic standing, citizenship/residency, and institution type; stack the groups at 900px and below. Each group uses a native fieldset and centered legend.
+- The preliminary form asks academic standing, citizenship/residency, and institution type. The two enrollment questions and degree-seeking question were removed at the user’s request; do not infer those answers from class standing. Program enrollment requirements remain in the catalog, but cannot exclude a user based on uncollected answers. GPA is not collected or used to filter results; program minimum GPA remains visible on opportunity cards.
 - Step 2 is titled **Available Opportunities**.
 - A subtle bold sentence reports eligible opportunities out of total catalog opportunities; do not restore prominent eligible/ineligible score cards.
 - Catalog summary cards beside the Step 2 title show program, institution, and topic counts. They are enlarged, close to the title, and center-aligned.
@@ -101,7 +101,7 @@ Current behavior:
 - The prominent keyword search sits beside **Matching opportunities**, not in the filter sidebar.
 - Current preference filters are research area, state, housing, travel, and open/upcoming. Stipend and eligibility-result filters were intentionally removed.
 - Keyword input and every preference filter update displayed cards immediately.
-- Research-area matching uses primary categories plus explicit topic-tag terms, so multidisciplinary physics programs remain visible when Physics & Astronomy is selected.
+- Research-area matching uses primary/secondary categories plus explicit topic-tag terms, so multidisciplinary physics programs remain visible when Physics & Astronomy is selected. Cards always show all matching research-area labels, including the associated disciplines on multidisciplinary programs; selecting a filter must not hide their other areas. Match short terms such as AI as whole words to avoid false matches from words like training.
 - Known eligibility conflicts are excluded automatically; incomplete official requirements remain available rather than being guessed.
 - **Go Back** returns from results to questionnaire answers.
 - Every main site page includes a **Fellowship Database** navigation link.

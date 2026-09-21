@@ -8,9 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/fellowship-database.css">
-  <link rel="stylesheet" href="assets/fellowship-results.css?v=28">
+  <link rel="stylesheet" href="assets/fellowship-results.css?v=29">
   <script defer src="assets/site.js?v=4"></script>
-  <script defer src="assets/fellowship-questionnaire.js?v=28"></script>
+  <script defer src="assets/fellowship-questionnaire.js?v=29"></script>
 </head>
 <body>
   <nav>
@@ -48,46 +48,35 @@
       </div>
 
       <form id="eligibility-form">
-        <fieldset>
-          <legend>Academic standing and enrollment</legend>
-          <div class="question-grid">
-            <div class="question-field radio-question" role="group" aria-label="Current undergraduate year"><p>Current undergraduate year</p><div class="radio-options">
+        <div class="eligibility-question-grid">
+          <fieldset>
+            <legend>Academic standing</legend>
+            <div class="radio-options">
               <label><input type="radio" name="classYear" value="first_year" required> First year</label>
               <label><input type="radio" name="classYear" value="sophomore"> Sophomore</label>
               <label><input type="radio" name="classYear" value="junior"> Junior</label>
               <label><input type="radio" name="classYear" value="senior"> Senior, not graduating before summer</label>
               <label><input type="radio" name="classYear" value="graduating_senior"> Graduating before the program begins</label>
-            </div></div>
-            <div class="question-stack">
-              <div class="question-field radio-question" role="group" aria-label="Current enrollment"><p>Are you currently enrolled?</p><div class="radio-options compact-options">
-                <label><input type="radio" name="enrolled" value="yes" required> Yes</label><label><input type="radio" name="enrolled" value="no"> No</label>
-              </div></div>
-              <div class="question-field radio-question" role="group" aria-label="Degree-seeking status"><p>Are you currently degree-seeking?</p><div class="radio-options compact-options">
-                <label><input type="radio" name="degreeSeeking" value="yes" required> Yes</label><label><input type="radio" name="degreeSeeking" value="no"> No</label>
-              </div></div>
-              <div class="question-field radio-question" role="group" aria-label="Enrollment after the summer"><p>Will you be enrolled in a degree program after the summer?</p><div class="radio-options compact-options">
-                <label><input type="radio" name="enrolledAfter" value="yes" required> Yes</label><label><input type="radio" name="enrolledAfter" value="no"> No</label><label><input type="radio" name="enrolledAfter" value="unsure"> Unsure</label>
-              </div></div>
             </div>
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend>Residency and institution</legend>
-          <div class="question-grid">
-            <div class="question-field radio-question" role="group" aria-label="Citizenship or residency status"><p>Citizenship or residency status</p><div class="radio-options">
+          </fieldset>
+          <fieldset>
+            <legend>Citizenship / residency</legend>
+            <div class="radio-options">
               <label><input type="radio" name="citizenship" value="us_citizen" required> U.S. citizen</label>
               <label><input type="radio" name="citizenship" value="permanent_resident"> U.S. permanent resident</label>
               <label><input type="radio" name="citizenship" value="international"> International / other status</label>
               <label><input type="radio" name="citizenship" value="prefer_not"> Prefer not to answer</label>
-            </div></div>
-            <div class="question-field radio-question" role="group" aria-label="Current institution type"><p>Current institution type</p><div class="radio-options">
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Institution type</legend>
+            <div class="radio-options">
               <label><input type="radio" name="institutionType" value="two_year" required> Two-year college</label>
               <label><input type="radio" name="institutionType" value="four_year"> Four-year college or university</label>
               <label><input type="radio" name="institutionType" value="other"> Other / unsure</label>
-            </div></div>
-          </div>
-        </fieldset>
+            </div>
+          </fieldset>
+        </div>
 
         <div class="questionnaire-actions">
           <button class="primary-action" type="submit">Check my eligibility</button>

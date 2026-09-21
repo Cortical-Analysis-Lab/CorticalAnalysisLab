@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   let opportunities = [];
   let evaluatedResults = [];
   const selectedCategories = new Map();
+  const researchAreaLabels = new Map();
   const selectedLocations = new Map();
   const stateNames = {AL:"Alabama",AK:"Alaska",AZ:"Arizona",AR:"Arkansas",CA:"California",CO:"Colorado",CT:"Connecticut",DE:"Delaware",DC:"District of Columbia",FL:"Florida",GA:"Georgia",HI:"Hawaii",ID:"Idaho",IL:"Illinois",IN:"Indiana",IA:"Iowa",KS:"Kansas",KY:"Kentucky",LA:"Louisiana",ME:"Maine",MD:"Maryland",MA:"Massachusetts",MI:"Michigan",MN:"Minnesota",MS:"Mississippi",MO:"Missouri",MT:"Montana",NE:"Nebraska",NV:"Nevada",NH:"New Hampshire",NJ:"New Jersey",NM:"New Mexico",NY:"New York",NC:"North Carolina",ND:"North Dakota",OH:"Ohio",OK:"Oklahoma",OR:"Oregon",PA:"Pennsylvania",RI:"Rhode Island",SC:"South Carolina",SD:"South Dakota",TN:"Tennessee",TX:"Texas",UT:"Utah",VT:"Vermont",VA:"Virginia",WA:"Washington",WV:"West Virginia",WI:"Wisconsin",WY:"Wyoming"};
 
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("summary-institutions").textContent = new Set(opportunities.map(opportunity => opportunity.institution?.institution_id).filter(Boolean)).size;
     document.getElementById("summary-topics").textContent = new Set(opportunities.flatMap(opportunity => (opportunity.tags || []).map(tag => tag.tag_id))).size;
     const categories = new Map(opportunities.flatMap(opportunity => opportunity.categories || []).map(category => [category.category_slug, category.category_name]));
+    categories.forEach((label, slug) => researchAreaLabels.set(slug, label));
     [...categories].sort((a, b) => a[1].localeCompare(b[1])).forEach(([value, label]) => document.getElementById("filter-category").add(new Option(label, value)));
     status.hidden = true;
     panel.hidden = false;
@@ -102,13 +104,26 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   function tagMatchesCategory(tagName, categorySlug) {
     const tag = String(tagName || "").toLowerCase();
-    return (categoryTerms[categorySlug] || []).some(term => tag.includes(term));
+    return (categoryTerms[categorySlug] || []).some(term =>
+      term === "ai" || term === "arts" ? new RegExp(`\\b${term}\\b`).test(tag) : tag.includes(term));
   }
 
   function matchesResearchArea(opportunity, categorySlug) {
     if (!categorySlug) return true;
     return (opportunity.categories || []).some(item => item.category_slug === categorySlug)
       || (opportunity.tags || []).some(tag => tagMatchesCategory(tag.tag_name, categorySlug));
+  }
+
+  function associatedResearchAreas(opportunity) {
+    const areas = new Map((opportunity.categories || []).map(category => [category.category_slug, category.category_name]));
+    researchAreaLabels.forEach((label, slug) => {
+      if (matchesResearchArea(opportunity, slug)) areas.set(slug, label);
+    });
+    // Keep all associated areas visible, with selected areas first and the broad
+    // multidisciplinary label last. Filtering must not hide the other fields.
+    return [...areas].sort(([a], [b]) =>
+      Number(b !== "multidisciplinary") - Number(a !== "multidisciplinary")
+      || Number(selectedCategories.has(b)) - Number(selectedCategories.has(a)));
   }
 
   function evaluate(opportunity, answers) {
@@ -126,11 +141,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (yearField && rule[yearField] === 0) conflicts.push("Your class standing is not eligible.");
     else if (yearField && rule[yearField] === null) unknowns.push("Class-standing eligibility needs review.");
 
-    if (rule.enrolled_required === 1 && answerValue(answers, "enrolled") === "no") conflicts.push("Current enrollment is required.");
-    else if (rule.enrolled_required === null) unknowns.push("Enrollment requirement is N/A.");
-
-    if (rule.degree_seeking_required === 1 && answerValue(answers, "degreeSeeking") === "no") conflicts.push("Degree-seeking status is required.");
-    else if (rule.degree_seeking_required === null) unknowns.push("Degree-seeking requirement is N/A.");
+    // Enrollment and degree-seeking answers are not collected. Do not infer them
+    // from class standing or use their absence to exclude a program.
+    if (rule.enrolled_required === 1 || rule.degree_seeking_required === 1) unknowns.push("Confirm the program's enrollment and degree requirements.");
 
     const institutionField = answerValue(answers, "institutionType") === "two_year" ? "two_year_institution_eligible" : answerValue(answers, "institutionType") === "four_year" ? "four_year_institution_eligible" : null;
     if (institutionField && rule[institutionField] === 0) conflicts.push("Your institution type is not eligible.");
@@ -140,7 +153,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (citizenshipField && rule[citizenshipField] === 0) conflicts.push("Your citizenship/residency status is not eligible.");
     else if (!citizenshipField || rule[citizenshipField] === null) unknowns.push("Citizenship/residency eligibility needs review.");
 
-    if (answerValue(answers, "enrolledAfter") !== "yes" && rule.graduation_rule_text) unknowns.push("Graduation timing requires review against the official rule.");
+    if (rule.graduation_rule_text) unknowns.push("Graduation timing requires review against the official rule.");
     if (rule.parse_status !== "reviewed") unknowns.push("The source eligibility text has not completed structured review.");
 
     if (conflicts.length) return {state: "ineligible", reasons: conflicts};
@@ -152,11 +165,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     const cycle = opportunity.cycles?.[0] || {};
     const institution = opportunity.institution || {};
     const location = locationVariant ? `${locationVariant.city}, ${locationVariant.stateCode}` : [institution.city, institution.state_code].filter(Boolean).join(", ") || "N/A";
-    const categories = opportunity.categories || [];
     const activeCategories = [...selectedCategories].filter(([slug]) => matchesResearchArea(opportunity, slug));
     const matchesSelectedTag = tag => activeCategories.some(([slug]) => tagMatchesCategory(tag.tag_name, slug));
     const tags = [...(opportunity.tags || [])].sort((a, b) => Number(matchesSelectedTag(b)) - Number(matchesSelectedTag(a))).slice(0, 4);
-    const cardCategories = activeCategories.length ? activeCategories.map(([, label]) => label) : categories.map(category => category.category_name);
+    const cardCategories = associatedResearchAreas(opportunity).map(([, label]) => label);
     return `<article class="eligibility-card">
       <div class="card-status-row"><span class="cycle-status status-badge ${escapeHtml(display(cycle.status_code).toLowerCase())}">${escapeHtml(display(cycle.status_code))}</span></div>
       <h3>${escapeHtml(opportunity.program_name)}</h3><p class="institution-line">${escapeHtml(institution.institution_name)} · ${escapeHtml(location)}</p>
