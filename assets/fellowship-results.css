@@ -194,7 +194,3 @@ button.program-dialog-close:hover { background: #f7eff1; color: var(--red); tran
 .reported-field { margin-top: 0.25rem; }
 .reported-field summary { font-size: 0.8rem; }
 .reported-field p { font-size: 0.85rem; }
-
-.eligibility-question-grid.high-school-selected { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.eligibility-question-grid > fieldset[hidden] { display: none; }
-@media (max-width: 900px) { .eligibility-question-grid.high-school-selected { grid-template-columns: 1fr; } }

@@ -8,9 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
   <link rel="stylesheet" href="assets/fellowship-database.css">
-  <link rel="stylesheet" href="assets/fellowship-results.css?v=36">
+  <link rel="stylesheet" href="assets/fellowship-results.css?v=37">
   <script defer src="assets/site.js?v=4"></script>
-  <script defer src="assets/fellowship-questionnaire.js?v=36"></script>
+  <script defer src="assets/fellowship-questionnaire.js?v=37"></script>
 </head>
 <body>
   <nav>
@@ -49,16 +49,18 @@
 
       <form id="eligibility-form">
         <div class="eligibility-question-grid">
-          <fieldset>
-            <legend>Academic standing</legend>
+          <fieldset id="institution-question">
+            <legend>Institution type</legend>
             <div class="radio-options">
-              <label><input type="radio" name="classYear" value="high_school" required> High school</label>
-              <label><input type="radio" name="classYear" value="first_year"> College first year</label>
-              <label><input type="radio" name="classYear" value="sophomore"> College sophomore</label>
-              <label><input type="radio" name="classYear" value="junior"> College junior</label>
-              <label><input type="radio" name="classYear" value="senior"> College senior, not graduating before summer</label>
-              <label><input type="radio" name="classYear" value="graduating_senior"> Graduating college before the program begins</label>
+              <label><input type="radio" name="institutionType" value="high_school" required> High school</label>
+              <label><input type="radio" name="institutionType" value="two_year"> Two-year college</label>
+              <label><input type="radio" name="institutionType" value="four_year"> Four-year college or university</label>
             </div>
+          </fieldset>
+          <fieldset id="academic-year-question" disabled>
+            <legend>Current year</legend>
+            <p id="academic-year-help">Select your institution type first.</p>
+            <div id="academic-year-options" class="radio-options"></div>
           </fieldset>
           <fieldset>
             <legend>Citizenship / residency</legend>
@@ -67,13 +69,6 @@
               <label><input type="radio" name="citizenship" value="permanent_resident"> U.S. permanent resident</label>
               <label><input type="radio" name="citizenship" value="international"> International / other status</label>
               <label><input type="radio" name="citizenship" value="prefer_not"> Prefer not to answer</label>
-            </div>
-          </fieldset>
-          <fieldset id="institution-question">
-            <legend>Institution type</legend>
-            <div class="radio-options">
-              <label><input type="radio" name="institutionType" value="two_year" required> Two-year college</label>
-              <label><input type="radio" name="institutionType" value="four_year"> Four-year college or university</label>
             </div>
           </fieldset>
         </div>

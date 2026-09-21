@@ -7,7 +7,7 @@ const programs = JSON.parse(fs.readFileSync('data/summer-research/catalog.json',
 const context = {URL, Intl, selectedCategories: new Map(), researchAreaLabels: new Map()};
 for (const program of programs) for (const category of program.categories) context.researchAreaLabels.set(category.category_slug, category.category_name);
 vm.createContext(context);
-vm.runInContext(source.match(/  const stateNames = .*;/)[0] + '\n' + source.slice(source.indexOf('  const fieldForYear'), source.indexOf('  const filterIds')) + '\nthis.helpers = {fieldDisplay, stipendDisplay, bundleDetails, card, reportContext, evaluate, forAudience, locationLabel};', context);
+vm.runInContext(source.match(/  const stateNames = .*;/)[0] + '\n' + source.slice(source.indexOf('  const fieldForYear'), source.indexOf('  const filterIds')) + '\nthis.helpers = {fieldDisplay, stipendDisplay, bundleDetails, card, reportContext, evaluate, forAudience, locationLabel, academicYearOptions};', context);
 const {fieldDisplay, stipendDisplay, bundleDetails, card, reportContext, evaluate, forAudience, locationLabel} = context.helpers;
 let withReportedStipends = 0;
 for (const [index, program] of programs.entries()) {
@@ -43,14 +43,17 @@ const answers = new Map([['classYear','junior'],['citizenship','us_citizen'],['i
 assert.deepEqual(evaluate(original,answers),evaluate({...original,reported_facts:{eligibility:[{text:'Only students with a GPA of 4.0 may apply.'}]}},answers));
 console.log(`Rendered ${programs.length} cards and detail panels; ${withReportedStipends} missing stipend fields expose attributed reports. Display, escaping, cycle context and eligibility-isolation checks passed.`);
 
-const hsAnswers = new Map([['classYear','high_school'],['citizenship','us_citizen']]);
+const hsAnswers = new Map([['institutionType','high_school'],['classYear','grade_11'],['citizenship','us_citizen']]);
 const hsPrograms = programs.filter(p => p.high_school_details);
 assert.equal(hsPrograms.length, 89);
 for (const program of hsPrograms) {
  const projected = forAudience(program, 'high_school');
- assert.notEqual(evaluate(projected, hsAnswers).state, 'ineligible', program.public_id);
+ const matchingGrade = new Map([...hsAnswers, ['classYear', `grade_${program.high_school_details.gradesAtApplication[0] || 11}`]]);
+ assert.notEqual(evaluate(projected, matchingGrade).state, 'ineligible', program.public_id);
  assert.equal(projected.cycles[0].last_verified, null, 'Imported review is not independent verification');
- assert.ok(bundleDetails(projected).includes('High-school program information'));
+ assert.ok(bundleDetails(projected).includes('Sources and historical details'));
+ const requirement = program.high_school_details.eligibility.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ assert.equal(bundleDetails(projected).split(requirement).length - 1, 1, 'High-school requirements appear once');
  assert.ok(!card({opportunity:projected}).includes('undefined'));
  if (program.catalog_audience === 'high_school') assert.equal(evaluate(program, answers).state,'ineligible');
  assert.equal(forAudience(program, 'junior'), program, 'College view preserves canonical cycle');
@@ -66,27 +69,37 @@ const bu = forAudience(programs.find(p=>p.public_id==='hs:bu-rise'),'high_school
 assert.equal(bu.cycles[0].cycle_year, 2027);
 assert.equal(bu.cycles[0].stipend_total_usd, null);
 assert.equal(bu.cycles[0].housing_status, 'no', 'Paid housing does not satisfy included-housing filter');
-const international = new Map([['classYear','high_school'],['citizenship','international']]);
+const international = new Map([['institutionType','high_school'],['classYear','grade_11'],['citizenship','international']]);
 assert.equal(evaluate(bu,international).state,'ineligible');
 assert.notEqual(evaluate(forAudience(programs.find(p=>p.public_id==='hs:ucsb-rmp'),'high_school'),international).state,'ineligible');
 const jsep = forAudience(programs.find(p=>p.public_id==='hs:dartmouth-jsep'),'high_school');
 assert.equal(locationLabel(jsep),'Greenland, City: N/A');
 const hiddenInstitution = {...hsOneonta, cycles:[{...hsOneonta.cycles[0],eligibility:{...hsOneonta.cycles[0].eligibility,four_year_institution_eligible:0}}]};
-assert.notEqual(evaluate(hiddenInstitution,new Map([...hsAnswers,['institutionType','four_year']])).state,'ineligible');
+assert.notEqual(evaluate(hiddenInstitution,hsAnswers).state,'ineligible');
 // Check school switching/restoration against the actual event handler.
-let standing = 'high_school';
-const fieldset = {hidden:false,disabled:false};
-const grid = {classList:{toggle(name,value){this[name]=value;}}};
+let institutionType = 'high_school';
+const fieldset = {disabled:false};
+const optionsElement = {innerHTML:''};
+const help = {hidden:false};
 const events = {};
-const formStub = {querySelector(selector){return selector.includes('classYear') ? (standing ? {value:standing} : null) : grid;},addEventListener(name,handler){events[name]=handler;}};
+const formStub = {querySelector(){return institutionType ? {value:institutionType} : null;},addEventListener(name,handler){events[name]=handler;}};
 let queuedReset;
-const visibility = {document:{getElementById(){return fieldset;}},form:formStub,setTimeout(fn){queuedReset=fn;}};
+const visibility = {document:{getElementById(id){return {'academic-year-question':fieldset,'academic-year-options':optionsElement,'academic-year-help':help}[id];}},form:formStub,setTimeout(fn){queuedReset=fn;},academicYearOptions:context.helpers.academicYearOptions};
 vm.createContext(visibility);
-vm.runInContext(source.slice(source.indexOf('  const institutionQuestion'),source.indexOf('  form.addEventListener("submit"')),visibility);
-assert.ok(fieldset.hidden && fieldset.disabled);
-standing='junior'; events.change(); assert.ok(!fieldset.hidden && !fieldset.disabled);
-standing='high_school';events.change();events.reset();standing=null;queuedReset();
-assert.ok(!fieldset.hidden && !fieldset.disabled, 'Reset restores required college fieldset');
+vm.runInContext(source.slice(source.indexOf('  const yearQuestion'),source.indexOf('  form.addEventListener("submit"')),visibility);
+assert.ok(!fieldset.disabled && help.hidden);
+assert.match(optionsElement.innerHTML,/grade_9/);assert.match(optionsElement.innerHTML,/grade_12/);
+institutionType='two_year';events.change();assert.match(optionsElement.innerHTML,/Second year/);assert.ok(!optionsElement.innerHTML.includes('grade_'));
+assert.ok(!optionsElement.innerHTML.includes('value="junior"'));
+institutionType='four_year';events.change();assert.match(optionsElement.innerHTML,/value="junior"/);
+assert.ok(!optionsElement.innerHTML.includes(' checked'), 'Switching school type clears the selected year');
+events.reset();institutionType=null;queuedReset();assert.ok(fieldset.disabled && !help.hidden);assert.equal(optionsElement.innerHTML,'');
+const grade9 = new Map([...hsAnswers,['classYear','grade_9']]);
+const simons = forAudience(programs.find(p=>p.public_id==='hs:stonybrook-simons'),'high_school');
+assert.equal(evaluate(simons,grade9).state,'ineligible');
+assert.notEqual(evaluate(simons,hsAnswers).state,'ineligible');
+const rmp = forAudience(programs.find(p=>p.public_id==='hs:ucsb-rmp'),'high_school');
+assert.notEqual(evaluate(rmp,grade9).state,'ineligible', 'Exceptional grade-9 applicants must remain available');
 console.log('High-school audience, merged identity, cohort funding, citizenship, locations and questionnaire switching checks passed.');
 Object.assign(context,{keyword:'',housing:false,travel:false,open:false,upcoming:false});
 vm.runInContext(source.slice(source.indexOf('    const matchesNonLocationFilters'), source.indexOf('    const locationBase')) + '\nthis.preferenceMatches = matchesNonLocationFilters;',context);
@@ -101,3 +114,6 @@ context.open=false;assert.equal(match(statusProgram('open')),false);context.upco
 context.keyword='unlikely-nonexistent-program';assert.equal(match(bu),false);context.keyword='';
 context.selectedCategories.set('neuroscience-cognitive','Neuroscience & Cognitive Science');assert.equal(match(bu),true);context.selectedCategories.clear();
 console.log('High-school research-area, keyword, included-housing, travel and separate Open/Upcoming preference checks passed.');
+
+assert.equal(bundleDetails(hsOneonta).split('Paid internship; $3,500 listed').length-1,1,'Do not repeat the same stipend statement under costs');
+assert.ok(bundleDetails(bu).includes('10735'), 'Historical residential cost remains accessible');
