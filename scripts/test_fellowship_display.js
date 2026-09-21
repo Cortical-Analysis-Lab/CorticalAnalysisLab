@@ -7,7 +7,7 @@ const programs = JSON.parse(fs.readFileSync('data/summer-research/catalog.json',
 const context = {URL, Intl, selectedCategories: new Map(), researchAreaLabels: new Map()};
 for (const program of programs) for (const category of program.categories) context.researchAreaLabels.set(category.category_slug, category.category_name);
 vm.createContext(context);
-vm.runInContext(source.match(/  const stateNames = .*;/)[0] + '\n' + source.slice(source.indexOf('  const fieldForYear'), source.indexOf('  const filterIds')) + '\nthis.helpers = {fieldDisplay, stipendDisplay, bundleDetails, card, reportContext, evaluate, forAudience, locationLabel, academicYearOptions};', context);
+vm.runInContext(source.match(/  const stateNames = .*;/)[0] + '\n' + source.slice(source.indexOf('  const fieldForYear'), source.indexOf('  const filterIds')) + '\nthis.helpers = {fieldDisplay, stipendDisplay, bundleDetails, card, reportContext, evaluate, forAudience, locationLabel, academicYearOptions, resultSummary};', context);
 const {fieldDisplay, stipendDisplay, bundleDetails, card, reportContext, evaluate, forAudience, locationLabel} = context.helpers;
 let withReportedStipends = 0;
 for (const [index, program] of programs.entries()) {
@@ -117,3 +117,12 @@ console.log('High-school research-area, keyword, included-housing, travel and se
 
 assert.equal(bundleDetails(hsOneonta).split('Paid internship; $3,500 listed').length-1,1,'Do not repeat the same stipend statement under costs');
 assert.ok(bundleDetails(bu).includes('10735'), 'Historical residential cost remains accessible');
+
+const summarize = context.helpers.resultSummary;
+assert.equal(summarize(programs.map(opportunity=>({opportunity}))).areas,13);
+assert.equal(JSON.stringify(summarize([])),JSON.stringify({programs:0,institutions:0,areas:0}));
+const single = summarize([{opportunity:bu}]);
+assert.equal(single.programs,1);assert.equal(single.institutions,1);assert.ok(single.areas>0 && single.areas<=13);
+assert.equal(JSON.stringify(summarize([{opportunity:bu,location:{stateCode:'MA'}},{opportunity:bu,location:{stateCode:'NY'}}])),JSON.stringify(single),'Multiple location cards do not inflate summary counts');
+assert.equal(summarize([{opportunity:bu},{opportunity:{...bu,opportunity_id:-1}}]).institutions,1,'Multiple programs at one institution count it once');
+console.log('Filtered summary counts: broad areas, empty results, shared institutions and multiple-location deduplication passed.');

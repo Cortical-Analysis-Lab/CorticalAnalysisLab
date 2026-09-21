@@ -17,9 +17,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (!response.ok) throw new Error(`Catalog request failed (${response.status})`);
     const payload = await response.json();
     opportunities = payload.opportunities || [];
-    document.getElementById("summary-programs").textContent = opportunities.length;
-    document.getElementById("summary-institutions").textContent = new Set(opportunities.map(opportunity => opportunity.institution?.institution_id).filter(Boolean)).size;
-    document.getElementById("summary-topics").textContent = new Set(opportunities.flatMap(opportunity => (opportunity.tags || []).map(tag => tag.tag_id))).size;
     const categories = new Map(opportunities.flatMap(opportunity => opportunity.categories || []).map(category => [category.category_slug, category.category_name]));
     categories.forEach((label, slug) => researchAreaLabels.set(slug, label));
     [...categories].sort((a, b) => a[1].localeCompare(b[1])).forEach(([value, label]) => document.getElementById("filter-category").add(new Option(label, value)));
@@ -337,6 +334,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     return {state: "eligible", reasons: ["No known hard eligibility rules conflict with your answers."]};
   }
 
+  function resultSummary(results) {
+    const programs = new Set();
+    const institutions = new Set();
+    const areas = new Set();
+    for (const {opportunity} of results) {
+      programs.add(opportunity.opportunity_id);
+      if (opportunity.institution?.institution_id) institutions.add(opportunity.institution.institution_id);
+      associatedResearchAreas(opportunity).forEach(([slug]) => areas.add(slug));
+    }
+    return {programs: programs.size, institutions: institutions.size, areas: areas.size};
+  }
+
   function card({opportunity, location: locationVariant}, resultIndex = 0) {
     const cycle = opportunity.cycles?.[0] || {};
     const institution = opportunity.institution || {};
@@ -456,7 +465,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       return a.opportunity.program_name.localeCompare(b.opportunity.program_name);
     });
 
-    const filteredProgramCount = new Set(filtered.map(({opportunity}) => opportunity.opportunity_id)).size;
+    const summary = resultSummary(filtered);
+    document.getElementById("summary-programs").textContent = summary.programs;
+    document.getElementById("summary-institutions").textContent = summary.institutions;
+    document.getElementById("summary-areas").textContent = summary.areas;
+    const filteredProgramCount = summary.programs;
     document.getElementById("filtered-result-count").textContent = `Showing ${filtered.length} opportunity ${filtered.length === 1 ? "card" : "cards"} from ${filteredProgramCount} ${filteredProgramCount === 1 ? "program" : "programs"}`;
     displayedResults = filtered;
     resultContainer.innerHTML = filtered.length ? filtered.map(card).join("") : `<div class="empty-results">No opportunities match these preference filters. Try clearing one or more filters.</div>`;
