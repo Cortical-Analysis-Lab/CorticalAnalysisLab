@@ -166,17 +166,23 @@ body.program-dialog-open { overflow: hidden; }
 button.program-title-button { background: none; border: 0; padding: 0; color: inherit; font: inherit; text-align: left; cursor: pointer; }
 button.program-title-button:hover { color: var(--red); }
 button.program-details-button { align-self: flex-start; margin: 0.25rem 0 0.8rem; padding: 0.4rem 0; background: none; border: 0; color: var(--red); font: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer; }
-.program-detail-dialog { width: min(800px, calc(100% - 2rem)); max-width: none; max-height: calc(100dvh - 3rem); padding: 0; border: 0; border-radius: 14px; background: #fff; color: var(--text); box-shadow: 0 20px 70px rgba(0, 0, 0, 0.35); overflow: hidden; box-sizing: border-box; }
+.program-detail-dialog { position: fixed; inset: 0; margin: auto; width: min(800px, calc(100% - 2rem)); max-width: none; max-height: calc(100dvh - 3rem); padding: 0; border: 0; border-radius: 14px; background: #fff; color: var(--text); box-shadow: 0 20px 70px rgba(0, 0, 0, 0.35); overflow: hidden; box-sizing: border-box; }
 .program-detail-dialog[open] { display: flex; flex-direction: column; }
 .program-detail-dialog::backdrop { background: rgba(22, 16, 19, 0.78); }
-.program-dialog-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; padding: 1.1rem 1.25rem; border-bottom: 1px solid #e7e0e2; flex-shrink: 0; }
+.program-dialog-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 0.75rem; padding: 0.85rem 1rem; text-align: left; border-bottom: 1px solid #e7e0e2; flex-shrink: 0; }
 .program-dialog-header h2 { margin: 0; font-size: 1.2rem; line-height: 1.3; }
 .program-dialog-header p { margin: 0.4rem 0 0; font-size: 0.85rem; line-height: 1.4; color: var(--gray); }
 .program-dialog-header form { margin: 0; }
 button.program-dialog-close { width: 40px; height: 40px; padding: 0; border: 1px solid #ddd; border-radius: 50%; background: #fff; color: var(--text); font-size: 1.7rem; cursor: pointer; }
-.program-dialog-body { padding: 0 1.25rem 1.25rem; overflow-y: auto; min-height: 0; overscroll-behavior: contain; }
+.program-dialog-body { padding: 0 1rem 1rem; overflow-y: auto; min-height: 0; overscroll-behavior: contain; }
 .program-dialog-body .program-review-details { margin: 0; }
-.program-dialog-body .expanded-program-layout { gap: 1rem 1.25rem; margin: 1rem 0; }
+.program-dialog-body .expanded-program-layout { gap: 0.85rem 1.25rem; margin: 0.85rem 0; }
+.program-dialog-body section { max-width: none; margin: 0; padding: 0; }
+.program-dialog-body .program-review-details h4 { margin-bottom: 0.35rem; }
+.program-dialog-body .program-review-details p { margin-bottom: 0.5rem; line-height: 1.5; }
+.program-dialog-body .expanded-facts { gap: 0.35rem; }
+.program-dialog-body .bundle-report .program-detail-section { margin-top: 0.65rem; }
+.program-dialog-body .program-review-note { padding: 0.75rem; margin-bottom: 0.85rem; }
 .program-dialog-body .program-source-reports { padding-top: 0.8rem; }
 .program-dialog-body .card-actions { padding-top: 1rem; }
 button.program-title-button:focus-visible, button.program-details-button:focus-visible, button.program-dialog-close:focus-visible, .program-dialog-body:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
