@@ -93,6 +93,7 @@ Current behavior:
 - Step 1 uses accessible circular radio controls in three equal columns for academic standing, citizenship/residency, and institution type; stack the groups at 900px and below. Each group uses a native fieldset and centered legend.
 - The preliminary form asks academic standing, citizenship/residency, and institution type. The two enrollment questions and degree-seeking question were removed at the user’s request; do not infer those answers from class standing. Program enrollment requirements remain in the catalog, but cannot exclude a user based on uncollected answers. GPA is not collected or used to filter results; program minimum GPA remains visible on opportunity cards.
 - Step 2 is titled **Available Opportunities**.
+- Institution type offers two-year college and four-year college/university only; do not restore the Other / unsure option.
 - A subtle bold sentence reports eligible opportunities out of total catalog opportunities; do not restore prominent eligible/ineligible score cards.
 - Catalog summary cards beside the Step 2 title show program, institution, and topic counts. They are enlarged, close to the title, and center-aligned.
 - Opportunity cards use the original explorer presentation, not eligibility-result badges or reasons. Cards show status, program, institution, deadline, format, duration, housing, minimum GPA, category/tags, official link, and verification date.
