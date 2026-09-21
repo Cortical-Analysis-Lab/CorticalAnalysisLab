@@ -25,6 +25,34 @@ from import_catalog import preflight
 
 
 class CatalogTests(unittest.TestCase):
+    def test_full_overlap_batch_and_test_name_exclusion(self):
+        rows = load_rows(ROOT / "database/imports/summer_undergraduate_research_opportunities_starter.csv")
+        by_id = {r["Program_ID"]: r for r in rows}
+        self.assertFalse([r["Program_Name"] for r in rows if "test" in r["Program_Name"].lower()])
+        for keep, removed in [
+            ("BU-SURF", "BND-F16288E8ACDFB78B"),
+            ("AUTO-1D5D83B4EA", "BND-B85523C283498DD1"),
+            ("AUTO-A9B13BB9D4", "BND-E2220EDBEB548F24"),
+            ("SROP-RU", "BND-1E41F2571AC3E324"),
+            ("AUTO-FE3A699A2D", "AUTO-9E2CFA3779"),
+            ("AUTO-067BC58AC6", "BND-E971898775D324AA"),
+            ("AUTO-3C76C3AFCE", "BND-5ED8A6B74AC9F746"),
+        ]:
+            self.assertNotIn(removed, by_id)
+            reports = json.loads(by_id[keep]["Bundle_Details_JSON"])
+            history = [h for report in reports for h in report.get("catalogIdentityHistory", [])]
+            self.assertTrue(any(removed in h["removedProgramIds"] for h in history))
+        # Shared institutions/portals do not erase independent tracks or campuses.
+        for retained in ("AMGEN-UCSF", "BND-084EF69750C5A3D1", "SROP-PU",
+                         "AUTO-583E67E91D", "AUTO-6CDAF7E06A", "AUTO-5B0ACCEDAC",
+                         "AUTO-ED34824776", "BND-468A7A2484882590"):
+            self.assertIn(retained, by_id)
+
+    def test_exclusions_cannot_remove_merge_survivors(self):
+        with self.assertRaises(ValueError):
+            apply_decisions([], {"merges": [{"keep": "A", "remove": ["B"], "reason": "alias"}],
+                                 "exclusions": {"A": "test listing"}})
+
     @classmethod
     def setUpClass(cls):
         cls.db = sqlite3.connect(DEFAULT_DB)

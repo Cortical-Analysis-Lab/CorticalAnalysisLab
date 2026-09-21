@@ -38,12 +38,12 @@ The schema separates institutions, stable programs (`opportunities`), annual cyc
 
 Current catalog scale after the September 21, 2026 name/identity cleanup (remaining entries are not all fact-verified):
 
-- 967 program identities; 968 cycle/snapshot records, including 654 undated snapshots
-- 669 reported host/location records; provisional locations still need review
+- 959 program identities; 960 cycle/snapshot records, including 647 undated snapshots
+- 664 reported host/location records; provisional locations still need review
 - 13 broad categories
-- 1,847 detailed research tags, including provisional bundle topic assignments
+- 1,843 detailed research tags, including provisional bundle topic assignments
 - 11 controlled research modes
-- 386 source-verification events; provisional imports do not create verification events
+- 385 source-verification events; provisional imports do not create verification events
 
 Planning scale target:
 
@@ -55,7 +55,7 @@ A distinct program is a separately named research program or application at a ho
 
 Opportunity discovery, evaluation, verification, and review happen outside this repository. Only accepted records enter the committed CSV. Missing facts remain `NULL`/`unknown`. Funding, grant, and award records are local discovery leads only; do not use them as canonical program records, application URLs, or field-verification evidence.
 
-The user's September 18 instruction explicitly accepts the remaining bundle program candidates provisionally. After identity cleanup, the catalog includes 647 provisional identities; other records retain unreviewed bundle supplements or identity-review notes. Keep their `Catalog_Review_Status`, `Review_Notes` and `Bundle_Details_JSON` visible and reproducible; do not call them independently verified. Keep reported benefits and topic evidence without overwriting verified cycle facts. Exclude confirmed host-only, partner-only or institution-type restrictions that rule out SHU students; retain unknown external eligibility for review. Never exclude a general program because a different track shares its URL. Publication remains suspended.
+The user's September 18 instruction explicitly accepts the remaining bundle program candidates provisionally. After identity cleanup, the catalog includes 640 provisional identities; other records retain unreviewed bundle supplements or identity-review notes. Keep their `Catalog_Review_Status`, `Review_Notes` and `Bundle_Details_JSON` visible and reproducible; do not call them independently verified. Keep reported benefits and topic evidence without overwriting verified cycle facts. Exclude confirmed host-only, partner-only or institution-type restrictions that rule out SHU students; retain unknown external eligibility for review. Never exclude a general program because a different track shares its URL. Publication remains suspended.
 
 The September 21 user instruction narrowed active work to names and duplicates, deferring full factual verification. The completed pass consolidated 15 duplicate identities (including the original/bundle UConn Physiology and Neurobiology REU pair) and cleaned 36 titles. Remaining identity ambiguities and deferred factual review are tracked in [docs/catalog-follow-up.md](docs/catalog-follow-up.md). `scripts/review_catalog_names.py` screens aliases and applies explicit accepted identity decisions; removed rows survive in `Bundle_Details_JSON` → `catalogIdentityHistory`. The current listing count is not a verified distinct-program count. Preserve original names and dates in provenance/cycle history, and retain meaningful program-name numbers such as Biosphere 2.
 

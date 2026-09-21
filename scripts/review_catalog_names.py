@@ -90,6 +90,9 @@ def combine(*values):
 def apply_decisions(rows, decisions):
     """Preserve incumbent facts; store conflicting/undated duplicate data as provenance."""
     rows = copy.deepcopy(rows)
+    exclusions = decisions.get("exclusions", {})
+    if any(not reason for reason in exclusions.values()):
+        raise ValueError("Every exclusion requires a reason")
     by_id = defaultdict(list)
     for row in rows:
         by_id[row["Program_ID"]].append(row)
@@ -97,6 +100,8 @@ def apply_decisions(rows, decisions):
     merges = decisions.get("merges", [])
     keep_ids = {m["keep"] for m in merges}
     remove_ids = [rid for m in merges for rid in m["remove"]]
+    if set(exclusions) & (keep_ids | set(remove_ids)):
+        raise ValueError("Excluded identities cannot participate in merges")
     if keep_ids & set(remove_ids) or len(remove_ids) != len(set(remove_ids)) or len(keep_ids) != len(merges):
         raise ValueError("Decisions must contain disjoint merge groups without chains")
     for merge in merges:
@@ -143,8 +148,10 @@ def apply_decisions(rows, decisions):
         for row in incumbents:
             row.update(metadata)
         removed.update(merge["remove"])
-    rows = [r for r in rows if r["Program_ID"] not in removed]
+    rows = [r for r in rows if r["Program_ID"] not in removed and r["Program_ID"] not in exclusions]
     for row in rows:
+        for obsolete in decisions.get("resolved_review_notes", {}).get(row["Program_ID"], []):
+            row["Review_Notes"] = row.get("Review_Notes", "").replace(obsolete, "").strip("; ")
         old = row["Program_Name"]
         new = decisions.get("renames", {}).get(row["Program_ID"], clean_name(old))
         if not new:
@@ -164,11 +171,25 @@ def main():
     parser.add_argument("--input", type=Path, default=DEFAULT_IMPORT)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--decisions", type=Path, help="Explicit accepted JSON merge/rename decisions; otherwise screen only")
+    parser.add_argument("--excluded-output", type=Path, help="External archive required when applying exclusions")
     args = parser.parse_args()
     rows = load_rows(args.input)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     if args.decisions:
-        updated = apply_decisions(rows, json.loads(args.decisions.read_text()))
+        decisions = json.loads(args.decisions.read_text())
+        exclusions = decisions.get("exclusions", {})
+        if exclusions:
+            if not args.excluded_output or args.excluded_output.resolve() in {args.input.resolve(), args.output.resolve()}:
+                parser.error("Exclusions require a separate --excluded-output archive")
+            args.excluded_output.parent.mkdir(parents=True, exist_ok=True)
+            archived = json.loads(args.excluded_output.read_text()) if args.excluded_output.exists() else []
+            additions = [
+                {"reason": exclusions[r["Program_ID"]], "originalRow": r}
+                for r in rows if r["Program_ID"] in exclusions
+            ]
+            archived.extend(item for item in additions if item not in archived)
+            args.excluded_output.write_text(json.dumps(archived, ensure_ascii=False, indent=2) + "\n")
+        updated = apply_decisions(rows, decisions)
         with args.output.open("w", newline="", encoding="utf-8") as handle:
             writer = csv.DictWriter(handle, fieldnames=list(rows[0]), lineterminator="\n")
             writer.writeheader()
