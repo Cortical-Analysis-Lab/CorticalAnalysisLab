@@ -46,10 +46,17 @@ def normalized(value):
     return (text_or_none(value) or "").strip()
 
 
+def normalized_identity_text(value):
+    value = normalized(value).lower()
+    value = re.sub(r"\b(?:19|20)\d{2}\b", " ", value)
+    value = re.sub(r"[^a-z0-9]+", " ", value)
+    return re.sub(r"\s+", " ", value).strip()
+
+
 def normalized_identity(row):
     return (
-        normalized(row.get("Host_Institution")).lower(),
-        re.sub(r"\s+", " ", normalized(row.get("Program_Name")).lower()),
+        normalized_identity_text(row.get("Host_Institution")),
+        normalized_identity_text(row.get("Program_Name")),
     )
 
 
