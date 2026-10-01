@@ -179,6 +179,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           ${section("Research areas and topics", `<p>${associatedResearchAreas(opportunity).map(([, label]) => escapeHtml(label)).join(" · ") || "N/A"}</p><ul class="detail-topics">${(opportunity.tags || []).map(tag => `<li>${escapeHtml(tag.tag_name)}</li>`).join("") || "<li>N/A</li>"}</ul>`)}
         </div>
         ${highSchoolDetails(opportunity.high_school_details, highSchool ? cycle : null)}
+        ${opportunity.notes ? `<details class="program-source-reports"><summary>Program notes and information updates</summary>${detailText(opportunity.notes)}</details>` : ""}
         ${sourceReports ? `<section class="program-source-reports"><h4>Additional source information</h4><p class="detail-context">Expand a source to see its reported requirements and benefits. Reports may describe different cycles.</p>${sourceReports}</section>` : ""}
       </div></div>`;
   }
@@ -233,11 +234,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       cycle_year: item.year ?? null,
       program_start: item.start || null, program_end: item.end || null,
       application_deadline: item.deadline || null,
-      duration_weeks: report.durationWeeks ?? null,
+      duration_weeks: Object.hasOwn(item, "durationWeeks") ? item.durationWeeks : report.durationWeeks ?? null,
       stipend_total_usd: item.stipendUSD ?? null, stipend_weekly_usd: null,
-      housing_status: benefit(report.housing), housing_details: human(report.housing),
-      meals_status: benefit(report.meals), meals_details: human(report.meals),
-      travel_status: report.catalogTravelStatus || "unknown", travel_details: report.catalogTravelStatus === "allowance" ? report.summerLinkedAid?.details : null, academic_credit_status: "unknown", last_verified: null,
+      housing_status: benefit(item.housing ?? report.housing), housing_details: human(item.housing ?? report.housing),
+      meals_status: benefit(item.meals ?? report.meals), meals_details: human(item.meals ?? report.meals),
+      travel_status: item.travelStatus ?? report.catalogTravelStatus ?? "unknown", travel_details: Object.hasOwn(item, "travelStatus") ? item.travelDetails || null : report.catalogTravelStatus === "allowance" ? report.summerLinkedAid?.details : null, academic_credit_status: "unknown", last_verified: null,
       status_code: (item.end && item.end < today) || (item.deadline && item.deadline < today) ? "closed" : report.catalogCycleStatus?.[item.year] || "unknown",
       status_text: [report.recruitmentStatus, item.note].filter(Boolean).join(" "),
       eligibility: {
@@ -248,7 +249,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         citizenship_international: report.catalogCitizenship?.international ?? null,
       },
     })).sort((a,b) => (b.cycle_year || 0) - (a.cycle_year || 0));
+    const latestReport = (report.cycles || []).find(item => item.year === cycles[0]?.cycle_year) || {};
     return {...opportunity, cycles, reported_facts: {},
+      high_school_details: {...report, costStatus: latestReport.costStatus ?? report.costStatus, summerLinkedAid: latestReport.summerLinkedAid ?? report.summerLinkedAid,
+        earlierCostReport: Object.hasOwn(latestReport, "costStatus") && latestReport.costStatus !== report.costStatus ? report.costStatus : null,
+        earlierAidReport: Object.hasOwn(latestReport, "summerLinkedAid") && report.summerLinkedAid?.status === "available" ? report.summerLinkedAid.details : null},
       bundle_details: opportunity.bundle_details.filter(item => item.highSchoolRecord),
       program_url: report.url,
       delivery_format: report.state === "Remote" ? "virtual" : null,
@@ -275,6 +280,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     return `<details class="program-source-reports"><summary>${activeCycle ? "Sources and historical details" : "High-school requirements and costs"}</summary>
       ${activeCycle ? "" : detailText(report.summary) + detailText(report.eligibility) + `<dl class="expanded-facts">${fact("Costs and pay", report.costStatus)}${report.summerLinkedAid?.status === "available" ? fact("Financial aid", report.summerLinkedAid.details) : ""}</dl>`}
       <p class="detail-context">Imported review dated ${escapeHtml(report.checkedOn)}. ${escapeHtml(report.evidenceStatus)}</p>
+      ${known(report.earlierCostReport) ? `<p class="detail-context">Earlier reported costs and pay; cycle unspecified. These are not confirmed for ${escapeHtml(activeCycle?.cycle_year || "the current cycle")}.</p>${detailText(report.earlierCostReport)}` : ""}
+      ${report.earlierAidReport ? `<p class="detail-context">Earlier reported financial aid; availability for ${escapeHtml(activeCycle?.cycle_year || "the current cycle")} requires confirmation.</p>${detailText(report.earlierAidReport)}` : ""}
       ${cycleDetails}
       <p class="detail-references">${[...new Set(report.sources || [])].map(referenceLink).filter(Boolean).join(" · ")}</p></details>`;
   }

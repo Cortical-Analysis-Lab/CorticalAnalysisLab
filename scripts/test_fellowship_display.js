@@ -61,9 +61,11 @@ for (const program of hsPrograms) {
 assert.equal(evaluate(original,hsAnswers).state, 'ineligible', 'Undergraduate collection does not flood high-school results');
 const oneonta = programs.find(p => p.public_id === 'AUTO-C1E6B2C256');
 const hsOneonta = forAudience(oneonta, 'high_school');
-assert.equal(hsOneonta.cycles[0].housing_status, 'no');
+assert.equal(hsOneonta.cycles[0].cycle_year, 2027);
+assert.equal(hsOneonta.cycles[0].housing_status, 'unknown', 'Earlier housing report is not a confirmed 2027 benefit');
 assert.equal(hsOneonta.cycles[0].stipend_total_usd, null);
-assert.match(card({opportunity:hsOneonta}), /3,500/);
+assert.ok(!card({opportunity:hsOneonta}).includes('3,500'), 'Earlier stipend report is not a 2027 offer');
+assert.match(bundleDetails(hsOneonta), /3,500/, 'Earlier source report remains accessible');
 assert.ok(!card({opportunity:hsOneonta}).includes('$5,000'));
 const bu = forAudience(programs.find(p=>p.public_id==='hs:bu-rise'),'high_school');
 assert.equal(bu.cycles[0].cycle_year, 2027);

@@ -36,9 +36,9 @@ Key files:
 
 The schema separates institutions, stable programs (`opportunities`), annual cycles, structured eligibility, categories, tags, research modes, sources, verifications, and import provenance. Stable program identity and annual cycle data must remain separate.
 
-Current catalog scale after the September 21, 2026 high-school integration (remaining entries are not all fact-verified):
+Current catalog scale after the October 1, 2026 information-review integration (remaining entries are not all fact-verified):
 
-- 1,035 program identities; 1,039 cycle/snapshot records, including 698 undated snapshots
+- 1,035 program identities; 1,245 cycle/snapshot records, including 698 undated snapshots and 231 records for 2027
 - 734 reported host/location records; provisional locations still need review
 - 13 broad categories
 - 1,861 detailed research tags, including provisional bundle topic assignments
@@ -62,6 +62,8 @@ The unresolved-record review covered 29 records, merged UCSF SRTP/Amgen, removed
 A listing count is not an independently verified distinct-program count. Preserve original names and dates in provenance/cycle history, meaningful numbers such as Biosphere 2, and missing facts as unknown. Exclude confirmed host-only, partner-only or institution-type restrictions that rule out SHU students; retain unknown external eligibility. Never exclude a general program because a different track shares its URL.
 
 The September 21 high-school ZIP integration accepted 89 supplied program reports: 82 new identities and supplements on seven existing identities (NIH SIP, Northwestern REM, Stanford STaRS, Oneonta BFS, AFRL Scholars, UChicago Summer Lab, MathILy-EST). Four unresolved leads remain outside the accepted catalog. Supplied source review is preserved as provenance, not new independent verification. Local/partner-school high-school programs are in scope even when unsuitable for SHU undergraduates.
+
+The October 1 information-review ZIP updates existing programs only. The user authorized supported 2027 annual cycles: 206 added under existing identities, with historical cycles retained. All 225 observations, the overlapping targeted batch and specific evidence gaps remain attributed reports. Deadline-only new cycles do not inherit older funding or eligibility exclusions; tentative dates, source conflicts and unannounced availability remain unknown or narrative. No new program identities or blanket verification events were created. The unrelated `reucsu.org` link is disabled, and the program remains discoverable. See `docs/catalog-follow-up.md` for integration and validation details.
 
 Schema 1.6.0 adds `Catalog_Audience` / `catalog_audience` (`undergraduate`, `high_school`, `both`) for collection routing. This is not a universal eligibility Boolean: legacy undergraduate-only coverage does not prove high-school exclusion. Preserve the accepted `highSchoolRecord` in bundle JSON and generated `high_school_details`, including source limitations, cycle-specific amounts, costs, aid, age/grade/geography restrictions and explicit reviewed citizenship mappings. High-school views of shared identities must not inherit undergraduate funding, housing or eligibility. Use explicit high-school grades-at-application for year matching, retaining programs with exceptions or incomplete wording. Uncollected age and local rules remain visible for applicant confirmation; do not guess answers.
 

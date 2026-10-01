@@ -25,6 +25,36 @@ from import_catalog import preflight
 
 
 class CatalogTests(unittest.TestCase):
+    def test_october_review_preserves_identity_and_cycle_boundaries(self):
+        payload = json.loads((ROOT / "data/summer-research/catalog.json").read_text())
+        programs = {p["public_id"]: p for p in payload["opportunities"]}
+        self.assertEqual(len(programs), 1035)
+
+        def cycle(pid, year=2027):
+            return next(c for c in programs[pid]["cycles"] if c["cycle_year"] == year)
+
+        self.assertEqual(cycle("NIH-SIP")["application_deadline"], "2027-01-26")
+        self.assertEqual(cycle("NASA-OSTEM")["application_deadline"], "2027-03-01")
+        self.assertEqual(cycle("hs:bu-rise")["application_deadline"], "2027-02-03")
+        self.assertEqual(cycle("hs:stjude-hsri")["program_start"], "2027-06-01")
+        self.assertEqual(programs["hs:stjude-hsri"]["high_school_details"]["cycles"][0]["start"], "2027-06-01")
+        self.assertIsNone(cycle("hs:upmc-hillman")["program_start"])
+        self.assertIn("tentative", cycle("hs:upmc-hillman")["deadline_text"])
+        self.assertIsNone(programs["BND-45771DA7A83402F3"]["program_url"])
+
+        # A deadline-only new cycle does not inherit 2026 benefit promises or
+        # eligibility exclusions. Non-USD/daily/hourly reports stay narrative.
+        amgen = cycle("AMGEN-UCB")
+        self.assertIsNone(amgen["stipend_total_usd"])
+        self.assertEqual(amgen["housing_status"], "unknown")
+        self.assertEqual(amgen["eligibility"]["parse_status"], "needs_review")
+        self.assertIsNone(amgen["eligibility"]["citizenship_international"])
+        self.assertIsNone(amgen["last_verified"])
+        self.assertEqual(cycle("AMGEN-UCB", 2026)["stipend_total_usd"], 5000)
+        self.assertIsNone(cycle("BND-OIST")["stipend_total_usd"])
+        self.assertIsNone(cycle("BND-1DC1462F04800634")["stipend_total_usd"])
+        self.assertEqual(cycle("BND-ISTA-ISTERNSHIP")["status_code"], "closed")
+
     def test_high_school_import_identity_and_audience(self):
         payload = json.loads((ROOT / "data/summer-research/catalog.json").read_text())
         programs = payload["opportunities"]
@@ -168,6 +198,7 @@ class CatalogTests(unittest.TestCase):
             JOIN program_cycles c USING(opportunity_id)
             JOIN eligibility_rules e USING(cycle_id)
             WHERE o.public_id IN ('AMGEN-HARV', 'AMGEN-STAN', 'AMGEN-UCB')
+              AND c.cycle_year = 2026
         """).fetchall()
         self.assertEqual(len(rows), 3)
         for row in rows:
@@ -610,7 +641,14 @@ class CatalogTests(unittest.TestCase):
         accepted = [r for r in rows if r.get("Catalog_Review_Status") == "bundle_accepted" and not r["Last_Verified"]]
         self.assertTrue(accepted)
         for row in accepted:
-            self.assertFalse(row["Review_Notes"])
+            # Accepted programs can retain specific evidence conflicts, including
+            # UCSF's new cycle; acceptance must not restore generic warnings.
+            if row["Review_Notes"]:
+                self.assertIn(row["Program_ID"], {
+                    "AMGEN-UCSF", "BND-21B2481861C524C2",
+                    "BND-642A3AFAFA140976", "BND-D833CF56CA9DD95D",
+                    "BND-4334627EF951B1D4",
+                })
             self.assertTrue(json.loads(row["Bundle_Details_JSON"]))
         # Future genuinely provisional imports still cannot invent verification.
         candidate = dict(accepted[0], Catalog_Review_Status="needs_review", Review_Notes="Identity unresolved")

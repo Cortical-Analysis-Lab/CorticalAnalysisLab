@@ -1,5 +1,19 @@
 # Catalog follow-up tasks
 
+## Information review integration — October 1, 2026
+
+Compared `program-information-review-2026-10-01.zip` with its exact baseline, `2b2866d`. All supplied program IDs match existing identities. Integrated the 225 observations, the overlapping 23-entry targeted batch, and nine additional reconfirmation/gap notes into 250 existing programs. These are newly captured reports, reconfirmations and conflicts; they are not 250 independently verified changes. Original values and source metadata remain reproducible in the accepted CSV's bundle review/fact history.
+
+Existing annual records now include corrected NIH SIP and NASA OSTEM deadlines, BU RISE's application deadline, St. Jude's June 1 start, and high-school application windows at Iowa, Salk, Roswell and Hillman. Hillman's program dates remain tentative, and Roswell's portal availability remains unconfirmed. DAAD and Penn application/reference deadlines remain distinct. Repaired UTMB NSURP and Hillman links; removed the unrelated `reucsu.org` student-facing link without deleting the program. Retained paused/cancelled programs with explicit status wording. Currency, hourly pay, conditional benefits and conflicting eligibility remain narrative where no canonical amount or rule is supported.
+
+The existing Program details dialog exposes program notes and information updates in a collapsed disclosure, including records without bundle reports. No generic provisional warnings were restored. High-school source reports and existing annual rows stay synchronized; paid housing is not converted to free housing.
+
+The user authorized adding supported 2027 annual information under existing programs. Added **206 annual cycles**, including the targeted batch's 17 proposals, for **1,035 identities / 1,245 cycle records**; 231 cycles now have year 2027. Exact dates and explicitly supported benefits are separated from tentative schedules, priority/reference deadlines, hourly pay, foreign-currency allowances, conditional funding and unresolved eligibility. Historical cycles remain intact. New deadline-only cycles do not inherit old benefits or eligibility exclusions. Programs without supported 2027 information remain discoverable with their historical or undated facts, without a claimed 2027 offering.
+
+Machine-generated amount signals and recovered candidate URLs were not promoted to accepted facts. The package reports 255 unresolved stored sources and 25 identities without stored URLs; retrieval screening does not establish full verification. No blanket verification dates were advanced, and the source-verification count remains 397. The existing specific UCSF eligibility conflict remains visible; Amgen funding-track benefits were not applied to all SRTP participants. All 225 observations and overlapping targeted notes remain available in the generated catalog.
+
+The original review package, integration comparison, annual-cycle decisions and baseline CSV are retained under `/tmp/program-information-review-audit/`, `/tmp/program-review-integration-results.json`, `/tmp/program-review-cycle-results.json` and `/tmp/program-review-before.csv`. Structural validation, catalog regression tests, narrative/display tests, all-program JavaScript rendering checks, syntax checks and whitespace checks pass. These checks do not establish full factual verification. Publication remains suspended; no push or remote-branch change is authorized.
+
 ## Current result — September 21, 2026
 
 The user requested full review of the remaining unresolved cases and accepted prior Chat Work review of the bundle entries. The review covered all 29 records in the unresolved set, including the additional Rutgers Math/DIMACS and UVA pairs tracked in the external audit.
