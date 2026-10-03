@@ -1,5 +1,10 @@
 # Canonical database
 
+The catalog and its protected compilation and editorial content are subject to
+the repository's [all-rights-reserved terms](../LICENSE). Public access is not a
+general reuse license. Copying, scraping, redistribution, and reuse of protected
+materials require prior written permission, subject to legal and platform rights.
+
 `research_opportunities.sqlite` is the canonical published opportunity catalog. The accepted CSV under `imports/` is its version-controlled source. Rebuild SQLite and the browser JSON from that CSV with:
 
 ```bash

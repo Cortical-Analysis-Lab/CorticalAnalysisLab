@@ -1,5 +1,9 @@
 # Generated website data
 
+These exports are covered by the repository's [all-rights-reserved terms](../../LICENSE).
+Reuse of protected catalog materials requires prior written permission; public
+availability does not grant an open-data license.
+
 These JSON files are generated from `database/research_opportunities.sqlite` by `scripts/export_catalog.py`. They are static assets suitable for GitHub Pages.
 
 - `catalog.json`: denormalized payload for opportunity cards, filters, comparison, and eligibility evaluation.
