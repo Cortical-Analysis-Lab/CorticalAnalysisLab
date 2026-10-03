@@ -1,5 +1,46 @@
 # Catalog follow-up tasks
 
+## Complete-program update integration — October 3, 2026
+
+Integrated `Opp_Updates/complete-program-updates-2027-2026-10-03.zip` from the remote `Summer-REU-Database` file listing into the local development branch. Package SHA-256: `23330b3a37d841db51d98b81f2bb36a8ce96bbb6da7dd6a2d8b542bece757668`. Compared the exact CSV at package baseline `e444c5f482724418d6df4836dd3e38c1584f17b1` with local integration baseline `611d8a3`: the package baseline contains 1,039 cycles, while local HEAD already contains the October 1 additions, totaling 1,245. All 206 previously added annual cycles are retained. No wholesale baseline replacement was performed.
+
+The package accounts for all 1,035 prior identities, supplies 68 findings, and provides 157 source-recovery reports. The accepted CSV retains attributed screening ledgers for the 1,031 remaining identities, 65 findings applicable to retained programs, and 156 source-recovery reports. The original package and all 68 integration decisions are retained locally. Unaccepted search-result candidate lists remain outside the canonical CSV and exports. Recovered, blocked, historical, related-host and provenance-only sources retain their distinct classifications; retrieval alone creates no verification event or eligibility exclusion.
+
+Accepted narrow official-source fields for 22 identities and added **21 2027 cycles** under existing identities. New annual information covers ECU C2C, RIKEN's internship course, Purdue PURE Tox, Minneapolis Heart Institute, Sanford SPUR, Coral Restoration, Wisconsin SSEC, Broad BSRP, EPFL Life Sciences, Utah ECE, UCSB RMP/SRA, Miami Miller SURF, MSU Plant Genomics, Columbia IICD, JHU NanoBio, Princeton PNI, Denver power/energy REU, REU-EXTEND, Pfizer R&D, and Columbia SR-EIP. NIH SIP's existing January 26 deadline is reconfirmed with separate reference-letter wording. Minneapolis's $680 is weekly, not a guaranteed total. Other reported benefits, hourly pay, caps and eligibility conditions remain attributed reports rather than inferred numeric amounts or exclusions. Pfizer's cohort-wide application window includes R&D; it does not guarantee a specific placement.
+
+Important acceptance boundaries:
+
+- Denver's March 3 date is a **priority** deadline and is stored only in `Deadline_Text`; the final application deadline stays unknown.
+- Princeton PNI's February 1 closing remains tentative. Exact program dates and opening are accepted, while the package's funding-contingency report is retained and availability remains unknown. The currently retrieved application page supports dates but does not independently establish that contingency.
+- JHU NanoBio explicitly does not accept summer 2027 applications while funding/approval is pending. Its new annual status is closed; historical identity and information remain. A 2028 restart is not guaranteed. [Official program source](https://inbt.jhu.edu/nanobio-reu/).
+- UCSB high-school reports now contain the correct 2027 windows and full program dates, including RMP's required virtual phase. The 2027 cycle does not inherit 2026 fees, housing/meal terms or financial aid. Historical reports remain expandable. The audience view respects the explicitly recorded hybrid format.
+- Tentative SIMR/Pitt/Penn calendars, CaRSIP's conflicting opening year and graduation wording, OIST's placement window, Van Andel/ITEP track information, Buck's postbaccalaureate identity conflict, and AGA funding/academic-year scope questions remain reports requiring specific follow-up. No unsupported dates or scope consolidations were applied.
+
+Four records were withdrawn from the active accepted CSV, with their full original rows preserved in Git history and the local quarantine/exclusion archive:
+
+| Program ID | Decision | Evidence and limitation |
+| --- | --- | --- |
+| `BND-730E888D56D253BE` | Quarantine Central Washington “REU Molecular Gen” | Stored bundle summary begins with Lorem ipsum placeholder text. No distinct real summer program is established; retain for external scope review rather than treating it as a confirmed opportunity. |
+| `BND-AEC80FD7C401F158` | Exclude Bowie ExLent | [Official eligibility](https://www.bowiestate.edu/academics/colleges/college-of-arts-and-sciences/departments/computer-science/resources-for-students/scholarships/exlent-ai-internship-program/) explicitly requires Bowie State enrollment; this excludes SHU applicants. The October 31 preparatory start is not a summer internship start. |
+| `AUTO-97DF9D9FCB` | Exclude ETH Zürich Amgen | [Europe Amgen eligibility](https://amgenscholars.com/europe-programme/) requires a degree at an eligible European institution, excluding SHU enrollment. This is an enrollment restriction, not citizenship. |
+| `AUTO-F44FD4F2FE` | Exclude Institut Pasteur Amgen | Same Europe Amgen enrollment requirement; do not attach the February deadline while implying SHU eligibility. |
+
+The integration reviewer is Codex, checked October 3, 2026. These are narrow identity/scope/field decisions, not blanket verification of all facts in the affected programs.
+
+The ACCESS correction takes precedence: the General Internal Medicine internship is a different program. Attached the [ACCESS-specific source](https://gradschool.weill.cornell.edu/access-and-belonging/capacity-building-programs/access), retained the retraction in provenance, and did not create an ACCESS 2027 cycle. NYU chemistry/biology information at `nyureu.org` does not establish Center for Neural Science suspension or 2027 status. The unrelated `reucsu.org` link remains disabled.
+
+Fresh source checks did not confirm the package's proposed 2027 dates for UCLA BRI-SURE, NYU Vilcek SURP, or MBARI: currently retrieved pages still show historical information or lack those dates. NHERI retrieval failed. These proposals remain explicitly unaccepted reports; successful checks elsewhere do not resolve them.
+
+Current result: **1,031 identities / 1,262 cycle records**, including **696 undated snapshots** and **252 records for 2027**, across **730 host/location records**, **13 broad categories**, **1,858 detailed tags**, and **11 research modes**. There are **416 field-source verification events**: narrow accepted fields add 21 events, while the two excluded European records remove their old events. No blanket `Last_Verified` dates or completed eligibility reviews were invented. Listing counts remain distinct from independently verified counts.
+
+The source ZIP, pre-integration CSV, complete integration decisions and withdrawn rows are under `database/local/review/complete-program-updates-2026-10-03/` (ignored local review artifacts). Accepted records, attributed reports, package identity, limitations and prior fact values reproduce from the committed CSV. SQLite/JSON rebuild, structural validation, 35 catalog tests including round-trip reproduction, 10 narrative/display tests, all-program JavaScript rendering/audience checks, syntax and whitespace checks pass. Publication remains suspended; no push, merge, or remote modification was performed.
+
+## Repository reuse terms — October 3, 2026
+
+There was no repository license file. Added a proprietary [all-rights-reserved notice](../LICENSE), with limited permission for individual educational/application browsing and prior written permission required for reuse of protected catalog materials. It covers the accepted CSV, SQLite, JSON, editorial annotations and protected compilation work, as well as original repository code/content. Third-party rights, public facts, statutory exceptions, previously valid permissions and platform rights are preserved.
+
+These terms cannot make public facts exclusively owned or technically prevent copying a public repository. [U.S. Copyright Office database guidance](https://www.copyright.gov/register/tx-databases.html) distinguishes protected compilation authorship from underlying facts; [GitHub licensing guidance](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) explains public viewing/forking rights. Actual access controls require a separately authorized hosting/access change. This update changes repository terms only.
+
 ## Information review integration — October 1, 2026
 
 Compared `program-information-review-2026-10-01.zip` with its exact baseline, `2b2866d`. All supplied program IDs match existing identities. Integrated the 225 observations, the overlapping 23-entry targeted batch, and nine additional reconfirmation/gap notes into 250 existing programs. These are newly captured reports, reconfirmations and conflicts; they are not 250 independently verified changes. Original values and source metadata remain reproducible in the accepted CSV's bundle review/fact history.

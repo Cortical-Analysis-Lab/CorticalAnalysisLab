@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         earlierAidReport: Object.hasOwn(latestReport, "summerLinkedAid") && report.summerLinkedAid?.status === "available" ? report.summerLinkedAid.details : null},
       bundle_details: opportunity.bundle_details.filter(item => item.highSchoolRecord),
       program_url: report.url,
-      delivery_format: report.state === "Remote" ? "virtual" : null,
+      delivery_format: latestReport.deliveryFormat || (report.state === "Remote" ? "virtual" : null),
       institution: {...opportunity.institution, state_code: report.state, country_code: report.country, city: report.city || null},
       high_school_view: true,
     };

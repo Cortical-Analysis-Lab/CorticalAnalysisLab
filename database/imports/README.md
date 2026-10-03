@@ -1,5 +1,11 @@
 # Accepted catalog data
 
+The accepted CSV is covered by the repository's [all-rights-reserved terms](../../LICENSE).
+The October 3, 2026 complete-program package is reconciled with the October 1
+integration, retaining historical cycles and source limitations. Screening and
+source-recovery reports do not establish full verification. Unaccepted discovery
+candidates remain outside the canonical data. See [integration decisions](../../docs/catalog-follow-up.md).
+
 The CSV in this directory contains accepted catalog records prepared outside this repository. It is the version-controlled source used to reproduce the published SQLite database. Importing a later annual cycle should update the stable opportunity and create or update only that year's cycle.
 
 The September 21 user instruction accepts the prior Chat Work bundle review and removes generic provisional warnings. `Catalog_Review_Status=bundle_accepted` represents this acceptance; it is not independent official-source verification. `needs_review` and `supplement_needs_review` now identify specific remaining concerns, described in `Review_Notes`. Accepted entries show a neutral **Program details** section. Entries with no official verification date keep that date blank and gain no verification event merely through acceptance.

@@ -36,14 +36,16 @@ Key files:
 
 The schema separates institutions, stable programs (`opportunities`), annual cycles, structured eligibility, categories, tags, research modes, sources, verifications, and import provenance. Stable program identity and annual cycle data must remain separate.
 
-Current catalog scale after the October 1, 2026 information-review integration (remaining entries are not all fact-verified):
+Current catalog scale after the October 3, 2026 complete-program integration (remaining entries are not all fact-verified):
 
-- 1,035 program identities; 1,245 cycle/snapshot records, including 698 undated snapshots and 231 records for 2027
-- 734 reported host/location records; provisional locations still need review
+- 1,031 program identities; 1,262 cycle/snapshot records, including 696 undated snapshots and 252 records for 2027
+- 730 reported host/location records; provisional locations still need review
 - 13 broad categories
-- 1,861 detailed research tags, including provisional bundle topic assignments
+- 1,858 detailed research tags, including provisional bundle topic assignments
 - 11 controlled research modes
-- 397 source-verification events; provisional imports do not create verification events
+- 416 field-source verification events; screening/source retrieval does not create blanket verification
+
+The October 3 complete-program package was reconciled with the October 1 integration; 21 additional 2027 cycles were accepted under existing identities. Central Washington's placeholder is quarantined; Bowie ExLent and two European Amgen listings are excluded for confirmed enrollment restrictions. ACCESS/NYU source mismatches are corrected without invented availability. UCLA BRI-SURE, NYU Vilcek, MBARI and NHERI proposed dates remain unconfirmed. Preserve tentative deadlines, funding contingencies, priority-deadline wording and high-school cycle isolation. See `docs/catalog-follow-up.md` for the full decisions. Repository materials now have restrictive all-rights-reserved terms in `LICENSE`; preserve third-party, statutory and platform rights. Publication remains suspended.
 
 Planning scale target:
 

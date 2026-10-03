@@ -101,6 +101,9 @@ const simons = forAudience(programs.find(p=>p.public_id==='hs:stonybrook-simons'
 assert.equal(evaluate(simons,grade9).state,'ineligible');
 assert.notEqual(evaluate(simons,hsAnswers).state,'ineligible');
 const rmp = forAudience(programs.find(p=>p.public_id==='hs:ucsb-rmp'),'high_school');
+assert.equal(rmp.delivery_format, 'hybrid', 'The required 2027 virtual phase must remain visible');
+assert.equal(rmp.cycles[0].program_start, '2027-06-14');
+assert.equal(rmp.cycles[0].housing_status, 'unknown', '2026 paid housing must not establish 2027 benefits');
 assert.notEqual(evaluate(rmp,grade9).state,'ineligible', 'Exceptional grade-9 applicants must remain available');
 console.log('High-school audience, merged identity, cohort funding, citizenship, locations and questionnaire switching checks passed.');
 Object.assign(context,{keyword:'',housing:false,travel:false,open:false,upcoming:false});

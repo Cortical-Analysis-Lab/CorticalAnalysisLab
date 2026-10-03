@@ -28,7 +28,7 @@ class CatalogTests(unittest.TestCase):
     def test_october_review_preserves_identity_and_cycle_boundaries(self):
         payload = json.loads((ROOT / "data/summer-research/catalog.json").read_text())
         programs = {p["public_id"]: p for p in payload["opportunities"]}
-        self.assertEqual(len(programs), 1035)
+        self.assertEqual(len(programs), 1031)
 
         def cycle(pid, year=2027):
             return next(c for c in programs[pid]["cycles"] if c["cycle_year"] == year)
@@ -54,6 +54,42 @@ class CatalogTests(unittest.TestCase):
         self.assertIsNone(cycle("BND-OIST")["stipend_total_usd"])
         self.assertIsNone(cycle("BND-1DC1462F04800634")["stipend_total_usd"])
         self.assertEqual(cycle("BND-ISTA-ISTERNSHIP")["status_code"], "closed")
+
+    def test_complete_review_rejects_mismatches_and_preserves_unknowns(self):
+        payload = json.loads((ROOT / "data/summer-research/catalog.json").read_text())
+        programs = {p["public_id"]: p for p in payload["opportunities"]}
+
+        def cycle(pid, year=2027):
+            return next(c for c in programs[pid]["cycles"] if c["cycle_year"] == year)
+
+        for pid in ("BND-730E888D56D253BE", "BND-AEC80FD7C401F158",
+                    "AUTO-97DF9D9FCB", "AUTO-F44FD4F2FE"):
+            self.assertNotIn(pid, programs)
+        for pid in ("AUTO-5F1B08398C", "AUTO-ED34824776", "AUTO-943D64D03F"):
+            self.assertFalse(any(c["cycle_year"] == 2027 for c in programs[pid]["cycles"]))
+        self.assertIsNone(cycle("AUTO-862185FB01")["application_deadline"])
+        self.assertIn("Priority deadline", cycle("AUTO-862185FB01")["deadline_text"])
+        self.assertIsNone(cycle("BND-D06839A1D69FC89A")["application_deadline"])
+        self.assertIn("tentative", cycle("BND-D06839A1D69FC89A")["deadline_text"])
+        self.assertEqual(cycle("BND-C59E3E5A9114D68B")["status_code"], "closed")
+        self.assertIsNone(cycle("BND-C59E3E5A9114D68B")["stipend_total_usd"])
+        self.assertEqual(cycle("BND-AADC31FAA2BE4B83")["stipend_weekly_usd"], 680)
+        self.assertIsNone(cycle("BND-AADC31FAA2BE4B83")["stipend_total_usd"])
+        self.assertEqual(cycle("BND-0213B548E5D9362D")["application_open"], "2026-11-01")
+        access = programs["BND-94E67026F1003A21"]
+        self.assertTrue(access["program_url"].endswith("/capacity-building-programs/access"))
+        self.assertFalse(any(c["cycle_year"] == 2027 for c in access["cycles"]))
+        for pid in ("hs:ucsb-rmp", "hs:ucsb-sra"):
+            details = programs[pid]["high_school_details"]
+            latest = details["cycles"][0]
+            self.assertEqual(latest["year"], 2027)
+            self.assertEqual(latest["deadline"], cycle(pid)["application_deadline"])
+            self.assertNotIn("commuterUSD", latest)
+            self.assertEqual(latest["housing"], "unknown")
+            self.assertEqual(latest["summerLinkedAid"]["status"], "unknown")
+            self.assertTrue(any(c.get("commuterUSD") for c in details["cycles"] if c["year"] == 2026))
+        ledger = access["bundle_details"][0]["catalogCompleteReviewLedger"]
+        self.assertIn("not exhaustive field verification", ledger["limitation"])
 
     def test_high_school_import_identity_and_audience(self):
         payload = json.loads((ROOT / "data/summer-research/catalog.json").read_text())
@@ -655,8 +691,20 @@ class CatalogTests(unittest.TestCase):
         self.assertTrue(preflight([{**candidate, "Last_Verified": "2026-09-18"}])[0])
         self.assertTrue(preflight([{**candidate, "Eligibility_Parse_Status": "reviewed"}])[0])
         self.assertTrue(preflight([{**candidate, "Review_Notes": ""}])[0])
-        count = self.db.execute("SELECT COUNT(*) FROM opportunity_review r JOIN program_cycles c USING(opportunity_id) JOIN source_verifications v USING(cycle_id) WHERE r.review_status='bundle_accepted' AND c.last_verified IS NULL").fetchone()[0]
-        self.assertEqual(count, 0)
+        # A narrowly verified field may have explicit evidence while the cycle's
+        # blanket verification date stays unknown. Require every such event to
+        # match accepted source/date/field attribution, never package retrieval.
+        accepted_by_cycle = {(r["Program_ID"], int(r["Cycle_Year"]) if r["Cycle_Year"] else None): r for r in accepted}
+        cursor = self.db.cursor()
+        cursor.row_factory = sqlite3.Row
+        events = cursor.execute("SELECT o.public_id, c.cycle_year, v.* FROM opportunity_review r JOIN opportunities o USING(opportunity_id) JOIN program_cycles c USING(opportunity_id) JOIN source_verifications v USING(cycle_id) WHERE r.review_status='bundle_accepted' AND c.last_verified IS NULL").fetchall()
+        for event in events:
+            row = accepted_by_cycle[(event["public_id"], event["cycle_year"])]
+            url = self.db.execute("SELECT source_url FROM sources WHERE source_id=?", (event["source_id"],)).fetchone()[0]
+            evidence = next(e for e in json.loads(row["Source_Evidence_JSON"] or "[]") if e["url"] == url and e["date_checked"] == event["date_checked"])
+            self.assertEqual(json.loads(event["fields_supported"]), evidence["fields_supported"])
+            self.assertEqual(event["checked_by"], evidence["checked_by"])
+            self.assertNotIn("Eligibility_Parse_Status", evidence["fields_supported"])
         payload = json.loads((ROOT / "data/summer-research/catalog.json").read_text())
         public = {r["public_id"]: r for r in payload["opportunities"]}
         for row in accepted:
