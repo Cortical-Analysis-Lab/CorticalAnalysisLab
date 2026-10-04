@@ -1,7 +1,7 @@
 /* Shared scientific atlas theme. Loaded after page-specific styles on lab pages. */
-:root { --red:#b30838; --offwhite:#08090a; --text:#f3f3f3; --gray:#b8b8bd; --surface:#111215; --line:#343539; color-scheme:dark; }
+:root { --red:#c20838; --offwhite:#08090a; --text:#f3f3f3; --gray:#b8b8bd; --surface:#111215; --line:#343539; color-scheme:dark; }
 body { color:var(--text); }
-a { color:#ef7898; text-underline-offset:4px; }
+a { color:#f05276; text-underline-offset:4px; }
 a:hover { color:#fff; }
 :focus-visible { outline:2px solid #fff; outline-offset:5px; }
 header { max-width:1280px; margin:auto; padding:clamp(60px,8vw,110px) 32px 45px; text-align:left; border-bottom:1px solid var(--line); }
@@ -18,10 +18,11 @@ summary { padding-block:8px; }
 .person-card img { max-width:100%; border:1px solid var(--line); }
 button:not(.menu-toggle), a.button { border-radius:2px; min-height:44px; }
 a.button { display:inline-flex; align-items:center; text-decoration:none; }
-button:not(.menu-toggle):hover, a.button:hover { transform:none; background:#92062d; }
-.lab-hero { display:grid; grid-template-columns:1.15fr 1fr; align-items:center; gap:45px; padding-top:60px; padding-bottom:55px; }
+button:not(.menu-toggle):hover, a.button:hover { transform:none; background:#9d062e; }
+.lab-hero { display:grid; grid-template-columns:1.15fr 1fr; align-items:start; column-gap:45px; row-gap:8px; padding-top:20px; padding-bottom:55px; }
 .lab-hero h1 { font-size:clamp(2.5rem,5vw,4.75rem); }
 .lab-hero h1 span { display:block; }
+.lab-hero .homepage-logo { display:block; grid-column:1 / -1; justify-self:center; width:min(100%, 680px); height:auto; margin:-30px 0 -35px; }
 .lab-hero figure { margin:0; position:relative; }
 .lab-hero figure img { display:block; width:100%; height:auto; max-height:540px; object-fit:contain; }
 .homepage-abstract { grid-column:1 / -1; width:100%; display:flex; justify-content:center; margin-bottom:15px; }
@@ -35,14 +36,14 @@ a.button.button-outline:hover { border-color:#fff; }
 .research-tile { border-top:1px solid var(--line); padding-top:24px; }
 .research-tile h3 { font-size:1.35rem; font-weight:500; margin-bottom:14px; }
 .research-tile p { color:var(--gray); margin-bottom:20px; }
-@media(max-width:768px) { header, section, .about-container, .contact-info, .people-container { padding-inline:20px; } .lab-hero { grid-template-columns:1fr; gap:32px; padding-top:40px; } .lab-hero figure img { max-height:360px; } .homepage-abstract { margin-bottom:0; } .homepage-abstract img { max-height:220px; } .research-grid { grid-template-columns:1fr; } .card, .about-card, .pub-item, .abs-item, details { padding:24px; } }
+@media(max-width:768px) { header, section, .about-container, .contact-info, .people-container { padding-inline:20px; } .lab-hero { grid-template-columns:1fr; gap:32px; padding-top:16px; } .lab-hero figure img { max-height:360px; } .homepage-abstract { margin-bottom:0; } .homepage-abstract img { max-height:220px; } .research-grid { grid-template-columns:1fr; } .card, .about-card, .pub-item, .abs-item, details { padding:24px; } }
 @media(prefers-reduced-motion:reduce) { *, *::before, *::after { scroll-behavior:auto !important; transition:none !important; animation:none !important; } }
 
 /* Complete the supplied theme where page-specific styles use light colors. */
-.about-card a, .contact-info a { color: #ef7898; }
+.about-card a, .contact-info a { color: #f05276; }
 .about-card a:hover, .contact-info a:hover { color: #fff; }
 .significance-blurb { border-left: 3px solid var(--red); }
-.poster-thumb { color: #ef7898; }
+.poster-thumb { color: #f05276; }
 .collaboration-form iframe { border-radius: 2px; color-scheme: light; }
 #posterModalContent { color-scheme: light; }
 #closePoster { color: #333; background: transparent; min-height: 44px; }
