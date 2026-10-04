@@ -1,0 +1,51 @@
+/* Shared scientific atlas theme. Loaded after page-specific styles on lab pages. */
+:root { --red:#b30838; --offwhite:#08090a; --text:#f3f3f3; --gray:#b8b8bd; --surface:#111215; --line:#343539; color-scheme:dark; }
+body { color:var(--text); }
+a { color:#ef7898; text-underline-offset:4px; }
+a:hover { color:#fff; }
+:focus-visible { outline:2px solid #fff; outline-offset:5px; }
+header { max-width:1280px; margin:auto; padding:clamp(60px,8vw,110px) 32px 45px; text-align:left; border-bottom:1px solid var(--line); }
+header h1 { color:#fff; font-weight:500; letter-spacing:-.045em; line-height:1.08; font-size:clamp(2.5rem,6vw,5rem); }
+header p { color:var(--gray); max-width:750px; margin-top:24px; }
+section, .about-container, .contact-info, .people-container { max-width:1180px; margin:55px auto; padding-inline:32px; }
+h2 { color:#fff; font-weight:500; letter-spacing:-.025em; margin-bottom:24px; }
+.card, .person-card, details, .about-card, .pub-item, .abs-item, .significance-blurb, .poster-thumb, .header-box { background:var(--surface); border:1px solid var(--line); border-radius:2px; box-shadow:none; backdrop-filter:none; }
+.card:hover, .person-card:hover, details:hover, .pub-item:hover, .abs-item:hover { transform:none; box-shadow:none; border-color:#777; }
+.about-card p, .about-card li, .person-card p, .significance-blurb, ul.people-list span.major, ul.people-list span.role { color:var(--gray); }
+ul.people-list strong, .person-card h3, .pub-item h3, .abs-item h3, .about-card h2, .highlight-slide h3, summary, .contact-info h2 { color:#fff; }
+summary { padding-block:8px; }
+.header-box { max-width:none; margin-top:30px; }
+.person-card img { max-width:100%; border:1px solid var(--line); }
+button:not(.menu-toggle), a.button { border-radius:2px; min-height:44px; }
+a.button { display:inline-flex; align-items:center; text-decoration:none; }
+button:not(.menu-toggle):hover, a.button:hover { transform:none; background:#92062d; }
+.lab-hero { display:grid; grid-template-columns:1.15fr 1fr; align-items:center; gap:45px; padding-top:60px; padding-bottom:55px; }
+.lab-hero h1 { font-size:clamp(2.5rem,5vw,4.75rem); }
+.lab-hero h1 span { display:block; }
+.lab-hero figure { margin:0; position:relative; }
+.lab-hero figure img { display:block; width:100%; height:auto; max-height:540px; object-fit:contain; }
+.homepage-abstract { grid-column:1 / -1; width:100%; display:flex; justify-content:center; margin-bottom:15px; }
+.homepage-abstract img { display:block; width:min(100%, 700px); height:auto; max-height:320px; object-fit:contain; }
+.lab-hero figcaption { color:var(--gray); font-size:.65rem; text-transform:uppercase; letter-spacing:.17em; margin-top:12px; text-align:center; }
+.hero-actions { display:flex; gap:16px; flex-wrap:wrap; margin-top:32px; }
+a.button.button-outline { background:transparent; border:1px solid #888; color:#fff; }
+a.button.button-outline:hover { border-color:#fff; }
+.eyebrow { font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gray); margin-bottom:22px; }
+.research-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.research-tile { border-top:1px solid var(--line); padding-top:24px; }
+.research-tile h3 { font-size:1.35rem; font-weight:500; margin-bottom:14px; }
+.research-tile p { color:var(--gray); margin-bottom:20px; }
+@media(max-width:768px) { header, section, .about-container, .contact-info, .people-container { padding-inline:20px; } .lab-hero { grid-template-columns:1fr; gap:32px; padding-top:40px; } .lab-hero figure img { max-height:360px; } .homepage-abstract { margin-bottom:0; } .homepage-abstract img { max-height:220px; } .research-grid { grid-template-columns:1fr; } .card, .about-card, .pub-item, .abs-item, details { padding:24px; } }
+@media(prefers-reduced-motion:reduce) { *, *::before, *::after { scroll-behavior:auto !important; transition:none !important; animation:none !important; } }
+
+/* Complete the supplied theme where page-specific styles use light colors. */
+.about-card a, .contact-info a { color: #ef7898; }
+.about-card a:hover, .contact-info a:hover { color: #fff; }
+.significance-blurb { border-left: 3px solid var(--red); }
+.poster-thumb { color: #ef7898; }
+.collaboration-form iframe { border-radius: 2px; color-scheme: light; }
+#posterModalContent { color-scheme: light; }
+#closePoster { color: #333; background: transparent; min-height: 44px; }
+.carousel-dot, .carousel-dot[aria-current="true"] { width: 44px; height: 44px; background: transparent !important; display: grid; place-items: center; }
+.carousel-dot::before { content: ""; width: 12px; height: 12px; border-radius: 50%; background: #bbb; }
+.carousel-dot[aria-current="true"]::before { background: var(--red); }

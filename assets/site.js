@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     window.addEventListener("resize", () => {
-      if (window.innerWidth > 1024) {
+      if (window.innerWidth > 1200) {
         navLinks.classList.remove("show");
         menuToggle.setAttribute("aria-expanded", "false");
       }
