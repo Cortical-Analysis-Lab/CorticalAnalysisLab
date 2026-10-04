@@ -120,6 +120,8 @@ Current behavior:
 
 ## Visual and interaction preferences
 
+- The October 4 Cortical Atlas layout is applied to all seven lab pages using `assets/lab-theme.css` and the unchanged supplied `assets/cortical-vasculature.png`. Shared navigation, footer and page exterior live in `assets/atlas-chrome.css`, also used by the fellowship page. Its questionnaire and results retain their readable light panels and red hero. The uploaded ZIP was retrieved from `main`; implementation remains on `Summer-REU-Database` and publication remains suspended.
+- The shared navigation uses `assets/new-lab-logo-hero.png`, derived from the supplied `assets/New lab logo.png` with a transparent background and white Cortical lettering. An enlarged copy is centered above the homepage title and brain image with compact vertical spacing. The homepage title reads “Analyzing the brain / across scales.” at the original large font size, wrapping responsively beside a smaller brain image. Lab-page links and button accents use richer reds through `assets/lab-theme.css`. The dark textured lab background spans the page width at its original proportions and scrolls with the page, with subdued opacity. The ROSEBUD abstract is currently removed from the homepage; its transparent variant is retained as an asset.
 - Reuse the existing site's Inter font, Sacred Heart red, navigation, and deployment conventions.
 - Keep the fellowship hero bold and exciting, but keep controls and data displays readable and restrained.
 - Prefer compact cards in a responsive matrix that uses wide screens fully.

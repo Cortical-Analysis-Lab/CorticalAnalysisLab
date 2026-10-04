@@ -7,13 +7,15 @@
   <title>Cortical Analysis Lab | Sacred Heart University</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-  <script defer src="assets/site.js?v=4"></script>
+  <script defer src="assets/site.js?v=5"></script>
+  <link rel="stylesheet" href="assets/atlas-chrome.css?v=8">
+  <link rel="stylesheet" href="assets/lab-theme.css?v=12">
 </head>
 
 <body>
 
   <nav>
-    <a href="index.html" class="logo">Cortical Analysis Lab</a>
+    <a href="index.html" class="logo" aria-label="Cortical Analysis Lab home"><img src="assets/new-lab-logo-hero.png?v=1" alt="Cortical Analysis Lab"></a>
     <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">☰</button>
     <ul id="nav-menu">
       <li><a href="index.html">Home</a></li>
@@ -28,24 +30,31 @@
     </ul>
   </nav>
 
-  <header>
-    <h1>Cortical Analysis Lab</h1>
-
-    <div class="header-box">
-      <p>
-        Exploring the interplay between cortical dynamics, neurovascular coupling, and behavior
-        through multimodal imaging, EEG, and computational analysis.
-      </p>
-
-      <div class="hero-graphic">
-        <img
-          src="assets/ROSEBUD_Graphical_Abstract.webp"
-          alt="Cortical Analysis Lab Graphical Abstract"
-          decoding="async"
-          fetchpriority="high">
+  <header class="lab-hero">
+    <img class="homepage-logo" src="assets/new-lab-logo-hero.png?v=1" alt="Cortical Analysis Lab" decoding="async">
+    <div>
+      <div class="eyebrow">Cortical Analysis Lab · Sacred Heart University</div>
+      <h1><span>Analyzing the brain</span><span>across scales.</span></h1>
+      <p>Connecting neural activity, vascular dynamics, and behavior through multimodal imaging, EEG, and computational analysis.</p>
+      <div class="hero-actions">
+        <a class="button" href="research.html">Explore our research →</a>
+        <a class="button button-outline" href="people.html">Meet the lab →</a>
       </div>
     </div>
+    <figure>
+      <img src="assets/cortical-vasculature.png" alt="Grayscale dorsal cortical surface showing branching blood vessels across both hemispheres" width="1017" height="1536" fetchpriority="high" decoding="async">
+      <figcaption>Neural · Vascular · Behavioral</figcaption>
+    </figure>
   </header>
+
+  <section aria-labelledby="research-overview">
+    <h2 id="research-overview">Our research</h2>
+    <div class="research-grid">
+      <article class="research-tile"><h3>Neural &amp; vascular dynamics</h3><p>Exploring cortical activity and neurovascular coupling with optical imaging and EEG.</p><a href="research.html">Explore the research →</a></article>
+      <article class="research-tile"><h3>Brain &amp; behavior</h3><p>Examining how neural processes relate to behavior, cognition, and alcohol-induced impairment.</p><a href="research.html">Explore our projects →</a></article>
+      <article class="research-tile"><h3>Interactive neurophysiology</h3><p>Developing a virtual laboratory for exploring integrated neurophysiology.</p><a href="https://cortical-analysis-lab.github.io/NGVU_Simulation/">Explore the virtual lab →</a></article>
+    </div>
+  </section>
 
   <section>
     <h2>Recent Highlights</h2>

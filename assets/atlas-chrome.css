@@ -1,0 +1,25 @@
+/* Shared atlas navigation and page exterior, including the fellowship explorer. */
+body { background: #08090a; padding-top: 90px; isolation: isolate; }
+body::before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 100%; height: auto; aspect-ratio: 1; background: url("Textured_Lab_Logo_Dark.png") center top / 100% auto no-repeat; opacity: .22; filter: brightness(.55); z-index: -1; pointer-events: none; }
+body::after { display: none; }
+nav { background: #08090af5; border-bottom: 1px solid #343539; box-shadow: none; height: 80px; padding-inline: clamp(20px, 4vw, 70px); }
+nav * { color: #b8b8bd !important; }
+nav .logo { display: flex; align-items: center; flex-shrink: 0; }
+nav .logo img { display: block; width: 150px; height: 76px; object-fit: contain; }
+nav ul { gap: 1rem; }
+nav ul li a { font-size: .83rem; }
+nav ul li a:hover, nav ul li a[aria-current='page'] { color: #fff !important; }
+nav :focus-visible { outline: 2px solid #fff; outline-offset: 5px; }
+.menu-toggle { color: #fff !important; min-width: 44px; min-height: 44px; }
+footer { background: #08090a; border-top: 1px solid #343539; color: #b8b8bd; backdrop-filter: none; }
+.fellowship-page .catalog-status, .fellowship-page .questionnaire-panel, .fellowship-page .eligibility-results { background: #faf7f5; border-radius: 2px; box-shadow: none; backdrop-filter: none; }
+@media (max-width: 1200px) {
+  .menu-toggle { display: block; margin-left: auto; }
+  nav ul { display: none; position: absolute; top: 100%; left: 0; width: 100%; flex-direction: column; padding: 20px; background: #111215; border-bottom: 1px solid #343539; white-space: normal; max-height: calc(100dvh - 80px); overflow-y: auto; }
+  nav ul.show { display: flex; }
+  nav ul li { padding: 10px; margin: 0; }
+}
+@media (max-width: 768px) {
+  nav { height: 80px; padding: 16px 20px; }
+  body::before { opacity: .18; }
+}
