@@ -1,6 +1,6 @@
 /* Shared atlas navigation and page exterior, including the fellowship explorer. */
 body { background: #08090a; padding-top: 90px; isolation: isolate; }
-body::before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 100%; height: auto; aspect-ratio: 1; background: url("Textured_Lab_Logo_Dark.png") center top / 100% auto no-repeat; opacity: .22; filter: brightness(.55); z-index: -1; pointer-events: none; }
+body::before { content: ""; display: block; position: absolute; top: 0; left: 0; width: 100%; height: auto; aspect-ratio: 1; background: url("Textured_Lab_Logo_Dark.png") center top / 100% auto no-repeat; opacity: .65; z-index: -1; pointer-events: none; }
 body::after { display: none; }
 nav { background: #08090af5; border-bottom: 1px solid #343539; box-shadow: none; height: 80px; padding-inline: clamp(20px, 4vw, 70px); }
 nav * { color: #b8b8bd !important; }
@@ -21,5 +21,5 @@ footer { background: #08090a; border-top: 1px solid #343539; color: #b8b8bd; bac
 }
 @media (max-width: 768px) {
   nav { height: 80px; padding: 16px 20px; }
-  body::before { opacity: .18; }
+  body::before { opacity: .5; }
 }
